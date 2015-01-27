@@ -1,0 +1,9 @@
+<div id="postsum">
+<time> {{ post.date | date_to_string }}</time>
+<h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+<h4><span>{{ post.subtitle }}</span></h4>
+{{ post.content | strip_html | truncate:200 }} 
+<!-- note that post.content is pulled in with html formatting --> 
+<!--    </ul> </ol> </code> </strong> </em> </pre>  force close any open tags? --> 
+<a href="{{ site.url }}{{ post.url }}"> <em>Read more</em></a>
+</div>

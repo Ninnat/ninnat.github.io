@@ -4,7 +4,7 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/exploringquantumworld.xml" rel="self"/>
  <link href=""/>
- <updated>2016-02-14T00:56:25-07:00</updated>
+ <updated>2016-02-14T13:57:25+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>How and why I'm teaching my kids to code</title>
    <link href="/2014/12/09/teaching_kids_to_program.html"/>
-   <updated>2014-12-09T00:00:00-07:00</updated>
+   <updated>2014-12-09T00:00:00+00:00</updated>
    <id>h/2014/12/09/teaching_kids_to_program</id>
    <content type="html">&lt;p&gt;I think that most of the world today drastically underestimates kids -- and by
 so doing, often harms them.  Kids love learning, creating, and achieving.  We
@@ -154,7 +154,7 @@ a chance against all the great women coders of the future.  ;-)&lt;/p&gt;
  <entry>
    <title>Clawpack turns 20</title>
    <link href="/2014/12/01/clawpack-20.html"/>
-   <updated>2014-12-01T00:00:00-07:00</updated>
+   <updated>2014-12-01T00:00:00+00:00</updated>
    <id>h/2014/12/01/clawpack-20</id>
    <content type="html">&lt;p&gt;Twenty years ago, version 1.0 of the Conservation LAWs PACKage (CLAWPACK, now
 &lt;a href=&quot;http://clawpack.org&quot;&gt;Clawpack&lt;/a&gt; was first released by
@@ -369,7 +369,7 @@ library.&lt;/li&gt;
  <entry>
    <title>Teaching in the open</title>
    <link href="/2014/07/18/teaching_in_the_open.html"/>
-   <updated>2014-07-18T00:00:00-06:00</updated>
+   <updated>2014-07-18T00:00:00+00:00</updated>
    <id>h/2014/07/18/teaching_in_the_open</id>
    <content type="html">&lt;p&gt;If you examine the menu bar above, you&amp;#39;ll notice that my site has a new top-level
 page: &lt;a href=&quot;/teaching.html&quot;&gt;Teaching&lt;/a&gt;.  This is a direct result of my attending 
@@ -399,7 +399,7 @@ know a little about it, watch
  <entry>
    <title>KAUST goes open access</title>
    <link href="/2014/07/01/KAUST_goes_open_access.html"/>
-   <updated>2014-07-01T00:00:00-06:00</updated>
+   <updated>2014-07-01T00:00:00+00:00</updated>
    <id>h/2014/07/01/KAUST_goes_open_access</id>
    <content type="html">&lt;p&gt;I&amp;#39;m proud to announce that as of today, KAUST has officially adopted an open access
 policy!  &lt;/p&gt;
@@ -471,7 +471,7 @@ an internal site.  I&amp;#39;ll post a link here when a public announcement is m
  <entry>
    <title>Teaching with SageMathCloud</title>
    <link href="/2014/05/31/teaching_with_SMC.html"/>
-   <updated>2014-05-31T00:00:00-06:00</updated>
+   <updated>2014-05-31T00:00:00+00:00</updated>
    <id>h/2014/05/31/teaching_with_SMC</id>
    <content type="html">&lt;p&gt;During the past Spring semester at KAUST, I again taught AMCS 252, our masters-level
 course on numerical analysis for differential equations.  I&amp;#39;ve been teaching the course
@@ -581,7 +581,7 @@ Just amazing.&lt;/p&gt;
  <entry>
    <title>HyperPython</title>
    <link href="/2014/05/28/hyperpython.html"/>
-   <updated>2014-05-28T00:00:00-06:00</updated>
+   <updated>2014-05-28T00:00:00+00:00</updated>
    <id>h/2014/05/28/hyperpython</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ketch/HyperPython/master/figures/finite_volume.png&quot; alt=&quot;Finite volumes&quot; height=&quot;200&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
 
@@ -616,7 +616,7 @@ notebooks useful if you&amp;#39;re looking for a good introduction to PyClaw.&lt
  <entry>
    <title>Open access is about open access, not journals</title>
    <link href="/2013/12/13/open_access_means_open_access.html"/>
-   <updated>2013-12-13T00:00:00-07:00</updated>
+   <updated>2013-12-13T00:00:00+00:00</updated>
    <id>h/2013/12/13/open_access_means_open_access</id>
    <content type="html">&lt;p&gt;In October, &lt;a href=&quot;http://news.sciencemag.org/sites/default/files/media/Open%20Access%20SurveySummary_11082013_0.pdf&quot;&gt;Science Magazine conducted a survey regarding open
 access&lt;/a&gt;.
@@ -665,7 +665,7 @@ than open access.  The only obstacle left is our own apathy.&lt;/p&gt;
  <entry>
    <title>A Tale of Two Theorems</title>
    <link href="/2013/10/14/CFL-disk.html"/>
-   <updated>2013-10-14T00:00:00-06:00</updated>
+   <updated>2013-10-14T00:00:00+00:00</updated>
    <id>h/2013/10/14/CFL-disk</id>
    <content type="html">&lt;p&gt;In their &lt;a href=&quot;http://dx.doi.org/10.1147/rd.112.0215&quot;&gt;celebrated 1928 paper&lt;/a&gt;,
 Courant, Friedrichs, and Lewy proved a geometric condition that must be
@@ -802,7 +802,7 @@ the spatial mesh width.  So no deduction along these lines seems possible.&lt;/p
  <entry>
    <title>Documentation, testing, and default arguments for your MATLAB packages</title>
    <link href="/2013/10/12/MATLAB-docs-testing.html"/>
-   <updated>2013-10-12T00:00:00-06:00</updated>
+   <updated>2013-10-12T00:00:00+00:00</updated>
    <id>h/2013/10/12/MATLAB-docs-testing</id>
    <content type="html">&lt;p&gt;I primarily develop code in Python and Fortran, but I also use MATLAB for
 certain things.  For instance, I haven&amp;#39;t found a Python-friendly nonlinear
@@ -897,7 +897,7 @@ situation.&lt;/p&gt;
  <entry>
    <title>Giving a math talk using IPython notebook slides and Wakari</title>
    <link href="/2013/09/21/ipython_notebook_slides_talks.html"/>
-   <updated>2013-09-21T00:00:00-06:00</updated>
+   <updated>2013-09-21T00:00:00+00:00</updated>
    <id>h/2013/09/21/ipython_notebook_slides_talks</id>
    <content type="html">&lt;h1&gt;Giving a math talk using IPython notebook slides and Wakari&lt;/h1&gt;
 
@@ -926,7 +926,7 @@ situation.&lt;/p&gt;
  <entry>
    <title>Don't scrap the DOE CSGF program</title>
    <link href="/2013/06/23/csgf-letter-to-congress.html"/>
-   <updated>2013-06-23T00:00:00-06:00</updated>
+   <updated>2013-06-23T00:00:00+00:00</updated>
    <id>h/2013/06/23/csgf-letter-to-congress</id>
    <content type="html">&lt;p&gt;The US federal government &lt;a href=&quot;http://energy.gov/sites/prod/files/2013/04/f0/Volume4.pdf&quot;&gt;has proposed to eliminate a number of smaller
 graduate fellowship programs&lt;/a&gt;
@@ -975,7 +975,7 @@ know the CSGF program and its significance, I urge you to do so too.&lt;/p&gt;
  <entry>
    <title>How to avoid javascript errors when copy-pasting Bibtex citations in Mendeley on Mac OS X</title>
    <link href="/2013/02/15/mendeley_bibtex_javascript_solution.html"/>
-   <updated>2013-02-15T00:00:00-07:00</updated>
+   <updated>2013-02-15T00:00:00+00:00</updated>
    <id>h/2013/02/15/mendeley_bibtex_javascript_solution</id>
    <content type="html">&lt;p&gt;I use Mendeley to manage references.  Mendeley has a nice auto-import feature
 that will pull down bibliographic data from the web to my database.  When
@@ -1010,7 +1010,7 @@ this action results in the full bibtex entry being copied to the clipboard.&lt;/
  <entry>
    <title>5 reasons why you should submit your next paper to CAMCoS</title>
    <link href="/2013/01/17/why_to_publish_in_camcos.html"/>
-   <updated>2013-01-17T00:00:00-07:00</updated>
+   <updated>2013-01-17T00:00:00+00:00</updated>
    <id>h/2013/01/17/why_to_publish_in_camcos</id>
    <content type="html">&lt;p&gt;I have a new favorite journal: &lt;a href=&quot;http://msp.org/camcos/&quot;&gt;Communications in Applied Mathematics and Computational Science&lt;/a&gt;.  I just published a paper with them for the first time (technically it&amp;#39;s still in press, but you can download it &lt;a href=&quot;http://msp.org/camcos/2012/7-2/p04.xhtml&quot;&gt;here (paywall)&lt;/a&gt; or &lt;a href=&quot;http://numerics.kaust.edu.sa/papers/stability_polynomials/stability_polynomials_2012.html&quot;&gt;here (free; same version)&lt;/a&gt;.&lt;/p&gt;
 
@@ -1035,7 +1035,7 @@ This may seem like a small thing, but I think it&amp;#39;s very powerful.  It me
  <entry>
    <title>Convert SAGE worksheets to IPython notebooks</title>
    <link href="/2013/01/16/sage_to_ipython.html"/>
-   <updated>2013-01-16T00:00:00-07:00</updated>
+   <updated>2013-01-16T00:00:00+00:00</updated>
    <id>h/2013/01/16/sage_to_ipython</id>
    <content type="html">&lt;h1&gt;Converting a SAGE worksheet to an IPython notebook&lt;/h1&gt;
 
@@ -1094,7 +1094,7 @@ certainly not all of them.  Please let me know.&lt;/p&gt;
  <entry>
    <title>Why I signed the Cost of Knowledge</title>
    <link href="/2012/12/23/why-i-signed-thecostofknowledge.html"/>
-   <updated>2012-12-23T00:00:00-07:00</updated>
+   <updated>2012-12-23T00:00:00+00:00</updated>
    <id>h/2012/12/23/why-i-signed-thecostofknowledge</id>
    <content type="html">&lt;p&gt;It has been almost a year since &lt;a href=&quot;http://gowers.wordpress.com/2012/01/21/elsevier-my-part-in-its-downfall/&quot;&gt;Tim Gowers&amp;#39; blog post&lt;/a&gt; about boycotting Elsevier triggered the Cost of Knowledge movement.  &lt;a href=&quot;http://thecostofknowledge.com/&quot;&gt;The boycott has been signed by more than 13,000 people&lt;/a&gt;.  But the vast majority of academics -- including most of my own friends and collaborators -- continue to support Elsevier by gifting to it much of their research output and their labor, enabling &lt;a href=&quot;http://tylerneylon.com/files/Neylon_Open_Sci_Sum_Talk.pdf&quot;&gt;Elsevier to operate at greater profits than Starbucks, Amazon, or Nike&lt;/a&gt;.&lt;/p&gt;
 
@@ -1128,7 +1128,7 @@ When I submit a paper, I decide where to deposit a huge investment of my own tim
  <entry>
    <title>Open scientific collaboration</title>
    <link href="/2012/12/22/habits-of-open-scientist-4-collab.html"/>
-   <updated>2012-12-22T00:00:00-07:00</updated>
+   <updated>2012-12-22T00:00:00+00:00</updated>
    <id>h/2012/12/22/habits-of-open-scientist-4-collab</id>
    <content type="html">&lt;p&gt;This is the fourth post in my &lt;a href=&quot;http://davidketcheson.info/2012/07/31/habits-of-open-scientist.html&quot;&gt;series on habits of the open
 scientist&lt;/a&gt;.
@@ -1209,7 +1209,7 @@ collaboration tools can accelerate, enrich, and expand your research.&lt;/p&gt;
  <entry>
    <title>Reflections on the 2012 ICERM Reproducibility Workshop</title>
    <link href="/2012/12/14/icerm-reproducibility.html"/>
-   <updated>2012-12-14T00:00:00-07:00</updated>
+   <updated>2012-12-14T00:00:00+00:00</updated>
    <id>h/2012/12/14/icerm-reproducibility</id>
    <content type="html">&lt;p&gt;I spent the last five days at ICERM (the new Math institute at Brown University)
 attending the workshop 
@@ -1264,7 +1264,7 @@ submitted and the rest of the material on the &lt;a href=&quot;http://wiki.stodd
  <entry>
    <title>Adopting the Reproducible Research Standard</title>
    <link href="/2012/12/06/reproducible-research-standard.html"/>
-   <updated>2012-12-06T00:00:00-07:00</updated>
+   <updated>2012-12-06T00:00:00+00:00</updated>
    <id>h/2012/12/06/reproducible-research-standard</id>
    <content type="html">&lt;p&gt;Back in July, I read Victoria Stodden&amp;#39;s work on licensing reproducible
 research.  Victoria has proposed the Reproducible Research Standard (RRS),
@@ -1362,7 +1362,7 @@ SIAM&amp;#39;s policy falls.&lt;/p&gt;
  <entry>
    <title>Switching from Blogger to Jekyll</title>
    <link href="/2012/10/25/switching-from-blogger-to-jekyll.html"/>
-   <updated>2012-10-25T00:00:00-06:00</updated>
+   <updated>2012-10-25T00:00:00+00:00</updated>
    <id>h/2012/10/25/switching-from-blogger-to-jekyll</id>
    <content type="html">&lt;p&gt;If you&amp;#39;re reading this, then you&amp;#39;ve probably noticed: I moved my blog from &lt;a href=&quot;http://scienceinthesands.blogspot.com&quot;&gt;blogspot&lt;/a&gt; to my own new site.  Among other things, that meant a change in the engine that runs the blog, from &lt;a href=&quot;http://www.blogger.com&quot;&gt;blogger&lt;/a&gt; to &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;.  It was a big jump from the simplest, hosted blogging platform out there to a rather advanced engine designed by hackers for hackers.&lt;/p&gt;
 
@@ -1395,7 +1395,7 @@ replacing the _posts directory, and making a few CSS customizations.&lt;/p&gt;
  <entry>
    <title>You might be a low-quality scientific journal if...</title>
    <link href="/2012/10/16/low_quality_journal.html"/>
-   <updated>2012-10-16T00:00:00-06:00</updated>
+   <updated>2012-10-16T00:00:00+00:00</updated>
    <id>h/2012/10/16/low_quality_journal</id>
    <content type="html">&lt;p&gt;In the spirit of Xiaodong Letterman&amp;#39;s top 10 lists, here are my top 10 signs you might be 
 a low quality scientific journal, inspired by an e-mail I received today from
@@ -1430,7 +1430,7 @@ I must say that AM Publishers&amp;#39; author charges (95 USD) are the lowest I&
  <entry>
    <title>Impact of the Elsevier boycott</title>
    <link href="/2012/10/11/elsevier_boycott_impact.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/elsevier_boycott_impact</id>
    <content type="html">&lt;p&gt;Seven months ago, I signed the Elsevier boycott at
 &lt;a href=&quot;http://thecostofknowledge.com&quot;&gt;thecostofknowledge.com&lt;/a&gt;.  What impact has this
@@ -1463,7 +1463,7 @@ editor.  In every case the editor has been equally polite and understanding.&lt;
  <entry>
    <title>Blogging an iPython notebook with Jekyll</title>
    <link href="/2012/10/11/blogging_ipython_notebooks_with_jekyll.html"/>
-   <updated>2012-10-11T00:00:00-06:00</updated>
+   <updated>2012-10-11T00:00:00+00:00</updated>
    <id>h/2012/10/11/blogging_ipython_notebooks_with_jekyll</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Update as of December 2014: Don&amp;#39;t bother using what&amp;#39;s below; go to 

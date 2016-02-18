@@ -4,13 +4,38 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-02-15T16:35:14+00:00</updated>
+ <updated>2016-02-18T05:06:44+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
    <email>i2000s@hotmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>SQuInT Workshop 2016</title>
+   <link href="/2016/02/17/SQuInT-workshop-2016.html"/>
+   <updated>2016-02-17T00:00:00+00:00</updated>
+   <id>h/2016/02/17/SQuInT-workshop-2016</id>
+   <content type="html">&lt;p&gt;I am going to present our recent work in &lt;a href=&quot;http://physics.unm.edu/SQuInT/2016/index.php&quot;&gt;the 18th SQuInT Workshop&lt;/a&gt; at Albuquerque, NM, USA.
+Below you can find my poster.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[Link to the PDF](/assets/posters/SQuInT2016-Nanofiber.pdf).
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Abstract:&lt;/h2&gt;
+
+&lt;p&gt;While optical fibers have been used for primary quantum communications, atom-fiber and atom-waveguide based quantum interfaces have been proposed as effective elements to implement a broad range of quantum information processing applications. We study the strong coupling between photons and atoms that can be achieved in an optical nanofiber geometry when the interaction is dispersive. While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, one can obtain high cooperativity for ensembles of a few thousand atoms due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We studied the theory of the phase shift and polarization rotation induced on the guided light by the trapped atoms using the dyadic Green&amp;#39;s function method. The Green&amp;#39;s function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms. In this talk, I will illustrate how do we apply our formalism to quantum nondemolition (QND) measurement of the atoms via polarimetry. We study shot-noise-limited detection of atom number for atoms in a completely mixed spin state and the squeezing of projection noise for atoms in clock states. Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry including anisotropy of both the intensity and polarization of the guided modes. We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due to optical pumping. We find a peak metrological squeezing of ~5 dB is achievable with current technology for ~2500 atoms. The theory established can be used to guide the design of nanofiber- or waveguide-based quantum interfaces.&lt;/p&gt;
+
+&lt;h2&gt;Note:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;There are hard-core researchers contacted me and my supervisor before the workshop for some chat, and hence the poster has a handful of equations and extra background content. But they are there not to scare you.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Since I am also serving for a few other duties recently, this poster was made in a hurry and was not well organized in a normal order. You may want to talk to me or contact me if you find anywhere confusing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;More details can be found in our publication: &lt;a href=&quot;http://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.023817&quot;&gt;X. Qi, B. Q. Baragiola, P. S. Jessen, and I. H. Deutsch, Phys. Rev. A 93, 023817 (2016)&lt;/a&gt;. ArXiv online: &lt;a href=&quot;https://arxiv.org/abs/1509.02625&quot;&gt;https://arxiv.org/abs/1509.02625&lt;/a&gt;. The full title is &lt;strong&gt;&lt;em&gt;Dispersive response of atoms trapped near the surface of an optical nanofiber with applications to quantum nondemolition measurement and spin squeezing&lt;/em&gt;&lt;/strong&gt;. &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for your interest, and hopefully see you in SQuInT!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Step 7 - Automate the tests</title>

@@ -4,7 +4,7 @@
  <title>Xiaodong Qi's academic NoteBlog</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-03-03T05:18:18+00:00</updated>
+ <updated>2016-03-03T06:05:21+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -2767,24 +2767,6 @@ It also specifies that &lt;br /&gt;&lt;blockquote&gt;&lt;em&gt;&quot;it is unten
    <updated>2011-02-07T00:00:00+00:00</updated>
    <id>h/2011/02/07/python-code-for-making-histogram-of</id>
    <content type="html">Here is the source code for the example in my last post.  I haven&#39;t had time to clean it up, and some parts are not very elegant.  But if you want to try it out with your own inbox, all you need to do is change the e-mail address and run it.&lt;br /&gt;&lt;br /&gt;Three caveats:&lt;br /&gt;1. If you need to download a large number of e-mail headers, it will take some time (maybe several minutes).&lt;br /&gt;2. It sometimes gets the dates wrong.  However, this seems to occur only in a statistically insignificant fraction of cases.&lt;br /&gt;3. Running this will mark all the messages it accesses as read.  I&#39;m sure there&#39;s a way to avoid this, but haven&#39;t had time to track it down.&lt;br /&gt;&lt;br /&gt;&lt;script src=&quot;https://gist.github.com/815049.js&quot;&gt;  &lt;/script&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-3453492770659191864?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Using pylint to clean up Python code</title>
-   <link href="/2011/01/06/using-pylint-to-clean-up-python-code.html"/>
-   <updated>2011-01-06T00:00:00+00:00</updated>
-   <id>h/2011/01/06/using-pylint-to-clean-up-python-code</id>
-   <content type="html">I just recently discovered a very useful package for anyone who writes python code: &lt;a href=&quot;http://pypi.python.org/pypi/pylint&quot;&gt;pylint&lt;/a&gt;.  It took a little tweaking to get it to do what I wanted.  Besides looking for outright errors, it checks all the recommended Python coding style conventions.  Since I don&#39;t abide by many of those, pylint gave my &lt;a href=&quot;http://web.kaust.edu.sa/faculty/davidketcheson/NodePy/&quot;&gt;nodepy&lt;/a&gt; code a rating of -4.5/10.0 (yes, that&#39;s a NEGATIVE rating) initially.  More importantly, I couldn&#39;t find the real errors among the thousands of style complaints.  To run pylint without checking all the style conventions, just type&lt;br /&gt;&lt;br /&gt;&lt;span style=&quot;font-family: courier new;&quot;&gt;pylint -d C xxxx&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;where &quot;xxxx&quot; is the name of a python package or module.  It will still make a lot of subjective judgments about your code (like suggesting that no function should have more than 5 arguments), but to me it&#39;s a tolerable level (and sometimes the suggestions really are helpful).  More information about pylint&#39;s output messages can be found here: &lt;a href=&quot;http://www.logilab.org/card/pylintfeatures&quot;&gt;http://www.logilab.org/card/pylintfeatures.&lt;/a&gt;  I was able to uncover several previously unnoticed issues in my package in this way.&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-6195851910541010766?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Getting things to install for the correct shell in Mac OS X</title>
-   <link href="/2009/11/24/getting-things-to-install-for-correct.html"/>
-   <updated>2009-11-24T00:00:00+00:00</updated>
-   <id>h/2009/11/24/getting-things-to-install-for-correct</id>
-   <content type="html">In addition to blogging about KAUST here, I&#39;m also going to post little useful tidbits related to scientific computing in OS X.  Today I was setting up my new Mac Pro.  After installing the &lt;a href=&quot;www.enthought.com&quot;&gt;Enthought Python Distribution&lt;/a&gt;, I found that ipython was not in my path (and the python in my path was not the enthought-installed version).&lt;br /&gt;&lt;br /&gt;The culprit was the following:  I had changed shells in Terminal&#39;s preferences to tcsh, but somehow the EPD installer didn&#39;t detect this and thought I was still using bash.  Thus the modifications to my path were placed in ~/.bash_profile rather than in ~/.cshrc.  That was easy enough to fix, but to avoid similar problems in the future, I opened a Terminal and typed&lt;br /&gt;&lt;br /&gt;chsh -s /bin/tcsh&lt;br /&gt;&lt;br /&gt;so that next time the installer would know my default shell.&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img width=&#39;1&#39; height=&#39;1&#39; src=&#39;https://blogger.googleusercontent.com/tracker/4660225022390848760-8862569247568223495?l=scienceinthesands.blogspot.com&#39; alt=&#39;&#39; /&gt;&lt;/div&gt;
 </content>
  </entry>
  

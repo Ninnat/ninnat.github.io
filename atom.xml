@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-05-27T07:08:27+00:00</updated>
+ <updated>2016-05-27T07:49:02+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -22,6 +22,15 @@
 &lt;li&gt;Title: Advanced Topics in Quantum Optics (II)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;(Yeah, we have tagged part I &lt;a href=&quot;http://iciq.github.io/entangle/QuantumOpticsGroup.html&quot;&gt;two years before&lt;/a&gt; already.)&lt;/p&gt;
+&lt;center&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://media.wiley.com/product_data/coverImage300/73/35274070/3527407073.jpg&quot;   width=&quot;300px&quot;   align=&quot;center&quot; alt=&quot;optical pumping and laser cooling&quot;   /&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+  
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Main topics:
 &lt;ul&gt;
@@ -33,6 +42,7 @@
 &lt;li&gt;More resources:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://info.phys.unm.edu/~ideutsch/Classes/Phys531F11/index.htm&quot;&gt;Atomic Physics course by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link)&lt;/li&gt;
+&lt;li&gt;A book, if you wish, as shown in the photo above by our friend &lt;a href=&quot;http://cquic.unm.edu/member/yuan.yu.jau/&quot;&gt;Yuan-Yu Jau&lt;/a&gt; and others on Optical Pumping featured with simulation demo codes and detailed analysis.&lt;/li&gt;
 &lt;li&gt;A handful of classical papers to be updated here later.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Discussion forum: &lt;a href=&quot;https://disqus.com/home/channel/quantumoptics&quot;&gt;see this channel&lt;/a&gt; I created recently.&lt;/p&gt;&lt;/li&gt;

@@ -4,7 +4,7 @@
  <title>The NoteBlog of Xiaodong Qi</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-06-03T03:40:17+00:00</updated>
+ <updated>2016-06-03T04:57:04+00:00</updated>
  <id></id>
  <author>
    <name>Xiaodong Qi</name>
@@ -41,7 +41,8 @@
 &lt;li&gt;&lt;p&gt;Time slot: From June 1st to July 29th. Detailed schedule to be updated.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Main references:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://info.phys.unm.edu/~ideutsch/Classes/Phys531F11/index.htm&quot;&gt;Atomic Physics course by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://info.phys.unm.edu/~ideutsch/Classes/Phys566F15/index.htm&quot;&gt;Quantum Optics I by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://info.phys.unm.edu/~ideutsch/Classes/Phys531F11/index.htm&quot;&gt;Atomic Physics course by Prof. Ivan Deutsch&lt;/a&gt; (lecture videos, notes and homeworks are all available in the link).&lt;/li&gt;
 &lt;li&gt;A book, if you wish, as shown in the photo above by our friend &lt;a href=&quot;http://cquic.unm.edu/member/yuan.yu.jau/&quot;&gt;Yuan-Yu Jau&lt;/a&gt; and others on Optical Pumping featured with simulation demo codes and detailed analysis.&lt;/li&gt;
 &lt;li&gt;A handful of classical papers to be updated here later.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -49,6 +50,21 @@
 &lt;/ul&gt;
 &lt;p&gt;The plan is to visit or revisit those lectures and do some homeworks and derivations, and reproduce some known results published in some reference papers. I may do some programming in Julia using our preliminary &lt;a href=&quot;http://juliaquantum.github.io&quot;&gt;JuliaQuantum libraries&lt;/a&gt;, which is good to me since I will meet with Nik from Stanford in June to share our experiences on symbolic computing and simulating quantum control related stuffs in Julia, and then meet with our core JuliaQuantum developer Amir and a tensor network guru Jutho from Ghent to discuss some efficient ways to handle quantum objects in Julia. I hope some good ideas can be further transferred to the code base of the JuliaQuantum libraries under construction.&lt;/p&gt;
 &lt;p&gt;If you are interested in taking this challenge and fun study opportunity, feel free to contact me or comment below. Thanks!&lt;/p&gt;
+&lt;h1 id=&quot;schedule-and-progress&quot;&gt;Schedule and progress&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] June 1st-5th:
+&lt;ul&gt;
+&lt;li&gt;[X] From Ivan’s QO lectures: Coherence, density matrix, Bloch-sphere, Rabi oscillations. Lecture notes #4-6, P.S. #2-4; Optical Bloch equations, Master equation, Damped two-level atom. Lecture notes #7-8, P.S. #5-6.&lt;/li&gt;
+&lt;li&gt;[ ] From Yuan-Yu’s book: chapters 1-5 (Alkali atoms, wavefunction, Schrodinger space, density matrix, Liouville space, optical pumping of atoms).&lt;/li&gt;
+&lt;li&gt;[ ] Get familiar with JuliaQuantum libraries: &lt;a href=&quot;https://github.com/JuliaQuantum/QuBase.jl&quot;&gt;QuBase.jl&lt;/a&gt;, &lt;a href=&quot;https://github.com/JuliaQuantum/QuDirac.jl&quot;&gt;QuDirac.jl&lt;/a&gt; and &lt;a href=&quot;https://github.com/JuliaQuantum/QuDynamics.jl&quot;&gt;QuDynamics.jl&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;[ ] June 6th-12th:
+&lt;ul&gt;
+&lt;li&gt;[ ] From Ivan’s QO lectures: Quantization of the field, atoms+quantized field. Lecture notes #11-13, P.S. #7;&lt;/li&gt;
+&lt;li&gt;[ ] From Ivan’s AP lectures: notes 10-13.&lt;/li&gt;
+&lt;li&gt;[ ] From Yuan-Yu’s book: chapters 6-9.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  

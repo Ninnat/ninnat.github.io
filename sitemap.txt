@@ -1,6 +1,7 @@
  
 http://i2000s.github.io/R.xml  
 http://i2000s.github.io/README.html  
+http://i2000s.github.io/about/  
 http://i2000s.github.io/archives.html  
 http://i2000s.github.io/atom.xml  
 http://i2000s.github.io/categories.html  

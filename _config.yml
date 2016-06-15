@@ -51,24 +51,24 @@ gems:
 # csl style: https://github.com/citation-style-language/styles
 gems:
   - "jekyll/scholar"
-#scholar:
-#  style: assets/APS.csl
-#  locale: en
-#
-#  sort_by: year
-#  order: descending
+scholar:
+  style: assets/APS.csl
+  locale: en
 
-#  source: assets
-#  bibliography: QiPublications
-#  bibliography_template: bibtemplate
+  sort_by: year
+  order: descending
 
-#  replace_strings: true
+  source: assets
+  bibliography: Publications
+  bibliography_template: bibtemplate
 
-#  details_dir:    pubs
-#  details_layout: bibtex.html
-#  details_link:   Details
+  replace_strings: true
 
-#  query: "@*"
+  details_dir:    pubs
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
 
 
 

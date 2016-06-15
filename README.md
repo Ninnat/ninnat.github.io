@@ -125,7 +125,7 @@ You can find the full editing history of each file.
 Credits should be given appropriately to the origination and the initial author at less and all following contributors if situation permits.
 For instance, you can cite or attribute posts/works originally from this site/repository as:
 
-Xiaodong Qi ("Page publication date"), "Page Title", Lab Notebook, [http://i2000s.github.io](http://i2000s.github.io)
+Ninnat Dangniam ("Page publication date"), "Page Title", Notes, [http://ninnat.github.io](http://ninnat.github.io)
 
 with appropriate page title and publication date as indicated.
 [Greycite](http://greycite.knowledgeblog.org/) is an excellent online tool that can generate the citation information for any particular page given it's URL.

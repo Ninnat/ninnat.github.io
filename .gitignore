@@ -1,6 +1,6 @@
 _plugins/_cache
 _site
-_config
+secret
 _TEMP
 
 *~

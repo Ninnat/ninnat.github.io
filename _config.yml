@@ -102,4 +102,4 @@ exclude:
   - deploy.sh
   - fig.yml
   - _posts/source/
-  - _posts/_private/
+  - secret

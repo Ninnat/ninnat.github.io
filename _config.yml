@@ -1,83 +1,74 @@
-title : The NoteBlog of Xiaodong Qi
-tagline: Exploring Quantum World
+title : Ninnat's Notes
+tagline: 
 author :
-  name : Xiaodong Qi
-  givenName: Xiaodong
-  familyName: Qi
-  ChineseName: 戚晓东
-  twitter: i2000s
-  github: i2000s
-  email : i2000s@hotmail.com
-  gplus: +XiaodongQi
-  gscholar: 6FdqHlIAAAAJ&hl
-  facebook: i2000s
-  linkedin: xiaodongqi
-  stackexchangephy: 37682/xiaodong-qi
+  name : Ninnat Dangniam
+  givenName: Ninnat
+  familyName: Dangniam
+  ThaiName: นินนาท แดงเนียม
+  twitter: 
+  github: ninnat
+  email : truecrimson@gmail.com
+  gplus: 
+  gscholar: 
+  facebook: ninnattom.dangniam 
+  linkedin:
+  stackexchangephy: 
   ghorgs: # Used in the Javascript of Community page to pull out github repos.
     - name: CQuIC
-    - name: JuliaQuantum
-    - name: ICIQ
-    - name: JuliaCN
-url: http://i2000s.github.io
+url: http://ninnat.github.io
 disqus:
-  sitename: qxd # This is the shortname of the disqus site id to display disqus comments below posts.
+  sitename: ninnat # This is the shortname of the disqus site id to display disqus comments below posts.
 addthis:  # Get an account at www.addthis.com. You may need to at least enable the Sharing Sidebar and Sharing Buttons functions to fully use our design.
   pubid: ra-54f225a84524edd3 # This is the AddThis button pubid to display social sharing buttons on the website. Used in the header template.
 navigation: # For the navigation menu. Don't use index.html. urls should end with a directory.
-  - text: Home
+  - text: Blog
     url: /
-  - text: Research
-    url: /research/
-  - text: Publications and Activities
-    url: /pubs/
-  - text: Community
-    url: /community/
+  - text: About
+    url: /about/
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes
 encoding: utf-8
 pageviews: no    ## toggle on sidebar pageviews
-twitter_api: yes
-analytics: UA-74657818-1 ## Google Analytics key UA-46730871-1(in _includes/analytics.html and search.html)
-baiduid: cAv3dLIDps # Baidu site verification ID. Used in metadata.html.
-baidutongji: a9ed76232076b69dc6afb79ece4d351d # This is for collecting statistical data of visiting from Baidu. Used in analytics.html.
+twitter_api: no
+analytics: UA-79420814-1 ## Google Analytics key UA-79420814-1 (in _includes/analytics.html and search.html)
 baseurl: '/'
 lsi: True # Possibly for generating related posts with gsl and classifier packages.
 
 # GitHub information of this site. Used for extracting commit history of posts.
 gitstamps: yes
-username: i2000s
-orgname: i2000s # This is used to identify the category of GitHub repository. Use username for personal repository.
-repo: i2000s.github.io # used in linking commit history and auto-deploy the site on travis-CI. The repository address will be identified as https://username:GH_TOKEN@github.com/orgname/repo.git defined in Rakefile.
+username: ninnat 
+orgname: ninnat # This is used to identify the category of GitHub repository. Use username for personal repository.
+repo: ninnat.github.io # used in linking commit history and auto-deploy the site on travis-CI. The repository address will be identified as https://username:GH_TOKEN@github.com/orgname/repo.git defined in Rakefile.
 sourcebranch: dev # used in linking commit history.
 
 source: .
 gems:
   - jekyll-pandoc
-  - 'jekyll-twitter-plugin'
+#  - 'jekyll-twitter-plugin'
 # Publications. Ref: http://tuxette.nathalievilla.org/?p=1426
 # http://eric-tramel.github.io/working-automated-publications/
 # csl style: https://github.com/citation-style-language/styles
 gems:
   - "jekyll/scholar"
-scholar:
-  style: assets/APS.csl
-  locale: en
+#scholar:
+#  style: assets/APS.csl
+#  locale: en
+#
+#  sort_by: year
+#  order: descending
 
-  sort_by: year
-  order: descending
+#  source: assets
+#  bibliography: QiPublications
+#  bibliography_template: bibtemplate
 
-  source: assets
-  bibliography: QiPublications
-  bibliography_template: bibtemplate
+#  replace_strings: true
 
-  replace_strings: true
+#  details_dir:    pubs
+#  details_layout: bibtex.html
+#  details_link:   Details
 
-  details_dir:    pubs
-  details_layout: bibtex.html
-  details_link:   Details
-
-  query: "@*"
+#  query: "@*"
 
 
 

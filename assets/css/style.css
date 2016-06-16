@@ -6,7 +6,7 @@ html {
 body {
   background-repeat: repeat;
   font-family: "Quattrocento Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  /*font-family: Helvetica neue, quattrocento-sans, Helvetica, Arial, sans-serif;*/
+  font-family: Helvetica neue, quattrocento-sans, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
 }

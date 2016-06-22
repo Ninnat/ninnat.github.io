@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-06-22T00:44:34+00:00</updated>
+ <updated>2016-06-22T00:57:02+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -19,7 +19,8 @@
    <id>h/2016/06/21/matchgates</id>
    <content type="html">&lt;iframe src=&quot;//slides.com/ninnat/deck-3-4/embed&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;A matchcircuit is an ((n))-qubit quantum circuit composed of matchgates.&lt;/p&gt;
+&lt;p&gt;A matchcircuit is an &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt;-qubit quantum circuit composed of matchgates.&lt;/p&gt;
+&lt;p&gt;[ |]&lt;/p&gt;
 </content>
  </entry>
  

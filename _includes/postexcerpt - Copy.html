@@ -5,9 +5,12 @@
 <p style="font-style:italic"> pageviews: {{ post.pageviews }} </p>
 {% endif %}
 <article>
-<div>
-{{ post.content}} 
-</article>
+<div class="excerpt">
+{{ post.content | strip_html | truncate:400  }} 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="{{ post.url }}"> <em>Read more</em></a> </p>
 <br />
 <br />
 

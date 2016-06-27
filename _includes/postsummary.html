@@ -2,7 +2,7 @@
 <time> {{ post.date | date_to_string }}</time>
 <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
 <h4><span>{{ post.subtitle }}</span></h4>
-      {% assign foundImage = 0 %}
+<!--      {% assign foundImage = 0 %}
       {% assign images = post.content | split:"<img" %}
       {% for image in images %}
         {% if image contains 'src' %}
@@ -12,8 +12,8 @@
                 {% break %}
             {% endif %}
         {% endif %}
-      {% endfor %}
+      {% endfor %} -->
 
-{{ post.content}}
+{{ post.content}} 
 
 </div>

@@ -11,6 +11,7 @@ before_install:
 - sudo apt-get install pandoc
 - sudo apt-get install gsl-bin libgsl0-dev
 - gem update --system
+- gem install activesupport
 - gem install bundler
 install:
 - travis_retry bundle install

@@ -3,6 +3,6 @@ layout: post
 title: Place holder
 subtitle:
 ---
- [^1]
+Test popup footnote. [^1]
 
 [^1]: Something.

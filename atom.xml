@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-20T20:38:22+00:00</updated>
+ <updated>2016-07-20T20:47:46+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -17,15 +17,7 @@
    <link href="/2016/07/18/placeholder.html"/>
    <updated>2016-07-18T00:00:00+00:00</updated>
    <id>h/2016/07/18/placeholder</id>
-   <content type="html">&lt;p&gt;Test popup footnote. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Something. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+   <content type="html">&lt;p&gt;Test popup footnote. &lt;a href=&quot;Something.&quot;&gt;^1&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  

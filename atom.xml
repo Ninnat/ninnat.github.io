@@ -4,32 +4,13 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-18T21:46:36+00:00</updated>
+ <updated>2016-07-20T00:27:03+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
- 
- <entry>
-   <title>The Nonlocal Jordan-Wigner Transformation</title>
-   <link href="/2016/06/21/matchgates.html"/>
-   <updated>2016-06-21T00:00:00+00:00</updated>
-   <id>h/2016/06/21/matchgates</id>
-   <content type="html">&lt;iframe src=&quot;//slides.com/ninnat/deck-3-4/embed&quot; width=&quot;576&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;A matchcircuit is an $n$-qubit quantum circuit composed of matchgates. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Something. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</content>
- </entry>
  
  
 </feed>

@@ -5,7 +5,7 @@ html {
 /* -- Body -- */
 body {
   background-repeat: repeat;
-  font-family: "Quattrocento Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Arial Black", "Lucida Grande", sans-serif;
+  font-family: "Quattrocento Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   /*-- font-family: Helvetica neue, quattrocento-sans, Helvetica, Arial, sans-serif; --*/
   font-size: 16px;
   line-height: 22px;
@@ -304,7 +304,7 @@ li.repo .language {
 #postsum
 {
 	position: relative;
-	/*padding: 50px;*/padding: 0px 0px 0px 0px;
+	/*padding: 50px;*/padding: 10px 10px 5px 10px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	background-color: #fff;

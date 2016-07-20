@@ -11,6 +11,7 @@ body {
   line-height: 22px;
   background-color: #EEE;
 }
+div{background-color: #FFF;}
 /* -- Footer -- */
 .footer {
   padding: 35px 0 36px;

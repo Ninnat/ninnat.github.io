@@ -587,6 +587,7 @@ figcaption {
     text-align: left;
 } 
 
+/* -- bigfoot footnote --*/
 .bigfoot-footnote__button {
   position: relative;
   z-index: 5;

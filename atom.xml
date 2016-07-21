@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-21T06:14:57+00:00</updated>
+ <updated>2016-07-21T07:33:58+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -29,17 +29,16 @@
 \nabla \times \mathbf{B} &amp;amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
 \end{align}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Another thing that was made sure to work before I start writing is the popup footnote. To these days, there are still electronic footnotes that are limited in the way footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. This is 2016, ladies and gentlemen. Electronic footnotes don’t have to break the reading flow. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
+&lt;p&gt;Another thing that was made sure to work before I start writing is the popup footnote. To these days, there are still digital footnotes that are limited in the way footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. They break the reading flow. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t crucial to read the main text.)&lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; Indeed, what you just saw is the right way to implement a digital footnote. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/assets/js/bigfoot.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
     $.bigfoot();    
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;within &lt;code&gt;/_includes/javascript.html&lt;/code&gt;, and don’t forget to paste the css into &lt;code&gt;/assets/css/style.css&lt;/code&gt;. For searchability, I also show footnotes in the footer.&lt;/p&gt;
-&lt;p&gt;Here is an example &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Pretty nice, huh?&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Alan Jacobs, &lt;a href=&quot;http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/&quot;&gt;“The Technology of the Better Footnote,”&lt;/a&gt; &lt;em&gt;The Atlantic&lt;/em&gt;, March 2012.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>

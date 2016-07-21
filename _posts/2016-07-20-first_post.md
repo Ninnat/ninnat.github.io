@@ -16,12 +16,14 @@ For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *
 
 Here is the Maxwell's equations in cgs units:
 
-$$ \begin{aligned}
+$$
+\begin{aligned}
 \nabla \cdot \mathbf{E} &= 4\pi \rho , \\ 
 \nabla \times \mathbf{E} &= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
 \nabla \cdot \mathbf{B} &= 0, \\
 \nabla \times \mathbf{B} &= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t},
-$$ \end{aligned}
+\end{aligned}
+$$
 
 Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book.
 You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016.

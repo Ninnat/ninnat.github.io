@@ -23,4 +23,4 @@ I use popup footnotes to improve the readability, made possible by [Bigfoot](htt
 	$.bigfoot();	
 </script>
 ``` 
-within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`
+within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`. I decide to also show the footnote in the footer for searchability.

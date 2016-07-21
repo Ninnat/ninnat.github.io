@@ -11,14 +11,17 @@ on a free (public) Git repository.
 
 If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in [Markdown](http://daringfireball.net/projects/markdown/)
 and diaplayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
-uses the delimiter `$$...$$`. You can find a quick guide on MathJax syntax [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+uses `$$...$$`. You can find a quick guide on MathJax syntax [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *inside* `$$...$$`.
 
-$$ \begin{align}
-\nabla \cdot \mathbf{E} &= 4\pi \rho \end \\ 
-\nabla \times \mathbf{E} &= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} \\
-\nabla \cdot \mathbf{B} &= 0 \\
-\nabla \times \mathbf{B} &= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}
-$$ \end{align}
+Here is the Maxwell's equations in cgs units:
+
+$$ \begin{aligned}
+\nabla \cdot \mathbf{E} &= 4\pi \rho , \\ 
+\nabla \times \mathbf{E} &= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
+\nabla \cdot \mathbf{B} &= 0, \\
+\nabla \times \mathbf{B} &= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t},
+$$ \end{aligned}
 
 Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book.
 You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016.
@@ -29,9 +32,9 @@ Electronic footnotes don't have to interrupt the reading flow. Just download [Bi
 	$.bigfoot();	
 </script>
 ``` 
-within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`
+within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`.
 
-Here is an example [^1].
+Here is an example [^1]. I decide to also show the footnote in the footer for searchability.
 
 I will find a chance to explore blogging with [IPython Notebook](https://ipython.org/notebook.html) another time.
 

@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-21T03:32:02+00:00</updated>
+ <updated>2016-07-21T03:38:33+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -20,13 +20,15 @@
    <content type="html">&lt;p&gt;First post on my Jekyll-powered blog!&lt;/p&gt;
 &lt;p&gt;I’ve been blogging on &lt;a href=&quot;https://ninnatdangniam.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying for a premium. Now you can follow &lt;a href=&quot;https://ninnat.github.io/README.html&quot;&gt;what I did&lt;/a&gt; and get your own blog hosted on a free (public) Git repository.&lt;/p&gt;
 &lt;p&gt;If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and diaplayed using &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. Math in a paragraph (in-line math) is delimited by &lt;code&gt;$...$&lt;/code&gt;, while displaying math in its own paragraph uses &lt;code&gt;$$...$$&lt;/code&gt;. You can find a quick guide on MathJax syntax &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;. For aligned equations in multiple lines, use &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; &lt;em&gt;inside&lt;/em&gt; &lt;code&gt;$$...$$&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Here is the Maxwell’s equations in cgs units:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \begin{aligned}
+&lt;p&gt;Here are the Maxwell’s equations in cgs units:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
+\begin{aligned}
 \nabla \cdot \mathbf{E} &amp;amp;= 4\pi \rho , \\ 
 \nabla \times \mathbf{E} &amp;amp;= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
 \nabla \cdot \mathbf{B} &amp;amp;= 0, \\
 \nabla \times \mathbf{B} &amp;amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t},
-\]&lt;/span&gt; \end{aligned}&lt;/p&gt;
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book. You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016. Electronic footnotes don’t have to interrupt the reading flow. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/assets/js/bigfoot.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;

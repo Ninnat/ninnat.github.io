@@ -16,4 +16,4 @@ http://i2000s.github.io/tags.html
 http://i2000s.github.io/tools.html 
 
  
-http://i2000s.github.io/2016/07/18/placeholder.html 
+http://i2000s.github.io/2016/07/20/first_post.html 

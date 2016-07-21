@@ -13,8 +13,8 @@ The code deployment to [Github](https://github.com/ninnat/ninnat.github.io) is d
 The source code for this blog was forked from Xiaodong Qi's Git [repository](https://github.com/i2000s/i2000s.github.io), which in turns modified from
 [Carl Boettiger](http://carlboettiger.info)'s and [David Ketcheson](http://davidketcheson.info)'s websites. Please feel free to fork it for your own use.
 The instruction to install dependencies and modify the source code can be found on Xiaodong Qi's [website](http://i2000s.github.io/README.html).
-On Windows, you can follow the instruction on [this site](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/) to install Ruby and Jekyll. 
-I have not been able to install the `gsl` plugin on Windows and, as a result, can't compile the blog locally on my computer. But I will leave the trouble of dealing with that in the future.
+On Windows, you can follow the instruction [here](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/) to install Ruby and Jekyll. 
+I have not been able to install the `gsl` plugin on Windows and, as a result, can't compile the blog locally on my computer. But I will leave the trouble of dealing with that for the future.
 
 I use popup footnotes to improve readability, made possible by [Bigfoot](http://www.bigfootjs.com/). Just put the javascript file to, say, `/assets/js`  and call it with
 ```

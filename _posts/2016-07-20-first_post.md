@@ -3,6 +3,7 @@ layout: post
 title: First Post
 subtitle: How this blog is made and what it can do
 ---
+
 First post on my Jekyll-powered blog!
 
 I've been blogging on [Wordpress](https://ninnatdangniam.wordpress.com/) for a long time (in Thai) but despite how easy it is to setup the blog,
@@ -10,7 +11,7 @@ there isn't much I can do without paying. Now you can follow [what I did](https:
 on a free (public) Git repository.
 
 If you are math bloggers, finding a functional blog is even harder. Math in this blog is written in [Markdown](http://daringfireball.net/projects/markdown/)
-and diaplayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
+and displayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
 uses `$$...$$`. For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *inside* `$$...$$`. Finally, if you want the equations numbered, use "align" instead of
 "aligned". A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
@@ -25,8 +26,8 @@ $$
 \end{align}
 $$
 
-Another thing that was made sure to work before I start writing is the popup footnote. To these days, there are still digital footnotes that are limited in the way
- footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. They break the reading flow.
+Another thing that was made sure to work before I start writing is the popup footnote. Digital footnotes today are often still limited in the way
+ footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. They break the flow of reading.
  (And maybe it's just me but it's tempting to take a peek at footnotes even when I know they aren't crucial to read the main text.)[^1] Indeed, what you just saw is the right way to
 implement a digital footnote. Just download [Bigfoot](http://www.bigfootjs.com/). Put the javascript file to, say, `/assets/js`  and call it with
 ```
@@ -37,4 +38,4 @@ implement a digital footnote. Just download [Bigfoot](http://www.bigfootjs.com/)
 ``` 
 within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`. For searchability, I also show footnotes in the footer.
 
-[^1]: Alan Jacobs, ["The Technology of the Better Footnote,"](http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/) *The Atlantic*, March 2012.
+[^1]: Alan Jacobs, ["The Technology of a Better Footnote,"](http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/) *The Atlantic*, March 2012.

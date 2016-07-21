@@ -14,7 +14,7 @@ and diaplayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in
 uses `$$...$$`. You can find a quick guide on MathJax syntax [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *inside* `$$...$$`.
 
-Here is the Maxwell's equations in cgs units:
+Here are the Maxwell's equations in cgs units:
 
 $$
 \begin{aligned}

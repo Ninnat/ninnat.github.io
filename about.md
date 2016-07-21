@@ -1,7 +1,5 @@
 ---
 layout: default
-title: About
+title: About This Site
 permalink: /about/ 
 ---
-
-Yeah!!!

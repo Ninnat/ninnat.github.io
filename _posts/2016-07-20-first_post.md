@@ -26,8 +26,8 @@ $$
 $$
 
 Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book.
-You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016.
-Electronic footnotes don't have to interrupt the reading flow. Just download [Bigfoot](http://www.bigfootjs.com/). Put the javascript file to, say, `/assets/js`  and call it with
+You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016, ladies and gentlemen.
+Electronic footnotes don't have to break the reading flow. Just download [Bigfoot](http://www.bigfootjs.com/). Put the javascript file to, say, `/assets/js`  and call it with
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">

@@ -200,15 +200,15 @@ var _hmt = _hmt || [];
 
 <p>First post on my Jekyll-powered blog!</p>
 <p>I’ve been blogging on <a href="https://ninnatdangniam.wordpress.com/">Wordpress</a> for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying for a premium. Now you can follow <a href="https://ninnat.github.io/README.html">what I did</a> and get your own blog hosted on a free (public) Git repository.</p>
-<p>If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and diaplayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. You can find a quick guide on MathJax syntax <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>. For aligned equations in multiple lines, use <code>\begin{aligned}...\end{aligned}</code> <em>inside</em> <code>$$...$$</code>.</p>
+<p>If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and diaplayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. You can find a quick guide on MathJax syntax <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>. For aligned equations in multiple lines, use <code>\begin{align}...\end{align}</code> <em>inside</em> <code>$$...$$</code>.</p>
 <p>Here are the Maxwell’s equations in cgs units:</p>
 <p><span class="math">\[
-\begin{aligned}
+\begin{align}
 \nabla \cdot \mathbf{E} &amp;= 4\pi \rho , \\ 
 \nabla \times \mathbf{E} &amp;= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
 \nabla \cdot \mathbf{B} &amp;= 0, \\
 \nabla \times \mathbf{B} &amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t},
-\end{aligned}
+\end{align}
 \]</span></p>
 <p>Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book. You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016. Electronic footnotes don’t have to interrupt the reading flow. Just download <a href="http://www.bigfootjs.com/">Bigfoot</a>. Put the javascript file to, say, <code>/assets/js</code> and call it with</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt;
@@ -216,8 +216,7 @@ var _hmt = _hmt || [];
     $.bigfoot();    
 &lt;/script&gt;</code></pre>
 <p>within <code>/_includes/javascript.html</code>, and don’t forget to paste the css into <code>/assets/css/style.css</code>.</p>
-<p>Here is an example <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. I decide to also show the footnote in the footer for searchability.</p>
-<p>I will find a chance to explore blogging with <a href="https://ipython.org/notebook.html">IPython Notebook</a> another time.</p>
+<p>I decide to also show the footnote in the footer for searchability. Here is an example <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
 <section class="footnotes">
 <hr />
 <ol>

@@ -1,5 +1,5 @@
 <aside prefix="og:http://ogp.me/ns/article#">
-  <p> <i class="glyphicon glyphicon-calendar"></i>
+  <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
     <time datetime="{{ page.date }}" 
     property="dc:created">{{ page.date | date_to_string }}</time></p>
   {%if page.modified %}
@@ -16,14 +16,14 @@
 
   <br><br>
 
-  <p><i class="glyphicon glyphicon-list"></i> Posted in 
+  <p><!-- <i class="glyphicon glyphicon-list"></i> --> Categories: 
     {% for category in page.categories %} 
       <a rel="dc:subject" class="category" 
          href="/categories.html#{{ category | cgi_escape }}">{{ category }}</a>
     {% unless page.categories.last == category %}, {% endunless %}
     {% endfor %}</p>
 
-  <p> <i class="glyphicon glyphicon-tag"></i> tags: 
+  <p> <!-- <i class="glyphicon glyphicon-tag"></i> --> Tags: 
     {% for tag in page.tags %}
     <!-- http://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
@@ -40,7 +40,7 @@
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
- <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
- <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
- <i class="glyphicon glyphicon-tag"></i> <a href="/tags.html">by tag.</a>
+ <!-- <i class="glyphicon glyphicon-chevron-left"></i> --> <a href="/archives.html">Archives by date,</a>
+ <!-- <i class="glyphicon glyphicon-list"></i> --> <a href="/categories.html">By category,</a>
+ <!-- <i class="glyphicon glyphicon-tag"></i> --> <a href="/tags.html">By tag.</a>
 </div>

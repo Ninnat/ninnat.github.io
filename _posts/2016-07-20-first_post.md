@@ -11,7 +11,7 @@ on a free (public) Git repository.
 
 If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in [Markdown](http://daringfireball.net/projects/markdown/)
 and diaplayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
-uses `$$...$$`. For aligned equations in multiple lines, use `\begin{align}...\end{align}` *inside* `$$...$$`. Finally, if you want the equations numbered, use "align" instead of
+uses `$$...$$`. For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *inside* `$$...$$`. Finally, if you want the equations numbered, use "align" instead of
 "aligned". A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
 Let's test this by writing the Maxwell's equations in cgs units:

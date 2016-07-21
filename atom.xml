@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-21T05:59:55+00:00</updated>
+ <updated>2016-07-21T06:14:57+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -18,8 +18,8 @@
    <updated>2016-07-20T00:00:00+00:00</updated>
    <id>h/2016/07/20/first_post</id>
    <content type="html">&lt;p&gt;First post on my Jekyll-powered blog!&lt;/p&gt;
-&lt;p&gt;I’ve been blogging on &lt;a href=&quot;https://ninnatdangniam.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying for a premium. Now you can follow &lt;a href=&quot;https://ninnat.github.io/README.html&quot;&gt;what I did&lt;/a&gt; and get your own blog hosted on a free (public) Git repository.&lt;/p&gt;
-&lt;p&gt;If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and diaplayed using &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. Math in a paragraph (in-line math) is delimited by &lt;code&gt;$...$&lt;/code&gt;, while displaying math in its own paragraph uses &lt;code&gt;$$...$$&lt;/code&gt;. For aligned equations in multiple lines, use &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; &lt;em&gt;inside&lt;/em&gt; &lt;code&gt;$$...$$&lt;/code&gt;. Finally, if you want the equations numbered, use “align” instead of “aligned”. A quick guide on MathJax syntax can be found &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I’ve been blogging on &lt;a href=&quot;https://ninnatdangniam.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow &lt;a href=&quot;https://ninnat.github.io/README.html&quot;&gt;what I did&lt;/a&gt; and get your own blog hosted on a free (public) Git repository.&lt;/p&gt;
+&lt;p&gt;If you are math bloggers, finding a functional blog is even harder. Math in this blog is written in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and diaplayed using &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. Math in a paragraph (in-line math) is delimited by &lt;code&gt;$...$&lt;/code&gt;, while displaying math in its own paragraph uses &lt;code&gt;$$...$$&lt;/code&gt;. For aligned equations in multiple lines, use &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; &lt;em&gt;inside&lt;/em&gt; &lt;code&gt;$$...$$&lt;/code&gt;. Finally, if you want the equations numbered, use “align” instead of “aligned”. A quick guide on MathJax syntax can be found &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s test this by writing the Maxwell’s equations in cgs units:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
 \begin{align}
@@ -29,13 +29,13 @@
 \nabla \times \mathbf{B} &amp;amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
 \end{align}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book. You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016, ladies and gentlemen. Electronic footnotes don’t have to break the reading flow. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
+&lt;p&gt;Another thing that was made sure to work before I start writing is the popup footnote. To these days, there are still electronic footnotes that are limited in the way footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. This is 2016, ladies and gentlemen. Electronic footnotes don’t have to break the reading flow. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/assets/js/bigfoot.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
     $.bigfoot();    
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;within &lt;code&gt;/_includes/javascript.html&lt;/code&gt;, and don’t forget to paste the css into &lt;code&gt;/assets/css/style.css&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;I decide to also show the footnote in the footer for searchability. Here is an example &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;within &lt;code&gt;/_includes/javascript.html&lt;/code&gt;, and don’t forget to paste the css into &lt;code&gt;/assets/css/style.css&lt;/code&gt;. For searchability, I also show footnotes in the footer.&lt;/p&gt;
+&lt;p&gt;Here is an example &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;

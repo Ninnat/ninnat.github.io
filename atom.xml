@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-07-21T04:04:00+00:00</updated>
+ <updated>2016-07-21T05:59:55+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -29,7 +29,7 @@
 \nabla \times \mathbf{B} &amp;amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
 \end{align}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book. You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016. Electronic footnotes don’t have to interrupt the reading flow. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
+&lt;p&gt;Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book. You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016, ladies and gentlemen. Electronic footnotes don’t have to break the reading flow. Just download &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt;. Put the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and call it with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/assets/js/bigfoot.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
     $.bigfoot();    

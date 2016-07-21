@@ -13,24 +13,26 @@ If you are math bloggers, finding a functional blog is an even harder task. Math
 and diaplayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
 uses the delimiter `$$...$$`. You can find a quick guide on MathJax syntax [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
-\begin{align}
+$$ \begin{align}
 \nabla \cdot \mathbf{E} &= 4\pi \rho \end \\ 
 \nabla \times \mathbf{E} &= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} \\
 \nabla \cdot \mathbf{B} &= 0 \\
 \nabla \times \mathbf{B} &= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}
-\end{align}
+$$ \end{align}
 
 Another thing I made sure before posting on this blog is to use popup footnotes. There are electronic footnotes that are still made to work the same way as they would in a book.
 You follow the link to the bottom of the post and then have to find a way back to the text you were just reading. This is 2016.
-Electronic footnotes don't have to interrupt the reading flow. Just download [Bigfoot](http://www.bigfootjs.com/) to, say, `/assets/js`  and call it with
+Electronic footnotes don't have to interrupt the reading flow. Just download [Bigfoot](http://www.bigfootjs.com/). Put the javascript file to, say, `/assets/js`  and call it with
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
 	$.bigfoot();	
 </script>
 ``` 
-within `/_includes/javascript.html`.
+within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`
 
 Here is an example [^1].
+
+I will find a chance to explore blogging with [IPython Notebook](https://ipython.org/notebook.html) another time.
 
 [^1]: Pretty nice, huh?

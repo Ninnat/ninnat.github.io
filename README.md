@@ -16,11 +16,11 @@ The instruction to install independencies and modify the source code can be foun
 On Windows, you can follow the instruction to install Ruby and Jekyll on [this site](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/).
 I have not been able to install the gsl plugin on Windows and, as a result, can't compile the blog locally on my computer. But I will leave that for the future.
 
-I use popup footnotes to improve the readability, made possible by [Bigfoot](http://www.bigfootjs.com/). Just download it to, say, `/assets/js`  and call it with
+I use popup footnotes to improve the readability, made possible by [Bigfoot](http://www.bigfootjs.com/). Just put the javascript file to, say, `/assets/js`  and call it with
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
 	$.bigfoot();	
 </script>
 ``` 
-within `/_includes/javascript.html`.
+within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`

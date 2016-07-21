@@ -11,17 +11,17 @@ on a free (public) Git repository.
 
 If you are math bloggers, finding a functional blog is an even harder task. Math in this blog is written in [Markdown](http://daringfireball.net/projects/markdown/)
 and diaplayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
-uses `$$...$$`. You can find a quick guide on MathJax syntax [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-For aligned equations in multiple lines, use `\begin{align}...\end{align}` *inside* `$$...$$`.
+uses `$$...$$`. For aligned equations in multiple lines, use `\begin{align}...\end{align}` *inside* `$$...$$`. Finally, if you want the equations numbered, use "align" instead of
+"aligned". A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
-Here are the Maxwell's equations in cgs units:
+Let's test this by writing the Maxwell's equations in cgs units:
 
 $$
 \begin{align}
 \nabla \cdot \mathbf{E} &= 4\pi \rho , \\ 
 \nabla \times \mathbf{E} &= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
 \nabla \cdot \mathbf{B} &= 0, \\
-\nabla \times \mathbf{B} &= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t},
+\nabla \times \mathbf{B} &= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
 \end{align}
 $$
 

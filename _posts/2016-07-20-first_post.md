@@ -25,9 +25,10 @@ $$
 \end{align}
 $$
 
-Another thing that was made sure to work before I start writing is the popup footnote. To these days, there are still electronic footnotes that are limited in the way
- footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. This is 2016, ladies and gentlemen.
-Electronic footnotes don't have to break the reading flow. Just download [Bigfoot](http://www.bigfootjs.com/). Put the javascript file to, say, `/assets/js`  and call it with
+Another thing that was made sure to work before I start writing is the popup footnote. To these days, there are still digital footnotes that are limited in the way
+ footnotes in print media are limited; you follow the link to the bottom of the post and then have to find a way back to where you were just reading. They break the reading flow.
+ (And maybe it's just me but it's tempting to take a peek at footnotes even when I know they aren't crucial to read the main text.)[^1] Indeed, what you just saw is the right way to
+implement a digital footnote. Just download [Bigfoot](http://www.bigfootjs.com/). Put the javascript file to, say, `/assets/js`  and call it with
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
@@ -36,6 +37,4 @@ Electronic footnotes don't have to break the reading flow. Just download [Bigfoo
 ``` 
 within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`. For searchability, I also show footnotes in the footer.
 
-Here is an example [^1].
-
-[^1]: Pretty nice, huh?
+[^1]: Alan Jacobs, ["The Technology of the Better Footnote,"](http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/) *The Atlantic*, March 2012.

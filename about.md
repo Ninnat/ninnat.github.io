@@ -25,6 +25,6 @@ I'm on
 * [MyAnimeList](http://myanimelist.net/profile/Truecrimson)
 
 [^1]: cf. [referencing and reworking](http://www.ribbonfarm.com/2011/08/19/the-calculus-of-grit/).
- "it isn’t the writing hours that count, it is the rewriting hours. Everybody writes. People who are trying to walk the path towards mastery rewrite."
+>it isn’t the writing hours that count, it is the rewriting hours. Everybody writes. People who are trying to walk the path towards mastery rewrite.
  
 [^2]: The city with the most Facebook users in 2012 was [Bangkok](http://www.socialbakers.com/blog/647-top-10-biggest-facebook-cities).

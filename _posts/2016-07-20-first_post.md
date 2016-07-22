@@ -10,7 +10,7 @@ I've been blogging on [Wordpress](https://ninnatdangniam.wordpress.com/) for a l
 there isn't much I can do without paying. Now you can follow [what I did](https://ninnat.github.io/README.html) and get your own blog hosted
 on a free (public) Git repository.
 
-If you are math bloggers, finding a functional blog is even harder. Math in this blog is written in [Markdown](http://daringfireball.net/projects/markdown/)
+If you are a math blogger, finding a functional blog is even harder. Math in this blog is written in [Markdown](http://daringfireball.net/projects/markdown/)
 and displayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph
 uses `$$...$$`. For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *inside* `$$...$$`. Finally, if you want the equations numbered, use "align" instead of
 "aligned". A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).

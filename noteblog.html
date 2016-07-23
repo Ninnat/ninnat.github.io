@@ -363,16 +363,13 @@ var _hmt = _hmt || [];
           abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle{#1}\\right|}",1],
-          ketbra:
-["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
           tensor: ["{\\boldsymbol{#1}}",1],
-          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2], //
-normal derivetives.
-          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], // partial
-derivetives.
-          tr: ["{\\mathrm{Tr}}"], // trace.
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], 
+          tr: ["{\\mathrm{Tr}}"],
         }
-      //extensions: ["autoload-all.js"]
+      <!-- extensions: ["autoload-all.js"]-->
       }
     });
 

@@ -2,12 +2,10 @@
 html {
   font-size: 100%;
 }
-*  Sukhumvit Font
-*/@font-face{font-family:'Sukhumvit';src:url("../fonts/SukhumvitSet-Medium.eot?v=1.0.0");src:url("../fonts/SukhumvitSet-Medium.eot?#iefix&v=1.0.0") format("embedded-opentype"),url("../fonts/SukhumvitSet-Medium.woff?v=1.0.0") format("woff"),url("../fonts/SukhumvitSet-Medium.ttf?v=1.0.0") format("truetype"),url("../fonts/SukhumvitSet-Medium.svg?v=1.0.0#sukhumvitregular") format("svg");font-weight:normal;font-style:normal}.fa{display:inline-block;font-family:Sukhumvit;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}.fa-fw{width:1.28571em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14286em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14286em;width:2.14286em;top:.14286em;text-align:center}.fa-li.fa-lg{left:-1.85714em}.fa-border{padding:.2em .25em .15em;border:solid 0.08em #eee;border-radius:.1em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-inverse{color:#fff}/*!
 /* -- Body -- */
 body {
   background-repeat: repeat;
-  font-family: "Quattrocento Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,"Lucida Grande","Sukhumvit",Calibri,Arial,sans-serif;color:rgba(34,34,34,0.8);
+  font-family: "Quattrocento Sans","Sukhumvit", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,"Lucida Grande";
   /*-- font-family: Helvetica neue, quattrocento-sans, Helvetica, Arial, sans-serif; --*/
   font-size: 16px;
   line-height: 22px;

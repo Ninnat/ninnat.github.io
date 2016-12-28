@@ -3,7 +3,7 @@ layout: post
 title: Lagrangian
 subtitle:
 ---
-Much of the progress in 20th century physics culminating in the standard model of fundamental forces relies on the principle of least action and the Lagrangian formulation of physics. But Lagrangian is often taught as a crank to turn to solve problems.
+Much of the progress in 20th century physics culminating in the standard model of fundamental forces relies on the principle of stationary action and the Lagrangian formulation of physics. But Lagrangian is often taught as a crank to turn to solve problems.
 
 Take a mechanical example with a conservative force, the Lagrangian is postulated to be the kinetic energy $T$ minus the potential energy $V$:
 $$
@@ -23,3 +23,5 @@ Here is the point that you have to correctly interpret the derivatives. $L$ is a
 In the dedication page of the book *Applied Differential Geometry* by William L. Burke,
 
 > To all those who, like me, have wondered how in hell you can change $\dot{q}$ without changing $q$.
+
+Cases in point:

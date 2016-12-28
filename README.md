@@ -16,11 +16,11 @@ The instruction to install dependencies and modify the source code can be found 
 On Windows, you can follow the instruction [here](http://jekyll-windows.juthilo.com/1-ruby-and-devkit/) to install Ruby and Jekyll.
 I have not been able to install the [GSL](https://www.gnu.org/software/gsl/) on Windows and, as a result, can't compile the blog locally on my computer. But I will leave the trouble of dealing with that for the future.
 
-I use popup footnotes to improve readability, made possible by [Bigfoot](http://www.bigfootjs.com/). Just put the javascript file to, say, `/assets/js`  and call it with
+I use popup footnotes to improve readability, made possible by [Bigfoot](http://www.bigfootjs.com/). All you have to do is pasting the css into `/assets/css/style.css`, putting the javascript file to, say, `/assets/js`  and calling it with
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
 	$.bigfoot();
 </script>
 ```
-within `/_includes/javascript.html`, and don't forget to paste the css into `/assets/css/style.css`.
+within `/_includes/javascript.html`.

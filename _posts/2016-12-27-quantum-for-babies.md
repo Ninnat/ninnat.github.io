@@ -15,7 +15,7 @@ tags:
 หรือที่ "Antman" Paul Rudd ใช้เป็นที่พึ่งเพื่อหาวิธีเอาชนะ Stephen Hawking ในเกมหมากรุกควอนตัม
 
 <center>
-{% include ytplayer.html id="Hi0BzqV_b44" %}
+{% include ytplayer.html id="Hi0BzqV_b44?t=5m4s" %}
 </center>
 
 *Quantum Physics for Babies* เป็นหนังสือที่ Chris Ferrie เขียนขึ้นมาให้ลูกของเขาเองระหว่างที่ทำงานเป็นโพสต์ด็อกที่ University of New Mexico และเรียนรู้วิธี[ตีพิมพ์ด้วยตนเอง](https://csferrie.com/2016/11/19/quantum-physics-for-babies/) (เพราะจะได้เล่มตัวอย่างฟรี ถูกกว่าทำเล่มเอง)  แล้วดันฮิตติดชาร์ทขึ้นมา คนขอเอาไปแปลเป็นภาษาจีนภาษาเวียตนาม คราวนี้มีคนไทยคนหนึ่งที่ทำงานร่วมกับเขาที่นิวเม็กซิโก *ควอนตัมฟิสิกส์สำหรับทารก*ฉบับภาษาไทยจึงถือกำเนิดขึ้น

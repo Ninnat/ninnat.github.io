@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-12-27T23:54:58+00:00</updated>
+ <updated>2016-12-28T00:38:54+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -28,7 +28,7 @@
    <id>h/2016/07/20/first_post</id>
    <content type="html">&lt;p&gt;First post on my Jekyll-powered blog!&lt;/p&gt;
 &lt;p&gt;I’ve been blogging on &lt;a href=&quot;https://ninnatdangniam.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow &lt;a href=&quot;https://ninnat.github.io/README.html&quot;&gt;what I did&lt;/a&gt; and get your own blog hosted on a free (public) Git repository.&lt;/p&gt;
-&lt;p&gt;Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and displayed using &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. Math in a paragraph (in-line math) is delimited by &lt;code&gt;$...$&lt;/code&gt;, while displaying math in its own paragraph uses &lt;code&gt;$$...$$&lt;/code&gt;. For aligned equations in multiple lines, use &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; &lt;em&gt;inside&lt;/em&gt; &lt;code&gt;$$...$$&lt;/code&gt;. Finally, if you want the equations numbered, use “align” instead of “aligned”. A quick guide on MathJax syntax can be found &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and displayed using &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. Math in a paragraph (in-line math) is delimited by &lt;code&gt;$...$&lt;/code&gt;, while displaying math in its own paragraph uses &lt;code&gt;$$...$$&lt;/code&gt;. Use &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; for aligned equations and &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; for numbered aligned equations. (Both delimiters have to be placed inside &lt;code&gt;$$...$$&lt;/code&gt;.) A quick guide on MathJax syntax can be found &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s test this by writing the Maxwell’s equations in cgs units:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[
 \begin{align}

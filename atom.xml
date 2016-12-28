@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2016-12-28T01:30:25+00:00</updated>
+ <updated>2016-12-28T02:32:26+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -14,14 +14,30 @@
  
  <entry>
    <title>ควอนตัมฟิสิกส์สำหรับทารก</title>
-   <link href="/2016/12/26/thai_test.html"/>
-   <updated>2016-12-26T00:00:00+00:00</updated>
-   <id>h/2016/12/26/thai_test</id>
-   <content type="html">อาจจะเคยเห็นหนังสือ &lt;em&gt;Quantum Physics for Babies&lt;/em&gt; ที่ Mark Zuckerberg อ่านให้ลูกฟัง -&amp;gt;&lt;img src=&quot;/assets/img/posts/zuckerberg.jpg&quot; /&gt;&amp;lt;- หรือที่ “Antman” Paul Rudd ใช้เป็นที่พึ่งเพื่อหาวิธีเอาชนะ Stephen Hawking ในเกมหมากรุกควอนตัม &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/watch?v=Hi0BzqV_b44&amp;feature=youtu.be&amp;t=5m04s&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; &lt;em&gt;Quantum Physics for Babies&lt;/em&gt; เป็นหนังสือที่ Chris Ferrie เขียนขึ้นมาให้ลูกของเขาเองระหว่างที่ทำงานเป็นโพสต์ด็อกที่ University of New Mexico และเรียนรู้วิธี&lt;a href=&quot;https://csferrie.com/2016/11/19/quantum-physics-for-babies/&quot;&gt;ตีพิมพ์ด้วยตนเอง&lt;/a&gt; ในระหว่างนั้นมีคนไทยคนหนึ่งที่ทำงานร่วมกับเขาที่นิวเม็กซิโก &lt;em&gt;ควอนตัมฟิสิกส์สำหรับทารก&lt;/em&gt;ฉบับภาษาไทยจึงถือกำเนิดขึ้น
+   <link href="/2016/12/27/quantum-for-babies.html"/>
+   <updated>2016-12-27T00:00:00+00:00</updated>
+   <id>h/2016/12/27/quantum-for-babies</id>
+   <content type="html">&lt;h1 id=&quot;container&quot;&gt;container {&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;height:100px;
+line-height:100px;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;h1 id=&quot;container-img&quot;&gt;container img {&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;vertical-align:middle;
+max-height:100%;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;} อาจจะเคยเห็นหนังสือ &lt;em&gt;Quantum Physics for Babies&lt;/em&gt; ที่ Mark Zuckerberg อ่านให้ลูกฟัง&lt;/p&gt;
+&lt;div id=&quot;container&quot;&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img / src=&amp;quot;/assets/img/posts/zuckerberg.jpg&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;หรือที่ “Antman” Paul Rudd ใช้เป็นที่พึ่งเพื่อหาวิธีเอาชนะ Stephen Hawking ในเกมหมากรุกควอนตัม&lt;/p&gt;
+&lt;div class=&quot;x-frame video&quot; data-video=&quot;https://www.youtube.com/watch?v=Hi0BzqV_b44&amp;amp;feature=youtu.be&amp;amp;t=5m04s&quot;&gt;
+
+&lt;/div&gt;
+&lt;em&gt;Quantum Physics for Babies&lt;/em&gt; เป็นหนังสือที่ Chris Ferrie เขียนขึ้นมาให้ลูกของเขาเองระหว่างที่ทำงานเป็นโพสต์ด็อกที่ University of New Mexico และเรียนรู้วิธี&lt;a href=&quot;https://csferrie.com/2016/11/19/quantum-physics-for-babies/&quot;&gt;ตีพิมพ์ด้วยตนเอง&lt;/a&gt; (เพราะจะได้เล่มตัวอย่างฟรี ถูกกว่าทำเล่มเอง) แล้วดันฮิตติดชาร์ทขึ้นมา คนขอเอาไปแปลเป็นภาษาจีน เวียตนาม ฯลฯ คราวนี้มีคนไทยคนหนึ่งที่ทำงานร่วมกับเขาที่นิวเม็กซิโก &lt;em&gt;ควอนตัมฟิสิกส์สำหรับทารก&lt;/em&gt;ฉบับภาษาไทยจึงถือกำเนิดขึ้น
 &lt;blockquote class=&quot;imgur-embed-pub&quot; lang=&quot;en&quot; data-id=&quot;a/D7MlQ&quot;&gt;
 &lt;a href=&quot;//imgur.com/D7MlQ&quot;&gt;Quantum Physics for Babies (THAI)&lt;/a&gt;
 &lt;/blockquote&gt;&lt;script async src=&quot;//s.imgur.com/min/embed.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-&lt;p&gt;คริสมอบสิทธิ์เกี่ยวกับ&lt;em&gt;ควอนตัมฟิสิกส์สำหรับทารก&lt;/em&gt;ฉบับภาษาไทยทั้งหมดให้กับผม (ผู้แปล) จะหาสำนักพิมพ์ก็ได้ หรือถ้าหาไม่ได้จะแจกฟรีก็ได้ หลังจากรอคำตอบจากคนรู้จักที่ติดต่อให้ช่วยหาสำนักพิมพ์มาพักใหญ่ๆ ปีใหม่แล้วผมก็คิดว่าได้เวลาเอามาแจกฟรีได้แล้ว สามารถดาวน์โหลดได้เลยที่&lt;a href=&quot;https://github.com/Ninnat/quantum_physics_for_babies_THAI/releases&quot;&gt;ลิงค์นี้&lt;/a&gt; จะเอาไปปรินต์, ดัดแปลง, แชร์ไฟล์นี้หรือไฟล์ที่ได้รับการดัดแปลงก็ได้เลยครับ แต่ไม่อนุญาตให้นำไปใช้ทางการค้าและต้องให้เครดิตกับคริส เฟอร์รี่ และผม (นินนาท แดงเนียม)&lt;/p&gt;
+&lt;p&gt;คริสมอบสิทธิ์เกี่ยวกับ&lt;em&gt;ควอนตัมฟิสิกส์สำหรับทารก&lt;/em&gt;ฉบับภาษาไทยทั้งหมดให้กับผม (ผู้แปล) จะหาสำนักพิมพ์ก็ได้ หรือถ้าหาไม่ได้จะแจกฟรีก็ได้ หลังจากรอคำตอบจากคนรู้จักที่ติดต่อให้ช่วยหาสำนักพิมพ์มาพักใหญ่ๆ ผมก็คิดว่าได้เวลาเอามาแจกฟรีเป็นของขวัญปีใหม่ได้แล้ว สามารถดาวน์โหลดได้เลยที่&lt;a href=&quot;https://github.com/Ninnat/quantum_physics_for_babies_THAI/releases&quot;&gt;ลิงค์นี้&lt;/a&gt; จะเอาไปปรินต์, ดัดแปลง, แชร์ไฟล์นี้หรือไฟล์ที่ได้รับการดัดแปลงให้ลูกเล็กเด็กแดงก็ได้เลยตามสบาย แต่ไม่อนุญาตให้นำไปใช้ทางการค้าและต้องให้เครดิตกับคริส เฟอร์รี่ และผม (นินนาท แดงเนียม)&lt;/p&gt;
+&lt;p&gt;สุขสันต์วันปีใหม่ครับ&lt;/p&gt;
 </content>
  </entry>
  

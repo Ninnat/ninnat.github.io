@@ -2,6 +2,8 @@
 layout: post
 title: First Post
 subtitle: How this blog is made and what it can do
+categories:
+tags:
 ---
 
 First post on my Jekyll-powered blog!
@@ -10,8 +12,7 @@ I've been blogging on [Wordpress](https://ninnatdangniam.wordpress.com/) for a l
 there isn't much I can do without paying. Now you can follow [what I did](https://ninnat.github.io/README.html) and get your own blog hosted
 on a free (public) Git repository.
 
-Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in [Markdown](http://daringfireball.net/projects/markdown/) and displayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph uses `$$...$$`. For aligned equations in multiple lines, use `\begin{aligned}...\end{aligned}` *inside* `$$...$$`. Finally, if you want the equations numbered, use "align" instead of
-"aligned". A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in [Markdown](http://daringfireball.net/projects/markdown/) and displayed using [MathJax](https://www.mathjax.org/). Math in a paragraph (in-line math) is delimited by `$...$`, while displaying math in its own paragraph uses `$$...$$`. Use `\begin{aligned}...\end{aligned}` for aligned equations and `\begin{aligned}...\end{aligned}` for numbered aligned equations. (Both delimiters have to be placed inside `$$...$$`.) A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
 Let's test this by writing the Maxwell's equations in cgs units:
 

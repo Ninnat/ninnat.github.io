@@ -17,7 +17,6 @@ I'm on
 * [Facebook](https://www.facebook.com/ninnattom.dangniam) to keep in touch with friends and family. [^2]
 * [Reddit](https://www.reddit.com/user/WhataBeautifulPodunk/): [Reddit comment visualizer](http://www.roadtolarissa.com/javascript/reddit-comment-visualizer/)
 * [PhysicsForums](https://www.physicsforums.com/members/truecrimson.187431/) almost exclusively in the quantum subforum
-* [MathOverflow](http://mathoverflow.net/users/54448/ninnat-dangniam)
 * [Goodreads](https://www.goodreads.com/user/show/7160064-tom)
 * [MyAnimeList](http://myanimelist.net/profile/Truecrimson)
 

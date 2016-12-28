@@ -18,7 +18,7 @@ tags:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Hi0BzqV_b44?t=5m4s" frameborder="0" allowfullscreen></iframe>
 </center>
 
-*Quantum Physics for Babies* เป็นหนังสือที่ [Chris Ferrie](https://csferrie.com/) เขียนขึ้นมาให้ลูกของเขาเองระหว่างที่ทำงานเป็นโพสต์ด็อก(นักวิจัยหลังปริญญาเอก)ที่ University of New Mexico และเรียนรู้วิธี[ตีพิมพ์ด้วยตนเอง](https://csferrie.com/2016/11/19/quantum-physics-for-babies/) (เพราะจะได้เล่มตัวอย่างฟรี ถูกกว่าทำเล่มเอง)  แล้วดันฮิตติดชาร์ทขึ้นมา คนขอเอาไปแปลเป็นภาษาจีนภาษาเวียตนาม คราวนี้มีคนไทยคนหนึ่งที่ทำงานร่วมกับเขาที่นิวเม็กซิโก *ควอนตัมฟิสิกส์สำหรับทารก*ฉบับภาษาไทยจึงถือกำเนิดขึ้น
+*Quantum Physics for Babies* เป็นหนังสือที่ [Chris Ferrie](https://csferrie.com/) เขียนขึ้นมาให้ลูกของเขาเองระหว่างที่ทำงานเป็นโพสต์ด็อก(นักวิจัยหลังปริญญาเอก)ที่ University of New Mexico และเรียนรู้วิธี[ตีพิมพ์ด้วยตนเอง](https://csferrie.com/2016/11/19/quantum-physics-for-babies/) (เพราะจะได้เล่มตัวอย่างฟรี ถูกกว่าทำเล่มเอง)  แล้วดันฮิตติดชาร์ทขึ้นมา คนขอเอาไปแปลเป็นภาษาจีน ภาษาเวียตนาม คราวนี้มีคนไทยคนหนึ่งทำงานร่วมกับเขาที่นิวเม็กซิโก *ควอนตัมฟิสิกส์สำหรับทารก*ฉบับภาษาไทยจึงถือกำเนิดขึ้น
 
 <center>
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/D7MlQ"><a href="//imgur.com/D7MlQ">Quantum Physics for Babies (THAI)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>

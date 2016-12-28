@@ -2,8 +2,7 @@
 layout: post
 title: First Post
 subtitle: How this blog is made and what it can do
-categories:
-	-English
+categories: English
 tags:
 ---
 

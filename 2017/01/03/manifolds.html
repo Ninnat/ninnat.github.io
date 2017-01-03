@@ -3,14 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>First Post</title>
+    <title>A Primer on Topological Spaces and Smooth Manifolds</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
       <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    <meta name="subtitle" content="How this blog is made and what it can do">
+    <meta name="subtitle" content="">
     <meta name="author" content="Ninnat Dangniam">
 
     <!-- HTML5 metadata -->
@@ -20,43 +20,43 @@
 
 
 
-  <meta name="description" content="How this blog is made and what it can do" />
+  <meta name="description" content="A Primer on Topological Spaces and Smooth Manifolds" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="First Post" />
+<meta property="dc:title" content="A Primer on Topological Spaces and Smooth Manifolds" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
-<meta property="dc:date" content="2016-07-20 00:00:00 +0000" />
+<meta property="dc:date" content="2017-01-03 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/2016/07/20/first-post.html" />
+<meta property="dc:identifier" content="/2017/01/03/manifolds.html" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="Ninnat's Notes" />
 <meta property="dc:subject" content="Physics" />
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="First Post" />
+<meta property="og:title" content="A Primer on Topological Spaces and Smooth Manifolds" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2016-07-20 00:00:00 +0000" />
+<meta property="http://ogp.me/ns/article#published_time" content="2017-01-03 00:00:00 +0000" />
 <meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://ninnat.github.io/2016/07/20/first-post.html" />
+<meta property="og:url" content="http://ninnat.github.io/2017/01/03/manifolds.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
-<meta name="citation_date" content="2016-07-20 00:00:00 +0000"/>
-<meta name="citation_title" content="First Post"/>
+<meta name="citation_date" content="2017-01-03 00:00:00 +0000"/>
+<meta name="citation_title" content="A Primer on Topological Spaces and Smooth Manifolds"/>
 <meta name="citation_journal_title" content="Ninnat's Notes"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="First Post" />
-<meta name="twitter:description" content="How this blog is made and what it can do" />
+<meta name="twitter:title" content="A Primer on Topological Spaces and Smooth Manifolds" />
+<meta name="twitter:description" content="A Primer on Topological Spaces and Smooth Manifolds" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -174,8 +174,8 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">First Post</h1>
-    <h3>How this blog is made and what it can do</h3>
+    <h1 class="entry-title">A Primer on Topological Spaces and Smooth Manifolds</h1>
+    <h3></h3>
 </header>
 
 <!-- <style>
@@ -208,28 +208,54 @@ $(document).ready(function() {
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
           </br>
-          <p>First post on my Jekyll-powered blog!</p>
-<p>I’ve been blogging on <a href="https://ninnatdangniam.wordpress.com/">Wordpress</a> for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow <a href="https://ninnat.github.io/README.html">what I did</a> and get your own blog hosted on a free (public) Git repository.</p>
-<p>Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and displayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. Use <code>\begin{aligned}...\end{aligned}</code> for aligned equations and <code>\begin{aligned}...\end{aligned}</code> for numbered aligned equations. (Both delimiters have to be placed inside <code>$$...$$</code>.) A quick guide on MathJax syntax can be found <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
-<p>Let’s test this by writing the Maxwell’s equations in cgs units:</p>
-<p><span class="math">\[
-\begin{align}
-\nabla \cdot \mathbf{E} &amp;= 4\pi \rho , \\
-\nabla \times \mathbf{E} &amp;= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
-\nabla \cdot \mathbf{B} &amp;= 0, \\
-\nabla \times \mathbf{B} &amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
-\end{align}
-\]</span></p>
-<p>Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, <a href="http://www.bigfootjs.com/">Bigfoot</a> like this. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> All you have to do is pasting the css into <code>/assets/css/style.css</code>, putting the javascript file to, say, <code>/assets/js</code> and calling it with</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $.bigfoot();
-&lt;/script&gt;</code></pre>
-<p>within <code>/_includes/javascript.html</code>. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.</p>
+          <p>Some of my future posts will contain geometric ideas in physics and I will hand-wave a lot. So I put this post here as a future reference for those who can’t tolerate hand-waving. Beware that this is much terser than the average blog post.</p>
+<h1 id="topology">Topology</h1>
+<p>While the defining property of discrete mathematical objects are often the kind of interactions between elements of a set (making it a group, ring, field, vector space, module etc.), in continuous mathematics one focus on subsets.</p>
+<p>In topology, one can get a lot of mileage out of the notion of open and closed sets. As you might know, a set can be open, closed, or both (clopen). (“Sets are not doors!”) One can define an open map to be a map that maps any open set to an open set and one can define a closed map to be a map that maps any closed set to a closed set. It turns out that there are more useful things to do. A map is <em>continuous</em> if the pre-image of any open set is open, or equivalently, if the pre-image of any closed set is closed. This definition of continuity is exactly the same as the familiar one in <span class="math">\(\mathbb{R}^{n}\)</span> defined by sequences and their limits, and more elegant since it can be generalized to a space in which there is no <em>a priori</em> notion of norm or distance. (Why the pre-image? As you can verify by thinking of a constant map, for example, an open map or a close map is not necessary continuous.)</p>
+<p>A <em>topological space</em> is a pair <span class="math">\(\left(X,\mathcal{T}\right)\)</span> of a set <span class="math">\(X\)</span> and a topology <span class="math">\(T\)</span> on <span class="math">\(X\)</span> i.e. a collection of subsets of <span class="math">\(X\)</span>, called <em>open subsets</em>, with the following properties:</p>
+<ul>
+<li><span class="math">\(X\)</span> and <span class="math">\(\emptyset\)</span> are open. (Thus, <span class="math">\(X\)</span> and <span class="math">\(\emptyset\)</span> are clopen.)</li>
+<li>A union of open sets is open.</li>
+<li>A finite intersection of open sets is open.</li>
+</ul>
+<p>(Topological spaces can also be defined using <a href="https://en.wikipedia.org/w/index.php?title=Topological_space&amp;oldid=756637885#Definition">other set properties</a>.)</p>
+<p>A <em>homeomorphism</em> is a continuous bijection whose inverse is also continuous. We call a property that is invariant under a homeomorphism a <em>topological invariant</em>.</p>
+<h1 id="topological-manifolds">Topological Manifolds</h1>
+<p>A topological space <span class="math">\(M\)</span> is a <strong>topological manifold</strong> of dimension <span class="math">\(n\)</span> (a topological invariant) if</p>
+<ul>
+<li><span class="math">\(M\)</span> is Hausdorff. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+<li><span class="math">\(M\)</span> is second-countable i.e. it has a countable basis.</li>
+<li><span class="math">\(M\)</span> is locally Euclidean i.e. <span class="math">\(\forall p\in M\)</span>, there is an open set <span class="math">\(U\)</span> and a homeomorphism <span class="math">\(\varphi\)</span> to an open subset <span class="math">\(\hat{U}\)</span> of <span class="math">\(\mathbb{R}^{n}\)</span>:</li>
+</ul>
+$
+
+<p>$</p>
+<p>Note that locally Euclidean spaces <a href="https://en.wikipedia.org/w/index.php?title=Non-Hausdorff_manifold&amp;oldid=756962961#Line_with_two_origins">may not be Hausdorff</a>, so the first requirement is crucial. Some authors leave out the second-countability requirement.</p>
+<h1 id="smooth-manifolds">Smooth Manifolds</h1>
+<p>The notion of a topological manifold does not yet provide enough structure for doing calculus because smoothness is not a topological invariance. Warning: a bunch of definitions is coming. It seems more natural to me to build the definitions top-down rather than bottom-up from charts.</p>
+<ul>
+<li>A <em>smooth manifold</em> is a topological manifold <span class="math">\(M\)</span> of <span class="math">\(n\)</span> dimensions with a so-called smooth structure or a maximal smooth atlas.</li>
+<li>A <em>maximal atlas</em> is a maximal collection of charts that are all pairwise smoothly compatible and whose domain covers <span class="math">\(M\)</span>.</li>
+<li>A <strong>chart</strong> is a pair <span class="math">\(\left(U,\varphi\right)\)</span> of an open subset <span class="math">\(U\subset M\)</span> and a homeomorphism <span class="math">\(\varphi:M\to\varphi(U)\subset\mathbb{R}^{n}\)</span>.</li>
+</ul>
+<p>Two charts <span class="math">\(\left(U,\varphi\right),\left(V,\psi\right)\)</span> are smoothly compatible if <span class="math">\(U\cap V=\emptyset\)</span> (making the definition vacuous) or if the transition map <span class="math">\(\psi\circ\varphi^{-1}:\varphi(U\cap V)\to\psi(U\cap V)\)</span> is smooth, meaning that all of its partial derivatives of all orders exist and are continuous. This is the same as the definition of smoothness in calculus, as the transition map is a map from <span class="math">\(\mathbb{R}^{n}\)</span> to itself.</p>
+<h1 id="smooth-maps">Smooth Maps</h1>
+<p>We streamline the approach to define smooth transition maps to define smooth maps between manifolds.</p>
+<p>A map <span class="math">\(F:M\to N\)</span> between smooth manifolds is a <em>smooth map</em> if for every <span class="math">\(p\in M\)</span>, there exists smooth charts <span class="math">\(\left(U,\varphi\right)\)</span> containing <span class="math">\(p\)</span> and <span class="math">\(\left(V,\psi\right)\)</span> containing <span class="math">\(F(p)\)</span>, <span class="math">\(F(U)\subset V\)</span> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> and the composite map <span class="math">\(\psi\circ F\circ\varphi^{-1}\)</span> is smooth from <span class="math">\(\varphi(U)\)</span> to <span class="math">\(\psi(V)\)</span>.</p>
+<!--
+-------------------------
+-->
+
+<p>Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the trivial topology (with more than one point).</p>
+$
+
+<p>$</p>
+<p>which is not differentiable at the origin. Choose <span class="math">\(U=(-1,1)\)</span>, and open <span class="math">\(V\)</span> with a closed pre-image, say, <span class="math">\(V=\left(\frac{1}{2},\frac{3} {2}\right)\)</span> and <span class="math">\(\varphi=\psi=\mbox{Id}\)</span>. Then <span class="math">\(\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)\)</span>, on which <span class="math">\(\psi\circ f\circ\varphi^{-1}=f\)</span> is certainly smooth, in conflict with the desired notion of smoothness. In fact, <span class="math">\(f\)</span> is not even continuous. The point is that, without the restriction, one can deliberately pick <span class="math">\(V\)</span> such that one doesn’t see the discontinuity in its pre-image.</p>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Alan Jacobs, <a href="http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/">“The Technology of a Better Footnote,”</a> <em>The Atlantic</em>, March 2012.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Given <span class="math">\(p\neq q\in X\)</span> a Hausdorff space, there exist open sets <span class="math">\(U\)</span> containing <span class="math">\(p\)</span> and <span class="math">\(V\)</span> containing <span class="math">\(q\)</span> such that <span class="math">\(U\cap V=\emptyset\)</span> i.e. any two points in <span class="math">\(X\)</span> can be separated.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>What of the requirement <span class="math">\(F(U)\subset V\)</span>? If it is left out, one would want to modify the definition so that <span class="math">\(\psi\circ F\circ\varphi^{-1}\)</span> needs only be smooth from <span class="math">\(\varphi(U\cap F^{-1}(V))\)</span>, whose domain has to be in the pre-image of <span class="math">\(V\)</span>, to <span class="math">\(\psi(V)\)</span>. However, consider the function <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> with<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
@@ -243,19 +269,21 @@ $(document).ready(function() {
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
-    <time datetime="2016-07-20 00:00:00 +0000" 
-    property="dc:created">20 Jul 2016</time></p>
+    <time datetime="2017-01-03 00:00:00 +0000" 
+    property="dc:created">03 Jan 2017</time></p>
    
 
  <br />
           
+            <p><a class="btn btn-default" href='/2016/12/27/quantum-for-babies.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
-            <a class="btn btn-default" href='/2016/12/27/quantum-for-babies.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+          
+            </p>
           
 
 
  <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
-   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2016-07-20-first-post.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2017-01-03-manifolds.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
@@ -263,6 +291,10 @@ $(document).ready(function() {
      
       <a rel="dc:subject" class="category" 
          href="/categories.html#english">english</a>
+    , 
+     
+      <a rel="dc:subject" class="category" 
+         href="/categories.html#geometry">geometry</a>
     
     </p>
 
@@ -274,7 +306,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/ef89f3593da4c0db6955970d74d97a3a5ee27be8/_posts/2016-07-20-first-post.md"> ef89f3593da4c0db6955970d74d97a3a5ee27be8</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4a93723adb96dd11017ecf3edc2dbaca18d3557d/_posts/2017-01-03-manifolds.md"> 4a93723adb96dd11017ecf3edc2dbaca18d3557d</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -292,7 +324,7 @@ $(document).ready(function() {
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>03 Jan 2017</span> &raquo; <a href="/2017/01/03/manifolds.html">A Primer on Topological Spaces and Smooth Manifolds</a></li>
+      <li><span>20 Jul 2016</span> &raquo; <a href="/2016/07/20/first-post.html">First Post</a></li>
     
       <li><span>27 Dec 2016</span> &raquo; <a href="/2016/12/27/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
     
@@ -345,12 +377,12 @@ $(document).ready(function() {
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=First Post
+      &amp;rft.title=A Primer on Topological Spaces and Smooth Manifolds
       &amp;rft.creator=Ninnat Dangniam
-      &amp;rft.date=2016-07-20
+      &amp;rft.date=2017-01-03
       &amp;rft.language='en-US, zh-Hans'
       &amp;rft.rights='CC-BY'
-      &amp;rft_id=http://ninnat.github.io/2016/07/20/first-post.html">
+      &amp;rft_id=http://ninnat.github.io/2017/01/03/manifolds.html">
   </span>
 
     </footer>

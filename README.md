@@ -23,4 +23,4 @@ I use popup footnotes to improve readability, made possible by [Bigfoot](http://
 	$.bigfoot();
 </script>
 ```
-within `/_includes/javascript.html`.
+within `/_includes/javascript.html`. This code, created by [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot), enables MathJax in the footnote.

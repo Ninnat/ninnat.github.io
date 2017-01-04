@@ -6,6 +6,8 @@ categories: English
 tags:
 ---
 
+Modified: *3 Jan 2017*
+
 First post on my Jekyll-powered blog!
 
 I've been blogging on [Wordpress](https://ninnatdangniam.wordpress.com/) for a long time (in Thai) but despite how easy it is to setup the blog,
@@ -29,9 +31,20 @@ Another indispensable feature that I've always longed for is the popup footnote.
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
-	$.bigfoot();
+	$.bigfoot({
+		activateCallback: function($popover, $button) {
+				if (MathJax && !$button.data('mathjax-processed')) {
+						var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+						MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+						MathJax.Hub.Queue(function () {
+								$button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+								$button.data('mathjax-processed', true);
+						});
+				}
+		}
+	});
 </script>
 ```
-within `/_includes/javascript.html`. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.
+within `/_includes/javascript.html`. This code, created by [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot) enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.
 
 [^1]: Alan Jacobs, ["The Technology of a Better Footnote,"](http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/) *The Atlantic*, March 2012.

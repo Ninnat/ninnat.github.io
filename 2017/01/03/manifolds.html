@@ -227,9 +227,9 @@ $(document).ready(function() {
 <li><span class="math">\(M\)</span> is second-countable i.e. it has a countable basis.</li>
 <li><span class="math">\(M\)</span> is locally Euclidean i.e. <span class="math">\(\forall p\in M\)</span>, there is an open set <span class="math">\(U\)</span> and a homeomorphism <span class="math">\(\varphi\)</span> to an open subset <span class="math">\(\hat{U}\)</span> of <span class="math">\(\mathbb{R}^{n}\)</span>:</li>
 </ul>
-$
-
-<p>$</p>
+<p><span class="math">\[ \begin{aligned}
+  \varphi:U  \to\hat{U} \subset \mathbb{R}^{n}.
+\end{aligned} \]</span></p>
 <p>Note that locally Euclidean spaces <a href="https://en.wikipedia.org/w/index.php?title=Non-Hausdorff_manifold&amp;oldid=756962961#Line_with_two_origins">may not be Hausdorff</a>, so the first requirement is crucial. Some authors leave out the second-countability requirement.</p>
 <h1 id="smooth-manifolds">Smooth Manifolds</h1>
 <p>The notion of a topological manifold does not yet provide enough structure for doing calculus because smoothness is not a topological invariance. Warning: a bunch of definitions is coming. It seems more natural to me to build the definitions top-down rather than bottom-up from charts.</p>
@@ -247,9 +247,7 @@ $
 -->
 
 <p>Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the trivial topology (with more than one point).</p>
-$
-
-<p>$</p>
+<p><span class="math">\[ \begin{aligned} f(x)  = \begin{cases} 1 \text{for} x \ge 0 \\ 0 \text{otherwise} \end{cases} \end{aligned} \]</span></p>
 <p>which is not differentiable at the origin. Choose <span class="math">\(U=(-1,1)\)</span>, and open <span class="math">\(V\)</span> with a closed pre-image, say, <span class="math">\(V=\left(\frac{1}{2},\frac{3} {2}\right)\)</span> and <span class="math">\(\varphi=\psi=\mbox{Id}\)</span>. Then <span class="math">\(\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)\)</span>, on which <span class="math">\(\psi\circ f\circ\varphi^{-1}=f\)</span> is certainly smooth, in conflict with the desired notion of smoothness. In fact, <span class="math">\(f\)</span> is not even continuous. The point is that, without the restriction, one can deliberately pick <span class="math">\(V\)</span> such that one doesn’t see the discontinuity in its pre-image.</p>
 <section class="footnotes">
 <hr />
@@ -306,7 +304,7 @@ $
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4a93723adb96dd11017ecf3edc2dbaca18d3557d/_posts/2017-01-03-manifolds.md"> 4a93723adb96dd11017ecf3edc2dbaca18d3557d</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4d6fc0e757cf2d223bea853f6cc0bc367739e287/_posts/2017-01-03-manifolds.md"> 4d6fc0e757cf2d223bea853f6cc0bc367739e287</a></tiny></p> -->
 </aside>
 
 <br /><br />

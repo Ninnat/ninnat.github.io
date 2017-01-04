@@ -3,14 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Basic definitions about the Lie groups-Lie algebra correspondence</title>
+    <title>Lie groups and Lie algebras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
       <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    <meta name="subtitle" content="">
+    <meta name="subtitle" content="Basic definitions">
     <meta name="author" content="Ninnat Dangniam">
 
     <!-- HTML5 metadata -->
@@ -20,13 +20,13 @@
 
 
 
-  <meta name="description" content="Basic definitions about the Lie groups-Lie algebra correspondence" />
+  <meta name="description" content="Basic definitions" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="Basic definitions about the Lie groups-Lie algebra correspondence" />
+<meta property="dc:title" content="Lie groups and Lie algebras" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
 <meta property="dc:date" content="2017-01-03 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
@@ -38,7 +38,7 @@
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="Basic definitions about the Lie groups-Lie algebra correspondence" />
+<meta property="og:title" content="Lie groups and Lie algebras" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
@@ -49,14 +49,14 @@
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
 <meta name="citation_date" content="2017-01-03 00:00:00 +0000"/>
-<meta name="citation_title" content="Basic definitions about the Lie groups-Lie algebra correspondence"/>
+<meta name="citation_title" content="Lie groups and Lie algebras"/>
 <meta name="citation_journal_title" content="Ninnat's Notes"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Basic definitions about the Lie groups-Lie algebra correspondence" />
-<meta name="twitter:description" content="Basic definitions about the Lie groups-Lie algebra correspondence" />
+<meta name="twitter:title" content="Lie groups and Lie algebras" />
+<meta name="twitter:description" content="Basic definitions" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -174,8 +174,8 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">Basic definitions about the Lie groups-Lie algebra correspondence</h1>
-    <h3></h3>
+    <h1 class="entry-title">Lie groups and Lie algebras</h1>
+    <h3>Basic definitions</h3>
 </header>
 
 <!-- <style>
@@ -212,7 +212,8 @@ $(document).ready(function() {
 <p>Some of my future posts will contain these ideas with a lot of hand-waving. This post is a future reference for those who can’t tolerate hand-waving. Beware that this is much terser than the average blog post.</p>
 <p>Lie’s three theorems on the relation between Lie groups and Lie algebras is encapsulated in this statement: <em>the <a href="https://en.wikipedia.org/wiki/Category_(mathematics)">categories</a> of connected, <a href="https://en.wikipedia.org/wiki/Simply_connected_space">simply-connected</a> Lie groups and finite-dimensional Lie algebras are the same.</em> It cannot be the category of all Lie groups because Lie algebras cannot know the global topology of Lie groups. So we often study connected, simply-connected covering groups instead of the groups that are of interest to us.</p>
 <p>A <strong>Lie group</strong> <span class="math">\(G\)</span> is a group that is also a smooth manifold. <a href="https://ninnat.github.io/2017/01/03/manifolds.html">Roughly speaking</a>, a manifold <span class="math">\(M\)</span> is a space that is locally Euclidean i.e. the chart <span class="math">\(\varphi\)</span> mapping an open set <span class="math">\(U\)</span> to a subset of <span class="math">\(\mathbb{R}^{n}\)</span> gives a point <span class="math">\(p\in M\)</span> coordinates in <span class="math">\(\mathbb{R}^{n}\)</span>. The dimension of a Lie group is <span class="math">\(n\)</span>, the dimension of the manifold.</p>
-<p><a href="#Lie-algebra">Lie algebra</a> A <strong>Lie algebra</strong> is a vector space <span class="math">\(\mathfrak{g}\)</span> over a <a href="https://en.wikipedia.org/w/index.php?title=Field_(mathematics)&amp;oldid=757991562">field</a> <span class="math">\(k\)</span>, equipped with a bilinear map <span class="math">\(\left[,\right]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}\)</span>, the <strong>Lie bracket</strong>, which is skew-symmetric <span class="math">\(\left[x,y\right]=-\left[y,x\right]\)</span> (or equivalently, <span class="math">\(\left[x,x\right]=0\)</span>) and satisfies the Jacobi identity <span class="math">\[ \begin{aligned}
+<p><a href="#Lie-algebra">Lie algebra</a></p>
+<p>A <strong>Lie algebra</strong> is a vector space <span class="math">\(\mathfrak{g}\)</span> over a <a href="https://en.wikipedia.org/w/index.php?title=Field_(mathematics)&amp;oldid=757991562">field</a> <span class="math">\(k\)</span>, equipped with a bilinear map <span class="math">\(\left[,\right]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}\)</span>, the <strong>Lie bracket</strong>, which is skew-symmetric <span class="math">\(\left[x,y\right]=-\left[y,x\right]\)</span> (or equivalently, <span class="math">\(\left[x,x\right]=0\)</span>) and satisfies the Jacobi identity <span class="math">\[ \begin{aligned}
 \left[x,\left[y,z\right]\right]+\left[y,\left[z,x\right]\right]+\left[z,\left[x,y\right]\right] &amp; =0.
 \end{aligned} \]</span> To understand the Jacobi identity, let us look at the <strong>adjoint map</strong> that takes an element <span class="math">\(x\in\mathfrak{g}\)</span> and turns it into a Lie algebra endomorphism (a <a href="https://en.wikipedia.org/w/index.php?title=Lie_algebra&amp;oldid=750481376#Subalgebras.2C_ideals_and_homomorphisms">Lie algebra homomorphism</a> to <span class="math">\(\mathfrak{g}\)</span> itself) of <span class="math">\(\mathfrak{g}\)</span>. <span class="math">\[\begin{aligned}
 \text{ad}:\mathfrak{g} &amp; \to\text{End}\mathfrak{g}\\
@@ -245,7 +246,8 @@ X_{g} &amp; =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
 \Pi\left(e^{x}\right) &amp; =e^{d\Pi\left(x\right)},
 \end{aligned} \]</span> which is the manifestation of <strong>Lie’s second theorem</strong>: <span class="math">\(\text{Hom}\left(G,G&#39;\right)=\text{Hom}\left(\mathfrak{g},\mathfrak{g}&#39;\right)\)</span> if <span class="math">\(G\)</span> is simply connected. The corresponding statement for representations <span class="math">\(\Pi\)</span> is that <span class="math">\(\Pi\to d\Pi\)</span> gives the equivalence of the categories of representations of <span class="math">\(G\)</span> and representations of <span class="math">\(\mathfrak{g}\)</span>. Moreover, the vector spaces of intertwining operators (morphisms of representations) are isomorphic: <span class="math">\(\text{Hom}_{G}\left(V,W\right)=\text{Hom}_{\mathfrak{g}}\left(V,W\right)\)</span>.</p>
 <h2 id="lie-subgroups">Lie subgroups</h2>
-<p>A <strong>Lie subalgebra</strong> <span class="math">\(\mathfrak{h}\)</span> of <span class="math">\(\mathfrak{g}\)</span> is a vector subspace such that <span class="math">\(\left[\mathfrak{h},\mathfrak{h}\right]\subset\mathfrak{h}\)</span>. A Lie subalgebra of <span class="math">\(\mathfrak{g}\)</span> corresponds to a subgroup of <span class="math">\(G\)</span> which is also an immersed submanifold, called a <strong>Lie subgroup</strong> of <span class="math">\(G\)</span>. A map <span class="math">\(F:M\to N\)</span> is a <strong>smooth immersion</strong> if its differential <span class="math">\(dF\)</span> is injective at every point: <span class="math">\(\text{rank}F=\dim M\)</span>. (To remember the names, an <strong>im</strong>mersion is <strong>in</strong>jective, whereas a <strong>su</strong>bmersion is <strong>su</strong>rjective.) An <strong>immersed submanifold</strong> <span class="math">\(S\)</span> of <span class="math">\(M\)</span> is a topological manifold (not necessary having the topology of <span class="math">\(M\)</span>) together with the inclusion map <span class="math">\(S\to M\)</span> which is a smooth immersion. <strong>Lie’s first theorem</strong> identifies every Lie subalgebra with a connected Lie subgroup and vice versa. [^2]</p>
+<p>A <strong>Lie subalgebra</strong> <span class="math">\(\mathfrak{h}\)</span> of <span class="math">\(\mathfrak{g}\)</span> is a vector subspace such that <span class="math">\(\left[\mathfrak{h},\mathfrak{h}\right]\subset\mathfrak{h}\)</span>. A Lie subalgebra of <span class="math">\(\mathfrak{g}\)</span> corresponds to a subgroup of <span class="math">\(G\)</span> which is also an immersed submanifold, called a <strong>Lie subgroup</strong> of <span class="math">\(G\)</span>. A map <span class="math">\(F:M\to N\)</span> is a <strong>smooth immersion</strong> if its differential <span class="math">\(dF\)</span> is injective at every point: <span class="math">\(\text{rank}F=\dim M\)</span>. (To remember the names, an <strong>im</strong>mersion is <strong>in</strong>jective, whereas a <strong>su</strong>bmersion is <strong>su</strong>rjective.) An <strong>immersed submanifold</strong> <span class="math">\(S\)</span> of <span class="math">\(M\)</span> is a topological manifold (not necessary having the topology of <span class="math">\(M\)</span>) together with the inclusion map <span class="math">\(S\to M\)</span> which is a smooth immersion. <strong>Lie’s first theorem</strong> identifies every Lie subalgebra with a connected Lie subgroup and vice versa.</p>
+<p>Just be aware that there is no standard definition of a Lie subgroup. Another notion of a submanifold is that of an <strong>embedded submanifold</strong>, which can be obtained for instance by setting some coordinates to zero. The key difference is that embedding has to be a homeomorphism preserving the global topology. Two classic examples of immersions that do not preserve the global topology are the figure-eight map and the irrational winding of a torus. [^2] The former maps an open interval in <span class="math">\(\mathbb{R}\)</span> to a closed figure “8” in <span class="math">\(\mathbb{R}^{2}\)</span>. The latter takes a line with an irrational slope in <span class="math">\(\mathbb{R}^{2}\)</span> and map it to a torus. The line will densely wind around the entire torus. We will call a subgroup which is an embedded submanifold an <strong>embedded Lie subgroup</strong>. Fulton and Harris [^3], for example, give the opposite definitions; their Lie subgroups are our embedded Lie subgroup, whereas our Lie subgroups are their immerse Lie subgroups.</p>
 <p>By the <strong>closed subgroup theorem</strong>, a subgroup is an embedded Lie subgroup if and only if it is a closed set. Given a closed subgroup <span class="math">\(H\subset G\)</span>, this makes <span class="math">\(G/H\)</span> a <strong>homogeneous space</strong>, a smooth manifold with a transitive group action.</p>
 <p>[^2] John Lee, <a href="https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1441999817/"><em>Introduction to Smooth Manifolds</em>, 2nd ed. Springer (2012)</a>, p. 86.</p>
 <p>[^3] William Fulton and Joe Harris, <a href="https://www.amazon.com/Representation-Theory-Course-Graduate-Mathematics/dp/0387974954"><em>Representation Theory: A First Course</em> Springer (2004)</a>.</p>
@@ -301,7 +303,7 @@ X_{g} &amp; =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/ce531168de69fefc3830bb49b40041985e872d91/_posts/2017-01-03-lie-groups.md"> ce531168de69fefc3830bb49b40041985e872d91</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/41039bd6d55242d66a0f0a777be561ac64ab6e2b/_posts/2017-01-03-lie-groups.md"> 41039bd6d55242d66a0f0a777be561ac64ab6e2b</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -319,7 +321,7 @@ X_{g} &amp; =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>03 Jan 2017</span> &raquo; <a href="/2017/01/03/manifolds.html">Basic definitions about Manifolds</a></li>
+      <li><span>03 Jan 2017</span> &raquo; <a href="/2017/01/03/manifolds.html">Smooth manifolds</a></li>
     
       <li><span>20 Jul 2016</span> &raquo; <a href="/2016/07/20/first-post.html">First Post</a></li>
     
@@ -374,7 +376,7 @@ X_{g} &amp; =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=Basic definitions about the Lie groups-Lie algebra correspondence
+      &amp;rft.title=Lie groups and Lie algebras
       &amp;rft.creator=Ninnat Dangniam
       &amp;rft.date=2017-01-03
       &amp;rft.language='en-US, zh-Hans'

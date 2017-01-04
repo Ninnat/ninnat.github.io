@@ -6,6 +6,7 @@ categories:
   - English
   - Geometry
 tags:
+date: 2017-01-03 18:00:00
 ---
 Status: *in progress*
 

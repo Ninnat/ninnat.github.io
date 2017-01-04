@@ -14,7 +14,7 @@ Some of my future posts will contain these ideas with a lot of hand-waving. This
 
 Lie's three theorems on the relation between Lie groups and Lie algebras is encapsulated in this statement: *the [categories](https://en.wikipedia.org/wiki/Category_(mathematics)) of connected, [simply-connected](https://en.wikipedia.org/wiki/Simply_connected_space) Lie groups and finite-dimensional Lie algebras are the same.* It cannot be the category of all Lie groups because Lie algebras cannot know the global topology of Lie groups. So we often study connected, simply-connected covering groups instead of the groups that are of interest to us.
 
-A **Lie group** $G$ is a group that is also a smooth manifold. [Roughly speaking](https://ninnat.github.io/2017/01/03/manifolds.html), a manifold $M$ is a space that is locally Euclidean i.e. the chart $\varphi$ mapping an open set $U$ to a subset of $\mathbb{R}^{n}$ gives a point $p\in M$ coordinates in $\mathbb{R}^{n}$. The dimension of a Lie group is $n$, the dimension of the manifold.
+A **Lie group** $G$ is a [group](https://en.wikipedia.org/wiki/Group_(mathematics)) that is also a smooth manifold (defined in the [previous post](https://ninnat.github.io/2017/01/03/manifolds.html)) and the group multiplication and inverse are smooth. Roughly speaking, a manifold $M$ is a space that is locally Euclidean i.e. the chart $\varphi$ mapping an open set $U$ to a subset of $\mathbb{R}^{n}$ gives a point $p\in M$ coordinates in $\mathbb{R}^{n}$. The dimension of a Lie group is $n$, the dimension of the manifold.
 
 [Lie algebra](#Lie-algebra)
 

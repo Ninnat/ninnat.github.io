@@ -33,9 +33,9 @@ A topological space $M$ is a **topological manifold** of dimension $n$ (a topolo
 * $M$ is second-countable i.e. it has a countable basis.
 * $M$ is locally Euclidean i.e. $\forall p\in M$, there is an open set $U$ and a homeomorphism $\varphi$ to an open subset $\hat{U}$ of $\mathbb{R}^{n}$:
 
-$ \begin{aligned}
+$$ \begin{aligned}
   \varphi:U  \to\hat{U} \subset \mathbb{R}^{n}.
-\end{aligned} $
+\end{aligned} $$
 
 Note that locally Euclidean spaces [may not be Hausdorff](https://en.wikipedia.org/w/index.php?title=Non-Hausdorff_manifold&oldid=756962961#Line_with_two_origins), so the first requirement is crucial. Some authors leave out the second-countability requirement.
 
@@ -62,15 +62,10 @@ A map $F:M\to N$ between smooth manifolds is a *smooth map* if for every $p\in M
 
 [^1]: Given $p\neq q\in X$ a Hausdorff space, there exist open sets $U$ containing $p$ and $V$ containing $q$ such that $U\cap V=\emptyset$ i.e. any two points in $X$ can be separated.
 
-Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the trivial topology (with more than one point).
+  Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the trivial topology (with more than one point).
 
 [^2]: What of the requirement $F(U)\subset V$? If it is left out, one would want to modify the definition so that $\psi\circ F\circ\varphi^{-1}$ needs only be smooth from $\varphi(U\cap F^{-1}(V))$, whose domain has to be in the pre-image of $V$, to $\psi(V)$. However, consider the function $f:\mathbb{R}\to\mathbb{R}$ with
 
-$ \begin{aligned}
-f(x)  = \begin{cases}
-          1 \text{for} x \ge 0 \\
-          0 \text{otherwise}
-        \end{cases}
-\end{aligned} $
+  $$ \begin{aligned} f(x)  = \begin{cases} 1 \text{for} x \ge 0 \\ 0 \text{otherwise} \end{cases} \end{aligned} $$
 
-which is not differentiable at the origin. Choose $U=(-1,1)$, and open $V$ with a closed pre-image, say, $V=\left(\frac{1}{2},\frac{3} {2}\right)$ and $\varphi=\psi=\mbox{Id}$. Then $\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)$, on which $\psi\circ f\circ\varphi^{-1}=f$ is certainly smooth, in conflict with the desired notion of smoothness. In fact, $f$ is not even continuous. The point is that, without the restriction, one can deliberately pick $V$ such that one doesn't see the discontinuity in its pre-image.
+  which is not differentiable at the origin. Choose $U=(-1,1)$, and open $V$ with a closed pre-image, say, $V=\left(\frac{1}{2},\frac{3} {2}\right)$ and $\varphi=\psi=\mbox{Id}$. Then $\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)$, on which $\psi\circ f\circ\varphi^{-1}=f$ is certainly smooth, in conflict with the desired notion of smoothness. In fact, $f$ is not even continuous. The point is that, without the restriction, one can deliberately pick $V$ such that one doesn't see the discontinuity in its pre-image.

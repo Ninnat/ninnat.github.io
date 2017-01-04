@@ -45,6 +45,6 @@ Another indispensable feature that I've always longed for is the popup footnote.
 	});
 </script>
 ```
-within `/_includes/javascript.html`. This code, created by [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot) enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.
+within `/_includes/javascript.html`. This code, created by [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot), enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.
 
 [^1]: Alan Jacobs, ["The Technology of a Better Footnote,"](http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/) *The Atlantic*, March 2012.

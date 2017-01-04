@@ -10,13 +10,13 @@ I keep a record of my writing to not have to repeat myself, to be aware of error
 
 Expect more from this section once there is more content.
 
-# Me
+# Websites
 
 I'm on
 
 * [Facebook](https://www.facebook.com/ninnattom.dangniam)
 * [Reddit](https://www.reddit.com/user/WhataBeautifulPodunk/): [Reddit comment visualizer](http://www.roadtolarissa.com/javascript/reddit-comment-visualizer/)
-* [PhysicsForums](https://www.physicsforums.com/members/truecrimson.187431/) almost exclusively in the quantum subforum
+* [PhysicsForums](https://www.physicsforums.com/members/truecrimson.187431/)
 * [Goodreads](https://www.goodreads.com/user/show/7160064-tom)
 * [MyAnimeList](http://myanimelist.net/profile/Truecrimson)
 * [Pinboard](https://pinboard.in/u:ninnat)

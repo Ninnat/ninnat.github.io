@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Basic definitions about the Lie groups-Lie algebra correspondence
-subtitle:
+title: Lie groups and Lie algebras
+subtitle: Basic definitions
 categories:
   - English
   - Geometry
@@ -17,6 +17,7 @@ Lie's three theorems on the relation between Lie groups and Lie algebras is enca
 A **Lie group** $G$ is a group that is also a smooth manifold. [Roughly speaking](https://ninnat.github.io/2017/01/03/manifolds.html), a manifold $M$ is a space that is locally Euclidean i.e. the chart $\varphi$ mapping an open set $U$ to a subset of $\mathbb{R}^{n}$ gives a point $p\in M$ coordinates in $\mathbb{R}^{n}$. The dimension of a Lie group is $n$, the dimension of the manifold.
 
 [Lie algebra](#Lie-algebra)
+
 A **Lie algebra** is a vector space $\mathfrak{g}$ over a [field](https://en.wikipedia.org/w/index.php?title=Field_(mathematics)&oldid=757991562) $k$, equipped with a bilinear map $\left[,\right]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$,
 the **Lie bracket**, which is skew-symmetric $\left[x,y\right]=-\left[y,x\right]$
 (or equivalently, $\left[x,x\right]=0$) and satisfies the Jacobi identity
@@ -87,13 +88,12 @@ of representations of $G$ and representations of $\mathfrak{g}$. Moreover, the v
 
 ## Lie subgroups
 
-A **Lie subalgebra** $\mathfrak{h}$ of $\mathfrak{g}$ is a vector subspace such that $\left[\mathfrak{h},\mathfrak{h}\right]\subset\mathfrak{h}$. A Lie subalgebra of $\mathfrak{g}$ corresponds to a subgroup of $G$ which is also an immersed submanifold, called a **Lie subgroup** of $G$. A map $F:M\to N$ is a **smooth immersion** if its differential $dF$ is injective at every point: $\text{rank}F=\dim M$. (To remember the names, an **im**mersion is **in**jective, whereas a **su**bmersion is **su**rjective.) An **immersed submanifold** $S$ of $M$ is a topological manifold (not necessary having the topology of $M$) together with the inclusion map $S\to M$ which is a smooth immersion. **Lie's first theorem** identifies every Lie subalgebra with a connected Lie subgroup and vice versa. [^2]
+A **Lie subalgebra** $\mathfrak{h}$ of $\mathfrak{g}$ is a vector subspace such that $\left[\mathfrak{h},\mathfrak{h}\right]\subset\mathfrak{h}$. A Lie subalgebra of $\mathfrak{g}$ corresponds to a subgroup of $G$ which is also an immersed submanifold, called a **Lie subgroup** of $G$. A map $F:M\to N$ is a **smooth immersion** if its differential $dF$ is injective at every point: $\text{rank}F=\dim M$. (To remember the names, an **im**mersion is **in**jective, whereas a **su**bmersion is **su**rjective.) An **immersed submanifold** $S$ of $M$ is a topological manifold (not necessary having the topology of $M$) together with the inclusion map $S\to M$ which is a smooth immersion. **Lie's first theorem** identifies every Lie subalgebra with a connected Lie subgroup and vice versa.
+
+Just be aware that there is no standard definition of a Lie subgroup. Another notion of a submanifold is that of an **embedded submanifold**, which can be obtained for instance by setting some coordinates to zero. The key difference is that embedding has to be a homeomorphism preserving the global topology. Two classic examples of immersions that do not preserve the global topology are the figure-eight map and the irrational winding of a torus. [^2] The former maps an open interval in $\mathbb{R}$ to a closed figure "8" in $\mathbb{R}^{2}$. The latter takes a line with an irrational slope in $\mathbb{R}^{2}$ and map it to a torus. The line will densely wind around the entire
+torus. We will call a subgroup which is an embedded submanifold an **embedded Lie subgroup**. Fulton and Harris [^3], for example, give the opposite definitions; their Lie subgroups are our embedded Lie subgroup, whereas our Lie subgroups are their immerse Lie subgroups.
 
 By the **closed subgroup theorem**, a subgroup is an embedded Lie subgroup if and only if it is a closed set. Given a closed subgroup $H\subset G$, this makes $G/H$ a **homogeneous space**, a smooth manifold with a transitive group action.
-
-
-[^1]: Just be aware that there is no standard definition of a Lie subgroup. Another notion of a submanifold is that of an **embedded submanifold**, which can be obtained for instance by setting some coordinates to zero. The key difference is that embedding has to be a homeomorphism preserving the global topology. Two classic examples of immersions that do not preserve the global topology are the figure-eight map and the irrational winding of a torus. [^2] The former maps an open interval in $\mathbb{R}$ to a closed figure "8" in $\mathbb{R}^{2}$. The latter takes a line with an irrational slope in $\mathbb{R}^{2}$ and map it to a torus. The line will densely wind around the entire
-torus. We will call a subgroup which is an embedded submanifold an **embedded Lie subgroup**. Fulton and Harris [^3], for example, give the opposite definitions; their Lie subgroups are our embedded Lie subgroup, whereas our Lie subgroups are their immerse Lie subgroups.
 
 [^2] John Lee, [*Introduction to Smooth Manifolds*, 2nd ed. Springer (2012)](https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1441999817/), p. 86.
 

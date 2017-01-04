@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Basic definitions about Manifolds
-subtitle:
+title: Smooth manifolds
+subtitle: Basic definitions
 categories:
   - English
   - Geometry

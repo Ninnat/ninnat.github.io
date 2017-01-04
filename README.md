@@ -20,7 +20,18 @@ I use popup footnotes to improve readability, made possible by [Bigfoot](http://
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
-	$.bigfoot();
+	$.bigfoot({
+		activateCallback: function($popover, $button) {
+				if (MathJax && !$button.data('mathjax-processed')) {
+						var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+						MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+						MathJax.Hub.Queue(function () {
+								$button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+								$button.data('mathjax-processed', true);
+						});
+				}
+		}
+	});
 </script>
 ```
 within `/_includes/javascript.html`. This code, created by [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot), enables MathJax in the footnote.

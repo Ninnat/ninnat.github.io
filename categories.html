@@ -372,7 +372,7 @@ var _hmt = _hmt || [];
           ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
           tensor: ["{\\boldsymbol{#1}}",1],
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
-          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2], 
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           tr: ["{\\mathrm{Tr}}"],
         }
       <!-- extensions: ["autoload-all.js"]-->
@@ -398,13 +398,25 @@ var _hmt = _hmt || [];
     <script src="http://ninnat.github.io/assets/js/application.js"></script>
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src = "https://code.jquery.com/jquery.js"></script> 
+    <script src = "https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src = "/assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 	<script type="text/javascript">
-		$.bigfoot();
+  $.bigfoot({
+    activateCallback: function($popover, $button) {
+        if (MathJax && !$button.data('mathjax-processed')) {
+            var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+            MathJax.Hub.Queue(function () {
+                $button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+                $button.data('mathjax-processed', true);
+            });
+        }
+    }
+  });
 	</script>
+
   </body>
 </html>
 

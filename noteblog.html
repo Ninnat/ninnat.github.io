@@ -245,9 +245,9 @@ Quantum Physics for Babies เป็นหนังสือที่ Chris Ferr
 <img <p height="100" />
                 -->
 
-      First post on my Jekyll-powered blog!
-I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow what I did and get your own blog hosted on a free (public) Git repository.
-Finding a blog that...
+      Modified: 3 Jan 2017
+First post on my Jekyll-powered blog!
+I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow what I did and get your own blog hosted on a free (public) Git repository...
 
 </div>
 
@@ -298,9 +298,11 @@ Finding a blog that...
 
 <article>
 <div class="excerpt">
-<!-- First post on my Jekyll-powered blog!
+<!-- Modified: 3 Jan 2017
+First post on my Jekyll-powered blog!
 I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow what I did and get your own blog hosted on a free (public) Git repository.
-Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here... -->
+Finding a blog that functions without a hassle is even harder if you are a math blogger, but that ... -->
+<p>Modified: <em>3 Jan 2017</em></p>
 <p>First post on my Jekyll-powered blog!</p>
 <p>I’ve been blogging on <a href="https://ninnatdangniam.wordpress.com/">Wordpress</a> for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow <a href="https://ninnat.github.io/README.html">what I did</a> and get your own blog hosted on a free (public) Git repository.</p>
 <p>Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and displayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. Use <code>\begin{aligned}...\end{aligned}</code> for aligned equations and <code>\begin{aligned}...\end{aligned}</code> for numbered aligned equations. (Both delimiters have to be placed inside <code>$$...$$</code>.) A quick guide on MathJax syntax can be found <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
@@ -316,9 +318,20 @@ Finding a blog that functions without a hassle is even harder if you are a math 
 <p>Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, <a href="http://www.bigfootjs.com/">Bigfoot</a> like this. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> All you have to do is pasting the css into <code>/assets/css/style.css</code>, putting the javascript file to, say, <code>/assets/js</code> and calling it with</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-    $.bigfoot();
+    $.bigfoot({
+        activateCallback: function($popover, $button) {
+                if (MathJax &amp;&amp; !$button.data(&#39;mathjax-processed&#39;)) {
+                        var content_wrapper = $popover.find(&#39;.bigfoot-footnote__content&#39;)[0];
+                        MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub, content_wrapper]);
+                        MathJax.Hub.Queue(function () {
+                                $button.attr(&#39;data-bigfoot-footnote&#39;, content_wrapper.innerHTML);
+                                $button.data(&#39;mathjax-processed&#39;, true);
+                        });
+                }
+        }
+    });
 &lt;/script&gt;</code></pre>
-<p>within <code>/_includes/javascript.html</code>. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.</p>
+<p>within <code>/_includes/javascript.html</code>. This code, created by <a href="https://esham.io/2014/07/mathjax-and-bigfoot">Benjamin Esham</a> enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.</p>
 <section class="footnotes">
 <hr />
 <ol>

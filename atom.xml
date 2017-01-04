@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-01-04T00:16:08+00:00</updated>
+ <updated>2017-01-04T00:26:19+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -97,7 +97,8 @@
    <link href="/2016/07/20/first-post.html"/>
    <updated>2016-07-20T00:00:00+00:00</updated>
    <id>h/2016/07/20/first-post</id>
-   <content type="html">&lt;p&gt;First post on my Jekyll-powered blog!&lt;/p&gt;
+   <content type="html">&lt;p&gt;Modified: &lt;em&gt;3 Jan 2017&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;First post on my Jekyll-powered blog!&lt;/p&gt;
 &lt;p&gt;I’ve been blogging on &lt;a href=&quot;https://ninnatdangniam.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow &lt;a href=&quot;https://ninnat.github.io/README.html&quot;&gt;what I did&lt;/a&gt; and get your own blog hosted on a free (public) Git repository.&lt;/p&gt;
 &lt;p&gt;Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; and displayed using &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. Math in a paragraph (in-line math) is delimited by &lt;code&gt;$...$&lt;/code&gt;, while displaying math in its own paragraph uses &lt;code&gt;$$...$$&lt;/code&gt;. Use &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; for aligned equations and &lt;code&gt;\begin{aligned}...\end{aligned}&lt;/code&gt; for numbered aligned equations. (Both delimiters have to be placed inside &lt;code&gt;$$...$$&lt;/code&gt;.) A quick guide on MathJax syntax can be found &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s test this by writing the Maxwell’s equations in cgs units:&lt;/p&gt;
@@ -112,9 +113,20 @@
 &lt;p&gt;Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, &lt;a href=&quot;http://www.bigfootjs.com/&quot;&gt;Bigfoot&lt;/a&gt; like this. &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; All you have to do is pasting the css into &lt;code&gt;/assets/css/style.css&lt;/code&gt;, putting the javascript file to, say, &lt;code&gt;/assets/js&lt;/code&gt; and calling it with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/assets/js/bigfoot.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-    $.bigfoot();
+    $.bigfoot({
+        activateCallback: function($popover, $button) {
+                if (MathJax &amp;amp;&amp;amp; !$button.data(&amp;#39;mathjax-processed&amp;#39;)) {
+                        var content_wrapper = $popover.find(&amp;#39;.bigfoot-footnote__content&amp;#39;)[0];
+                        MathJax.Hub.Queue([&amp;#39;Typeset&amp;#39;, MathJax.Hub, content_wrapper]);
+                        MathJax.Hub.Queue(function () {
+                                $button.attr(&amp;#39;data-bigfoot-footnote&amp;#39;, content_wrapper.innerHTML);
+                                $button.data(&amp;#39;mathjax-processed&amp;#39;, true);
+                        });
+                }
+        }
+    });
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;within &lt;code&gt;/_includes/javascript.html&lt;/code&gt;. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.&lt;/p&gt;
+&lt;p&gt;within &lt;code&gt;/_includes/javascript.html&lt;/code&gt;. This code, created by &lt;a href=&quot;https://esham.io/2014/07/mathjax-and-bigfoot&quot;&gt;Benjamin Esham&lt;/a&gt; enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.&lt;/p&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;

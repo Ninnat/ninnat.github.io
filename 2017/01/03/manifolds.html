@@ -28,7 +28,7 @@
 <!-- RDFa Metadata (in DublinCore) -->
 <meta property="dc:title" content="Smooth manifolds" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
-<meta property="dc:date" content="2017-01-03 18:00:00 +0000" />
+<meta property="dc:date" content="2017-01-03 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2017/01/03/manifolds.html" />
@@ -42,13 +42,13 @@
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2017-01-03 18:00:00 +0000" />
+<meta property="http://ogp.me/ns/article#published_time" content="2017-01-03 00:00:00 +0000" />
 <meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://ninnat.github.io/2017/01/03/manifolds.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
-<meta name="citation_date" content="2017-01-03 18:00:00 +0000"/>
+<meta name="citation_date" content="2017-01-03 00:00:00 +0000"/>
 <meta name="citation_title" content="Smooth manifolds"/>
 <meta name="citation_journal_title" content="Ninnat's Notes"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
@@ -243,6 +243,9 @@ $(document).ready(function() {
 <h1 id="smooth-maps">Smooth Maps</h1>
 <p>We streamline the approach to define smooth transition maps to define smooth maps between manifolds.</p>
 <p>A map <span class="math">\(F:M\to N\)</span> between smooth manifolds is a <em>smooth map</em> if for every <span class="math">\(p\in M\)</span>, there exists smooth charts <span class="math">\(\left(U,\varphi\right)\)</span> containing <span class="math">\(p\)</span> and <span class="math">\(\left(V,\psi\right)\)</span> containing <span class="math">\(F(p)\)</span>, <span class="math">\(F(U)\subset V\)</span> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> and the composite map <span class="math">\(\psi\circ F\circ\varphi^{-1}\)</span> is smooth from <span class="math">\(\varphi(U)\)</span> to <span class="math">\(\psi(V)\)</span>.</p>
+<hr />
+<h2 id="appendix">Appendix</h2>
+<p>What of the requirement <span class="math">\(F(U)\subset V\)</span>? If it is left out, one would want to modify the definition so that <span class="math">\(\psi\circ F\circ\varphi^{-1}\)</span> needs only be smooth from <span class="math">\(\varphi(U\cap F^{-1}(V))\)</span>, whose domain has to be in the pre-image of <span class="math">\(V\)</span>, to <span class="math">\(\psi(V)\)</span>. However, consider the function <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> with <span class="math">\[ \begin{aligned} f(x)  = \begin{cases} 1,\ \text{for} \ x \ge 0 \\ 0,\  \text{otherwise} \end{cases} \end{aligned} \]</span> which is not differentiable at the origin. Choose <span class="math">\(U=(-1,1)\)</span>, and open <span class="math">\(V\)</span> with a closed pre-image, say, <span class="math">\(V=\left(\frac{1}{2},\frac{3} {2}\right)\)</span> and <span class="math">\(\varphi=\psi=\mbox{Id}\)</span>. Then <span class="math">\(\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)\)</span>, on which <span class="math">\(\psi\circ f\circ\varphi^{-1}=f\)</span> is certainly smooth, in conflict with the desired notion of smoothness. In fact, <span class="math">\(f\)</span> is not even continuous. The point is that, without the restriction, one can deliberately pick <span class="math">\(V\)</span> such that one doesn’t see the discontinuity in its pre-image.</p>
 <!--
 -------------------------
 -->
@@ -251,7 +254,7 @@ $(document).ready(function() {
 <hr />
 <ol>
 <li id="fn1"><p>Given <span class="math">\(p\neq q\in X\)</span> a Hausdorff space, there exist open sets <span class="math">\(U\)</span> containing <span class="math">\(p\)</span> and <span class="math">\(V\)</span> containing <span class="math">\(q\)</span> such that <span class="math">\(U\cap V=\emptyset\)</span> i.e. any two points in <span class="math">\(X\)</span> can be separated. Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the <a href="https://en.wikipedia.org/w/index.php?title=Trivial_topology&amp;oldid=651331293">trivial topology</a> (with more than one point).<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>What of the requirement <span class="math">\(F(U)\subset V\)</span>? If it is left out, one would want to modify the definition so that <span class="math">\(\psi\circ F\circ\varphi^{-1}\)</span> needs only be smooth from <span class="math">\(\varphi(U\cap F^{-1}(V))\)</span>, whose domain has to be in the pre-image of <span class="math">\(V\)</span>, to <span class="math">\(\psi(V)\)</span>. However, consider the function <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> with <span class="math">\[ \begin{aligned} f(x)  = \begin{cases} 1,\ \text{for} \ x \ge 0 \\ 0,\  \text{otherwise} \end{cases} \end{aligned} \]</span> which is not differentiable at the origin. Choose <span class="math">\(U=(-1,1)\)</span>, and open <span class="math">\(V\)</span> with a closed pre-image, say, <span class="math">\(V=\left(\frac{1}{2},\frac{3} {2}\right)\)</span> and <span class="math">\(\varphi=\psi=\mbox{Id}\)</span>. Then <span class="math">\(\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)\)</span>, on which <span class="math">\(\psi\circ f\circ\varphi^{-1}=f\)</span> is certainly smooth, in conflict with the desired notion of smoothness. In fact, <span class="math">\(f\)</span> is not even continuous. The point is that, without the restriction, one can deliberately pick <span class="math">\(V\)</span> such that one doesn’t see the discontinuity in its pre-image.<a href="#fnref2">↩</a></p></li>
+<li id="fn2"><p>See <a href="#appendix">Appendix</a> for a counterexample if this requirement is left out.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
@@ -265,16 +268,16 @@ $(document).ready(function() {
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
-    <time datetime="2017-01-03 18:00:00 +0000" 
+    <time datetime="2017-01-03 00:00:00 +0000" 
     property="dc:created">03 Jan 2017</time></p>
    
 
  <br />
           
-            <p><a class="btn btn-default" href='/2016/12/27/quantum-for-babies.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+            <p><a class="btn btn-default" href='/2017/01/03/lie-groups.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
-            <a class="btn btn-default" href='/2017/01/03/lie-groups.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+            </p>
           
 
 
@@ -302,7 +305,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/88cb4d1c22e9cf367b4b64835d239c67202894b5/_posts/2017-01-03-manifolds.md"> 88cb4d1c22e9cf367b4b64835d239c67202894b5</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/e7cb09a7f154665ecef4656c80fea53e35f30327/_posts/2017-01-03-manifolds.md"> e7cb09a7f154665ecef4656c80fea53e35f30327</a></tiny></p> -->
 </aside>
 
 <br /><br />

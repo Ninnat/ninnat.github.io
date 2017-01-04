@@ -28,7 +28,7 @@
 <!-- RDFa Metadata (in DublinCore) -->
 <meta property="dc:title" content="Lie groups and Lie algebras" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
-<meta property="dc:date" content="2017-01-03 20:00:00 +0000" />
+<meta property="dc:date" content="2017-01-03 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/2017/01/03/lie-groups.html" />
@@ -42,13 +42,13 @@
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2017-01-03 20:00:00 +0000" />
+<meta property="http://ogp.me/ns/article#published_time" content="2017-01-03 00:00:00 +0000" />
 <meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://ninnat.github.io/2017/01/03/lie-groups.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
-<meta name="citation_date" content="2017-01-03 20:00:00 +0000"/>
+<meta name="citation_date" content="2017-01-03 00:00:00 +0000"/>
 <meta name="citation_title" content="Lie groups and Lie algebras"/>
 <meta name="citation_journal_title" content="Ninnat's Notes"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
@@ -212,7 +212,7 @@ $(document).ready(function() {
 <p>Some of my future posts will contain these ideas with a lot of hand-waving. This post is a future reference for those who can’t tolerate hand-waving. Beware that this is much terser than the average blog post.</p>
 <p>Lie’s three theorems on the relation between Lie groups and Lie algebras is encapsulated in this statement: <em>the <a href="https://en.wikipedia.org/wiki/Category_(mathematics)">categories</a> of connected, <a href="https://en.wikipedia.org/wiki/Simply_connected_space">simply-connected</a> Lie groups and finite-dimensional Lie algebras are the same.</em> It cannot be the category of all Lie groups because Lie algebras cannot know the global topology of Lie groups. So we often study connected, simply-connected covering groups instead of the groups that are of interest to us.</p>
 <p>A <strong>Lie group</strong> <span class="math">\(G\)</span> is a <a href="https://en.wikipedia.org/wiki/Group_(mathematics)">group</a> that is also a smooth manifold (defined in the <a href="https://ninnat.github.io/2017/01/03/manifolds.html">previous post</a>) and the group multiplication and inverse are smooth. Roughly speaking, a manifold <span class="math">\(M\)</span> is a space that is locally Euclidean i.e. the chart <span class="math">\(\varphi\)</span> mapping an open set <span class="math">\(U\)</span> to a subset of <span class="math">\(\mathbb{R}^{n}\)</span> gives a point <span class="math">\(p\in M\)</span> coordinates in <span class="math">\(\mathbb{R}^{n}\)</span>. The dimension of a Lie group is <span class="math">\(n\)</span>, the dimension of the manifold.</p>
-<h2 id="lie-algebras">Lie algebras</h2>
+<h1 id="lie-algebras">Lie algebras</h1>
 <p>A <strong>Lie algebra</strong> is a vector space <span class="math">\(\mathfrak{g}\)</span> over a <a href="https://en.wikipedia.org/w/index.php?title=Field_(mathematics)&amp;oldid=757991562">field</a> <span class="math">\(k\)</span>, equipped with a bilinear map <span class="math">\(\left[,\right]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}\)</span>, the <strong>Lie bracket</strong>, which is skew-symmetric <span class="math">\(\left[x,y\right]=-\left[y,x\right]\)</span> (or equivalently, <span class="math">\(\left[x,x\right]=0\)</span>) and satisfies the Jacobi identity <span class="math">\[ \begin{aligned}
 \left[x,\left[y,z\right]\right]+\left[y,\left[z,x\right]\right]+\left[z,\left[x,y\right]\right] &amp; =0.
 \end{aligned} \]</span> To understand the Jacobi identity, let us look at the <strong>adjoint map</strong> that takes an element <span class="math">\(x\in\mathfrak{g}\)</span> and turns it into a Lie algebra endomorphism (a <a href="https://en.wikipedia.org/w/index.php?title=Lie_algebra&amp;oldid=750481376#Subalgebras.2C_ideals_and_homomorphisms">Lie algebra homomorphism</a> to <span class="math">\(\mathfrak{g}\)</span> itself) of <span class="math">\(\mathfrak{g}\)</span>. <span class="math">\[\begin{aligned}
@@ -225,34 +225,36 @@ $(document).ready(function() {
 \text{ad}x\left(\left[y,z\right]\right) &amp; =\left[\text{ad}x\left(y\right),z\right]+\left[y,\text{ad}x\left(z\right)\right].
 \end{aligned} \]</span> This ties in with another definition of a Lie algebra of a Lie group as the tangent space at the identity <span class="math">\(T_{e}G=\left\{ X|e^{tX}\in G,t\in\mathbb{R}\right\} \)</span> of <span class="math">\(G\)</span>, which is isomorphic to the set of partial differential operators at the identity. Thus, the dimension of the Lie group and that of its Lie algebra are the same. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
 <p>Every Lie group has a Lie algebra. The best converse of this statement is <strong>Lie’s third theorem</strong>: any abstractly defined Lie algebra has a corresponding connected, simply-connected Lie group.</p>
-<h2 id="the-adjoint-maps">The Adjoint maps</h2>
+<h1 id="the-adjoint-maps">The Adjoint maps</h1>
 <p>The Adjoint map <span class="math">\(\text{Ad}_{g}:G\to\text{End}\mathfrak{g}\)</span> is a homomorphism <span class="math">\[ \begin{aligned}
 \text{Ad}_{g}\text{Ad}_{h} &amp; =\text{Ad}_{gh}.
-\end{aligned} \]</span> So it is a <a href="https://en.wikipedia.org/w/index.php?title=Group_representation&amp;oldid=750883446#Definitions">representation of the group</a> called the <strong>Adjoint representation</strong> of <span class="math">\(G\)</span>. Its differential is the adjoint map <span class="math">\(\text{ad}:\mathfrak{g}\to\text{End}\mathfrak{g}\)</span> from <a href="#Lie-algebra">Lie algebra</a>. They are related by <span class="math">\[ \begin{aligned}
+\end{aligned} \]</span> So it is a <a href="https://en.wikipedia.org/w/index.php?title=Group_representation&amp;oldid=750883446#Definitions">representation of the group</a> called the <strong>Adjoint representation</strong> of <span class="math">\(G\)</span>. Its differential is the adjoint map <span class="math">\(\text{ad}:\mathfrak{g}\to\text{End}\mathfrak{g}\)</span> from <a href="#Lie-algebras">Lie algebra</a>. They are related by <span class="math">\[ \begin{aligned}
 \text{Ad}_{e^{x}} &amp; =e^{\text{ad}x}.
 \end{aligned} \]</span> More concretely, suppose that <span class="math">\(g=e^{tx}\in G\)</span> and <span class="math">\(y\in\mathfrak{g}\)</span>. <span class="math">\[ \begin{aligned}
 \left.\frac{d}{dt}\text{Ad}_{g}\left(y\right)\right|_{t=0} &amp; =\left.\frac{d}{dt}\left(e^{tx}ye^{-tx}\right)\right|_{t=0}=\left[x,y\right]=\text{ad}x\left(y\right)
 \end{aligned} \]</span> This is a special case of the relation between any Lie group and Lie algebra homomorphism <span class="math">\[ \begin{aligned}
 \Pi\left(e^{x}\right) &amp; =e^{d\Pi\left(x\right)},
 \end{aligned} \]</span> which is the manifestation of <strong>Lie’s second theorem</strong>: <span class="math">\(\text{Hom}\left(G,G&#39;\right)=\text{Hom}\left(\mathfrak{g},\mathfrak{g}&#39;\right)\)</span> if <span class="math">\(G\)</span> is simply connected. The corresponding statement for representations <span class="math">\(\Pi\)</span> is that <span class="math">\(\Pi\to d\Pi\)</span> gives the equivalence of the categories of representations of <span class="math">\(G\)</span> and representations of <span class="math">\(\mathfrak{g}\)</span>. Moreover, the vector spaces of intertwining operators (morphisms of representations) are isomorphic: <span class="math">\(\text{Hom}_{G}\left(V,W\right)=\text{Hom}_{\mathfrak{g}}\left(V,W\right)\)</span>.</p>
-<h2 id="lie-subgroups">Lie subgroups</h2>
+<h1 id="lie-subgroups">Lie subgroups</h1>
 <p>A <strong>Lie subalgebra</strong> <span class="math">\(\mathfrak{h}\)</span> of <span class="math">\(\mathfrak{g}\)</span> is a vector subspace such that <span class="math">\(\left[\mathfrak{h},\mathfrak{h}\right]\subset\mathfrak{h}\)</span>. A Lie subalgebra of <span class="math">\(\mathfrak{g}\)</span> corresponds to a subgroup of <span class="math">\(G\)</span> which is also an immersed submanifold, called a <strong>Lie subgroup</strong> of <span class="math">\(G\)</span>. A map <span class="math">\(F:M\to N\)</span> is a <strong>smooth immersion</strong> if its differential <span class="math">\(dF\)</span> is injective at every point: <span class="math">\(\text{rank}F=\dim M\)</span>. (To remember the names, an <strong>im</strong>mersion is <strong>in</strong>jective, whereas a <strong>su</strong>bmersion is <strong>su</strong>rjective.) An <strong>immersed submanifold</strong> <span class="math">\(S\)</span> of <span class="math">\(M\)</span> is a topological manifold (not necessary having the topology of <span class="math">\(M\)</span>) together with the inclusion map <span class="math">\(S\to M\)</span> which is a smooth immersion. <strong>Lie’s first theorem</strong> identifies every Lie subalgebra with a connected Lie subgroup and vice versa.</p>
 <p>Just be aware that there is no standard definition of a Lie subgroup. Another notion of a submanifold is that of an <strong>embedded submanifold</strong>, which can be obtained for instance by setting some coordinates to zero. The key difference is that embedding has to be a homeomorphism preserving the global topology. Two classic examples of immersions that do not preserve the global topology are the figure-eight map and the irrational winding of a torus. <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> The former maps an open interval in <span class="math">\(\mathbb{R}\)</span> to a closed figure “8” in <span class="math">\(\mathbb{R}^{2}\)</span>. The latter takes a line with an irrational slope in <span class="math">\(\mathbb{R}^{2}\)</span> and map it to a torus. The line will densely wind around the entire torus. We will call a subgroup which is an embedded submanifold an <strong>embedded Lie subgroup</strong>. Fulton and Harris <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>, for example, give the opposite definitions; their Lie subgroups are our embedded Lie subgroup, whereas our Lie subgroups are their immerse Lie subgroups.</p>
 <p>By the <strong>closed subgroup theorem</strong>, a subgroup is an embedded Lie subgroup if and only if it is a closed set. Given a closed subgroup <span class="math">\(H\subset G\)</span>, this makes <span class="math">\(G/H\)</span> a <strong>homogeneous space</strong>, a smooth manifold with a transitive group action.</p>
+<hr />
+<h1 id="appendix">Appendix</h1>
 <p>To prepare for the proof, think of a group element <span class="math">\(g\in G\)</span> as an <a href="https://en.wikipedia.org/wiki/Automorphism">automorphism</a> of the algebra <span class="math">\(C^{\infty}(M)\)</span> of smooth functions on a manifold <span class="math">\(M\)</span> that translates functions: <span class="math">\[ \begin{aligned}
-  \left(gf\right)\left(p\right) &amp; =f\left(g^{-1}p\right).
-  \end{aligned} \]</span> This induces an action on vector fields. Define the <strong>Adjoint map</strong> (with a capital A to distinguish it from the adjoint map of a Lie algebra) as (<span class="math">\(X\)</span> is a vector field) <span class="math">\[ \begin{aligned}
-  \text{Ad}_{g}X &amp; =gXg^{-1}.
-  \end{aligned} \]</span> The value of <span class="math">\(\text{Ad}_{g}X\)</span> at point <span class="math">\(q=gp\)</span> can be computed at point <span class="math">\(p\)</span>. <span class="math">\[ \begin{aligned}
-  \left(\text{Ad}_{g}X\right)_{q} &amp; =dg_{p}\left(X_{p}\right).
-  \end{aligned} \]</span> Let us unpack this little formula. <span class="math">\(g:M\to M\)</span> is an automorphism of <span class="math">\(M\)</span>. <span class="math">\(dg_{p}:T_{p}M\to T_{gp}M=T_{q}M\)</span> is the differential of the map <span class="math">\(g\)</span> at point <span class="math">\(p\)</span>. So both the right hand side <span class="math">\(dg_{p}\left(X_{p}\right)\)</span> and the left hand side are in the tangent space at <span class="math">\(q\)</span>.</p>
+\left(gf\right)\left(p\right) &amp; =f\left(g^{-1}p\right).
+\end{aligned} \]</span> This induces an action on vector fields. Define the <strong>Adjoint map</strong> (with a capital A to distinguish it from the adjoint map of a Lie algebra) as (<span class="math">\(X\)</span> is a vector field) <span class="math">\[ \begin{aligned}
+\text{Ad}_{g}X &amp; =gXg^{-1}.
+\end{aligned} \]</span> The value of <span class="math">\(\text{Ad}_{g}X\)</span> at point <span class="math">\(q=gp\)</span> can be computed at point <span class="math">\(p\)</span>. <span class="math">\[ \begin{aligned}
+\left(\text{Ad}_{g}X\right)_{q} &amp; =dg_{p}\left(X_{p}\right).
+\end{aligned} \]</span> Let us unpack this little formula. <span class="math">\(g:M\to M\)</span> is an automorphism of <span class="math">\(M\)</span>. <span class="math">\(dg_{p}:T_{p}M\to T_{gp}M=T_{q}M\)</span> is the differential of the map <span class="math">\(g\)</span> at point <span class="math">\(p\)</span>. So both the right hand side <span class="math">\(dg_{p}\left(X_{p}\right)\)</span> and the left hand side are in the tangent space at <span class="math">\(q\)</span>.</p>
 <p>Now we can understand what left-invariant vector fields mean. Take <span class="math">\(M=G\)</span> the Lie group itself. Let <span class="math">\(L_{g}\)</span> be the left action on the group itself: <span class="math">\(L_{g}\left(h\right)=gh\)</span>. A vector field is <strong>left-invariant</strong> if <span class="math">\(L_{g}X=XL_{g}\)</span> i.e. <span class="math">\(\text{Ad}_{g}X=X\)</span>. As promised, the left-invariant vector field at any point <span class="math">\(g\in G\)</span> can be seen to be determined by its value at the origin <span class="math">\(X_{e}\)</span>: <span class="math">\[ \begin{aligned}
-  X_{g} &amp; =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
-  \end{aligned} \]</span></p>
+X_{g} &amp; =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
+\end{aligned} \]</span></p>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Another definition of the Lie algebra of a Lie group <span class="math">\(G\)</span> is the set of left-invariant vector fields on <span class="math">\(G\)</span>. The set of all vector fields can be given the structure of a Lie algebra by the Lie bracket, but only left-invariant vector fields are determined by their values at the identity, hence the definition in <a href="#Lie-algebra">Lie algebra</a>.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Another definition of the Lie algebra of a Lie group <span class="math">\(G\)</span> is the set of left-invariant vector fields on <span class="math">\(G\)</span>. The set of all vector fields can be given the structure of a Lie algebra by the Lie bracket, but only left-invariant vector fields are determined by their values at the identity, hence the definition in <a href="#Lie-algebras">Lie algebra</a>. See <a href="#appendix">Appendix</a> for the proof.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>John Lee, <a href="https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1441999817/"><em>Introduction to Smooth Manifolds</em>, 2nd ed. Springer (2012)</a>, p. 86.<a href="#fnref2">↩</a></p></li>
 <li id="fn3"><p>William Fulton and Joe Harris, <a href="https://www.amazon.com/Representation-Theory-Course-Graduate-Mathematics/dp/0387974954"><em>Representation Theory: A First Course</em> Springer (2004)</a>.<a href="#fnref3">↩</a></p></li>
 </ol>
@@ -268,16 +270,16 @@ $(document).ready(function() {
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
             <aside prefix="og:http://ogp.me/ns/article#">
   <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
-    <time datetime="2017-01-03 20:00:00 +0000" 
+    <time datetime="2017-01-03 00:00:00 +0000" 
     property="dc:created">03 Jan 2017</time></p>
    
 
  <br />
           
-            <p><a class="btn btn-default" href='/2017/01/03/manifolds.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+            <p><a class="btn btn-default" href='/2016/12/27/quantum-for-babies.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
-            </p>
+            <a class="btn btn-default" href='/2017/01/03/manifolds.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -309,7 +311,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/bfbea3b24007d3eeec5526be038a27e9c6b7168c/_posts/2017-01-03-lie-groups.md"> bfbea3b24007d3eeec5526be038a27e9c6b7168c</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/e7cb09a7f154665ecef4656c80fea53e35f30327/_posts/2017-01-03-lie-groups.md"> e7cb09a7f154665ecef4656c80fea53e35f30327</a></tiny></p> -->
 </aside>
 
 <br /><br />

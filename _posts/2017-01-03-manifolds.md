@@ -6,7 +6,6 @@ categories:
   - English
   - Geometry
 tags:
-date: 2017-01-03 18:00:00
 ---
 Status: *in progress*
 
@@ -59,10 +58,16 @@ We streamline the approach to define smooth transition maps to define smooth map
 
 A map $F:M\to N$ between smooth manifolds is a *smooth map* if for every $p\in M$, there exists smooth charts $\left(U,\varphi\right)$ containing $p$ and $\left(V,\psi\right)$ containing $F(p)$, $F(U)\subset V$ [^2] and the composite map $\psi\circ F\circ\varphi^{-1}$ is smooth from $\varphi(U)$ to $\psi(V)$.
 
+---
+
+## Appendix
+
+What of the requirement $F(U)\subset V$? If it is left out, one would want to modify the definition so that $\psi\circ F\circ\varphi^{-1}$ needs only be smooth from $\varphi(U\cap F^{-1}(V))$, whose domain has to be in the pre-image of $V$, to $\psi(V)$. However, consider the function $f:\mathbb{R}\to\mathbb{R}$ with $$ \begin{aligned} f(x)  = \begin{cases} 1,\ \text{for} \ x \ge 0 \\ 0,\  \text{otherwise} \end{cases} \end{aligned} $$ which is not differentiable at the origin. Choose $U=(-1,1)$, and open $V$ with a closed pre-image, say, $V=\left(\frac{1}{2},\frac{3} {2}\right)$ and $\varphi=\psi=\mbox{Id}$. Then $\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)$, on which $\psi\circ f\circ\varphi^{-1}=f$ is certainly smooth, in conflict with the desired notion of smoothness. In fact, $f$ is not even continuous. The point is that, without the restriction, one can deliberately pick $V$ such that one doesn't see the discontinuity in its pre-image.
+
 <!--
 -------------------------
 -->
 
 [^1]: Given $p\neq q\in X$ a Hausdorff space, there exist open sets $U$ containing $p$ and $V$ containing $q$ such that $U\cap V=\emptyset$ i.e. any two points in $X$ can be separated. Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the [trivial topology](https://en.wikipedia.org/w/index.php?title=Trivial_topology&oldid=651331293) (with more than one point).
 
-[^2]: What of the requirement $F(U)\subset V$? If it is left out, one would want to modify the definition so that $\psi\circ F\circ\varphi^{-1}$ needs only be smooth from $\varphi(U\cap F^{-1}(V))$, whose domain has to be in the pre-image of $V$, to $\psi(V)$. However, consider the function $f:\mathbb{R}\to\mathbb{R}$ with $$ \begin{aligned} f(x)  = \begin{cases} 1,\ \text{for} \ x \ge 0 \\ 0,\  \text{otherwise} \end{cases} \end{aligned} $$ which is not differentiable at the origin. Choose $U=(-1,1)$, and open $V$ with a closed pre-image, say, $V=\left(\frac{1}{2},\frac{3} {2}\right)$ and $\varphi=\psi=\mbox{Id}$. Then $\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)$, on which $\psi\circ f\circ\varphi^{-1}=f$ is certainly smooth, in conflict with the desired notion of smoothness. In fact, $f$ is not even continuous. The point is that, without the restriction, one can deliberately pick $V$ such that one doesn't see the discontinuity in its pre-image.
+[^2]: See [Appendix](#appendix) for a counterexample if this requirement is left out.

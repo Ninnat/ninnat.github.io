@@ -7,7 +7,6 @@ categories:
   - Geometry
   - Groups
 tags:
-date: 2017-01-03 20:00:00
 ---
 Status: *in progress*
 
@@ -17,7 +16,7 @@ Lie's three theorems on the relation between Lie groups and Lie algebras is enca
 
 A **Lie group** $G$ is a [group](https://en.wikipedia.org/wiki/Group_(mathematics)) that is also a smooth manifold (defined in the [previous post](https://ninnat.github.io/2017/01/03/manifolds.html)) and the group multiplication and inverse are smooth. Roughly speaking, a manifold $M$ is a space that is locally Euclidean i.e. the chart $\varphi$ mapping an open set $U$ to a subset of $\mathbb{R}^{n}$ gives a point $p\in M$ coordinates in $\mathbb{R}^{n}$. The dimension of a Lie group is $n$, the dimension of the manifold.
 
-## Lie algebras
+# Lie algebras
 
 A **Lie algebra** is a vector space $\mathfrak{g}$ over a [field](https://en.wikipedia.org/w/index.php?title=Field_(mathematics)&oldid=757991562) $k$, equipped with a bilinear map $\left[,\right]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$,
 the **Lie bracket**, which is skew-symmetric $\left[x,y\right]=-\left[y,x\right]$
@@ -45,14 +44,14 @@ This ties in with another definition of a Lie algebra of a Lie group as the tang
 
 Every Lie group has a Lie algebra. The best converse of this statement is **Lie's third theorem**: any abstractly defined Lie algebra has a corresponding connected, simply-connected Lie group.
 
-## The Adjoint maps
+# The Adjoint maps
 
 The Adjoint map $\text{Ad}_{g}:G\to\text{End}\mathfrak{g}$ is a homomorphism
 $$ \begin{aligned}
 \text{Ad}_{g}\text{Ad}_{h} & =\text{Ad}_{gh}.
 \end{aligned} $$
 So it is a [representation of the group](https://en.wikipedia.org/w/index.php?title=Group_representation&oldid=750883446#Definitions) called the **Adjoint representation** of $G$. Its differential is the adjoint map $\text{ad}:\mathfrak{g}\to\text{End}\mathfrak{g}$
-from [Lie algebra](#Lie-algebra). They are related by
+from [Lie algebra](#Lie-algebras). They are related by
 $$ \begin{aligned}
 \text{Ad}_{e^{x}} & =e^{\text{ad}x}.
 \end{aligned} $$
@@ -68,7 +67,7 @@ which is the manifestation of **Lie's second theorem**: $\text{Hom}\left(G,G'\ri
 if $G$ is simply connected. The corresponding statement for representations $\Pi$ is that $\Pi\to d\Pi$ gives the equivalence of the categories
 of representations of $G$ and representations of $\mathfrak{g}$. Moreover, the vector spaces of intertwining operators (morphisms of representations) are isomorphic: $\text{Hom}_{G}\left(V,W\right)=\text{Hom}_{\mathfrak{g}}\left(V,W\right)$.
 
-## Lie subgroups
+# Lie subgroups
 
 A **Lie subalgebra** $\mathfrak{h}$ of $\mathfrak{g}$ is a vector subspace such that $\left[\mathfrak{h},\mathfrak{h}\right]\subset\mathfrak{h}$. A Lie subalgebra of $\mathfrak{g}$ corresponds to a subgroup of $G$ which is also an immersed submanifold, called a **Lie subgroup** of $G$. A map $F:M\to N$ is a **smooth immersion** if its differential $dF$ is injective at every point: $\text{rank}F=\dim M$. (To remember the names, an **im**mersion is **in**jective, whereas a **su**bmersion is **su**rjective.) An **immersed submanifold** $S$ of $M$ is a topological manifold (not necessary having the topology of $M$) together with the inclusion map $S\to M$ which is a smooth immersion. **Lie's first theorem** identifies every Lie subalgebra with a connected Lie subgroup and vice versa.
 
@@ -77,27 +76,31 @@ torus. We will call a subgroup which is an embedded submanifold an **embedded Li
 
 By the **closed subgroup theorem**, a subgroup is an embedded Lie subgroup if and only if it is a closed set. Given a closed subgroup $H\subset G$, this makes $G/H$ a **homogeneous space**, a smooth manifold with a transitive group action.
 
+-------------------------
+
+# Appendix
+
+To prepare for the proof, think of a group element $g\in G$ as an [automorphism](https://en.wikipedia.org/wiki/Automorphism) of the algebra $C^{\infty}(M)$ of smooth functions on a manifold $M$ that translates functions:
+$$ \begin{aligned}
+\left(gf\right)\left(p\right) & =f\left(g^{-1}p\right).
+\end{aligned} $$
+This induces an action on vector fields. Define the **Adjoint map** (with a capital A to distinguish it from the adjoint map of a Lie algebra) as ($X$ is a vector field)
+$$ \begin{aligned}
+\text{Ad}_{g}X & =gXg^{-1}.
+\end{aligned} $$
+The value of $\text{Ad}_{g}X$ at point $q=gp$ can be computed at point $p$.
+$$ \begin{aligned}
+\left(\text{Ad}_{g}X\right)_{q} & =dg_{p}\left(X_{p}\right).
+\end{aligned} $$
+Let us unpack this little formula. $g:M\to M$ is an automorphism of $M$. $dg_{p}:T_{p}M\to T_{gp}M=T_{q}M$ is the differential of the map $g$ at point $p$. So both the right hand side $dg_{p}\left(X_{p}\right)$ and the left hand side are in the tangent space at $q$.
+
+Now we can understand what left-invariant vector fields mean. Take $M=G$ the Lie group itself. Let $L_{g}$ be the left action on the group itself: $L_{g}\left(h\right)=gh$. A vector field is **left-invariant** if $L_{g}X=XL_{g}$ i.e. $\text{Ad}_{g}X=X$. As promised, the left-invariant vector field at any point $g\in G$ can be seen to be determined by its value at the origin $X_{e}$:
+$$ \begin{aligned}
+X_{g} & =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
+\end{aligned} $$
+
 [^1]:
-  Another definition of the Lie algebra of a Lie group $G$ is the set of left-invariant vector fields on $G$. The set of all vector fields can be given the structure of a Lie algebra by the Lie bracket, but only left-invariant vector fields are determined by their values at the identity, hence the definition in [Lie algebra](#Lie-algebra).
-
-  To prepare for the proof, think of a group element $g\in G$ as an [automorphism](https://en.wikipedia.org/wiki/Automorphism) of the algebra $C^{\infty}(M)$ of smooth functions on a manifold $M$ that translates functions:
-  $$ \begin{aligned}
-  \left(gf\right)\left(p\right) & =f\left(g^{-1}p\right).
-  \end{aligned} $$
-  This induces an action on vector fields. Define the **Adjoint map** (with a capital A to distinguish it from the adjoint map of a Lie algebra) as ($X$ is a vector field)
-  $$ \begin{aligned}
-  \text{Ad}_{g}X & =gXg^{-1}.
-  \end{aligned} $$
-  The value of $\text{Ad}_{g}X$ at point $q=gp$ can be computed at point $p$.
-  $$ \begin{aligned}
-  \left(\text{Ad}_{g}X\right)_{q} & =dg_{p}\left(X_{p}\right).
-  \end{aligned} $$
-  Let us unpack this little formula. $g:M\to M$ is an automorphism of $M$. $dg_{p}:T_{p}M\to T_{gp}M=T_{q}M$ is the differential of the map $g$ at point $p$. So both the right hand side $dg_{p}\left(X_{p}\right)$ and the left hand side are in the tangent space at $q$.
-
-  Now we can understand what left-invariant vector fields mean. Take $M=G$ the Lie group itself. Let $L_{g}$ be the left action on the group itself: $L_{g}\left(h\right)=gh$. A vector field is **left-invariant** if $L_{g}X=XL_{g}$ i.e. $\text{Ad}_{g}X=X$. As promised, the left-invariant vector field at any point $g\in G$ can be seen to be determined by its value at the origin $X_{e}$:
-  $$ \begin{aligned}
-  X_{g} & =\left(\text{Ad}_{g}X\right)_{g}=dg_{e}\left(X_{e}\right)
-  \end{aligned} $$
+Another definition of the Lie algebra of a Lie group $G$ is the set of left-invariant vector fields on $G$. The set of all vector fields can be given the structure of a Lie algebra by the Lie bracket, but only left-invariant vector fields are determined by their values at the identity, hence the definition in [Lie algebra](#Lie-algebras). See [Appendix] for the proof.
 
 [^2]: John Lee, [*Introduction to Smooth Manifolds*, 2nd ed. Springer (2012)](https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1441999817/), p. 86.
 

@@ -96,6 +96,6 @@ torus. We will call a subgroup which is an embedded submanifold an **embedded Li
 
 By the **closed subgroup theorem**, a subgroup is an embedded Lie subgroup if and only if it is a closed set. Given a closed subgroup $H\subset G$, this makes $G/H$ a **homogeneous space**, a smooth manifold with a transitive group action.
 
-[^1] John Lee, [*Introduction to Smooth Manifolds*, 2nd ed. Springer (2012)](https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1441999817/), p. 86.
+[^1]: John Lee, [*Introduction to Smooth Manifolds*, 2nd ed. Springer (2012)](https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1441999817/), p. 86.
 
-[^2] William Fulton and Joe Harris, [*Representation Theory: A First Course* Springer (2004)](https://www.amazon.com/Representation-Theory-Course-Graduate-Mathematics/dp/0387974954).
+[^2]: William Fulton and Joe Harris, [*Representation Theory: A First Course* Springer (2004)](https://www.amazon.com/Representation-Theory-Course-Graduate-Mathematics/dp/0387974954).

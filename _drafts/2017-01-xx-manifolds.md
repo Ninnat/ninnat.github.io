@@ -3,7 +3,6 @@ layout: post
 title: Smooth manifolds
 subtitle: Basic definitions
 categories:
-  - English
   - Geometry
 tags:
 ---
@@ -58,7 +57,7 @@ We streamline the approach to define smooth transition maps to define smooth map
 
 A map $F:M\to N$ between smooth manifolds is a *smooth map* if for every $p\in M$, there exists smooth charts $\left(U,\varphi\right)$ containing $p$ and $\left(V,\psi\right)$ containing $F(p)$, $F(U)\subset V$ [^2] and the composite map $\psi\circ F\circ\varphi^{-1}$ is smooth from $\varphi(U)$ to $\psi(V)$.
 
----
+-------------------------
 
 ## Appendix
 

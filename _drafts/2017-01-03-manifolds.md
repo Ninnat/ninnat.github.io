@@ -3,10 +3,10 @@ layout: post
 title: Smooth manifolds
 subtitle: Basic definitions
 categories:
-  - Geometry
+  - Geometry and topology
 tags:
 ---
-Status: *in progress*
+Status: *in progress* Rigor: *yes*
 
 Some of my future posts will contain these ideas with a lot of hand-waving. This post is a future reference for those who can't tolerate hand-waving. Beware that this is much terser than the average blog post.
 
@@ -16,19 +16,19 @@ While the defining property of discrete mathematical objects are often the kind 
 
  In topology, one can get a lot of mileage out of the notion of open and closed sets. As you might know, a set can be open, closed, or both (clopen). ("Sets are not doors!") One can define an open map to be a map that maps any open set to an open set and one can define a closed map to be a map that maps any closed set to a closed set. It turns out that there are more useful things to do. A map is *continuous* if the pre-image of any open set is open, or equivalently, if the pre-image of any closed set is closed. This definition of continuity is exactly the same as the familiar one in $\mathbb{R}^{n}$ defined by sequences and their limits, and more elegant since it can be generalized to a space in which there is no *a priori* notion of norm or distance. (Why the pre-image? As you can verify by thinking of a constant map, for example, an open map or a close map is not necessary continuous.)
 
-A *topological space* is a pair $\left(X,\mathcal{T}\right)$ of a set $X$ and a topology $T$ on $X$ i.e. a collection of subsets of $X$, called *open subsets*, with the following properties:
+A *topological space* is a pair $\left(X,\mathcal{T}\right)$ of a set $X$ and a topology $\mathcal{T}$ on $X$ i.e. a collection of subsets of $X$, called *open subsets*, with the following properties:
 
 - $X$ and $\emptyset$ are open. (Thus, $X$ and $\emptyset$ are clopen.)
 - A union of open sets is open.
 - A finite intersection of open sets is open.
 
-(Topological spaces can also be defined using [other set properties](https://en.wikipedia.org/w/index.php?title=Topological_space&oldid=756637885#Definition).)
+(Topological spaces can also be defined using [other set properties](https://en.wikipedia.org/w/index.php?title=Characterizations_of_the_category_of_topological_spaces&action=history).)
 
 A *homeomorphism* is a continuous bijection whose inverse is also continuous. We call a property that is invariant under a homeomorphism a *topological invariant*.
 
 # Topological Manifolds
 
-A topological space $M$ is a **topological manifold** of dimension $n$ (a topological invariant) if
+A topological space $M$ is a *topological manifold* of dimension $n$ (a topological invariant) if
 
 * $M$ is Hausdorff. [^1]
 * $M$ is second-countable i.e. it has a countable basis.
@@ -38,7 +38,7 @@ $$ \begin{aligned}
   \varphi:U  \to\hat{U} \subset \mathbb{R}^{n}.
 \end{aligned} $$
 
-Note that locally Euclidean spaces [may not be Hausdorff](https://en.wikipedia.org/w/index.php?title=Non-Hausdorff_manifold&oldid=756962961#Line_with_two_origins), so the first requirement is crucial. Some authors leave out the second-countability requirement.
+Note that locally Euclidean spaces [may not be Hausdorff](https://en.wikipedia.org/w/index.php?title=Non-Hausdorff_manifold&oldid=756962961#Line_with_two_origins), so the first requirement is crucial.
 
 # Smooth Manifolds
 
@@ -46,16 +46,20 @@ The notion of a topological manifold does not yet provide enough structure for d
 
 - A *smooth manifold* is a topological manifold $M$ of $n$ dimensions with a so-called smooth structure or a maximal smooth atlas.
 - A *maximal atlas* is a maximal collection of charts that are all pairwise smoothly compatible and whose domain covers $M$.
-- A **chart** is a pair $\left(U,\varphi\right)$ of an open subset $U\subset M$ and a homeomorphism $\varphi:M\to\varphi(U)\subset\mathbb{R}^{n}$.
+- A *chart* is a pair $\left(U,\varphi\right)$ of an open subset $U\subset M$ and a homeomorphism $\varphi:M\to\varphi(U)\subset\mathbb{R}^{n}$.
 
 Two charts $\left(U,\varphi\right),\left(V,\psi\right)$ are smoothly
-compatible if $U\cap V=\emptyset$ (making the definition vacuous) or if the transition map $\psi\circ\varphi^{-1}:\varphi(U\cap V)\to\psi(U\cap V)$ is smooth, meaning that all of its partial derivatives of all orders exist and are continuous. This is the same as the definition of smoothness in calculus, as the transition map is a map from $\mathbb{R}^{n}$ to itself.
+compatible if $U\cap V=\emptyset$ (making the definition vacuous) or if the *transition map* $\psi\circ\varphi^{-1}:\varphi(U\cap V)\to\psi(U\cap V)$ is smooth, meaning that all of its partial derivatives of all orders exist and are continuous. This is the same as the definition of smoothness in calculus, as the transition map is a map from $\mathbb{R}^{n}$ to itself.
 
 # Smooth Maps
 
 We streamline the approach to define smooth transition maps to define smooth maps between manifolds.
 
 A map $F:M\to N$ between smooth manifolds is a *smooth map* if for every $p\in M$, there exists smooth charts $\left(U,\varphi\right)$ containing $p$ and $\left(V,\psi\right)$ containing $F(p)$, $F(U)\subset V$ [^2] and the composite map $\psi\circ F\circ\varphi^{-1}$ is smooth from $\varphi(U)$ to $\psi(V)$.
+
+# The tangent space
+
+There are several equivalent ways to think about a tangent vector $u$ at a point $p \in M$.
 
 -------------------------
 
@@ -67,6 +71,6 @@ What of the requirement $F(U)\subset V$? If it is left out, one would want to mo
 -------------------------
 -->
 
-[^1]: Given $p\neq q\in X$ a Hausdorff space, there exist open sets $U$ containing $p$ and $V$ containing $q$ such that $U\cap V=\emptyset$ i.e. any two points in $X$ can be separated. Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the [trivial topology](https://en.wikipedia.org/w/index.php?title=Trivial_topology&oldid=651331293) (with more than one point).
+[^1]: Given $p\neq q\in X$ a Hausdorff space, there exist open sets $U$ containing $p$ and $V$ containing $q$ such that $U\cap V=\emptyset$ i.e. any two points in $X$ can be separated. Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique and a finite subset may not be closed. Being Hausdorff also rules out the [trivial topology](https://en.wikipedia.org/w/index.php?title=Trivial_topology&oldid=651331293) (with more than one point).
 
-[^2]: See [Appendix](#appendix) for a counterexample if this requirement is left out.
+[^2]: See [Appendix](#appendix) for a counterexample if this requirement is dropped.

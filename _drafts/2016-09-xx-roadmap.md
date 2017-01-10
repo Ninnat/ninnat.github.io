@@ -10,7 +10,7 @@ Why writing? One possible goal is, as [John Baez](http://www.math.ucr.edu/home/b
 
 >My goal is to make myself obsolete.
 
-I remember reading about a conversation with Paul Dirac (which I can't find the source anymore, probably a library book). Dirac was asked about his achievement in theoretical physics, to which Dirac replied that he didn't achieve much and proceeded to change the subject away from himself and to physics. So in a way, he got to talk about his achievement, his thinking in physics, without talking about himself.
+I remember reading about a conversation with Paul Dirac (which I can't find the source anymore. It must has been a library book). Dirac was asked about his achievement in theoretical physics, to which Dirac replied that he didn't achieve much and proceeded to change the subject away from himself and to physics.
 
 I figure to start this blog I should first introduce myself but without much [tribal affiliation](http://www.gwern.net/Links#profile). You won't find out where I was born and raised or how famous (or not) were the schools I went to. They are not so much secrets; you can find those out in no time if you want to. But neither they are important. I want to talk about physics and math, and how you might be able to learn it too.
 

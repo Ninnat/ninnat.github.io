@@ -3,7 +3,7 @@ layout: post
 title: Lie groups and Lie algebras
 subtitle: Basic definitions
 categories:
-  - Geometry
+  - Geometry and topology
   - Groups
 tags:
 ---

@@ -4,70 +4,13 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-01-12T03:18:49+00:00</updated>
+ <updated>2017-01-12T03:28:08+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
- 
- <entry>
-   <title>Smooth manifolds</title>
-   <link href="/2017/01/03/manifolds.html"/>
-   <updated>2017-01-03T00:00:00+00:00</updated>
-   <id>h/2017/01/03/manifolds</id>
-   <content type="html">&lt;p&gt;Status: &lt;em&gt;in progress&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Some of my future posts will contain these ideas with a lot of hand-waving. This post is a future reference for those who can’t tolerate hand-waving. Beware that this is much terser than the average blog post.&lt;/p&gt;
-&lt;h1 id=&quot;topology&quot;&gt;Topology&lt;/h1&gt;
-&lt;p&gt;While the defining property of discrete mathematical objects are often the kind of interactions between elements of a set (making it a group, ring, field, vector space, module etc.), in continuous mathematics one focus on subsets.&lt;/p&gt;
-&lt;p&gt;In topology, one can get a lot of mileage out of the notion of open and closed sets. As you might know, a set can be open, closed, or both (clopen). (“Sets are not doors!”) One can define an open map to be a map that maps any open set to an open set and one can define a closed map to be a map that maps any closed set to a closed set. It turns out that there are more useful things to do. A map is &lt;em&gt;continuous&lt;/em&gt; if the pre-image of any open set is open, or equivalently, if the pre-image of any closed set is closed. This definition of continuity is exactly the same as the familiar one in &lt;span class=&quot;math&quot;&gt;\(\mathbb{R}^{n}\)&lt;/span&gt; defined by sequences and their limits, and more elegant since it can be generalized to a space in which there is no &lt;em&gt;a priori&lt;/em&gt; notion of norm or distance. (Why the pre-image? As you can verify by thinking of a constant map, for example, an open map or a close map is not necessary continuous.)&lt;/p&gt;
-&lt;p&gt;A &lt;em&gt;topological space&lt;/em&gt; is a pair &lt;span class=&quot;math&quot;&gt;\(\left(X,\mathcal{T}\right)\)&lt;/span&gt; of a set &lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt; and a topology &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; on &lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt; i.e. a collection of subsets of &lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt;, called &lt;em&gt;open subsets&lt;/em&gt;, with the following properties:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\emptyset\)&lt;/span&gt; are open. (Thus, &lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\emptyset\)&lt;/span&gt; are clopen.)&lt;/li&gt;
-&lt;li&gt;A union of open sets is open.&lt;/li&gt;
-&lt;li&gt;A finite intersection of open sets is open.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(Topological spaces can also be defined using &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Topological_space&amp;amp;oldid=756637885#Definition&quot;&gt;other set properties&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;A &lt;em&gt;homeomorphism&lt;/em&gt; is a continuous bijection whose inverse is also continuous. We call a property that is invariant under a homeomorphism a &lt;em&gt;topological invariant&lt;/em&gt;.&lt;/p&gt;
-&lt;h1 id=&quot;topological-manifolds&quot;&gt;Topological Manifolds&lt;/h1&gt;
-&lt;p&gt;A topological space &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is a &lt;strong&gt;topological manifold&lt;/strong&gt; of dimension &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; (a topological invariant) if&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is Hausdorff. &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is second-countable i.e. it has a countable basis.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is locally Euclidean i.e. &lt;span class=&quot;math&quot;&gt;\(\forall p\in M\)&lt;/span&gt;, there is an open set &lt;span class=&quot;math&quot;&gt;\(U\)&lt;/span&gt; and a homeomorphism &lt;span class=&quot;math&quot;&gt;\(\varphi\)&lt;/span&gt; to an open subset &lt;span class=&quot;math&quot;&gt;\(\hat{U}\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(\mathbb{R}^{n}\)&lt;/span&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \begin{aligned}
-  \varphi:U  \to\hat{U} \subset \mathbb{R}^{n}.
-\end{aligned} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Note that locally Euclidean spaces &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Non-Hausdorff_manifold&amp;amp;oldid=756962961#Line_with_two_origins&quot;&gt;may not be Hausdorff&lt;/a&gt;, so the first requirement is crucial. Some authors leave out the second-countability requirement.&lt;/p&gt;
-&lt;h1 id=&quot;smooth-manifolds&quot;&gt;Smooth Manifolds&lt;/h1&gt;
-&lt;p&gt;The notion of a topological manifold does not yet provide enough structure for doing calculus because smoothness is not a topological invariance. Warning: a bunch of definitions is coming. It seems more natural to me to build the definitions top-down rather than bottom-up from charts.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A &lt;em&gt;smooth manifold&lt;/em&gt; is a topological manifold &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; dimensions with a so-called smooth structure or a maximal smooth atlas.&lt;/li&gt;
-&lt;li&gt;A &lt;em&gt;maximal atlas&lt;/em&gt; is a maximal collection of charts that are all pairwise smoothly compatible and whose domain covers &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;A &lt;strong&gt;chart&lt;/strong&gt; is a pair &lt;span class=&quot;math&quot;&gt;\(\left(U,\varphi\right)\)&lt;/span&gt; of an open subset &lt;span class=&quot;math&quot;&gt;\(U\subset M\)&lt;/span&gt; and a homeomorphism &lt;span class=&quot;math&quot;&gt;\(\varphi:M\to\varphi(U)\subset\mathbb{R}^{n}\)&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Two charts &lt;span class=&quot;math&quot;&gt;\(\left(U,\varphi\right),\left(V,\psi\right)\)&lt;/span&gt; are smoothly compatible if &lt;span class=&quot;math&quot;&gt;\(U\cap V=\emptyset\)&lt;/span&gt; (making the definition vacuous) or if the transition map &lt;span class=&quot;math&quot;&gt;\(\psi\circ\varphi^{-1}:\varphi(U\cap V)\to\psi(U\cap V)\)&lt;/span&gt; is smooth, meaning that all of its partial derivatives of all orders exist and are continuous. This is the same as the definition of smoothness in calculus, as the transition map is a map from &lt;span class=&quot;math&quot;&gt;\(\mathbb{R}^{n}\)&lt;/span&gt; to itself.&lt;/p&gt;
-&lt;h1 id=&quot;smooth-maps&quot;&gt;Smooth Maps&lt;/h1&gt;
-&lt;p&gt;We streamline the approach to define smooth transition maps to define smooth maps between manifolds.&lt;/p&gt;
-&lt;p&gt;A map &lt;span class=&quot;math&quot;&gt;\(F:M\to N\)&lt;/span&gt; between smooth manifolds is a &lt;em&gt;smooth map&lt;/em&gt; if for every &lt;span class=&quot;math&quot;&gt;\(p\in M\)&lt;/span&gt;, there exists smooth charts &lt;span class=&quot;math&quot;&gt;\(\left(U,\varphi\right)\)&lt;/span&gt; containing &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\left(V,\psi\right)\)&lt;/span&gt; containing &lt;span class=&quot;math&quot;&gt;\(F(p)\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(F(U)\subset V\)&lt;/span&gt; &lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; and the composite map &lt;span class=&quot;math&quot;&gt;\(\psi\circ F\circ\varphi^{-1}\)&lt;/span&gt; is smooth from &lt;span class=&quot;math&quot;&gt;\(\varphi(U)\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(\psi(V)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;appendix&quot;&gt;Appendix&lt;/h2&gt;
-&lt;p&gt;What of the requirement &lt;span class=&quot;math&quot;&gt;\(F(U)\subset V\)&lt;/span&gt;? If it is left out, one would want to modify the definition so that &lt;span class=&quot;math&quot;&gt;\(\psi\circ F\circ\varphi^{-1}\)&lt;/span&gt; needs only be smooth from &lt;span class=&quot;math&quot;&gt;\(\varphi(U\cap F^{-1}(V))\)&lt;/span&gt;, whose domain has to be in the pre-image of &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt;, to &lt;span class=&quot;math&quot;&gt;\(\psi(V)\)&lt;/span&gt;. However, consider the function &lt;span class=&quot;math&quot;&gt;\(f:\mathbb{R}\to\mathbb{R}\)&lt;/span&gt; with &lt;span class=&quot;math&quot;&gt;\[ \begin{aligned} f(x)  = \begin{cases} 1,\ \text{for} \ x \ge 0 \\ 0,\  \text{otherwise} \end{cases} \end{aligned} \]&lt;/span&gt; which is not differentiable at the origin. Choose &lt;span class=&quot;math&quot;&gt;\(U=(-1,1)\)&lt;/span&gt;, and open &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; with a closed pre-image, say, &lt;span class=&quot;math&quot;&gt;\(V=\left(\frac{1}{2},\frac{3} {2}\right)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\varphi=\psi=\mbox{Id}\)&lt;/span&gt;. Then &lt;span class=&quot;math&quot;&gt;\(\varphi\left(U\cap f^{-1}(V)\right)=\varphi\left((-1,1)\cap 0,\infty)\right)=[0,1)\)&lt;/span&gt;, on which &lt;span class=&quot;math&quot;&gt;\(\psi\circ f\circ\varphi^{-1}=f\)&lt;/span&gt; is certainly smooth, in conflict with the desired notion of smoothness. In fact, &lt;span class=&quot;math&quot;&gt;\(f\)&lt;/span&gt; is not even continuous. The point is that, without the restriction, one can deliberately pick &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; such that one doesn’t see the discontinuity in its pre-image.&lt;/p&gt;
-&lt;!--
--------------------------
---&gt;
-
-&lt;section class=&quot;footnotes&quot;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Given &lt;span class=&quot;math&quot;&gt;\(p\neq q\in X\)&lt;/span&gt; a Hausdorff space, there exist open sets &lt;span class=&quot;math&quot;&gt;\(U\)&lt;/span&gt; containing &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; containing &lt;span class=&quot;math&quot;&gt;\(q\)&lt;/span&gt; such that &lt;span class=&quot;math&quot;&gt;\(U\cap V=\emptyset\)&lt;/span&gt; i.e. any two points in &lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt; can be separated. Why Hausdorff? Several reasons coming from our intuition of what constitutes a well-behaved space can be given. For example, if a space is not Hausdorff, a limit point may not be unique, and a finite subset may not be closed. Being Hausdorff also rules out the &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Trivial_topology&amp;amp;oldid=651331293&quot;&gt;trivial topology&lt;/a&gt; (with more than one point).&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;See &lt;a href=&quot;#appendix&quot;&gt;Appendix&lt;/a&gt; for a counterexample if this requirement is left out.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</content>
- </entry>
  
  <entry>
    <title>ควอนตัมฟิสิกส์สำหรับทารก</title>

@@ -27,7 +27,7 @@ gem "git"         # Git gem
 gem "garb" #, "~> 0.9.8"    # Google Analytics API
 
 gem 'redis'
-gem 'classifier-reborn', '~>2.0.4', :git => "https://github.com/jekyll/classifier-reborn" # To fix the equal sign warning.
+gem 'classifier-reborn', '>=2.0.4', :git => "https://github.com/jekyll/classifier-reborn" # To fix the equal sign warning.
 gem 'narray' #, :git => "https://github.com/tonyarnold/narray"
 gem 'rb-gsl'
 #gem 'gsl', :git => "https://github.com/tonyarnold/rb-gsl"

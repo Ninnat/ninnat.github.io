@@ -219,12 +219,12 @@ $(document).ready(function() {
       A &amp; C\ar[l]^{\alpha}\ar[r]_{\beta} &amp; B
     }
 \end{aligned} \]</span> We call this kind of diagrams commutative diagrams. The rational behind this definition is that <span class="math">\(C\)</span> together with the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the best object that acts as a product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> since giving any morphism from any object <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> is equivalent to giving <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> from <span class="math">\(C\)</span>, so we can just forget about <span class="math">\(D\)</span> altogether and regard <span class="math">\(C\)</span> as a universal simulator of such relations.</p>
-<p>The same diagram with all arrows reversed defines a coproduct <span class="math">\(C\)</span>. <span class="math">\[ \begin{aligned}
+<p>The same diagram with all arrows reversed defines a coproduct <span class="math">\(C\)</span>. <span class="math">\[ \begin{xy}
     \xymatrix{
       &amp; D &amp; \\
       A\ar[ur]^{\alpha&#39;}\ar[r]_{\alpha} &amp; C\ar[u]_{\gamma} &amp; B\ar[l]^{\beta}\ar[ul]_{\beta&#39;}
     }
-\end{aligned} \]</span> These definitions generalize trivially to a product and a coproduct of more than two objects.</p>
+\end{xy} \]</span> These definitions generalize trivially to a product and a coproduct of more than two objects.</p>
 <p>In <strong>Set</strong>, the product is the direct product <span class="math">\(A \times B\)</span> and the coproduct is the direct sum <span class="math">\(A \cup B\)</span>. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product <span class="math">\(C=A \times B\)</span>, a natural choice for the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the projection <span class="math">\[ \begin{aligned}
 \alpha(a,b) = a, &amp;&amp; \beta(a,b) = b.
 \end{aligned} \]</span> We have to show that, for any <span class="math">\(\alpha&#39;\)</span> and <span class="math">\(\beta&#39;\)</span> from a set <span class="math">\(D\)</span>, there is a morphism <span class="math">\(\gamma\)</span> from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> that makes the diagram commutes and uniquely so. Obviously, for <span class="math">\(d\in D\)</span>, this map is <span class="math">\[ \begin{aligned}
@@ -235,23 +235,23 @@ $(document).ready(function() {
 <h1 id="functors">Functors</h1>
 <p>Suppose that <span class="math">\(\mathcal{C}\)</span> and <span class="math">\(\mathcal{D}\)</span> are two categories and <span class="math">\(X,Y \in \mathcal{C}\)</span>. A (covariant) functor <span class="math">\(F\)</span> is a map (of both objects and morphisms) <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> such that <span class="math">\(\text{Hom}(X,Y) \to \text{Hom}(F(X) , F(Y))\)</span> preserves identity morphisms and compositions.</p>
 <p>One of the most trivial kinds of functors are ones that simply throw away information. The forgetful functor <strong>Grp</strong> <span class="math">\(\to\)</span> <strong>Set</strong> sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from <strong>Grp</strong> to <strong>Ab</strong> the category of all abelian groups which set <span class="math">\(ab=ba\)</span> for all elements <span class="math">\(a,b\)</span> in a group.</p>
-<p>More interesting is the free functor <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to the “free group”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions (“words”) that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that any map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> factors through the free group <span class="math">\(F(S)\)</span> with a unique group homomorphism <span class="math">\(\varphi\)</span>. <span class="math">\[ \begin{aligned}
+<p>More interesting is the free functor <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to the “free group”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions (“words”) that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that any map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> factors through the free group <span class="math">\(F(S)\)</span> with a unique group homomorphism <span class="math">\(\varphi\)</span>. <span class="math">\[ \begin{xy}
     \xymatrix{
       S \ar[r]\ar[dr]_{\sigma} &amp; F(S) \ar[d]^{\varphi} \\
       &amp; G
     }
-\end{aligned} \]</span></p>
+\end{xy} \]</span></p>
 <p>For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories <strong>Set</strong> and <strong>Grp</strong> are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.</p>
 <p>Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span class="math">\(G: \mathcal{D} \to \mathcal{C}\)</span> are adjoint functors if for any <span class="math">\(X \in \mathcal{C}\)</span> and <span class="math">\(Y \in \mathcal{D}\)</span>, there is an isomorphism <span class="math">\[ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
-\end{aligned} \]</span> <span class="math">\[ \begin{aligned}
+\end{aligned} \]</span> <span class="math">\[ \begin{xy}
     \xymatrix{
       F(X)\ar[r]^{\text{Hom}_{\mathcal{D}}(F(X),Y)} &amp; Y\ar[d] \\
       X\ar[u]\ar[r]_{\text{Hom}_{\mathcal{C}}(X,G(Y))} &amp; G(Y)
     }
-\end{aligned} \]</span> <span class="math">\(F\)</span> is called a left adjoint of <span class="math">\(G\)</span> and <span class="math">\(G\)</span> is called a right adjoint of <span class="math">\(F\)</span>.</p>
+\end{xy} \]</span> <span class="math">\(F\)</span> is called a left adjoint of <span class="math">\(G\)</span> and <span class="math">\(G\)</span> is called a right adjoint of <span class="math">\(F\)</span>.</p>
 <p>Why should this be true in the case of the forgetful functor <span class="math">\(E\)</span> and the free functor <span class="math">\(F\)</span> between <strong>Set</strong> and <strong>Grp</strong>? A group homomorphism <span class="math">\(\varphi :F(S) \to G\)</span> is completely determined if we know what it does to each element of <span class="math">\(S\)</span>. In other words, what <span class="math">\(\varphi\)</span> really acts on is the underlying set of <span class="math">\(G\)</span>. That is, giving <span class="math">\(\varphi\)</span> is equivalent to giving <span class="math">\(\psi : S \to E(G)\)</span>. <span class="math">\[ \begin{aligned}
-\text{Hom}_{\text{\bf Grp}} (F(S),G) \simeq \text{Hom}_{\text{\bf Set}} (S,E(G))
+\text{Hom}_{\text{\bold{Grp}}} (F(S),G) \simeq \text{Hom}_{\text{\bold{Set}}} (S,E(G))
 \end{aligned} \]</span> so that the free functor is a left adjoint of the forgetful functor.</p>
 <p>A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda’s lemma, neither of which I can competently explain. But they all have analogs in linear algebra, where the name “adjoint” is borrowed from. %To do this, we need one more basic notion. An opposite category <span class="math">\(\mathcal{C}^{\text{op}}\)</span> of <span class="math">\(\mathcal{C}\)</span> is the category with the same objects but with all arrows reversed. If we think of a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> as a category on its own. Its opposite category is the dual space <span class="math">\(V^*\)</span>, and one goes between <span class="math">\(V\)</span> and <span class="math">\(V^*\)</span> by taking the adjoint (which is a functor that maps compositions of morphisms “in the wrong direction” called a contravariant functor.) A functor <span class="math">\(F:\mathcal{C} \to \)</span><strong>Set</strong> is representable by <span class="math">\(X \in \mathcal{C}\)</span> if the functor can be concretely realized as the morphism Hom<span class="math">\(_{\mathcal{C}}(X,\cdot)\)</span>. The Yoneda’s lemma guarantees that this <span class="math">\(X\)</span> is unique. In this analogy, therefore, the representability of <span class="math">\(F\)</span> combined with the Yoneda’s lemma is the same as the Riesz representation theorem in linear algebra. It says that a continuous linear functional <span class="math">\(f:V \to k\)</span>, where <span class="math">\(k\)</span> is now the analog of <strong>Set</strong>, can be identified as a unique vector in <span class="math">\(v \in V\)</span> itself via the inner product <span class="math">\[ \begin{aligned}
 f (u) = \braket{v,u}.
@@ -303,7 +303,7 @@ f (u) = \braket{v,u}.
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/b1fffd8f2b6b1503899b6f9626f65b51293d14f6/_posts/2017-01-26-adjoint-functors.md"> b1fffd8f2b6b1503899b6f9626f65b51293d14f6</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/76b13aa9bec2763e72f985b6078c6d5ce1e3e4e1/_posts/2017-01-26-adjoint-functors.md"> 76b13aa9bec2763e72f985b6078c6d5ce1e3e4e1</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -429,7 +429,7 @@ f (u) = \braket{v,u}.
           abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle{#1}\\right|}",1],
-          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          braket: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
           tensor: ["{\\boldsymbol{#1}}",1],
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
           pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],

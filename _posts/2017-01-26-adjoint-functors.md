@@ -31,12 +31,12 @@ $$ \begin{aligned}
 We call this kind of diagrams commutative diagrams. The rational behind this definition is that $C$ together with the mappings $\alpha$ and $\beta$ is the best object that acts as a product of $A$ and $B$ since giving any morphism from any object $D$ to $A$ or $B$ is equivalent to giving $\alpha$ and $\beta$ from $C$, so we can just forget about $D$ altogether and regard $C$ as a universal simulator of such relations.
 
 The same diagram with all arrows reversed defines a coproduct $C$.
-$$ \begin{aligned}
+$$ \begin{xy}
 	\xymatrix{
       & D & \\
       A\ar[ur]^{\alpha'}\ar[r]_{\alpha} & C\ar[u]_{\gamma} & B\ar[l]^{\beta}\ar[ul]_{\beta'}
 	}
-\end{aligned} $$
+\end{xy} $$
 These definitions generalize trivially to a product and a coproduct of more than two objects.
 
 In **Set**, the product is the direct product $A \times B$ and the coproduct is the direct sum $A \cup B$. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product $C=A \times B$, a natural choice for the mappings $\alpha$ and $\beta$ is the projection
@@ -60,12 +60,12 @@ Suppose that $\mathcal{C}$ and $\mathcal{D}$ are two categories and $X,Y \in \ma
 One of the most trivial kinds of functors are ones that simply throw away information. The forgetful functor **Grp** $\to$ **Set** sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from **Grp** to **Ab** the category of all abelian groups which set $ab=ba$ for all elements $a,b$ in a group.
 
 More interesting is the free functor $F:$ **Set** $\to$ **Grp** sending a set to the "free group". For a set $S$, $F(S)$ is the set of all expressions ("words") that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that any map $\sigma$ from $S$ to some group $G$ factors through the free group $F(S)$ with a unique group homomorphism $\varphi$.
-$$ \begin{aligned}
+$$ \begin{xy}
 	\xymatrix{
       S \ar[r]\ar[dr]_{\sigma} & F(S) \ar[d]^{\varphi} \\
       & G
 	}
-\end{aligned} $$
+\end{xy} $$
 
 For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories **Set** and **Grp** are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.
 
@@ -73,17 +73,17 @@ Functors $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ a
 $$ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
 \end{aligned} $$
-$$ \begin{aligned}
+$$ \begin{xy}
 	\xymatrix{
       F(X)\ar[r]^{\text{Hom}_{\mathcal{D}}(F(X),Y)} & Y\ar[d] \\
       X\ar[u]\ar[r]_{\text{Hom}_{\mathcal{C}}(X,G(Y))} & G(Y)
 	}
-\end{aligned} $$
+\end{xy} $$
 $F$ is called a left adjoint of $G$ and $G$ is called a right adjoint of $F$.
 
 Why should this be true in the case of the forgetful functor $E$ and the free functor $F$ between **Set** and **Grp**? A group homomorphism $\varphi :F(S) \to G$ is completely determined if we know what it does to each element of $S$. In other words, what $\varphi$ really acts on is the underlying set of $G$. That is, giving $\varphi$ is equivalent to giving $\psi : S \to E(G)$.
 $$ \begin{aligned}
-\text{Hom}_{\text{\bf Grp}} (F(S),G) \simeq \text{Hom}_{\text{\bf Set}} (S,E(G))
+\text{Hom}_{\text{\bold{Grp}}} (F(S),G) \simeq \text{Hom}_{\text{\bold{Set}}} (S,E(G))
 \end{aligned} $$
 so that the free functor is a left adjoint of the forgetful functor.
 

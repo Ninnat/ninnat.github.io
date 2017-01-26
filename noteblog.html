@@ -256,7 +256,7 @@ I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy
             <hr>
             <h4> <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" >
               <img src="http://ninnat.github.io/assets/img/icon-github.png" alt="github"> What I'm Coding </a></h4>
-            <ul><li>i2000s commented on pull request monperrus/bibtexbrowser#66: <em>@monperrus I thought the xmlns links would also generate some problems and all links were checked on my internet browser, but apparently, I was wro…</em> <a href="https://github.com/monperrus/bibtexbrowser/pull/66#issuecomment-271401352">08:41 2017/01/09</a></li><li>i2000s pushed to monperrus at i2000s/bibtexbrowser: <em>Minor fix.</em> <a href="https://github.com/i2000s/bibtexbrowser/compare/61b85c0885...a15356d597">08:36 2017/01/09</a></li><li>i2000s pushed to monperrus at i2000s/bibtexbrowser: <em>Make the test file consistent.</em> <a href="https://github.com/i2000s/bibtexbrowser/compare/abc6dc1fed...61b85c0885">08:34 2017/01/09</a></li><li>i2000s pushed to monperrus at i2000s/bibtexbrowser: <em>Roll back for xmlns to have standard http links.</em> <a href="https://github.com/i2000s/bibtexbrowser/compare/73ebbcbc8f...abc6dc1fed">08:26 2017/01/09</a></li></ul>
+            <ul><li>i2000s commented on issue git-for-windows/git#728: <em>$ /cmd/git.exe version git version 2.11.0.windows.3 You are right, the PATH is not registered properly on my system. I couldn't figure out how to …</em> <a href="https://github.com/git-for-windows/git/issues/728#issuecomment-275310806">05:27 2017/01/26</a></li><li>i2000s starred kilimchoi/engineering-blogs: <em></em> <a href="https://github.com/kilimchoi/engineering-blogs">07:02 2017/01/25</a></li><li>i2000s starred sindresorhus/awesome: <em></em> <a href="https://github.com/sindresorhus/awesome">07:01 2017/01/25</a></li><li>i2000s commented on issue git-for-windows/git#728: <em>Sorry for the late response. With the latest git V2.11.4 installed (downloaded from the official site), this problem persists: $ $PATH bash: /usr/l…</em> <a href="https://github.com/git-for-windows/git/issues/728#issuecomment-274713437">05:27 2017/01/24</a></li></ul>
           </div>
 
          </div>
@@ -352,7 +352,18 @@ I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
-	    <!-- Self-defined extensions and macros. -->
+    <!-- XY-pic extension -->
+    <script type="text/x-mathjax-config>
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        },
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+        TeX: {extensions: ["AMSmath.js","AMSsymbols.js","/assets/js/xypic.js"]}
+      }); </script>
+    <!-- Self-defined extensions and macros. -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{

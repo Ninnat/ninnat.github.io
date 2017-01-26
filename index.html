@@ -4,14 +4,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>One Quantum at a Time</title>
+    <title>Schur's Lemming</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
       <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    <meta name="subtitle" content="">
+    <meta name="subtitle" content="Making sense of the world">
     <meta name="author" content="Ninnat Dangniam">
 
     <!-- HTML5 metadata -->
@@ -20,13 +20,13 @@
 
 
 
-  <meta name="description" content="One Quantum at a Time" />
+  <meta name="description" content="Making sense of the world" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="One Quantum at a Time" />
+<meta property="dc:title" content="Schur's Lemming" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
 <meta property="dc:date" content="" />
 <meta property="dc:format" content="text/html" />
@@ -38,7 +38,7 @@
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="One Quantum at a Time" />
+<meta property="og:title" content="Schur's Lemming" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
@@ -49,14 +49,14 @@
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
 <meta name="citation_date" content=""/>
-<meta name="citation_title" content="One Quantum at a Time"/>
+<meta name="citation_title" content="Schur's Lemming"/>
 <meta name="citation_journal_title" content="Ninnat's Notes"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="One Quantum at a Time" />
-<meta name="twitter:description" content="One Quantum at a Time" />
+<meta name="twitter:title" content="Schur's Lemming" />
+<meta name="twitter:description" content="Making sense of the world" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -176,8 +176,8 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">One Quantum at a Time</h1>
-    <h3></h3>
+    <h1 class="entry-title">Schur's Lemming</h1>
+    <h3>Making sense of the world</h3>
 </header>
 
 
@@ -290,7 +290,18 @@ I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
-	    <!-- Self-defined extensions and macros. -->
+    <!-- XY-pic extension -->
+    <script type="text/x-mathjax-config>
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        },
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+        TeX: {extensions: ["AMSmath.js","AMSsymbols.js","/assets/js/xypic.js"]}
+      }); </script>
+    <!-- Self-defined extensions and macros. -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{

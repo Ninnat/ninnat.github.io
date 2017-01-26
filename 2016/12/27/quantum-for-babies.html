@@ -226,7 +226,7 @@ $(document).ready(function() {
 </center>
 
 <p>คริสมอบสิทธิ์เกี่ยวกับ<em>ควอนตัมฟิสิกส์สำหรับทารก</em>ฉบับภาษาไทยทั้งหมดให้กับผม (ผู้แปล) จะเอาไปให้สำนักพิมพ์ก็ได้ ถ้าหาสำนักพิมพ์ไม่ได้จะเอาไปแจกฟรีก็ได้ หลังจากรอคำตอบจากคนรู้จักที่ติดต่อให้ช่วยหาสำนักพิมพ์มาพักใหญ่ๆ ผมก็คิดว่าถึงเวลาเอามาแจกฟรีเป็นของขวัญปีใหม่ได้แล้ว สามารถดาวน์โหลดได้เลยที่<a href="https://github.com/Ninnat/quantum_physics_for_babies_THAI/releases">ลิงค์นี้</a> จะเอาไปปรินต์, ดัดแปลง, แชร์ไฟล์นี้หรือไฟล์ที่ได้รับการดัดแปลงให้ลูกเล็กเด็กแดงก็ได้เลยตามสบาย แต่ไม่อนุญาตให้นำไปใช้ทางการค้าและต้องให้เครดิตกับคริสและผม (นินนาท แดงเนียม) เสมอ</p>
-<p>สุขสันต์วันปีใหม่ครับ</p>
+<p>สวัสดีปีใหม่ครับ</p>
 
           </article>
 
@@ -271,7 +271,7 @@ $(document).ready(function() {
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/d2d14fe579d327abc7ccd96a86a94e15acaeae5b/_posts/2016-12-27-quantum-for-babies.md"> d2d14fe579d327abc7ccd96a86a94e15acaeae5b</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/93e1e998b80b1c312e8db3e3ea760e5a20df90ee/_posts/2016-12-27-quantum-for-babies.md"> 93e1e998b80b1c312e8db3e3ea760e5a20df90ee</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -363,7 +363,18 @@ $(document).ready(function() {
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
-	    <!-- Self-defined extensions and macros. -->
+    <!-- XY-pic extension -->
+    <script type="text/x-mathjax-config>
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        },
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+        TeX: {extensions: ["AMSmath.js","AMSsymbols.js","/assets/js/xypic.js"]}
+      }); </script>
+    <!-- Self-defined extensions and macros. -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Adjoint functors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <!--[if lt IE 9]>
+      <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <meta name="subtitle" content="">
+    <meta name="author" content="Ninnat Dangniam">
+
+    <!-- HTML5 metadata -->
+
+  <meta name="keywords" content="Ninnat Dangniam, " />
+  
+
+
+
+  <meta name="description" content="Adjoint functors" />
+  
+
+
+<meta http-equiv="Content-Language" content="en">
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Adjoint functors" />
+<meta property="dc:creator" content="Ninnat Dangniam" />
+<meta property="dc:date" content="2017-01-26 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/2017/01/26/adjoint-functors.html" />
+<meta property="dc:rights" content="CC-BY" />
+<meta property="dc:source" content="Ninnat's Notes" />
+<meta property="dc:subject" content="Physics" />
+<meta property="dc:type" content="website" />
+<meta name="dc.language" content="en, zh-Hans, cmn">
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Adjoint functors" />
+<meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2017-01-26 00:00:00 +0000" />
+<meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://ninnat.github.io/2017/01/26/adjoint-functors.html" />
+<meta property="og:type" content="website" />
+<!-- Google Scholar Metadata -->
+<meta name="citation_author" content="Ninnat Dangniam"/>
+<meta name="citation_date" content="2017-01-26 00:00:00 +0000"/>
+<meta name="citation_title" content="Adjoint functors"/>
+<meta name="citation_journal_title" content="Ninnat's Notes"/>
+<!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
+<!-- Twitter card summary -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="Adjoint functors" />
+<meta name="twitter:description" content="Adjoint functors" />
+<meta name="twitter:image" content="/assets/img/capybara.png" />
+
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+    <!-- <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light"> -->
+    <!-- bootstrap style -->
+    <!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href = "/assets/css/bootstrap.min.css" rel = "stylesheet">
+    <!-- Self-defined style -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/tupleblog.css">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-79420814-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <!-- Help the browser identify the RSS feed automatically -->
+    <link rel="alternate" type="application/rss+xml" title="Ninnat's notes" href="/atom.xml" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5761ec473416b238" async="async"></script>
+
+  <body>
+
+  
+<!-- Navbar  ================================================== -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="glyphicon glyphicon-info-sign"></i></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+         
+            
+            
+            
+            <li class=""><a href="/">Blog</a></li>
+         
+            
+            
+            
+            <li class=""><a href="/about/">About</a></li>
+         
+        </ul>
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:http://ninnat.github.io" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search this site"/>
+          </div>
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) -->
+
+<header class="jumbotron subhead">
+    <h1 class="entry-title">Adjoint functors</h1>
+    <h3></h3>
+</header>
+
+<!-- <style>
+div #sticker {
+  width:auto;
+  padding:10px;
+  margin-right:20px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:30px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script> -->
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
+          <article>
+          </br>
+          <p>Status: <em>completed</em></p>
+<p>I’ve been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view situated in the intersection of what I’m confortable with and what I need. You can find better general introductions out there written by mathematicians such as <a href="https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/">this 3-parter</a> by Todd Trimble.</p>
+<p>My first contact with category theory was the book <a href="https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625"><em>Mathematical Physics</em></a> by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a “natural” isomorphism) object that has a “universal” property that can simulate the relations to all other objects of the same kind and so can be thought of as the “best” object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.</p>
+<p>A category <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them. If <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are objects in <span class="math">\(\mathcal{C}\)</span>, the class of morphisms between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> is denoted by Hom<span class="math">\((X,Y)\)</span>. They are also represented diagrammatically as arrows <span class="math">\(f:X \to Y\)</span> for <span class="math">\(f \in \text{Hom}(X,Y)\)</span>. For <span class="math">\(\mathcal{C}\)</span> to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories. - <strong>Set</strong> of all sets. Since there is no <a href="https://en.wikipedia.org/wiki/Russell%27s_paradox">set of all sets</a>, the word “class” in the definition of a category cannot be replaced by “set”. The morphisms are arbitrary maps between sets. - <strong>Grp</strong> of all groups, <strong>Ring</strong> of all rings, and <strong>Field</strong><span class="math">\(_p\)</span> of all fields with <a href="https://en.wikipedia.org/wiki/Category_of_rings#Category_of_fields">characteristic</a> <span class="math">\(p=0\)</span> or a prime number with the respective homomorphisms as morphisms. (There is no homomorphism between fields of different characteristics.) - <strong>Top</strong> of topological spaces with continuous maps as morphisms. In particular, homeomorphisms are isomorphisms. - <strong>Man</strong><span class="math">\(^{\infty}\)</span> of smooth manifolds with infinitely differentiable maps as morphisms. In particular, diffeomorphisms are isomorphisms. - <strong>Vec</strong><span class="math">\(_k\)</span> of vector spaces over a field <span class="math">\(k\)</span> with linear maps as morphisms.</p>
+<h1 id="products">Products</h1>
+<p>My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct of objects. A product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is an object <span class="math">\(C\)</span> together with a morphism from <span class="math">\(C\)</span> to <span class="math">\(A\)</span> and <span class="math">\(B\)</span> such that, if <span class="math">\(D\)</span> is another object also equipped with some morphisms to <span class="math">\(A\)</span> and <span class="math">\(B\)</span>, then there is a unique morphism from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> such that the following diagram “commutes”, meaning that every way to compose such morphisms to go from <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> gives the same result. <span class="math">\[ \begin{aligned}
+    \xymatrix{
+      &amp; D \ar[dl]_{\alpha&#39;}\ar[d]^{\gamma}\ar[dr]^{\beta&#39;} &amp; \\
+      A &amp; C\ar[l]^{\alpha}\ar[r]_{\beta} &amp; B
+    }
+\end{aligned} \]</span> We call this kind of diagrams commutative diagrams. The rational behind this definition is that <span class="math">\(C\)</span> together with the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the best object that acts as a product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> since giving any morphism from any object <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> is equivalent to giving <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> from <span class="math">\(C\)</span>, so we can just forget about <span class="math">\(D\)</span> altogether and regard <span class="math">\(C\)</span> as a universal simulator of such relations.</p>
+<p>The same diagram with all arrows reversed defines a coproduct <span class="math">\(C\)</span>. <span class="math">\[ \begin{aligned}
+    \xymatrix{
+      &amp; D &amp; \\
+      A\ar[ur]^{\alpha&#39;}\ar[r]_{\alpha} &amp; C\ar[u]_{\gamma} &amp; B\ar[l]^{\beta}\ar[ul]_{\beta&#39;}
+    }
+\end{aligned} \]</span> These definitions generalize trivially to a product and a coproduct of more than two objects.</p>
+<p>In <strong>Set</strong>, the product is the direct product <span class="math">\(A \times B\)</span> and the coproduct is the direct sum <span class="math">\(A \cup B\)</span>. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product <span class="math">\(C=A \times B\)</span>, a natural choice for the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the projection <span class="math">\[ \begin{aligned}
+\alpha(a,b) = a, &amp;&amp; \beta(a,b) = b.
+\end{aligned} \]</span> We have to show that, for any <span class="math">\(\alpha&#39;\)</span> and <span class="math">\(\beta&#39;\)</span> from a set <span class="math">\(D\)</span>, there is a morphism <span class="math">\(\gamma\)</span> from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> that makes the diagram commutes and uniquely so. Obviously, for <span class="math">\(d\in D\)</span>, this map is <span class="math">\[ \begin{aligned}
+\gamma(d) = (\alpha&#39;(d),\beta&#39;(d)),
+\end{aligned} \]</span> If there is another map <span class="math">\(\gamma&#39;\)</span> from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> that makes the diagram commutes, it must sends <span class="math">\(d\)</span> to an element of <span class="math">\(A \times B\)</span> that projects to <span class="math">\(\alpha&#39;(d)\)</span> on <span class="math">\(A\)</span> and <span class="math">\(\beta&#39;(d)\)</span> on <span class="math">\(B\)</span>. But that element is none other than <span class="math">\((\alpha&#39;(d),\beta&#39;(d))\)</span>. Thus, the uniqueness is established. For the direct sum <span class="math">\(C = A \cup B\)</span>, a natural choice for the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the embedding of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around (“diagram chasing”).</p>
+<p>We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in <strong>Set</strong>. The nice answer is that they are. And this is not only true in <strong>Set</strong> but also in a general category as well. We will not prove that here but it amounts also to using the definition of a product or a coproduct and diagram chasing.</p>
+<p>Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category <strong>Top</strong> of all topological spaces, which <a href="https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/">Todd Trimble</a> gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said.</p>
+<h1 id="functors">Functors</h1>
+<p>Suppose that <span class="math">\(\mathcal{C}\)</span> and <span class="math">\(\mathcal{D}\)</span> are two categories and <span class="math">\(X,Y \in \mathcal{C}\)</span>. A (covariant) functor <span class="math">\(F\)</span> is a map (of both objects and morphisms) <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> such that <span class="math">\(\text{Hom}(X,Y) \to \text{Hom}(F(X) , F(Y))\)</span> preserves identity morphisms and compositions.</p>
+<p>One of the most trivial kinds of functors are ones that simply throw away information. The forgetful functor <strong>Grp</strong> <span class="math">\(\to\)</span> <strong>Set</strong> sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from <strong>Grp</strong> to <strong>Ab</strong> the category of all abelian groups which set <span class="math">\(ab=ba\)</span> for all elements <span class="math">\(a,b\)</span> in a group.</p>
+<p>More interesting is the free functor <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to the “free group”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions (“words”) that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that any map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> factors through the free group <span class="math">\(F(S)\)</span> with a unique group homomorphism <span class="math">\(\varphi\)</span>. <span class="math">\[ \begin{aligned}
+    \xymatrix{
+      S \ar[r]\ar[dr]_{\sigma} &amp; F(S) \ar[d]^{\varphi} \\
+      &amp; G
+    }
+\end{aligned} \]</span></p>
+<p>For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories <strong>Set</strong> and <strong>Grp</strong> are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.</p>
+<p>Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span class="math">\(G: \mathcal{D} \to \mathcal{C}\)</span> are adjoint functors if for any <span class="math">\(X \in \mathcal{C}\)</span> and <span class="math">\(Y \in \mathcal{D}\)</span>, there is an isomorphism <span class="math">\[ \begin{aligned}
+\text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
+\end{aligned} \]</span> <span class="math">\[ \begin{aligned}
+    \xymatrix{
+      F(X)\ar[r]^{\text{Hom}_{\mathcal{D}}(F(X),Y)} &amp; Y\ar[d] \\
+      X\ar[u]\ar[r]_{\text{Hom}_{\mathcal{C}}(X,G(Y))} &amp; G(Y)
+    }
+\end{aligned} \]</span> <span class="math">\(F\)</span> is called a left adjoint of <span class="math">\(G\)</span> and <span class="math">\(G\)</span> is called a right adjoint of <span class="math">\(F\)</span>.</p>
+<p>Why should this be true in the case of the forgetful functor <span class="math">\(E\)</span> and the free functor <span class="math">\(F\)</span> between <strong>Set</strong> and <strong>Grp</strong>? A group homomorphism <span class="math">\(\varphi :F(S) \to G\)</span> is completely determined if we know what it does to each element of <span class="math">\(S\)</span>. In other words, what <span class="math">\(\varphi\)</span> really acts on is the underlying set of <span class="math">\(G\)</span>. That is, giving <span class="math">\(\varphi\)</span> is equivalent to giving <span class="math">\(\psi : S \to E(G)\)</span>. <span class="math">\[ \begin{aligned}
+\text{Hom}_{\text{\bf Grp}} (F(S),G) \simeq \text{Hom}_{\text{\bf Set}} (S,E(G))
+\end{aligned} \]</span> so that the free functor is a left adjoint of the forgetful functor.</p>
+<p>A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda’s lemma, neither of which I can competently explain. But they all have analogs in linear algebra, where the name “adjoint” is borrowed from. %To do this, we need one more basic notion. An opposite category <span class="math">\(\mathcal{C}^{\text{op}}\)</span> of <span class="math">\(\mathcal{C}\)</span> is the category with the same objects but with all arrows reversed. If we think of a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> as a category on its own. Its opposite category is the dual space <span class="math">\(V^*\)</span>, and one goes between <span class="math">\(V\)</span> and <span class="math">\(V^*\)</span> by taking the adjoint (which is a functor that maps compositions of morphisms “in the wrong direction” called a contravariant functor.) A functor <span class="math">\(F:\mathcal{C} \to \)</span><strong>Set</strong> is representable by <span class="math">\(X \in \mathcal{C}\)</span> if the functor can be concretely realized as the morphism Hom<span class="math">\(_{\mathcal{C}}(X,\cdot)\)</span>. The Yoneda’s lemma guarantees that this <span class="math">\(X\)</span> is unique. In this analogy, therefore, the representability of <span class="math">\(F\)</span> combined with the Yoneda’s lemma is the same as the Riesz representation theorem in linear algebra. It says that a continuous linear functional <span class="math">\(f:V \to k\)</span>, where <span class="math">\(k\)</span> is now the analog of <strong>Set</strong>, can be identified as a unique vector in <span class="math">\(v \in V\)</span> itself via the inner product <span class="math">\[ \begin{aligned}
+f (u) = \braket{v,u}.
+\end{aligned} \]</span> Now consider the linear functional <span class="math">\(v \mapsto \braket{L(v),u}\)</span>. By the representation theorem, there is <span class="math">\(w \in V\)</span> that realizes this map as <span class="math">\(\langle v,w \rangle\)</span>. This is an image of the adjoint operator <span class="math">\(w = L^*(u)\)</span>. Similarly, if <span class="math">\(F\)</span> and <span class="math">\(G\)</span> are adjoint functors <span class="math">\[ \begin{aligned}
+\text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)),
+\end{aligned} \]</span> and the classes of morphisms are sets (which they usually are), the functor <span class="math">\(Y \mapsto \text{Hom}_{\mathcal{C}} (X,G(Y))\)</span> is represented by <span class="math">\(F(X)\)</span> and the functor <span class="math">\(X \mapsto \text{Hom}_{\mathcal{D}} (F(X),Y)\)</span> is represented by <span class="math">\(F(Y)\)</span>, so they are unique by the Yoneda’s lemma. This also establishes the analogy that an adjoint functor may not exist (since the Riesz representation theorem does not cover non-continuous linear functionals) but if it exists, it is unique.</p>
+<p>In representation theory, a restriction of a representation of a group <span class="math">\(G\)</span> to a subgroup <span class="math">\(H\)</span> is a forgetful functor whose left inverse is the induction of a representation of <span class="math">\(H\)</span> to a “free” representation of <span class="math">\(G\)</span>. Then the Frobenius reciprocity theorem is nothing but the property of adjoint functors. I will talk in the future about how this can be used to deduce the well known fact that each irreducible representation of SO(3) appears only once in the decomposition of functions on a sphere.</p>
+
+          </article>
+
+        </div>
+
+
+        <!-- Custom sidebar -->
+        <div class="col-md-2 col-sm-12">
+          <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
+            <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
+    <time datetime="2017-01-26 00:00:00 +0000" 
+    property="dc:created">26 Jan 2017</time></p>
+   
+
+ <br />
+          
+            <p><a class="btn btn-default" href='/2016/12/27/quantum-for-babies.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+          
+          
+            </p>
+          
+
+
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2017-01-26-adjoint-functors.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+
+  <br><br>
+
+  <p><!-- <i class="glyphicon glyphicon-list"></i> --> Categories: 
+     
+      <a rel="dc:subject" class="category" 
+         href="/categories.html#category+theory">category theory</a>
+    
+    </p>
+
+  <p> <!-- <i class="glyphicon glyphicon-tag"></i> --> Tags: 
+    </p>
+
+  <!-- <br/>
+
+  
+
+  <br/> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/b1fffd8f2b6b1503899b6f9626f65b51293d14f6/_posts/2017-01-26-adjoint-functors.md"> b1fffd8f2b6b1503899b6f9626f65b51293d14f6</a></tiny></p> -->
+</aside>
+
+<br /><br />
+<div style="font-weight:bold; text-align:center;font-size:1.0em;">
+ <!-- <i class="glyphicon glyphicon-chevron-left"></i> --> <a href="/archives.html">Archives by date,</a>
+ <!-- <i class="glyphicon glyphicon-list"></i> --> <a href="/categories.html">By category,</a>
+ <!-- <i class="glyphicon glyphicon-tag"></i> --> <a href="/tags.html">By tag.</a>
+</div>
+
+         <!-- </div> -->
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>20 Jul 2016</span> &raquo; <a href="/2016/07/20/first-post.html">First Post</a></li>
+    
+      <li><span>27 Dec 2016</span> &raquo; <a href="/2016/12/27/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'ninnat'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer" style="clear:both;">
+         <div class="row">
+            <div class="row" align="center" clear="both">
+              <div class="row">
+               <!-- <a href="mailto:truecrimson@gmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" height="42px" alt="email"> </a> -->
+               <!-- <a href="https://github.com/ninnat" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" height="40px" alt="github"> </a> -->
+               <!-- <a href="https://plus.google.com/"><img src="/assets/img/icon-gplus.png" height="40px" alt="G+"></a> -->
+               <!-- <a href="https://www.facebook.com/ninnattom.dangniam"><img src="/assets/img/icon-facebook.png" height="42px" alt="facebook"></a> -->
+               <!-- <a href="http://scholar.google.com/citations?user==en"><img src="/assets/img/icon-scholar.png" height="40px" alt="GoogleScholar"></a> -->
+               <!-- <a href="https://twitter.com/"><img src="/assets/img/icon-twitter.png" height="45px" alt="Twitter"></a> -->
+               <!-- <a href="https://www.linkedin.com/in/"><img src="/assets/img/icon-linkedin.png" height="40px" alt="LinkedIn"></a> -->
+               <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.svg" alt="feed"></a>
+               <!-- <a href="http://physics.stackexchange.com/users/"><img src="/assets/img/icon-stackoverflow.png" height="40px" alt="Physics Stackexchange"></a> -->
+               <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user=ninnat&repo=ninnat.github.io&type=star&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150px" height="40px" style="vertical-align:middle; margin-top:9px;"></iframe>
+              </div>
+           </div>
+         </div>
+      <div class="row" align="center" clear="both">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. </span></a>
+		<br>
+	</div>
+      
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Adjoint functors
+      &amp;rft.creator=Ninnat Dangniam
+      &amp;rft.date=2017-01-26
+      &amp;rft.language='en-US, zh-Hans'
+      &amp;rft.rights='CC-BY'
+      &amp;rft_id=http://ninnat.github.io/2017/01/26/adjoint-functors.html">
+  </span>
+
+    </footer>
+   </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- XY-pic extension -->
+    <script type="text/x-mathjax-config>
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        },
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+        TeX: {extensions: ["AMSmath.js","AMSsymbols.js","/assets/js/xypic.js"]}
+      }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
+          tr: ["{\\mathrm{Tr}}"],
+        }
+      <!-- extensions: ["autoload-all.js"]-->
+      }
+    });
+
+    </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="http://ninnat.github.io/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://ninnat.github.io/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-transition.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-alert.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-modal.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-tab.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-popover.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-button.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-typeahead.js"></script>
+    <script src="http://ninnat.github.io/assets/js/application.js"></script>
+    -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src = "/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bigfoot.js"></script>
+	<script type="text/javascript">
+  $.bigfoot({
+    activateCallback: function($popover, $button) {
+        if (MathJax && !$button.data('mathjax-processed')) {
+            var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+            MathJax.Hub.Queue(function () {
+                $button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+                $button.data('mathjax-processed', true);
+            });
+        }
+    }
+  });
+	</script>
+
+  </body>
+</html>
+

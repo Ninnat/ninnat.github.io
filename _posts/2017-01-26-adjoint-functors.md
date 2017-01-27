@@ -32,7 +32,7 @@ My favorite elementary example of uniquely defining an object by morphisms is th
       A & C\ar[l]^{\alpha}\ar[r]_{\beta} & B
 	}
 \end{align*} -->
-We call this kind of diagrams commutative diagrams. The rational behind this definition is that $C$ together with the mappings $\alpha$ and $\beta$ is the best object that acts as a product of $A$ and $B$ since giving any morphism from any object $D$ to $A$ or $B$ is equivalent to giving $\alpha$ and $\beta$ from $C$, so we can just forget about $D$ altogether and regard $C$ as a universal simulator of such relations.
+We call this kind of diagrams commutative diagrams. The rational behind this definition is that $C$ together with the mappings $\alpha$ and $\beta$ is the [best](https://en.wikipedia.org/wiki/Universal_property) object that acts as a product of $A$ and $B$ since giving any morphism from any object $D$ to $A$ or $B$ is equivalent to giving $\alpha$ and $\beta$ from $C$, so we can just forget about $D$ altogether and regard $C$ as a universal simulator of such relations.
 
 The same diagram with all arrows reversed defines a coproduct $C$.
 <center>
@@ -66,7 +66,7 @@ Suppose that $\mathcal{C}$ and $\mathcal{D}$ are two categories and $X,Y \in \ma
 
 One of the most trivial kinds of functors are ones that simply throw away information. The forgetful functor **Grp** $\to$ **Set** sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from **Grp** to **Ab** the category of all abelian groups which set $ab=ba$ for all elements $a,b$ in a group.
 
-More interesting is the free functor $F:$ **Set** $\to$ **Grp** sending a set to the "free group". For a set $S$, $F(S)$ is the set of all expressions ("words") that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that any map $\sigma$ from $S$ to some group $G$ factors through the free group $F(S)$ with a unique group homomorphism $\varphi$.
+More interesting is the free functor $F:$ **Set** $\to$ **Grp** sending a set to the "[free group](https://en.wikipedia.org/wiki/Free_group)". For a set $S$, $F(S)$ is the set of all expressions ("words") that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that any map $\sigma$ from $S$ to some group $G$ factors through the free group $F(S)$ with a unique group homomorphism $\varphi$.
 <center>
 ![](/assets/img/posts/free-group.png =200x)
 </center>
@@ -79,7 +79,7 @@ More interesting is the free functor $F:$ **Set** $\to$ **Grp** sending a set to
 
 For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories **Set** and **Grp** are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.
 
-Functors $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ are adjoint functors if for any $X \in \mathcal{C}$ and $Y \in \mathcal{D}$, there is an isomorphism
+Functors $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ are [adjoint functors](https://en.wikipedia.org/wiki/Adjoint_functors#Hom-set_adjunction) if for any $X \in \mathcal{C}$ and $Y \in \mathcal{D}$, there is an isomorphism
 <center>
 ![](/assets/img/posts/adjoint.png =200x)
 </center>
@@ -100,8 +100,7 @@ $$ \begin{aligned}
 \end{aligned} $$
 so that the free functor is a left adjoint of the forgetful functor.
 
-A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogs in linear algebra, where the name "adjoint" is borrowed from. %To do this, we need one more basic notion. An opposite category $\mathcal{C}^{\text{op}}$ of $\mathcal{C}$ is the category with the same objects but with all arrows reversed. If we think of a vector space $V$ over $k$ as a category on its own. Its opposite category is the dual space $V^*$, and one goes between $V$ and $V^*$ by taking the adjoint (which is a functor that maps compositions of morphisms "in the wrong direction" called a contravariant functor.)
-A functor $F:\mathcal{C} \to $**Set** is representable by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The Yoneda's lemma guarantees that this $X$ is unique. In this analogy, therefore, the representability of $F$ combined with the Yoneda's lemma is the same as the Riesz representation theorem in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
+A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogs in linear algebra where the name "adjoint" is borrowed from.[^1] A functor $F:\mathcal{C} \to $**Set** is representable by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The Yoneda's lemma guarantees that this $X$ is unique. In this analogy, therefore, the representability of $F$ combined with the Yoneda's lemma is the same as the Riesz representation theorem in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
 $$ \begin{aligned}
 f (u) = \braket{v,u}.
 \end{aligned} $$
@@ -112,3 +111,5 @@ $$ \begin{aligned}
 and the classes of morphisms are sets (which they usually are), the functor $Y \mapsto \text{Hom}_{\mathcal{C}} (X,G(Y))$ is represented by $F(X)$ and the functor $X \mapsto \text{Hom}_{\mathcal{D}} (F(X),Y)$ is represented by $F(Y)$, so they are unique by the Yoneda's lemma. This also establishes the analogy that an adjoint functor may not exist (since the Riesz representation theorem does not cover non-continuous linear functionals) but if it exists, it is unique.
 
 In representation theory, a restriction of a representation of a group $G$ to a subgroup $H$ is a forgetful functor whose left inverse is the induction of a representation of $H$ to a "free" representation of $G$. Then the Frobenius reciprocity theorem is nothing but the property of adjoint functors. I will talk in the future about how this can be used to deduce the well known fact that each irreducible representation of SO(3) appears only once in the decomposition of functions on a sphere.
+
+[^1]: Page 102 of Etingof *et al.*, [*Introduction to Representation Theory*](http://math.mit.edu/~etingof/replect.pdf)

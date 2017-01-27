@@ -211,20 +211,37 @@ $(document).ready(function() {
           <p>Status: <em>completed</em></p>
 <p>I’ve been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view situated in the intersection of what I’m confortable with and what I need. You can find better general introductions out there written by mathematicians such as <a href="https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/">this 3-parter</a> by Todd Trimble.</p>
 <p>My first contact with category theory was the book <a href="https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625"><em>Mathematical Physics</em></a> by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a “natural” isomorphism) object that has a “universal” property that can simulate the relations to all other objects of the same kind and so can be thought of as the “best” object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.</p>
-<p>A category <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them. If <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are objects in <span class="math">\(\mathcal{C}\)</span>, the class of morphisms between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> is denoted by Hom<span class="math">\((X,Y)\)</span>. They are also represented diagrammatically as arrows <span class="math">\(f:X \to Y\)</span> for <span class="math">\(f \in \text{Hom}(X,Y)\)</span>. For <span class="math">\(\mathcal{C}\)</span> to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories. - <strong>Set</strong> of all sets. Since there is no <a href="https://en.wikipedia.org/wiki/Russell%27s_paradox">set of all sets</a>, the word “class” in the definition of a category cannot be replaced by “set”. The morphisms are arbitrary maps between sets. - <strong>Grp</strong> of all groups, <strong>Ring</strong> of all rings, and <strong>Field</strong><span class="math">\(_p\)</span> of all fields with <a href="https://en.wikipedia.org/wiki/Category_of_rings#Category_of_fields">characteristic</a> <span class="math">\(p=0\)</span> or a prime number with the respective homomorphisms as morphisms. (There is no homomorphism between fields of different characteristics.) - <strong>Top</strong> of topological spaces with continuous maps as morphisms. In particular, homeomorphisms are isomorphisms. - <strong>Man</strong><span class="math">\(^{\infty}\)</span> of smooth manifolds with infinitely differentiable maps as morphisms. In particular, diffeomorphisms are isomorphisms. - <strong>Vec</strong><span class="math">\(_k\)</span> of vector spaces over a field <span class="math">\(k\)</span> with linear maps as morphisms.</p>
-<h1 id="products">Products</h1>
-<p>My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct of objects. A product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is an object <span class="math">\(C\)</span> together with a morphism from <span class="math">\(C\)</span> to <span class="math">\(A\)</span> and <span class="math">\(B\)</span> such that, if <span class="math">\(D\)</span> is another object also equipped with some morphisms to <span class="math">\(A\)</span> and <span class="math">\(B\)</span>, then there is a unique morphism from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> such that the following diagram “commutes”, meaning that every way to compose such morphisms to go from <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> gives the same result. <span class="math">\[ \begin{aligned}
+<p>A category <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them. If <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are objects in <span class="math">\(\mathcal{C}\)</span>, the class of morphisms between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> is denoted by Hom<span class="math">\((X,Y)\)</span>. They are also represented diagrammatically as arrows <span class="math">\(f:X \to Y\)</span> for <span class="math">\(f \in \text{Hom}(X,Y)\)</span>. For <span class="math">\(\mathcal{C}\)</span> to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories.</p>
+<ul>
+<li><strong>Set</strong> of all sets. Since there is no <a href="https://en.wikipedia.org/wiki/Russell%27s_paradox">set of all sets</a>, the word “class” in the definition of a category cannot be replaced by “set”. The morphisms are arbitrary maps between sets.</li>
+<li><strong>Grp</strong> of all groups, <strong>Ring</strong> of all rings, and <strong>Field</strong><span class="math">\(_p\)</span> of all fields with <a href="https://en.wikipedia.org/wiki/Category_of_rings#Category_of_fields">characteristic</a> <span class="math">\(p=0\)</span> or a prime number with the respective homomorphisms as morphisms. (There is no homomorphism between fields of different characteristics.)</li>
+<li><strong>Top</strong> of topological spaces with continuous maps as morphisms. In particular, homeomorphisms are isomorphisms.</li>
+<li><strong>Man</strong><span class="math">\(^{\infty}\)</span> of smooth manifolds with infinitely differentiable maps as morphisms. In particular, diffeomorphisms are isomorphisms.</li>
+<li><strong>Vec</strong><span class="math">\(_k\)</span> of vector spaces over a field <span class="math">\(k\)</span> with linear maps as morphisms.</li>
+</ul>
+<h2 id="products">Products</h2>
+My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct of objects. A product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is an object <span class="math">\(C\)</span> together with a morphism from <span class="math">\(C\)</span> to <span class="math">\(A\)</span> and <span class="math">\(B\)</span> such that, if <span class="math">\(D\)</span> is another object also equipped with some morphisms to <span class="math">\(A\)</span> and <span class="math">\(B\)</span>, then there is a unique morphism from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> such that the following diagram “commutes”, meaning that every way to compose such morphisms to go from <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> gives the same result.
+<center>
+<embed src="/assets/img/posts/product.png%20=200x" />
+</center>
+<!-- \begin{align*}
     \xymatrix{
-      &amp; D \ar[dl]_{\alpha&#39;}\ar[d]^{\gamma}\ar[dr]^{\beta&#39;} &amp; \\
-      A &amp; C\ar[l]^{\alpha}\ar[r]_{\beta} &amp; B
+      & D \ar[dl]_{\alpha'}\ar[d]^{\gamma}\ar[dr]^{\beta'} & \\
+      A & C\ar[l]^{\alpha}\ar[r]_{\beta} & B
     }
-\end{aligned} \]</span> We call this kind of diagrams commutative diagrams. The rational behind this definition is that <span class="math">\(C\)</span> together with the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the best object that acts as a product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> since giving any morphism from any object <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> is equivalent to giving <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> from <span class="math">\(C\)</span>, so we can just forget about <span class="math">\(D\)</span> altogether and regard <span class="math">\(C\)</span> as a universal simulator of such relations.</p>
-<p>The same diagram with all arrows reversed defines a coproduct <span class="math">\(C\)</span>. <span class="math">\[ \begin{xy}
+\end{align*} -->
+<p>We call this kind of diagrams commutative diagrams. The rational behind this definition is that <span class="math">\(C\)</span> together with the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the best object that acts as a product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> since giving any morphism from any object <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> is equivalent to giving <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> from <span class="math">\(C\)</span>, so we can just forget about <span class="math">\(D\)</span> altogether and regard <span class="math">\(C\)</span> as a universal simulator of such relations.</p>
+The same diagram with all arrows reversed defines a coproduct <span class="math">\(C\)</span>.
+<center>
+<embed src="/assets/img/posts/coproduct.png%20=200x" />
+</center>
+<!-- \begin{align*}
     \xymatrix{
-      &amp; D &amp; \\
-      A\ar[ur]^{\alpha&#39;}\ar[r]_{\alpha} &amp; C\ar[u]_{\gamma} &amp; B\ar[l]^{\beta}\ar[ul]_{\beta&#39;}
+      & D & \\
+      A\ar[ur]^{\alpha'}\ar[r]_{\alpha} & C\ar[u]_{\gamma} & B\ar[l]^{\beta}\ar[ul]_{\beta'}
     }
-\end{xy} \]</span> These definitions generalize trivially to a product and a coproduct of more than two objects.</p>
+\end{align*} -->
+<p>These definitions generalize trivially to a product and a coproduct of more than two objects.</p>
 <p>In <strong>Set</strong>, the product is the direct product <span class="math">\(A \times B\)</span> and the coproduct is the direct sum <span class="math">\(A \cup B\)</span>. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product <span class="math">\(C=A \times B\)</span>, a natural choice for the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the projection <span class="math">\[ \begin{aligned}
 \alpha(a,b) = a, &amp;&amp; \beta(a,b) = b.
 \end{aligned} \]</span> We have to show that, for any <span class="math">\(\alpha&#39;\)</span> and <span class="math">\(\beta&#39;\)</span> from a set <span class="math">\(D\)</span>, there is a morphism <span class="math">\(\gamma\)</span> from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> that makes the diagram commutes and uniquely so. Obviously, for <span class="math">\(d\in D\)</span>, this map is <span class="math">\[ \begin{aligned}
@@ -232,26 +249,35 @@ $(document).ready(function() {
 \end{aligned} \]</span> If there is another map <span class="math">\(\gamma&#39;\)</span> from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> that makes the diagram commutes, it must sends <span class="math">\(d\)</span> to an element of <span class="math">\(A \times B\)</span> that projects to <span class="math">\(\alpha&#39;(d)\)</span> on <span class="math">\(A\)</span> and <span class="math">\(\beta&#39;(d)\)</span> on <span class="math">\(B\)</span>. But that element is none other than <span class="math">\((\alpha&#39;(d),\beta&#39;(d))\)</span>. Thus, the uniqueness is established. For the direct sum <span class="math">\(C = A \cup B\)</span>, a natural choice for the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the embedding of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around (“diagram chasing”).</p>
 <p>We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in <strong>Set</strong>. The nice answer is that they are. And this is not only true in <strong>Set</strong> but also in a general category as well. We will not prove that here but it amounts also to using the definition of a product or a coproduct and diagram chasing.</p>
 <p>Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category <strong>Top</strong> of all topological spaces, which <a href="https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/">Todd Trimble</a> gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said.</p>
-<h1 id="functors">Functors</h1>
+<h2 id="functors">Functors</h2>
 <p>Suppose that <span class="math">\(\mathcal{C}\)</span> and <span class="math">\(\mathcal{D}\)</span> are two categories and <span class="math">\(X,Y \in \mathcal{C}\)</span>. A (covariant) functor <span class="math">\(F\)</span> is a map (of both objects and morphisms) <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> such that <span class="math">\(\text{Hom}(X,Y) \to \text{Hom}(F(X) , F(Y))\)</span> preserves identity morphisms and compositions.</p>
 <p>One of the most trivial kinds of functors are ones that simply throw away information. The forgetful functor <strong>Grp</strong> <span class="math">\(\to\)</span> <strong>Set</strong> sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from <strong>Grp</strong> to <strong>Ab</strong> the category of all abelian groups which set <span class="math">\(ab=ba\)</span> for all elements <span class="math">\(a,b\)</span> in a group.</p>
-<p>More interesting is the free functor <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to the “free group”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions (“words”) that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that any map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> factors through the free group <span class="math">\(F(S)\)</span> with a unique group homomorphism <span class="math">\(\varphi\)</span>. <span class="math">\[ \begin{xy}
+More interesting is the free functor <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to the “free group”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions (“words”) that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that any map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> factors through the free group <span class="math">\(F(S)\)</span> with a unique group homomorphism <span class="math">\(\varphi\)</span>.
+<center>
+<embed src="/assets/img/posts/free-group.png%20=200x" />
+</center>
+<!-- \begin{align*}
     \xymatrix{
-      S \ar[r]\ar[dr]_{\sigma} &amp; F(S) \ar[d]^{\varphi} \\
-      &amp; G
+      S \ar[r]\ar[dr]_{\sigma} & F(S) \ar[d]^{\varphi} \\
+      & G
     }
-\end{xy} \]</span></p>
+\end{align*} -->
+
 <p>For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories <strong>Set</strong> and <strong>Grp</strong> are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.</p>
-<p>Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span class="math">\(G: \mathcal{D} \to \mathcal{C}\)</span> are adjoint functors if for any <span class="math">\(X \in \mathcal{C}\)</span> and <span class="math">\(Y \in \mathcal{D}\)</span>, there is an isomorphism <span class="math">\[ \begin{aligned}
+Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span class="math">\(G: \mathcal{D} \to \mathcal{C}\)</span> are adjoint functors if for any <span class="math">\(X \in \mathcal{C}\)</span> and <span class="math">\(Y \in \mathcal{D}\)</span>, there is an isomorphism
+<center>
+<embed src="/assets/img/posts/adjoint.png%20=200x" />
+</center>
+<p><span class="math">\[ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
-\end{aligned} \]</span> <span class="math">\[ \begin{xy}
+\end{aligned} \]</span> <!-- \begin{align*}
     \xymatrix{
-      F(X)\ar[r]^{\text{Hom}_{\mathcal{D}}(F(X),Y)} &amp; Y\ar[d] \\
-      X\ar[u]\ar[r]_{\text{Hom}_{\mathcal{C}}(X,G(Y))} &amp; G(Y)
+      F(X)\ar[r]^{\text{Hom}_{\mathcal{D}}(F(X),Y)} & Y\ar[d] \\
+      X\ar[u]\ar[r]_{\text{Hom}_{\mathcal{C}}(X,G(Y))} & G(Y)
     }
-\end{xy} \]</span> <span class="math">\(F\)</span> is called a left adjoint of <span class="math">\(G\)</span> and <span class="math">\(G\)</span> is called a right adjoint of <span class="math">\(F\)</span>.</p>
+\end{align*} --> <span class="math">\(F\)</span> is called a left adjoint of <span class="math">\(G\)</span> and <span class="math">\(G\)</span> is called a right adjoint of <span class="math">\(F\)</span>.</p>
 <p>Why should this be true in the case of the forgetful functor <span class="math">\(E\)</span> and the free functor <span class="math">\(F\)</span> between <strong>Set</strong> and <strong>Grp</strong>? A group homomorphism <span class="math">\(\varphi :F(S) \to G\)</span> is completely determined if we know what it does to each element of <span class="math">\(S\)</span>. In other words, what <span class="math">\(\varphi\)</span> really acts on is the underlying set of <span class="math">\(G\)</span>. That is, giving <span class="math">\(\varphi\)</span> is equivalent to giving <span class="math">\(\psi : S \to E(G)\)</span>. <span class="math">\[ \begin{aligned}
-\text{Hom}_{\text{\bold{Grp}}} (F(S),G) \simeq \text{Hom}_{\text{\bold{Set}}} (S,E(G))
+\text{Hom}_{\textbf{Grp}} (F(S),G) \simeq \text{Hom}_{\textbf{Set}} (S,E(G))
 \end{aligned} \]</span> so that the free functor is a left adjoint of the forgetful functor.</p>
 <p>A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda’s lemma, neither of which I can competently explain. But they all have analogs in linear algebra, where the name “adjoint” is borrowed from. %To do this, we need one more basic notion. An opposite category <span class="math">\(\mathcal{C}^{\text{op}}\)</span> of <span class="math">\(\mathcal{C}\)</span> is the category with the same objects but with all arrows reversed. If we think of a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> as a category on its own. Its opposite category is the dual space <span class="math">\(V^*\)</span>, and one goes between <span class="math">\(V\)</span> and <span class="math">\(V^*\)</span> by taking the adjoint (which is a functor that maps compositions of morphisms “in the wrong direction” called a contravariant functor.) A functor <span class="math">\(F:\mathcal{C} \to \)</span><strong>Set</strong> is representable by <span class="math">\(X \in \mathcal{C}\)</span> if the functor can be concretely realized as the morphism Hom<span class="math">\(_{\mathcal{C}}(X,\cdot)\)</span>. The Yoneda’s lemma guarantees that this <span class="math">\(X\)</span> is unique. In this analogy, therefore, the representability of <span class="math">\(F\)</span> combined with the Yoneda’s lemma is the same as the Riesz representation theorem in linear algebra. It says that a continuous linear functional <span class="math">\(f:V \to k\)</span>, where <span class="math">\(k\)</span> is now the analog of <strong>Set</strong>, can be identified as a unique vector in <span class="math">\(v \in V\)</span> itself via the inner product <span class="math">\[ \begin{aligned}
 f (u) = \braket{v,u}.
@@ -303,7 +329,7 @@ f (u) = \braket{v,u}.
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/76b13aa9bec2763e72f985b6078c6d5ce1e3e4e1/_posts/2017-01-26-adjoint-functors.md"> 76b13aa9bec2763e72f985b6078c6d5ce1e3e4e1</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/edff980bf12b019a4fd2b472e092afca9b7de757/_posts/2017-01-26-adjoint-functors.md"> edff980bf12b019a4fd2b472e092afca9b7de757</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -429,7 +455,7 @@ f (u) = \braket{v,u}.
           abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle{#1}\\right|}",1],
-          braket: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          braket: ["{\\left\\langle{#1}\\right\\rangle}",1],
           tensor: ["{\\boldsymbol{#1}}",1],
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
           pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],

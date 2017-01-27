@@ -13,30 +13,37 @@ I've been thinking about induced representations and the Frobenius reciprocity t
 My first contact with category theory was the book [*Mathematical Physics*](https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625) by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a "natural" isomorphism) object that has a "universal" property that can simulate the relations to all other objects of the same kind and so can be thought of as the "best" object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.
 
 A category $\mathcal{C}$ is a class of objects and morphisms between them. If $X$ and $Y$ are objects in $\mathcal{C}$, the class of morphisms between $X$ and $Y$ is denoted by Hom$(X,Y)$. They are also represented diagrammatically as arrows $f:X \to Y$ for $f \in \text{Hom}(X,Y)$. For $\mathcal{C}$ to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories.
+
 - **Set** of all sets. Since there is no [set of all sets](https://en.wikipedia.org/wiki/Russell%27s_paradox), the word "class" in the definition of a category cannot be replaced by "set". The morphisms are arbitrary maps between sets.
 - **Grp** of all groups, **Ring** of all rings, and **Field**$_p$ of all fields with [characteristic](https://en.wikipedia.org/wiki/Category_of_rings#Category_of_fields) $p=0$ or a prime number with the respective homomorphisms as morphisms. (There is no homomorphism between fields of different characteristics.)
 - **Top** of topological spaces with continuous maps as morphisms. In particular, homeomorphisms are isomorphisms.
 - **Man**$^{\infty}$ of smooth manifolds with infinitely differentiable maps as morphisms. In particular, diffeomorphisms are isomorphisms.
 - **Vec**$_k$ of vector spaces over a field $k$ with linear maps as morphisms.
 
-# Products
+## Products
 
 My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct of objects. A product of $A$ and $B$ is an object $C$ together with a morphism from $C$ to $A$ and $B$ such that, if $D$ is another object also equipped with some morphisms to $A$ and $B$, then there is a unique morphism from $D$ to $C$ such that the following diagram "commutes", meaning that every way to compose such morphisms to go from $D$ to $A$ or $B$ gives the same result.
-$$ \begin{aligned}
+<center>
+![](/assets/img/posts/product.png =200x)
+</center>
+<!-- \begin{align*}
 	\xymatrix{
       & D \ar[dl]_{\alpha'}\ar[d]^{\gamma}\ar[dr]^{\beta'} & \\
       A & C\ar[l]^{\alpha}\ar[r]_{\beta} & B
 	}
-\end{aligned} $$
+\end{align*} -->
 We call this kind of diagrams commutative diagrams. The rational behind this definition is that $C$ together with the mappings $\alpha$ and $\beta$ is the best object that acts as a product of $A$ and $B$ since giving any morphism from any object $D$ to $A$ or $B$ is equivalent to giving $\alpha$ and $\beta$ from $C$, so we can just forget about $D$ altogether and regard $C$ as a universal simulator of such relations.
 
 The same diagram with all arrows reversed defines a coproduct $C$.
-$$ \begin{xy}
+<center>
+![](/assets/img/posts/coproduct.png =200x)
+</center>
+<!-- \begin{align*}
 	\xymatrix{
       & D & \\
       A\ar[ur]^{\alpha'}\ar[r]_{\alpha} & C\ar[u]_{\gamma} & B\ar[l]^{\beta}\ar[ul]_{\beta'}
 	}
-\end{xy} $$
+\end{align*} -->
 These definitions generalize trivially to a product and a coproduct of more than two objects.
 
 In **Set**, the product is the direct product $A \times B$ and the coproduct is the direct sum $A \cup B$. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product $C=A \times B$, a natural choice for the mappings $\alpha$ and $\beta$ is the projection
@@ -53,37 +60,43 @@ We can ask if the direct product and the direct sum of sets are the only product
 
 Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category **Top** of all topological spaces, which [Todd Trimble](https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/) gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said.
 
-# Functors
+## Functors
 
 Suppose that $\mathcal{C}$ and $\mathcal{D}$ are two categories and $X,Y \in \mathcal{C}$. A (covariant) functor $F$ is a map (of both objects and morphisms) $F: \mathcal{C} \to \mathcal{D}$ such that $\text{Hom}(X,Y) \to \text{Hom}(F(X) , F(Y))$ preserves identity morphisms and compositions.
 
 One of the most trivial kinds of functors are ones that simply throw away information. The forgetful functor **Grp** $\to$ **Set** sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from **Grp** to **Ab** the category of all abelian groups which set $ab=ba$ for all elements $a,b$ in a group.
 
 More interesting is the free functor $F:$ **Set** $\to$ **Grp** sending a set to the "free group". For a set $S$, $F(S)$ is the set of all expressions ("words") that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that any map $\sigma$ from $S$ to some group $G$ factors through the free group $F(S)$ with a unique group homomorphism $\varphi$.
-$$ \begin{xy}
+<center>
+![](/assets/img/posts/free-group.png =200x)
+</center>
+<!-- \begin{align*}
 	\xymatrix{
       S \ar[r]\ar[dr]_{\sigma} & F(S) \ar[d]^{\varphi} \\
       & G
 	}
-\end{xy} $$
+\end{align*} -->
 
 For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories **Set** and **Grp** are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.
 
 Functors $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ are adjoint functors if for any $X \in \mathcal{C}$ and $Y \in \mathcal{D}$, there is an isomorphism
+<center>
+![](/assets/img/posts/adjoint.png =200x)
+</center>
 $$ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
 \end{aligned} $$
-$$ \begin{xy}
+<!-- \begin{align*}
 	\xymatrix{
       F(X)\ar[r]^{\text{Hom}_{\mathcal{D}}(F(X),Y)} & Y\ar[d] \\
       X\ar[u]\ar[r]_{\text{Hom}_{\mathcal{C}}(X,G(Y))} & G(Y)
 	}
-\end{xy} $$
+\end{align*} -->
 $F$ is called a left adjoint of $G$ and $G$ is called a right adjoint of $F$.
 
 Why should this be true in the case of the forgetful functor $E$ and the free functor $F$ between **Set** and **Grp**? A group homomorphism $\varphi :F(S) \to G$ is completely determined if we know what it does to each element of $S$. In other words, what $\varphi$ really acts on is the underlying set of $G$. That is, giving $\varphi$ is equivalent to giving $\psi : S \to E(G)$.
 $$ \begin{aligned}
-\text{Hom}_{\text{\bold{Grp}}} (F(S),G) \simeq \text{Hom}_{\text{\bold{Set}}} (S,E(G))
+\text{Hom}_{\textbf{Grp}} (F(S),G) \simeq \text{Hom}_{\textbf{Set}} (S,E(G))
 \end{aligned} $$
 so that the free functor is a left adjoint of the forgetful functor.
 

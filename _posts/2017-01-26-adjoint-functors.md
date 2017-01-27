@@ -10,7 +10,7 @@ Status: *completed*
 
 Lately I've been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view situated in the intersection of what I'm confortable with and what I need. You can find better general introductions out there written by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.
 
-My first contact with category theory was the book [*Mathematical Physics*](https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625) by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a "natural" isomorphism) object that has a "universal" property that can simulate the relations to all other objects of the same kind and so can be thought of as the "best" object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.
+My first contact with category theory was the book [*Mathematical Physics*](https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625) by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a natural isomorphism which doesn't entail making any arbitrary choice) object that has a "universal" property that can simulate the relations to all other objects of the same kind and so can be thought of as the "best" object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.
 
 A **category** $\mathcal{C}$ is a class of objects and morphisms between them. If $X$ and $Y$ are **objects** in $\mathcal{C}$, the class of **morphisms** between $X$ and $Y$ is denoted by $\text{Hom}(X,Y)$. They are also represented diagrammatically as arrows $f:X \to Y$ for $f \in \text{Hom}(X,Y)$. For $\mathcal{C}$ to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories.
 
@@ -19,8 +19,6 @@ A **category** $\mathcal{C}$ is a class of objects and morphisms between them. I
 - **Top** of topological spaces with continuous maps as morphisms. In particular, homeomorphisms are isomorphisms.
 - **Man**$^{\infty}$ of smooth manifolds with infinitely differentiable maps as morphisms. In particular, diffeomorphisms are isomorphisms.
 - **Vec**$_k$ of vector spaces over a field $k$ with linear maps as morphisms.
-
-## Products
 
 My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct of objects. A **product** of $A$ and $B$ is an object $C$ together with a morphism from $C$ to $A$ and $B$ such that, if $D$ is another object also equipped with some morphisms to $A$ and $B$, then there is a unique morphism from $D$ to $C$ such that the following diagram "commutes", meaning that every way to compose such morphisms to go from $D$ to $A$ or $B$ gives the same result.
 <center>
@@ -68,7 +66,7 @@ One of the most trivial kinds of functors are ones that simply throw away inform
 
 More interesting is the **free functor** $F:$ **Set** $\to$ **Grp** sending a set to the "[free group](https://en.wikipedia.org/wiki/Free_group)". For a set $S$, $F(S)$ is the set of all expressions ("words") that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that any map $\sigma$ from $S$ to some group $G$ factors through the free group $F(S)$ with a unique group homomorphism $\varphi$.
 <center>
-<img src="/assets/img/posts/free-group.png" style="width: 180px;"/>
+<img src="/assets/img/posts/free-group.png" style="width: 150px;"/>
 </center>
 <!-- \begin{align*}
 	\xymatrix{
@@ -81,7 +79,7 @@ For a given group, the forgetful functor sends it to a particular set, and for a
 
 Functors $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ are **adjoint functors** if for any $X \in \mathcal{C}$ and $Y \in \mathcal{D}$, there is an [isomorphism](https://en.wikipedia.org/wiki/Adjoint_functors#Hom-set_adjunction)
 <center>
-<img src="/assets/img/posts/adjoint.png" style="width: 200px;"/>
+<img src="/assets/img/posts/adjoint.png" style="width: 180px;"/>
 </center>
 $$ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).

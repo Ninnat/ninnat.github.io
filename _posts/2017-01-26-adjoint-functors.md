@@ -6,7 +6,7 @@ categories:
   - category theory
 tags:
 ---
-Status: *completed*
+Modified: *28 Jan 2017*; Status: *completed*
 
 Lately I've been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view situated in the intersection of what I'm confortable with and what I need. You can find better general introductions out there written by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.
 

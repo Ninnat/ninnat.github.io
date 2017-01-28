@@ -54,7 +54,7 @@ $$ \begin{aligned}
 \end{aligned} $$
 If there is another map $\gamma'$ from $D$ to $C$ that makes the diagram commutes, it must sends $d$ to an element of $A \times B$ that projects to $\alpha'(d)$ on $A$ and $\beta'(d)$ on $B$. But that element is none other than $(\alpha'(d),\beta'(d))$. Thus, the uniqueness is established. For the direct sum $C = A \cup B$, a natural choice for the mappings $\alpha$ and $\beta$ is the embedding of $A$ and $B$ into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around ("diagram chasing").
 
-We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in **Set**. The nice answer is that they are. And this is not only true in **Set** but also in a general category as well. We will not prove that here but it amounts also to using the definition of a product or a coproduct and diagram chasing.
+We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in **Set**. The nice answer is that they are. And this is not only true in **Set** but also in a general category as well. We will not prove that here but it amounts to using the definition of a product or a coproduct and do some more diagram chasing.
 
 Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category **Top** of all topological spaces, which [Todd Trimble](https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/) gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said.
 
@@ -98,11 +98,11 @@ $$ \begin{aligned}
 \end{aligned} $$
 so that the free functor is a left adjoint of the forgetful functor.
 
-A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogs in linear algebra where the name "adjoint" is borrowed from.[^1] A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, therefore, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
+A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogs in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
 $$ \begin{aligned}
 f (u) = \braket{v,u}.
 \end{aligned} $$
-Now consider the linear functional $v \mapsto \braket{L(v),u}$. By the representation theorem, there is $w \in V$ that realizes this map as $\langle v,w \rangle$. This is an image of the adjoint operator $w = L^*(u)$. By a similar argument, if $F$ and $G$ are adjoint functors
+Now consider the linear functional $v \mapsto \braket{L(v),u}$. By the representation theorem, there is $w \in V$ that realizes this map as $\braket{v,w}$. This is an image of the adjoint operator $w = L^*(u)$. By a similar argument, if $F$ and $G$ are adjoint functors
 $$ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)),
 \end{aligned} $$

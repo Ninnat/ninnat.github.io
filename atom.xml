@@ -4,13 +4,47 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-02-03T22:42:02+00:00</updated>
+ <updated>2017-02-03T22:59:27+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Log</title>
+   <link href="/2017/02/01/log.html"/>
+   <updated>2017-02-01T00:00:00+00:00</updated>
+   <id>h/2017/02/01/log</id>
+   <content type="html">&lt;p&gt;Status: &lt;em&gt;perpetually in progress&lt;/em&gt;&lt;/p&gt;
+&lt;!-- Template
+Physics and mathematics
+Touhou
+Guilty Gear
+--&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;2017&lt;/h1&gt;
+&lt;h2 id=&quot;january&quot;&gt;January&lt;/h2&gt;
+&lt;h1 id=&quot;section-1&quot;&gt;2016&lt;/h1&gt;
+&lt;p&gt;Books&lt;/p&gt;
+&lt;p&gt;-&lt;a href=&quot;https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8&quot;&gt;&lt;em&gt;An Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michael Peskin and Daniel Schroeder; Pro: Get right into QFT; Con: Get right into QFT without a primer on special relativity and group and representation theory, hard to see a big picture -&lt;a href=&quot;https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743&quot;&gt;&lt;em&gt;A Modern Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michele Maggiore; Con: Does not get right into physics; Pro: Does not get right into physics but begin with group and representation theory, gives a nice excursion into the Wilsonian (condensed matter) view point of renormalization -&lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez &amp;amp; Javier Muniain&lt;/p&gt;
+&lt;h2 id=&quot;december&quot;&gt;December&lt;/h2&gt;
+&lt;p&gt;Physics and mathematics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://nautil.us/issue/43/heroes/what-does-any-of-this-have-to-do-with-physics&quot;&gt;“What Does Any of This Have To Do with Physics”&lt;/a&gt;, Bob Henderson; A memoir of a disillusion of a former theoretical physics graduate student working on quantum gravity&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://smbc-comics.com/comic/the-talk-3&quot;&gt;“The Talk”&lt;/a&gt;, Scott Aaronson and SMBC; Myths in quantum computing popularizations&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sciencemag.org/news/2016/12/scientists-are-close-building-quantum-computer-can-beat-conventional-one?utm_content=buffere78b2&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&quot;&gt;“Scientists are [closer] to building a quantum computer that can beat a conventional one”&lt;/a&gt;; IonQ, a new quantum computing startup and Chris Monroe&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://eandt.theiet.org/content/articles/2016/11/the-trouble-with-quantum-computing/&quot;&gt;“The Trouble with Quantum Computing”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=sD0NjbwqlYw&quot;&gt;“Visualizing the Riemann zeta function and analytic continuation”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Touhou&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5VDa5gTXhj8&quot;&gt;Piano rendition of all Touhou Kanjuden ~ Legacy of Lunatic Kingdom themes&lt;/a&gt;, Marasy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Guilty Gear&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Adjoint functors</title>

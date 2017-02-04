@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-02-04T02:37:58+00:00</updated>
+ <updated>2017-02-04T02:45:06+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -44,21 +44,77 @@ Games
 --&gt;
 
 &lt;h3 id=&quot;books-and-focused-readings&quot;&gt;Books and focused readings&lt;/h3&gt;
-&lt;p&gt;Books - &lt;a href=&quot;https://www.amazon.com/Personality-Makes-Oxford-Landmark-Science/dp/0199211434&quot;&gt;&lt;em&gt;Personality&lt;/em&gt;&lt;/a&gt;, Daniel Nettle; &lt;a href=&quot;https://docs.google.com/document/d/1PMLHxXeUKEYgig9mEwQWCkuBBvMfUxcQXDK-chgCYUs/edit&quot;&gt;Excerpt with comments&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Readings - “Introduction to Categories” in &lt;a href=&quot;http://math.mit.edu/~etingof/replect.pdf&quot;&gt;&lt;em&gt;Introduction to Representation Theory&lt;/em&gt;&lt;/a&gt;, Etingof &lt;em&gt;et al.&lt;/em&gt; - &lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;“Category theory for beginners”&lt;/a&gt; - &lt;a href=&quot;http://www.math.columbia.edu/~woit/notes13.pdf&quot;&gt;“Homogeneous Vector Bundles and Induced Representations”&lt;/a&gt;, &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/inducedreps.pdf&quot;&gt;“Induced representations and Frobenius Reciprocity”&lt;/a&gt; and &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/peterweyl.pdf&quot;&gt;“The Peter-Weyl Theorem”&lt;/a&gt; in &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/&quot;&gt;Lie Groups and Representations: Math G4344&lt;/a&gt;, Woit - &lt;a href=&quot;http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf&quot;&gt;“A Survey on Representation Theory”&lt;/a&gt;, Aguilar 2015 - &lt;a href=&quot;https://arxiv.org/abs/quant-ph/0207149&quot;&gt;“Generalizations of entanglement based on coherent states and convex sets”&lt;/a&gt;, Barnum, Knill, Ortiz and Viola 2003 - &lt;a href=&quot;http://faculty.tcu.edu/richardson/Seminars/symplectic.pdf&quot;&gt;“Introduction to Symplectic Manifolds”&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Books&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Personality-Makes-Oxford-Landmark-Science/dp/0199211434&quot;&gt;&lt;em&gt;Personality&lt;/em&gt;&lt;/a&gt;, Daniel Nettle; &lt;a href=&quot;https://docs.google.com/document/d/1PMLHxXeUKEYgig9mEwQWCkuBBvMfUxcQXDK-chgCYUs/edit&quot;&gt;Excerpt with comments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Readings&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Introduction to Categories” in &lt;a href=&quot;http://math.mit.edu/~etingof/replect.pdf&quot;&gt;&lt;em&gt;Introduction to Representation Theory&lt;/em&gt;&lt;/a&gt;, Etingof &lt;em&gt;et al.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;“Category theory for beginners”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.math.columbia.edu/~woit/notes13.pdf&quot;&gt;“Homogeneous Vector Bundles and Induced Representations”&lt;/a&gt;, &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/inducedreps.pdf&quot;&gt;“Induced representations and Frobenius Reciprocity”&lt;/a&gt; and &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/peterweyl.pdf&quot;&gt;“The Peter-Weyl Theorem”&lt;/a&gt; in &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/&quot;&gt;Lie Groups and Representations: Math G4344&lt;/a&gt;, Woit&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf&quot;&gt;“A Survey on Representation Theory”&lt;/a&gt;, Aguilar 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0207149&quot;&gt;“Generalizations of entanglement based on coherent states and convex sets”&lt;/a&gt;, Barnum, Knill, Ortiz and Viola 2003&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://faculty.tcu.edu/richardson/Seminars/symplectic.pdf&quot;&gt;“Introduction to Symplectic Manifolds”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
-&lt;p&gt;Physics and mathematics - &lt;a href=&quot;http://people.cs.uchicago.edu/~laci/update.html&quot;&gt;“Graph isomorphism update”&lt;/a&gt;; Harald Helfgott found an error in László Babai’s algorithm for Graph Isomorphism. Babai withdrew the quasi-polynomial claim on January 4 only to find a fix and restore the claim on January 9. - &lt;a href=&quot;https://arxiv.org/abs/0807.3161&quot;&gt;“A comparative review of recent researches in geometry”&lt;/a&gt;, Klein 1872 - &lt;a href=&quot;http://www.lpthe.jussieu.fr/~zuber/strasbourg12.pdf&quot;&gt;“Invariance in Physics and Group Theory”&lt;/a&gt;, Zuber 2012&lt;/p&gt;
+&lt;p&gt;Physics and mathematics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://people.cs.uchicago.edu/~laci/update.html&quot;&gt;“Graph isomorphism update”&lt;/a&gt;; Harald Helfgott found an error in László Babai’s algorithm for Graph Isomorphism. Babai withdrew the quasi-polynomial claim on January 4 only to find a fix and restore the claim on January 9.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/0807.3161&quot;&gt;“A comparative review of recent researches in geometry”&lt;/a&gt;, Klein 1872&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.lpthe.jussieu.fr/~zuber/strasbourg12.pdf&quot;&gt;“Invariance in Physics and Group Theory”&lt;/a&gt;, Zuber 2012&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Statistics&lt;/p&gt;
-&lt;p&gt;Politics - &lt;a href=&quot;https://thematter.co/pulse/oppa-prajak-posttruth/17290&quot;&gt;“ไม่ขวาแล้วจะไปไหน อยู่อย่างไรในโลกไร้ความจริง”&lt;/a&gt;, ประจักษ์ ก้องกีรติ (Prajak Kongkirati)&lt;/p&gt;
-&lt;p&gt;Games - Tenkaichi Budokai: &lt;a href=&quot;https://www.youtube.com/watch?v=bS-a-OmOjyk&quot;&gt;Summit (CH) vs FAB (PO)&lt;/a&gt; - Tenkaichi Budokai: &lt;a href=&quot;https://www.youtube.com/watch?v=9vKrsDLr13M&quot;&gt;Haken (SO) vs Zadi (RV)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Politics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://thematter.co/pulse/oppa-prajak-posttruth/17290&quot;&gt;“ไม่ขวาแล้วจะไปไหน อยู่อย่างไรในโลกไร้ความจริง”&lt;/a&gt;, ประจักษ์ ก้องกีรติ (Prajak Kongkirati)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Games&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tenkaichi Budokai: &lt;a href=&quot;https://www.youtube.com/watch?v=bS-a-OmOjyk&quot;&gt;Summit (CH) vs FAB (PO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tenkaichi Budokai: &lt;a href=&quot;https://www.youtube.com/watch?v=9vKrsDLr13M&quot;&gt;Haken (SO) vs Zadi (RV)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;section-1&quot;&gt;2016&lt;/h1&gt;
 &lt;h2 id=&quot;december&quot;&gt;December&lt;/h2&gt;
 &lt;h3 id=&quot;books-and-focused-readings-1&quot;&gt;Books and focused readings&lt;/h3&gt;
-&lt;p&gt;Books - &lt;a href=&quot;https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8&quot;&gt;&lt;em&gt;An Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michael Peskin and Daniel Schroeder 1995; (Chapter 1-7) Pros: - Jumps right into QFT - Has everything; cited by other textbooks Cons: - Jumps right into QFT without a preparation on special relativity and representation theory - Has everything but you can’t find it until you already know it; hard to grasp a big picture - &lt;a href=&quot;https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743&quot;&gt;&lt;em&gt;A Modern Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michele Maggiore 2005; Cons: -Does not jump right into QFT Pros: - Does not jump right into QFT but prepare a reader with special relativity and representation theory - Concise and modern (teaches the Wilsonian viewpoint of renormalization with block spin renormalization) - &lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez and Javier Muniain 1994 (Part 1-2) - “Chern-Simons quantum field theories” in &lt;a href=&quot;https://www.amazon.com/Introduction-Topological-Quantum-Computation-Jiannis/dp/1107005043&quot;&gt;&lt;em&gt;Introduction to Topological Quantum Computation&lt;/em&gt;&lt;/a&gt;, Pachos 2012&lt;/p&gt;
-&lt;p&gt;Readings - &lt;a href=&quot;https://arxiv.org/abs/quant-ph/9809052&quot;&gt;“Phase space formulation of quantum mechanics and quantum state reconstruction of physical systems with Lie-group symmetries”&lt;/a&gt;, Brif and Mann 1999&lt;/p&gt;
+&lt;p&gt;Books&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8&quot;&gt;&lt;em&gt;An Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michael Peskin and Daniel Schroeder 1995; (Chapter 1-7) Pros:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Jumps right into QFT&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Has everything; cited by other textbooks&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jumps right into QFT without a preparation on special relativity and representation theory&lt;/li&gt;
+&lt;li&gt;Has everything but you can’t find it until you already know it; hard to grasp a big picture&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743&quot;&gt;&lt;em&gt;A Modern Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michele Maggiore 2005; Cons: -Does not jump right into QFT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does not jump right into QFT but prepare a reader with special relativity and representation theory&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Concise and modern (teaches the Wilsonian viewpoint of renormalization with block spin renormalization)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez and Javier Muniain 1994 (Part 1-2)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;“Chern-Simons quantum field theories” in &lt;a href=&quot;https://www.amazon.com/Introduction-Topological-Quantum-Computation-Jiannis/dp/1107005043&quot;&gt;&lt;em&gt;Introduction to Topological Quantum Computation&lt;/em&gt;&lt;/a&gt;, Pachos 2012&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Readings&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/9809052&quot;&gt;“Phase space formulation of quantum mechanics and quantum state reconstruction of physical systems with Lie-group symmetries”&lt;/a&gt;, Brif and Mann 1999&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;links-1&quot;&gt;Links&lt;/h3&gt;
-&lt;p&gt;Physics and mathematics - &lt;a href=&quot;http://nautil.us/issue/43/heroes/what-does-any-of-this-have-to-do-with-physics&quot;&gt;“What Does Any of This Have To Do with Physics”&lt;/a&gt;; A memoir on the disillusion of a former theoretical physics graduate student working on quantum gravity - &lt;a href=&quot;http://smbc-comics.com/comic/the-talk-3&quot;&gt;“The Talk”&lt;/a&gt;, Scott Aaronson and SMBC; “If you don’t talk to your kids about quantum computing… someone else will.” - &lt;a href=&quot;http://www.sciencemag.org/news/2016/12/scientists-are-close-building-quantum-computer-can-beat-conventional-one?utm_content=buffere78b2&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&quot;&gt;“Scientists are [closer] to building a quantum computer that can beat a conventional one”&lt;/a&gt;; IonQ, a new quantum computing startup and Chris Monroe - &lt;a href=&quot;https://eandt.theiet.org/content/articles/2016/11/the-trouble-with-quantum-computing/&quot;&gt;“The Trouble with Quantum Computing”&lt;/a&gt; - &lt;a href=&quot;http://physicstoday.scitation.org/doi/full/10.1063/PT.3.3381&quot;&gt;“Foundational theories in topological physics garner Nobel Prize”&lt;/a&gt;, the history leading to discoveries of the Kosterlitz–Thouless transition and the Haldane gap - &lt;a href=&quot;https://topocondmat.org/&quot;&gt;Topology in Condensed Matter&lt;/a&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=sD0NjbwqlYw&quot;&gt;“Visualizing the Riemann zeta function and analytic continuation”&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Musics - &lt;a href=&quot;https://www.youtube.com/watch?v=5VDa5gTXhj8&quot;&gt;All Touhou Kanjuden ~ Legacy of Lunatic Kingdom themes&lt;/a&gt;, Marasy (Piano)&lt;/p&gt;
+&lt;p&gt;Physics and mathematics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://nautil.us/issue/43/heroes/what-does-any-of-this-have-to-do-with-physics&quot;&gt;“What Does Any of This Have To Do with Physics”&lt;/a&gt;; A memoir on the disillusion of a former theoretical physics graduate student working on quantum gravity&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://smbc-comics.com/comic/the-talk-3&quot;&gt;“The Talk”&lt;/a&gt;, Scott Aaronson and SMBC; “If you don’t talk to your kids about quantum computing… someone else will.”&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sciencemag.org/news/2016/12/scientists-are-close-building-quantum-computer-can-beat-conventional-one?utm_content=buffere78b2&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&quot;&gt;“Scientists are [closer] to building a quantum computer that can beat a conventional one”&lt;/a&gt;; IonQ, a new quantum computing startup and Chris Monroe&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://eandt.theiet.org/content/articles/2016/11/the-trouble-with-quantum-computing/&quot;&gt;“The Trouble with Quantum Computing”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://physicstoday.scitation.org/doi/full/10.1063/PT.3.3381&quot;&gt;“Foundational theories in topological physics garner Nobel Prize”&lt;/a&gt;, the history leading to discoveries of the Kosterlitz–Thouless transition and the Haldane gap&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://topocondmat.org/&quot;&gt;Topology in Condensed Matter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=sD0NjbwqlYw&quot;&gt;“Visualizing the Riemann zeta function and analytic continuation”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Musics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5VDa5gTXhj8&quot;&gt;All Touhou Kanjuden ~ Legacy of Lunatic Kingdom themes&lt;/a&gt;, Marasy (Piano)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;anime&quot;&gt;Anime&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken__Diamond_wa_Kudakenai&quot;&gt;&lt;em&gt;Jojo’s Bizarre Adventure Part 4: Diamond is Unbreakable&lt;/em&gt;&lt;/a&gt;, David Production&lt;/li&gt;
@@ -74,10 +130,28 @@ Games
 &lt;li&gt;&lt;a href=&quot;https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ptp/65/3/10.1143/PTP.65.809/2/65-3-809.pdf?Expires=1486520458&amp;amp;Signature=GfVfeEBvcnC7292wkKhNG~LKS9JnPlRm4m-iIKGZaSum9ip~qB2LmR57Ws09RKRhPo~Vbb1TDpREZU-XjK6m8l2tvGe1-H5737VYa0YwanBOroWqpfwTrGwKnDSj6wCXGfMEX7UqZrj7X6Bdg89j6SdNoa0o6uhnE048Hnav2u8PEAIRl~4RlxyDAaPytQluGTbDkTPElYrxdFHGgVy9WtdzdqiXpCJEjp0WrxgI5Ga0uPJEAsuD5RT7R1C6u9jF7aCIw5q99gjFzBZiS3EFrOcYD377bOAKbYy16198fohNBT6GwWTjemOIk~jN4MGd10RYETX8e8ueZ9oGQ3j~jA__&amp;amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q&quot;&gt;“The Group Theoretical Structure of Fermion Many-Body Systems Arising from the Canonical Anticommutation Relation”&lt;/a&gt;, Fukutome 1981&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;links-2&quot;&gt;Links&lt;/h3&gt;
-&lt;p&gt;Physics and mathematics - &lt;a href=&quot;https://arxiv.org/abs/1611.04471&quot;&gt;“Adiabatic Quantum Computing”&lt;/a&gt;, Albash and Lidar 2016 - &lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015 - &lt;a href=&quot;https://jpellis.me/projects/tikz-feynman/&quot;&gt;TikZ-Feynman&lt;/a&gt; and &lt;a href=&quot;https://jpellis.me/projects/simpler-wick/&quot;&gt;Simpler-Wick&lt;/a&gt; LaTeX packages, Ellis 2015&lt;/p&gt;
-&lt;p&gt;Statistics - &lt;a href=&quot;http://andrewgelman.com/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/&quot;&gt;“What has happened down here is the winds have changed”&lt;/a&gt;; A timeline of the reproducibility crisis in social psychology&lt;/p&gt;
-&lt;p&gt;Politics - &lt;a href=&quot;http://slatestarcodex.com/2016/11/16/you-are-still-crying-wolf/&quot;&gt;“You are Still Crying Wolf”&lt;/a&gt; - &lt;a href=&quot;http://slatestarcodex.com/2016/11/07/tuesday-shouldnt-change-the-narrative/&quot;&gt;“Tuesday Shouldn’t Change the Narrative”&lt;/a&gt; - &lt;a href=&quot;https://www.facebook.com/julia.galef/posts/10102766521909712&quot;&gt;Julia Galef on Trump&lt;/a&gt;; “The”don’t harm a messenger&amp;quot; norm is what makes it possible for armies to send messengers to negotiate with each other, to avert or end wars. Defecting on that norm is so much worse than harming a particular person, or army, or country. It’s harming our &lt;em&gt;ability to limit harm to each other&lt;/em&gt; — a meta-harm.&amp;quot;&lt;/p&gt;
-&lt;p&gt;Games - &lt;a href=&quot;https://www.youtube.com/watch?v=fOO86dvIk1Y&quot;&gt;Mocchi (SO) vs Teresa (JA)&lt;/a&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=l1JkQSl8D7A&quot;&gt;Roi (SO) vs Karinchu (JO)&lt;/a&gt; - &lt;a href=&quot;http://www.nicovideo.jp/watch/sm29904333&quot;&gt;Teruru (MA)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Physics and mathematics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.04471&quot;&gt;“Adiabatic Quantum Computing”&lt;/a&gt;, Albash and Lidar 2016&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jpellis.me/projects/tikz-feynman/&quot;&gt;TikZ-Feynman&lt;/a&gt; and &lt;a href=&quot;https://jpellis.me/projects/simpler-wick/&quot;&gt;Simpler-Wick&lt;/a&gt; LaTeX packages, Ellis 2015&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Statistics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://andrewgelman.com/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/&quot;&gt;“What has happened down here is the winds have changed”&lt;/a&gt;; A timeline of the reproducibility crisis in social psychology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Politics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://slatestarcodex.com/2016/11/16/you-are-still-crying-wolf/&quot;&gt;“You are Still Crying Wolf”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://slatestarcodex.com/2016/11/07/tuesday-shouldnt-change-the-narrative/&quot;&gt;“Tuesday Shouldn’t Change the Narrative”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/julia.galef/posts/10102766521909712&quot;&gt;Julia Galef on Trump&lt;/a&gt;; “The”don’t harm a messenger&amp;quot; norm is what makes it possible for armies to send messengers to negotiate with each other, to avert or end wars. Defecting on that norm is so much worse than harming a particular person, or army, or country. It’s harming our &lt;em&gt;ability to limit harm to each other&lt;/em&gt; — a meta-harm.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Games&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=fOO86dvIk1Y&quot;&gt;Mocchi (SO) vs Teresa (JA)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1JkQSl8D7A&quot;&gt;Roi (SO) vs Karinchu (JO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.nicovideo.jp/watch/sm29904333&quot;&gt;Teruru (MA)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  

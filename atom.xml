@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-02-04T04:55:46+00:00</updated>
+ <updated>2017-02-04T05:13:40+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -70,7 +70,7 @@ Games
 &lt;p&gt;Physics and mathematics&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;“Category theory for beginners”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[Ostrogradskian’s instability](http://www.scholarpedia.org/article/Ostrogradsky’s_theorem_on_Hamiltonian_instability); an oft-cited explanation of why equations of motions in physics do not depend on time derivatives higher than two&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.scholarpedia.org/article/Ostrogradsky%27s_theorem_on_Hamiltonian_instability&quot;&gt;Ostrogradskian’s instability&lt;/a&gt;; an oft-cited explanation of why equations of motions in physics do not depend on time derivatives higher than two&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/0807.3161&quot;&gt;“A comparative review of recent researches in geometry”&lt;/a&gt;, Klein 1872&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.lpthe.jussieu.fr/~zuber/strasbourg12.pdf&quot;&gt;“Invariance in Physics and Group Theory”&lt;/a&gt;, Zuber 2012&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mathoverflow.net/questions/119015/what-precisely-does-kleins-erlangen-program-state&quot;&gt;“What, precisely, does Klein’s Erlangen Program state?”&lt;/a&gt;&lt;/li&gt;
@@ -81,7 +81,7 @@ Games
 &lt;/ul&gt;
 &lt;p&gt;Statistics&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;[“Anscombe’s quartet”](https://en.wikipedia.org/wiki/Anscombe’s_quartet); four very different data sets with similar summary statistics including Pearson’s correlation coefficient&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Anscombe%27s_quartet&quot;&gt;“Anscombe’s quartet”&lt;/a&gt;; four very different data sets with similar summary statistics including Pearson’s correlation coefficient&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Politics&lt;/p&gt;
 &lt;ul&gt;
@@ -154,7 +154,7 @@ Games
 &lt;p&gt;Physics and mathematics&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.04471&quot;&gt;“Adiabatic Quantum Computing”&lt;/a&gt;, Albash and Lidar 2016&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015; it is basically a &lt;a href=&quot;https://arxiv.org/abs/1203.2317&quot;&gt;quantum-mechanics-free-subsystem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://jpellis.me/projects/tikz-feynman/&quot;&gt;TikZ-Feynman&lt;/a&gt; and &lt;a href=&quot;https://jpellis.me/projects/simpler-wick/&quot;&gt;Simpler-Wick&lt;/a&gt; LaTeX packages, Ellis 2015&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Statistics&lt;/p&gt;

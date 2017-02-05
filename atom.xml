@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-02-05T00:14:44+00:00</updated>
+ <updated>2017-02-05T00:37:44+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -74,7 +74,7 @@ In the stack
 &lt;li&gt;“Introduction to Categories” in &lt;a href=&quot;http://math.mit.edu/~etingof/replect.pdf&quot;&gt;&lt;em&gt;Introduction to Representation Theory&lt;/em&gt;&lt;/a&gt;, Etingof &lt;em&gt;et al.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf&quot;&gt;“A Survey on Representation Theory”&lt;/a&gt;, Aguilar 2015&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/&quot;&gt;Lie Groups and Representations: Math G4344&lt;/a&gt;, Woit; in particular, &lt;a href=&quot;http://www.math.columbia.edu/~woit/notes13.pdf&quot;&gt;“Homogeneous Vector Bundles and Induced Representations”&lt;/a&gt;, &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/inducedreps.pdf&quot;&gt;“Induced representations and Frobenius Reciprocity”&lt;/a&gt; and &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/peterweyl.pdf&quot;&gt;“The Peter-Weyl Theorem”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://faculty.tcu.edu/richardson/Seminars/symplectic.pdf&quot;&gt;“Introduction to Symplectic Manifolds”&lt;/a&gt;; certain mappings from coordinates on a phase space to a dual Lie algebra called moment maps can give conserved quantities that are more general than those obtained by Noether’s theorem that only deals with the configuration space. The cross product formula for angular momenta &lt;span class=&quot;math&quot;&gt;\(\bold{q \times p = L}\)&lt;/span&gt; is an example of such maps. This answers my curiosity: the &lt;span class=&quot;math&quot;&gt;\(SO(3)\)&lt;/span&gt; Lie algebra can be identified with vectors in &lt;span class=&quot;math&quot;&gt;\(\mathbb{R}^3\)&lt;/span&gt; via the cross product. These vectors in turn can be identified with either coordinates or momenta. Is there a general construction that takes two copies of the Lie algebra like these to a new Lie algebra (in this case, that of angular momenta)?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://faculty.tcu.edu/richardson/Seminars/symplectic.pdf&quot;&gt;“Introduction to Symplectic Manifolds”&lt;/a&gt;; certain mappings from coordinates on a phase space to a dual Lie algebra called moment maps can give conserved quantities that are more general than those obtained by Noether’s theorem that only deals with the configuration space. The cross product formula for angular momenta &lt;span class=&quot;math&quot;&gt;\(\bold{q \times p = L}\)&lt;/span&gt; is an example of such maps. This answers my curiosity: the &lt;span class=&quot;math&quot;&gt;\(\mathfrak{so}(3)\)&lt;/span&gt; Lie algebra can be identified with vectors in &lt;span class=&quot;math&quot;&gt;\(\mathbb{R}^3\)&lt;/span&gt; via the cross product. These vectors in turn can be identified with either coordinates or momenta. How to generalize a construction like this that takes two copies of a Lie algebra to a new Lie algebra?&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0207149&quot;&gt;“Generalizations of entanglement based on coherent states and convex sets”&lt;/a&gt;, Barnum, Knill, Ortiz and Viola 2003&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0305023&quot;&gt;“A subsystem-independent generalization of entanglement”&lt;/a&gt;, Barnum, Knill, Ortiz, Somma and Viola 2004&lt;/li&gt;
 &lt;/ul&gt;
@@ -124,7 +124,7 @@ In the stack
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/9809052&quot;&gt;“Phase space formulation of quantum mechanics and quantum state reconstruction of physical systems with Lie-group symmetries”&lt;/a&gt;, Brif and Mann 1999&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8&quot;&gt;&lt;em&gt;An Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michael Peskin and Daniel Schroeder 1995; (Chapter 1-7) Pros: 1. Jumps right into QFT 2. Has everything, as it is often cited by other textbooks. Cons: 1. Jumps right into QFT without a preparation on special relativity and representation theory 2. Has everything but you can’t find it until you already know what to look for. Hard to grasp a big picture&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743&quot;&gt;&lt;em&gt;A Modern Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michele Maggiore 2005; Cons: Does not jump right into QFT. Pros: 1. Does not jump right into QFT but prepare a reader with special relativity and representation theory 2. Concise and modern (teaches the Wilsonian viewpoint of renormalization with block spin renormalization)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez and Javier Muniain 1994 (Part 1-2); Strike a good balance between rigorous math and physicists’ math. Doubles as a quick introduction to differential geometry&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez and Javier Muniain 1994 (Part 1-2); Strikes a good balance between rigorous math and physicists’ math. Doubles as a quick introduction to differential geometry&lt;/li&gt;
 &lt;li&gt;“Chern-Simons quantum field theories” in &lt;a href=&quot;https://www.amazon.com/Introduction-Topological-Quantum-Computation-Jiannis/dp/1107005043&quot;&gt;&lt;em&gt;Introduction to Topological Quantum Computation&lt;/em&gt;&lt;/a&gt;, Pachos 2012&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
@@ -142,7 +142,7 @@ In the stack
 &lt;/ul&gt;
 &lt;p&gt;Musics&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5VDa5gTXhj8&quot;&gt;All Touhou Kanjuden ~ Legacy of Lunatic Kingdom themes&lt;/a&gt;, Marasy (Piano)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5VDa5gTXhj8&quot;&gt;All Touhou Kanjuden %7e Legacy of Lunatic Kingdom themes&lt;/a&gt;, Marasy (Piano)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Manga&lt;/p&gt;
 &lt;ul&gt;
@@ -165,7 +165,7 @@ In the stack
 &lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Physics and mathematics&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015; it is basically a &lt;a href=&quot;https://arxiv.org/abs/1203.2317&quot;&gt;quantum-mechanics-free-subsystem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015; Basically a &lt;a href=&quot;https://arxiv.org/abs/1203.2317&quot;&gt;quantum-mechanics-free-subsystem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.04471&quot;&gt;“Adiabatic Quantum Computing”&lt;/a&gt;, Albash and Lidar 2016&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://jpellis.me/projects/tikz-feynman/&quot;&gt;TikZ-Feynman&lt;/a&gt; and &lt;a href=&quot;https://jpellis.me/projects/simpler-wick/&quot;&gt;Simpler-Wick&lt;/a&gt; LaTeX packages, Ellis 2015&lt;/li&gt;
 &lt;/ul&gt;

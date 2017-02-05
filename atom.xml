@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-02-04T06:54:31+00:00</updated>
+ <updated>2017-02-05T00:14:44+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -17,7 +17,7 @@
    <link href="/2017/02/01/log.html"/>
    <updated>2017-02-01T00:00:00+00:00</updated>
    <id>h/2017/02/01/log</id>
-   <content type="html">&lt;p&gt;Modified: &lt;em&gt;3 Feb 2017&lt;/em&gt;; Status: &lt;em&gt;perpetually in progress&lt;/em&gt; &lt;!-- Template
+   <content type="html">&lt;p&gt;Modified: &lt;em&gt;4 Feb 2017&lt;/em&gt;; Status: &lt;em&gt;perpetually in progress&lt;/em&gt; &lt;!-- Template
 # Year
 ## Month
 **Books and focused readings**
@@ -35,15 +35,19 @@ Anime
 &lt;!--
 ## February
 
-**Books and focused readings**
+**Focused readings**
 
+- [&quot;Lowering and Raising Operators for the Orthogonal Group in the Chain
+$O(n) \supset O(n-1) \supset \cdots $ and their Graphs*&quot;](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/70553/JMAPAQ-8-6-1233-1.pdf;sequence=2)
 - [&quot;Between classical and quantum&quot;](https://arxiv.org/abs/quant-ph/0506082), Landsman 2005
 - [&quot;Multipartite Quantum States and Their Marginals&quot;](https://arxiv.org/abs/1410.6820) Walter 2014
+- [&quot;Couplings to Classical and Non-Classical Squeezed White Noise as Stationary Markov Processes&quot;](http://www.ems-ph.org/journals/show_abstract.php?issn=0034-5318&amp;vol=38&amp;iss=1&amp;rank=1) Hellmich *et al.* 2002
 
 **Links**
 
 Physics and mathematics
 
+- QIP2017 videos
 - [&quot;What Quantum Gravity Needs Is More Experiments&quot;](http://nautil.us/issue/45/power/what-quantum-gravity-needs-is-more-experiments)
 
 Psychology, biology, and statistics
@@ -52,6 +56,7 @@ Psychology, biology, and statistics
 
 In the stack
 
+- [&quot;Coarse graining the phase space of N qubits&quot;](https://arxiv.org/abs/1701.08630), Matteo, Sanchez-Soto, Leuchs and Grassl
 - [&quot;On discrete structures in finite Hilbert spaces&quot;](https://arxiv.org/abs/1701.07902), Bengtsson and Zyczkowski
 - [&quot;Spekkens&#39; toy model in all dimensions and its relationship with stabilizer quantum mechanics&quot;](https://arxiv.org/abs/1701.07801), Catani and Browne
 - [&quot;The magic of universal quantum computing with permutations&quot;](http://arxiv.org/abs/1701.06443), Planat and Rukhsan-Ul-Haq
@@ -63,49 +68,45 @@ In the stack
 --&gt;
 
 &lt;h2 id=&quot;january&quot;&gt;January&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Books and focused readings&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Books&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Focused readings&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Personality-Makes-Oxford-Landmark-Science/dp/0199211434&quot;&gt;&lt;em&gt;Personality&lt;/em&gt;&lt;/a&gt;, Daniel Nettle; &lt;a href=&quot;https://docs.google.com/document/d/1PMLHxXeUKEYgig9mEwQWCkuBBvMfUxcQXDK-chgCYUs/edit&quot;&gt;Excerpt with comments&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Readings&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf&quot;&gt;“A Survey on Representation Theory”&lt;/a&gt;, Aguilar 2015&lt;/li&gt;
 &lt;li&gt;“Introduction to Categories” in &lt;a href=&quot;http://math.mit.edu/~etingof/replect.pdf&quot;&gt;&lt;em&gt;Introduction to Representation Theory&lt;/em&gt;&lt;/a&gt;, Etingof &lt;em&gt;et al.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.math.columbia.edu/~woit/notes13.pdf&quot;&gt;“Homogeneous Vector Bundles and Induced Representations”&lt;/a&gt;, &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/inducedreps.pdf&quot;&gt;“Induced representations and Frobenius Reciprocity”&lt;/a&gt; and &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/peterweyl.pdf&quot;&gt;“The Peter-Weyl Theorem”&lt;/a&gt; in &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/&quot;&gt;Lie Groups and Representations: Math G4344&lt;/a&gt;, Woit; Induced representations are important in (noncommutative) harmonic analysis on homogeneous spaces (e.g. spheres) and Mackey’s quantization based on system of imprimitivity&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf&quot;&gt;“A Survey on Representation Theory”&lt;/a&gt;, Aguilar 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/&quot;&gt;Lie Groups and Representations: Math G4344&lt;/a&gt;, Woit; in particular, &lt;a href=&quot;http://www.math.columbia.edu/~woit/notes13.pdf&quot;&gt;“Homogeneous Vector Bundles and Induced Representations”&lt;/a&gt;, &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/inducedreps.pdf&quot;&gt;“Induced representations and Frobenius Reciprocity”&lt;/a&gt; and &lt;a href=&quot;http://www.math.columbia.edu/~woit/LieGroups-2012/peterweyl.pdf&quot;&gt;“The Peter-Weyl Theorem”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://faculty.tcu.edu/richardson/Seminars/symplectic.pdf&quot;&gt;“Introduction to Symplectic Manifolds”&lt;/a&gt;; certain mappings from coordinates on a phase space to a dual Lie algebra called moment maps can give conserved quantities that are more general than those obtained by Noether’s theorem that only deals with the configuration space. The cross product formula for angular momenta &lt;span class=&quot;math&quot;&gt;\(\bold{q \times p = L}\)&lt;/span&gt; is an example of such maps. This answers my curiosity: the &lt;span class=&quot;math&quot;&gt;\(SO(3)\)&lt;/span&gt; Lie algebra can be identified with vectors in &lt;span class=&quot;math&quot;&gt;\(\mathbb{R}^3\)&lt;/span&gt; via the cross product. These vectors in turn can be identified with either coordinates or momenta. Is there a general construction that takes two copies of the Lie algebra like these to a new Lie algebra (in this case, that of angular momenta)?&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0207149&quot;&gt;“Generalizations of entanglement based on coherent states and convex sets”&lt;/a&gt;, Barnum, Knill, Ortiz and Viola 2003&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://faculty.tcu.edu/richardson/Seminars/symplectic.pdf&quot;&gt;“Introduction to Symplectic Manifolds”&lt;/a&gt;; moment maps from coordinates on a phase space to a dual Lie algebra can give conserved quantities that are more general than those obtained by Noether’s theorem that only deals with the configuration space. The cross product formula for angular momenta &lt;span class=&quot;math&quot;&gt;\(\bold{q \times p = L}\)&lt;/span&gt; is an example of moment maps.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0305023&quot;&gt;“A subsystem-independent generalization of entanglement”&lt;/a&gt;, Barnum, Knill, Ortiz, Somma and Viola 2004&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Physics and mathematics&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;“Category theory for beginners”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.nybooks.com/articles/2017/01/19/trouble-with-quantum-mechanics/&quot;&gt;“The Trouble with Quantum Mechanics”&lt;/a&gt;, Weinberg; the last idea was laid out in &lt;a href=&quot;https://arxiv.org/abs/1610.02537&quot;&gt;“Linblad decoherence in atomic clocks”&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.scholarpedia.org/article/Ostrogradsky%27s_theorem_on_Hamiltonian_instability&quot;&gt;Ostrogradskian’s instability&lt;/a&gt;; an oft-cited explanation of why equations of motions in physics do not depend on time derivatives higher than two&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/0807.3161&quot;&gt;“A comparative review of recent researches in geometry”&lt;/a&gt;, Klein 1872&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.lpthe.jussieu.fr/~zuber/strasbourg12.pdf&quot;&gt;“Invariance in Physics and Group Theory”&lt;/a&gt;, Zuber 2012&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mathoverflow.net/questions/119015/what-precisely-does-kleins-erlangen-program-state&quot;&gt;“What, precisely, does Klein’s Erlangen Program state?”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1307.3970&quot;&gt;“Invariance in Physics and Group Theory”&lt;/a&gt;, Zuber 2012; &lt;a href=&quot;http://www.lpthe.jussieu.fr/~zuber/Cours/M2_e2011.pdf&quot;&gt;Long version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/0807.3161&quot;&gt;“A comparative review of recent researches in geometry”&lt;/a&gt;, Klein 1872; Klein’s posthumous arXiv submission&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mathoverflow.net/questions/119015/what-precisely-does-kleins-erlangen-program-state&quot;&gt;“What, precisely, does Klein’s Erlangen Program state?”&lt;/a&gt;; “[Riemannian philosophy (to study those features of a Riemannian manifold that are invariant with respect to change of coordinates)] is to the original Kleinian philosophy as the general principle of relativity is to the special principle of relativity.”&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mathoverflow.net/questions/91583/the-rank-of-a-symmetric-space&quot;&gt;“The rank of a symmetric space”&lt;/a&gt;; “At some point Gelfand asked me”What is the rank of a symmetric space&amp;quot; and I just spat back the usual definition… Gelfand shook his head as if I had said something really stupid and proceeded to explain.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mathoverflow.net/questions/85593/decompose-tensor-product-of-type-g-2-lie-algebras&quot;&gt;A history of the decomposition of tensor products&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1206.6379&quot;&gt;“LieART – A Mathematica Application for Lie Algebras and Representation Theory”&lt;/a&gt;, Feger and Kephart 2014&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mathoverflow.net/questions/85593/decompose-tensor-product-of-type-g-2-lie-algebras&quot;&gt;A history of the decomposition of tensor products&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;“Category theory for beginners”&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Computer science&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://people.cs.uchicago.edu/~laci/update.html&quot;&gt;“Graph isomorphism update”&lt;/a&gt;; Harald Helfgott found an error in László Babai’s algorithm for Graph Isomorphism. Babai withdrew the quasi-polynomial claim on January 4 only to find a fix and restore the claim on January 9.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.scottaaronson.com/papers/pnp.pdf&quot;&gt;“&lt;span class=&quot;math&quot;&gt;\(P \stackrel{?}{=} NP\)&lt;/span&gt;”&lt;/a&gt;, Aaronson 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.scottaaronson.com/papers/pnp.pdf&quot;&gt;“&lt;span class=&quot;math&quot;&gt;\(P \stackrel{?}{=} NP\)&lt;/span&gt;”&lt;/a&gt;, Aaronson 2017; a survey&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.toothycat.net/~hologram/Turing/&quot;&gt;“Magic: The Gathering is Turing Complete”&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Psychology, biology, and statistics&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/&quot;&gt;“Healthy Eating Plate”&lt;/a&gt;; “The Healthy Eating Plate is based exclusively on the best available science and was not subjected to political or commercial pressures from food industry lobbyists.”&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://andrewgelman.com/2013/09/01/post-publication-peer-review-how-it-sometimes-really-works/&quot;&gt;“Post-publication peer review: How it (sometimes) really works”&lt;/a&gt;; on Kanai &lt;em&gt;et al.&lt;/em&gt; and Schreiber &lt;em&gt;et al.&lt;/em&gt; publications about cognitive difference between liberals and conservatives&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://andrewgelman.com/2013/09/01/post-publication-peer-review-how-it-sometimes-really-works/&quot;&gt;“Post-publication peer review: How it (sometimes) really works”&lt;/a&gt;; on Kanai &lt;em&gt;et al.&lt;/em&gt; and Schreiber &lt;em&gt;et al.&lt;/em&gt;’s publications about cognitive difference between liberals and conservatives&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://andrewgelman.com/2017/01/25/statistical-heartburn-attempt-digest-four-pizza-publications-cornell-food-brand-lab/&quot;&gt;“Statistical heartburn: An attempt to digest four pizza publications from the Cornell Food and Brand Lab”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Anscombe%27s_quartet&quot;&gt;“Anscombe’s quartet”&lt;/a&gt;; four very different data sets with similar summary statistics including Pearson’s correlation coefficient&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Politics&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://thematter.co/pulse/oppa-prajak-posttruth/17290&quot;&gt;“ไม่ขวาแล้วจะไปไหน อยู่อย่างไรในโลกไร้ความจริง”&lt;/a&gt;, ประจักษ์ ก้องกีรติ (Prajak Kongkirati)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.washingtonpost.com/posteverything/wp/2017/01/27/in-venezuela-we-couldnt-stop-chavez-dont-make-the-same-mistakes-we-did/?utm_term=.f4bde48ee697&quot;&gt;“In Venezuela, we couldn’t stop Chávez. Don’t make the same mistakes we did.”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.math.columbia.edu/~woit/wordpress/?p=9076&quot;&gt;“Fascism and the Current National Emergency”&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Games&lt;/p&gt;
 &lt;ul&gt;
@@ -118,17 +119,13 @@ In the stack
 &lt;/ul&gt;
 &lt;h1 id=&quot;section-1&quot;&gt;2016&lt;/h1&gt;
 &lt;h2 id=&quot;december&quot;&gt;December&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Books and focused readings&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Books&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8&quot;&gt;&lt;em&gt;An Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michael Peskin and Daniel Schroeder 1995; (Chapter 1-7) Pros: 1. Jumps right into QFT 2. Has everything, as it is often cited by other textbooks. Cons: 1. Jumps right into QFT without a preparation on special relativity and representation theory 2. Has everything but you can’t find it until you already know what to look for. Hard to grasp a big picture&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743&quot;&gt;&lt;em&gt;A Modern Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michele Maggiore 2005; Cons: Does not jump right into QFT. Pros: 1. Does not jump right into QFT but prepare a reader with special relativity and representation theory 2. Concise and modern (teaches the Wilsonian viewpoint of renormalization with block spin renormalization)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez and Javier Muniain 1994 (Part 1-2); Strike a good balance between rigorous math and physicists’ math. Double as a quick introduction to differential geometry&lt;/li&gt;
-&lt;li&gt;“Chern-Simons quantum field theories” in &lt;a href=&quot;https://www.amazon.com/Introduction-Topological-Quantum-Computation-Jiannis/dp/1107005043&quot;&gt;&lt;em&gt;Introduction to Topological Quantum Computation&lt;/em&gt;&lt;/a&gt;, Pachos 2012&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Readings&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Focused readings&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/9809052&quot;&gt;“Phase space formulation of quantum mechanics and quantum state reconstruction of physical systems with Lie-group symmetries”&lt;/a&gt;, Brif and Mann 1999&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8&quot;&gt;&lt;em&gt;An Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michael Peskin and Daniel Schroeder 1995; (Chapter 1-7) Pros: 1. Jumps right into QFT 2. Has everything, as it is often cited by other textbooks. Cons: 1. Jumps right into QFT without a preparation on special relativity and representation theory 2. Has everything but you can’t find it until you already know what to look for. Hard to grasp a big picture&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743&quot;&gt;&lt;em&gt;A Modern Introduction to Quantum Field Theory&lt;/em&gt;&lt;/a&gt;, Michele Maggiore 2005; Cons: Does not jump right into QFT. Pros: 1. Does not jump right into QFT but prepare a reader with special relativity and representation theory 2. Concise and modern (teaches the Wilsonian viewpoint of renormalization with block spin renormalization)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/GAUGE-FIELDS-KNOTS-GRAVITY-Everything/dp/9810220340&quot;&gt;&lt;em&gt;Gauge Fields, Knots and Gravity&lt;/em&gt;&lt;/a&gt;, John Baez and Javier Muniain 1994 (Part 1-2); Strike a good balance between rigorous math and physicists’ math. Doubles as a quick introduction to differential geometry&lt;/li&gt;
+&lt;li&gt;“Chern-Simons quantum field theories” in &lt;a href=&quot;https://www.amazon.com/Introduction-Topological-Quantum-Computation-Jiannis/dp/1107005043&quot;&gt;&lt;em&gt;Introduction to Topological Quantum Computation&lt;/em&gt;&lt;/a&gt;, Pachos 2012&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Physics and mathematics&lt;/p&gt;
@@ -137,7 +134,7 @@ In the stack
 &lt;li&gt;&lt;a href=&quot;http://smbc-comics.com/comic/the-talk-3&quot;&gt;“The Talk”&lt;/a&gt;, Scott Aaronson and SMBC; “If you don’t talk to your kids about quantum computing… someone else will.”&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.sciencemag.org/news/2016/12/scientists-are-close-building-quantum-computer-can-beat-conventional-one?utm_content=buffere78b2&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&quot;&gt;“Scientists are [closer] to building a quantum computer that can beat a conventional one”&lt;/a&gt;; IonQ, a new quantum computing startup and Chris Monroe&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://eandt.theiet.org/content/articles/2016/11/the-trouble-with-quantum-computing/&quot;&gt;“The Trouble with Quantum Computing”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://physicstoday.scitation.org/doi/full/10.1063/PT.3.3381&quot;&gt;“Foundational theories in topological physics garner Nobel Prize”&lt;/a&gt;, the history leading to discoveries of the Kosterlitz–Thouless transition and the Haldane gap&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://physicstoday.scitation.org/doi/full/10.1063/PT.3.3381&quot;&gt;“Foundational theories in topological physics garner Nobel Prize”&lt;/a&gt;; The history leading to discoveries of the Kosterlitz–Thouless transition and the Haldane gap&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://topocondmat.org/&quot;&gt;Topology in Condensed Matter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://math.stackexchange.com/questions/575230/what-are-quantum-groups&quot;&gt;“What are Quantum Groups?”&lt;/a&gt;; “Quantum groups arise as algebraic structures in which R-matrices satisfying the Yang–Baxter equation naturally arise. These solutions to the Yang–Baxter equation give rise to new families of commuting transfer matrices, and therefore to new exactly solvable models describing new types of phase transitions.”&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.math.columbia.edu/~woit/wordpress/?p=4727&quot;&gt;“25 Years of Topological Quantum Field Theory”&lt;/a&gt; and &lt;a href=&quot;http://www.math.columbia.edu/~woit/wordpress/?p=99&quot;&gt;“Chern-Simons-Witten, Some History”&lt;/a&gt;&lt;/li&gt;
@@ -157,19 +154,19 @@ In the stack
 &lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken__Diamond_wa_Kudakenai&quot;&gt;&lt;em&gt;Jojo’s Bizarre Adventure Part 4: Diamond is Unbreakable&lt;/em&gt;&lt;/a&gt;, David Production&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;november&quot;&gt;November&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Books and focused readings&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Focused readings&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ptp/65/3/10.1143/PTP.65.809/2/65-3-809.pdf?Expires=1486520458&amp;amp;Signature=GfVfeEBvcnC7292wkKhNG~LKS9JnPlRm4m-iIKGZaSum9ip~qB2LmR57Ws09RKRhPo~Vbb1TDpREZU-XjK6m8l2tvGe1-H5737VYa0YwanBOroWqpfwTrGwKnDSj6wCXGfMEX7UqZrj7X6Bdg89j6SdNoa0o6uhnE048Hnav2u8PEAIRl~4RlxyDAaPytQluGTbDkTPElYrxdFHGgVy9WtdzdqiXpCJEjp0WrxgI5Ga0uPJEAsuD5RT7R1C6u9jF7aCIw5q99gjFzBZiS3EFrOcYD377bOAKbYy16198fohNBT6GwWTjemOIk~jN4MGd10RYETX8e8ueZ9oGQ3j~jA__&amp;amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q&quot;&gt;“The Group Theoretical Structure of Fermion Many-Body Systems Arising from the Canonical Anticommutation Relation”&lt;/a&gt;, Fukutome 1981&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.iap.tu-darmstadt.de/tqp/grp_jrenes/thesis.html&quot;&gt;“Frames, designs, and spherical codes in quantum information theory”&lt;/a&gt;, Renes 2004&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0611002&quot;&gt;“Evenly distributed unitaries: on the structure of unitary designs”&lt;/a&gt;, Gross, Audenaert and Eisert 2007&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1609.08172&quot;&gt;“The Clifford group fails gracefully to be a unitary 4-design”&lt;/a&gt;, Zhu, Kueng, Grassl and Gross 2016&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.08070&quot;&gt;“Low rank matrix recovery from Clifford orbits”&lt;/a&gt;, Kueng, Zhu and Gross 2016&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ptp/65/3/10.1143/PTP.65.809/2/65-3-809.pdf?Expires=1486520458&amp;amp;Signature=GfVfeEBvcnC7292wkKhNG~LKS9JnPlRm4m-iIKGZaSum9ip~qB2LmR57Ws09RKRhPo~Vbb1TDpREZU-XjK6m8l2tvGe1-H5737VYa0YwanBOroWqpfwTrGwKnDSj6wCXGfMEX7UqZrj7X6Bdg89j6SdNoa0o6uhnE048Hnav2u8PEAIRl~4RlxyDAaPytQluGTbDkTPElYrxdFHGgVy9WtdzdqiXpCJEjp0WrxgI5Ga0uPJEAsuD5RT7R1C6u9jF7aCIw5q99gjFzBZiS3EFrOcYD377bOAKbYy16198fohNBT6GwWTjemOIk~jN4MGd10RYETX8e8ueZ9oGQ3j~jA__&amp;amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q&quot;&gt;“The Group Theoretical Structure of Fermion Many-Body Systems Arising from the Canonical Anticommutation Relation”&lt;/a&gt;, Fukutome 1981&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Physics and mathematics&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.04471&quot;&gt;“Adiabatic Quantum Computing”&lt;/a&gt;, Albash and Lidar 2016&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://frankwilczek.com/2015/koopmanVonNeumann02.pdf&quot;&gt;“Notes on Koopman von Neumann Mechanics, and a Step Beyond”&lt;/a&gt;, Wilczek 2015; it is basically a &lt;a href=&quot;https://arxiv.org/abs/1203.2317&quot;&gt;quantum-mechanics-free-subsystem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.04471&quot;&gt;“Adiabatic Quantum Computing”&lt;/a&gt;, Albash and Lidar 2016&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://jpellis.me/projects/tikz-feynman/&quot;&gt;TikZ-Feynman&lt;/a&gt; and &lt;a href=&quot;https://jpellis.me/projects/simpler-wick/&quot;&gt;Simpler-Wick&lt;/a&gt; LaTeX packages, Ellis 2015&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Psychology, biology, and statistics&lt;/p&gt;
@@ -180,7 +177,6 @@ In the stack
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://slatestarcodex.com/2016/11/16/you-are-still-crying-wolf/&quot;&gt;“You are Still Crying Wolf”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://slatestarcodex.com/2016/11/07/tuesday-shouldnt-change-the-narrative/&quot;&gt;“Tuesday Shouldn’t Change the Narrative”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/julia.galef/posts/10102766521909712&quot;&gt;Julia Galef on Trump&lt;/a&gt;; “The”don’t harm a messenger&amp;quot; norm is what makes it possible for armies to send messengers to negotiate with each other, to avert or end wars. Defecting on that norm is so much worse than harming a particular person, or army, or country. It’s harming our &lt;em&gt;ability to limit harm to each other&lt;/em&gt; — a meta-harm.&amp;quot;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Manga&lt;/p&gt;
 &lt;ul&gt;

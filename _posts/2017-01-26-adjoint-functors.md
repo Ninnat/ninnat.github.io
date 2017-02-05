@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adjoint functors
-subtitle:
+subtitle: The conceptual inverse in category theory
 categories:
   - category theory
 tags:

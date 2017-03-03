@@ -13,7 +13,8 @@ http://i2000s.github.io/notebooks.html
 http://i2000s.github.io/search.html  
 http://i2000s.github.io/sitemap.txt  
 http://i2000s.github.io/tags.html  
-http://i2000s.github.io/tools.html 
+http://i2000s.github.io/tools.html  
+http://i2000s.github.io/writings/ 
 
  
 http://i2000s.github.io/2017/02/01/log.html  

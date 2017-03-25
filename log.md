@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: default
 permalink: /log/
 title: Log
 subtitle: What I read, links, manga, anime

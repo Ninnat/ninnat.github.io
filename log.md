@@ -1,11 +1,10 @@
 ---
-layout: post
+layout: null
+permalink: /log/
 title: Log
 subtitle: What I read, links, manga, anime
-categories:
-tags:
 ---
-Modified: *1 Mar 2017*; Status: *perpetually in progress*
+Modified: *25 Mar 2017*; Status: *perpetually in progress*
 <!-- Template
 # Year
 ## Month
@@ -23,15 +22,53 @@ Anime
 
 # 2017
 
-<!--
+## March
 
-- ["Tapering off qubits to simulate fermionic Hamiltonians"](https://arxiv.org/abs/1701.08213), Bravyi, Gambetta, Mezzacapo and Temme 2016
-- ["The Bravyi–Kitaev Transformation: Properties and Applications"](http://onlinelibrary.wiley.com/doi/10.1002/qua.24969/abstract), Tranter *et al.* 2015
+**Focused readings**
+
+- [On discrete structures in finite Hilbert spaces](https://arxiv.org/abs/1701.07902), Bengtsson and Zyczkowski 2017; To be added in the second edition of [*Geometry of Quantum States*](https://www.amazon.com/Geometry-Quantum-States-Introduction-Entanglement/dp/052189140X); I appreciate that they include that phase point operators for the odd dimensional discrete Wigner function are Clifford operators, the fact I had seen only in Zhu's papers below
+- [Permutation symmetry determines the discrete Wigner function](https://arxiv.org/abs/1504.03773), Zhu 2016
+- [Mutually unbiased bases as minimal Clifford covariant 2-designs](https://arxiv.org/abs/1505.01123), Zhu 2015
+- [SIC-POVMs and the extended Clifford group](https://arxiv.org/abs/quant-ph/0412001), Appleby 2005
+- [Properties of the extended Clifford group with applications to SIC-POVMs and MUBs](https://arxiv.org/abs/0909.5233), Appleby 2009
+- [Contextuality and Wigner function negativity in qubit quantum computation](https://arxiv.org/abs/1511.08506v2), Raussendorf, Browne, Delfosse, Okay, Bermejo-Vega 2016
+- [Discrete Wigner Function Derivation of the Aaronson-Gottesman Tableau Algorithm](https://arxiv.org/abs/1703.04630), Kocia, Huang, Love 2017
+- [Contextuality of Identical Particles](https://arxiv.org/abs/1609.01250), Kurzynski 2017
+<!-- - [Tapering off qubits to simulate fermionic Hamiltonians](https://arxiv.org/abs/1701.08213), Bravyi, Gambetta, Mezzacapo and Temme 2016
+- [The Bravyi–Kitaev Transformation: Properties and Applications](http://onlinelibrary.wiley.com/doi/10.1002/qua.24969/abstract), Tranter *et al.* 2015
+- [Efficient simulation of quantum error correction under coherent error based on non-unitary free-fermionic formalism](https://arxiv.org/abs/1703.03671), Suzuki, Fujii, Koashi 2017
+- [Phase Space Approach to Dynamics of Interacting Fermions](https://arxiv.org/abs/1604.08664), Davidson, Sels, Kasper, Polkovnikov 2016
+- [SU(N)-symmetric quasi-probability distribution functions](https://arxiv.org/abs/1108.2075), Tilma, Nemoto 2012 -->
+
+Physics and mathematics
+
+- [Is Verlinde’s emergent gravity compatible with general relativity?](http://backreaction.blogspot.com/2017/03/is-verlindes-emergent-gravity.html)
+- [D-Wave/Google news](http://www.scottaaronson.com/blog/?p=3192)
+- [The quantum computer FAQ](https://research.kudelskisecurity.com/2017/02/06/the-quantum-computer-faq/)
+
+Psychology, biology, and statistics
+
+- [Daniel Dennett's Science of the Soul](http://www.newyorker.com/magazine/2017/03/27/daniel-dennetts-science-of-the-soul)
+- The accusation of p-hacking [finally gets to Wansink](http://www.chronicle.com/article/Spoiled-Science/239529) and things look really bad for researchers associated with him
+
+Politics
+
+- [Guided by the Beauty of Our Weapon](https://slatestarcodex.com/2017/03/24/guided-by-the-beauty-of-our-weapons/); "Logical debate has one advantage over narrative, rhetoric, and violence: it’s an asymmetric weapon. That is, it’s a weapon which is stronger in the hands of the good guys than in the hands of the bad guys. In ideal conditions (which may or may not ever happen in real life) – the kind of conditions where everyone is charitable and intelligent and wise – the good guys will be able to present stronger evidence, cite more experts, and invoke more compelling moral principles. The whole point of logic is that, when done right, it can only prove things that are true... If you want people to be right more often than chance, you have to teach them ways to distinguish truth from falsehood. If this is in the face of enemy action, you will have to teach them so well that they cannot be fooled. You will have to do it person by person until the signal is strong and clear. You will have to raise the sanity waterline. There is no shortcut."
+- [Book review: *Seeing Like a State*](http://slatestarcodex.com/2017/03/16/book-review-seeing-like-a-state/)
+
+Manga
+
+- [Trash](https://myanimelist.net/manga/61683/Trash) Vol. 1-5, Kenji Yamamoto (Story), D.P. (Art); An ultra-violent manga with good art
 
 Games
 
-- [Omito (JO), Tomo (LE), Zadi (RV)](https://www.youtube.com/watch?v=ceQU-KqIRNM); Omito, arguably the strongest Johnny player, participates in Mikado's team tournament along with the strongest Leo and Raven players  
--->
+- [Ikegami (Bang)](https://youtu.be/7vb32qxDp6M?t=9m40s); Niconico tag: もう優勝でいいというコンボ ("Combo that should make you a champion already")
+- [Tomo (LE) vs Isamu (VE)](https://www.youtube.com/watch?v=AMLuE92Os5o)
+- [Efute (MA)](https://www.youtube.com/watch?v=Ty-p3FErEWo)
+- [もう全員優勝でいい大会 ("Everyone should just be a champion already" tournament)](https://www.youtube.com/watch?v=oMm5kQu6GW8) at a-cho in Osaka
+- [Xian (Ibuki)](https://www.youtube.com/watch?v=SZHziU8EIJY)
+- [Tomo (LE) vs Yosuke (AX)](https://www.youtube.com/watch?v=09VODMUghhc) FT10
+- [Omito (JO), Tomo (LE), Zadi (RV)](https://www.youtube.com/watch?v=ceQU-KqIRNM); Omito, arguably the strongest Johnny player, participates in Mikado's team tournament along with the strongest Leo and Raven players
 
 ## February
 
@@ -75,13 +112,14 @@ Others
 
 Manga
 
-- [*Sesuji wo Pin! to*](https://myanimelist.net/manga/88442/Sesuji_wo_Pin_to__Shikakou_Kyougi_Dance-bu_e_Youkoso) Vol.1-9, Takuma Yokota; an incredibly uplifting shounen
+- [*Sesuji wo Pin! to*](https://myanimelist.net/manga/88442/Sesuji_wo_Pin_to__Shikakou_Kyougi_Dance-bu_e_Youkoso) Vol.1-9, Takuma Yokota; an incredibly uplifting shounen manga about competitive dancing
 <!-- - [*Crest of the Stars*](https://myanimelist.net/manga/70189/Seikai_no_Monshou), Hiroyuki Morioka
 - [*Kako to Nise Tantei*](https://myanimelist.net/manga/73639/Kako_to_Nise_Tantei), Yasunori Mitsunaga -->
 
 Games
 
-[Mikaten](https://eventscrubs.wordpress.com/2017/01/04/tenkaichi-budokai-a-guide-to-mikados-upcoming-guilty-gear-league/) \\
+[Mikaten](https://eventscrubs.wordpress.com/2017/01/04/tenkaichi-budokai-a-guide-to-mikados-upcoming-guilty-gear-league/) FT10
+
 - [Samitto (CH) vs Nage (FA)](https://www.youtube.com/watch?v=cJ37WeJ5Zkw)
 - [Haaken (SO) vs Karinchu (JO)](https://www.youtube.com/watch?v=XAr_yjt9Q0M); What's with all the Dragon Installs and trading standing Dust midscreen?
 - [Haaken (SO) vs Kazuki (DI)](https://www.youtube.com/watch?v=6TeqHQTGlxM)
@@ -145,7 +183,8 @@ Politics
 
 Games
 
-[Mikaten](https://eventscrubs.wordpress.com/2017/01/04/tenkaichi-budokai-a-guide-to-mikados-upcoming-guilty-gear-league/) \\
+[Mikaten](https://eventscrubs.wordpress.com/2017/01/04/tenkaichi-budokai-a-guide-to-mikados-upcoming-guilty-gear-league/) FT10
+
 - [Samitto (CH) vs FAB (PO)](https://www.youtube.com/watch?v=bS-a-OmOjyk)
 - [Haaken (SO) vs Zadi (RV)](https://www.youtube.com/watch?v=9vKrsDLr13M)
 

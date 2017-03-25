@@ -4,13 +4,19 @@ title: About
 permalink: /about/
 ---
 
-# This Site
+# About This Site
 
-I keep a record of my writing to not have to repeat myself, to be aware of errors in my thinking once I learn more and to correct them.  [^1] I imagine most of what I write to be drafts in progress, parts of a [Long Content](http://www.gwern.net/About#long-content).
+I write so that
 
-Expect more from this section once there is more content.
+- I don't have to repeat myself
+- I can find my mistakes later
+- I can correct these mistakes.  [^1]
 
-# Websites
+I thought of my writings as drafts in progress, all being parts of a [Long Content](http://www.gwern.net/About#long-content).
+
+# About Me
+
+I'm a graduate student doing research in theoretical quantum information science. Everything on this site is my own viewpoint unless specified otherwise by a publication. 
 
 I'm on
 

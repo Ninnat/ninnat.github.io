@@ -26,9 +26,8 @@ Anime
 
 **Focused readings**
 
-- [On discrete structures in finite Hilbert spaces](https://arxiv.org/abs/1701.07902), Bengtsson and Zyczkowski 2017; To be added in the second edition of [*Geometry of Quantum States*](https://www.amazon.com/Geometry-Quantum-States-Introduction-Entanglement/dp/052189140X); I appreciate that they include that phase point operators for the odd dimensional discrete Wigner function are Clifford operators, the fact I had seen only in Zhu's papers below
-- [Permutation symmetry determines the discrete Wigner function](https://arxiv.org/abs/1504.03773), Zhu 2016
-- [Mutually unbiased bases as minimal Clifford covariant 2-designs](https://arxiv.org/abs/1505.01123), Zhu 2015
+- [Homogeneous Kähler Manifolds: Paving the Way Towards New Supersymmetric Sigma Models](https://projecteuclid.org/download/pdf_1/euclid.cmp/1104114543), Bordemann, Forger and Römer 1986; A readable account on when a homogeneous space is Kähler i.e. has compatible Riemannian and symplectic structures
+- [On discrete structures in finite Hilbert spaces](https://arxiv.org/abs/1701.07902), Bengtsson and Zyczkowski 2017; To be added in the second edition of [*Geometry of Quantum States*](https://www.amazon.com/Geometry-Quantum-States-Introduction-Entanglement/dp/052189140X); I appreciate that they include that phase point operators for the odd dimensional discrete Wigner function are Clifford operators, the fact I had seen only in Huangjun Zhu's [paper](https://arxiv.org/abs/1504.03773)
 - [SIC-POVMs and the extended Clifford group](https://arxiv.org/abs/quant-ph/0412001), Appleby 2005
 - [Properties of the extended Clifford group with applications to SIC-POVMs and MUBs](https://arxiv.org/abs/0909.5233), Appleby 2009
 - [Contextuality and Wigner function negativity in qubit quantum computation](https://arxiv.org/abs/1511.08506v2), Raussendorf, Browne, Delfosse, Okay, Bermejo-Vega 2016
@@ -40,8 +39,12 @@ Anime
 - [Phase Space Approach to Dynamics of Interacting Fermions](https://arxiv.org/abs/1604.08664), Davidson, Sels, Kasper, Polkovnikov 2016
 - [SU(N)-symmetric quasi-probability distribution functions](https://arxiv.org/abs/1108.2075), Tilma, Nemoto 2012 -->
 
+## Links
+
 Physics and mathematics
 
+- [Flag manifolds](http://elib.mi.sanu.ac.rs/files/journals/zr/14/n014p003.pdf), Alekseevsky 1996
+- [Lie group actions on manifolds](https://nms.kcl.ac.uk/juergen.berndt/sophia.pdf), Jürgen Berndt
 - [Is Verlinde’s emergent gravity compatible with general relativity?](http://backreaction.blogspot.com/2017/03/is-verlindes-emergent-gravity.html)
 - [D-Wave/Google news](http://www.scottaaronson.com/blog/?p=3192)
 - [The quantum computer FAQ](https://research.kudelskisecurity.com/2017/02/06/the-quantum-computer-faq/)
@@ -62,12 +65,12 @@ Manga
 
 Games
 
-- [Ikegami (Bang)](https://youtu.be/7vb32qxDp6M?t=9m40s); Niconico tag: もう優勝でいいというコンボ ("Combo that should make you a champion already")
-- [Tomo (LE) vs Isamu (VE)](https://www.youtube.com/watch?v=AMLuE92Os5o)
-- [Efute (MA)](https://www.youtube.com/watch?v=Ty-p3FErEWo)
+- [Ikegami (Bang)](https://youtu.be/7vb32qxDp6M?t=9m40s); Niconico tag: もう優勝でいいというコンボ ("A combo that should make you a champion already"), the meme originated from the phrase uttered by a-cho announcer KaKyu at Arc Revolution Cup 2013
 - [もう全員優勝でいい大会 ("Everyone should just be a champion already" tournament)](https://www.youtube.com/watch?v=oMm5kQu6GW8) at a-cho in Osaka
-- [Xian (Ibuki)](https://www.youtube.com/watch?v=SZHziU8EIJY)
-- [Tomo (LE) vs Yosuke (AX)](https://www.youtube.com/watch?v=09VODMUghhc) FT10
+<!-- - [Tomo (LE) vs Isamu (VE)](https://www.youtube.com/watch?v=AMLuE92Os5o)
+- [Efute (MA)](https://www.youtube.com/watch?v=Ty-p3FErEWo)
+- [Xian (Ibuki)](https://www.youtube.com/watch?v=SZHziU8EIJY); Finally
+- [Tomo (LE) vs Yosuke (AX)](https://www.youtube.com/watch?v=09VODMUghhc) FT10 -->
 - [Omito (JO), Tomo (LE), Zadi (RV)](https://www.youtube.com/watch?v=ceQU-KqIRNM); Omito, arguably the strongest Johnny player, participates in Mikado's team tournament along with the strongest Leo and Raven players
 
 ## February

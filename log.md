@@ -4,7 +4,7 @@ permalink: /log/
 title: Log
 subtitle: What I read, links, manga, anime
 ---
-Modified: *25 Mar 2017*; Status: *perpetually in progress*
+Modified: *Apr 2017*; Status: *perpetually in progress*
 <!-- Template
 # Year
 ## Month
@@ -15,12 +15,62 @@ Readings
 Physics and mathematics
 Psychology, biology, and statistics
 Politics
-Musics
+Music
 Games
 Anime
 -->
 
 # 2017
+
+## April
+
+**Focused readings**
+
+- [A Calculation of $SO(8)$ Clebsch-Gordan coefficients](http://iopscience.iop.org/article/10.1088/0305-4470/11/6/007), Barnes, Jarvis and Ketley 1978
+- [Gelfand pairs and spherical functions](downloads.hindawi.com/journals/ijmms/1979/795603.pdf); Jean Dieudonné
+- [Universal quantum computation with little entanglement](https://arxiv.org/abs/1204.3107), Van den Nest 2013
+- Emily Esfahani Smith, [*The Power of Meaning: Crafting a Life that Matters*](https://www.amazon.com/Power-Meaning-Crafting-Life-Matters/dp/0553419994)
+
+**Links**  
+
+Physics and mathematics
+
+- [Cartan decomposition in quantum information theory](https://arxiv.org/abs/quant-ph/0504044), D'Alessandro and Albertini 2007
+- [A Lie-algebraic measure for squeezing](https://arxiv.org/abs/1607.00873), Idel, Lercher andWolf 2016
+- [Lectures on geometric constructions of the irreducible representations of $GL(n)$](https://arxiv.org/abs/0912.0569), Kamnitzer
+- [Riemann hypothesis: is Bender-Brody-Müller Hamiltonian a new line of attack?](https://math.stackexchange.com/questions/2211278/riemann-hypothesis-is-bender-brody-m%C3%BCller-hamiltonian-a-new-line-of-attack/); "As long as physicists use algebra, or algorithmic arguments, they can find outstanding results. But when it comes to analysis, they may loose their judgment, and grave mistakes show up at the corner. Analysis is not easily amenable to algorithmic descriptions. And this is precisely where the power of Mathematics lies: by manipulating infinities, Mathematics goes way beyond the Church-Turing definition of computability. And what is Analysis if not manipulating infinities, through limits, convergence and the likes?"
+<!-- - [The elementary geometric structure of compact Lie groups](http://hopf.math.purdue.edu/Dwyer-Wilkerson/lie/liegroups.pdf), Dwyer and Wilkerson-->
+
+Psychology, biology, and statistics
+
+- [The laws of life](http://physicstoday.scitation.org/doi/10.1063/PT.3.3493)
+- [Mice's memories are formed rapidly and simultaneously in the prefrontal cortex and the hippocampus ](http://news.mit.edu/2017/neuroscientists-identify-brain-circuit-necessary-memory-formation-0406)
+- [Invisible manipulators of your mind](http://www.nybooks.com/articles/2017/04/20/kahneman-tversky-invisible-mind-manipulators/)
+
+> Sunstein and Thaler have described the political philosophy of such interventions as Libertarian Paternalism. It is “libertarian” because they do not impose mandates to narrow people’s choice, but merely frame choices or provide incentives that tend to make people “better off, as judged by themselves.” Their claim is that this form of influence, albeit often unconscious, is not manipulative or coercive because the possibility of a person choosing differently is not closed down." "The deeper concern that Lewis’s happy narrative omits entirely is that behavioral scientists claim to have developed the capacity to manipulate people’s emotional lives in ways that shape their fundamental preferences, values, and desires... The guiding idea for the World Well-Being Project is that we need not rely on our faulty subjective judgments about what will make us happy or what path in life will give us a sense of meaning.2 But if those studying behavioral influence are targeting the form of well-being that we value and the kind of happiness we seek, then it is harder to see how people’s being “better off, as judged by themselves” genuinely preserves their freedom.""
+
+> Whatever the truth of Cambridge Analytica’s claims, the very existence of such companies tells us something important about the weight that unconscious influence, relative to reasoned argument, now plays in political campaigns... By now, behavioral strategies are in the open and are ubiquitous. The term “propaganda” has been replaced by “a behavioral approach to persuasive communication with quantifiable results.”
+
+Politics
+
+Others
+
+- [Thinking about thinking](https://meaningness.com/metablog/how-to-think/meaningness.com/about-my-sites), David Chapman; I was looking for a resource recommendation about thinking about thinking and expected to find Richard Feynman, Edwin Jaynes, and Paul Graham mentioned in the same place
+
+<!-- Music
+
+- Blue Sea of 53 Minutes, 空色のシンフォニック・スイート, Melodic Taste (C91) -->
+
+Games
+
+- [Samitto (CH)](https://www.youtube.com/watch?v=q3jtIoetUS8) vs En (SL), Taka (SL), Nage (FA), FAB (PO)
+- [Sharon (BA)](https://www.youtube.com/watch?v=vSJ7LWlusFg)
+- [Hase (SL)](https://www.youtube.com/watch?v=w3rSmQtni04&t=24s) vs [310 (VE)](https://www.youtube.com/watch?v=gIyqjcJpH9w&t=71s), [Karinchu (JO)](https://www.youtube.com/watch?v=9wXCXpWhxI4&t=31s) vs [Nage (FA)](https://www.youtube.com/watch?v=6hyeV5d0kbg)
+- [Tomo (LE) vs Chachacha (KU)](https://www.youtube.com/watch?v=ajfbocFWu4Y&t=39s): [commentary](https://www.youtube.com/watch?v=zxO662GOpss)
+
+Manga
+
+- [High Score Girl](https://myanimelist.net/manga/44501/High_Score_Girl), Oshikiri Rensuke
 
 ## March
 
@@ -30,8 +80,10 @@ Anime
 - [On discrete structures in finite Hilbert spaces](https://arxiv.org/abs/1701.07902), Bengtsson and Zyczkowski 2017; To be added in the second edition of [*Geometry of Quantum States*](https://www.amazon.com/Geometry-Quantum-States-Introduction-Entanglement/dp/052189140X); I appreciate that they include that phase point operators for the odd dimensional discrete Wigner function are Clifford operators, the fact I had seen only in Huangjun Zhu's [paper](https://arxiv.org/abs/1504.03773)
 - [SIC-POVMs and the extended Clifford group](https://arxiv.org/abs/quant-ph/0412001), Appleby 2005
 - [Properties of the extended Clifford group with applications to SIC-POVMs and MUBs](https://arxiv.org/abs/0909.5233), Appleby 2009
-- [Contextuality and Wigner function negativity in qubit quantum computation](https://arxiv.org/abs/1511.08506v2), Raussendorf, Browne, Delfosse, Okay, Bermejo-Vega 2016
 - [Discrete Wigner Function Derivation of the Aaronson-Gottesman Tableau Algorithm](https://arxiv.org/abs/1703.04630), Kocia, Huang, Love 2017
+- [Frame representations of quantum mechanics and the necessity of negativity in quasi-probability representations](https://arxiv.org/abs/0711.2658), Ferrie and Emerson 2008 (Reread)
+- [Negativity and contextuality are equivalent notions of nonclassicality](https://arxiv.org/abs/0710.5549), Spekkens 2008 (Reread)
+- [Contextuality for preparations, transformations, and unsharp measurements](https://arxiv.org/abs/quant-ph/0406166), Spekkens 2005
 - [Contextuality of Identical Particles](https://arxiv.org/abs/1609.01250), Kurzynski 2017
 <!-- - [Tapering off qubits to simulate fermionic Hamiltonians](https://arxiv.org/abs/1701.08213), Bravyi, Gambetta, Mezzacapo and Temme 2016
 - [The Bravyi–Kitaev Transformation: Properties and Applications](http://onlinelibrary.wiley.com/doi/10.1002/qua.24969/abstract), Tranter *et al.* 2015
@@ -67,10 +119,8 @@ Games
 
 - [Ikegami (Bang)](https://youtu.be/7vb32qxDp6M?t=9m40s); Niconico tag: もう優勝でいいというコンボ ("A combo that should make you a champion already"), the meme originated from the phrase uttered by a-cho announcer KaKyu at Arc Revolution Cup 2013
 - [もう全員優勝でいい大会 ("Everyone should just be a champion already" tournament)](https://www.youtube.com/watch?v=oMm5kQu6GW8) at a-cho in Osaka
-<!-- - [Tomo (LE) vs Isamu (VE)](https://www.youtube.com/watch?v=AMLuE92Os5o)
-- [Efute (MA)](https://www.youtube.com/watch?v=Ty-p3FErEWo)
-- [Xian (Ibuki)](https://www.youtube.com/watch?v=SZHziU8EIJY); Finally
-- [Tomo (LE) vs Yosuke (AX)](https://www.youtube.com/watch?v=09VODMUghhc) FT10 -->
+- [Tomo (LE) vs Yosuke (AX)](https://www.youtube.com/watch?v=09VODMUghhc) FT10: [commentary](https://www.youtube.com/watch?v=l8GoiWp3lBc&t=2613s)
+- [Tomo (LE) vs Isamu (VE)](https://www.youtube.com/watch?v=AMLuE92Os5o)
 - [Omito (JO), Tomo (LE), Zadi (RV)](https://www.youtube.com/watch?v=ceQU-KqIRNM); Omito, arguably the strongest Johnny player, participates in Mikado's team tournament along with the strongest Leo and Raven players
 
 ## February
@@ -81,8 +131,8 @@ Games
 - [Extending matchgates into universal quantum computation](https://arxiv.org/abs/1106.1863), Brod and Galvão 2011
 - [Geometric theory of nonlocal two-qubit operations](https://arxiv.org/abs/quant-ph/0209120),  Zhang *et al.* 2003
 - [Quantum Contextuality with Stabilizer States](https://arxiv.org/abs/1501.04342), Howard, Brennan and Vala 2013
-- [Hidden variables and the two theorems of John Bell](http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.65.803), Mermin 1993
-- [Coherent states in the fermionic Fock space](https://arxiv.org/abs/1408.2760), Oeckl 2014
+- [Hidden variables and the two theorems of John Bell](http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.65.803), Mermin 1993 (Reread)
+- [Coherent states in the fermionic Fock space](https://arxiv.org/abs/1408.2760), Oeckl 2014 (Reread)
 - [Some special isomorphisms of Lie algebras in low dimensions](https://www.math.cuhk.edu.hk/~plyung/isom_LieAlg.pdf), Yung
 - [Gelfand Pairs, Representation Theory of the Symmetric Group, and the Theory of Spherical Functions](https://mathematics.stanford.edu/wp-content/uploads/2013/08/Ryan-Honors-Thesis-2014.pdf), Ryan 2014
 
@@ -201,7 +251,7 @@ Manga
 
 **Focused readings**
 
-- [Phase space formulation of quantum mechanics and quantum state reconstruction of physical systems with Lie-group symmetries](https://arxiv.org/abs/quant-ph/9809052), Brif and Mann 1999
+- [Phase space formulation of quantum mechanics and quantum state reconstruction of physical systems with Lie-group symmetries](https://arxiv.org/abs/quant-ph/9809052), Brif and Mann 1999 (Reread)
 - [*An Introduction to Quantum Field Theory*](https://www.amazon.com/Introduction-Quantum-Theory-Frontiers-Physics-ebook/dp/B0052TUEM8), Michael Peskin and Daniel Schroeder 1995; (Chapter 1-7) Pros: 1. Jumps right into QFT 2. Has everything, as it is often cited by other textbooks. Cons: 1. Jumps right into QFT without a preparation on special relativity and representation theory 2. Has everything but you can't find it until you already know what to look for. Hard to grasp a big picture
 - [*A Modern Introduction to Quantum Field Theory*](https://www.amazon.com/Modern-Introduction-Quantum-Theory-Physics/dp/0198520743), Michele Maggiore 2005; Cons: Does not jump right into QFT. Pros: 1. Does not jump right into QFT but prepare a reader with special relativity and representation theory 2. Concise and modern (teaches the Wilsonian viewpoint of renormalization with block spin renormalization)
 - [TikZ-Feynman](https://jpellis.me/projects/tikz-feynman/) and [Simpler-Wick](https://jpellis.me/projects/simpler-wick/) LaTeX packages, Ellis 2015
@@ -223,7 +273,7 @@ Physics and mathematics
 - [Notes on the path integral method](http://www.blau.itp.unibe.ch/lecturesPI.pdf), Matthias Blau
 - [Visualizing the Riemann zeta function and analytic continuation](https://www.youtube.com/watch?v=sD0NjbwqlYw)
 
-Musics
+Music
 
 - [All Touhou Kanjuden ~ Legacy of Lunatic Kingdom themes](https://www.youtube.com/watch?v=5VDa5gTXhj8), Marasy (Piano)
 

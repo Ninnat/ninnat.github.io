@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-05-02T01:37:48+00:00</updated>
+ <updated>2017-05-02T01:47:59+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -18,7 +18,7 @@
    <updated>2017-01-26T00:00:00+00:00</updated>
    <id>h/2017/01/26/adjoint-functors</id>
    <content type="html">&lt;p&gt;Modified: &lt;em&gt;28 Jan 2017&lt;/em&gt;; Status: &lt;em&gt;completed&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Lately I’ve been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view situated in the intersection of what I’m confortable with and what I need. (You can find better general introductions out there written by mathematicians such as &lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;this 3-parter&lt;/a&gt; by Todd Trimble.)&lt;/p&gt;
+&lt;p&gt;Lately I’ve been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view that I need at the level I’m comfortable with and what I need. (You can find better general introductions out there written by mathematicians such as &lt;a href=&quot;https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/&quot;&gt;this 3-parter&lt;/a&gt; by Todd Trimble.)&lt;/p&gt;
 &lt;p&gt;My first contact with category theory was through the book &lt;a href=&quot;https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625&quot;&gt;&lt;em&gt;Mathematical Physics&lt;/em&gt;&lt;/a&gt; by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a natural isomorphism which doesn’t entail making any arbitrary choice) object that has a “universal” property that can simulate the relations to all other objects of the same kind and so can be thought of as the “best” object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;category&lt;/strong&gt; \(\mathcal{C}\) is a class of objects and morphisms between them. If \(X\) and \(Y\) are &lt;strong&gt;objects&lt;/strong&gt; in \(\mathcal{C}\), the class of &lt;strong&gt;morphisms&lt;/strong&gt; between \(X\) and \(Y\) is denoted by \(\text{Hom}(X,Y)\). They are also represented diagrammatically as arrows \(f:X \to Y\) for \(f \in \text{Hom}(X,Y)\). For \(\mathcal{C}\) to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories.&lt;/p&gt;
 &lt;ul&gt;

@@ -26,8 +26,8 @@ module Jekyll
       tweets = Twitter.user_timeline(@user)
       for i in 0 ... @count.to_i
       out = out + "<li>" + markdown.render(tweets[i].text) +
-        " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
-        tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " + 
+        " <a href=\"http://twitter.com/" + @user + "/statuses/" +
+        tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " +
         "</li>"
       end
       out + "</ul>"
@@ -53,14 +53,14 @@ module Jekyll
           for i in 0 ... @count.to_i
             doc = Nokogiri::HTML.parse(feed.entries[i].content) # parse the content
             # Print title, content
-            out = out + "<li>" + 
+            out = out + "<li>" +
               feed.entries[i].title + ": " +
-              "<em>" + 
+              "<em>" +
               doc.css('blockquote').text.gsub(/\n/, ' ').squeeze(' ').strip[0 .. 150] +
-              "</em>" + 
+              "</em>" +
               " <a href=\"" + feed.entries[i].url + "\">" +
               feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" +
-              "</li>" 
+              "</li>"
           end
           out + "</ul>"
       end
@@ -76,11 +76,11 @@ module Jekyll
       if input[1] == nil
         @count = 3
       end
-      @address = "i2000s/"+"#{@text}"
+      @address = "ninnat/"+"#{@text}"
     end
 
-    def render(context) 
-      repo = Octokit.commits(@address) 
+    def render(context)
+      repo = Octokit.commits(@address)
       out = "<ul>"
       for i in 0 ... [repo.size, 2].min
         out = out + "<li>" +
@@ -118,13 +118,13 @@ module Jekyll
       for i in 0 ... @count.to_i
         doc = Nokogiri::HTML.parse(feed.entries[i].summary) # parse the content
         # Print title, content
-        out = out + "<li>" + 
+        out = out + "<li>" +
           " <a href=\"" + feed.entries[i].url + "\">" +
           "<h4>"+feed.entries[i].title + "</h4></a>" +
-          doc.xpath("//p[1]").text +  
-          doc.xpath("//p[2]").text + 
+          doc.xpath("//p[1]").text +
+          doc.xpath("//p[2]").text +
           feed.entries[i].published.strftime("%I:%M %Y/%m/%d") +
-          "</li>" 
+          "</li>"
       end
       out + "</ul>"
     end
@@ -142,8 +142,3 @@ Liquid::Template.register_tag('twitter_feed', Jekyll::TwitterFeed)
 Liquid::Template.register_tag('github_feed', Jekyll::GithubFeed)
 Liquid::Template.register_tag('github_commits', Jekyll::GitCommits)
 Liquid::Template.register_tag('mendeley_feed', Jekyll::MendeleyFeed)
-
-
-
-
-

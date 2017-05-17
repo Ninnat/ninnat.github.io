@@ -88,19 +88,19 @@ pandoc:
 #highlighter: pygments
 
 ## Have pages & posts use their default layouts, respectively
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# defaults:
+#  -
+#    scope:
+#      path: ""
+#      type: "pages"
+#    values:
+#      layout: "page"
+#  -
+#    scope:
+#      path: ""
+#      type: "posts"
+#    values:
+#      layout: "post"
 
 exclude:
   - Gemfile

@@ -153,11 +153,6 @@ var _hmt = _hmt || [];
             
             <li class=""><a href="/about/">About</a></li>
          
-            
-            
-            
-            <li class=""><a href="/log/">Log</a></li>
-         
         </ul>
       <!-- Search site using Google's index -->
         <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
@@ -223,7 +218,7 @@ Lately I’ve been thinking about induced representations and the Frobenius reci
         
             
                 
-<img  src="/assets/img/posts/zuckerberg.jpg" height="100" />
+<img  src="/assets/img/posts/zuckerberg.jpg" / height="100" />
                 -->
 
       อาจจะเคยเห็นหนังสือ Quantum Physics for Babies ที่ Mark Zuckerberg อ่านให้ลูกฟัง
@@ -282,7 +277,7 @@ I’ve been blogging on Wordpress for a long time (in Thai) but despite how easy
             <hr>
             <h4> <a href="https://github.com/i2000s" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;" >
               <img src="http://ninnat.github.io/assets/img/icon-github.png" alt="github"> What I'm Coding </a></h4>
-            <ul><li>i2000s pushed to master at i2000s/Archive: <em>Some fundamental works for EM and quantum optics.</em> <a href="https://github.com/i2000s/Archive/compare/017dd661f7...fdd44cf236">10:45 2017/05/01</a></li><li>i2000s commented on issue i2000s/cn#6: <em>新浪微博的ｒｓｓ订阅可以使用http://rss.weibodangan.com/weibo/rss/1056836591/ 来源：http://sinacn.weibodangan.com/</em> <a href="https://github.com/i2000s/cn/issues/6#issuecomment-298216511">07:24 2017/04/30</a></li><li>i2000s commented on issue feedjira/feedjira#380: <em>For me, the Jekyll build was still passed as expected. Any way to diagnose this warning information?</em> <a href="https://github.com/feedjira/feedjira/issues/380#issuecomment-298215716">07:05 2017/04/30</a></li><li>i2000s pushed to master at i2000s/cquic-workshop-2017summer: <em>Collaborations with machines.</em> <a href="https://github.com/i2000s/cquic-workshop-2017summer/compare/22827ca61c...c29b742c2b">07:00 2017/04/30</a></li></ul>
+            <ul><li>Ninnat pushed to dev at Ninnat/ninnat.github.io: <em>fix token and username</em> <a href="https://github.com/Ninnat/ninnat.github.io/compare/5004bc3f1e...b7375e0174">11:27 2017/05/17</a></li><li>Ninnat pushed to dev at Ninnat/ninnat.github.io: <em>upgrade to trusty (Travis.CI update for Ubuntu 14.04)</em> <a href="https://github.com/Ninnat/ninnat.github.io/compare/fb19e67faf...5004bc3f1e">10:57 2017/05/17</a></li><li>Ninnat pushed to master at Ninnat/ninnat.github.io: <em>Updating to fb19e67faf078349454e620e65fb71a0620bce13.</em> <a href="https://github.com/Ninnat/ninnat.github.io/compare/8976dd8482...98511bcaae">01:48 2017/05/02</a></li><li>Ninnat pushed to dev at Ninnat/ninnat.github.io: <em>log update</em> <a href="https://github.com/Ninnat/ninnat.github.io/compare/c11c450c13...fb19e67faf">01:42 2017/05/02</a></li></ul>
           </div>
 
          </div>
@@ -316,17 +311,33 @@ Finding a blog that functions without a hassle is even harder if you are a math 
 <p>I’ve been blogging on <a href="https://ninnatdangniam.wordpress.com/">Wordpress</a> for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow <a href="https://ninnat.github.io/README.html">what I did</a> and get your own blog hosted on a free (public) Git repository.</p>
 <p>Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and displayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. Use <code>\begin{aligned}...\end{aligned}</code> for aligned equations and <code>\begin{aligned}...\end{aligned}</code> for numbered aligned equations. (Both delimiters have to be placed inside <code>$$...$$</code>.) A quick guide on MathJax syntax can be found <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
 <p>Let’s test this by writing the Maxwell’s equations in cgs units:</p>
-<p>\[
+<p><span class="math">\[
 \begin{align}
 \nabla \cdot \mathbf{E} &amp;= 4\pi \rho , \\
 \nabla \times \mathbf{E} &amp;= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
 \nabla \cdot \mathbf{B} &amp;= 0, \\
 \nabla \times \mathbf{B} &amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
 \end{align}
-\]</p>
-<p>Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, <a href="http://www.bigfootjs.com/">Bigfoot</a> like this. <sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> All you have to do is pasting the css into <code>/assets/css/style.css</code>, putting the javascript file to, say, <code>/assets/js</code> and calling it with <code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot;&gt;     $.bigfoot({         activateCallback: function($popover, $button) {                 if (MathJax &amp;&amp; !$button.data('mathjax-processed')) {                         var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];                         MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);                         MathJax.Hub.Queue(function () {                                 $button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);                                 $button.data('mathjax-processed', true);                         });                 }         }     }); &lt;/script&gt;</code> within <code>/_includes/javascript.html</code>. This code, created by <a href="https://esham.io/2014/07/mathjax-and-bigfoot">Benjamin Esham</a>, enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.</p>
+\]</span></p>
+<p>Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, <a href="http://www.bigfootjs.com/">Bigfoot</a> like this. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> All you have to do is pasting the css into <code>/assets/css/style.css</code>, putting the javascript file to, say, <code>/assets/js</code> and calling it with</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $.bigfoot({
+        activateCallback: function($popover, $button) {
+                if (MathJax &amp;&amp; !$button.data(&#39;mathjax-processed&#39;)) {
+                        var content_wrapper = $popover.find(&#39;.bigfoot-footnote__content&#39;)[0];
+                        MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub, content_wrapper]);
+                        MathJax.Hub.Queue(function () {
+                                $button.attr(&#39;data-bigfoot-footnote&#39;, content_wrapper.innerHTML);
+                                $button.data(&#39;mathjax-processed&#39;, true);
+                        });
+                }
+        }
+    });
+&lt;/script&gt;</code></pre>
+<p>within <code>/_includes/javascript.html</code>. This code, created by <a href="https://esham.io/2014/07/mathjax-and-bigfoot">Benjamin Esham</a>, enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.</p>
 <section class="footnotes">
-<hr>
+<hr />
 <ol>
 <li id="fn1"><p>Alan Jacobs, <a href="http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/">“The Technology of a Better Footnote,”</a> <em>The Atlantic</em>, March 2012.<a href="#fnref1">↩</a></p></li>
 </ol>
@@ -335,7 +346,7 @@ Finding a blog that functions without a hassle is even harder if you are a math 
 <!-- not that raw_content depends on custom generator,
      see _plugins/jekyll-labnotebook-plugins/raw_content -->
 </article>
-<p> <a href="//2016/07/20/first-post.html"> <em>Read more</em></a> </p>
+<p> <a href="/2016/07/20/first-post.html"> <em>Read more</em></a> </p>
 <br />
 <br />
 

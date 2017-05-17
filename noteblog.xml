@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Ninnat's Notes</title>
- <link href="/exploringquantumworld.xml" rel="self"/>
+ <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-05-02T01:47:59+00:00</updated>
+ <updated>2017-05-17T23:33:12+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>

@@ -25,8 +25,6 @@ navigation: # For the navigation menu. Don't use index.html. urls should end wit
     url: /
   - text: About
     url: /about/
-  - text: Log
-    url: /log/
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes
@@ -34,7 +32,7 @@ encoding: utf-8
 pageviews: no    ## toggle on sidebar pageviews
 twitter_api: no
 analytics: UA-79420814-1 ## Google Analytics key UA-79420814-1 (in _includes/analytics.html and search.html)
-baseurl: '/'
+baseurl: ''
 lsi: True # Possibly for generating related posts with gsl and classifier packages.
 
 # GitHub information of this site. Used for extracting commit history of posts.
@@ -88,6 +86,21 @@ pandoc:
 #redcarpet:
 #   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 #highlighter: pygments
+
+## Have pages & posts use their default layouts, respectively
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 exclude:
   - Gemfile

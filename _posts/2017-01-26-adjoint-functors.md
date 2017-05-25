@@ -6,11 +6,11 @@ categories:
   - category theory
 tags:
 ---
-Modified: *28 Jan 2017*; Status: *completed*
+Modified: *25 May 2017*; Status: *completed*
 
-Lately I've been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view that I need at the level I'm comfortable with and what I need. (You can find better general introductions out there written by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.)
+Lately I've been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view that I need at the level I'm comfortable with. (You can find better general introductions out there by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.)
 
-My first contact with category theory was through the book [*Mathematical Physics*](https://www.amazon.com/Mathematical-Physics-Chicago-Lectures/dp/0226288625) by Robert Geroch. There, category theory is seen to provide organizing principles to view seemingly unrelated constructions across many areas of mathematical physics. Ditto for mathematics. To me, one of the most powerful lesson from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. Occasionally, there is a unique (up to a natural isomorphism which doesn't entail making any arbitrary choice) object that has a "universal" property that can simulate the relations to all other objects of the same kind and so can be thought of as the "best" object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.
+To me, one of the most powerful lessons from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. A lot of time there is a unique (up to a natural isomorphism which doesn't entail making any arbitrary choice) object that has a "universal" property that can simulate the relations to all other objects of the same kind and so can be thought of as the "best" object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.
 
 A **category** $\mathcal{C}$ is a class of objects and morphisms between them. If $X$ and $Y$ are **objects** in $\mathcal{C}$, the class of **morphisms** between $X$ and $Y$ is denoted by $\text{Hom}(X,Y)$. They are also represented diagrammatically as arrows $f:X \to Y$ for $f \in \text{Hom}(X,Y)$. For $\mathcal{C}$ to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories.
 
@@ -20,7 +20,7 @@ A **category** $\mathcal{C}$ is a class of objects and morphisms between them. I
 - **Man**$^{\infty}$ of smooth manifolds with infinitely differentiable maps as morphisms. In particular, diffeomorphisms are isomorphisms.
 - **Vec**$_k$ of vector spaces over a field $k$ with linear maps as morphisms.
 
-My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct. A **product** of $A$ and $B$ is an object $C$ together with a morphism from $C$ to $A$ and $B$ such that, if $D$ is another object also equipped with some morphisms to $A$ and $B$, then there is a unique morphism from $D$ to $C$ such that the following diagram "commutes", meaning that every way to compose such morphisms to go from $D$ to $A$ or $B$ gives the same result.
+My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct. A **product** of $A$ and $B$ is an object $C$ together with a morphism from $C$ to $A$ and $B$ such that, if $D$ is another object also equipped with some morphisms to $A$ and $B$, then there is a unique morphism from $D$ to $C$ such that the following diagram "commutes" (so we call this kind of diagrams commutative diagrams), meaning that every way to compose such morphisms to go from $D$ to $A$ or $B$ gives the same result.
 <center>
 <img src="/assets/img/posts/product.png" style="width: 200px;"/>
 </center>
@@ -30,7 +30,7 @@ My favorite elementary example of uniquely defining an object by morphisms is th
       A & C\ar[l]^{\alpha}\ar[r]_{\beta} & B
 	}
 \end{align*} -->
-We call this kind of diagrams commutative diagrams. The rational behind this definition is that $C$ together with the mappings $\alpha$ and $\beta$ is the [best](https://en.wikipedia.org/wiki/Universal_property) object that acts as a product of $A$ and $B$ since giving any morphism from any object $D$ to $A$ or $B$ is equivalent to giving $\alpha$ and $\beta$ from $C$, so we can just forget about $D$ altogether and regard $C$ as a universal simulator of such relations.
+The rational behind this definition is that $C$ together with the mappings $\alpha$ and $\beta$ is the [best](https://en.wikipedia.org/wiki/Universal_property) object that acts as a product of $A$ and $B$ since giving any morphism from any object $D$ to $A$ or $B$ is equivalent to giving $\alpha$ and $\beta$ from $C$, so we can just forget about $D$ altogether and regard $C$ as a universal simulator of such relations.
 
 The same diagram with all arrows reversed defines a **coproduct** $C$.
 <center>
@@ -42,9 +42,7 @@ The same diagram with all arrows reversed defines a **coproduct** $C$.
       A\ar[ur]^{\alpha'}\ar[r]_{\alpha} & C\ar[u]_{\gamma} & B\ar[l]^{\beta}\ar[ul]_{\beta'}
 	}
 \end{align*} -->
-These definitions generalize trivially to a product and a coproduct of more than two objects.
-
-In **Set**, the product is the direct product $A \times B$ and the coproduct is the direct sum $A \cup B$. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product $C=A \times B$, a natural choice for the mappings $\alpha$ and $\beta$ is the projection
+In **Set**, the product is the direct product $A \times B$ and the coproduct is the disjoint union $A \amalg B$. We will just verify the first statement to familiarize ourselves with the meaning of the diagrams. For the direct product $C=A \times B$, a natural choice for the mappings $\alpha$ and $\beta$ is the projection
 $$ \begin{aligned}
 \alpha(a,b) = a, && \beta(a,b) = b.
 \end{aligned} $$
@@ -52,11 +50,11 @@ We have to show that, for any $\alpha'$ and $\beta'$ from a set $D$, there is a 
 $$ \begin{aligned}
 \gamma(d) = (\alpha'(d),\beta'(d)),
 \end{aligned} $$
-If there is another map $\gamma'$ from $D$ to $C$ that makes the diagram commutes, it must sends $d$ to an element of $A \times B$ that projects to $\alpha'(d)$ on $A$ and $\beta'(d)$ on $B$. But that element is none other than $(\alpha'(d),\beta'(d))$. Thus, the uniqueness is established. For the direct sum $C = A \cup B$, a natural choice for the mappings $\alpha$ and $\beta$ is the embedding of $A$ and $B$ into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around ("diagram chasing").
+If there is another map $\gamma'$ from $D$ to $C$ that makes the diagram commutes, it must sends $d$ to an element of $A \times B$ that projects to $\alpha'(d)$ on $A$ and $\beta'(d)$ on $B$. But that element is none other than $(\alpha'(d),\beta'(d))$. Thus, the uniqueness is established. For the disjoint union $C = A \amalg B$, a natural choice for the mappings $\alpha$ and $\beta$ is the embedding of $A$ and $B$ into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around ("diagram chasing").
 
 We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in **Set**. The nice answer is that they are. And this is not only true in **Set** but also in a general category as well. We will not prove that here but it amounts to using the definition of a product or a coproduct and do some more diagram chasing.
 
-Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category **Top** of all topological spaces, which [Todd Trimble](https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/) gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said.
+Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category **Top** of all topological spaces, which [Todd Trimble](https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/) gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said better.
 
 ## Functors
 

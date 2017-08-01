@@ -221,7 +221,7 @@ $(document).ready(function() {
 </ul>
 My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct. A <strong>product</strong> of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is an object <span class="math">\(C\)</span> together with a morphism from <span class="math">\(C\)</span> to <span class="math">\(A\)</span> and <span class="math">\(B\)</span> such that, if <span class="math">\(D\)</span> is another object also equipped with some morphisms to <span class="math">\(A\)</span> and <span class="math">\(B\)</span>, then there is a unique morphism from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> such that the following diagram “commutes” (so we call this kind of diagrams commutative diagrams), meaning that every way to compose such morphisms to go from <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> gives the same result.
 <center>
-<img src="/assets/img/posts/product.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2018/product.png" style="width: 200px;"/>
 </center>
 <!-- \begin{align*}
     \xymatrix{
@@ -232,7 +232,7 @@ My favorite elementary example of uniquely defining an object by morphisms is th
 <p>The rational behind this definition is that <span class="math">\(C\)</span> together with the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the <a href="https://en.wikipedia.org/wiki/Universal_property">best</a> object that acts as a product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> since giving any morphism from any object <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> is equivalent to giving <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> from <span class="math">\(C\)</span>, so we can just forget about <span class="math">\(D\)</span> altogether and regard <span class="math">\(C\)</span> as a universal simulator of such relations.</p>
 The same diagram with all arrows reversed defines a <strong>coproduct</strong> <span class="math">\(C\)</span>.
 <center>
-<img src="/assets/img/posts/coproduct.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2018/coproduct.png" style="width: 200px;"/>
 </center>
 <!-- \begin{align*}
     \xymatrix{
@@ -252,7 +252,7 @@ The same diagram with all arrows reversed defines a <strong>coproduct</strong> <
 <p>One of the most trivial kinds of functors are ones that simply throw away information. The <strong>forgetful functor</strong> <strong>Grp</strong> <span class="math">\(\to\)</span> <strong>Set</strong> sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from <strong>Grp</strong> to <strong>Ab</strong> the category of all abelian groups which set <span class="math">\(ab=ba\)</span> for all elements <span class="math">\(a,b\)</span> in a group.</p>
 More interesting is the <strong>free functor</strong> <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to the “<a href="https://en.wikipedia.org/wiki/Free_group">free group</a>”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions (“words”) that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that any map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> factors through the free group <span class="math">\(F(S)\)</span> with a unique group homomorphism <span class="math">\(\varphi\)</span>.
 <center>
-<img src="/assets/img/posts/free-group.png" style="width: 150px;"/>
+<img src="/assets/img/posts/01-2018/free-group.png" style="width: 150px;"/>
 </center>
 <!-- \begin{align*}
     \xymatrix{
@@ -264,7 +264,7 @@ More interesting is the <strong>free functor</strong> <span class="math">\(F:\)<
 <p>For a given group, the forgetful functor sends it to a particular set, and for a given set, the free functor sends it to a particular group. So they are in some sense inverse functors to each other even though the categories <strong>Set</strong> and <strong>Grp</strong> are clearly not the same. This concept of a generalized inverse is formalized in the notion of an adjoint functor.</p>
 Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span class="math">\(G: \mathcal{D} \to \mathcal{C}\)</span> are <strong>adjoint functors</strong> if for any <span class="math">\(X \in \mathcal{C}\)</span> and <span class="math">\(Y \in \mathcal{D}\)</span>, there is an <a href="https://en.wikipedia.org/wiki/Adjoint_functors#Hom-set_adjunction">isomorphism</a>
 <center>
-<img src="/assets/img/posts/adjoint.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2018/adjoint.png" style="width: 180px;"/>
 </center>
 <p><span class="math">\[ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
@@ -308,7 +308,7 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
             <p><a class="btn btn-default" href='/2016/12/27/quantum-for-babies.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
-            </p>
+            <a class="btn btn-default" href='/2017/08/01/quantum-algorithms.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -332,7 +332,7 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/ce6c37923053f661ffc257c9aa1d33e9bc5d9e44/_posts/2017-01-26-adjoint-functors.md"> ce6c37923053f661ffc257c9aa1d33e9bc5d9e44</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/03bebf238c6967e0d411d7d7bd4a99b6a5d408ca/_posts/2017-01-26-adjoint-functors.md"> 03bebf238c6967e0d411d7d7bd4a99b6a5d408ca</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -351,6 +351,8 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
   <ul class="posts">
     
       <li><span>20 Jul 2016</span> &raquo; <a href="/2016/07/20/first-post.html">First Post</a></li>
+    
+      <li><span>01 Aug 2017</span> &raquo; <a href="/2017/08/01/quantum-algorithms.html">ขั้นคิดคำนวณแบบควอนตัม</a></li>
     
       <li><span>27 Dec 2016</span> &raquo; <a href="/2016/12/27/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
     

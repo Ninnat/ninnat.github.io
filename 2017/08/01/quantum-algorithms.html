@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>ขั้นคิดคำนวณแบบควอนตัม</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <!--[if lt IE 9]>
+      <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <meta name="subtitle" content="">
+    <meta name="author" content="Ninnat Dangniam">
+
+    <!-- HTML5 metadata -->
+
+  <meta name="keywords" content="Ninnat Dangniam, " />
+  
+
+
+
+  <meta name="description" content="ขั้นคิดคำนวณแบบควอนตัม" />
+  
+
+
+<meta http-equiv="Content-Language" content="en">
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="ขั้นคิดคำนวณแบบควอนตัม" />
+<meta property="dc:creator" content="Ninnat Dangniam" />
+<meta property="dc:date" content="2017-08-01 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/2017/08/01/quantum-algorithms.html" />
+<meta property="dc:rights" content="CC-BY" />
+<meta property="dc:source" content="Ninnat's Notes" />
+<meta property="dc:subject" content="Physics" />
+<meta property="dc:type" content="website" />
+<meta name="dc.language" content="en, zh-Hans, cmn">
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="ขั้นคิดคำนวณแบบควอนตัม" />
+<meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2017-08-01 00:00:00 +0000" />
+<meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://ninnat.github.io/2017/08/01/quantum-algorithms.html" />
+<meta property="og:type" content="website" />
+<!-- Google Scholar Metadata -->
+<meta name="citation_author" content="Ninnat Dangniam"/>
+<meta name="citation_date" content="2017-08-01 00:00:00 +0000"/>
+<meta name="citation_title" content="ขั้นคิดคำนวณแบบควอนตัม"/>
+<meta name="citation_journal_title" content="Ninnat's Notes"/>
+<!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
+<!-- Twitter card summary -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="ขั้นคิดคำนวณแบบควอนตัม" />
+<meta name="twitter:description" content="ขั้นคิดคำนวณแบบควอนตัม" />
+<meta name="twitter:image" content="/assets/img/capybara.png" />
+
+    <!-- Le styles -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+    <!-- <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light"> -->
+    <!-- bootstrap style -->
+    <!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href = "/assets/css/bootstrap.min.css" rel = "stylesheet">
+    <!-- Self-defined style -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/tupleblog.css">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-79420814-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <!-- Help the browser identify the RSS feed automatically -->
+    <link rel="alternate" type="application/rss+xml" title="Ninnat's notes" href="/atom.xml" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5761ec473416b238" async="async"></script>
+
+  <body>
+
+  
+<!-- Navbar  ================================================== -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="glyphicon glyphicon-info-sign"></i></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+         
+            
+            
+            
+            <li class=""><a href="/">Blog</a></li>
+         
+            
+            
+            
+            <li class=""><a href="/about/">About</a></li>
+         
+        </ul>
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:http://ninnat.github.io" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search this site"/>
+          </div>
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) -->
+
+<header class="jumbotron subhead">
+    <h1 class="entry-title">ขั้นคิดคำนวณแบบควอนตัม</h1>
+    <h3></h3>
+</header>
+
+<!-- <style>
+div #sticker {
+  width:auto;
+  padding:10px;
+  margin-right:20px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:30px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script> -->
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
+          <article>
+          </br>
+          <h1 id="อลกอรธมนนสำคญไฉน">อัลกอริธึมนั้นสำคัญไฉน</h1>
+<p><img src="/assets/img/posts/08-2018/koenigsberg-merian-erben_1652.jpg" style="width: 628px;"/></p>
+<p>นี่คือหน้าตาของเมืองเคอนิกสแบร์ก (Königsberg) ในศตวรรษที่ 18 ที่แม่น้ำ Pregel ไหลผ่านตัดแยกตัวเมืองเป็นสี่ผืนดินที่เชื่อมกันด้วยสะพานเจ็ดสะพาน (ก่อนจะเหลือแค่ห้าจากการทิ้งระเบิดสมัยสงครามโลกครั้งที่สอง) ชาวเมืองเคอนิกสแบร์กมักจะใช้เวลาบ่ายวันอาทิตย์เดินชมเมืองอันสวยงามของพวกเขา จนมีคนนึกสนุกตั้งปัญหาขึ้นมาว่าเป็นไปได้ไหมที่จะเดินข้ามสะพานครบทั้งเจ็ดสะพานโดยไม่ข้ามสะพานใดสะพานหนึ่งมากกว่าหนึ่งครั้ง?</p>
+<p>อีกปัญหาที่มีความคล้ายกันมากมาจากเกมที่วิลเลียม โรวัน แฮมิลตัน (William Rowan Hamilton) ชาวไอริชคิดขึ้นในปี 1857 ชื่อว่าเกมไอโคเซียน (Icosian) เป้าหมายของเกมคือการหาเส้นทางเดินบนขอบ (ที่เป็นเส้นหนึ่งมิติ ไม่ใช่หน้า) ของรูปเหลี่ยม 12 หน้า (dodecahedron) ที่ผ่านทุกมุมแต่ไม่ผ่านมุมใดมุมหนึ่งมากกว่าหนึ่งครั้ง</p>
+<p>ในทางคณิตศาสตร์แล้ว ทั้งสองปัญหาคือปัญหาเกี่ยวกับการเดินบนเน็ตเวิร์คซึ่งเป็นโครงสร้างที่ประกอบด้วยเส้นเชื่อม (edge) และโหนด (หรือจุดยอด vertex) เกมไอโคเซียนถามหาเส้นทางเดินบนเน็ตเวิร์คที่ผ่านทุกๆโหนดแต่ไม่ผ่านโหนดใดโหนดหนึ่งมากกว่าหนึ่งครั้ง ในขณะที่ปัญหาสะพานทั้งเจ็ดของเคอนิกสแบร์กถามหาเส้นทางเดินบนเน็ตเวิร์คที่ผ่านทุกๆเส้นเชื่อมแต่ไม่ผ่านเส้นเชื่อมใดเส้นเชื่อมหนึ่งมากกว่าหนึ่งครั้ง</p>
+<p><img src="/assets/img/posts/08-2018/dodecahedron.png" style="width: 400px;"/></p>
+<p>เลออนฮาร์ด ออยเลอร์ (Leonhard Euler) ชาวสวิตเซอร์แลนด์ที่ช่วงนั้นทำงานอยู่ที่เซนต์ ปีเตอร์สเบอร์ก สังเกตว่าปัญหาสะพานทั้งเจ็ดของเคอนิกสแบร์กจะมีคำตอบก็ต่อเมื่อไม่มีโหนดที่มีเส้นออกจากโหนดเป็นจำนวนคี่ หรือถ้ามีก็มีแค่สองโหนด เพราะการผ่านโหนดใดโหนดหนึ่งโดยไม่เดินซ้ำเส้นทางเดิมจะต้องมีทางเข้าทางหนึ่งกับทางออกทางหนึ่ง แต่โหนดเริ่มต้นไม่ต้องมีทางเข้าและโหนดสุดท้ายไม่ต้องมีทางออก คำตอบของออยเลอร์ลึกซึ้งที่ว่ามันไม่ใช่คำตอบของปัญหาสะพานทั้งเจ็ดของเคอนิกสแบร์กปัญหาเดียวแต่เป็นคำตอบของการเดินโดยไม่ซ้ำเส้นทางเดิมบนทุกๆเน็ตเวิร์ค และมันยังบอกขั้นตอนการหาคำตอบหรือ<strong>อัลกอริธึม</strong> (algorithm) ที่มีประสิทธิภาพสำหรับทุกๆเน็ตเวิร์คโดยการนับจำนวนเส้นเชื่อมที่ออกจากโหนดแต่ละโหนดเท่านั้น</p>
+<p>ทว่าจนถึงทุกวันนี้ยังไม่มีใครรู้อัลกอริธึมเร็วๆสำหรับเกมไอโคเซียนที่ใช้ได้กับทุกๆเน็ตเวิร์ค ซึ่งน่าคิดเพราะเกมไอโคเซียนต่างกับปัญหาสะพานทั้งเจ็ดของเคอนิกสแบร์กเพียงแค่เปลี่ยนเส้นเชื่อมเป็นโหนดเท่านั้นเอง อัลกอริธึมที่ใช้ได้กับทั้งสองปัญหาก็คือลองเดินมันโง่ๆทุกเส้นทางบนเน็ตเวิร์คแล้วดูว่ามีเส้นทางที่เป็นคำตอบไหม แต่วิธีนี้อาจจะต้องใช้เวลาเป็นทวีคูณ (exponential) ของขนาดของเน็ตเวิร์ค จำนวนที่เป็นทวีคูณนี่ใหญ่ขนาดกันนะ?</p>
+<p>ในนิทานเรื่องหนึ่ง พระราชาเรียกผู้ที่คิดเกมหมากรุกได้เป็นคนแรกมาเข้าเฝ้าหวังจะให้รางวัลตอบแทนอย่างยิ่งใหญ่สมกับผลงานของเขา คนผู้นั้นก็ขอรางวัลเป็นข้าวสารหนึ่งเม็ดในช่องแรกของกระดานหมากรุก สองเม็ดในช่องที่สอง สี่เม็ดในช่องที่สาม… เพิ่มขึ้นที่ละสองเท่าตัวๆจนเต็ม 64 ช่องของกระดานหมากรุก พระราชาก็รับปากถึงแม้ในใจจะคิดว่าข้าวสารแค่นี้จะมีค่าสักเท่าไรเชียว จนกระทั่งคนรับใช้กะปริมาณข้าวสารที่ต้องให้</p>
+<ul>
+<li>1,000,000 เม็ดในช่องที่ 20</li>
+<li>1,000,000,000,000 เม็ดในช่องที่ 40</li>
+<li>18,000,000,000,000,000,000 เม็ดในช่องสุดท้ายซึ่งถ้าตีเป็นน้ำหนักก็จะได้ประมาณ 460,000,000 ตัน</li>
+</ul>
+<p><img src="/assets/img/posts/08-2018/rice-on-chessboard.jpeg" style="width: 800px;"/></p>
+<p>บางเวอร์ชันของเรื่องเล่านี้จบลงที่พระราชาสั่งประหารคนผู้นั้นเมื่อรู้ตัวว่าโดนหลอกเข้าให้แล้ว บทเรียนหนึ่งของเรื่องนี้ก็คืออย่าไปกวนตีนคนที่มีอำนาจมากนัก แต่อีกบทเรียนที่สำคัญกว่าก็คือจำนวนที่โตแบบทวีคูณนั้นอาจจะโตเกินจินตนาการของเราได้ ถึงปัญหาจะไม่ใหญ่มาก แต่ถ้ามีแต่อัลกิริธึมที่ต้องใช้เวลาเป็นทวีคูณ ถึงจะใช้ซูเปอร์คอมพิวเตอร์ที่ทำการคำนวณได้กว่า 10 ยกกำลัง 15 ขึ้นตอนในหนึ่งวินาทีก็ยังอาจต้องใช้เวลาเกินอายุปัจจุบันของเอกภพ (13.7 พันล้านปี) จากความรู้ว่าดวงอาทิตย์อยู่ได้อีกแค่ประมาณห้าพันล้านปี อัลกอริธึมที่ช้าจึงไม่ใช่แค่ไม่ทันใจ แต่อาจจะไม่ทันโลกแตกด้วยซ้ำ! ปัญหาที่ต้องใช้เวลาเป็นทวีคูณในการแก้ถือเป็นปัญหาที่<strong>ยาก</strong></p>
+<h1 id="บตรเครดต-เสยงดนตร-และคอมพวเตอรควอนตม">บัตรเครดิต, เสียงดนตรี, และคอมพิวเตอร์ควอนตัม</h1>
+<p>ไอเดียของคอมพิวเตอร์ที่อาศัยพฤติกรรมเชิงควอนตัมของสสารในการคำนวณมีมาตั้งแต่ปี 1980 แล้วแต่ในตอนนั้นยังไม่ชัดเจนว่าคอมพิวเตอร์ควอนตัมจะแก้ปัญหายากๆได้เร็วกว่าคอมพิวเตอร์ธรรมดาขนาดไหน จุดเปลี่ยนที่ทำให้คนหันมาสนใจคอมพิวเตอร์ควอนตัมในวงกว้างมาจากวงการที่แทบจะไม่เกี่ยวข้องกับฟิสิกส์เลย: วงการรหัสลับ</p>
+<p>การส่งข้อความลับจะต้องมีกุญแจเข้ารหัส (encrypt) และกุญแจถอดรหัส (decrypt) รหัสลับก่อนสงครามโลกครั้งที่สองมักใช้กุญแจเดียวกันทั้งในการเข้าและถอดรหัส จึงถูกเรียกว่ากุญแจแบบสมมาตร (symmetric key) รหัสแบบนี้สามารถให้ความปลอดภัยอย่างสมบูรณ์แบบได้ในทางทฤษฎีเช่น one-time pad ที่มีกุญแจเป็นข้อความสุ่มมั่วๆเอามาใช้แปลงข้อความจริง ถ้ารู้ข้อความสุ่มนั้นก็จะกู้ข้อความจริงกลับมาได้ แต่กุญแจต้องใช้แล้วทิ้ง ห้ามใช้ซ้ำกัน ตามชื่อว่า one-time (การที่โปรเจ็กต์ VENONA ของ NSA สหรัฐอเมริกาจับตัวสายลับโซเวียตในช่วงสงครามโลกครั้งที่สองได้ก็เชื่อกันว่ามาจากการใช้กุญแจซ้ำของโซเวียตที่มีเหตุจากการเร่งการผลิตกุญแจลับเนื่องจากการบุกของเยอรมัน) ยิ่งข้อความลับยาวกุญแจก็ยิ่งต้องใหญ่ นอกจากนี้การที่ทั้งผู้ส่งและผู้รับจะต้องมีกุญแจเดียวกันก็แปลว่าจะต้องมีการส่งกุญแจกันไปมา ถ้าถูกดักตีหัวขโมยกุญแจก็เสร็จ</p>
+<p>ในปัจจุบันรหัสลับส่วนใหญ่ใช้กุญแจคนละดอกในการเข้าและถอดรหัส โดยกุญแจเข้ารหัสเป็นกุญแจสาธารณะ (public key) ที่ใครๆก็รู้ได้ ระบบแบบนี้ไม่มีทางปลอดภัยอย่างสมบูรณ์แบบเพราะข้อมูลของกุญแจถอดรหัสก็อยู่ในกุญแจเข้ารหัส (ทั้งสองกุญแจมีความสัมพันธ์กันเพราะกุญแจถอดรหัสต้องแก้สิ่งที่กุญแจเข้ารหัสทำ) การค้นพบครั้งสำคัญในวงการรหัสลับคือการใช้ปัญหาการแยกตัวประกอบที่เชื่อว่าไม่มีอัลกอริธึมใดๆในปัจจุบันแก้ได้เร็วพอมาป้องกันการกู้กุญแจถอดรหัสจากกุญแจเข้ารหัส การเข้ารหัสนี้เรียกว่าการเข้ารหัสแบบ RSA มาจากตัวอักษรแรกของชื่อผู้ค้นพบมันในอเมริกา และเป็นระบบการเข้ารหัสที่ใช้กันแพร่หลายในการเข้าเวบอย่างปลอดภัย (https), การป้องกันพาสเวิร์ด, หรือบัตรเครดิต ทุกครั้งที่เราซื้อของออนไลน์ ความปลอดภัยของเราขึ้นอยู่กับ RSA</p>
+ถ้าดูนาฬิกาเป็นก็จะเข้าใจไอเดียของ RSA ได้ สังเกตว่าในการบวก-ลบเวลา เราจะไม่พูดว่า “10 ชั่วโมงหลัง 20 นาฬิกาคือ 30 นาฬิกา” แต่เราจะเริ่มนับส่วนที่เกิน 24 ใหม่ นอกจากบวก-ลบแล้วการคูณหรือการยกกำลังในระบบเลขคณิตแบบนี้ก็เป็นสิ่งที่ทำได้เพราะการคูณคือการบวกซ้ำๆกันและการยกกำลังคือการคูณซ้ำๆกัน ซึ่งคนส่วนใหญ่คงจะไม่เคยทำ แต่ถ้าลองทำดูจะพบสิ่งหนึ่งที่น่าสนใจคือการคูณเลขด้วยตัวมันเองซ้ำๆจะทำให้ย้อนกลับมายังเลขตั้งต้นได้ ตารางด้านล่างเป็นผลคูณ 2 ด้วยตัวมันเองถ้ามี 15 ชั่วโมงในหนึ่งวัน
+
+<p>การเข้ารหัสแบบ RSA แปลงข้อความให้เป็นจำนวนเต็มก่อน เรียกจำนวนนี้ว่า m (message) กุญแจสาธารณะคือจำนวนของ“ชั่วโมง” N และตัวเลข x ที่ทำให้ผู้เข้ารหัสสามารถคำนวณ m ยกกำลัง x ในเลขคณิตแบบนาฬิกาได้ เมื่อถึงมือผู้รับรหัส มีกุญแจลับ y ที่บอกว่าจะต้องยกกำลังต่ออีกเท่าไรจึงจะได้ข้อความ m กลับมา ปรากฎว่าการจะรู้ y ได้จะต้องแยกตัวประกอบของ N ซึ่งเป็นส่วนหนึ่งของกุญแจสาธารณะที่ใครๆก็มี แต่ปัญหาก็คือทุกๆอัลกอริธึมการแยกตัวประกอบที่มีในปัจจุบันต้องใช้เวลาเป็นทวีคูณ การจะถอดรหัส RSA ที่ N เป็นเลขหลายร้อยหลักอาจจะต้องใช้เวลาเป็นล้านปี</p>
+<p>แต่ถ้ามีคอมพิวเตอร์ควอนตัม การแยกตัวประกอบเลขหลายร้อยหลักจะใช้เวลาเพียงไม่กี่วินาที! การเปรียบเทียบนี้สมมติว่าคอมพิวเตอร์ควอนตัมมีความเร็ว CPU พอๆกับของคอมพิวเตอร์ปัจจุบัน สิ่งที่ต่างก็คือคอมพิวเตอร์ควอนตัมมีอัลกอริธึมควอนตัมที่สามารถหาทางลัดในการแก้บางปัญหาได้ การทำงานของอัลกอริธึมควอนตัมแยกตัวประกอบค่อนข้างซับซ้อนแต่หัวใจของมันมาจากการปั่นรวมการยกกำลังในเลขคณิตนาฬิกากับการแปลงฟูเรียร์ (Fourier transform) ให้ผสมกลมกลืนเป็นรสเดียว การแปลงฟูเรียร์เป็นการแตกคลื่นเป็นผลรวมของหลายๆคลื่นที่มีความถี่เฉพาะตัว ไม่ต่างกับการแยกเสียงดนตรีเป็นโน๊ตความถี่ต่างๆ ทำให้สามารถขับหรือลดเสียงของเครื่องดนตรีแต่ละชนิดแยกกันได้ หน้าที่ของการแปลงฟูเรียร์ในอัลกอริธึมควอนตัมคือการหาคาบ (ส่วนกลับของความถี่) ของการยกกำลังในเลขคณิตนาฬิกา เมื่อรู้คาบ — จำนวนครั้งที่ต้องคูณเพื่อให้ได้ค่าเดิมกลับมา — ก็จะทำให้แยกตัวประกอบและรู้ y ได้ จึงทำลายรหัสลับ RSA ได้</p>
+<p>บางปัญหาที่ยากสำหรับคอมพิวเตอร์ธรรมดาเป็นปัญหาที่ง่ายสำหรับคอมพิวเตอร์ควอนตัม นี่เป็นการค้นพบของ ปีเตอร์ ชอร์ (Peter Shor) ชาวอเมริกันในปี 1994 ที่สั่นสะเทือนวงการการถอดรหัสลับและฟิสิกส์ ปัจจุบันยังไม่มีคอมพิวเตอร์ควอนตัมขนาดใหญ่พอที่จะทำแบบนี้ได้ อินส์บรุค (Innsbruck) จับมือกับ MIT เพิ่งจะตีพิมพ์การแยกตัวประกอบ 15 ออกเป็น 3x5 ได้สำเร็จด้วยคอมพิวเตอร์ควอนตัมจิ๋ว 5 อะตอมเมื่อปีที่แล้ว <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> แต่ก็ไม่ต้องห่วงว่าถ้าทำสำเร็จโลกนี้จะไม่มีความลับอีกต่อไปเพราะนักวิทยาศาสตร์ได้เตรียมรหัสลับต้านทานอัลกอริธึมควอนตัมไว้เรียบร้อยแล้ว (<a href="https://en.wikipedia.org/wiki/Post-quantum_cryptography">post-quantum cryptography</a>)</p>
+<h1 id="เรขาคณตของอลกอรธมควอนตม">เรขาคณิตของอัลกอริธึมควอนตัม</h1>
+<p>ความเข้าใจผิดที่ได้ยินกันแพร่หลายมากที่สุดเกี่ยวกับคอมพิวเตอร์ควอนตัมคือคอมพิวเตอร์ควอนตัมเหมือนกับคอมพิวเตอร์ธรรมดาที่ประมวลผลแบบคู่ขนาน แก้ปัญหาโดยการเช็คคำตอบทุกคำตอบที่เป็นไปได้พร้อมๆกัน ซึ่งถ้าทำได้จริงก็จะมหัศจรรย์มาก ไม่ว่าปัญหาใดๆ อัลกอริธึมควอนตัมที่ลองทุกคำตอบก็จะแก้ได้ในหนึ่งขั้นตอนเท่านั้น แต่ความจริงไม่ง่ายแบบนั้น ซึ่งก็อาจจะเป็นเรื่องดีเพราะการเข้ารหัสลับที่ต้านทานอัลกอริธึมควอนตัมก็ต้องอาศัยปัญหาที่ยากสำหรับทั้งอัลกอริธึมธรรมดาและอัลกอริธึมควอนตัม ตัวอย่างที่ดีเยี่ยมในการแสดงให้เห็นการความแตกต่างของการทำงานของอัลกอริธึมธรรมดากับอัลกอริธึมควอนตัมจึงเป็นอัลกอริธึมควอนตัมในการเช็คคำตอบที่ลอฟ โกรเวอร์ (Lov Grover) ชาวอเมริกัน-อินเดีย คิดขึ้นมาในปี 1996 หลังจากชอร์ 2 ปี</p>
+<p>การจะเข้าใจการทำงานของอัลกอริธึมนี้จะต้องรู้พื้นฐานของทฤษฎีควอนตัมเสียก่อนทฤษฎีควอนตัมรวมคณิตศาสตร์ของความน่าจะเป็นกับเรขาคณิต แต่เป็นเรขาคณิตที่มีแต่ทิศทาง ไม่มีระยะทาง (สำหรับคนที่รู้จักเวกเตอร์ จึงไม่ใช่เรขาคณิตของเวกเตอร์เสียทีเดียวเพราะเวกเตอร์มีทั้งขนาดและทิศทาง) ในเรขาคณิตแบบนี้ เหนือกับใต้ถือว่าเป็นทิศเดียวกันเพราะการเดินไปทางเหนือก็คือการเดินไปทางใต้ด้วยระยะทางติดลบ พูดอีกอย่างก็คือมุม 180 องศากลายเป็น 0 องศา (แทนที่ 360 องศาจะเป็น 0 องศา) แต่ความใกล้กันของสองทิศทางก็ยังวัดได้ด้วยมุมที่ไม่เกิน 90 องศา สิ่งที่สำคัญคือยังมีทิศทางที่ตั้งฉากกัน (ทำมุม 90 องศา) นิยามของมิติจึงเหมือนกับในเรขาคณิตปกติ คือจำนวนที่มากที่สุดของทิศทางที่ตั้งฉากกัน เหมือนที่ 3 มิติมีความกว้าง ความยาว และความสูง <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>ระบบฟิสิกส์ไม่ว่าจะเป็นอะตอม ไอออน ช่องว่างในเพชร หรือวงจรไฟฟ้ายิ่งยวด ที่จะได้เจอในบทถัดๆไปของหนังสือเล่มนี้จะมีสถานะควอนตัม (quantum state) ของมันเองถ้าได้รับการป้องกันอย่างดีพอจากสิ่งรบกวนภายนอกไม่ว่าจะเป็นสนามแม่เหล็กไฟฟ้าหรือความร้อน ซึ่งตามทฤษฎีควอนตัมแล้ว ทิศทางเป็นตัวแทนเชิงคณิตศาสตร์ของสถานะควอนตัม ทิศทางนี้ไม่ใช่ทิศทางจริงๆในทางภูมิศาสตร์ แต่เป็นทิศทางในจำนวนมิติที่ถูกกำหนดโดยฟิสิกส์ของระบบนั้นๆ เช่นสถานะควอนตัมของสปินของอิเล็กตรอนถูกแทนด้วยทิศทางในสองมิติ</p>
+การวัดในทฤษฎีควอนตัมคือการถามระบบฟิสิกส์ว่าสถานะควอนตัมของเธอชี้ไปทางนี้หรือเปล่า? ถ้าทิศที่ถามขนานกับทิศที่มันชี้พอดีก็จะได้คำตอบว่า “ใช่” เสมอ ถ้าทิศที่ถามตั้งฉากกับทิศที่ชี้ก็จะได้คำตอบว่า “ใม่” เสมอ แต่จะเกิดอะไรขึ้นถ้าทิศที่ถามไม่ขนานหรือตั้งฉากเสียทีเดียวล่ะ? ทฤษฎีควอนตัมกำหนดว่าความน่าจะเป็นที่จะได้คำตอบ “ใช่” มีค่าเป็นกำลังสองของโคไซน์ของมุมระหว่างสองทิศนั้น
+
+<p>สมมติว่าปัญหาหนึ่งมีคำตอบที่เป็นไปได้ 4 คำตอบ ปกติแล้วจะต้องเช็คคำตอบทีละคำตอบ จึงเป็นไปได้ว่าจะต้องเช็คถึง 4 ครั้งกว่าจะได้คำตอบที่ถูกต้อง สำหรับคอมพิวเตอร์ควอนตัม 4 คำตอบนี้แทนด้วย 4 ทิศทางที่ตั้งฉากกัน (จึงมี 4 มิติ) การเช็คคำตอบด้วยการวัดก็ไม่ช่วยอะไรเช่นกัน แต่คอมพิวเตอร์ควอนตัมสามารถเช็คคำตอบโดยปราศจากการวัดได้โดยการเก็บคำตอบ “ใช่” หรือ “ไม่ใช่” ไว้กับตัวมันเอง ซึ่งถ้าเราไม่ไปวัดก็จะไม่รู้ ดูเป็นความสามารถที่ไร้ประโยชน์สิ้นดี แต่ทริคของอัลกอริธึมควอนตัมคือการแปลงการเช็คคำตอบแบบหลังไปเป็นการพลิกสถานะควอนตัมที่ขนานกับทิศของคำตอบ ถ้าคำตอบอยู่ในทิศเหนือ-ใต้ (อย่าลืมว่าเป็นทิศเดียวกันในเรขาคณิตแบบควอนตัม) แล้วสถานะควอนตัมชี้ไปทางเหนือ การเช็คคำตอบก็จะพลิกมันมาทางทิศใต้ สถานะควอนตัมที่ชี้ไปทางใต้ก็จะถูกพลิกไปยังทิศเหนือ และปล่อยทิศทางที่ตั้งฉากกับคำตอบไว้คงเดิม ทริคนี้จึงไม่มีผลต่อความน่าจะเป็นของผลการวัดแต่อย่างใด แต่มันทำให้อัลกอริธึมควอนตัมหาหนึ่งในสี่คำตอบที่ถูกต้องเจอจากการเช็ค (พลิก) เพียงหนึ่งครั้งเท่านั้น! เริ่มต้นด้วยทิศที่มีโอกาสได้คำตอบทุกคำตอบเท่าๆกันหมดคือ 1/4 ทิศนี้ทำมุม 60 องศากับคำตอบ s (solution) เพราะว่า <span class="math">\(\cos^2 60^{\circ} &amp;= \frac{1}{4}\)</span></p>
+<p><img src="/assets/img/posts/08-2018/grover2a.png" style="width: 327px;"/></p>
+<p>จากนั้นก็เช็คคำตอบเพื่อพลิกมัน</p>
+<p><img src="/assets/img/posts/08-2018/grover2b.png" style="width: 761px;"/></p>
+<p>แล้วก็พลิกอีกครั้งผ่านทิศตั้งต้นก็จะได้คำตอบที่ถูกต้องด้วยความน่าจะเป็น 100%</p>
+<p><img src="/assets/img/posts/08-2018/grover2c.png" style="width: 768px;"/></p>
+<p>เมื่อคำตอบที่เป็นไปได้มีจำนวนเยอะขึ้น ทิศทางตั้งต้นก็จะอยู่ห่างจากทิศของคำตอบมากขึ้น การพลิกสองสเต็ป (จากการเช็คคำตอบ ตามด้วยการพลิกผ่านทิศตั้งต้น) แต่ละครั้งจะทำให้ขยับเข้าใกล้คำตอบมากขึ้นเรื่อยๆ หากทำการวิเคราะห์ก็จะประมาณได้ว่าจำนวนครั้งที่อัลกอริธึมนี้ต้องเช็คคำตอบคือรากที่สองของจำนวนคำตอบที่เป็นไปได้ <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> ถ้าคอมพิวเตอร์ธรรมดาต้องเช็คคำตอบหนึ่งล้านครั้ง คอมพิวเตอร์ควอนตัมก็จำเป็นต้องเช็คเพียงแค่หนึ่งพันครั้ง ไม่ได้เร็วขึ้นแบบทวีคูณเหมือนอัลกอริธึมแยกตัวประกอบของชอร์แต่ก็ช่วยได้เยอะ</p>
+<p>ในมุมมองหนึ่ง สิ่งที่อัลกอริธึมควอนตัมทำจึงเป็นเพียงการขยับลูกศรไปมา ซึ่งพูดเหมือนง่ายแต่เป็นความท้าทายมาก ถ้าอยากรู้ว่าการควบคุมสถานะควอนตัมนั้นทำกันในแลบได้อย่างไรก็สามารถอ่านบทความที่เขียนและเรียบเรียงโดยนักศึกษาและนักวิทยาศาสตร์ไทยท่านอื่นๆ ได้ใน <a href="http://www.ebooks.in.th/ebook/45594/"><em>รูป รส กลิ่น เสียง สัมผัส ไอทีควอนตัม (๓): “คอมพิวเตอร์เชิงควอนตัม”</em></a> ครับ</p>
+<h1 id="อางอง">อ้างอิง</h1>
+<p>Cristopher Moore และ Stephen Mertens, “Quantum Computation” ใน <em>The Nature of Computation</em>, Cambridge University Press (2011).</p>
+<p>Scott Aaronson, “Crypto” ใน <em>Quantum Computing Since Democritus</em>, Cambridge University Press (2013).</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Thomas Monz et al., “<a href="http://science.sciencemag.org/content/351/6277/1068">Realization of a scalable Shor algorithm</a>” <em>Science</em> 351 1068 (2016).<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>สำหรับผู้รู้ทฤษฎีควอนตัม ที่พูดไปไม่ใช่ความจริงทั้งหมดเพราะมุมนี้สามารถเป็นจำนวนเชิงซ้อนได้! แต่ทุกมุมในบทความนี้เป็นจำนวนจริง<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>จริงๆคือ <span class="math">\(\pi/4\)</span> คูณรากที่สองของจำนวนคำตอบที่เป็นไปได้<a href="#fnref3">↩</a></p></li>
+</ol>
+</section>
+
+          </article>
+
+        </div>
+
+
+        <!-- Custom sidebar -->
+        <div class="col-md-2 col-sm-12">
+          <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
+            <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
+    <time datetime="2017-08-01 00:00:00 +0000" 
+    property="dc:created">01 Aug 2017</time></p>
+   
+
+ <br />
+          
+            <p><a class="btn btn-default" href='/2017/01/26/adjoint-functors.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+          
+          
+            </p>
+          
+
+
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2017-08-01-quantum-algorithms.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+
+  <br><br>
+
+  <p><!-- <i class="glyphicon glyphicon-list"></i> --> Categories: 
+     
+      <a rel="dc:subject" class="category" 
+         href="/categories.html#thai">thai</a>
+    
+    </p>
+
+  <p> <!-- <i class="glyphicon glyphicon-tag"></i> --> Tags: 
+    </p>
+
+  <!-- <br/>
+
+  
+
+  <br/> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/03bebf238c6967e0d411d7d7bd4a99b6a5d408ca/_posts/2017-08-01-quantum-algorithms.md"> 03bebf238c6967e0d411d7d7bd4a99b6a5d408ca</a></tiny></p> -->
+</aside>
+
+<br /><br />
+<div style="font-weight:bold; text-align:center;font-size:1.0em;">
+ <!-- <i class="glyphicon glyphicon-chevron-left"></i> --> <a href="/archives.html">Archives by date,</a>
+ <!-- <i class="glyphicon glyphicon-list"></i> --> <a href="/categories.html">By category,</a>
+ <!-- <i class="glyphicon glyphicon-tag"></i> --> <a href="/tags.html">By tag.</a>
+</div>
+
+         <!-- </div> -->
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>26 Jan 2017</span> &raquo; <a href="/2017/01/26/adjoint-functors.html">Adjoint functors</a></li>
+    
+      <li><span>27 Dec 2016</span> &raquo; <a href="/2016/12/27/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
+    
+      <li><span>20 Jul 2016</span> &raquo; <a href="/2016/07/20/first-post.html">First Post</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'ninnat'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+       <footer class="footer" style="clear:both;">
+         <div class="row">
+            <div class="row" align="center" clear="both">
+              <div class="row">
+               <!-- <a href="mailto:truecrimson@gmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/img/icon-email.png" height="42px" alt="email"> </a> -->
+               <!-- <a href="https://github.com/ninnat" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/img/icon-github.png" height="40px" alt="github"> </a> -->
+               <!-- <a href="https://plus.google.com/"><img src="/assets/img/icon-gplus.png" height="40px" alt="G+"></a> -->
+               <!-- <a href="https://www.facebook.com/ninnattom.dangniam"><img src="/assets/img/icon-facebook.png" height="42px" alt="facebook"></a> -->
+               <!-- <a href="http://scholar.google.com/citations?user==en"><img src="/assets/img/icon-scholar.png" height="40px" alt="GoogleScholar"></a> -->
+               <!-- <a href="https://twitter.com/"><img src="/assets/img/icon-twitter.png" height="45px" alt="Twitter"></a> -->
+               <!-- <a href="https://www.linkedin.com/in/"><img src="/assets/img/icon-linkedin.png" height="40px" alt="LinkedIn"></a> -->
+               <a href="/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.svg" alt="feed"></a>
+               <!-- <a href="http://physics.stackexchange.com/users/"><img src="/assets/img/icon-stackoverflow.png" height="40px" alt="Physics Stackexchange"></a> -->
+               <iframe class="github-btn" src="//ghbtns.com/github-btn.html?user=ninnat&repo=ninnat.github.io&type=star&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150px" height="40px" style="vertical-align:middle; margin-top:9px;"></iframe>
+              </div>
+           </div>
+         </div>
+      <div class="row" align="center" clear="both">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. </span></a>
+		<br>
+	</div>
+      
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=ขั้นคิดคำนวณแบบควอนตัม
+      &amp;rft.creator=Ninnat Dangniam
+      &amp;rft.date=2017-08-01
+      &amp;rft.language='en-US, zh-Hans'
+      &amp;rft.rights='CC-BY'
+      &amp;rft_id=http://ninnat.github.io/2017/08/01/quantum-algorithms.html">
+  </span>
+
+    </footer>
+   </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+    <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ] } }); </script>
+    <!-- XY-pic extension -->
+    <script type="text/x-mathjax-config>
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        },
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+        TeX: {extensions: ["AMSmath.js","AMSsymbols.js","/assets/js/xypic.js"]}
+      }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          br: "{\\bf r}",
+          bold: ["{\\bf #1}",1],
+          abs: ["{\\left \\lvert {#1} \\right \\rvert}", 1],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle{#1}\\right|}",1],
+          braket: ["{\\left\\langle{#1}\\right\\rangle}",1],
+          tensor: ["{\\boldsymbol{#1}}",1],
+          dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
+          pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
+          Tr: ["{\\mathrm{Tr}}"],
+        }
+      <!-- extensions: ["autoload-all.js"]-->
+      }
+    });
+
+    </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="http://ninnat.github.io/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://ninnat.github.io/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-transition.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-alert.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-modal.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-tab.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-popover.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-button.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-typeahead.js"></script>
+    <script src="http://ninnat.github.io/assets/js/application.js"></script>
+    -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src = "/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bigfoot.js"></script>
+	<script type="text/javascript">
+  $.bigfoot({
+    activateCallback: function($popover, $button) {
+        if (MathJax && !$button.data('mathjax-processed')) {
+            var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+            MathJax.Hub.Queue(function () {
+                $button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+                $button.data('mathjax-processed', true);
+            });
+        }
+    }
+  });
+	</script>
+
+  </body>
+</html>
+

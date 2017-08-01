@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-08-01T16:05:19+00:00</updated>
+ <updated>2017-08-01T16:20:38+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -17,7 +17,8 @@
    <link href="/2017/08/01/quantum-algorithms.html"/>
    <updated>2017-08-01T00:00:00+00:00</updated>
    <id>h/2017/08/01/quantum-algorithms</id>
-   <content type="html">&lt;h1 id=&quot;อลกอรธมนนสำคญไฉน&quot;&gt;อัลกอริธึมนั้นสำคัญไฉน&lt;/h1&gt;
+   <content type="html">&lt;h2 id=&quot;เมอหนงปเตมทแลวถกชกชวนจากจรวฒน-cqt-สงคโปร-ใหไปชวยเขยนหนงสอใหความรเกยวกบคอมพวเตอรเชงควอนตม-ดวยความชวยเหลอตรวจแกจากบรรณาธการและผรวมชะตากรรมเขยนคนอนๆทำใหสำเรจออกมาเปนหนงสอ-รป-รส-กลน-เสยง-สมผส-ไอทควอนตม-คอมพวเตอรเชงควอนตม-จนได-สวนทมคณตศาสตรทมากกวาการนบเลขถกตดออกหมดกเลยอยากจะลงตนฉบบทมคณตศาสตรไว-ณ-ทนเพอความเขาใจคอมพวเตอรเชงควอนตมทแมนยำและลกซงขนครบ&quot;&gt;เมื่อหนึ่งปีเต็มที่แล้วถูกชักชวนจากจิรวัฒน์ (CQT, สิงคโปร์) ให้ไปช่วยเขียนหนังสือให้ความรู้เกี่ยวกับคอมพิวเตอร์เชิงควอนตัม ด้วยความช่วยเหลือตรวจแก้จากบรรณาธิการและผู้ร่วมชะตากรรมเขียนคนอื่นๆทำให้สำเร็จออกมาเป็นหนังสือ &lt;a href=&quot;http://www.ebooks.in.th/ebook/45594/&quot;&gt;&lt;em&gt;รูป รส กลิ่น เสียง สัมผัส ไอทีควอนตัม (๓): “คอมพิวเตอร์เชิงควอนตัม”&lt;/em&gt;&lt;/a&gt; จนได้ ส่วนที่มีคณิตศาสตร์ที่มากกว่าการนับเลขถูกตัดออกหมดก็เลยอยากจะลงต้นฉบับที่มีคณิตศาสตร์ไว้ ณ ที่นี้เพื่อความเข้าใจคอมพิวเตอร์เชิงควอนตัมที่แม่นยำและลึกซึ้งขึ้นครับ&lt;/h2&gt;
+&lt;h1 id=&quot;อลกอรธมนนสำคญไฉน&quot;&gt;อัลกอริธึมนั้นสำคัญไฉน&lt;/h1&gt;
 &lt;center&gt;
 &lt;img src=&quot;/assets/img/posts/08-2018/koenigsberg-merian-erben_1652.jpg&quot; style=&quot;width: 628px;&quot;/&gt;
 &lt;/center&gt;
@@ -50,7 +51,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr class=&quot;header&quot;&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;กำลัง&lt;/th&gt;
+&lt;th style=&quot;text-align: right;&quot;&gt;กำลัง&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;1&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;2&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;3&lt;/th&gt;
@@ -60,7 +61,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr class=&quot;odd&quot;&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;ค่าของ 2 ยกกำลัง&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot;&gt;ค่าของ 2 ยกกำลัง&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;2&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;4&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;8&lt;/td&gt;
@@ -80,7 +81,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr class=&quot;header&quot;&gt;
-&lt;th style=&quot;text-align: left;&quot;&gt;องศา&lt;/th&gt;
+&lt;th style=&quot;text-align: right;&quot;&gt;องศา&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;0&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;30&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;45&lt;/th&gt;
@@ -90,7 +91,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr class=&quot;odd&quot;&gt;
-&lt;td style=&quot;text-align: left;&quot;&gt;โคไซน์กำลังสอง&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot;&gt;โคไซน์กำลังสอง&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;1&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;3/4&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;1/2&lt;/td&gt;

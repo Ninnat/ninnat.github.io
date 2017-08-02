@@ -2,7 +2,8 @@
 layout: post
 title: ขั้นคิดคำนวณแบบควอนตัม
 subtitle:
-categories: Thai
+categories:
+  - Thai
 tags:
 
 ---

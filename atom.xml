@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-08-02T03:08:50+00:00</updated>
+ <updated>2017-08-02T16:39:33+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -60,6 +60,8 @@
 &lt;th style=&quot;text-align: center;&quot;&gt;3&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;4&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;5&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;6&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;7&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -70,6 +72,8 @@
 &lt;td style=&quot;text-align: center;&quot;&gt;8&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;1&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;2&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;4&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;8&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -94,6 +98,10 @@
 &lt;th style=&quot;text-align: center;&quot;&gt;45&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;60&lt;/th&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;90&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;120&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;135&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;150&lt;/th&gt;
+&lt;th style=&quot;text-align: center;&quot;&gt;180&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -104,6 +112,10 @@
 &lt;td style=&quot;text-align: center;&quot;&gt;1/2&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;1/4&lt;/td&gt;
 &lt;td style=&quot;text-align: center;&quot;&gt;0&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;1/4&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;1/2&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;3/4&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;1&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -124,7 +136,7 @@
 &lt;img src=&quot;/assets/img/posts/08-2018/grover2c.png&quot; style=&quot;width: 650px;&quot;/&gt;
 &lt;/center&gt;
 
-&lt;p&gt;เมื่อคำตอบที่เป็นไปได้มีจำนวนเยอะขึ้น ทิศทางตั้งต้นก็จะอยู่ห่างจากทิศของคำตอบมากขึ้น การพลิกสองสเต็ป (จากการเช็คคำตอบ ตามด้วยการพลิกผ่านทิศตั้งต้น) แต่ละครั้งจะทำให้ขยับเข้าใกล้คำตอบมากขึ้นเรื่อยๆ หากทำการวิเคราะห์ก็จะประมาณได้ว่าจำนวนครั้งที่อัลกอริธึมนี้ต้องเช็คคำตอบคือรากที่สองของจำนวนคำตอบที่เป็นไปได้ &lt;a href=&quot;#fn5&quot; class=&quot;footnoteRef&quot; id=&quot;fnref5&quot;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; ถ้าคอมพิวเตอร์ธรรมดาต้องเช็คคำตอบหนึ่งล้านครั้ง คอมพิวเตอร์ควอนตัมก็จำเป็นต้องเช็คเพียงแค่หนึ่งพันครั้ง ไม่ได้เร็วขึ้นแบบทวีคูณเหมือนอัลกอริธึมแยกตัวประกอบของชอร์แต่ก็ช่วยได้เยอะ&lt;/p&gt;
+&lt;p&gt;เมื่อคำตอบที่เป็นไปได้มีจำนวนเยอะขึ้น ทิศทางตั้งต้นก็จะอยู่ห่างจากทิศของคำตอบมากขึ้น การพลิกสองสเต็ป (จากการเช็คคำตอบ ตามด้วยการพลิกผ่านทิศตั้งต้น) แต่ละครั้งจะทำให้ขยับเข้าใกล้คำตอบมากขึ้นเรื่อยๆ หากทำการคำนวณก็จะประมาณได้ว่าจำนวนครั้งที่อัลกอริธึมนี้ต้องเช็คคำตอบคือรากที่สองของจำนวนคำตอบที่เป็นไปได้ &lt;a href=&quot;#fn5&quot; class=&quot;footnoteRef&quot; id=&quot;fnref5&quot;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; ถ้าคอมพิวเตอร์ธรรมดาต้องเช็คคำตอบหนึ่งล้านครั้ง คอมพิวเตอร์ควอนตัมก็จำเป็นต้องเช็คเพียงแค่หนึ่งพันครั้ง ไม่ได้เร็วขึ้นแบบทวีคูณเหมือนอัลกอริธึมแยกตัวประกอบของชอร์แต่ก็ช่วยได้เยอะ&lt;/p&gt;
 &lt;p&gt;ในมุมมองหนึ่ง สิ่งที่อัลกอริธึมควอนตัมทำจึงเป็นเพียงการขยับลูกศรไปมา ซึ่งพูดเหมือนง่ายแต่เป็นความท้าทายมาก ถ้าอยากรู้ว่าการควบคุมสถานะควอนตัมนั้นทำกันในแลบได้อย่างไรก็สามารถอ่านบทความที่เขียนและเรียบเรียงโดยนักศึกษาและนักวิทยาศาสตร์ไทยท่านอื่นๆ ได้ใน &lt;a href=&quot;http://www.ebooks.in.th/ebook/45594/&quot;&gt;&lt;em&gt;รูป รส กลิ่น เสียง สัมผัส ไอทีควอนตัม (๓): “คอมพิวเตอร์เชิงควอนตัม”&lt;/em&gt;&lt;/a&gt; ครับ&lt;/p&gt;
 &lt;h1 id=&quot;อางอง&quot;&gt;อ้างอิง&lt;/h1&gt;
 &lt;ul&gt;

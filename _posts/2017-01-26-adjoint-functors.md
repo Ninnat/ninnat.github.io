@@ -6,11 +6,13 @@ categories:
   - category theory
 tags:
 ---
-Modified: *25 May 2017*; Status: *completed*
+Modified: *30 Aug 2017*; Status: *completed*
 
-Lately I've been thinking about induced representations and the Frobenius reciprocity theorem which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view that I need at the level I'm comfortable with. (You can find better general introductions out there by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.)
+Lately I've been thinking about induced representations and the Frobenius reciprocity which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view that I need at the level I'm comfortable with. (You can find better general introductions out there by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.)
 
 To me, one of the most powerful lessons from category theory is that knowing the relations between an object with other objects is as good as knowing the object itself, as the object can be defined by these relations. A lot of time there is a unique (up to a natural isomorphism which doesn't entail making any arbitrary choice) object that has a "universal" property that can simulate the relations to all other objects of the same kind and so can be thought of as the "best" object of its kind. As a bonus, all of these can be represented by diagrams of objects and arrows. I will give some examples of these on the way but let us first define what categories are.
+
+## Categories
 
 A **category** $\mathcal{C}$ is a class of objects and morphisms between them. If $X$ and $Y$ are **objects** in $\mathcal{C}$, the class of **morphisms** between $X$ and $Y$ is denoted by $\text{Hom}(X,Y)$. They are also represented diagrammatically as arrows $f:X \to Y$ for $f \in \text{Hom}(X,Y)$. For $\mathcal{C}$ to be a category, there must be a unit (identity) morphism and the compositions of morphisms must be associative. Here are some categories.
 
@@ -52,9 +54,21 @@ $$ \begin{aligned}
 \end{aligned} $$
 If there is another map $\gamma'$ from $D$ to $C$ that makes the diagram commutes, it must sends $d$ to an element of $A \times B$ that projects to $\alpha'(d)$ on $A$ and $\beta'(d)$ on $B$. But that element is none other than $(\alpha'(d),\beta'(d))$. Thus, the uniqueness is established. For the disjoint union $C = A \amalg B$, a natural choice for the mappings $\alpha$ and $\beta$ is the embedding of $A$ and $B$ into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around ("diagram chasing").
 
-We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in **Set**. The nice answer is that they are. And this is not only true in **Set** but also in a general category as well. We will not prove that here but it amounts to using the definition of a product or a coproduct and do some more diagram chasing.
+We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in **Set**. The nice answer is that they are. And this is not only true in **Set** but also in a general category as well. For **Set**, suppose that we have two product objects $C$ and $C'$. Then there are unique morphisms in both directions, $\gamma: C' \to C$ and $\gamma':C \to C'$, that make the diagram commutes.
+<center>
+<img src="/assets/img/posts/01-2018/product-uniqueness.png" style="width: 200px;"/>
+</center>
+<!--
+\begin{align*}
+	\xymatrix{
+      & C' \ar[dl]_{\alpha'}\ar[d]^{\gamma}\ar[dr]^{\beta'} & \\
+      A & C\ar[l]^{\alpha}\ar[u]^{\gamma'}\ar[r]_{\beta} & B
+	}
+\end{align*}
+-->
+Surely $\alpha \circ \gamma \circ \gamma' = \alpha' \circ \gamma' = \alpha$. and $\beta \circ \gamma \circ \gamma' = \beta' \circ \gamma' = \beta$. But these mean that if we replace $C'$ in the diagram by $C$, then $\gamma \circ \gamma'$ is a unique morphism from $C$ to itself that makes the new diagram commutes. But we know that the identity morphism also makes the diagram commutes, so $\gamma \circ \gamma'$ has to be the identity morphism.
 
-Why going so far to define something that should reduce to the notion of a product in any category? Well, this construction guides us when it is not clear what the right structure of the product is. This is the case in the category **Top** of all topological spaces, which [Todd Trimble](https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/) gives as an example and to which I will not go into since it is new to me so I would just be regurgitating what Todd already said better.
+Why going so far to define something that should reduce to the notion of a product in any category? Well, it is not always clear what the notion of a product should be. [Todd Trimble](https://topologicalmusings.wordpress.com/2008/06/22/basic-category-theory-i/) goes over this in the case of the category **Top** of all topological spaces.
 
 ## Functors
 
@@ -96,7 +110,7 @@ $$ \begin{aligned}
 \end{aligned} $$
 so that the free functor is a left adjoint of the forgetful functor.
 
-<!-- A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogs in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
+A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogs in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
 $$ \begin{aligned}
 f (u) = \braket{v,u}.
 \end{aligned} $$
@@ -104,7 +118,9 @@ Now consider the linear functional $v \mapsto \braket{L(v),u}$. By the represent
 $$ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)),
 \end{aligned} $$
-and the classes of morphisms are sets (which they usually are), the functor $Y \mapsto \text{Hom}_{\mathcal{C}} (X,G(Y))$ is represented by $F(X)$ and the functor $X \mapsto \text{Hom}_{\mathcal{D}} (F(X),Y)$ is represented by $F(Y)$, so they are unique by the Yoneda's lemma. A further analogy is that an adjoint functor may not exist, but if it exists, it is unique. -->
+and the classes of morphisms are sets (which they usually are), the functor $Y \mapsto \text{Hom}_{\mathcal{C}} (X,G(Y))$ is represented by $F(X)$ and the functor $X \mapsto \text{Hom}_{\mathcal{D}} (F(X),Y)$ is represented by $F(Y)$, so they are unique by the Yoneda's lemma. A further analogy is that an adjoint functor may not exist, but if it exists, it is unique.
+
+
 
 In representation theory, a restriction of a representation of a group $G$ to a subgroup $H$ is a functor whose left adjoint is the induction of a representation of $H$ to a "free" representation of $G$. There, the [Frobenius reciprocity theorem](https://en.wikipedia.org/wiki/Induced_representation) is nothing but the property of adjoint functors. I will talk about how this can be used to deduce the well known fact that each irreducible representation of SO(3) appears only once in the decomposition of functions on a sphere.
 

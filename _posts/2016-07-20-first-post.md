@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First Post
-subtitle: How this blog is made and what it can do
+subtitle: This is not the first post anymore but whatever.
 date: 2017-01-03
 categories:
 tags:

@@ -2,6 +2,7 @@
 layout: post
 title: ควอนตัมฟิสิกส์สำหรับทารก
 subtitle: Quantum Physics for Babies in Thai is here!
+date: 2016-12-27
 categories:
   - Thai
 tags:

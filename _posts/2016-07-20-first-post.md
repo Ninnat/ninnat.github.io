@@ -2,11 +2,12 @@
 layout: post
 title: First Post
 subtitle: How this blog is made and what it can do
+date: 2017-01-03
 categories:
 tags:
 ---
 
-Modified: *3 Jan 2017*
+First published: *20 Jul 2016*
 
 First post on my Jekyll-powered blog!
 

@@ -26,7 +26,7 @@ navigation: # For the navigation menu. Don't use index.html. urls should end wit
   - text: About
     url: /about/
 
-permalink: /:year/:month/:day/:title.html
+permalink: /:title.html
 redirects: yes
 encoding: utf-8
 pageviews: no    ## toggle on sidebar pageviews

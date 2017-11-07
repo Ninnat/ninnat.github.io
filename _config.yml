@@ -45,6 +45,7 @@ sourcebranch: dev # used in linking commit history.
 source: .
 gems:
   - jekyll-pandoc
+  - unicode # Maybe required by latex-decode 0.3.
 #  - 'jekyll-twitter-plugin'
 # Publications. Ref: http://tuxette.nathalievilla.org/?p=1426
 # http://eric-tramel.github.io/working-automated-publications/

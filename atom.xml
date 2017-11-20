@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2017-11-20T00:52:01+00:00</updated>
+ <updated>2017-11-20T01:01:26+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -113,7 +113,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
 &lt;center&gt;
 &lt;img src=&quot;/assets/img/posts/01-2018/cofree-functor.png&quot; style=&quot;width: 180px;&quot;/&gt;
 &lt;/center&gt;
-&lt;p&gt;where now &lt;span class=&quot;math&quot;&gt;\(F\)&lt;/span&gt; is a cofree functor, fails when &lt;span class=&quot;math&quot;&gt;\(S\)&lt;/span&gt; is an empty set. Given a group homormophism from &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(F(S)\)&lt;/span&gt;, there is no corresponding map from &lt;span class=&quot;math&quot;&gt;\(R(G)\)&lt;/span&gt; to an empty set because a map is required to be a total function and there is no total function into an empty set. [^right-adjoint]&lt;/p&gt;
+&lt;p&gt;where now &lt;span class=&quot;math&quot;&gt;\(F\)&lt;/span&gt; is a cofree functor, fails when &lt;span class=&quot;math&quot;&gt;\(S\)&lt;/span&gt; is an empty set. Given a group homormophism from &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(F(S)\)&lt;/span&gt;, there is no corresponding map (with a non-empty image) from &lt;span class=&quot;math&quot;&gt;\(R(G)\)&lt;/span&gt; to an empty set. &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;!-- A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda&#39;s lemma, neither of which I can competently explain. But they all have analogues in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda&#39;s lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda&#39;s lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
 $$ \begin{aligned}
 f (u) = \braket{v,u}.
@@ -128,7 +128,12 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
 &lt;p&gt;In representation theory, a restriction of a representation of a group &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; to a subgroup &lt;span class=&quot;math&quot;&gt;\(H\)&lt;/span&gt; is a functor whose left adjoint is the induction of a representation of &lt;span class=&quot;math&quot;&gt;\(H\)&lt;/span&gt; to a “free” representation of &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;. There, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Induced_representation&quot;&gt;Frobenius reciprocity theorem&lt;/a&gt; is nothing but the property of adjoint functors. I will talk about how this can be used to deduce the well known fact that each irreducible representation of SO(3) appears only once in the decomposition of functions on a sphere.&lt;/p&gt;
 &lt;!-- [^1]: Page 102 of Etingof *et al.*, [*Introduction to Representation Theory*](http://math.mit.edu/~etingof/replect.pdf).--&gt;
 
-&lt;p&gt;[^ right-adjoint]: There is a right adjoint to the forgetful functor &lt;a href=&quot;https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor&quot;&gt;from the category of sets with &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-actions &lt;strong&gt;Set(G)&lt;/strong&gt; to &lt;strong&gt;Set&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;There is a right adjoint to the forgetful functor &lt;a href=&quot;https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor&quot;&gt;from the category of sets with &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-actions &lt;strong&gt;Set(G)&lt;/strong&gt; to &lt;strong&gt;Set&lt;/strong&gt;&lt;/a&gt;.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </content>
  </entry>
  

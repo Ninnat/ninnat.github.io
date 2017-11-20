@@ -308,7 +308,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
 <center>
 <img src="/assets/img/posts/01-2018/cofree-functor.png" style="width: 180px;"/>
 </center>
-<p>where now <span class="math">\(F\)</span> is a cofree functor, fails when <span class="math">\(S\)</span> is an empty set. Given a group homormophism from <span class="math">\(G\)</span> to <span class="math">\(F(S)\)</span>, there is no corresponding map from <span class="math">\(R(G)\)</span> to an empty set because a map is required to be a total function and there is no total function into an empty set. [^right-adjoint]</p>
+<p>where now <span class="math">\(F\)</span> is a cofree functor, fails when <span class="math">\(S\)</span> is an empty set. Given a group homormophism from <span class="math">\(G\)</span> to <span class="math">\(F(S)\)</span>, there is no corresponding map (with a non-empty image) from <span class="math">\(R(G)\)</span> to an empty set. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
 <!-- A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogues in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
 $$ \begin{aligned}
 f (u) = \braket{v,u}.
@@ -323,7 +323,12 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
 <p>In representation theory, a restriction of a representation of a group <span class="math">\(G\)</span> to a subgroup <span class="math">\(H\)</span> is a functor whose left adjoint is the induction of a representation of <span class="math">\(H\)</span> to a “free” representation of <span class="math">\(G\)</span>. There, the <a href="https://en.wikipedia.org/wiki/Induced_representation">Frobenius reciprocity theorem</a> is nothing but the property of adjoint functors. I will talk about how this can be used to deduce the well known fact that each irreducible representation of SO(3) appears only once in the decomposition of functions on a sphere.</p>
 <!-- [^1]: Page 102 of Etingof *et al.*, [*Introduction to Representation Theory*](http://math.mit.edu/~etingof/replect.pdf).-->
 
-<p>[^ right-adjoint]: There is a right adjoint to the forgetful functor <a href="https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor">from the category of sets with <span class="math">\(G\)</span>-actions <strong>Set(G)</strong> to <strong>Set</strong></a>.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>There is a right adjoint to the forgetful functor <a href="https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor">from the category of sets with <span class="math">\(G\)</span>-actions <strong>Set(G)</strong> to <strong>Set</strong></a>.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 
           </article>
 
@@ -368,7 +373,7 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/f96b1a14c14b2a481d8742fd428b1c064f213506/_posts/2017-01-26-adjoint-functors.md"> f96b1a14c14b2a481d8742fd428b1c064f213506</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5ac28b82c0cf34abfaf365ee750ee3a2f0cf469e/_posts/2017-01-26-adjoint-functors.md"> 5ac28b82c0cf34abfaf365ee750ee3a2f0cf469e</a></tiny></p> -->
 </aside>
 
 <br /><br />

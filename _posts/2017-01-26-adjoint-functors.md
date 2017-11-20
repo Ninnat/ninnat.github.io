@@ -124,7 +124,7 @@ $$ \begin{aligned}
 <center>
 <img src="/assets/img/posts/01-2018/cofree-functor.png" style="width: 180px;"/>
 </center>
-where now $F$ is a cofree functor, fails when $S$ is an empty set. Given a group homormophism from $G$ to $F(S)$, there is no corresponding map from $R(G)$ to an empty set because a map is required to be a total function and there is no total function into an empty set. [^right-adjoint]
+where now $F$ is a cofree functor, fails when $S$ is an empty set. Given a group homormophism from $G$ to $F(S)$, there is no corresponding map (with a non-empty image) from $R(G)$ to an empty set. [^1]
 
 <!-- A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogues in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
 $$ \begin{aligned}
@@ -142,4 +142,4 @@ In representation theory, a restriction of a representation of a group $G$ to a 
 
 <!-- [^1]: Page 102 of Etingof *et al.*, [*Introduction to Representation Theory*](http://math.mit.edu/~etingof/replect.pdf).-->
 
-[^ right-adjoint]: There is a right adjoint to the forgetful functor [from the category of sets with $G$-actions **Set(G)** to **Set**](https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor).
+[^1]: There is a right adjoint to the forgetful functor [from the category of sets with $G$-actions **Set(G)** to **Set**](https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor).

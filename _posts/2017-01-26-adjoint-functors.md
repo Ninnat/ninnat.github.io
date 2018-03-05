@@ -28,7 +28,7 @@ A **category** $\mathcal{C}$ is a class of objects and morphisms between them. I
 
 My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct. A **product** of $A$ and $B$ is an object $C$ together with a morphism from $C$ to $A$ and $B$ such that, if $D$ is another object also equipped with some morphisms to $A$ and $B$, then there is a unique morphism from $D$ to $C$ such that the following diagram "commutes" (so we call this kind of diagrams commutative diagrams), meaning that every way to compose such morphisms to go from $D$ to $A$ or $B$ gives the same result.
 <center>
-<img src="/assets/img/posts/01-2018/product.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2017/product.png" style="width: 200px;"/>
 </center>
 <!-- \begin{align*}
 	\xymatrix{
@@ -40,7 +40,7 @@ The rational behind this definition is that $C$ together with the mappings $\alp
 
 The same diagram with all arrows reversed defines a **coproduct** $C$.
 <center>
-<img src="/assets/img/posts/01-2018/coproduct.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2017/coproduct.png" style="width: 200px;"/>
 </center>
 <!-- \begin{align*}
 	\xymatrix{
@@ -60,7 +60,7 @@ If there is another map $\gamma'$ from $D$ to $C$ that makes the diagram commute
 
 We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in **Set**. The nice answer is that they are. And this is not only true in **Set** but also in a general category as well. Let us show this for the categorical product in **Set**. Suppose that we have two product objects $C$ and $C'$. Then there are unique morphisms in both directions, $\gamma: C' \to C$ and $\gamma':C \to C'$, that make the diagram commutes.
 <center>
-<img src="/assets/img/posts/01-2018/product-uniqueness.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2017/product-uniqueness.png" style="width: 200px;"/>
 </center>
 <!--
 \begin{align*}
@@ -82,7 +82,7 @@ One of the more trivial kinds of functors are ones that simply throw away inform
 
 More interesting is the **free functor** $F:$ **Set** $\to$ **Grp** sending a set to its "[free group](https://en.wikipedia.org/wiki/Free_group)". For a set $S$, $F(S)$ is the set of all expressions that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that giving a map $\sigma$ from $S$ to some group $G$ is equivalent to giving a unique group homomorphism $\varphi$ from the free group $F(S)$ to $G$. (The empty set gives the trivial group.)
 <center>
-<img src="/assets/img/posts/01-2018/free-group.png" style="width: 150px;"/>
+<img src="/assets/img/posts/01-2017/free-group.png" style="width: 150px;"/>
 </center>
 <!-- \begin{align}
 	\xymatrix{
@@ -98,7 +98,7 @@ $$ \begin{aligned}
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
 \end{aligned} $$
 <center>
-<img src="/assets/img/posts/01-2018/adjoint.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2017/adjoint.png" style="width: 180px;"/>
 </center>
 <!-- \begin{align*}
 	\xymatrix{
@@ -113,7 +113,7 @@ $$ \begin{aligned}
 \text{Hom}_{\bf{Grp}} (F(S),G) \simeq \text{Hom}_{\bf{Set}} (S,R(G))
 \end{aligned} $$
 <center>
-<img src="/assets/img/posts/01-2018/free-functor.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2017/free-functor.png" style="width: 180px;"/>
 </center>
 so that the free functor is a left adjoint of the forgetful functor.
 
@@ -122,7 +122,7 @@ $$ \begin{aligned}
 \text{Hom}_{\bf{Grp}} (G,F(S)) \simeq \text{Hom}_{\bf{Set}} (R(G),S)
 \end{aligned}, $$
 <center>
-<img src="/assets/img/posts/01-2018/cofree-functor.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2017/cofree-functor.png" style="width: 180px;"/>
 </center>
 where now $F$ is a cofree functor, fails when $S$ is an empty set. Given a group homormophism from $G$ to $F(S)$, there is no corresponding map (with a non-empty image) from $R(G)$ to an empty set. [^1]
 

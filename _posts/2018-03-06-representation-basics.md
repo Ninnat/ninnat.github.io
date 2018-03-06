@@ -57,7 +57,7 @@ naturally. (We do not assume the Hermitian inner product structure for a
 moment.) Nevertheless, if we pick an ordered basis $\{ \ket{v_j} \}$, an
 isomorphism amounts to the transposition---simply flipping the ket
 $\ket{v_j}$ to the bra $\bra{v_j}$. The *dual representation*
-$(\rep^*,V^*)$ of a representation $(\rep,V)$ can be defined in [several ways](https://math.berkeley.edu/~reb/courses/261/31.pdf), which can be quite confusing. We follow Fultan and Harris [^2] and define the *right
+$(\rep^*,V^*)$ of a representation $(\rep,V)$ can be defined in [several ways](https://math.berkeley.edu/~reb/courses/261/31.pdf), which can be quite confusing. We follow Fulton and Harris [^2] and define the *right
 action* $\bra{u} \rep(g^*)$, so that
 $$\begin{aligned}
 (\bra{u} \rep^*(g) ) (\rep(g) \ket{v}) &= \braket{u|v},\end{aligned}$$
@@ -244,20 +244,21 @@ $$\begin{aligned}
 \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \text{End}(V_{\lambda}),
 \end{aligned}$$
 where the representation $(\rep_L \otimes \id, G\times G)$ acts on
-$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on
-$V_{\lambda}^*$.
+$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $.
 
 The unitary change of basis from $\{\ket{g}\}$ to an orthonormal basis
-on the right hand side of \eqref{eq:regular decomposition} is the *Fourier
-transform*. Its explicit matrix form, given an orthonormal basis
+on the right hand side of \eqref{eq:regular decomposition} is the *Fourier transform*. Its explicit matrix form, given an orthonormal basis
 $\{\ket{\lambda,j,k}|1\le j,k\le d_{\lambda}\}$ for each
-$V_{\lambda} \otimes V_{\lambda}^*$, is $$\begin{aligned}
+$V_{\lambda} \otimes V_{\lambda}^* $, is
+$$\begin{aligned}
 \label{Fourier transform:unitary}
-U_{\text{FT}} &= \sum_{g \in G} \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ketbra{\lambda,j,k}{g} = \sum_{g\in G} \ketbra{\tilde{g}}{g},\end{aligned}$$
+U_{\text{FT}} &= \sum_{g \in G} \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ketbra{\lambda,j,k}{g} = \sum_{g\in G} \ketbra{\tilde{g}}{g},
+\end{aligned}$$
 $\ket{\tilde{g}}$ being the Fourier transform of the discrete delta
 function $\ket{g}$: $$\begin{aligned}
 \label{Fourier transform}
-\ket{\tilde{g}} &= \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ket{\lambda,j,k}.\end{aligned}$$
+\ket{\tilde{g}} &= \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ket{\lambda,j,k}.
+\end{aligned}$$
 (Note the choice of the constant $1/\sqrt{|G|}$, akin to using
 $1/(2\pi)$ in the continuous Fourier transform, is necessary for
 $U_{\text{FT}}$ to be unitary).
@@ -266,7 +267,8 @@ For the cyclic group $\mathbb{Z}_n$, this is just the discrete Fourier
 transform
 $$\begin{aligned}
 \label{Fourier transform:Z_n}
-U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi iัxััy/n} \ketbra{y}{x}.  \end{aligned}$$
+U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{x}.  
+\end{aligned}$$
 More generally, for any abelian group, $$\begin{aligned}
 \label{Fourier transform:abelian}
 \ket{\tilde{g}} &= \frac{1}{\sqrt{|G|}} \sum_{\lambda \in \hat{G}} \chi_{\lambda}(g) \ket{\lambda},
@@ -274,9 +276,12 @@ More generally, for any abelian group, $$\begin{aligned}
 where $\chi_{\lambda}(g)$ is a one-dimensional irrep of $G$, also called
 an *(irreducible) [character](https://en.wikipedia.org/wiki/Character_theory)*. The Fourier transform on an abelian group is much more well-behaved than
 the general case because the collection of all distinct irreps $\hat{G}$
-also comes equipped with the abelian group structure. $$\begin{aligned}
+also comes equipped with the abelian group structure.
+$$\begin{aligned}
 \chi^{-1}(g) &= \chi(g^{-1}) = \conj \chi(g) \\
-\chi(g_1)\chi(g_2) &= \chi(g_1 g_2).\end{aligned}$$ In this case,
+\chi(g_1)\chi(g_2) &= \chi(g_1 g_2).
+\end{aligned}$$
+In this case,
 $\hat{G}$ is called the *dual group*. The *[compact-discrete duality](https://en.wikipedia.org/wiki/Pontryagin_duality)*
 states that $\hat{G}$ is compact if $G$ is discrete and vice versa. Familiar dual pairs are
 $G = \hat{G} = \mathbb{Z}_d$, $G = \hat{G} = \mathbb{R}$, and

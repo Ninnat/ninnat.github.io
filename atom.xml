@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-03-06T07:49:30+00:00</updated>
+ <updated>2018-03-06T08:06:28+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -13,10 +13,10 @@
 
  
  <entry>
-   <title></title>
-   <link href="/2018-03-06-representation-basics.html"/>
-   <updated>2018-03-06T07:49:30+00:00</updated>
-   <id>h/2018-03-06-representation-basics</id>
+   <title>Representation Theory: Basic Definitions and Facts</title>
+   <link href="/representation-basics.html"/>
+   <updated>2018-03-06T00:00:00+00:00</updated>
+   <id>h/representation-basics</id>
    <content type="html">&lt;!-- First published: *5 Mar 2018*; Status: *In progress* --&gt;
 
 &lt;p&gt;&lt;em&gt;The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.&lt;/em&gt;&lt;/p&gt;
@@ -32,7 +32,7 @@
 &lt;p&gt;As every vector space comes with the dual space, every representation comes with the dual representation. Recall that the dual space &lt;span class=&quot;math&quot;&gt;\(V^*\)&lt;/span&gt; of a complex vector space is the vector space of all linear maps from &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(\mathbb{C}\)&lt;/span&gt;. Since &lt;span class=&quot;math&quot;&gt;\(V^*\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; have the same dimension, they are isomorphic as vector spaces &lt;span class=&quot;math&quot;&gt;\(V^* \simeq V\)&lt;/span&gt; but not naturally. (We do not assume the Hermitian inner product structure for a moment.) Nevertheless, if we pick an ordered basis &lt;span class=&quot;math&quot;&gt;\(\{ \ket{v_j} \}\)&lt;/span&gt;, an isomorphism amounts to the transposition—simply flipping the ket &lt;span class=&quot;math&quot;&gt;\(\ket{v_j}\)&lt;/span&gt; to the bra &lt;span class=&quot;math&quot;&gt;\(\bra{v_j}\)&lt;/span&gt;. The &lt;em&gt;dual representation&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\((\rep^*,V^*)\)&lt;/span&gt; of a representation &lt;span class=&quot;math&quot;&gt;\((\rep,V)\)&lt;/span&gt; can be defined in &lt;a href=&quot;https://math.berkeley.edu/~reb/courses/261/31.pdf&quot;&gt;several ways&lt;/a&gt;, which can be quite confusing. We follow Fultan and Harris &lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; and define the &lt;em&gt;right action&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(\bra{u} \rep(g^*)\)&lt;/span&gt;, so that &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
 (\bra{u} \rep^*(g) ) (\rep(g) \ket{v}) &amp;amp;= \braket{u|v},\end{aligned}\]&lt;/span&gt; for all &lt;span class=&quot;math&quot;&gt;\(\ket{u},\ket{v} \in V\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(g \in G\)&lt;/span&gt;. (The inverse is necessary to make &lt;span class=&quot;math&quot;&gt;\(\rep^*\)&lt;/span&gt; a group homomorphism.) Note that if we want to turn the right action to the &lt;em&gt;left action&lt;/em&gt; on &lt;span class=&quot;math&quot;&gt;\(\ket{u}\)&lt;/span&gt;, the matrix representation of &lt;span class=&quot;math&quot;&gt;\(\rep^*(g)\)&lt;/span&gt; is given by the transpose &lt;span class=&quot;math&quot;&gt;\(\rep^T(g^{-1})\)&lt;/span&gt; so that &lt;span class=&quot;math&quot;&gt;\(\bra{u} \rep^*(g) = \bra{\rep^T(g^{-1})u}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A representation is &lt;em&gt;unitary&lt;/em&gt; if it is equivalent to a representation in which every &lt;span class=&quot;math&quot;&gt;\(\rep(g)\)&lt;/span&gt; is a unitary operator, &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
-\rep\dgg (g) \rep(g) &amp;amp;= \id,\end{aligned}\]&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(\rep\dgg (g)\)&lt;/span&gt; is the entry-wise complex conjugate transpose of &lt;span class=&quot;math&quot;&gt;\(\rep(g)\)&lt;/span&gt;. For a unitary representation, the right-action version of the dual representation coincides with the &lt;em&gt;Hermitian dual representation&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(\rho\dgg (g)\)&lt;/span&gt;, while the left-action version coincides with the &lt;em&gt;complex conjugate representation&lt;/em&gt;. Hhigh energy physicists like to use the latter and signify the dual representation by an overbar.&lt;/p&gt;
+\rep\dgg (g) \rep(g) &amp;amp;= \id,\end{aligned}\]&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(\rep\dgg (g)\)&lt;/span&gt; is the entry-wise complex conjugate transpose of &lt;span class=&quot;math&quot;&gt;\(\rep(g)\)&lt;/span&gt;. For a unitary representation, the right-action version of the dual representation coincides with the &lt;em&gt;Hermitian dual representation&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(\rho\dgg (g)\)&lt;/span&gt;, while the left-action version coincides with the &lt;em&gt;complex conjugate representation&lt;/em&gt;. High energy physicists like to use the latter, signifying the dual representation by an overbar.&lt;/p&gt;
 &lt;h2 id=&quot;intertwiners-and-schurs-lemma&quot;&gt;Intertwiners and Schur’s lemma&lt;/h2&gt;
 For complex vector spaces &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt;, define &lt;span class=&quot;math&quot;&gt;\(\text{Hom}(V,W)\)&lt;/span&gt; to be the vector space of linear maps (linear homomorphisms) from &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt;. When &lt;span class=&quot;math&quot;&gt;\(V = W\)&lt;/span&gt;, this space is also denoted by &lt;span class=&quot;math&quot;&gt;\(\text{End}(V)\)&lt;/span&gt; (endomorphisms). Naturally, &lt;span class=&quot;math&quot;&gt;\(\text{Hom}(V,W) \simeq W \otimes V^*\)&lt;/span&gt;. When &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt; are endowed with &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-representations &lt;span class=&quot;math&quot;&gt;\(\rep_1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\rep_2\)&lt;/span&gt;, respectively, an &lt;em&gt;intertwiner&lt;/em&gt; between &lt;span class=&quot;math&quot;&gt;\(\rep_1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\rep_2\)&lt;/span&gt; is defined as a linear map &lt;span class=&quot;math&quot;&gt;\(\varphi\)&lt;/span&gt; that makes the diagram below commutative for any &lt;span class=&quot;math&quot;&gt;\(g\in G\)&lt;/span&gt;.
 &lt;center&gt;

@@ -295,7 +295,7 @@ $(document).ready(function() {
     
       <li><span>20 Sep 2017</span> &raquo; <a href="/adjoint-functors.html">Adjoint functors</a></li>
     
-      <li><span>03 Jan 2017</span> &raquo; <a href="/first-post.html">First Post</a></li>
+      <li><span>05 Mar 2018</span> &raquo; <a href="/representation-primer.html">Representation Theory Primer (basic definitions, Schur's lemma, unitary representation, isotypic decomposition)</a></li>
     
   </ul>
 </div>
@@ -407,6 +407,23 @@ $(document).ready(function() {
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
           pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           Tr: ["{\\mathrm{Tr}}"],
+
+          id: "{\mathbbm 1}",
+          rep: "{\rho}",
+          krep: "{\sigma}", <!--representation of subgroup-->
+          gr: ["{\text{#1}(#2)",2], <!--linear group-->
+          homsp: ["{\text{#1}(#2)/\text{#3}(#4)}",4], <!--homogeneous space-->
+          al: "{\mathfrak}", <!--Lie algebra-->
+          ind: ["{\text{Ind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
+          coind: ["{\text{Coind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
+          adrep: "{\text{ad}\,}", <!--adjoint representation-->
+          Adrep: "{\text{Ad}\,}", <!--Adjoint representation-->
+          kil: ["{\text{Kill}(#1,#2)}",2], <!--Killing form-->
+          ran: "{\text{rank}\,}", <!--rank-->
+          norm: ["{\|#1\|}",1],
+          hilb: "{\mathcal{H}}",
+          herm: "{\mathbb H(\hilb)}",
+          \dgg: "{^{\dagger}}" <!--Hermitian conjugate-->
         }
       <!-- extensions: ["autoload-all.js"]-->
       }

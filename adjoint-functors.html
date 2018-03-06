@@ -229,7 +229,7 @@ $(document).ready(function() {
 </ul>
 My favorite elementary example of uniquely defining an object by morphisms is the construction of a product and a coproduct. A <strong>product</strong> of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is an object <span class="math">\(C\)</span> together with a morphism from <span class="math">\(C\)</span> to <span class="math">\(A\)</span> and <span class="math">\(B\)</span> such that, if <span class="math">\(D\)</span> is another object also equipped with some morphisms to <span class="math">\(A\)</span> and <span class="math">\(B\)</span>, then there is a unique morphism from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> such that the following diagram “commutes” (so we call this kind of diagrams commutative diagrams), meaning that every way to compose such morphisms to go from <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> gives the same result.
 <center>
-<img src="/assets/img/posts/01-2018/product.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2017/product.png" style="width: 200px;"/>
 </center>
 <!-- \begin{align*}
     \xymatrix{
@@ -240,7 +240,7 @@ My favorite elementary example of uniquely defining an object by morphisms is th
 <p>The rational behind this definition is that <span class="math">\(C\)</span> together with the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the <a href="https://en.wikipedia.org/wiki/Universal_property">best</a> object that acts as a product of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> since giving any morphism from any object <span class="math">\(D\)</span> to <span class="math">\(A\)</span> or <span class="math">\(B\)</span> is equivalent to giving <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> from <span class="math">\(C\)</span>, so we can just forget about <span class="math">\(D\)</span> altogether and regard <span class="math">\(C\)</span> as a universal simulator of such relations.</p>
 The same diagram with all arrows reversed defines a <strong>coproduct</strong> <span class="math">\(C\)</span>.
 <center>
-<img src="/assets/img/posts/01-2018/coproduct.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2017/coproduct.png" style="width: 200px;"/>
 </center>
 <!-- \begin{align*}
     \xymatrix{
@@ -255,7 +255,7 @@ The same diagram with all arrows reversed defines a <strong>coproduct</strong> <
 \end{aligned} \]</span> If there is another map <span class="math">\(\gamma&#39;\)</span> from <span class="math">\(D\)</span> to <span class="math">\(C\)</span> that makes the diagram commutes, it must sends <span class="math">\(d\)</span> to an element of <span class="math">\(A \times B\)</span> that projects to <span class="math">\(\alpha&#39;(d)\)</span> on <span class="math">\(A\)</span> and <span class="math">\(\beta&#39;(d)\)</span> on <span class="math">\(B\)</span>. But that element is none other than <span class="math">\((\alpha&#39;(d),\beta&#39;(d))\)</span>. Thus, the uniqueness is established. For the disjoint union <span class="math">\(C = A \amalg B\)</span>, a natural choice for the mappings <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> is the embedding of <span class="math">\(A\)</span> and <span class="math">\(B\)</span> into the union. Then the proof proceeds in the same manner by making obvious choices and following the arrows around (“diagram chasing”).</p>
 We can ask if the direct product and the direct sum of sets are the only product and coproduct objects in <strong>Set</strong>. The nice answer is that they are. And this is not only true in <strong>Set</strong> but also in a general category as well. Let us show this for the categorical product in <strong>Set</strong>. Suppose that we have two product objects <span class="math">\(C\)</span> and <span class="math">\(C&#39;\)</span>. Then there are unique morphisms in both directions, <span class="math">\(\gamma: C&#39; \to C\)</span> and <span class="math">\(\gamma&#39;:C \to C&#39;\)</span>, that make the diagram commutes.
 <center>
-<img src="/assets/img/posts/01-2018/product-uniqueness.png" style="width: 200px;"/>
+<img src="/assets/img/posts/01-2017/product-uniqueness.png" style="width: 200px;"/>
 </center>
 <!--
 \begin{align*}
@@ -272,7 +272,7 @@ We can ask if the direct product and the direct sum of sets are the only product
 <p>One of the more trivial kinds of functors are ones that simply throw away information. The <strong>forgetful functor</strong> <strong>Grp</strong> <span class="math">\(\to\)</span> <strong>Set</strong> sends a group to its underlying set; it completely forgets the group structure. There are also functors that are partially forgetful such as the functor from <strong>Grp</strong> to <strong>Ab</strong> the category of all abelian groups which set <span class="math">\(gh=hg\)</span> for all elements <span class="math">\(g,h\)</span> in a group.</p>
 More interesting is the <strong>free functor</strong> <span class="math">\(F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to its “<a href="https://en.wikipedia.org/wiki/Free_group">free group</a>”. For a set <span class="math">\(S\)</span>, <span class="math">\(F(S)\)</span> is the set of all expressions that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that giving a map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> is equivalent to giving a unique group homomorphism <span class="math">\(\varphi\)</span> from the free group <span class="math">\(F(S)\)</span> to <span class="math">\(G\)</span>. (The empty set gives the trivial group.)
 <center>
-<img src="/assets/img/posts/01-2018/free-group.png" style="width: 150px;"/>
+<img src="/assets/img/posts/01-2017/free-group.png" style="width: 150px;"/>
 </center>
 <!-- \begin{align}
     \xymatrix{
@@ -286,7 +286,7 @@ Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span 
 \text{Hom}_{\mathcal{D}} (F(X),Y) \simeq \text{Hom}_{\mathcal{C}} (X,G(Y)).
 \end{aligned} \]</span>
 <center>
-<img src="/assets/img/posts/01-2018/adjoint.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2017/adjoint.png" style="width: 180px;"/>
 </center>
 <!-- \begin{align*}
     \xymatrix{
@@ -299,14 +299,14 @@ Why should this be true in the case of the forgetful functor <span class="math">
 \text{Hom}_{\bf{Grp}} (F(S),G) \simeq \text{Hom}_{\bf{Set}} (S,R(G))
 \end{aligned} \]</span>
 <center>
-<img src="/assets/img/posts/01-2018/free-functor.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2017/free-functor.png" style="width: 180px;"/>
 </center>
 <p>so that the free functor is a left adjoint of the forgetful functor.</p>
 Possessing an adjoint on one side does not imply possessing an adjoint on the other side, as this example also demonstrates; the forgetful functor <span class="math">\(R:{\bf Grp} \to {\bf Set}\)</span> does not have a right adjoint. The desired isomorphism <span class="math">\[ \begin{aligned}
 \text{Hom}_{\bf{Grp}} (G,F(S)) \simeq \text{Hom}_{\bf{Set}} (R(G),S)
 \end{aligned}, \]</span>
 <center>
-<img src="/assets/img/posts/01-2018/cofree-functor.png" style="width: 180px;"/>
+<img src="/assets/img/posts/01-2017/cofree-functor.png" style="width: 180px;"/>
 </center>
 <p>where now <span class="math">\(F\)</span> is a cofree functor, fails when <span class="math">\(S\)</span> is an empty set. Given a group homormophism from <span class="math">\(G\)</span> to <span class="math">\(F(S)\)</span>, there is no corresponding map (with a non-empty image) from <span class="math">\(R(G)\)</span> to an empty set. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
 <!-- A deep understanding of adjoint functors seem to require knowing about representability of functors and Yoneda's lemma, neither of which I can competently explain. But they all have analogues in linear algebra by pretending that an inner product $\braket{v,u}$ is a morphism $\text{Hom}(v,u)$ in a category with one object $V$ (with linear maps between vector spaces as functors). [^1]. A functor $F:\mathcal{C} \to $**Set** is **representable** by $X \in \mathcal{C}$ if the functor can be concretely realized as the morphism Hom$_{\mathcal{C}}(X,\cdot)$. The **Yoneda's lemma** guarantees that this $X$ is unique. In this analogy, the representability of $F$ combined with the Yoneda's lemma has the same content as the [Riesz representation theorem](https://en.wikipedia.org/wiki/Riesz_representation_theorem) in linear algebra. It says that a continuous linear functional $f:V \to k$, where $k$ is now the analog of **Set**, can be identified as a unique vector in $v \in V$ itself via the inner product
@@ -349,7 +349,7 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
             <p><a class="btn btn-default" href='/quantum-algorithms.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
           
-            </p>
+            <a class="btn btn-default" href='/representation-primer.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
           
 
 
@@ -373,7 +373,7 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
   
 
   <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5ac28b82c0cf34abfaf365ee750ee3a2f0cf469e/_posts/2017-01-26-adjoint-functors.md"> 5ac28b82c0cf34abfaf365ee750ee3a2f0cf469e</a></tiny></p> -->
+  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4f65f2a65a5740c11df0c2c8e139893c35231884/_posts/2017-01-26-adjoint-functors.md"> 4f65f2a65a5740c11df0c2c8e139893c35231884</a></tiny></p> -->
 </aside>
 
 <br /><br />
@@ -391,11 +391,11 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
   <h2>Related Posts</h2>
   <ul class="posts">
     
+      <li><span>05 Mar 2018</span> &raquo; <a href="/representation-primer.html">Representation Theory Primer (basic definitions, Schur's lemma, unitary representation, isotypic decomposition)</a></li>
+    
       <li><span>03 Jan 2017</span> &raquo; <a href="/first-post.html">First Post</a></li>
     
       <li><span>01 Aug 2017</span> &raquo; <a href="/quantum-algorithms.html">ขั้นคิดคำนวณแบบควอนตัม</a></li>
-    
-      <li><span>27 Dec 2016</span> &raquo; <a href="/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
     
   </ul>
 </div>
@@ -507,6 +507,23 @@ and the classes of morphisms are sets (which they usually are), the functor $Y \
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
           pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           Tr: ["{\\mathrm{Tr}}"],
+
+          id: "{\mathbbm 1}",
+          rep: "{\rho}",
+          krep: "{\sigma}", <!--representation of subgroup-->
+          gr: ["{\text{#1}(#2)",2], <!--linear group-->
+          homsp: ["{\text{#1}(#2)/\text{#3}(#4)}",4], <!--homogeneous space-->
+          al: "{\mathfrak}", <!--Lie algebra-->
+          ind: ["{\text{Ind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
+          coind: ["{\text{Coind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
+          adrep: "{\text{ad}\,}", <!--adjoint representation-->
+          Adrep: "{\text{Ad}\,}", <!--Adjoint representation-->
+          kil: ["{\text{Kill}(#1,#2)}",2], <!--Killing form-->
+          ran: "{\text{rank}\,}", <!--rank-->
+          norm: ["{\|#1\|}",1],
+          hilb: "{\mathcal{H}}",
+          herm: "{\mathbb H(\hilb)}",
+          \dgg: "{^{\dagger}}" <!--Hermitian conjugate-->
         }
       <!-- extensions: ["autoload-all.js"]-->
       }

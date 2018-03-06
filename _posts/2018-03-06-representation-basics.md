@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Representation Theory: Basic Definitions and Facts
+title: "Representation Theory: Basic Definitions and Facts"
 subtitle:
 date: 2018-03-06
 categories:
   - representation theory
 tags:
+
 ---
 <!-- First published: *5 Mar 2018*; Status: *In progress* -->
 
@@ -73,7 +74,7 @@ entry-wise complex conjugate transpose of $\rep(g)$. For a unitary
 representation, the right-action version of the dual representation
 coincides with the *Hermitian dual representation* $\rho\dgg (g)$, while
 the left-action version coincides with the *complex conjugate
-representation*. Hhigh energy physicists like to use the latter and signify the dual representation by an overbar.
+representation*. High energy physicists like to use the latter, signifying the dual representation by an overbar.
 
 ## Intertwiners and Schur's lemma
 

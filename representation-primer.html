@@ -230,19 +230,13 @@ $(document).ready(function() {
 For complex vector spaces <span class="math">\(V\)</span> and <span class="math">\(W\)</span>, define <span class="math">\(\text{Hom}(V,W)\)</span> to be the vector space of linear maps (linear homomorphisms) from <span class="math">\(V\)</span> to <span class="math">\(W\)</span>. When <span class="math">\(V = W\)</span>, this space is also denoted by <span class="math">\(\text{End}(V)\)</span> (endomorphisms). Naturally, <span class="math">\(\text{Hom}(V,W) \simeq W \otimes V^*\)</span>. When <span class="math">\(V\)</span> and <span class="math">\(W\)</span> are endowed with <span class="math">\(G\)</span>-representations <span class="math">\(\rep_1\)</span> and <span class="math">\(\rep_2\)</span>, respectively, an <em>intertwiner</em> between <span class="math">\(\rep_1\)</span> and <span class="math">\(\rep_2\)</span> is defined as a linear map <span class="math">\(\varphi\)</span> that makes the diagram below commutative for any <span class="math">\(g\in G\)</span>.
 <center>
 <img src="/assets/img/posts/03-2018/intertwiner.png" style="width: 200px;"/>
-</center
+</center>
 <!-- $$\begin{aligned}
 \xymatrix{V\ar[r]^{\varphi}\ar[d]_{\rep_1(g)} & W\ar[d]^{\rep_2(g)} \\
     V\ar[r]^{\varphi} & W}\end{aligned}$$-->
-In other words, <span class="math">\(\varphi\)</span> commutes with the <span class="math">\(G\)</span>-action: $$
-
-<span class="math">\[ The set of all
-such intertwiners forms a subspace of $\text{Hom}(V,W)$ denoted by
-$\text{Hom}_G\allowbreak (V,W)$ or, again, $\text{End}_G (V)$ when
-$V \simeq W$. Two representations $V$ and $W$ of $G$ are said to be
-*equivalent* \]</span>
-
-<p><span class="math">\($ when \)</span>_G (V,W)$ contains an invertible intertwiner. In this case, they are related just by a change of basis.</p>
+<p>In other words, <span class="math">\(\varphi\)</span> commutes with the <span class="math">\(G\)</span>-action: <span class="math">\[\begin{aligned}
+\varphi \rep_1 (g) &amp;= \rep_2 (g) \varphi.\end{aligned}\]</span> The set of all such intertwiners forms a subspace of <span class="math">\(\text{Hom}(V,W)\)</span> denoted by <span class="math">\(\text{Hom}_G (V,W)\)</span> or, again, <span class="math">\(\text{End}_G (V)\)</span> when <span class="math">\(V \simeq W\)</span>. Two representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> of <span class="math">\(G\)</span> are said to be <em>equivalent</em> <span class="math">\[\begin{aligned}
+V \stackrel{G}{\simeq} W\end{aligned}\]</span> when <span class="math">\(\text{Hom}_G (V,W)\)</span> contains an invertible intertwiner. In this case, they are related just by a change of basis.</p>
 <p>Schur proved a collection of elementary but very powerful observations that, in an algebraically closed field <span class="math">\(K\)</span> (such as <span class="math">\(\mathbb{C}\)</span>), intertwiners between irreps behave like the Kronecker delta: <span class="math">\[\begin{aligned}
 \text{Hom}_G (V,W) \simeq
     \begin{cases}
@@ -284,12 +278,18 @@ V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes 
         <!-- Custom sidebar -->
         <div class="col-md-2 col-sm-12">
           <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
-            <aside prefix="og:http://ogp.me/ns/article#">
-  <p> <!-- <i class="glyphicon glyphicon-calendar"></i> --> Posted on
-    <time datetime="2018-03-05 00:00:00 +0000" 
-    property="dc:created">05 Mar 2018</time></p>
-   
+             <!-- | replace '_posts/', '' -->
 
+<aside prefix="og:https://ogp.me/ns/article#">
+  <p> <i class="glyphicon glyphicon-calendar"></i><small>
+    <time datetime="2018-03-05 00:00:00 +0000"
+    property="dc:created">05 Mar 2018</time></small></p>
+  
+  <p><small> Updated: <time
+            datetime="2018-03-06 02:39:21 +0000"
+            property="dc:modified">06 Mar 2018</time></small></p>
+  
+<!-- page.modified datetime="" -->
  <br />
           
             <p><a class="btn btn-default" href='/adjoint-functors.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
@@ -299,34 +299,34 @@ V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes 
           
 
 
- <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default" 
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
    href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2018-03-06-representation-primer.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
-  <p><!-- <i class="glyphicon glyphicon-list"></i> --> Categories: 
-     
-      <a rel="dc:subject" class="category" 
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
          href="/categories.html#representation+theory">representation theory</a>
     
     </p>
 
-  <p> <!-- <i class="glyphicon glyphicon-tag"></i> --> Tags: 
+  <p><i class="glyphicon glyphicon-tag"></i> Tags:
     </p>
 
-  <!-- <br/>
+  <br/>
 
   
 
-  <br/> -->
-  <!-- <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4f65f2a65a5740c11df0c2c8e139893c35231884/_posts/2018-03-06-representation-primer.md"> 4f65f2a65a5740c11df0c2c8e139893c35231884</a></tiny></p> -->
+  <br/>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/f37edecfa50e1c5a6130fed15e310fa47b358ce4/_posts/2018-03-06-representation-primer.md"> f37edec</a></tiny></p>
 </aside>
 
 <br /><br />
 <div style="font-weight:bold; text-align:center;font-size:1.0em;">
- <!-- <i class="glyphicon glyphicon-chevron-left"></i> --> <a href="/archives.html">Archives by date,</a>
- <!-- <i class="glyphicon glyphicon-list"></i> --> <a href="/categories.html">By category,</a>
- <!-- <i class="glyphicon glyphicon-tag"></i> --> <a href="/tags.html">By tag.</a>
+ <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
+ <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
 </div>
 
          <!-- </div> -->
@@ -433,7 +433,8 @@ V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes 
         cancel: ["Extension","cancel"],
         bcancel: ["Extension","cancel"],
         xcancel: ["Extension","cancel"],
-        cancelto: ["Extension","cancel"]
+        cancelto: ["Extension","cancel"],
+        unicode: ["Extension","unicode"]
       });
     });
     </script>
@@ -452,24 +453,23 @@ V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes 
           tensor: ["{\\boldsymbol{#1}}",1],
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
           pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
-          Tr: ["{\\mathrm{Tr}}"],
-
-          id: "{\mathbbm 1}",
-          rep: "{\rho}",
-          krep: "{\sigma}", <!--representation of subgroup-->
-          gr: ["{\text{#1}(#2)",2], <!--linear group-->
-          homsp: ["{\text{#1}(#2)/\text{#3}(#4)}",4], <!--homogeneous space-->
-          al: "{\mathfrak}", <!--Lie algebra-->
-          ind: ["{\text{Ind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
-          coind: ["{\text{Coind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
-          adrep: "{\text{ad}\,}", <!--adjoint representation-->
-          Adrep: "{\text{Ad}\,}", <!--Adjoint representation-->
-          kil: ["{\text{Kill}(#1,#2)}",2], <!--Killing form-->
-          ran: "{\text{rank}\,}", <!--rank-->
-          norm: ["{\|#1\|}",1],
-          hilb: "{\mathcal{H}}",
-          herm: "{\mathbb H(\hilb)}",
-          \dgg: "{^{\dagger}}" <!--Hermitian conjugate-->
+          Tr: "{\\mathrm{Tr}}",
+          id: "{\\unicode{x1D7D9}}",
+          rep: "{\\rho}",
+          krep: "{\\sigma}",
+          gr: ["{\\text{#1}(#2)}",2],
+          homsp: ["{\\text{#1}(#2)/\\text{#3}(#4)}",4],
+          al: "{\\mathfrak}",
+          ind: ["{\\text{Ind}_{#2}^{#3} {#1}}",3],
+          coind: ["{\\text{Coind}_{#2}^{#3} {#1}}",3],
+          adrep: "{\\text{ad}\,}",
+          Adrep: "{\\text{Ad}\,}",
+          kil: ["{\\text{Kill}(#1,#2)}",2],
+          ran: "{\\text{rank}\,}",
+          norm: ["{\\|#1\\|}",1],
+          hilb: "{\\mathcal{H}}",
+          herm: "{\\mathbb H(\\hilb)}",
+          dgg: "{^{\\dagger}}"
         }
       <!-- extensions: ["autoload-all.js"]-->
       }

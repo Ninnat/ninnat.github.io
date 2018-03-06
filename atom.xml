@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-03-06T00:42:45+00:00</updated>
+ <updated>2018-03-06T05:16:20+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -35,19 +35,13 @@
 For complex vector spaces &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt;, define &lt;span class=&quot;math&quot;&gt;\(\text{Hom}(V,W)\)&lt;/span&gt; to be the vector space of linear maps (linear homomorphisms) from &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt;. When &lt;span class=&quot;math&quot;&gt;\(V = W\)&lt;/span&gt;, this space is also denoted by &lt;span class=&quot;math&quot;&gt;\(\text{End}(V)\)&lt;/span&gt; (endomorphisms). Naturally, &lt;span class=&quot;math&quot;&gt;\(\text{Hom}(V,W) \simeq W \otimes V^*\)&lt;/span&gt;. When &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt; are endowed with &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-representations &lt;span class=&quot;math&quot;&gt;\(\rep_1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\rep_2\)&lt;/span&gt;, respectively, an &lt;em&gt;intertwiner&lt;/em&gt; between &lt;span class=&quot;math&quot;&gt;\(\rep_1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\rep_2\)&lt;/span&gt; is defined as a linear map &lt;span class=&quot;math&quot;&gt;\(\varphi\)&lt;/span&gt; that makes the diagram below commutative for any &lt;span class=&quot;math&quot;&gt;\(g\in G\)&lt;/span&gt;.
 &lt;center&gt;
 &lt;img src=&quot;/assets/img/posts/03-2018/intertwiner.png&quot; style=&quot;width: 200px;&quot;/&gt;
-&lt;/center
+&lt;/center&gt;
 &lt;!-- $$\begin{aligned}
 \xymatrix{V\ar[r]^{\varphi}\ar[d]_{\rep_1(g)} &amp; W\ar[d]^{\rep_2(g)} \\
     V\ar[r]^{\varphi} &amp; W}\end{aligned}$$--&gt;
-In other words, &lt;span class=&quot;math&quot;&gt;\(\varphi\)&lt;/span&gt; commutes with the &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-action: $$
-
-&lt;span class=&quot;math&quot;&gt;\[ The set of all
-such intertwiners forms a subspace of $\text{Hom}(V,W)$ denoted by
-$\text{Hom}_G\allowbreak (V,W)$ or, again, $\text{End}_G (V)$ when
-$V \simeq W$. Two representations $V$ and $W$ of $G$ are said to be
-*equivalent* \]&lt;/span&gt;
-
-&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\($ when \)&lt;/span&gt;_G (V,W)$ contains an invertible intertwiner. In this case, they are related just by a change of basis.&lt;/p&gt;
+&lt;p&gt;In other words, &lt;span class=&quot;math&quot;&gt;\(\varphi\)&lt;/span&gt; commutes with the &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-action: &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\varphi \rep_1 (g) &amp;amp;= \rep_2 (g) \varphi.\end{aligned}\]&lt;/span&gt; The set of all such intertwiners forms a subspace of &lt;span class=&quot;math&quot;&gt;\(\text{Hom}(V,W)\)&lt;/span&gt; denoted by &lt;span class=&quot;math&quot;&gt;\(\text{Hom}_G (V,W)\)&lt;/span&gt; or, again, &lt;span class=&quot;math&quot;&gt;\(\text{End}_G (V)\)&lt;/span&gt; when &lt;span class=&quot;math&quot;&gt;\(V \simeq W\)&lt;/span&gt;. Two representations &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(W\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; are said to be &lt;em&gt;equivalent&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+V \stackrel{G}{\simeq} W\end{aligned}\]&lt;/span&gt; when &lt;span class=&quot;math&quot;&gt;\(\text{Hom}_G (V,W)\)&lt;/span&gt; contains an invertible intertwiner. In this case, they are related just by a change of basis.&lt;/p&gt;
 &lt;p&gt;Schur proved a collection of elementary but very powerful observations that, in an algebraically closed field &lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt; (such as &lt;span class=&quot;math&quot;&gt;\(\mathbb{C}\)&lt;/span&gt;), intertwiners between irreps behave like the Kronecker delta: &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
 \text{Hom}_G (V,W) \simeq
     \begin{cases}

@@ -31,7 +31,7 @@
 <meta property="dc:date" content="" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/tools.html" />
+<meta property="dc:identifier" content="/tools" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="Ninnat's Notes" />
 <meta property="dc:subject" content="Physics" />
@@ -44,7 +44,7 @@
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
 <meta property="http://ogp.me/ns/article#published_time" content="" />
 <meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://ninnat.github.io/tools.html" />
+<meta property="og:url" content="http://ninnat.github.io/tools" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
@@ -252,7 +252,7 @@ var _hmt = _hmt || [];
       &amp;rft.date=
       &amp;rft.language='en-US, zh-Hans'
       &amp;rft.rights='CC-BY'
-      &amp;rft_id=http://ninnat.github.io/tools.html">
+      &amp;rft_id=http://ninnat.github.io/tools">
   </span>
 
     </footer>
@@ -288,7 +288,8 @@ var _hmt = _hmt || [];
         cancel: ["Extension","cancel"],
         bcancel: ["Extension","cancel"],
         xcancel: ["Extension","cancel"],
-        cancelto: ["Extension","cancel"]
+        cancelto: ["Extension","cancel"],
+        unicode: ["Extension","unicode"]
       });
     });
     </script>
@@ -307,24 +308,23 @@ var _hmt = _hmt || [];
           tensor: ["{\\boldsymbol{#1}}",1],
           dd: ["{\\frac{\\mathrm{d} #1 }{\\mathrm{d} #2 }}",2],
           pp: ["{\\frac{\\partial #1}{\\partial #2}}",2],
-          Tr: ["{\\mathrm{Tr}}"],
-
-          id: "{\mathbbm 1}",
-          rep: "{\rho}",
-          krep: "{\sigma}", <!--representation of subgroup-->
-          gr: ["{\text{#1}(#2)",2], <!--linear group-->
-          homsp: ["{\text{#1}(#2)/\text{#3}(#4)}",4], <!--homogeneous space-->
-          al: "{\mathfrak}", <!--Lie algebra-->
-          ind: ["{\text{Ind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
-          coind: ["{\text{Coind}_{#2}^{#3} {#1}}",3], <!--induced representation-->
-          adrep: "{\text{ad}\,}", <!--adjoint representation-->
-          Adrep: "{\text{Ad}\,}", <!--Adjoint representation-->
-          kil: ["{\text{Kill}(#1,#2)}",2], <!--Killing form-->
-          ran: "{\text{rank}\,}", <!--rank-->
-          norm: ["{\|#1\|}",1],
-          hilb: "{\mathcal{H}}",
-          herm: "{\mathbb H(\hilb)}",
-          \dgg: "{^{\dagger}}" <!--Hermitian conjugate-->
+          Tr: "{\\mathrm{Tr}}",
+          id: "{\\unicode{x1D7D9}}",
+          rep: "{\\rho}",
+          krep: "{\\sigma}",
+          gr: ["{\\text{#1}(#2)}",2],
+          homsp: ["{\\text{#1}(#2)/\\text{#3}(#4)}",4],
+          al: "{\\mathfrak}",
+          ind: ["{\\text{Ind}_{#2}^{#3} {#1}}",3],
+          coind: ["{\\text{Coind}_{#2}^{#3} {#1}}",3],
+          adrep: "{\\text{ad}\,}",
+          Adrep: "{\\text{Ad}\,}",
+          kil: ["{\\text{Kill}(#1,#2)}",2],
+          ran: "{\\text{rank}\,}",
+          norm: ["{\\|#1\\|}",1],
+          hilb: "{\\mathcal{H}}",
+          herm: "{\\mathbb H(\\hilb)}",
+          dgg: "{^{\\dagger}}"
         }
       <!-- extensions: ["autoload-all.js"]-->
       }

@@ -1,18 +1,18 @@
 
 http://ninnat.github.io/R.xml 
-http://ninnat.github.io/README.html 
+http://ninnat.github.io/README 
 http://ninnat.github.io/about/ 
-http://ninnat.github.io/archives.html 
+http://ninnat.github.io/archives 
 http://ninnat.github.io/atom.xml 
-http://ninnat.github.io/categories.html 
+http://ninnat.github.io/categories 
 http://ninnat.github.io/exploringquantumworld.xml 
 http://ninnat.github.io/ 
 http://ninnat.github.io/log/ 
-http://ninnat.github.io/notebooks.html 
-http://ninnat.github.io/search.html 
+http://ninnat.github.io/notebooks 
+http://ninnat.github.io/search 
 http://ninnat.github.io/sitemap.txt 
-http://ninnat.github.io/tags.html 
-http://ninnat.github.io/tools.html 
+http://ninnat.github.io/tags 
+http://ninnat.github.io/tools 
 http://ninnat.github.io/writings/ 
 
 

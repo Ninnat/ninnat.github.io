@@ -21,7 +21,8 @@ that are sent to the identity element.
 A *representation* of a group $G$ is a homomorphism from $G$ to
 $\gr{GL}{V}$, the group of all invertible matrices on $V$,
 $$\begin{aligned}
-\rep: G \to \gr{GL}{V}.\end{aligned}$$ We also say that $(\rep,V)$ is a
+\rep: G \to \gr{GL}{V}.\end{aligned}$$
+We also say that $(\rep,V)$ is a
 $G$-representation. When no confusion arises, we also call $V$ a
 representation. A representation $\rep$ is said to be *faithful* if the
 map $\rho$ is one-one. A *subrepresentation* is a subspace of $V$ stable
@@ -36,11 +37,13 @@ diagonalizable. For instance, the group of integers with addition as
 group multiplication $(\mathbb{Z},+)$ has a two-dimensional
 representation with the generator (not to be confused with physicists'
 (infinitesimal) "generators\" of a Lie group which are Lie algebra
-elements) $$\begin{aligned}
+elements)
+$$\begin{aligned}
 \rep(e) &= \begin{pmatrix}
 1 & 1 \\
 0 & 1
-\end{pmatrix},\end{aligned}$$ which cannot be diagonalized. A
+\end{pmatrix},\end{aligned}$$
+which cannot be diagonalized. A
 representation $V$ is *completely reducible* if for any
 subrepresentation $W \subset V$, there is a complementary
 subrepresentation $W'\subset V$ such that $V \simeq W \oplus W'$.
@@ -82,16 +85,16 @@ as a linear map $\varphi$ that makes the diagram below commutative for
 any $g\in G$.
 <center>
 <img src="/assets/img/posts/03-2018/intertwiner.png" style="width: 200px;"/>
-</center
+</center>
 <!-- $$\begin{aligned}
 \xymatrix{V\ar[r]^{\varphi}\ar[d]_{\rep_1(g)} & W\ar[d]^{\rep_2(g)} \\
     V\ar[r]^{\varphi} & W}\end{aligned}$$-->
 In other words, $\varphi$
 commutes with the $G$-action: $$\begin{aligned}
-
-\varphi \rep_1 (g) &= \rep_2 (g) \varphi.\end{aligned}$$ The set of all
+\varphi \rep_1 (g) &= \rep_2 (g) \varphi.\end{aligned}$$
+The set of all
 such intertwiners forms a subspace of $\text{Hom}(V,W)$ denoted by
-$\text{Hom}_G\allowbreak (V,W)$ or, again, $\text{End}_G (V)$ when
+$\text{Hom}_G (V,W)$ or, again, $\text{End}_G (V)$ when
 $V \simeq W$. Two representations $V$ and $W$ of $G$ are said to be
 *equivalent* $$\begin{aligned}
 V \stackrel{G}{\simeq} W\end{aligned}$$ when $\text{Hom}_G (V,W)$

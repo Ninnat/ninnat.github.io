@@ -224,7 +224,7 @@ $(document).ready(function() {
 1 &amp; 1 \\
 0 &amp; 1
 \end{pmatrix},\end{aligned}\]</span> which cannot be diagonalized. A representation <span class="math">\(V\)</span> is <em>completely reducible</em> if for any subrepresentation <span class="math">\(W \subset V\)</span>, there is a complementary subrepresentation <span class="math">\(W&#39;\subset V\)</span> such that <span class="math">\(V \simeq W \oplus W&#39;\)</span>.</p>
-<p>As every vector space comes with the dual space, every representation comes with the dual representation. Recall that the dual space <span class="math">\(V^*\)</span> of a complex vector space is the vector space of all linear maps from <span class="math">\(V\)</span> to <span class="math">\(\mathbb{C}\)</span>. Since <span class="math">\(V^*\)</span> and <span class="math">\(V\)</span> have the same dimension, they are isomorphic as vector spaces <span class="math">\(V^* \simeq V\)</span> but not naturally. (We do not assume the Hermitian inner product structure for a moment.) Nevertheless, if we pick an ordered basis <span class="math">\(\{ \ket{v_j} \}\)</span>, an isomorphism amounts to the transposition—simply flipping the ket <span class="math">\(\ket{v_j}\)</span> to the bra <span class="math">\(\bra{v_j}\)</span>. The <em>dual representation</em> <span class="math">\((\rep^*,V^*)\)</span> of a representation <span class="math">\((\rep,V)\)</span> can be defined in <a href="https://math.berkeley.edu/~reb/courses/261/31.pdf">several ways</a>, which can be quite confusing. We follow Fultan and Harris <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> and define the <em>right action</em> <span class="math">\(\bra{u} \rep(g^*)\)</span>, so that <span class="math">\[\begin{aligned}
+<p>As every vector space comes with the dual space, every representation comes with the dual representation. Recall that the dual space <span class="math">\(V^*\)</span> of a complex vector space is the vector space of all linear maps from <span class="math">\(V\)</span> to <span class="math">\(\mathbb{C}\)</span>. Since <span class="math">\(V^*\)</span> and <span class="math">\(V\)</span> have the same dimension, they are isomorphic as vector spaces <span class="math">\(V^* \simeq V\)</span> but not naturally. (We do not assume the Hermitian inner product structure for a moment.) Nevertheless, if we pick an ordered basis <span class="math">\(\{ \ket{v_j} \}\)</span>, an isomorphism amounts to the transposition—simply flipping the ket <span class="math">\(\ket{v_j}\)</span> to the bra <span class="math">\(\bra{v_j}\)</span>. The <em>dual representation</em> <span class="math">\((\rep^*,V^*)\)</span> of a representation <span class="math">\((\rep,V)\)</span> can be defined in <a href="https://math.berkeley.edu/~reb/courses/261/31.pdf">several ways</a>, which can be quite confusing. We follow Fulton and Harris <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> and define the <em>right action</em> <span class="math">\(\bra{u} \rep(g^*)\)</span>, so that <span class="math">\[\begin{aligned}
 (\bra{u} \rep^*(g) ) (\rep(g) \ket{v}) &amp;= \braket{u|v},\end{aligned}\]</span> for all <span class="math">\(\ket{u},\ket{v} \in V\)</span> and <span class="math">\(g \in G\)</span>. (The inverse is necessary to make <span class="math">\(\rep^*\)</span> a group homomorphism.) Note that if we want to turn the right action to the <em>left action</em> on <span class="math">\(\ket{u}\)</span>, the matrix representation of <span class="math">\(\rep^*(g)\)</span> is given by the transpose <span class="math">\(\rep^T(g^{-1})\)</span> so that <span class="math">\(\bra{u} \rep^*(g) = \bra{\rep^T(g^{-1})u}\)</span>.</p>
 <p>A representation is <em>unitary</em> if it is equivalent to a representation in which every <span class="math">\(\rep(g)\)</span> is a unitary operator, <span class="math">\[\begin{aligned}
 \rep\dgg (g) \rep(g) &amp;= \id,\end{aligned}\]</span> where <span class="math">\(\rep\dgg (g)\)</span> is the entry-wise complex conjugate transpose of <span class="math">\(\rep(g)\)</span>. For a unitary representation, the right-action version of the dual representation coincides with the <em>Hermitian dual representation</em> <span class="math">\(\rho\dgg (g)\)</span>, while the left-action version coincides with the <em>complex conjugate representation</em>. High energy physicists like to use the latter, signifying the dual representation by an overbar.</p>
@@ -287,20 +287,24 @@ V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes 
 \label{eq:regular decomposition}
 \mathbb{C}[G] \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes V_{\lambda}^*
 \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \text{End}(V_{\lambda}),
-\end{aligned}\]</span> where the representation <span class="math">\((\rep_L \otimes \id, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}\)</span> and <span class="math">\((\id \otimes \rep_R, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}^*\)</span>.</p>
-<p>The unitary change of basis from <span class="math">\(\{\ket{g}\}\)</span> to an orthonormal basis on the right hand side of  is the <em>Fourier transform</em>. Its explicit matrix form, given an orthonormal basis <span class="math">\(\{\ket{\lambda,j,k}|1\le j,k\le d_{\lambda}\}\)</span> for each <span class="math">\(V_{\lambda} \otimes V_{\lambda}^*\)</span>, is <span class="math">\[\begin{aligned}
+\end{aligned}\]</span> where the representation <span class="math">\((\rep_L \otimes \id, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}\)</span> and <span class="math">\((\id \otimes \rep_R, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}^* \)</span>.</p>
+<p>The unitary change of basis from <span class="math">\(\{\ket{g}\}\)</span> to an orthonormal basis on the right hand side of  is the <em>Fourier transform</em>. Its explicit matrix form, given an orthonormal basis <span class="math">\(\{\ket{\lambda,j,k}|1\le j,k\le d_{\lambda}\}\)</span> for each <span class="math">\(V_{\lambda} \otimes V_{\lambda}^* \)</span>, is <span class="math">\[\begin{aligned}
 \label{Fourier transform:unitary}
-U_{\text{FT}} &amp;= \sum_{g \in G} \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ketbra{\lambda,j,k}{g} = \sum_{g\in G} \ketbra{\tilde{g}}{g},\end{aligned}\]</span> <span class="math">\(\ket{\tilde{g}}\)</span> being the Fourier transform of the discrete delta function <span class="math">\(\ket{g}\)</span>: <span class="math">\[\begin{aligned}
+U_{\text{FT}} &amp;= \sum_{g \in G} \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ketbra{\lambda,j,k}{g} = \sum_{g\in G} \ketbra{\tilde{g}}{g},
+\end{aligned}\]</span> <span class="math">\(\ket{\tilde{g}}\)</span> being the Fourier transform of the discrete delta function <span class="math">\(\ket{g}\)</span>: <span class="math">\[\begin{aligned}
 \label{Fourier transform}
-\ket{\tilde{g}} &amp;= \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ket{\lambda,j,k}.\end{aligned}\]</span> (Note the choice of the constant <span class="math">\(1/\sqrt{|G|}\)</span>, akin to using <span class="math">\(1/(2\pi)\)</span> in the continuous Fourier transform, is necessary for <span class="math">\(U_{\text{FT}}\)</span> to be unitary).</p>
+\ket{\tilde{g}} &amp;= \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ket{\lambda,j,k}.
+\end{aligned}\]</span> (Note the choice of the constant <span class="math">\(1/\sqrt{|G|}\)</span>, akin to using <span class="math">\(1/(2\pi)\)</span> in the continuous Fourier transform, is necessary for <span class="math">\(U_{\text{FT}}\)</span> to be unitary).</p>
 <p>For the cyclic group <span class="math">\(\mathbb{Z}_n\)</span>, this is just the discrete Fourier transform <span class="math">\[\begin{aligned}
 \label{Fourier transform:Z_n}
-U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi iัxััy/n} \ketbra{y}{x}.  \end{aligned}\]</span> More generally, for any abelian group, <span class="math">\[\begin{aligned}
+U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{x}.  
+\end{aligned}\]</span> More generally, for any abelian group, <span class="math">\[\begin{aligned}
 \label{Fourier transform:abelian}
 \ket{\tilde{g}} &amp;= \frac{1}{\sqrt{|G|}} \sum_{\lambda \in \hat{G}} \chi_{\lambda}(g) \ket{\lambda},
 \end{aligned}\]</span> where <span class="math">\(\chi_{\lambda}(g)\)</span> is a one-dimensional irrep of <span class="math">\(G\)</span>, also called an <em>(irreducible) <a href="https://en.wikipedia.org/wiki/Character_theory">character</a></em>. The Fourier transform on an abelian group is much more well-behaved than the general case because the collection of all distinct irreps <span class="math">\(\hat{G}\)</span> also comes equipped with the abelian group structure. <span class="math">\[\begin{aligned}
 \chi^{-1}(g) &amp;= \chi(g^{-1}) = \conj \chi(g) \\
-\chi(g_1)\chi(g_2) &amp;= \chi(g_1 g_2).\end{aligned}\]</span> In this case, <span class="math">\(\hat{G}\)</span> is called the <em>dual group</em>. The <em><a href="https://en.wikipedia.org/wiki/Pontryagin_duality">compact-discrete duality</a></em> states that <span class="math">\(\hat{G}\)</span> is compact if <span class="math">\(G\)</span> is discrete and vice versa. Familiar dual pairs are <span class="math">\(G = \hat{G} = \mathbb{Z}_d\)</span>, <span class="math">\(G = \hat{G} = \mathbb{R}\)</span>, and <span class="math">\(G = \gr{U}{1}\)</span> dual to <span class="math">\(\hat{G} = \mathbb{Z}\)</span>.</p>
+\chi(g_1)\chi(g_2) &amp;= \chi(g_1 g_2).
+\end{aligned}\]</span> In this case, <span class="math">\(\hat{G}\)</span> is called the <em>dual group</em>. The <em><a href="https://en.wikipedia.org/wiki/Pontryagin_duality">compact-discrete duality</a></em> states that <span class="math">\(\hat{G}\)</span> is compact if <span class="math">\(G\)</span> is discrete and vice versa. Familiar dual pairs are <span class="math">\(G = \hat{G} = \mathbb{Z}_d\)</span>, <span class="math">\(G = \hat{G} = \mathbb{R}\)</span>, and <span class="math">\(G = \gr{U}{1}\)</span> dual to <span class="math">\(\hat{G} = \mathbb{Z}\)</span>.</p>
 <p>For compact groups, we have the celebrated</p>
 <p><strong>Theorem</strong> (Peter-Weyl): For a compact Lie group <span class="math">\(G\)</span> and <span class="math">\(V_{\lambda}\)</span> its irrep, the orthogonal direct sum <span class="math">\(\bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes V_{\lambda}^*\)</span> is dense in <span class="math">\(L^2(G)\)</span> with respect to the supremum norm <span class="math">\(||f||_{\infty} = \sup |f(g)|\)</span>. Moreover, every <span class="math">\(V_{\lambda}\)</span> is finite-dimensional.</p>
 <p>In other words, every function in <span class="math">\(L^2(G)\)</span> can be approximated arbitrarily closely in the supremum norm by a finite linear combinations of the matrix elements <span class="math">\(\{ \sqrt{d_{\lambda}} \rep_{\lambda}(g)_{jk} \}\)</span>.</p>
@@ -328,7 +332,7 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi iัxััy/n} \k
     property="dc:created">06 Mar 2018</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2018-03-06 08:02:16 +0000"
+            datetime="2018-03-06 08:14:04 +0000"
             property="dc:modified">06 Mar 2018</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -361,7 +365,7 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi iัxััy/n} \k
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/911fc9bd007e16f9f55ee346f475ccd0ce8fc601/_posts/2018-03-06-representation-basics.md"> 911fc9b</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/a3d66c28fd1b1e9e9231e08cf7318b0d6c784fa3/_posts/2018-03-06-representation-basics.md"> a3d66c2</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -511,7 +515,8 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi iัxััy/n} \k
           norm: ["{\\|#1\\|}",1],
           hilb: "{\\mathcal{H}}",
           herm: "{\\mathbb H(\\hilb)}",
-          dgg: "{^{\\dagger}}"
+          dgg: "{^{\\dagger}}",
+          conj: ["{#1^*}",1]
         }
       <!-- extensions: ["autoload-all.js"]-->
       }

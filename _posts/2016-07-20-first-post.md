@@ -1,13 +1,11 @@
 ---
 layout: post
 title: First Post
-subtitle: This is not the first post anymore but whatever.
-date: 2017-01-03
+subtitle: How this is made
+date: 2016-07-20
 categories:
 tags:
 ---
-
-First published: *20 Jul 2016*
 
 First post on my Jekyll-powered blog!
 
@@ -28,7 +26,7 @@ $$
 \end{align}
 $$
 
-Another indispensable feature that I've always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it's just me but it's tempting to take a peek at footnotes even when I know they aren't necessary to the main text.) A much better way to implement a digital footnote is using, for example, [Bigfoot](http://www.bigfootjs.com/) like this. [^1] All you have to do is pasting the css into `/assets/css/style.css`, putting the javascript file to, say, `/assets/js`  and calling it with
+Another indispensable feature that I've always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it's just me but it's tempting to take a peek at footnotes even when I know they aren't necessary to the main text.) A much better way to implement a digital footnote is using, for example, [Bigfoot](http://www.bigfootjs.com/) like this.[^1] All you have to do is pasting the css into `/assets/css/style.css`, putting the javascript file to, say, `/assets/js`  and calling it with
 ```
 <script type="text/javascript" src="/assets/js/bigfoot.js"></script>
 <script type="text/javascript">
@@ -46,6 +44,8 @@ Another indispensable feature that I've always longed for is the popup footnote.
 	});
 </script>
 ```
-within `/_includes/javascript.html`. This code, created by [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot), enables MathJax in the footnote. You also have the option to show or hide footnotes in the footer. I decide to show it for searchability.
+within `/_includes/javascript.html`. For searchability, I also choose to show footnotes in the footer.
+
+*3 Jan 2017*: [Benjamin Esham](https://esham.io/2014/07/mathjax-and-bigfoot) provides a code to enable MathJax in the footnotes.
 
 [^1]: Alan Jacobs, ["The Technology of a Better Footnote,"](http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/) *The Atlantic*, March 2012.

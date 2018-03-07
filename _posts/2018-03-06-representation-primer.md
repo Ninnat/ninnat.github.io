@@ -272,7 +272,7 @@ $$\begin{aligned}
 \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \text{End}(V_{\lambda}),
 \end{aligned}$$
 where the representation $(\rep_L \otimes \id, G\times G)$ acts on
-$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $. The result is sometimes a part of so-called **Maschke's theorem** and can be proved entirely in the language of semisimple algebras [^3]. Another route (which I took in my thesis) is to use [*Frobenius reciprocity*](http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf).
+$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $. The result is sometimes a part of so-called Maschke's theorem and can be proved entirely in the language of semisimple algebras [^3]. Another route (which I took in my thesis) is to use [*Frobenius reciprocity*](http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf). Yet another route, probably the simplest, is to use [character theory](https://en.wikipedia.org/wiki/Character_theory).
 
 The unitary change of basis from $\{\ket{g}\}$ to an orthonormal basis
 on the right hand side of \eqref{eq:regular decomposition} is the *Fourier transform*. Its explicit matrix form, given an orthonormal basis
@@ -301,8 +301,7 @@ More generally, for any abelian group, $$\begin{aligned}
 \label{Fourier transform:abelian}
 \ket{\tilde{g}} &= \frac{1}{\sqrt{|G|}} \sum_{\lambda \in \hat{G}} \chi_{\lambda}(g) \ket{\lambda},
 \end{aligned}$$
-where $\chi_{\lambda}(g)$ is a one-dimensional irrep of $G$, also called
-an *(irreducible) [character](https://en.wikipedia.org/wiki/Character_theory)*. The Fourier transform on an abelian group is much more well-behaved than
+where $\chi_{\lambda}(g)$ is a one-dimensional irrep of $G$. The Fourier transform on an abelian group is much more well-behaved than
 the general case because the collection of all distinct irreps $\hat{G}$
 also comes equipped with the abelian group structure.
 $$\begin{aligned}

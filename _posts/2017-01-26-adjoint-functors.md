@@ -2,12 +2,11 @@
 layout: post
 title: Adjoint functors
 subtitle: Generalized inverses in category theory
-date: 2017-09-20
+date: 2017-01-26
 categories:
   - category theory
 tags:
 ---
-First published: *26 Jan 2017*; Status: *In progress*
 
 <!-- Lately I've been thinking about induced representations and the Frobenius reciprocity which have a natural interpretation in terms of adjoint functor in category theory. This post is an introduction to the categorical point of view that I need at the level I'm comfortable with. (You can find better general introductions out there by mathematicians such as [this 3-parter](https://topologicalmusings.wordpress.com/category/math-topics/category-theory/category-theory-for-beginners/) by Todd Trimble.)
 -->

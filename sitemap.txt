@@ -1,4 +1,5 @@
 
+http://ninnat.github.io/404.html 
 http://ninnat.github.io/R.xml 
 http://ninnat.github.io/README 
 http://ninnat.github.io/about/ 

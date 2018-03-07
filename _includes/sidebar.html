@@ -1,37 +1,48 @@
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ site.baseurl }}">
-          Schur's<br>Lemming
-        </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
-      <p class="lead">Quantum Mathematical Meditation</p>
-    </div>
+{% capture true_path %}{{ page.path }}{% endcapture %} <!-- | replace '_posts/', '' -->
+{% capture page_modified %}{{ true_path | git_mod }}{% endcapture %}
+<aside prefix="og:https://ogp.me/ns/article#">
+  <p> <i class="glyphicon glyphicon-calendar"></i><small>
+    <time datetime="{{ page.date }}"
+    property="dc:created">{{ page.date | date_to_string }}</time></small></p>
+  {% if page_modified %}
+  <p><small> Updated: <time
+            datetime="{{ true_path | git_mod }}"
+            property="dc:modified">{{ true_path | git_mod | date_to_string }}</time></small></p>
+  {% endif %}
+<!-- page.modified datetime="{{ page.modified }}" {{ page.modified }}-->
+ <br />
+{% include nextprevious.html %}
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
+   href="https://github.com/{{site.author.github}}/{{ site.repo }}/commits/{{ site.sourcebranch }}/{{ true_path }}"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
+  <br><br>
 
-      <a class="sidebar-nav-item{% if page.url contains "/blog/" %} active{% endif %}" href="/blog/">Blog</a>
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    {% for category in page.categories %}
+      <a rel="dc:subject" class="category"
+         href="{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}">{{ category }}</a>
+    {% unless page.categories.last == category %}, {% endunless %}
+    {% endfor %}</p>
 
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+  <p><i class="glyphicon glyphicon-tag"></i> Tags:
+    {% for tag in page.tags %}
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag"
+       href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a>{% unless page.tags.last == tag %}, {% endunless %}
+    {% endfor %}</p>
 
-      <a class="sidebar-nav-item" href="{{ repo }}">GitHub project</a>
-    </nav>
+  <br/>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
-  </div>
+  {% if site.pageviews %} <p style="font-style:italic"> <i class="glyphicon glyphicon-signal"></i> pageviews: {{ page.pageviews }}</p>{% endif %}
+
+  <br/>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/{{site.author.github}}/{{ site.repo }}/commit/{{true_path | git_sha }}/{{ true_path }}"> {{ true_path | git_sha | truncate: 7, "" }}</a></tiny></p>
+</aside>
+
+<br /><br />
+<div style="font-weight:bold; text-align:center;font-size:1.0em;">
+ <i class="glyphicon glyphicon-chevron-left"></i> <a href="{{ site.baseurl }}/archives.html">Archieves by date,</a>
+ <i class="glyphicon glyphicon-list"></i> <a href="{{ site.baseurl }}/categories.html">by category,</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="{{ site.baseurl }}/tags.html">by tag.</a>
 </div>

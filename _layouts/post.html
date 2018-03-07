@@ -1,29 +1,48 @@
----
-layout: default
----
+{% include header.html %}
+<!-- <style>
+div #sticker {
+  width:auto;
+  padding:10px;
+  margin-right:20px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:30px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script> -->
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
+          <article>
+          </br>
+          {{ content }}
+          </article>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+        </div>
 
+
+        <!-- Custom sidebar -->
+        <div class="col-md-2 col-sm-12">
+          <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
+            {% include sidebar.html %}
+         <!-- </div> -->
+       </div>
+
+      </div>
 {% include relatedposts.html %}
 {% include disqus.html %}
 {% include footer.html %}

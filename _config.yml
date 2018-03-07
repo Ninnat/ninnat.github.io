@@ -1,13 +1,10 @@
-title : Ninnat's Notes
+title : Schur's Lemming
 tagline:
 author :
   name : Ninnat Dangniam
-  givenName: Ninnat
-  familyName: Dangniam
-  ThaiName: นินนาท แดงเนียม
   twitter:
   github: ninnat
-  email : truecrimson@gmail.com
+  email : ninnatdn@gmail.com
   gplus:
   gscholar:
   facebook: ninnattom.dangniam
@@ -35,11 +32,8 @@ analytics: UA-79420814-1 ## Google Analytics key UA-79420814-1 (in _includes/ana
 baseurl: ''
 lsi: True # Possibly for generating related posts with gsl and classifier packages.
 
-# GitHub information of this site. Used for extracting commit history of posts.
-gitstamps: yes
-username: ninnat
-orgname: ninnat # This is used to identify the category of GitHub repository. Use username for personal repository.
-repo: ninnat.github.io # used in linking commit history and auto-deploy the site on travis-CI. The repository address will be identified as https://username:GH_TOKEN@github.com/orgname/repo.git defined in Rakefile.
+github:
+  repo: ninnat.github.io # used in linking commit history and auto-deploy the site on travis-CI. The repository address will be identified as https://username:GH_TOKEN@github.com/orgname/repo.git defined in Rakefile.
 sourcebranch: dev # used in linking commit history.
 
 source: .

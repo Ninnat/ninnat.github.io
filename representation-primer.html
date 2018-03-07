@@ -3,14 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Representation Theory: Basic Definitions and Facts</title>
+    <title>Representation Theory Primer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
       <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    <meta name="subtitle" content="">
+    <meta name="subtitle" content="Basic definitions, Schur's lemma, and Fourier analysis">
     <meta name="author" content="Ninnat Dangniam">
 
     <!-- HTML5 metadata -->
@@ -20,43 +20,43 @@
 
 
 
-  <meta name="description" content="Representation Theory: Basic Definitions and Facts" />
+  <meta name="description" content="Basic definitions, Schur's lemma, and Fourier analysis" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="Representation Theory: Basic Definitions and Facts" />
+<meta property="dc:title" content="Representation Theory Primer" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
 <meta property="dc:date" content="2018-03-06 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/representation-basics.html" />
+<meta property="dc:identifier" content="/representation-primer.html" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="Ninnat's Notes" />
 <meta property="dc:subject" content="Physics" />
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="Representation Theory: Basic Definitions and Facts" />
+<meta property="og:title" content="Representation Theory Primer" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
 <meta property="http://ogp.me/ns/article#published_time" content="2018-03-06 00:00:00 +0000" />
 <meta property="og:site_name" content="Ninnat's Notes" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://ninnat.github.io/representation-basics.html" />
+<meta property="og:url" content="http://ninnat.github.io/representation-primer.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
 <meta name="citation_date" content="2018-03-06 00:00:00 +0000"/>
-<meta name="citation_title" content="Representation Theory: Basic Definitions and Facts"/>
+<meta name="citation_title" content="Representation Theory Primer"/>
 <meta name="citation_journal_title" content="Ninnat's Notes"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Representation Theory: Basic Definitions and Facts" />
-<meta name="twitter:description" content="Representation Theory: Basic Definitions and Facts" />
+<meta name="twitter:title" content="Representation Theory Primer" />
+<meta name="twitter:description" content="Basic definitions, Schur's lemma, and Fourier analysis" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -178,8 +178,8 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">Representation Theory: Basic Definitions and Facts</h1>
-    <h3></h3>
+    <h1 class="entry-title">Representation Theory Primer</h1>
+    <h3>Basic definitions, Schur's lemma, and Fourier analysis</h3>
 </header>
 
 <!-- <style>
@@ -212,10 +212,9 @@ $(document).ready(function() {
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
           </br>
-          <!-- First published: *5 Mar 2018*; Status: *In progress* -->
-
-<p><em>The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.</em></p>
-<p>A <em>group homomorphism</em> between two groups is a map <span class="math">\(\varphi:G \to G&#39;\)</span> that respects the group composition law: <span class="math">\[\begin{aligned}
+          <p>*As a general warning, these primers are mainly here just to set up notations and introduce basic definitions and facts that I will refer to in my main posts, so they are a bit lacking in motivation.</p>
+<p>The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*</p>
+<p>Group representations are a special kind of group homomorphisms. A <em>group homomorphism</em> between two groups is a map <span class="math">\(\varphi:G \to G&#39;\)</span> that respects the group composition law: <span class="math">\[\begin{aligned}
 \varphi(g_1)\varphi(g_2) &amp;= \varphi(g_1 g_2)\end{aligned}\]</span> for all <span class="math">\(g_1,g_2 \in G\)</span>. This implies, among other things, that if <span class="math">\(e\)</span> is the identity element of <span class="math">\(G\)</span>, then <span class="math">\(\varphi(e)\)</span> is the identity element of <span class="math">\(G&#39;\)</span>, and <span class="math">\(\varphi(g)^{-1} = \varphi(g^{-1})\)</span>. The <em>kernel</em> <span class="math">\(\ker \varphi\)</span> of a homomorphism <span class="math">\(\varphi\)</span> is the set of elements of <span class="math">\(G\)</span> that are sent to the identity element.</p>
 <p>A <em>representation</em> of a group <span class="math">\(G\)</span> is a homomorphism from <span class="math">\(G\)</span> to <span class="math">\(\gr{GL}{V}\)</span>, the group of all invertible matrices on <span class="math">\(V\)</span>, <span class="math">\[\begin{aligned}
 \rep: G \to \gr{GL}{V}.\end{aligned}\]</span> We also say that <span class="math">\((\rep,V)\)</span> is a <span class="math">\(G\)</span>-representation. When no confusion arises, we also call the vector space <span class="math">\(V\)</span> itself a representation. A representation <span class="math">\(\rep\)</span> is said to be <em>faithful</em> if the map <span class="math">\(\rho\)</span> is one-one. A <em>subrepresentation</em> is a subspace of <span class="math">\(V\)</span> stable under <span class="math">\(G\)</span> i.e. closed under every <span class="math">\(\rep(g)\)</span>. An <em>irreducible representation</em> or <em>irrep</em> for short is one that has no nontrivial subrepresentation.</p>
@@ -224,8 +223,9 @@ $(document).ready(function() {
 1 &amp; 1 \\
 0 &amp; 1
 \end{pmatrix},\end{aligned}\]</span> which cannot be diagonalized. A representation <span class="math">\(V\)</span> is <em>completely reducible</em> if for any subrepresentation <span class="math">\(W \subset V\)</span>, there is a complementary subrepresentation <span class="math">\(W&#39;\subset V\)</span> such that <span class="math">\(V \simeq W \oplus W&#39;\)</span>.</p>
-<p>As every vector space comes with the dual space, every representation comes with the dual representation. Recall that the dual space <span class="math">\(V^*\)</span> of a complex vector space is the vector space of all linear maps from <span class="math">\(V\)</span> to <span class="math">\(\mathbb{C}\)</span>. Since <span class="math">\(V^*\)</span> and <span class="math">\(V\)</span> have the same dimension, they are isomorphic as vector spaces <span class="math">\(V^* \simeq V\)</span> but not naturally. (We do not assume the Hermitian inner product structure for a moment.) Nevertheless, if we pick an ordered basis <span class="math">\(\{ \ket{v_j} \}\)</span>, an isomorphism amounts to the transposition—simply flipping the ket <span class="math">\(\ket{v_j}\)</span> to the bra <span class="math">\(\bra{v_j}\)</span>. The <em>dual representation</em> <span class="math">\((\rep^*,V^*)\)</span> of a representation <span class="math">\((\rep,V)\)</span> can be defined in <a href="https://math.berkeley.edu/~reb/courses/261/31.pdf">several ways</a>, which can be quite confusing. We follow Fulton and Harris <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> and define the <em>right action</em> <span class="math">\(\bra{u} \rep(g^*)\)</span>, so that <span class="math">\[\begin{aligned}
-(\bra{u} \rep^*(g) ) (\rep(g) \ket{v}) &amp;= \braket{u|v},\end{aligned}\]</span> for all <span class="math">\(\ket{u},\ket{v} \in V\)</span> and <span class="math">\(g \in G\)</span>. (The inverse is necessary to make <span class="math">\(\rep^*\)</span> a group homomorphism.) Note that if we want to turn the right action to the <em>left action</em> on <span class="math">\(\ket{u}\)</span>, the matrix representation of <span class="math">\(\rep^*(g)\)</span> is given by the transpose <span class="math">\(\rep^T(g^{-1})\)</span> so that <span class="math">\(\bra{u} \rep^*(g) = \bra{\rep^T(g^{-1})u}\)</span>.</p>
+<p>As every vector space comes with the dual space, every representation comes with the dual representation. Recall that the dual space <span class="math">\(V^*\)</span> of a complex vector space is the vector space of all linear maps from <span class="math">\(V\)</span> to <span class="math">\(\mathbb{C}\)</span>. Since <span class="math">\(V^*\)</span> and <span class="math">\(V\)</span> have the same dimension, they are isomorphic as vector spaces <span class="math">\(V^* \simeq V\)</span> but not naturally. (We do not assume the Hermitian inner product structure for a moment.) Nevertheless, if we pick an ordered basis <span class="math">\(\{ \ket{v_j} \}\)</span>, an isomorphism amounts to the transposition—simply flipping the ket <span class="math">\(\ket{v_j}\)</span> to the bra <span class="math">\(\bra{v_j}\)</span>. The <em>dual representation</em> <span class="math">\((\rep^*,V^*)\)</span> of a representation <span class="math">\((\rep,V)\)</span> can be defined in <a href="https://math.berkeley.edu/~reb/courses/261/31.pdf">several ways</a>, which can be quite confusing. We follow Fulton and Harris <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> and define the <em>right action</em> <span class="math">\(\bra{u} \rep^*(g)\)</span> so that <span class="math">\[\begin{aligned}
+(\bra{u} \rep^* (g) ) (\rep(g) \ket{v}) &amp;= \braket{u|v},
+\end{aligned}\]</span> for all <span class="math">\(\ket{u},\ket{v} \in V\)</span> and <span class="math">\(g \in G\)</span>. (The inverse is necessary to make <span class="math">\(\rep^*\)</span> a group homomorphism.) Note that if we want to turn the right action to the <em>left action</em> on <span class="math">\(u\)</span>, the matrix representation of <span class="math">\(\rep^*(g)\)</span> is given by the transpose <span class="math">\(\rep^T(g^{-1})\)</span> so that <span class="math">\(\bra{u} \rep^*(g) = \bra{\rep^T(g^{-1})u}\)</span>.</p>
 <p>A representation is <em>unitary</em> if it is equivalent to a representation in which every <span class="math">\(\rep(g)\)</span> is a unitary operator, <span class="math">\[\begin{aligned}
 \rep\dgg (g) \rep(g) &amp;= \id,\end{aligned}\]</span> where <span class="math">\(\rep\dgg (g)\)</span> is the entry-wise complex conjugate transpose of <span class="math">\(\rep(g)\)</span>. For a unitary representation, the right-action version of the dual representation coincides with the <em>Hermitian dual representation</em> <span class="math">\(\rho\dgg (g)\)</span>, while the left-action version coincides with the <em>complex conjugate representation</em>. High energy physicists like to use the latter, signifying the dual representation by an overbar.</p>
 <h2 id="intertwiners-and-schurs-lemma">Intertwiners and Schur’s lemma</h2>
@@ -259,6 +259,17 @@ V \stackrel{G}{\simeq} W\end{aligned}\]</span> when <span class="math">\(\text{H
 1 &amp; 0
 \end{pmatrix}.\end{aligned}\]</span> It is irreducible because <span class="math">\(\rep(e)\)</span> cannot be diagonalized over <span class="math">\(\mathbb{R}\)</span>. But every <span class="math">\(\rep(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rep(e)\)</span> for some <span class="math">\(a,b \in \mathbb{R}\)</span>, a two-dimensional real vector space.</p>
 <p>An easy corollary is that every complex irrep of an abelian group is one-dimensional because <span class="math">\(\rep(g_1)\)</span> and <span class="math">\(\rep(g_2)\)</span> commute for every <span class="math">\(g_1,g_2 \in G\)</span>. So they are all proportional to the identity operator.</p>
+<p>Another consequence of Schur’s lemma is the “orthogonality of matrix elements.</p>
+<p><strong>Theorem</strong>: Let <span class="math">\(G\)</span> be a finite group and <span class="math">\(d_{\lambda}\)</span> be the dimension of an irrep <span class="math">\(\rep_{\lambda}\)</span> of <span class="math">\(G\)</span>. <span class="math">\[\begin{aligned}
+    \frac{1}{|G|} \sum_g  \rep_{\lambda}(g)_{jk} \left( \rep_{\lambda&#39;}(g)_{mn} \right)^*
+    &amp;= \frac{1}{d_{\lambda}} \delta_{\lambda \lambda&#39;} \delta_{jm} \delta_{kn}
+    \end{aligned}\]</span> That is, the matrix elements <span class="math">\((d_{\lambda} / |G|)^{1/2} \rep_{\lambda}(g)_{jk}\)</span> of irreps are orthonormal as functions over <span class="math">\(G\)</span>.</p>
+<p><em>Proof</em>. For any linear map <span class="math">\(A:V_{\lambda&#39;} \to V_{\lambda}\)</span>, its twirl <span class="math">\[\begin{aligned}
+    \frac{1}{|G|} \sum_{g \in G} \rep_{\lambda}(g) A \rep_{\lambda&#39;}(g^{-1})
+\end{aligned}\]</span> is an intertwiner between the two irreps. Therefore, by Schur’s lemma, it is either proportional to the identity or the zero operator. Setting <span class="math">\(A = \ketbra{k}{n}\)</span>, <span class="math">\[\begin{aligned}
+    \frac{1}{|G|} \sum_{g \in G} \rep_{\lambda}(g) \ketbra{k}{n} \rep_{\lambda&#39;}(g^{-1})
+    &amp;=  N \delta_{\lambda \lambda&#39;} \id_{d_{\lambda}},
+\end{aligned}\]</span> Taking the trace gives <span class="math">\(N = \delta_{kn}/d_{\lambda}\)</span> and taking the <span class="math">\(j,m\)</span> matrix element gives the desired result. <span class="math">\(\square\)</span></p>
 <h2 id="every-finite-dimensional-representation-of-a-compact-group-is-unitary-and-completely-reducible">Every finite-dimensional representation of a compact group is unitary and completely reducible</h2>
 <p>Any finite-dimensional representation of a compact group, possessing a Haar measure, is unitary. A measure <span class="math">\(dg\)</span> on <span class="math">\(G\)</span> is a <em>Haar measure</em> when it is left-invariant i.e. for any integrable function <span class="math">\(f\)</span>, <span class="math">\[\begin{aligned}
 \int dg_1 f(g_2 g_1) &amp;= \int dg_1 f(g_1),\end{aligned}\]</span> and normalized, <span class="math">\[\begin{aligned}
@@ -280,14 +291,14 @@ V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes 
 \left( \sum_{g_1} f_{g_1} \ket{g_1} \right) * \left( \sum_{g_2} h_{g_2} \ket{g_2} \right)
 &amp;= \sum_{g_1,g_2} f_{g_1} h_{g_1^{-1} g} \ket{g}.\end{aligned}\]</span> Here the expression on the right is a discrete analogue of the convolution <span class="math">\((f*h)(x) = \int dy f(x)h(y-x)\)</span>. <span class="math">\(\mathbb{C}[G]\)</span> can also be naturally thought of as a representation of <span class="math">\(G\)</span> by left multiplication <span class="math">\(\rep_L(g_1) \ket{g_2} = \ket{g_1 g_2}\)</span>, called the <em>left regular representation</em> <span class="math">\((\rep_L,\mathbb{C}[G])\)</span>, or right multiplication <span class="math">\(\rep_R(g_1)\ket{g_2} = \ket{g_2 g_1^{-1}}\)</span>, called the <em>right regular representation</em> <span class="math">\((\rep_R,\mathbb{C}[G])\)</span>. When <span class="math">\(G\)</span> is infinite, we can interpret <span class="math">\(\mathbb{C}[G]\)</span> to be the convolution algebra of functions on <span class="math">\(G\)</span>, provided that we agree on what we mean by a function. The standard choice is for <span class="math">\(\mathbb{C}[G]\)</span> to be <span class="math">\(L^2(G)\)</span>, the space of square-integrable functions. The group action on a function is dual to the action on group algebra, <span class="math">\[\begin{aligned}
 \rep(g)f(x) &amp;= f(g^{-1} x),\end{aligned}\]</span> <span class="math">\(x \in G\)</span>, since a function is a linear map from <span class="math">\(G\)</span> to <span class="math">\(\mathbb{C}\)</span>.</p>
-<p>The isotypic decomposition of <span class="math">\(\mathbb{C}[G]\)</span> is <span class="math">\[\begin{aligned}
+<p>A central result in representation theory is the isotypic decomposition of <span class="math">\(\mathbb{C}[G]\)</span>: <span class="math">\[\begin{aligned}
 \mathbb{C}[G] &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \text{Hom}_G (V_{\lambda},\mathbb{C}[G])
-\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{\dim V}.
-\end{aligned}\]</span> Since the left and right representations commute, <span class="math">\(\mathbb{C}[G]\)</span> can also be thought of as a representation of <span class="math">\(G \times G\)</span>. Under this <span class="math">\(G \times G\)</span>-action, <span class="math">\(\mathbb{C}[G]\)</span> decomposes in the multiplicity-free manner: <span class="math">\[\begin{aligned}
+\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{\dim V_{\lambda}}.
+\end{aligned}\]</span> In words, every irrep appear as many times as its dimension in the regular representation. Since the left and right representations commute, <span class="math">\(\mathbb{C}[G]\)</span> can also be thought of as a representation of <span class="math">\(G \times G\)</span>. Under this <span class="math">\(G \times G\)</span>-action, <span class="math">\(\mathbb{C}[G]\)</span> decomposes in the multiplicity-free manner: <span class="math">\[\begin{aligned}
 \label{eq:regular decomposition}
 \mathbb{C}[G] \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes V_{\lambda}^*
 \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \text{End}(V_{\lambda}),
-\end{aligned}\]</span> where the representation <span class="math">\((\rep_L \otimes \id, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}\)</span> and <span class="math">\((\id \otimes \rep_R, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}^* \)</span>.</p>
+\end{aligned}\]</span> where the representation <span class="math">\((\rep_L \otimes \id, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}\)</span> and <span class="math">\((\id \otimes \rep_R, G\times G)\)</span> acts on <span class="math">\(V_{\lambda}^* \)</span>. The result is sometimes a part of so-called <strong>Maschke’s theorem</strong> and can be proved entirely in the language of semisimple algebras <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>. Another route (which I took in my thesis) is to use <a href="http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf"><em>Frobenius reciprocity</em></a>.</p>
 <p>The unitary change of basis from <span class="math">\(\{\ket{g}\}\)</span> to an orthonormal basis on the right hand side of  is the <em>Fourier transform</em>. Its explicit matrix form, given an orthonormal basis <span class="math">\(\{\ket{\lambda,j,k}|1\le j,k\le d_{\lambda}\}\)</span> for each <span class="math">\(V_{\lambda} \otimes V_{\lambda}^* \)</span>, is <span class="math">\[\begin{aligned}
 \label{Fourier transform:unitary}
 U_{\text{FT}} &amp;= \sum_{g \in G} \sum_{\lambda \in \hat{G}} \sum_{j,k=1}^{d_{\lambda}} \sqrt{\frac{d_{\lambda}}{|G|}} \rep_{\lambda}(g)_{jk} \ketbra{\lambda,j,k}{g} = \sum_{g\in G} \ketbra{\tilde{g}}{g},
@@ -302,17 +313,18 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{
 \label{Fourier transform:abelian}
 \ket{\tilde{g}} &amp;= \frac{1}{\sqrt{|G|}} \sum_{\lambda \in \hat{G}} \chi_{\lambda}(g) \ket{\lambda},
 \end{aligned}\]</span> where <span class="math">\(\chi_{\lambda}(g)\)</span> is a one-dimensional irrep of <span class="math">\(G\)</span>, also called an <em>(irreducible) <a href="https://en.wikipedia.org/wiki/Character_theory">character</a></em>. The Fourier transform on an abelian group is much more well-behaved than the general case because the collection of all distinct irreps <span class="math">\(\hat{G}\)</span> also comes equipped with the abelian group structure. <span class="math">\[\begin{aligned}
-\chi^{-1}(g) &amp;= \chi(g^{-1}) = \conj \chi(g) \\
+\chi^{-1}(g) &amp;= \chi(g^{-1}) = \chi^* (g) \\
 \chi(g_1)\chi(g_2) &amp;= \chi(g_1 g_2).
 \end{aligned}\]</span> In this case, <span class="math">\(\hat{G}\)</span> is called the <em>dual group</em>. The <em><a href="https://en.wikipedia.org/wiki/Pontryagin_duality">compact-discrete duality</a></em> states that <span class="math">\(\hat{G}\)</span> is compact if <span class="math">\(G\)</span> is discrete and vice versa. Familiar dual pairs are <span class="math">\(G = \hat{G} = \mathbb{Z}_d\)</span>, <span class="math">\(G = \hat{G} = \mathbb{R}\)</span>, and <span class="math">\(G = \gr{U}{1}\)</span> dual to <span class="math">\(\hat{G} = \mathbb{Z}\)</span>.</p>
 <p>For compact groups, we have the celebrated</p>
 <p><strong>Theorem</strong> (Peter-Weyl): For a compact Lie group <span class="math">\(G\)</span> and <span class="math">\(V_{\lambda}\)</span> its irrep, the orthogonal direct sum <span class="math">\(\bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes V_{\lambda}^*\)</span> is dense in <span class="math">\(L^2(G)\)</span> with respect to the supremum norm <span class="math">\(||f||_{\infty} = \sup |f(g)|\)</span>. Moreover, every <span class="math">\(V_{\lambda}\)</span> is finite-dimensional.</p>
-<p>In other words, every function in <span class="math">\(L^2(G)\)</span> can be approximated arbitrarily closely in the supremum norm by a finite linear combinations of the matrix elements <span class="math">\(\{ \sqrt{d_{\lambda}} \rep_{\lambda}(g)_{jk} \}\)</span>.</p>
+<p>In other words, every function in <span class="math">\(L^2(G)\)</span> can be approximated arbitrarily closely in the supremum norm by a finite linear combinations of the matrix elements <span class="math">\(\{ \sqrt{d_{\lambda}} \rep_{\lambda}(g)_{jk} \}\)</span>. Thus, the matrix elements are not only orthonormal but also complete. This is a generalization of Fourier analysis and orthogonal polynomials and special functions to arbitrary groups.</p>
 <section class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>Not to be confused with physicists’ (infinitesimal) “generators&quot; of a Lie group which are Lie algebra elements<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>Page 4 of William Fulton and Joe Harris, <em>Representation Theory: A First Course</em>, Springer, 1999<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Pavel Etingof <em>et al.</em>, <em>Introduction to Representation Theory</em>, AMS, 2011<a href="#fnref3">↩</a></p></li>
 </ol>
 </section>
 
@@ -332,8 +344,8 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{
     property="dc:created">06 Mar 2018</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2018-03-06 08:14:04 +0000"
-            property="dc:modified">06 Mar 2018</time></small></p>
+            datetime="2018-03-07 01:13:33 +0000"
+            property="dc:modified">07 Mar 2018</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -346,7 +358,7 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{
 
 
  <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
-   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2018-03-06-representation-basics.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2018-03-06-representation-primer.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
@@ -365,7 +377,7 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/a3d66c28fd1b1e9e9231e08cf7318b0d6c784fa3/_posts/2018-03-06-representation-basics.md"> a3d66c2</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/7c9172f40c966174ad1dee7bad0345944ca0b430/_posts/2018-03-06-representation-primer.md"> 7c9172f</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -438,12 +450,12 @@ U_{\text{FT}} = \frac{1}{\sqrt{n}} \sum_{x,y=0}^{n-1} e^{2\pi ixy/n} \ketbra{y}{
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=Representation Theory: Basic Definitions and Facts
+      &amp;rft.title=Representation Theory Primer
       &amp;rft.creator=Ninnat Dangniam
       &amp;rft.date=2018-03-06
       &amp;rft.language='en-US, zh-Hans'
       &amp;rft.rights='CC-BY'
-      &amp;rft_id=http://ninnat.github.io/representation-basics.html">
+      &amp;rft_id=http://ninnat.github.io/representation-primer.html">
   </span>
 
     </footer>

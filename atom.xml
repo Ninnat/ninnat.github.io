@@ -4,7 +4,7 @@
  <title>Ninnat's Notes</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-03-07T01:18:10+00:00</updated>
+ <updated>2018-03-07T02:15:47+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -17,8 +17,8 @@
    <link href="/representation-primer.html"/>
    <updated>2018-03-06T00:00:00+00:00</updated>
    <id>h/representation-primer</id>
-   <content type="html">&lt;p&gt;*As a general warning, these primers are mainly here just to set up notations and introduce basic definitions and facts that I will refer to in my main posts, so they are a bit lacking in motivation.&lt;/p&gt;
-&lt;p&gt;The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;em&gt;As a general warning, these primers are mainly here just to set up notations and introduce basic definitions and facts that I will refer to in my main posts, so they are a bit lacking in motivation.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Group representations are a special kind of group homomorphisms. A &lt;em&gt;group homomorphism&lt;/em&gt; between two groups is a map &lt;span class=&quot;math&quot;&gt;\(\varphi:G \to G&amp;#39;\)&lt;/span&gt; that respects the group composition law: &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
 \varphi(g_1)\varphi(g_2) &amp;amp;= \varphi(g_1 g_2)\end{aligned}\]&lt;/span&gt; for all &lt;span class=&quot;math&quot;&gt;\(g_1,g_2 \in G\)&lt;/span&gt;. This implies, among other things, that if &lt;span class=&quot;math&quot;&gt;\(e\)&lt;/span&gt; is the identity element of &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;, then &lt;span class=&quot;math&quot;&gt;\(\varphi(e)\)&lt;/span&gt; is the identity element of &lt;span class=&quot;math&quot;&gt;\(G&amp;#39;\)&lt;/span&gt;, and &lt;span class=&quot;math&quot;&gt;\(\varphi(g)^{-1} = \varphi(g^{-1})\)&lt;/span&gt;. The &lt;em&gt;kernel&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(\ker \varphi\)&lt;/span&gt; of a homomorphism &lt;span class=&quot;math&quot;&gt;\(\varphi\)&lt;/span&gt; is the set of elements of &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; that are sent to the identity element.&lt;/p&gt;
 &lt;p&gt;A &lt;em&gt;representation&lt;/em&gt; of a group &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; is a homomorphism from &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; to &lt;span class=&quot;math&quot;&gt;\(\gr{GL}{V}\)&lt;/span&gt;, the group of all invertible matrices on &lt;span class=&quot;math&quot;&gt;\(V\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\[\begin{aligned}

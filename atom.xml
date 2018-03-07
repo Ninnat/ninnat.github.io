@@ -4,22 +4,13 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-03-07T04:45:11+00:00</updated>
+ <updated>2018-03-07T05:41:49+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
- 
- <entry>
-   <title>The Magic of Schur's Lemma</title>
-   <link href="/the-magic-of-schurs-lemma.html"/>
-   <updated>2018-03-07T00:00:00+00:00</updated>
-   <id>h/the-magic-of-schurs-lemma</id>
-   <content type="html">&lt;p&gt;Given the title of this blog, it should come as no surprise that I feel some heartfelt connection to Schur’s lemma. Schur’s lemma is a statement about linear maps between irreducible representations (irreps)&lt;/p&gt;
-</content>
- </entry>
  
  <entry>
    <title>Representation Theory Primer</title>

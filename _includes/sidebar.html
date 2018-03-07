@@ -3,7 +3,7 @@
     <div class="sidebar-about">
       <h1>
         <a href="{{ site.baseurl }}">
-          {{ Schur's<br>Lemming }}
+          Schur's<br>Lemming
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
@@ -18,6 +18,8 @@
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
+      <a class="sidebar-nav-item{% if page.url contains "/blog/" %} active{% endif %}" href="/blog/">Blog</a>
+
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -27,7 +29,7 @@
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="{{ site.repo }}">GitHub project</a>
+      <a class="sidebar-nav-item" href="{{ repo }}">GitHub project</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>

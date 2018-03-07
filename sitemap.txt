@@ -7,6 +7,7 @@ http://ninnat.github.io/archives
 http://ninnat.github.io/atom.xml 
 http://ninnat.github.io/categories 
 http://ninnat.github.io/exploringquantumworld.xml 
+http://ninnat.github.io/blog/ 
 http://ninnat.github.io/ 
 http://ninnat.github.io/log/ 
 http://ninnat.github.io/notebooks 

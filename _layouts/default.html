@@ -1,8 +1,15 @@
+!DOCTYPE html>
+<html lang="en-us">
 
   {% include header.html %}
 
-      <div class="row">
-        {{ content }}
-      </div>
+  <body class="layout-reverse,theme-base-08">
 
-  {% include footer.html %}
+    {% include sidebar.html %}
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+  </body>
+</html>

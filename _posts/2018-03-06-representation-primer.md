@@ -9,9 +9,9 @@ tags:
 
 ---
 
-*As a general warning, these primers are mainly here just to set up notations and introduce basic definitions and facts that I will refer to in my main posts, so they are a bit lacking in motivation.
+*As a general warning, these primers are mainly here just to set up notations and introduce basic definitions and facts that I will refer to in my main posts, so they are a bit lacking in motivation.*
 
-The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*
+*The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*
 
 Group representations are a special kind of group homomorphisms.  A *group homomorphism* between two groups is a map $\varphi:G \to G'$
 that respects the group composition law: $$\begin{aligned}

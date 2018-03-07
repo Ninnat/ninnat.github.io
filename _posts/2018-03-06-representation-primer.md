@@ -1,18 +1,19 @@
 ---
 layout: post
-title: "Representation Theory: Basic Definitions and Facts"
-subtitle:
+title: Representation Theory Primer
+subtitle: Basic definitions, Schur's lemma, and Fourier analysis
 date: 2018-03-06
 categories:
   - representation theory
 tags:
 
 ---
-<!-- First published: *5 Mar 2018*; Status: *In progress* -->
 
-*The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*
+*As a general warning, these primers are mainly here just to set up notations and introduce basic definitions and facts that I will refer to in my main posts, so they are a bit lacking in motivation.
 
-A *group homomorphism* between two groups is a map $\varphi:G \to G'$
+The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*
+
+Group representations are a special kind of group homomorphisms.  A *group homomorphism* between two groups is a map $\varphi:G \to G'$
 that respects the group composition law: $$\begin{aligned}
 \varphi(g_1)\varphi(g_2) &= \varphi(g_1 g_2)\end{aligned}$$ for all
 $g_1,g_2 \in G$. This implies, among other things, that if $e$ is the
@@ -57,13 +58,13 @@ naturally. (We do not assume the Hermitian inner product structure for a
 moment.) Nevertheless, if we pick an ordered basis $\{ \ket{v_j} \}$, an
 isomorphism amounts to the transposition---simply flipping the ket
 $\ket{v_j}$ to the bra $\bra{v_j}$. The *dual representation*
-$(\rep^*,V^*)$ of a representation $(\rep,V)$ can be defined in [several ways](https://math.berkeley.edu/~reb/courses/261/31.pdf), which can be quite confusing. We follow Fulton and Harris [^2] and define the *right
-action* $\bra{u} \rep(g^*)$, so that
+$(\rep^*,V^*)$ of a representation $(\rep,V)$ can be defined in [several ways](https://math.berkeley.edu/~reb/courses/261/31.pdf), which can be quite confusing. We follow Fulton and Harris [^2] and define the *right action* $\bra{u} \rep^*(g)$ so that
 $$\begin{aligned}
-(\bra{u} \rep^*(g) ) (\rep(g) \ket{v}) &= \braket{u|v},\end{aligned}$$
+(\bra{u} \rep^* (g) ) (\rep(g) \ket{v}) &= \braket{u|v},
+\end{aligned}$$
 for all $\ket{u},\ket{v} \in V$ and $g \in G$. (The inverse is necessary
 to make $\rep^*$ a group homomorphism.) Note that if we want to turn the
-right action to the *left action* on $\ket{u}$, the matrix
+right action to the *left action* on $u$, the matrix
 representation of $\rep^*(g)$ is given by the transpose
 $\rep^T(g^{-1})$ so that $\bra{u} \rep^*(g) = \bra{\rep^T(g^{-1})u}$.
 
@@ -151,6 +152,31 @@ An easy corollary is that every complex irrep of an abelian group is
 one-dimensional because $\rep(g_1)$ and $\rep(g_2)$ commute for every
 $g_1,g_2 \in G$. So they are all proportional to the identity operator.
 
+Another consequence of Schur's lemma is the "orthogonality of matrix elements.
+
+**Theorem**: Let $G$ be a finite group and $d_{\lambda}$ be the dimension of an irrep $\rep_{\lambda}$ of $G$.
+$$\begin{aligned}
+    \frac{1}{|G|} \sum_g  \rep_{\lambda}(g)_{jk} \left( \rep_{\lambda'}(g)_{mn} \right)^*
+    &= \frac{1}{d_{\lambda}} \delta_{\lambda \lambda'} \delta_{jm} \delta_{kn}
+    \end{aligned}$$
+That is, the matrix elements
+$(d_{\lambda} / |G|)^{1/2} \rep_{\lambda}(g)_{jk}$ of irreps are
+orthonormal as functions over $G$.
+
+*Proof*. For any linear map $A:V_{\lambda'} \to V_{\lambda}$, its twirl
+$$\begin{aligned}
+    \frac{1}{|G|} \sum_{g \in G} \rep_{\lambda}(g) A \rep_{\lambda'}(g^{-1})
+\end{aligned}$$
+is an intertwiner between the two irreps. Therefore,
+by Schur's lemma, it is either proportional to the identity or the zero
+operator. Setting $A = \ketbra{k}{n}$,
+$$\begin{aligned}
+    \frac{1}{|G|} \sum_{g \in G} \rep_{\lambda}(g) \ketbra{k}{n} \rep_{\lambda'}(g^{-1})
+    &=  N \delta_{\lambda \lambda'} \id_{d_{\lambda}},
+\end{aligned}$$
+Taking the trace gives $N = \delta_{kn}/d_{\lambda}$
+and taking the $j,m$ matrix element gives the desired result. $\square$
+
 ## Every finite-dimensional representation of a compact group is unitary and completely reducible
 
 Any finite-dimensional representation of a compact group, possessing a
@@ -229,11 +255,13 @@ the action on group algebra, $$\begin{aligned}
 \rep(g)f(x) &= f(g^{-1} x),\end{aligned}$$ $x \in G$, since a function
 is a linear map from $G$ to $\mathbb{C}$.
 
-The isotypic decomposition of $\mathbb{C}[G]$ is
+A central result in representation theory is
+the isotypic decomposition of $\mathbb{C}[G]$:
 $$\begin{aligned}
 \mathbb{C}[G] &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \text{Hom}_G (V_{\lambda},\mathbb{C}[G])
-\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{\dim V}.
+\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{\dim V_{\lambda}}.
 \end{aligned}$$
+In words, every irrep appear as many times as its dimension in the regular representation.
 Since the left and right representations commute,
 $\mathbb{C}[G]$ can also be thought of as a representation of
 $G \times G$. Under this $G \times G$-action, $\mathbb{C}[G]$ decomposes
@@ -244,7 +272,7 @@ $$\begin{aligned}
 \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \text{End}(V_{\lambda}),
 \end{aligned}$$
 where the representation $(\rep_L \otimes \id, G\times G)$ acts on
-$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $.
+$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $. The result is sometimes a part of so-called **Maschke's theorem** and can be proved entirely in the language of semisimple algebras [^3]. Another route (which I took in my thesis) is to use [*Frobenius reciprocity*](http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf).
 
 The unitary change of basis from $\{\ket{g}\}$ to an orthonormal basis
 on the right hand side of \eqref{eq:regular decomposition} is the *Fourier transform*. Its explicit matrix form, given an orthonormal basis
@@ -278,7 +306,7 @@ an *(irreducible) [character](https://en.wikipedia.org/wiki/Character_theory)*. 
 the general case because the collection of all distinct irreps $\hat{G}$
 also comes equipped with the abelian group structure.
 $$\begin{aligned}
-\chi^{-1}(g) &= \chi(g^{-1}) = \conj \chi(g) \\
+\chi^{-1}(g) &= \chi(g^{-1}) = \chi^* (g) \\
 \chi(g_1)\chi(g_2) &= \chi(g_1 g_2).
 \end{aligned}$$
 In this case,
@@ -300,10 +328,13 @@ finite-dimensional.
 In other words, every function in $L^2(G)$ can be approximated
 arbitrarily closely in the supremum norm by a finite linear combinations
 of the matrix elements
-$\{ \sqrt{d_{\lambda}} \rep_{\lambda}(g)_{jk} \}$.
+$\{ \sqrt{d_{\lambda}} \rep_{\lambda}(g)_{jk} \}$. Thus, the matrix elements are not only orthonormal but also complete. This is a generalization of Fourier analysis and orthogonal polynomials and special functions to arbitrary groups.
 
 [^1]: Not to be confused with physicists'
 (infinitesimal) "generators\" of a Lie group which are Lie algebra
 elements
 
 [^2]: Page 4 of William Fulton and Joe Harris, *Representation Theory: A First Course*, Springer, 1999
+
+[^3]: Pavel Etingof *et al.*,
+*Introduction to Representation Theory*, AMS, 2011

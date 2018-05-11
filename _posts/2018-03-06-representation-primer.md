@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Representation Theory Primer
-subtitle: Basic definitions, Schur's lemma, and Fourier analysis
+subtitle: Basic definitions, Schur's lemma, and Fourier analysis on groups
 date: 2018-03-06
 categories:
   - representation theory
@@ -13,19 +13,61 @@ tags:
 
 *The following is adapted from Chapter 2 of my thesis, which is an introduction to the representation theory of Lie groups and their associated homogeneous spaces.*
 
-Group representations are a special kind of group homomorphisms.  A *group homomorphism* between two groups is a map $\varphi:G \to G'$
-that respects the group composition law: $$\begin{aligned}
-\varphi(g_1)\varphi(g_2) &= \varphi(g_1 g_2)\end{aligned}$$ for all
-$g_1,g_2 \in G$. This implies, among other things, that if $e$ is the
-identity element of $G$, then $\varphi(e)$ is the identity element of
-$G'$, and $\varphi(g)^{-1} = \varphi(g^{-1})$. The *kernel* $\ker \varphi$ of a
-homomorphism $\varphi$ is the set of elements of $G$
-that are sent to the identity element.
+## Preliminaries about groups
+
+A *group homomorphism* between two groups is a map $\varphi:G \to G'$
+that respects the group composition law:
+$$\begin{aligned}
+  \varphi(g_1)\varphi(g_2) &= \varphi(g_1 g_2)
+\end{aligned}$$
+for all $g_1,g_2 \in G$. This implies, among other things, that if $e$ is the identity element of $G$, then $\varphi(e)$ is the identity element of
+$G'$, and $\varphi(g)^{-1} = \varphi(g^{-1})$. The *kernel* $\ker \varphi$ of a homomorphism $\varphi$ is the set of elements of $G$ that are sent to the identity element.
+
+Given a subgroup $K$ of $G$, a *left coset* of $K$ consists of elements
+of the form $gK$ for some $g \in G$. $g_1$ and $g_2$ belong to the same
+coset if $g_1 g_2^{-1}$ is in $K$. Two left cosets are either the same
+or disjoint, so $G$ is partitioned into left cosets. The *left coset
+space* $G/K$ is the set of all left cosets. The *right coset space*
+$K\backslash G$ is the set of all right cosets, which are defined
+similarly but with right multiplication by $g^{-1}$. The left and right
+cosets coincide if and only if $K$ is a normal subgroup i.e. $K$ is
+invariant under conjugation $gKg^{-1}$ by every $g \in G$. (In that
+case, $G/K \simeq K\backslash G$ is also a group.)
+
+Groups are things that act reversibly. A *group action* of $G$ on a set $X$ is the permutation
+$$\begin{aligned}
+    G \times X &\to X \\
+    (g,x) &\mapsto g\cdot x
+\end{aligned}$$
+respecting the group structure
+$$\begin{aligned}
+    ex &= x, & g_1 (g_2 x) &= (g_1 g_2)x
+\end{aligned}$$
+for all $x \in X$. In other words, a group action is a group homomorphism from $G$ to $S_{|X|}$, the symmetric group over the set $X$.
+
+*Equivariant map*
+
+Representation theory begins when a group acts as linear operators (endomorphisms) on a vector space. We say that $\rep$ is a representation of $G$ if it is a homomorphism from $G$ to
+$\gr{GL}{V}$, the group of all invertible matrices on $V$,
+$$\begin{aligned}
+  \rep: G \to \gr{GL}{V}.
+\end{aligned}$$
+Linear representations occur naturally in quantum theory as quantum systems are described by Hilbert spaces. But from a mathematical point of view, the philosophy of representation theory is to "linearize" group actions
+
+
+
+A *linear representation* is an instance of a group action on a vector
+space. A *$G$-homogeneous space* $X$ is a set with a *transitive* action
+of $G$: for any two elements $x,y \in X$, there is some $g \in G$ such
+that $y = gx$.
+
+
 
 A *representation* of a group $G$ is a homomorphism from $G$ to
 $\gr{GL}{V}$, the group of all invertible matrices on $V$,
 $$\begin{aligned}
-\rep: G \to \gr{GL}{V}.\end{aligned}$$
+\rep: G \to \gr{GL}{V}.
+\end{aligned}$$
 We also say that $(\rep,V)$ is a
 $G$-representation. When no confusion arises, we also call the vector space $V$ itself a
 representation. A representation $\rep$ is said to be *faithful* if the
@@ -35,20 +77,17 @@ representation* or *irrep* for short is one that has no nontrivial
 subrepresentation.
 
 A reducible representation may not decompose as a direct sum of
-subrepresentations. This is true even for a single matrix. A matrix
-always has at least one eigenvector in $\mathbb{C}$ but it may not be
-diagonalizable. For instance, the group of integers with addition as
-group multiplication $(\mathbb{Z},+)$ has a two-dimensional
-representation with the generator [^1]
+subrepresentations. This is true even for a single matrix: any given matrix
+has at least one eigenvector in $\mathbb{C}$ but it may not be
+diagonalizable. As an example of an indecomposable representation, the group of integers with addition as
+group multiplication $(\mathbb{Z},+)$ has a two-dimensional representation with the generator [^1]
 $$\begin{aligned}
 \rep(e) &= \begin{pmatrix}
 1 & 1 \\
 0 & 1
 \end{pmatrix},\end{aligned}$$
-which cannot be diagonalized. A
-representation $V$ is *completely reducible* if for any
-subrepresentation $W \subset V$, there is a complementary
-subrepresentation $W'\subset V$ such that $V \simeq W \oplus W'$.
+which cannot be diagonalized. A representation $V$ is *completely reducible* if for any
+subrepresentation $W \subset V$, there is a complementary subrepresentation $W'\subset V$ such that $V \simeq W \oplus W'$.
 
 As every vector space comes with the dual space, every representation comes with the dual representation. Recall that the
 dual space $V^*$ of a complex vector space is the vector space of all
@@ -58,24 +97,29 @@ naturally. (We do not assume the Hermitian inner product structure for a
 moment.) Nevertheless, if we pick an ordered basis $\{ \ket{v_j} \}$, an
 isomorphism amounts to the transposition---simply flipping the ket
 $\ket{v_j}$ to the bra $\bra{v_j}$. The *dual representation*
-$(\rep^*,V^*)$ of a representation $(\rep,V)$ can be defined in [several ways](https://math.berkeley.edu/~reb/courses/261/31.pdf), which can be quite confusing. We follow Fulton and Harris [^2] and define the *right action* $\bra{u} \rep^*(g)$ so that
+$(\rep^*,V^*)$ of a representation $(\rep,V)$ can be defined in several ways [^dual], which can be quite confusing. We follow Fulton and Harris [^2] and define the *right action* $\bra{u} \rep^*(g)$ so that
 $$\begin{aligned}
 (\bra{u} \rep^* (g) ) (\rep(g) \ket{v}) &= \braket{u|v},
 \end{aligned}$$
 for all $\ket{u},\ket{v} \in V$ and $g \in G$. (The inverse is necessary
 to make $\rep^*$ a group homomorphism.) Note that if we want to turn the
-right action to the *left action* on $u$, the matrix
+right action to the *left action* on $\bra{u}$, the matrix
 representation of $\rep^*(g)$ is given by the transpose
-$\rep^T(g^{-1})$ so that $\bra{u} \rep^*(g) = \bra{\rep^T(g^{-1})u}$.
+$\rep^T(g^{-1})$ so that
+$$\begin{aligned}
+	\bra{u}\rep^*(g) &= \bra{\rep^T(g^{-1})u} = \bra{\rep^{-T}(g)u}.
+\end{aligned}$$
 
-A representation is *unitary* if it is equivalent to a representation in which every $\rep(g)$ is a unitary
-operator, $$\begin{aligned}
-\rep\dgg (g) \rep(g) &= \id,\end{aligned}$$ where $\rep\dgg (g)$ is the
-entry-wise complex conjugate transpose of $\rep(g)$. For a unitary
-representation, the right-action version of the dual representation
+A representation is *unitary* (or *unitarizable*) if it is equivalent to a representation in which every $\rep(g)$ is a unitary
+matrix,
+$$\begin{aligned}
+\rep\dgg (g) \rep(g) &= \id,
+\end{aligned}$$
+where $\rep\dgg (g)$ is the entry-wise complex conjugate transpose of $\rep(g)$.
+For a unitary representation, the right-action version of the dual representation
 coincides with the *Hermitian dual representation* $\rho\dgg (g)$, while
 the left-action version coincides with the *complex conjugate
-representation*. High energy physicists like to use the latter, signifying the dual representation by an overbar.
+representation*. High energy physicists like to use the latter, indicating the dual representation by an overbar.
 
 ## Intertwiners and Schur's lemma
 
@@ -88,7 +132,7 @@ respectively, an *intertwiner* between $\rep_1$ and $\rep_2$ is defined
 as a linear map $\varphi$ that makes the diagram below commutative for
 any $g\in G$.
 <center>
-<img src="/assets/img/posts/03-2018/intertwiner.png" style="width: 200px;"/>
+<img src="/assets/img/posts/03-2018/intertwiner.png" style="width: 180px;"/>
 </center>
 <!-- $$\begin{aligned}
 \xymatrix{V\ar[r]^{\varphi}\ar[d]_{\rep_1(g)} & W\ar[d]^{\rep_2(g)} \\
@@ -122,8 +166,7 @@ $$\begin{aligned}
     zero,
 
 2.  For a finite-dimensional irrep $V$ in an algebraically closed field
-    $K$, $\text{End}_G (V)$ is proportional to the identity operator,
-    $\text{End}_G (V) = k\id$, $k \in K$.
+    $K$, $\text{End}_G (V) = K$. That is, every intertwiner is proportional to the identity operator $\id$, with the proportionality constant in the base field $K$.
 
 *Proof.* The first observation is proved by noting that the image and the kernel
 of an intertwiner are subrepresentations. If either is nontrivial, then
@@ -152,7 +195,7 @@ An easy corollary is that every complex irrep of an abelian group is
 one-dimensional because $\rep(g_1)$ and $\rep(g_2)$ commute for every
 $g_1,g_2 \in G$. So they are all proportional to the identity operator.
 
-Another consequence of Schur's lemma is the "orthogonality of matrix elements.
+Another consequence of Schur's lemma is the "orthogonality of matrix elements".
 
 **Theorem**: Let $G$ be a finite group and $d_{\lambda}$ be the dimension of an irrep $\rep_{\lambda}$ of $G$.
 $$\begin{aligned}
@@ -194,11 +237,13 @@ when $G$ is finite this is just a sum.) Armed with the Haar measure, if
 $\rep(g)$ is not unitary under some sesquilinear inner product
 $\braket{v|w}$, redefine the inner product to be the average
 $\int dg \braket{\rep(g)v|\rep(g)w}$. This new inner product (which
-amounts to a change of basis) can be seen to be invariant under the $G$-action: $$\begin{aligned}
-\int dg_1 \braket{\rep(g_1)v|\rep^*(g_2) \rep(g_2)|\rep(g_1)w}
-&= \int dg_1 \braket{\rep(g_2 g_1)v|\rep(g_2 g_1)w} \\
-&= \int dg \braket{\rep(g)v|\rep(g)w}.\end{aligned}$$ where we have used
-the left-invariance of the Haar measure. Thus unitarity is not an
+amounts to a change of basis) can be seen to be invariant under the $G$-action:
+$$\begin{aligned}
+\int dg_1 \braket{\rep^{-T}(g_1)v|\rep^*(g_2) \rep(g_2)|\rep(g_1)w}
+&= \int dg_1 \braket{\rep^{-T}(g_2 g_1)v|\rep(g_2 g_1)w} \\
+&= \int dg \braket{\rep^{-T}(g)v|\rep(g)w}.
+\end{aligned}$$
+where we have used the left-invariance of the Haar measure. Thus unitarity is not an
 additional assumption when we deal with compact groups. The existence of
 an invariant inner product also provides an easy proof that every
 finite-dimensional representation is completely reducible. Given a
@@ -231,7 +276,64 @@ The collection of $\lambda$ that appears in the direct sum is called the
 $V_{\mu} \otimes V_{\nu}$ and vectors in $V_{\lambda}$ are
 *Clebsch-Gordan coefficients*. When $G$ is a unitary group, the $n^{\lambda}_{\mu\nu}$ are called *Richardson-Littlewood coefficients*.
 
-## Fourier analysis
+Try pandoc!
+pandoc --from latex --to markdown
+   from    
+
+A \emph{group action} of $G$ is a map to a set $X$
+\begin{align}
+	G \times X &\to X \\
+	(g,x) &\mapsto g\cdot x
+\end{align}
+respecting the group structure
+\begin{align}
+	ex &= x, & g_1 (g_2 x) &= (g_1 g_2)x
+\end{align}
+for all $x \in X$. A representation is an instance of a group action on a vector space. A \emph{$G$-homogeneous space} $X$ is a set with a transitive action of $G$: for any two elements $x,y \in X$, there is some $g \in G$ such that $y = gx$.
+
+Given a subgroup $K$ of $G$, a \emph{left coset} of $K$ consists of elements of the form $gK$ for some $g \in G$.  $g_1$ and $g_2$ belong to the same coset if $g_1 g_2^{-1}$ is in $K$. Two left cosets are either the same or disjoint, so $G$ is partitioned into left cosets. The \emph{left coset space} $G/K$ is the set of all left cosets. The \emph{right coset space} $K\backslash G$ is the set of all right cosets, which are defined similarly but with right multiplication by $g^{-1}$. The left and right cosets coincide if and only if $K$ is a normal subgroup i.e. $K$ is invariant under conjugation $gKg^{-1}$ by every $g \in G$. (In that case, $G/K \simeq K\backslash G$ is also a group.)
+
+When $K \subset G$ is a closed subgroup, $G/K$ is a $G$-homogeneous space. Conversely, any homogeneous space can be constructed as a coset space $G/G_p$, where $G_p = \{g \in G | gx = x\}$ is the \emph{stabilizer subgroup} fixing an element $x$ in some set $X$. Since we will be dealing only with compact and semisimple Lie groups (\autoref{ch2:semisimple}), the following result is useful:
+\begin{theorem}\label{thm:closed-if-compact-semisimple} {\normalfont \cite[\S 4.2]{Berndt}}
+	If $G$ is compact or simply connected and the Lie algebra of $K$ is semisimple, then $K$ is closed in $G$.
+\end{theorem}
+to    
+A *group action* of $G$ is a map to a set $X$ $$\begin{aligned}
+    G \times X &\to X \\
+    (g,x) &\mapsto g\cdot x\end{aligned}$$ respecting the group
+structure $$\begin{aligned}
+    ex &= x, & g_1 (g_2 x) &= (g_1 g_2)x\end{aligned}$$ for all
+$x \in X$. A representation is an instance of a group action on a vector
+space. A *$G$-homogeneous space* $X$ is a set with a transitive action
+of $G$: for any two elements $x,y \in X$, there is some $g \in G$ such
+that $y = gx$.
+
+Given a subgroup $K$ of $G$, a *left coset* of $K$ consists of elements
+of the form $gK$ for some $g \in G$. $g_1$ and $g_2$ belong to the same
+coset if $g_1 g_2^{-1}$ is in $K$. Two left cosets are either the same
+or disjoint, so $G$ is partitioned into left cosets. The *left coset
+space* $G/K$ is the set of all left cosets. The *right coset space*
+$K\backslash G$ is the set of all right cosets, which are defined
+similarly but with right multiplication by $g^{-1}$. The left and right
+cosets coincide if and only if $K$ is a normal subgroup i.e. $K$ is
+invariant under conjugation $gKg^{-1}$ by every $g \in G$. (In that
+case, $G/K \simeq K\backslash G$ is also a group.)
+
+When $K \subset G$ is a closed subgroup, $G/K$ is a $G$-homogeneous
+space. Conversely, any homogeneous space can be constructed as a coset
+space $G/G_p$, where $G_p = \{g \in G | gx = x\}$ is the *stabilizer
+subgroup* fixing an element $x$ in some set $X$. Since we will be
+dealing only with compact and semisimple Lie groups (), the following
+result is useful:
+
+[\[thm:closed-if-compact-semisimple\]]{#thm:closed-if-compact-semisimple
+label="thm:closed-if-compact-semisimple"} [@Berndt §4.2] If $G$ is
+compact or simply connected and the Lie algebra of $K$ is semisimple,
+then $K$ is closed in $G$.
+
+## Group actions
+
+## Fourier analysis on groups
 
 For a finite group $G$, define an orthonormal basis
 $\{\ket{g}|g\in G\}$. Its complex span, the *group algebra*
@@ -272,7 +374,7 @@ $$\begin{aligned}
 \stackrel{G \times G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \text{End}(V_{\lambda}),
 \end{aligned}$$
 where the representation $(\rep_L \otimes \id, G\times G)$ acts on
-$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $. The result is sometimes a part of so-called Maschke's theorem and can be proved entirely in the language of semisimple algebras [^3]. Another route (which I took in my thesis) is to use [*Frobenius reciprocity*](http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf). Yet another route, probably the simplest, is to use [character theory](https://en.wikipedia.org/wiki/Character_theory).
+$V_{\lambda}$ and $(\id \otimes \rep_R, G\times G)$ acts on $V_{\lambda}^* $. The result is sometimes a part of so-called Maschke's theorem and can be proved entirely in the language of semisimple algebras [^3]. Another route (which I took in my thesis) is via *induced representations*. [^ind]. Yet another route, probably the simplest, is to use [character theory](https://en.wikipedia.org/wiki/Character_theory).
 
 The unitary change of basis from $\{\ket{g}\}$ to an orthonormal basis
 on the right hand side of \eqref{eq:regular decomposition} is the *Fourier transform*. Its explicit matrix form, given an orthonormal basis
@@ -337,3 +439,7 @@ elements
 
 [^3]: Pavel Etingof *et al.*,
 *Introduction to Representation Theory*, AMS, 2011
+
+[^dual]: Richard Borcherds, [MATH261 Lecture notes](https://math.berkeley.edu/~reb/courses/261/31.pdf), UC Berkeley
+
+[^ind]: Santiago Chaves Aguilar, [A Survey on Representation Theory](http://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) Math REU 2015

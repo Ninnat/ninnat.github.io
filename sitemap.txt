@@ -9,6 +9,7 @@ http://ninnat.github.io/exploringquantumworld.xml
 http://ninnat.github.io/ 
 http://ninnat.github.io/log/ 
 http://ninnat.github.io/notebooks 
+http://ninnat.github.io/ 
 http://ninnat.github.io/search 
 http://ninnat.github.io/sitemap.txt 
 http://ninnat.github.io/tags 

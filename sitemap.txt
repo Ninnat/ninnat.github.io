@@ -16,8 +16,6 @@ http://ninnat.github.io/tools
 http://ninnat.github.io/writings/ 
 
 
-http://ninnat.github.io/representation-primer.html 
 http://ninnat.github.io/quantum-algorithms.html 
-http://ninnat.github.io/adjoint-functors.html 
 http://ninnat.github.io/quantum-for-babies.html 
 http://ninnat.github.io/first-post.html 

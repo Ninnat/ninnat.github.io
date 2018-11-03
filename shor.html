@@ -3,14 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>First Post</title>
+    <title>อัลกอริธึมของชอร์</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
       <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    <meta name="subtitle" content="How this is made">
+    <meta name="subtitle" content="ส่วนที่เป็นคลาสสิคัล, ส่วนที่เป็นควอนตัม, ข้อควรระวัง, และ รหัสลับหลังควอนตัม (post-quantum)">
     <meta name="author" content="Ninnat Dangniam">
 
     <!-- HTML5 metadata -->
@@ -20,43 +20,43 @@
 
 
 
-  <meta name="description" content="How this is made" />
+  <meta name="description" content="ส่วนที่เป็นคลาสสิคัล, ส่วนที่เป็นควอนตัม, ข้อควรระวัง, และ รหัสลับหลังควอนตัม (post-quantum)" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="First Post" />
+<meta property="dc:title" content="อัลกอริธึมของชอร์" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
-<meta property="dc:date" content="2016-07-20 00:00:00 +0000" />
+<meta property="dc:date" content="2018-11-02 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/first-post.html" />
+<meta property="dc:identifier" content="/shor.html" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="Schur's Lemming" />
 <meta property="dc:subject" content="Physics" />
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="First Post" />
+<meta property="og:title" content="อัลกอริธึมของชอร์" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2016-07-20 00:00:00 +0000" />
+<meta property="http://ogp.me/ns/article#published_time" content="2018-11-02 00:00:00 +0000" />
 <meta property="og:site_name" content="Schur's Lemming" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://ninnat.github.io/first-post.html" />
+<meta property="og:url" content="http://ninnat.github.io/shor.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
-<meta name="citation_date" content="2016-07-20 00:00:00 +0000"/>
-<meta name="citation_title" content="First Post"/>
+<meta name="citation_date" content="2018-11-02 00:00:00 +0000"/>
+<meta name="citation_title" content="อัลกอริธึมของชอร์"/>
 <meta name="citation_journal_title" content="Schur's Lemming"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="First Post" />
-<meta name="twitter:description" content="How this is made" />
+<meta name="twitter:title" content="อัลกอริธึมของชอร์" />
+<meta name="twitter:description" content="ส่วนที่เป็นคลาสสิคัล, ส่วนที่เป็นควอนตัม, ข้อควรระวัง, และ รหัสลับหลังควอนตัม (post-quantum)" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -178,8 +178,8 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">First Post</h1>
-    <h3>How this is made</h3>
+    <h1 class="entry-title">อัลกอริธึมของชอร์</h1>
+    <h3>ส่วนที่เป็นคลาสสิคัล, ส่วนที่เป็นควอนตัม, ข้อควรระวัง, และ รหัสลับหลังควอนตัม (post-quantum)</h3>
 </header>
 
 <!-- <style>
@@ -212,40 +212,38 @@ $(document).ready(function() {
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
           </br>
-          <p>First post on my Jekyll-powered blog!</p>
-<p>I’ve been blogging on <a href="https://ninnatdangniam.wordpress.com/">Wordpress</a> for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow <a href="https://ninnat.github.io/README.html">what I did</a> and get your own blog hosted on a free (public) Git repository.</p>
-<p>Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and displayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. Use <code>\begin{aligned}...\end{aligned}</code> for aligned equations and <code>\begin{aligned}...\end{aligned}</code> for numbered aligned equations. (Both delimiters have to be placed inside <code>$$...$$</code>.) A quick guide on MathJax syntax can be found <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
-<p>Let’s test this by writing the Maxwell’s equations in cgs units:</p>
-<p><span class="math">\[
-\begin{align}
-\nabla \cdot \mathbf{E} &amp;= 4\pi \rho , \\
-\nabla \times \mathbf{E} &amp;= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
-\nabla \cdot \mathbf{B} &amp;= 0, \\
-\nabla \times \mathbf{B} &amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
-\end{align}
-\]</span></p>
-<p>Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, <a href="http://www.bigfootjs.com/">Bigfoot</a> like this.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> All you have to do is pasting the css into <code>/assets/css/style.css</code>, putting the javascript file to, say, <code>/assets/js</code> and calling it with</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $.bigfoot({
-        activateCallback: function($popover, $button) {
-                if (MathJax &amp;&amp; !$button.data(&#39;mathjax-processed&#39;)) {
-                        var content_wrapper = $popover.find(&#39;.bigfoot-footnote__content&#39;)[0];
-                        MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub, content_wrapper]);
-                        MathJax.Hub.Queue(function () {
-                                $button.attr(&#39;data-bigfoot-footnote&#39;, content_wrapper.innerHTML);
-                                $button.data(&#39;mathjax-processed&#39;, true);
-                        });
-                }
-        }
-    });
-&lt;/script&gt;</code></pre>
-<p>within <code>/_includes/javascript.html</code>. For searchability, I also choose to show footnotes in the footer.</p>
-<p><em>3 Jan 2017</em>: <a href="https://esham.io/2014/07/mathjax-and-bigfoot">Benjamin Esham</a> provides a code to enable MathJax in the footnotes.</p>
+          <p>อัลกอริธึมแยกตัวประกอบเป็นแอปปลิเคชันของคอมพิวเตอร์ควอนตัมที่สำคัญที่สุดหรือเปล่า? ผมว่าไม่ ผมคิดว่าการจำลองระบบควอนตัมจะเป็นแอปปลิเคชันที่ส่งผลกระทบต่อวิทยาศาสตร์และสังคมมากที่สุด แต่การแยกตัวประกอบและทำลายระบบความปลอดภัย RSA เป็นเรื่องที่ถูกถามบ่อยที่สุดก็เลยอยากจะเขียนเอาไว้อ้างถึง (มี<a href="https://khunpanya.wordpress.com/2016/07/31/shors-algorithm/">บล็อก</a>ของคุณปัญญาอีกบล็อกที่เขียนเรื่องอัลกอริธึมนี้)</p>
+ก่อนอื่นเลย อัลกอริธึมแยกตัวประกอบของชอร์เป็นอัลกอริธึมหาคาบ (period finding) ของฟังก์ชันประเภทหนึ่ง ดังนั้นเราต้องมาเข้าใจกันก่อนว่าปัญหาการทำลายระบบ RSA และการแยกตัวประกอบลดรูปไปเป็นการหาคาบได้อย่างไร ซึ่งความเข้าใจส่วนนี้ไม่เกี่ยวกับควอนตัมเลย เป็นทฤษฎีจำนวนล้วนๆ ตอนก่อนจะมาเรียนฟิสิกส์ผมเคยบอกเพื่อนภาคคณิตศาสตร์ว่าผมไม่จะแตะทฤษฎีจำนวนอีกแล้วแต่การคำนวณควอนตัมทำให้ผมต้องผิดคำพูด (แต่เดี๋ยวก็จะเห็นว่ามันเป็นทฤษฎีกรุ๊ปที่ผมชอบซะส่วนใหญ่)
+<center>
+<strong>ทำลายระบบ RSA ≤ หา totient function ≤ แยกตัวประกอบ ≤ หารากที่สองที่ไม่ชัดของ 1 ≤ หาคาบ</strong>
+</center>
+
+<h2 id="ทำลายระบบ-rsa-ดวยการแยกตวประกอบ">ทำลายระบบ RSA ด้วยการแยกตัวประกอบ</h2>
+<p>ใน<a href="https://ninnat.github.io/quantum-algorithms.html">โพสท์ที่แล้ว</a>ผมอธิบายการทำงานของรหัส RSA ไว้อย่างคร่าวๆ แต่ไม่ได้ใช้สมการ ให้ m เป็นข้อความ (message), e เป็นกุญแจเข้ารหัสลับ (encryption key), และ d เป็นกุญแจถอดรหัส (decryption key) ระบบ RSA เข้ารหัสด้วยการเลือกจำนวนเต็ม N และคำนวณ m ยกกำลัง e ในเลขคณิตนาฬิกา mod N <span class="math">\[ f(m) \equiv m^e \mod N \]</span> ส่วนการถอดรหัสทำโดยยกกำลังอีกครั้งจนได้ข้อความเดิมกลับมา <span class="math">\[ (m^e)^d = m^{ed} \equiv m \mod N \]</span> ในการเข้ารหัสด้วย<a href="https://ninnat.github.io/quantum-algorithms.html">กุญแจสาธารณะ</a> (public key cryptography) ทุกๆคนมีสิทธิ์ที่จะรู้ e และ N แต่ผู้รับสาส์นเท่านั้นที่จะมีกุญแจถอดรหัส d เตรียมอยู่แล้ว ดังนั้นคำถามของนักแฮกก็คือเราจะคำนวณ d จาก e และ N ได้อย่างไร?</p>
+<p>ถ้าไม่คิดอะไร เราอาจจะนึกว่า <span class="math">\(ed \equiv 1 \mod N\)</span> คือคำตอบ แต่ <span class="math">\(a^{b \mod N} \not\equiv a^b \mod N\)</span> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> แต่ปรากฏว่าถ้าเราแยกตัวประกอบได้ เราก็หาค่า M ที่ทำให้ <span class="math">\[ ed \equiv 1 \mod M \]</span> ได้ ยกตัวอย่างเช่น เมื่อ N เป็นผลคูณของจำนวนเฉพาะแค่สองจำนวน N=pq ค่าของ M คือ (p-1)(q-1) แล้วเราก็หาอินเวอร์สการคูณของ e ใน mod M ด้วย<a href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#Computing_multiplicative_inverses_in_modular_structures">อัลกอริธึมของยูคลิด</a> ปัญหาการทำลายระบบ RSA จึงสามารถลดรูปเป็นปัญหาการแยกตัวประกอบได้</p>
+<p>การที่ RSA รักษาความปลอดภัยได้ก็เพราะไม่มีใครมีอัลกอริธึมคลาสสิคัลที่แยกตัวประกอบได้อย่างรวดเร็ว วิธีหนึ่งในการหาตัวประกอบของ N คือไล่หาร N ด้วยจำนวนเล็กๆไปเรื่อยๆจนกว่าจะเจอตัวหาร ซึ่งอาจจะต้องหารไปถึง <span class="math">\(\sqrt{N}\)</span> ตัว ทำไมนี่ไม่ใช่อัลกอริธึม polynomial-time ล่ะ? เหตุผลก็คือเราต้องการแค่ log N บิตในการบันทึกจำนวนเต็ม N ขนาดของอินพุตจึงไม่ใช่ N แต่เป็น n=log N อัลกอริธึมไล่หารโง่ๆจึงใช้เวลา <span class="math">\(2^{n/2}\)</span> อัลกอริธึมคลาสสิคัลที่ดีสุด (Number Field Sieve) ก็ยัง<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">ใช้เวลาประมาณ</a> <span class="math">\(2^{n^{1/3}}\)</span> ยังเป็นทวีคูณ (exponential) ในขนาดของอินพุต</p>
+<h2 id="แยกตวประกอบดวยการหาคาบ">แยกตัวประกอบด้วยการหาคาบ</h2>
+<p>สิ่งที่นักวิทยาศาสตร์คอมพิวเตอร์รู้มาก่อนชอร์ก็คือถ้าเราสุ่มเอาจำนวน x มาหาคาบใน mod N เยอะๆ เราก็จะหาตัวประกอบของ N ได (หรือถ้าโชคดี ห.ร.ม. ของ x กับ N ไม่ใช่ 1 ก็จบ ห.ร.ม.นั่นแหละคือตัวประกอบ)้ คาบของ x คือจำนวน r ที่น้อยที่สุดที่ <span class="math">\[ x^r \equiv 1 \mod N \]</span> โดยถ้า N มี k ตัวประกอบ โอกาสที่จะสุ่มได้ x ที่ให้ตัวประกอบเมื่อนำมาหาคาบคือ <span class="math">\(1-1/2^{k-1}\)</span> คือยังไงก็มีโอกาสไม่น้อยกว่าครึ่ง</p>
+<p>ไอเดียก็คือถ้า r หารด้วย 2 ลงตัว <span class="math">\(x^{r/2}\)</span> ก็จะเป็นรากที่สองของ 1 ใน mod N รากที่สองเอาไปทำอะไรได้? ไอเดียที่เหลือมาจาก<a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">การทดสอบจำนวนประกอบ (composite number) ของมิลเลอร์และราบิน</a> (Miller-Rabin primality testing): รากที่สองของ 1 <span class="math">\[ y^2 \equiv 1 \mod N \]</span> มีแน่ๆอยู่แล้วสองตัวคือ 1 และ <span class="math">\(-1 \equiv N-1 \mod N\)</span> เรียกว่ารากที่สองที่ชัด (trivial) แต่ถ้าเมื่อไรมีรากที่สองมากไปกว่านี้ (nontrivial square root) N จะต้องเป็นจำนวนประกอบเพราะหาก <span class="math">\(y \not\equiv \pm 1 \mod N\)</span> และ <span class="math">\[ y^2 -1 = (y+1)(y-1) \equiv 0 \mod N \]</span> N จะต้องหาร (y+1)(y-1) ลงตัว แต่ N หาร y+1 หรือ y-1 โดดๆไม่ลงตัว (เพราะ <span class="math">\(y \pm 1 \not\equiv 0 \mod N\)</span>) N จึงต้องเป็นผลคูณของตัวประกอบที่แบ่งไปหาร y+1 กับ y-1 แยกกัน ด้วยเหตุนี้ ห.ร.ม.ของ y±1 และ N จึงเป็นตัวประกอบของ N</p>
+<!-- การหาความน่าจะเป็นที่จะได้ x ที่ต้องการออกจะยุ่งยากหน่อย-->
+
+<hr />
+<details><summary><strong>ความน่าจะเป็นที่จะได้ x ที่ต้องการ</strong></summary>
+<p>
+
+ยังไม่ได้เขียน
+</p>
+<p></details></p>
+<hr />
+<h2 id="หาคาบดวยอลกอรธมควอนตม">หาคาบด้วยอัลกอริธึมควอนตัม</h2>
+<h1 id="ขอควรระวงในการรนอลกอรธม">ข้อควรระวังในการรันอัลกอริธึม</h1>
+<p>“Compiled Shor’s algorithm”</p>
+<h1 id="ความซบซอนของการแยกตวประกอบ">ความซับซ้อนของการแยกตัวประกอบ</h1>
+<p>Factoring อยู่ใน NP ∩ coNP เชื่อว่าไม่ NP-complete มิฉะนั้น PH จะทลายมาถึงระดับที่หนึ่ง (NP=coNP=PH)</p>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Alan Jacobs, <a href="http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/">“The Technology of a Better Footnote,”</a> <em>The Atlantic</em>, March 2012.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>เช่น <span class="math">\(2^5 \equiv 2^{1 \mod 4}\)</span> แต่ <span class="math">\(2^5 = 32 \equiv 0 \mod 4\)</span> <!-- Cristopher Moore และ Stephan Mertens, *The Nature of Computation*--><a href="#fnref1">↩</a></p></li>
 </ol>
 </section>
 
@@ -261,30 +259,32 @@ $(document).ready(function() {
 
 <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i><small>
-    <time datetime="2016-07-20 00:00:00 +0000"
-    property="dc:created">20 Jul 2016</time></small></p>
+    <time datetime="2018-11-02 00:00:00 +0000"
+    property="dc:created">02 Nov 2018</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2018-11-03 17:16:35 +0000"
+            datetime="2018-11-03 17:32:08 +0000"
             property="dc:modified">03 Nov 2018</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
           
+            <p><a class="btn btn-default" href='/quantum-algorithms.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
-            <a class="btn btn-default" href='/quantum-for-babies.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+          
+            </p>
           
 
 
  <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
-   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2016-07-20-first-post.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2018-11-02-shor.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
   <p><i class="glyphicon glyphicon-list"></i> Posted in
     
       <a rel="dc:subject" class="category"
-         href="/categories.html#Misc">Misc</a>
+         href="/categories.html#Quantum+Information">Quantum Information</a>
     
     </p>
 
@@ -296,7 +296,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/ba4989d467eaafc0c7175ad429b7965ef335769f/_posts/2016-07-20-first-post.md"> ba4989d</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/9d926361f61c794a50d0c7dfece97a8175db4e7d/_posts/2018-11-02-shor.md"> 9d92636</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -314,11 +314,11 @@ $(document).ready(function() {
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>27 Dec 2016</span> &raquo; <a href="/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
-    
-      <li><span>02 Nov 2018</span> &raquo; <a href="/shor.html">อัลกอริธึมของชอร์</a></li>
-    
       <li><span>01 Aug 2017</span> &raquo; <a href="/quantum-algorithms.html">ขั้นคิดคำนวณแบบควอนตัม</a></li>
+    
+      <li><span>20 Jul 2016</span> &raquo; <a href="/first-post.html">First Post</a></li>
+    
+      <li><span>27 Dec 2016</span> &raquo; <a href="/quantum-for-babies.html">ควอนตัมฟิสิกส์สำหรับทารก</a></li>
     
   </ul>
 </div>
@@ -353,12 +353,12 @@ $(document).ready(function() {
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=First Post
+      &amp;rft.title=อัลกอริธึมของชอร์
       &amp;rft.creator=Ninnat Dangniam
-      &amp;rft.date=2016-07-20
+      &amp;rft.date=2018-11-02
       &amp;rft.language='en-US, zh-Hans'
       &amp;rft.rights='CC-BY'
-      &amp;rft_id=http://ninnat.github.io/first-post.html">
+      &amp;rft_id=http://ninnat.github.io/shor.html">
   </span>
 
     </footer>

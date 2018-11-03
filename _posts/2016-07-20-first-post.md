@@ -3,7 +3,7 @@ layout: post
 title: First Post
 subtitle: How this is made
 date: 2016-07-20
-categories:
+categories: Misc
 tags:
 ---
 

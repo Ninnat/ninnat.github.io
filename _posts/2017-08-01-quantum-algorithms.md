@@ -4,7 +4,7 @@ title: ขั้นคิดคำนวณแบบควอนตัม
 subtitle:
 date: 2017-08-01
 categories:
-  - Thai
+  - Quantum Information
 tags:
 
 ---

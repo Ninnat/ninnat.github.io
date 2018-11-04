@@ -221,11 +221,24 @@ $(document).ready(function() {
 <h2 id="ทำลายระบบ-rsa-ดวยการแยกตวประกอบ">ทำลายระบบ RSA ด้วยการแยกตัวประกอบ</h2>
 <p>ใน<a href="https://ninnat.github.io/quantum-algorithms.html">โพสท์ที่แล้ว</a>ผมอธิบายการทำงานของรหัส RSA ไว้อย่างคร่าวๆ แต่ไม่ได้ใช้สมการ ให้ <span class="math">\(m\)</span> เป็นข้อความ (message), <span class="math">\(e\)</span> เป็นกุญแจเข้ารหัสลับ (encryption key), และ <span class="math">\(d\)</span> เป็นกุญแจถอดรหัส (decryption key) ระบบ RSA เข้ารหัสด้วยการเลือกจำนวนเต็ม <span class="math">\(N\)</span> และคำนวณ <span class="math">\(m\)</span> ยกกำลัง <span class="math">\(e\)</span> ในเลขคณิตนาฬิกา <span class="math">\(\mod N\)</span> <span class="math">\[ f(m) \equiv m^e \mod N \]</span> ส่วนการถอดรหัสทำโดยยกกำลังอีกครั้งจนได้ข้อความเดิมกลับมา <span class="math">\[ (m^e)^d = m^{ed} \equiv m \mod N \]</span> ในการเข้ารหัสด้วย<a href="https://ninnat.github.io/quantum-algorithms.html">กุญแจสาธารณะ</a> (public key cryptography) ทุกๆคนมีสิทธิ์ที่จะรู้ <span class="math">\(e\)</span> และ <span class="math">\(N\)</span> แต่ผู้รับสาส์นเท่านั้นที่จะมีกุญแจถอดรหัส <span class="math">\(d\)</span> เตรียมอยู่แล้ว ดังนั้นคำถามของนักแฮกก็คือเราจะคำนวณ <span class="math">\(d\)</span> จาก <span class="math">\(e\)</span> และ <span class="math">\(N\)</span> ได้อย่างไร?</p>
 <p>ถ้าไม่คิดอะไร เราอาจจะนึกว่า <span class="math">\(ed \equiv 1 \mod N\)</span> คือคำตอบ แต่ <span class="math">\(a^{b \mod N} \not\equiv a^b \mod N\)</span> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> แต่ปรากฏว่าถ้าเราแยกตัวประกอบได้ เราก็หาค่า <span class="math">\(M\)</span> ที่ทำให้ <span class="math">\[ ed \equiv 1 \mod M \]</span> ได้ ยกตัวอย่างเช่น เมื่อ <span class="math">\(N\)</span> เป็นผลคูณของจำนวนเฉพาะแค่สองจำนวน <span class="math">\(N=pq\)</span> ค่าของ <span class="math">\(M\)</span> คือ <span class="math">\((p-1)(q-1)\)</span> แล้วเราก็หาอินเวอร์สการคูณของ <span class="math">\(e\)</span> ใน <span class="math">\(\mod M\)</span> ด้วย<a href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#Computing_multiplicative_inverses_in_modular_structures">อัลกอริธึมของยูคลิด</a> ปัญหาการทำลายระบบ RSA จึงสามารถลดรูปเป็นปัญหาการแยกตัวประกอบได้</p>
+<p>ถ้าต้องการหาค่า M โดยทั่วไป มันคือ <a href="https://en.wikipedia.org/wiki/Euler%27s_totient_function">Euler’s totient function</a> <span class="math">\(\varphi(N)\)</span> ซึ่งผมแอบรายละเอียดเอาไว้ด้านล่าง สามารถคลิกลูกศรเพื่อเปิดดูได้</p>
 <hr />
-<p><details><summary><strong>การหาค่าของ M</strong></summary></p>
+<p><details><summary><strong>การหาค่าของ <span class="math">\(M\)</span>: <span class="math">\(N\)</span> เป็นจำนวนเฉพาะ</strong></summary></p>
 <p>
 
-โดยทั่วไปแล้ว <span class="math">\(M\)</span> คือ <a href="https://en.wikipedia.org/wiki/Euler%27s_totient_function">Euler’s totient function</a> <span class="math">\(\varphi(N)\)</span> และ <span class="math">\(ed \equiv 1 \mod \varphi(N)\)</span> เป็น generalization ของ<a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">ทฤษฎีบทน้อยๆของแฟร์มา</a> (Fermat’s little theorem): เมื่อ <span class="math">\(p\)</span> เป็นจำนวนเฉพาะและ <span class="math">\(a\)</span> กับ <span class="math">\(p\)</span> เป็น coprime (ห.ร.ม.=1) <span class="math">\[ a^{p-1} \equiv 1 \mod p \]</span> ทฤษฎีบทนี้<a href="https://en.wikipedia.org/wiki/Proofs_of_Fermat%27s_little_theorem">พิสูจน์</a>ได้ด้วยทฤษฎีกรุ๊ป จำนวนใน <span class="math">\(\mathbb{Z}_p\)</span> ที่มีอินเวอร์การคูณประกอบกันเป็น cyclic group <span class="math">\(\mathbb{Z}_p^*\)</span> ซึ่งมีขนาด <span class="math">\(p-1\)</span> (เพราะจำนวนทุกจำนวนที่เป็น coprime กับ <span class="math">\(p\)</span> เป็น generators ของกรุ๊ปหมด เหลือแค่ <span class="math">\(p\)</span> ตัวเดียวที่ไม่มีอินเวิร์ส) <span class="math">\(a^{p-1}\)</span> จึงเท่ากับ <span class="math">\(1 \mod p\)</span> ด้วย<a href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)">ทฤษฎีบทของลากรานจ์</a> เพราะกรุ๊ปที่ generated โดย <span class="math">\(a\)</span> เป็นซับกรุ๊ป (subgroup) ของ <span class="math">\(\mathbb{Z}_p^*\)</span> เมื่อ <span class="math">\(N\)</span> เป็นกำลังของจำนวนเฉพาะ (prime power) <span class="math">\(N = p^r\)</span>, จำนวนที่ไม่เป็น coprime กับ <span class="math">\(p^r\)</span> ใน <span class="math">\(\mathbb{Z}_{p^r}\)</span> คือซึ่งมี <span class="math">\(p^{r-1}\)</span> จำนวนคือ <span class="math">\(p,2p,\cdots,p^{r-1}p\)</span> ดังนั้น <span class="math">\(\varphi(N) = p^r - p^{r-1}\)</span> เมื่อ <span class="math">\(N\)</span> เป็นผลคูณของกำลังของจำนวนเฉพาะ <span class="math">\(N = p_1^{r_1} p_2^{r_2}\)</span> เราสามารถ[พิสูจน์](https://en.wikipedia.org/wiki/Euler%27s_totient_function#Computing_Euler’s_totient_function)ได้ว่า Euler’s totient function เป็นผลคูณ <span class="math">\(\varphi(p_1^{r_1}) \varphi(p_2^{r_2})\)</span> หรือ <span class="math">\[ \varphi(p_1^{r_1}p_2^{r_2} \cdots p_k^{r_k}) = (p_1^{r_1}-p_1^{r_1-1}) (p_2^{r_2}-p_2^{r_2-1}) \cdots (p_k^{r_k}-p_k^{r_k-1}) \]</span> นั่นเอง ทำให้ได้ว่า <span class="math">\[ \varphi(N) = (p-1)(q-1) \]</span> เมื่อ <span class="math">\(N\)</span> เป็นผลคูณของจำนวนเฉพาะสองจำนวน
+การคำนวณ Euler’s totient function เป็น generalization ของ<a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">ทฤษฎีบทน้อยๆของแฟร์มา</a> (Fermat’s little theorem): เมื่อ <span class="math">\(p\)</span> เป็นจำนวนเฉพาะและ <span class="math">\(a\)</span> กับ <span class="math">\(p\)</span> เป็น coprime (ห.ร.ม.=1) <span class="math">\[ a^{p-1} \equiv 1 \mod p \]</span> ทฤษฎีบทนี้<a href="https://en.wikipedia.org/wiki/Proofs_of_Fermat%27s_little_theorem">พิสูจน์</a> ได้ด้วยทฤษฎีกรุ๊ป จำนวนใน <span class="math">\(\mathbb{Z}_p\)</span> ที่มีอินเวอร์การคูณประกอบกันเป็น cyclic group <span class="math">\(\mathbb{Z}_p^*\)</span> ซึ่งมีขนาด <span class="math">\(p-1\)</span> (เพราะจำนวนทุกจำนวนที่เป็น coprime กับ <span class="math">\(p\)</span> เป็น generators ของกรุ๊ปหมด เหลือแค่ <span class="math">\(p\)</span> ตัวเดียวที่ไม่มีอินเวิร์ส) <span class="math">\(a^{p-1}\)</span> จึงเท่ากับ <span class="math">\(1 \mod p\)</span> ด้วย<a href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)">ทฤษฎีบทของลากรานจ์</a> เพราะกรุ๊ปที่ generated โดย <span class="math">\(a\)</span> เป็นซับกรุ๊ป (subgroup) ของ <span class="math">\(\mathbb{Z}_p^*\)</span>
+</p>
+<p></details></p>
+<p><details><summary><strong>การหาค่าของ <span class="math">\(M\)</span>: <span class="math">\(N\)</span> เป็นกำลังของจำนวนเฉพาะ</strong></summary></p>
+<p>
+
+เมื่อ <span class="math">\(N\)</span> เป็นกำลังของจำนวนเฉพาะ (prime power) <span class="math">\(N = p^r\)</span>, จำนวนที่ไม่เป็น coprime กับ <span class="math">\(p^r\)</span> ใน <span class="math">\(\mathbb{Z}_{p^r}\)</span> คือซึ่งมี <span class="math">\(p^{r-1}\)</span> จำนวนคือ <span class="math">\(p,2p,\cdots,p^{r-1}p\)</span> ดังนั้น <span class="math">\(\varphi(N) = p^r - p^{r-1}\)</span>
+</p>
+<p></details></p>
+<p><details><summary><strong>การหาค่าของ <span class="math">\(M\)</span>: <span class="math">\(N\)</span> ทั่วไป</strong></summary></p>
+<p>
+
+เมื่อ <span class="math">\(N\)</span> เป็นผลคูณของกำลังของจำนวนเฉพาะ <span class="math">\(N = p_1^{r_1} p_2^{r_2}\)</span> เราสามารถ[พิสูจน์](https://en.wikipedia.org/wiki/Euler%27s_totient_function#Computing_Euler’s_totient_function)ได้ว่า Euler’s totient function เป็นผลคูณ <span class="math">\(\varphi(p_1^{r_1}) \varphi(p_2^{r_2})\)</span> หรือ <span class="math">\[ \varphi(p_1^{r_1}p_2^{r_2} \cdots p_k^{r_k}) = (p_1^{r_1}-p_1^{r_1-1}) (p_2^{r_2}-p_2^{r_2-1}) \cdots (p_k^{r_k}-p_k^{r_k-1}) \]</span> นั่นเอง ทำให้ได้ว่า <span class="math">\[ \varphi(N) = (p-1)(q-1) \]</span> เมื่อ <span class="math">\(N\)</span> เป็นผลคูณของจำนวนเฉพาะสองจำนวน
 </p>
 <p></details></p>
 <hr />
@@ -274,7 +287,7 @@ $(document).ready(function() {
     property="dc:created">03 Nov 2018</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2018-11-04 02:30:39 +0000"
+            datetime="2018-11-04 03:08:56 +0000"
             property="dc:modified">04 Nov 2018</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -307,7 +320,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/91bda4a3535cddec1d2488e93ca85e3827f7c8d5/_posts/2018-11-03-shor.md"> 91bda4a</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/76bb2bed66a82cad7f8968d052cbc318a49332e8/_posts/2018-11-03-shor.md"> 76bb2be</a></tiny></p>
 </aside>
 
 <br /><br />

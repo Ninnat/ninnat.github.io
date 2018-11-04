@@ -213,6 +213,10 @@ $(document).ready(function() {
           <article>
           </br>
           <p>อัลกอริธึมแยกตัวประกอบเป็นแอปปลิเคชันของคอมพิวเตอร์ควอนตัมที่สำคัญที่สุดหรือเปล่า? ผมว่าไม่ ผมคิดว่าการจำลองระบบควอนตัมจะเป็นแอปปลิเคชันที่ส่งผลกระทบต่อวิทยาศาสตร์และสังคมมากที่สุด แต่การทำลายระบบความปลอดภัย RSA เป็นเรื่องที่ถูกถามบ่อยที่สุดก็เลยอยากจะเขียนเอาไว้อ้างถึง (มี<a href="https://khunpanya.wordpress.com/2016/07/31/shors-algorithm/">บล็อก</a>ของคุณปัญญาอีกบล็อกที่เขียนเรื่องอัลกอริธึมนี้)</p>
+<center>
+<img src="/assets/img/posts/2018/summer-wars-shor.png" alt="แม้แต่อนิเมะก็มีัลกอริธึมของชอร์" />
+</center>
+
 ก่อนอื่นเลย อัลกอริธึมแยกตัวประกอบของชอร์เป็นอัลกอริธึมหาคาบ (period finding) ของฟังก์ชันประเภทหนึ่ง ดังนั้นเราต้องมาเข้าใจกันก่อนว่าปัญหาการทำลายระบบ RSA และการแยกตัวประกอบลดรูปไปเป็นการหาคาบได้อย่างไร ซึ่งความเข้าใจส่วนนี้ไม่เกี่ยวกับควอนตัมเลย เป็นทฤษฎีจำนวนล้วนๆ <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> ในส่วนแรกของโพสท์นี้เราจะลดรูปปัญหาเป็นขั้นๆดังนี้
 <p>
 <center>
@@ -248,8 +252,13 @@ $(document).ready(function() {
 <p>การที่ RSA รักษาความปลอดภัยได้ก็เพราะไม่มีใครมีอัลกอริธึมคลาสสิคัลที่แยกตัวประกอบได้อย่างรวดเร็ว วิธีหนึ่งในการหาตัวประกอบของ <span class="math">\(N\)</span> คือไล่หาร <span class="math">\(N\)</span> ด้วยจำนวนเล็กๆไปเรื่อยๆจนกว่าจะเจอตัวหาร ซึ่งอาจจะต้องหารไปถึง <span class="math">\(\sqrt{N}\)</span> ตัว ทำไมนี่ไม่ใช่อัลกอริธึม polynomial-time ล่ะ? เหตุผลก็คือเราต้องการแค่ <span class="math">\(\log N\)</span> บิตในการบันทึกจำนวนเต็ม <span class="math">\(N\)</span> ขนาดของอินพุตจึงไม่ใช่ <span class="math">\(N\)</span> แต่เป็น <span class="math">\(n=\log N\)</span> ต่างหาก อัลกอริธึมไล่หารโง่ๆจึงใช้เวลา <span class="math">\(2^{n/2}\)</span> อัลกอริธึมคลาสสิคัลที่ดีสุด (Number Field Sieve) ก็ยัง<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">ใช้เวลา</a>ประมาณ <span class="math">\(2^{n^{1/3}}\)</span> ยังเป็นทวีคูณ (exponential) ในขนาดของอินพุต</p>
 <h2 id="แยกตวประกอบดวยการหาคาบ">แยกตัวประกอบด้วยการหาคาบ</h2>
 <p>สิ่งที่นักวิทยาศาสตร์คอมพิวเตอร์รู้มาก่อนชอร์ก็คือถ้าเราสุ่มเอาจำนวน <span class="math">\(a\)</span> มาหาคาบใน <span class="math">\(\text{mod}\,N\)</span> เยอะๆ เราก็จะหาตัวประกอบของ <span class="math">\(N\)</span> ได้ <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> คาบของ <span class="math">\(a\)</span> คือจำนวน <span class="math">\(r\)</span> ที่น้อยที่สุดที่ <span class="math">\[ x^r \equiv 1 \mod N \]</span> โดยถ้า <span class="math">\(N\)</span> มี <span class="math">\(k\)</span> ตัวประกอบ โอกาสที่จะสุ่มได้ <span class="math">\(a\)</span> ที่ให้ตัวประกอบเมื่อนำมาหาคาบคือ <span class="math">\(1-1/2^{k-1}\)</span> คือยังไงก็มีโอกาสไม่น้อยกว่าครึ่ง</p>
-<p>ไอเดียก็คือถ้า <span class="math">\(r\)</span> หารด้วย 2 ลงตัว <span class="math">\(a^{r/2}\)</span> ก็จะเป็นรากที่สองของ 1 ใน <span class="math">\(\text{mod}\,N\)</span> แล้วรากที่สองเอาไปทำอะไรได้? ไอเดียที่เหลือมาจาก<a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">การทดสอบจำนวนเฉพาะ ของมิลเลอร์และราบิน</a> (Miller-Rabin primality testing): รากที่สองของ 1 <span class="math">\[ b^2 \equiv 1 \mod N \]</span> มีแน่ๆอยู่แล้วสองตัวคือ 1 และ <span class="math">\(-1 \equiv N-1\,\,\text{mod}\,N\)</span> เรียกว่ารากที่สองที่ชัด (trivial) แต่ถ้าเมื่อไรมีรากที่สองมากไปกว่านี้ (nontrivial square root) <span class="math">\(N\)</span> จะต้องเป็นจำนวนประกอบเพราะหาก <span class="math">\(b \not\equiv \pm 1\,\,\text{mod}\,N\)</span> และ <span class="math">\[ b^2 -1 = (b+1)(b-1) \equiv 0 \mod N \]</span> <span class="math">\(N\)</span> จะต้องหาร <span class="math">\((b+1)(b-1)\)</span> ลงตัว แต่ <span class="math">\(N\)</span> หาร <span class="math">\(b+1\)</span> หรือ <span class="math">\(b-1\)</span> โดดๆไม่ลงตัว (เพราะ <span class="math">\(b \pm 1 \not\equiv 0\,\,\text{mod}\,N\)</span>) <span class="math">\(N\)</span> จึงต้องเป็นผลคูณของตัวประกอบที่แบ่งไปหาร <span class="math">\(b+1\)</span> กับ <span class="math">\(b-1\)</span> แยกกัน ด้วยเหตุนี้ ห.ร.ม.ของ <span class="math">\(b \pm 1\)</span> และ <span class="math">\(N\)</span> จึงเป็นตัวประกอบของ <span class="math">\(N\)</span></p>
 <hr />
+<details><summary><strong>รากที่สองที่ไม่ชัดของ 1 ให้ตัวประกอบ</strong></summary>
+<p>
+
+ไอเดียก็คือถ้า <span class="math">\(r\)</span> หารด้วย 2 ลงตัว <span class="math">\(a^{r/2}\)</span> ก็จะเป็นรากที่สองของ 1 ใน <span class="math">\(\text{mod}\,N\)</span> จากนั้นก็ใช้ไอเดียจาก<a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">การทดสอบจำนวนเฉพาะของมิลเลอร์และราบิน</a> (Miller-Rabin primality testing): รากที่สองของ 1 <span class="math">\[ b^2 \equiv 1 \mod N \]</span> มีแน่ๆอยู่แล้วสองตัวคือ 1 และ <span class="math">\(-1 \equiv N-1\,\,\text{mod}\,N\)</span> เรียกว่ารากที่สองที่ชัด (trivial) แต่ถ้าเมื่อไรมีรากที่สองมากไปกว่านี้ (nontrivial square root) <span class="math">\(N\)</span> จะต้องเป็นจำนวนประกอบเพราะหาก <span class="math">\(b \not\equiv \pm 1\,\,\text{mod}\,N\)</span> และ <span class="math">\[ b^2 -1 = (b+1)(b-1) \equiv 0 \mod N \]</span> <span class="math">\(N\)</span> จะต้องหาร <span class="math">\((b+1)(b-1)\)</span> ลงตัว แต่ <span class="math">\(N\)</span> หาร <span class="math">\(b+1\)</span> หรือ <span class="math">\(b-1\)</span> โดดๆไม่ลงตัว (เพราะ <span class="math">\(b \pm 1 \not\equiv 0\,\,\text{mod}\,N\)</span>) <span class="math">\(N\)</span> จึงต้องเป็นผลคูณของตัวประกอบที่แบ่งไปหาร <span class="math">\(b+1\)</span> กับ <span class="math">\(b-1\)</span> แยกกัน ด้วยเหตุนี้ ห.ร.ม.ของ <span class="math">\(b \pm 1\)</span> และ <span class="math">\(N\)</span> จึงเป็นตัวประกอบของ <span class="math">\(N\)</span>
+</p>
+<p></details></p>
 <details><summary><strong>ความน่าจะเป็นที่จะได้ <span class="math">\(a\)</span> ที่ต้องการ</strong></summary>
 <p>
 
@@ -287,7 +296,7 @@ $(document).ready(function() {
     property="dc:created">03 Nov 2018</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2018-11-04 04:31:53 +0000"
+            datetime="2018-11-04 05:05:40 +0000"
             property="dc:modified">04 Nov 2018</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -320,7 +329,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/0c8e16a2944f477a086eb2e85b18341b3596c616/_posts/2018-11-03-shor.md"> 0c8e16a</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/db9c58223cee929f289fb577254bc3f7ebbdd3ce/_posts/2018-11-03-shor.md"> db9c582</a></tiny></p>
 </aside>
 
 <br /><br />

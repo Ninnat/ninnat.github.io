@@ -120,6 +120,6 @@ tags:
 
 #อ้างอิง
 
-- Cristopher Moore และ Stephen Mertens, “Quantum Computation” ใน *The Nature of Computation*, Cambridge University Press (2011).
+- Cristopher Moore และ Stephan Mertens, “Quantum Computation” ใน *The Nature of Computation*, Cambridge University Press (2011).
 
 - Scott Aaronson, “Crypto” ใน *Quantum Computing Since Democritus*, Cambridge University Press (2013).

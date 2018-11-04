@@ -213,10 +213,12 @@ $(document).ready(function() {
           <article>
           </br>
           <p>อัลกอริธึมแยกตัวประกอบเป็นแอปปลิเคชันของคอมพิวเตอร์ควอนตัมที่สำคัญที่สุดหรือเปล่า? ผมว่าไม่ ผมคิดว่าการจำลองระบบควอนตัมจะเป็นแอปปลิเคชันที่ส่งผลกระทบต่อวิทยาศาสตร์และสังคมมากที่สุด แต่การทำลายระบบความปลอดภัย RSA เป็นเรื่องที่ถูกถามบ่อยที่สุดก็เลยอยากจะเขียนเอาไว้อ้างถึง (มี<a href="https://khunpanya.wordpress.com/2016/07/31/shors-algorithm/">บล็อก</a>ของคุณปัญญาอีกบล็อกที่เขียนเรื่องอัลกอริธึมนี้)</p>
-<p>ก่อนอื่นเลย อัลกอริธึมแยกตัวประกอบของชอร์เป็นอัลกอริธึมหาคาบ (period finding) ของฟังก์ชันประเภทหนึ่ง ดังนั้นเราต้องมาเข้าใจกันก่อนว่าปัญหาการทำลายระบบ RSA และการแยกตัวประกอบลดรูปไปเป็นการหาคาบได้อย่างไร ซึ่งความเข้าใจส่วนนี้ไม่เกี่ยวกับควอนตัมเลย เป็นทฤษฎีจำนวนล้วนๆ <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> ในส่วนแรกของโพสท์นี้เราจะลดรูปปัญหาเป็นขั้นๆดังนี้</p>
+ก่อนอื่นเลย อัลกอริธึมแยกตัวประกอบของชอร์เป็นอัลกอริธึมหาคาบ (period finding) ของฟังก์ชันประเภทหนึ่ง ดังนั้นเราต้องมาเข้าใจกันก่อนว่าปัญหาการทำลายระบบ RSA และการแยกตัวประกอบลดรูปไปเป็นการหาคาบได้อย่างไร ซึ่งความเข้าใจส่วนนี้ไม่เกี่ยวกับควอนตัมเลย เป็นทฤษฎีจำนวนล้วนๆ <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> ในส่วนแรกของโพสท์นี้เราจะลดรูปปัญหาเป็นขั้นๆดังนี้
+<p>
 <center>
 ทำลายระบบ RSA ≤ หา totient function ≤ แยกตัวประกอบ ≤ หารากที่สองที่ไม่ชัดของ 1 ≤ หาคาบ
 </center>
+</p>
 
 <p>โดย A ≤ B หมายความคร่าวๆว่าถ้าแก้ปัญหา B ได้ก็แก้ A ได้ใน polynomial time</p>
 <h2 id="ทำลายระบบ-rsa-ดวยการแยกตวประกอบ">ทำลายระบบ RSA ด้วยการแยกตัวประกอบ</h2>
@@ -233,7 +235,7 @@ $(document).ready(function() {
 <p><details><summary><strong>การหาค่าของ <span class="math">\(M\)</span>: <span class="math">\(N\)</span> เป็นกำลังของจำนวนเฉพาะ</strong></summary></p>
 <p>
 
-เมื่อ <span class="math">\(N\)</span> เป็นกำลังของจำนวนเฉพาะ (prime power) <span class="math">\(N = p^r\)</span>, จำนวนที่ไม่เป็น coprime กับ <span class="math">\(p^r\)</span> ใน <span class="math">\(\mathbb{Z}_{p^r}\)</span> ซึ่งมี <span class="math">\(p^{r-1}\)</span> จำนวนคือ <span class="math">\(p,2p,\cdots,p^{r-1}p\)</span> ดังนั้น <span class="math">\(\varphi(N) = p^r - p^{r-1}\)</span>
+เมื่อ <span class="math">\(N\)</span> เป็นกำลังของจำนวนเฉพาะ (prime power) <span class="math">\(N = p^r\)</span>, จำนวนที่ไม่เป็น coprime กับ <span class="math">\(p^r\)</span> ใน <span class="math">\(\mathbb{Z}_{p^r}\)</span> และไม่มากกว่า <span class="math">\(p^r\)</span> คือ <span class="math">\(p,2p,\cdots,p^{r-1}p\)</span> ซึ่งมี <span class="math">\(p^{r-1}\)</span> จำนวน ดังนั้น <span class="math">\(\varphi(N) = p^r - p^{r-1}\)</span>
 </p>
 <p></details></p>
 <p><details><summary><strong>การหาค่าของ <span class="math">\(M\)</span>: <span class="math">\(N\)</span> ทั่วไป</strong></summary></p>
@@ -245,8 +247,8 @@ $(document).ready(function() {
 <hr />
 <p>การที่ RSA รักษาความปลอดภัยได้ก็เพราะไม่มีใครมีอัลกอริธึมคลาสสิคัลที่แยกตัวประกอบได้อย่างรวดเร็ว วิธีหนึ่งในการหาตัวประกอบของ <span class="math">\(N\)</span> คือไล่หาร <span class="math">\(N\)</span> ด้วยจำนวนเล็กๆไปเรื่อยๆจนกว่าจะเจอตัวหาร ซึ่งอาจจะต้องหารไปถึง <span class="math">\(\sqrt{N}\)</span> ตัว ทำไมนี่ไม่ใช่อัลกอริธึม polynomial-time ล่ะ? เหตุผลก็คือเราต้องการแค่ <span class="math">\(\log N\)</span> บิตในการบันทึกจำนวนเต็ม <span class="math">\(N\)</span> ขนาดของอินพุตจึงไม่ใช่ <span class="math">\(N\)</span> แต่เป็น <span class="math">\(n=\log N\)</span> ต่างหาก อัลกอริธึมไล่หารโง่ๆจึงใช้เวลา <span class="math">\(2^{n/2}\)</span> อัลกอริธึมคลาสสิคัลที่ดีสุด (Number Field Sieve) ก็ยัง<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">ใช้เวลา</a>ประมาณ <span class="math">\(2^{n^{1/3}}\)</span> ยังเป็นทวีคูณ (exponential) ในขนาดของอินพุต</p>
 <h2 id="แยกตวประกอบดวยการหาคาบ">แยกตัวประกอบด้วยการหาคาบ</h2>
-<p>สิ่งที่นักวิทยาศาสตร์คอมพิวเตอร์รู้มาก่อนชอร์ก็คือถ้าเราสุ่มเอาจำนวน <span class="math">\(a\)</span> มาหาคาบใน mod <span class="math">\(N\)</span> เยอะๆ เราก็จะหาตัวประกอบของ <span class="math">\(N\)</span> ได้ <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> คาบของ <span class="math">\(a\)</span> คือจำนวน <span class="math">\(r\)</span> ที่น้อยที่สุดที่ <span class="math">\[ x^r \equiv 1 \mod N \]</span> โดยถ้า <span class="math">\(N\)</span> มี <span class="math">\(k\)</span> ตัวประกอบ โอกาสที่จะสุ่มได้ <span class="math">\(a\)</span> ที่ให้ตัวประกอบเมื่อนำมาหาคาบคือ <span class="math">\(1-1/2^{k-1}\)</span> คือยังไงก็มีโอกาสไม่น้อยกว่าครึ่ง</p>
-<p>ไอเดียก็คือถ้า <span class="math">\(r\)</span> หารด้วย 2 ลงตัว <span class="math">\(a^{r/2}\)</span> ก็จะเป็นรากที่สองของ 1 ใน mod <span class="math">\(N\)</span> เราเอารากที่สองไปทำอะไรได้? ไอเดียที่เหลือมาจาก<a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">การทดสอบจำนวนประกอบ (composite number) ของมิลเลอร์และราบิน</a> (Miller-Rabin primality testing): รากที่สองของ 1 <span class="math">\[ b^2 \equiv 1 \mod N \]</span> มีแน่ๆอยู่แล้วสองตัวคือ 1 และ <span class="math">\(-1 \equiv N-1\)</span> mod <span class="math">\(N\)</span> เรียกว่ารากที่สองที่ชัด (trivial) แต่ถ้าเมื่อไรมีรากที่สองมากไปกว่านี้ (nontrivial square root) <span class="math">\(N\)</span> จะต้องเป็นจำนวนประกอบเพราะหาก <span class="math">\(b \not\equiv \pm 1\)</span> mod <span class="math">\(N\)</span> และ <span class="math">\[ b^2 -1 = (b+1)(b-1) \equiv 0 \mod N \]</span> <span class="math">\(N\)</span> จะต้องหาร <span class="math">\((b+1)(b-1)\)</span> ลงตัว แต่ <span class="math">\(N\)</span> หาร <span class="math">\(b+1\)</span> หรือ <span class="math">\(b-1\)</span> โดดๆไม่ลงตัว (เพราะ <span class="math">\(b \pm 1 \not\equiv 0\)</span> mod <span class="math">\(N\)</span>) <span class="math">\(N\)</span> จึงต้องเป็นผลคูณของตัวประกอบที่แบ่งไปหาร <span class="math">\(b+1\)</span> กับ <span class="math">\(b-1\)</span> แยกกัน ด้วยเหตุนี้ ห.ร.ม.ของ <span class="math">\(b \pm 1\)</span> และ <span class="math">\(N\)</span> จึงเป็นตัวประกอบของ <span class="math">\(N\)</span></p>
+<p>สิ่งที่นักวิทยาศาสตร์คอมพิวเตอร์รู้มาก่อนชอร์ก็คือถ้าเราสุ่มเอาจำนวน <span class="math">\(a\)</span> มาหาคาบใน <span class="math">\(\text{mod}\,N\)</span> เยอะๆ เราก็จะหาตัวประกอบของ <span class="math">\(N\)</span> ได้ <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> คาบของ <span class="math">\(a\)</span> คือจำนวน <span class="math">\(r\)</span> ที่น้อยที่สุดที่ <span class="math">\[ x^r \equiv 1 \mod N \]</span> โดยถ้า <span class="math">\(N\)</span> มี <span class="math">\(k\)</span> ตัวประกอบ โอกาสที่จะสุ่มได้ <span class="math">\(a\)</span> ที่ให้ตัวประกอบเมื่อนำมาหาคาบคือ <span class="math">\(1-1/2^{k-1}\)</span> คือยังไงก็มีโอกาสไม่น้อยกว่าครึ่ง</p>
+<p>ไอเดียก็คือถ้า <span class="math">\(r\)</span> หารด้วย 2 ลงตัว <span class="math">\(a^{r/2}\)</span> ก็จะเป็นรากที่สองของ 1 ใน <span class="math">\(\text{mod}\,N\)</span> แล้วรากที่สองเอาไปทำอะไรได้? ไอเดียที่เหลือมาจาก<a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test">การทดสอบจำนวนเฉพาะ ของมิลเลอร์และราบิน</a> (Miller-Rabin primality testing): รากที่สองของ 1 <span class="math">\[ b^2 \equiv 1 \mod N \]</span> มีแน่ๆอยู่แล้วสองตัวคือ 1 และ <span class="math">\(-1 \equiv N-1\,\,\text{mod}\,N\)</span> เรียกว่ารากที่สองที่ชัด (trivial) แต่ถ้าเมื่อไรมีรากที่สองมากไปกว่านี้ (nontrivial square root) <span class="math">\(N\)</span> จะต้องเป็นจำนวนประกอบเพราะหาก <span class="math">\(b \not\equiv \pm 1\,\,\text{mod}\,N\)</span> และ <span class="math">\[ b^2 -1 = (b+1)(b-1) \equiv 0 \mod N \]</span> <span class="math">\(N\)</span> จะต้องหาร <span class="math">\((b+1)(b-1)\)</span> ลงตัว แต่ <span class="math">\(N\)</span> หาร <span class="math">\(b+1\)</span> หรือ <span class="math">\(b-1\)</span> โดดๆไม่ลงตัว (เพราะ <span class="math">\(b \pm 1 \not\equiv 0\,\,\text{mod}\,N\)</span>) <span class="math">\(N\)</span> จึงต้องเป็นผลคูณของตัวประกอบที่แบ่งไปหาร <span class="math">\(b+1\)</span> กับ <span class="math">\(b-1\)</span> แยกกัน ด้วยเหตุนี้ ห.ร.ม.ของ <span class="math">\(b \pm 1\)</span> และ <span class="math">\(N\)</span> จึงเป็นตัวประกอบของ <span class="math">\(N\)</span></p>
 <hr />
 <details><summary><strong>ความน่าจะเป็นที่จะได้ <span class="math">\(a\)</span> ที่ต้องการ</strong></summary>
 <p>
@@ -259,13 +261,13 @@ $(document).ready(function() {
 <h1 id="ขอควรระวงในการรนอลกอรธม">ข้อควรระวังในการรันอัลกอริธึม</h1>
 <p>“Compiled Shor’s algorithm”</p>
 <h1 id="ความซบซอนของการแยกตวประกอบ">ความซับซ้อนของการแยกตัวประกอบ</h1>
-<p>Factoring อยู่ใน NP ∩ coNP เชื่อว่าไม่ NP-complete มิฉะนั้น PH จะทลายมาถึงระดับที่หนึ่ง (NP=coNP=PH)</p>
+<p>Factoring อยู่ใน NP ∩ coNP เชื่อว่าไม่ NP-complete มิฉะนั้น PH จะยุบมาถึงระดับที่หนึ่ง (NP=coNP=PH)</p>
 <section class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>ตอนก่อนจะมาเรียนฟิสิกส์ผมเคยบอกเพื่อนภาคคณิตศาสตร์ว่าผมไม่จะแตะทฤษฎีจำนวนอีกแล้วแต่การคำนวณควอนตัมทำให้ผมต้องผิดคำพูด (แต่เดี๋ยวก็จะเห็นว่ามันเป็นทฤษฎีกรุ๊ปที่ผมชอบซะส่วนใหญ่)<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>ถ้าไม่คิดอะไร เราอาจจะนึกว่า <span class="math">\(ed \equiv 1 \mod N\)</span> คือคำตอบ แต่ <span class="math">\(a^{b \mod N} \not\equiv a^b \mod N\)</span> เช่น <span class="math">\(2^5 \equiv 2^{1 \mod 4}\)</span> แต่ <span class="math">\(2^5 = 32 \equiv 0 \mod 4\)</span><a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p>หรือถ้าเช็คว่า <span class="math">\(a\)</span> เป็นจำนวนเฉพาะ ซึ่ง<a href="https://en.wikipedia.org/wiki/Primality_test">ทำได้ใน polynomial-time</a> และโชคดี ห.ร.ม. ของ <span class="math">\(a\)</span> กับ <span class="math">\(N\)</span> ไม่ใช่ 1 ก็จบ ห.ร.ม.นั่นแหละคือตัวประกอบ <!-- Cristopher Moore และ Stephan Mertens, *The Nature of Computation*--><a href="#fnref3">↩</a></p></li>
+<li id="fn3"><p>หรือถ้าเช็คได้ว่า <span class="math">\(a\)</span> เป็นจำนวนเฉพาะ (<a href="https://en.wikipedia.org/wiki/Primality_test">ซึ่งทำได้ใน polynomial time</a>) และโชคดี ห.ร.ม. ของ <span class="math">\(a\)</span> กับ <span class="math">\(N\)</span> ไม่ใช่ 1 ก็จบ ห.ร.ม.นั่นแหละคือตัวประกอบ <!-- Cristopher Moore และ Stephan Mertens, *The Nature of Computation*--><a href="#fnref3">↩</a></p></li>
 </ol>
 </section>
 
@@ -285,7 +287,7 @@ $(document).ready(function() {
     property="dc:created">03 Nov 2018</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2018-11-04 04:13:10 +0000"
+            datetime="2018-11-04 04:31:53 +0000"
             property="dc:modified">04 Nov 2018</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -318,7 +320,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/85b409ed4ac56ad2a49987cb03ccf9cd6c590fe2/_posts/2018-11-03-shor.md"> 85b409e</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/0c8e16a2944f477a086eb2e85b18341b3596c616/_posts/2018-11-03-shor.md"> 0c8e16a</a></tiny></p>
 </aside>
 
 <br /><br />

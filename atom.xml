@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-11-04T05:42:26+00:00</updated>
+ <updated>2018-11-04T05:49:59+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -20,7 +20,10 @@
    <content type="html">&lt;p&gt;อัลกอริธึมแยกตัวประกอบเป็นแอปปลิเคชันของคอมพิวเตอร์ควอนตัมที่สำคัญที่สุดหรือเปล่า? ผมว่าไม่ ผมคิดว่าการจำลองระบบควอนตัมจะเป็นแอปปลิเคชันที่ส่งผลกระทบต่อวิทยาศาสตร์และสังคมมากที่สุด แต่การทำลายระบบความปลอดภัย RSA เป็นเรื่องที่ถูกถามบ่อยที่สุดก็เลยอยากจะเขียนเอาไว้อ้างถึง (มี&lt;a href=&quot;https://khunpanya.wordpress.com/2016/07/31/shors-algorithm/&quot;&gt;บล็อก&lt;/a&gt;ของคุณปัญญาอีกบล็อกที่เขียนเรื่องอัลกอริธึมนี้)&lt;/p&gt;
 &lt;p&gt;
 &lt;center&gt;
-&lt;img src=&quot;/assets/img/posts/2018/summer-wars-shor.png&quot; alt=&quot;์&quot; /&gt; แม้แต่อนิเมะก็มีอัลกอริธึมของชอร์ จากเรื่อง &lt;em&gt;Summar Wars&lt;/em&gt; (2009)
+&lt;img src=&quot;/assets/img/posts/2018/summer-wars-shor.png&quot; /&gt;
+&lt;/center&gt;
+&lt;center&gt;
+แม้แต่อนิเมะก็มีอัลกอริธึมของชอร์ จากเรื่อง &lt;em&gt;Summar Wars&lt;/em&gt; (2009)
 &lt;/center&gt;
 &lt;/p&gt;
 
@@ -56,7 +59,7 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;/details&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;การที่ RSA รักษาความปลอดภัยได้ก็เพราะไม่มีใครมีอัลกอริธึมคลาสสิคัลที่แยกตัวประกอบได้อย่างรวดเร็ว วิธีหนึ่งในการหาตัวประกอบของ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; คือไล่หาร &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; ด้วยจำนวนเล็กๆไปเรื่อยๆจนกว่าจะเจอตัวหาร ซึ่งอาจจะต้องหารไปถึง &lt;span class=&quot;math&quot;&gt;\(\sqrt{N}\)&lt;/span&gt; ตัว ทำไมนี่ไม่ใช่อัลกอริธึม polynomial-time ล่ะ? เหตุผลก็คือเราต้องการแค่ &lt;span class=&quot;math&quot;&gt;\(\log N\)&lt;/span&gt; บิตในการบันทึกจำนวนเต็ม &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; ขนาดของอินพุตจึงไม่ใช่ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; แต่เป็น &lt;span class=&quot;math&quot;&gt;\(n=\log N\)&lt;/span&gt; ต่างหาก อัลกอริธึมไล่หารโง่ๆจึงใช้เวลา &lt;span class=&quot;math&quot;&gt;\(2^{n/2}\)&lt;/span&gt; อัลกอริธึมคลาสสิคัลที่ดีสุด (Number Field Sieve) ก็ยัง&lt;a href=&quot;http://math.mit.edu/~cohn/Thoughts/factoring.html&quot;&gt;ใช้เวลา&lt;/a&gt;ประมาณ &lt;span class=&quot;math&quot;&gt;\(2^{n^{1/3}}\)&lt;/span&gt; ยังเป็นทวีคูณ (exponential) ในขนาดของอินพุต&lt;/p&gt;
+&lt;p&gt;การที่ RSA รักษาความปลอดภัยได้ก็เพราะไม่มีใครมีอัลกอริธึมคลาสสิคัลที่แยกตัวประกอบได้อย่างรวดเร็ว วิธีหนึ่งในการหาตัวประกอบของ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; คือไล่หาร &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; ด้วยจำนวนเล็กๆไปเรื่อยๆจนกว่าจะเจอตัวหาร ซึ่งอาจจะต้องหารไปถึง &lt;span class=&quot;math&quot;&gt;\(\sqrt{N}\)&lt;/span&gt; ตัว ทำไมนี่ไม่ใช่อัลกอริธึม polynomial-time ล่ะ? เหตุผลก็คือเราต้องการแค่ &lt;span class=&quot;math&quot;&gt;\(\log N\)&lt;/span&gt; บิตในการบันทึกจำนวนเต็ม &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; ขนาดของอินพุตจึงไม่ใช่ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; แต่เป็น &lt;span class=&quot;math&quot;&gt;\(n=\log N\)&lt;/span&gt; ต่างหาก อัลกอริธึมไล่หารโง่ๆจึงใช้เวลา &lt;span class=&quot;math&quot;&gt;\(2^{n/2}\)&lt;/span&gt; อัลกอริธึม Number Field Sieve ที่ดีสุด ก็&lt;a href=&quot;http://math.mit.edu/~cohn/Thoughts/factoring.html&quot;&gt;ใช้เวลา&lt;/a&gt;ประมาณ &lt;span class=&quot;math&quot;&gt;\(2^{n^{1/3}}\)&lt;/span&gt; ยังเป็นทวีคูณ (exponential) ในขนาดของอินพุต&lt;/p&gt;
 &lt;h2 id=&quot;แยกตวประกอบดวยการหาคาบ&quot;&gt;แยกตัวประกอบด้วยการหาคาบ&lt;/h2&gt;
 &lt;p&gt;สิ่งที่นักวิทยาศาสตร์คอมพิวเตอร์รู้มาก่อนชอร์ก็คือถ้าเราสุ่มเอาจำนวน &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; มาหาคาบใน &lt;span class=&quot;math&quot;&gt;\(\text{mod}\,N\)&lt;/span&gt; เยอะๆ เราก็จะหาตัวประกอบของ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; ได้ &lt;a href=&quot;#fn3&quot; class=&quot;footnoteRef&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; คาบของ &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; คือจำนวน &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; ที่น้อยที่สุดที่ &lt;span class=&quot;math&quot;&gt;\[ x^r \equiv 1 \mod N \]&lt;/span&gt; โดยถ้า &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; มี &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; ตัวประกอบ โอกาสที่จะสุ่มได้ &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; ที่ให้ตัวประกอบเมื่อนำมาหาคาบคือ &lt;span class=&quot;math&quot;&gt;\(1-1/2^{k-1}\)&lt;/span&gt; คือยังไงก็มีโอกาสไม่น้อยกว่าครึ่ง&lt;/p&gt;
 &lt;hr /&gt;
@@ -66,7 +69,7 @@
 ไอเดียก็คือถ้า &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; หารด้วย 2 ลงตัว &lt;span class=&quot;math&quot;&gt;\(a^{r/2}\)&lt;/span&gt; ก็จะเป็นรากที่สองของ 1 ใน &lt;span class=&quot;math&quot;&gt;\(\text{mod}\,N\)&lt;/span&gt; จากนั้นก็ใช้ไอเดียจาก&lt;a href=&quot;https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test&quot;&gt;การทดสอบจำนวนเฉพาะของมิลเลอร์และราบิน&lt;/a&gt; (Miller-Rabin primality testing): รากที่สองของ 1 &lt;span class=&quot;math&quot;&gt;\[ b^2 \equiv 1 \mod N \]&lt;/span&gt; มีแน่ๆอยู่แล้วสองตัวคือ 1 และ &lt;span class=&quot;math&quot;&gt;\(-1 \equiv N-1\,\,\text{mod}\,N\)&lt;/span&gt; เรียกว่ารากที่สองที่ชัด (trivial) แต่ถ้าเมื่อไรมีรากที่สองมากไปกว่านี้ (nontrivial square root) &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; จะต้องเป็นจำนวนประกอบเพราะหาก &lt;span class=&quot;math&quot;&gt;\(b \not\equiv \pm 1\,\,\text{mod}\,N\)&lt;/span&gt; และ &lt;span class=&quot;math&quot;&gt;\[ b^2 -1 = (b+1)(b-1) \equiv 0 \mod N \]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; จะต้องหาร &lt;span class=&quot;math&quot;&gt;\((b+1)(b-1)\)&lt;/span&gt; ลงตัว แต่ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; หาร &lt;span class=&quot;math&quot;&gt;\(b+1\)&lt;/span&gt; หรือ &lt;span class=&quot;math&quot;&gt;\(b-1\)&lt;/span&gt; โดดๆไม่ลงตัว (เพราะ &lt;span class=&quot;math&quot;&gt;\(b \pm 1 \not\equiv 0\,\,\text{mod}\,N\)&lt;/span&gt;) &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; จึงต้องเป็นผลคูณของตัวประกอบที่แบ่งไปหาร &lt;span class=&quot;math&quot;&gt;\(b+1\)&lt;/span&gt; กับ &lt;span class=&quot;math&quot;&gt;\(b-1\)&lt;/span&gt; แยกกัน ด้วยเหตุนี้ ห.ร.ม.ของ &lt;span class=&quot;math&quot;&gt;\(b \pm 1\)&lt;/span&gt; และ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt; จึงเป็นตัวประกอบของ &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;/details&gt;&lt;/p&gt;
-&lt;details&gt;&lt;summary&gt;&lt;strong&gt;ความน่าจะเป็นที่จะได้ &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; ที่ต้องการ&lt;/strong&gt;&lt;/summary&gt;
+&lt;details&gt;&lt;summary&gt;&lt;strong&gt;ความน่าจะเป็นที่ &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; จะให้รากที่สองที่ไม่ชัดของ 1&lt;/strong&gt;&lt;/summary&gt;
 &lt;p&gt;
 
 ยังไม่ได้เขียน

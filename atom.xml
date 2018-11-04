@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-11-04T05:10:05+00:00</updated>
+ <updated>2018-11-04T05:42:26+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -18,9 +18,11 @@
    <updated>2018-11-03T00:00:00+00:00</updated>
    <id>h/shor</id>
    <content type="html">&lt;p&gt;อัลกอริธึมแยกตัวประกอบเป็นแอปปลิเคชันของคอมพิวเตอร์ควอนตัมที่สำคัญที่สุดหรือเปล่า? ผมว่าไม่ ผมคิดว่าการจำลองระบบควอนตัมจะเป็นแอปปลิเคชันที่ส่งผลกระทบต่อวิทยาศาสตร์และสังคมมากที่สุด แต่การทำลายระบบความปลอดภัย RSA เป็นเรื่องที่ถูกถามบ่อยที่สุดก็เลยอยากจะเขียนเอาไว้อ้างถึง (มี&lt;a href=&quot;https://khunpanya.wordpress.com/2016/07/31/shors-algorithm/&quot;&gt;บล็อก&lt;/a&gt;ของคุณปัญญาอีกบล็อกที่เขียนเรื่องอัลกอริธึมนี้)&lt;/p&gt;
+&lt;p&gt;
 &lt;center&gt;
-&lt;img src=&quot;/assets/img/posts/2018/summer-wars-shor.png&quot; alt=&quot;แม้แต่อนิเมะก็มีัลกอริธึมของชอร์&quot; /&gt;
+&lt;img src=&quot;/assets/img/posts/2018/summer-wars-shor.png&quot; alt=&quot;์&quot; /&gt; แม้แต่อนิเมะก็มีอัลกอริธึมของชอร์ จากเรื่อง &lt;em&gt;Summar Wars&lt;/em&gt; (2009)
 &lt;/center&gt;
+&lt;/p&gt;
 
 ก่อนอื่นเลย อัลกอริธึมแยกตัวประกอบของชอร์เป็นอัลกอริธึมหาคาบ (period finding) ของฟังก์ชันประเภทหนึ่ง ดังนั้นเราต้องมาเข้าใจกันก่อนว่าปัญหาการทำลายระบบ RSA และการแยกตัวประกอบลดรูปไปเป็นการหาคาบได้อย่างไร ซึ่งความเข้าใจส่วนนี้ไม่เกี่ยวกับควอนตัมเลย เป็นทฤษฎีจำนวนล้วนๆ &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; ในส่วนแรกของโพสท์นี้เราจะลดรูปปัญหาเป็นขั้นๆดังนี้
 &lt;p&gt;

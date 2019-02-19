@@ -4,13 +4,147 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2018-12-10T01:20:49+00:00</updated>
+ <updated>2019-02-19T21:03:19+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>January 2019 Archive</title>
+   <link href="/jan-log.html"/>
+   <updated>2019-02-20T00:00:00+00:00</updated>
+   <id>h/jan-log</id>
+   <content type="html">&lt;h2 id=&quot;research&quot;&gt;1. Research&lt;/h2&gt;
+&lt;h3 id=&quot;generalized-coherent-states-gcss&quot;&gt;1.1 Generalized coherent states (GCSs)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.62.867&quot;&gt;Coherent states: Theory and some applications (paywalled)&lt;/a&gt;, Zhang, Feng and Gilmore 1990&lt;/p&gt;
+&lt;p&gt;The paper talks about group generalizations of the notion of &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_states&quot;&gt;coherent states&lt;/a&gt;, mainly of Perelomov and Gilmore. So naturally it mentions other approaches briefly but is quick to point out their drawbacks.&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;Coherent states as eigenstates of lowering operators&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[…] the adoption of this definition […] has two major drawbacks, the first mathematical and the second physical:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol type=&quot;a&quot;&gt;
+&lt;li&gt;Coherent states cannot be defined in Hilbert spaces of finite dimensionality in this way. In particular, this would preclude the construction of coherent states for compact Lie groups (Perelomov, 1972). Furthermore, states defined in this way have few useful properties and in particular they are not computationally useful.&lt;/li&gt;
+&lt;li&gt;The states so defined do not correspond to physically realizable states, except under the special circumstance that the commutator of the annihilation operator (or lowering step operator) and its Hermitian adjoint is a multiple of the identity operator. Therefore, under these conditions one restricts oneself to the electromagnetic field.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start=&quot;2&quot; type=&quot;1&quot;&gt;
+&lt;li&gt;Coherent states as minimum-uncertainty states&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[…] this generalization has several limitations. First of all, these coherent states can only be constructed for the classically integrable systems in which there exists a set of canonical coordinates and momenta such that the respective Hamiltonians can be reduced to quadrature. This condition requires a flatness condition on the Lie algebra, which reduces the commutation relations to those of the standard photon creation and annihilation operators. Secondly, the wave packets with minimum uncertainty are not unique (see Fig. 1). Different ones may have different properties. Such states may also be incomplete, or even if they are complete it is not certain that a resolution of unity of the standard form exists (Klauder and Skagerstam, 198S). Thus minimum-uncertainty states appear to have few, if any, useful properties. For example, minimum-uncertainty states do not evolve into minimum-uncertainty states when they are driven by a Hamiltonian linear in the generators in the Lie group.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Revisiting this paper after a couple of years, now I would say that the group approach in which GCSs are defined to be the orbit of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Weight_(representation_theory)&quot;&gt;highest weight state&lt;/a&gt; does loosely generalize 1. and 2. as well.&lt;/p&gt;
+&lt;p&gt;Even though minimum-uncertainty states don’t generalize well, &lt;em&gt;minimum variance states&lt;/em&gt; do. &lt;span class=&quot;math&quot;&gt;\(\psi\)&lt;/span&gt; in an irrep of highest weight &lt;span class=&quot;math&quot;&gt;\(\lambda\)&lt;/span&gt; is a &lt;em&gt;generalize coherent state&lt;/em&gt; (GCS) iff the variance &lt;span class=&quot;math&quot;&gt;\[\mathrm{Var}(\psi) := \sum_j \av{X_j^2} - \sum_j \av{X_j}^2 \]&lt;/span&gt; is minimal. The first term is the Casimir eigenvalue which is fixed for a given irrep &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. The only states that maximize the second term are highest weight states with respect to &lt;em&gt;some&lt;/em&gt; choice of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cartan_subalgebra&quot;&gt;Cartan subalgebras&lt;/a&gt;, and these are precisely in the orbit of the unique highest weight state with respect to a &lt;em&gt;fixed&lt;/em&gt; Cartan subalgebra.&lt;/p&gt;
+&lt;p&gt;The same trick of shifting Cartan subalgebras around lets us see (&lt;a href=&quot;https://en.wikipedia.org/wiki/Semisimple_Lie_algebra&quot;&gt;semisimple&lt;/a&gt;) GCSs as eigenvectors of “lowering operators”, taken to mean lowering operators in the &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; Lie algebra &lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. Given a semisimple Lie algebra &lt;span class=&quot;math&quot;&gt;\(\g\)&lt;/span&gt; and its root space decomposition &lt;span class=&quot;math&quot;&gt;\[ \g = \bigoplus_{\alpha \in \Sigma_+} g_{-\alpha} \oplus \h \oplus \bigoplus_{\alpha \in \Sigma_+} g_{\alpha}, \]&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(\h\)&lt;/span&gt; is our choice of a Cartan subalgebra, the highest weight state is by definition the 0-eigenstate of the nilpotent subalgebra &lt;span class=&quot;math&quot;&gt;\(\bigoplus_{\alpha \in \Sigma_+} g_{\alpha}\)&lt;/span&gt;, and again each state in the orbit of this state is a highest weight state with respect to some choice of a Cartan subalgebra.&lt;/p&gt;
+&lt;p&gt;The comparison here with the traditional coherent states is a bit wonky as the Heisenberg group is nilpotent and not semisimple. Zhang et al. takes the symmetry Lie algebra of single-mode coherent states generated by &lt;span class=&quot;math&quot;&gt;\(\{a,a\dgg,a\dgg a,1\}\)&lt;/span&gt;, where 1 is the “scalar” in the commutator &lt;span class=&quot;math&quot;&gt;\([a\dgg,a] = 1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(a\dgg a\)&lt;/span&gt; is the number operator. 1 and &lt;span class=&quot;math&quot;&gt;\(a\dgg a\)&lt;/span&gt; each has some property of an element of a Cartan subalgebra but not all. For instance, &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(a\dgg\)&lt;/span&gt; are eigenvectors of the adjoint action of &lt;span class=&quot;math&quot;&gt;\(a\dgg a\)&lt;/span&gt; but &lt;span class=&quot;math&quot;&gt;\([a\dgg,a] \not\propto a\dgg a\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;I learned these interesting characterizations of GCSs from:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0206012&quot;&gt;Coherent states, entanglement, and geometric invariant theory&lt;/a&gt;, Klyachko 2002 [&lt;a href=&quot;https://arxiv.org/abs/0802.4008&quot;&gt;Extended (and corrected) version&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ams.org/journals/proc/1982-084-04/S0002-9939-1982-0643758-8/S0002-9939-1982-0643758-8.pdf&quot;&gt;A system of quadrics describing the orbit of the highest weight vector&lt;/a&gt;, Lichtenstein 1982 [&lt;a href=&quot;https://mathoverflow.net/questions/49561/highest-weight-orbit-characterization-reformulated-and-extended&quot;&gt;MO&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0207149&quot;&gt;Generalizations of entanglement based on coherent states and convex sets&lt;/a&gt;, Barnum, Knill, Ortiz and Viola 2003&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More GCS:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1811.08479&quot;&gt;Quantum circuit synthesis for generalized coherent states&lt;/a&gt;, Somma arXiv:1811.08479&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A highest weight state with respect to a choice of a Cartan subalgebra &lt;span class=&quot;math&quot;&gt;\(\h\)&lt;/span&gt; has a physical interpretation as the ground state &lt;a href=&quot;#fn3&quot; class=&quot;footnoteRef&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; of a Hamiltonian in &lt;span class=&quot;math&quot;&gt;\(\h\)&lt;/span&gt;. Suppose that your quantum computation starts in the ground state of a fixed &lt;span class=&quot;math&quot;&gt;\(\h_0\)&lt;/span&gt; and after some time you don’t know what the state is anymore but you know that it is a GCS &lt;span class=&quot;math&quot;&gt;\(\ket{\psi}\)&lt;/span&gt;. This paper shows how to reconstruct a quantum circuit that prepares the GCS from the initial ground state by measuring observables &lt;span class=&quot;math&quot;&gt;\(\{X_j\}\)&lt;/span&gt; in &lt;span class=&quot;math&quot;&gt;\(\h_0\)&lt;/span&gt;. The number of measurements and the reconstruct process are efficient in the dimension of the Lie algebra.&lt;/p&gt;
+&lt;p&gt;Two tricks: The Hamiltonian &lt;span class=&quot;math&quot;&gt;\[ H = - \sum_j X_j \av{X_j}_{\psi}  \]&lt;/span&gt; has &lt;span class=&quot;math&quot;&gt;\(\ket{\psi}\)&lt;/span&gt; as the ground state because the expectation value &lt;span class=&quot;math&quot;&gt;\[ - \av{H} =  \sum_j \av{X_j}^2 \]&lt;/span&gt; is exactly the quantity miximized only by &lt;span class=&quot;math&quot;&gt;\(\ket{\psi}\)&lt;/span&gt;. Then one diagonalizes the Hamiltonian to be in &lt;span class=&quot;math&quot;&gt;\(\h_0\)&lt;/span&gt;. Any complex semisimple &lt;span class=&quot;math&quot;&gt;\(\g\)&lt;/span&gt; consists of a bunch of overlapping &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; subalgebras, and in the end the task breaks up to diagonalizing each &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; subalgebra: find a rotation that brings a linear combination of &lt;a href=&quot;https://en.wikipedia.org/wiki/Pauli_matrices&quot;&gt;Paulis&lt;/a&gt; to a pure, fixed Pauli, &lt;span class=&quot;math&quot;&gt;\(Z\)&lt;/span&gt; for example.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://aip.scitation.org/doi/abs/10.1063/1.522663&quot;&gt;A note on coherent state representations of Lie groups&lt;/a&gt;, Onofri 1975&lt;/p&gt;
+&lt;p&gt;An argument for the (canonical) diffeomorphism $ G/T G^{}/B$ can be found in &lt;a href=&quot;https://projecteuclid.org/euclid.cmp/1104200934&quot;&gt;Hogreve &lt;em&gt;et al.&lt;/em&gt; 1990&lt;/a&gt;, Section 2.3, p.472: the real span of &lt;span class=&quot;math&quot;&gt;\(\g\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\mathfrak{b}\)&lt;/span&gt; is all of &lt;span class=&quot;math&quot;&gt;\(\g^{\C}\)&lt;/span&gt;, so the &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-orbit is open in the &lt;span class=&quot;math&quot;&gt;\(G^{\C}\)&lt;/span&gt; orbit (&lt;span class=&quot;math&quot;&gt;\(G^{\C}/B\)&lt;/span&gt;). On the other hand, the orbit is closed because of the compactness, thus they are the same. The argument extends to $ G/K G^{}/P$ by defining &lt;span class=&quot;math&quot;&gt;\(K = P \cap G\)&lt;/span&gt;, then &lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt; contains a maximal torus &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;representation-theory&quot;&gt;1.2 Representation theory&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.math.stonybrook.edu/~aknapp/pdf-files/1-27.pdf&quot;&gt;Structure theory of semisimple Lie groups&lt;/a&gt;, Knapp 1997&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Algebraic groups&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hkumath.hku.hk/~imr/records0001/borel.pdf&quot;&gt;Lie Groups and Linear Algebraic Groups I. Complex and Real Groups&lt;/a&gt;, Borel&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jmilne.org/math/CourseNotes/aag.pdf&quot;&gt;Algebraic Groups and Arithmetic Groups&lt;/a&gt;, Milne 2005&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www-fourier.ujf-grenoble.fr/~mbrion/notes_luminy.pdf&quot;&gt;Introduction to actions of algebraic groups&lt;/a&gt;, Brion 2009&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.math.columbia.edu/~makisumi/articles/reductivegroups.pdf&quot;&gt;Structure theory of reductive groups through examples&lt;/a&gt;, Makisumi 2011&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://math.stackexchange.com/a/76153&quot;&gt;Peter-Weyl for compact Lie groups vs algebraic groups&lt;/a&gt;, MSE (&lt;a href=&quot;https://www.amazon.com/Lie-Groups-Invariants-Representations-Universitext/dp/0387260404&quot;&gt;Procesi&lt;/a&gt;, for example, has both verions: compare Chapter 7, p. 180 and the Peter-Weyl theorem in Chapter 8, p. 213)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Distribution_on_a_linear_algebraic_group&quot;&gt;Distributions on a linear algebraic group&lt;/a&gt;, Wikipedia&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Symmetric spaces and multiplicities&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Foundations of Differential Geometry Volume 2&lt;/em&gt;, Kobayashi and Nomizu 1963&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ims.nus.edu.sg/Programs/liegroups/files/mfalectures-chal-gail.pdf&quot;&gt;Notes on multiplicity-free actions&lt;/a&gt;, Benson and Ratcliff&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ams.org/journals/ert/2003-007-18/S1088-4165-03-00150-X/S1088-4165-03-00150-X.pdf&quot;&gt;Multiplicity-free products and restriction of Weyl characters&lt;/a&gt;, Stembridge 2003&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0021869384711458&quot;&gt;On spherical double cones&lt;/a&gt;, Littelmann 1994&lt;/li&gt;
+&lt;li&gt;The Cartan-Helgason theorem [&lt;a href=&quot;https://en.wikipedia.org/wiki/Zonal_spherical_function#Cartan%E2%80%93Helgason_theore&quot;&gt;Wikipedia&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Groups and Geometric Analysis&lt;/em&gt;, Helgason 1984 (p. 535)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Harmonic Analysis on Semi-Simple Lie Groups I&lt;/em&gt;, Warner 1972&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Symmetry, Representations, and Invariants&lt;/em&gt;, Goodman and Wallach 2009 (Chapter 12)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;media&quot;&gt;2. Media&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Physics Forums has a neat Insight on &lt;a href=&quot;https://www.physicsforums.com/insights/groups-and-geometry/&quot;&gt;Klein geometries&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Differential Geometry: Cartan’s Generalization of Klein’s Erlangen program&lt;/em&gt;, Sharpe 1997 (More examples of planar Klein’s geometries. There are 23 families of two-dimensional Klein’s geometries)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Desargues%27s_theorem&quot;&gt;Desargues’ theorem&lt;/a&gt; in projective geometry is quoted in several treatises of perspective drawing according to this &lt;a href=&quot;https://hal.archives-ouvertes.fr/hal-01015873&quot;&gt;paper&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://strikemag.org/bullshit-jobs/&quot;&gt;Bullshit Jobs&lt;/a&gt;, Graeber 2013 [&lt;a href=&quot;https://www.reddit.com/r/slatestarcodex/comments/62llb0/on_the_phenomenon_of_bullshit_jobs/&quot;&gt;SSC subreddit&lt;/a&gt;]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/news/2018/jan/19/post-work-the-radical-idea-of-a-world-without-jobs&quot;&gt;Post-Work&lt;/a&gt;, Guardian&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Average individual consumption is a &lt;a href=&quot;https://twitter.com/KevinSimler/status/1077196864494067712&quot;&gt;better proxy for wealth&lt;/a&gt; than GDP.&lt;/li&gt;
+&lt;li&gt;Apparently living in an area with 22 &lt;span class=&quot;math&quot;&gt;\(\mu g/m^3\)&lt;/span&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/Particulates&quot;&gt;PM2.5&lt;/a&gt; is &lt;a href=&quot;http://berkeleyearth.org/air-pollution-and-cigarette-equivalence/&quot;&gt;equivalent to smoking a cigarette per day&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2130471/&quot;&gt;Fried rice syndrome&lt;/a&gt; [&lt;a href=&quot;https://en.wikipedia.org/wiki/Bacillus_cereus&quot;&gt;Wikipedia&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bmj.com/content/363/bmj.k5094&quot;&gt;Parachute use to prevent death and major trauma when jumping from aircraft: randomized controlled trial&lt;/a&gt;, Yeh &lt;em&gt;et al.&lt;/em&gt; 2018 (The now classic &lt;a href=&quot;https://www.bmj.com/content/327/7429/1459&quot;&gt;2003 paper&lt;/a&gt; by Smith and Pell was a literature review. Here they actually did the experiment.)&lt;/li&gt;
+&lt;li&gt;When is it acceptable to offset a bad deed by a good deed? A simple rule: &lt;a href=&quot;http://slatestarcodex.com/2017/08/28/contra-askell-on-moral-offsets/&quot;&gt;you can offset axiology, but not morality&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added to the list of great scientists we lost in 2018 are &lt;a href=&quot;https://twitter.com/sapinker/status/1079436841017851906&quot;&gt;Judith Rich Harris&lt;/a&gt; of the &lt;em&gt;Nurture Assumption&lt;/em&gt; fame and &lt;a href=&quot;https://www.washingtonpost.com/local/obituaries/roy-glauber-nobel-winning-physicist-who-applied-quantum-mechanics-to-optics-dies-at-93/2018/12/30/b7e4e05e-0b24-11e9-a3f0-71c95106d96a_story.html&quot;&gt;Roy Glauber&lt;/a&gt;. Glauber and E.C.G. Sudarshan (who also passed away earlier in 2018), are both monumental figures that helped define the field of quantum optics that we know today.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/has-ligo-seen-galaxy-warped-gravitational-waves/&quot;&gt;George Smoot thinks&lt;/a&gt; that the region of the universe around us lacks “low-metallica” stars, giant stars that can collapse and give rise to &amp;gt;20 solar-mass black holes that LIGO and Virgo have been detecting, and so surmises that the events we have seen took place “much farther away—on the order of 10 billion light-years distant—magnified and made visible through gravitational lensing”.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/XYYyzgyuRH5rFN64K/what-makes-people-intellectually-active&quot;&gt;What makes people intellectually active?&lt;/a&gt;, LW&lt;/li&gt;
+&lt;li&gt;William Shockley &lt;a href=&quot;https://dynamicecology.wordpress.com/2014/01/23/william-shockley-on-what-makes-a-person-write-a-lot-of-papers-and-the-superstar-researcher-system/&quot;&gt;observed&lt;/a&gt; that the distribution of productivity at Bell labs was &lt;a href=&quot;https://en.wikipedia.org/wiki/Log-normal_distribution&quot;&gt;log-normal&lt;/a&gt;, which could arises from a product of i.i.d. distributions of several different abilities e.g. the ability to recognize a good problem, solve it, write about it, persevere in the battle with reviewers, write a grant proposal, bring in money etc. (On a related note, the median of the number of citations is apparently zero!)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.theatlantic.com/science/archive/2018/11/diminishing-returns-science/575665/&quot;&gt;Science is getting less bang for its buck&lt;/a&gt;, Collison and Nielsen, Atlantic&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bbc.com/future/story/20190109-the-perils-of-short-termism-civilisations-greatest-threat&quot;&gt;The perils of short-termism: Civilization’s greatest threat&lt;/a&gt;, BBC &amp;gt; To paraphrase the investor Esther Dyson: in politics the dominant time frame is a term of office, in fashion and culture it’s a season, for corporations it’s a quarter, on the internet it’s minutes, and on the financial markets mere milliseconds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Quantum&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trump signs the $1.2 billion &lt;a href=&quot;https://www.technologyreview.com/the-download/612679/president-trump-has-signed-a-12-billon-law-to-boost-us-quantum-tech/&quot;&gt;National Quantum Initiative Act&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cognitivemedium.com/qc-a-science&quot;&gt;In what sense is quantum computing a science?&lt;/a&gt;, Nielsen&lt;/li&gt;
+&lt;li&gt;A sensible &lt;a href=&quot;https://www.hpcwire.com/2019/01/09/the-case-against-the-case-against-quantum-computing/&quot;&gt;rebuttal&lt;/a&gt; to what I think is a fundamentally misguided piece, &lt;a href=&quot;https://spectrum.ieee.org/computing/hardware/the-case-against-quantum-computing&quot;&gt;The Case Against Quantum Computing&lt;/a&gt; that appeared in IEEE Spectrum last November.&lt;/li&gt;
+&lt;li&gt;Boaz Barak’s blog, &lt;a href=&quot;https://windowsontheory.org&quot;&gt;Windows on Theory&lt;/a&gt;, is having a series of guest blog posts on connections between computer science and physics. The topics range from statistical-physics-inspired algorithms to quantum information and black hole information paradox.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Meditation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://journals.sagepub.com/doi/10.1177/1745691617709589&quot;&gt;Mind the Hype: A Critical Evaluation and Prescriptive Agenda for Research on Mindfulness and Meditation&lt;/a&gt;, Van Dam et al. 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/wheres-the-proof-that-mindfulness-meditation-works1/&quot;&gt;Where’s the Proof That Mindfulness Meditation Works?&lt;/a&gt;, SA [&lt;a href=&quot;https://www.reddit.com/r/skeptic/comments/76az0f/wheres_the_proof_that_mindfulness_meditation_works/dod3rpo/&quot;&gt;reddit comment&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184384&quot;&gt;&lt;em&gt;Altered traits: science reveals how meditation changes your mind, brain, and body&lt;/em&gt;&lt;/a&gt;, Goleman and Davidson 2017 [&lt;a href=&quot;https://www.stitcher.com/podcast/abc-news/10-happier/e/51407909&quot;&gt;Dan Harris’ podcast&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/M4w2rdYgCKctbADMn/sequence-introduction-non-agent-and-multiagent-models-of&quot;&gt;Sequence introduction: non-agent and multiagent models of mind&lt;/a&gt;, Sotala, LW&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/x4n4jcoDP7xh5LWLq&quot;&gt;Book Summary: &lt;em&gt;Consciousness and the Brain&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/5gfqG3Xcopscta3st&quot;&gt;Building up to an Internal Family Systems model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Gaming&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=yhGjCzxJV3E&quot;&gt;Guilty Gear Xrd’s Art Style : The X Factor Between 2D and 3D&lt;/a&gt;, Junya C. Motomura, Lead character modeler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Anime&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is still a good &lt;a href=&quot;https://www.nicovideo.jp/watch/sm34393460&quot;&gt;Touhou anime parody&lt;/a&gt;. (Onegai! Cinderella, The Idolm@ster Cinderella Girls)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://foreignpolicy.com/2019/01/23/super-patriotic-anime-youth-wars-china-japan-pop-culture/&quot;&gt;China’s responses to Japanese anime invasion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Musics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shadowgraph, Myth &amp;amp; Roid (Boogiepop wa warawanai 2019 OP)&lt;/li&gt;
+&lt;li&gt;Sayonara Gokko, amazarashi (Dororo 2019 ED)&lt;/li&gt;
+&lt;li&gt;Love Dramatic feat. Rikka Ihara, Masayuki Suzuki (Kaguya-sama wa kokurasetai OP)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;The Casimir eigenvalue is &lt;span class=&quot;math&quot;&gt;\(\av{\lambda,\lambda + 2\delta}\)&lt;/span&gt;, generalizing the &lt;span class=&quot;math&quot;&gt;\(j(j+1)\)&lt;/span&gt; of the squared angular momentum, where &lt;span class=&quot;math&quot;&gt;\(\delta = \frac{1}{2}\sum_{\alpha \in \Sigma_+} \alpha\)&lt;/span&gt; is the ubiquitous half-sum of positive roots (&lt;a href=&quot;https://www.amazon.com/Lie-Groups-Introduction-Anthony-Knapp/dp/0817642595&quot;&gt;Knapp&lt;/a&gt;, Proposition 5.28, p.295). For highest weight states, &lt;span class=&quot;math&quot;&gt;\(\sum_j \av{X_j}^2 = \av{\lambda,\lambda}\)&lt;/span&gt;, making the variance &lt;span class=&quot;math&quot;&gt;\(\av{\lambda,2\delta}\)&lt;/span&gt;.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; is what physicists call “&lt;span class=&quot;math&quot;&gt;\(\mathfrak{su}(2)\)&lt;/span&gt;” but it actually is a complexification of the &lt;em&gt;real&lt;/em&gt; Lie algebra &lt;span class=&quot;math&quot;&gt;\(\mathfrak{su}(2)\)&lt;/span&gt;.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;Actually the ground state is the lowest weight state, but the highest-weight and the lowest-weight descriptions are interchanged simply by relabeling the positive roots negative and vice versa.&lt;a href=&quot;#fnref3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
  
  <entry>
    <title>อัลกอริธึมของชอร์ (ยังเขียนไม่เสร็จ)</title>

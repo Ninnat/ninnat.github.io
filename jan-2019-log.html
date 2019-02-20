@@ -244,8 +244,8 @@ $(document).ready(function() {
 <p>More GCS:</p>
 <ul>
 <li><p><a href="https://arxiv.org/abs/1811.08479">Quantum circuit synthesis for generalized coherent states</a>, Somma arXiv:1811.08479</p>
-<p>A highest weight state with respect to a choice of a Cartan subalgebra <span class="math">\(\h\)</span> has a physical interpretation as the ground state of a Hamiltonian in <span class="math">\(\h\)</span>. (That statement is manifestly false and requires two adjustments <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> but it has a nicer ring to it if you’re a physicist.) Suppose that your quantum computation starts in the ground state of a fixed <span class="math">\(\h_0\)</span> and after some time you don’t know what the state is anymore but you know that it is a GCS <span class="math">\(\ket{\psi}\)</span>. This paper shows how to reconstruct a quantum circuit that prepares the GCS from the initial ground state by measuring observables <span class="math">\(\{X_j\}\)</span> in <span class="math">\(\h_0\)</span>. The number of measurements and the reconstruction process are efficient in the dimension of the Lie algebra.</p>
-<p>Two neat tricks: The Hamiltonian <span class="math">\[ H = - \sum_j X_j \av{X_j}_{\psi}  \]</span> has <span class="math">\(\ket{\psi}\)</span> as the ground state because the expectation value <span class="math">\[ - \av{H} =  \sum_j \av{X_j}^2 \]</span> is exactly the quantity maximized only by <span class="math">\(\ket{\psi}\)</span>. Then one diagonalizes the Hamiltonian to be in <span class="math">\(\h_0\)</span>. Any complex semisimple <span class="math">\(\g\)</span> consists of a bunch of overlapping <span class="math">\(\sl(2,\C)\)</span> subalgebras <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>, and the task turns out to break up into sequentially diagonalizing each <span class="math">\(\sl(2,\C)\)</span> subalgebra: find a rotation that brings a linear combination of <a href="https://en.wikipedia.org/wiki/Pauli_matrices">Paulis</a> to a pure, fixed Pauli, <span class="math">\(Z\)</span> for example.</p></li>
+<p>A highest weight state with respect to a choice of a Cartan subalgebra <span class="math">\(\h\)</span> has a physical interpretation as the ground state of a Hamiltonian in <span class="math">\(\h\)</span>. (That statement is manifestly false and requires two adjustments <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> but it has a nicer ring to it if you’re a physicist.) Suppose that your quantum computation starts in the ground state of a fixed <span class="math">\(\h_0 \subset \g\)</span> and after some time you don’t know what the state is anymore but you know that it is a GCS <span class="math">\(\ket{\psi}\)</span> under the group <span class="math">\(G\)</span>. This could happen, for example, if the quantum gates are limited to those in <span class="math">\(G\)</span>. This paper shows how to reconstruct a quantum circuit that prepares the GCS from the initial ground state by measuring observables <span class="math">\(\{X_j\}\)</span> in <span class="math">\(\g\)</span>. The number of measurements and the reconstruction process are efficient in the dimension of the Lie algebra.</p>
+<p>Two neat tricks: The Hamiltonian <span class="math">\[ H = - \sum_j X_j \av{X_j}_{\psi}  \]</span> has <span class="math">\(\ket{\psi}\)</span> as the ground state because the expectation value <span class="math">\[ - \av{H} =  \sum_j \av{X_j}^2 \]</span> is exactly the quantity maximized only by <span class="math">\(\ket{\psi}\)</span>. One then diagonalizes the Hamiltonian to be in <span class="math">\(\h_0\)</span>. Any complex semisimple <span class="math">\(\g\)</span> consists of a bunch of overlapping <span class="math">\(\sl(2,\C)\)</span> subalgebras <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>, and the task turns out to break up into sequentially diagonalizing each <span class="math">\(\sl(2,\C)\)</span> subalgebra: find a rotation that brings a linear combination of <a href="https://en.wikipedia.org/wiki/Pauli_matrices">Paulis</a> to a pure, fixed Pauli, <span class="math">\(Z\)</span> for example.</p></li>
 <li><p><a href="http://aip.scitation.org/doi/abs/10.1063/1.522663">A note on coherent state representations of Lie groups</a>, Onofri 1975</p>
 <p>Let <span class="math">\(G\)</span> be a real Lie group, <span class="math">\(T\)</span> a maximal torus, <span class="math">\(K \subset G\)</span> the stabilizer subgroup of a highest weight state, <span class="math">\(G^{\C}\)</span> the complexification of <span class="math">\(G\)</span>, and <span class="math">\(B \subset P \subset G^{\C}\)</span> a Borel and a parabolic subgroup respectively.</p>
 <p>An argument for the (canonical) diffeomorphism <span class="math">\(G /T \cong G^{\C} /B\)</span> can be found in <a href="https://projecteuclid.org/euclid.cmp/1104200934">Hogreve et al. 1990</a>, Section 2.3, p.472: the real span of <span class="math">\(\g\)</span> and <span class="math">\(\mathfrak{b}\)</span> is all of <span class="math">\(\g^{\C}\)</span>, so the <span class="math">\(G\)</span>-orbit is open in the <span class="math">\(G^{\C}\)</span> orbit (<span class="math">\(G^{\C} /B\)</span>). On the other hand, the orbit is closed because of the compactness, thus they are the same. The argument extends to <span class="math">\(G /K \cong G^{\C} /P\)</span> by defining <span class="math">\(K = P \cap G\)</span>, then <span class="math">\(K\)</span> contains a maximal torus <span class="math">\(T\)</span>.</p></li>
@@ -281,7 +281,7 @@ $(document).ready(function() {
 </ul>
 <h2 id="links">2. Links</h2>
 <ul>
-<li>Added to the list of great scientists we lost in 2018 are <a href="https://twitter.com/sapinker/status/1079436841017851906">Judith Rich Harris</a> of the <em>Nurture Assumption</em> fame and <a href="https://www.washingtonpost.com/local/obituaries/roy-glauber-nobel-winning-physicist-who-applied-quantum-mechanics-to-optics-dies-at-93/2018/12/30/b7e4e05e-0b24-11e9-a3f0-71c95106d96a_story.html">Roy Glauber</a>. Glauber and E.C.G. Sudarshan (who also passed away earlier in 2018), are both monumental figures that helped define the field of quantum optics that we know today.</li>
+<li>Added to the list of great scientists we’ve lost in 2018 are <a href="https://twitter.com/sapinker/status/1079436841017851906">Judith Rich Harris</a> of the <em>Nurture Assumption</em> fame and <a href="https://www.washingtonpost.com/local/obituaries/roy-glauber-nobel-winning-physicist-who-applied-quantum-mechanics-to-optics-dies-at-93/2018/12/30/b7e4e05e-0b24-11e9-a3f0-71c95106d96a_story.html">Roy Glauber</a>. Glauber and E.C.G. Sudarshan (who also passed away earlier in 2018), are both monumental figures that helped define the field of quantum optics that we know today.</li>
 <li>Apparently living in an area with 22 <span class="math">\(\mu g/m^3\)</span> of <a href="https://en.wikipedia.org/wiki/Particulates">PM2.5</a> is <a href="http://berkeleyearth.org/air-pollution-and-cigarette-equivalence/">equivalent to smoking a cigarette per day</a>.</li>
 <li>Average individual consumption is a <a href="https://twitter.com/KevinSimler/status/1077196864494067712">better proxy for wealth</a> than GDP.</li>
 <li><a href="http://strikemag.org/bullshit-jobs/">Bullshit Jobs</a>, Graeber 2013 [<a href="https://www.reddit.com/r/slatestarcodex/comments/62llb0/on_the_phenomenon_of_bullshit_jobs/">SSC subreddit</a>]
@@ -320,7 +320,6 @@ $(document).ready(function() {
 </ul>
 <p><strong>Meditation/self</strong></p>
 <ul>
-<li>Thoomas Metzinger formalizes <a href="https://www.blogs.uni-mainz.de/fb05philosophie/files/2013/04/Metzinger_suffering_penultimate.pdf">necessary conditions for suffering</a>: 1. conscious experience 2. self-model 3. negative values in the self-model 4. identification with the self-model. Buddhism’s “no self” strives to eliminate 2 (and consequently 3 and 4).</li>
 <li><a href="https://journals.sagepub.com/doi/10.1177/1745691617709589">Mind the Hype: A Critical Evaluation and Prescriptive Agenda for Research on Mindfulness and Meditation</a>, Van Dam et al. 2017</li>
 <li><a href="https://www.scientificamerican.com/article/wheres-the-proof-that-mindfulness-meditation-works1/">Where’s the Proof That Mindfulness Meditation Works?</a>, SA [<a href="https://www.reddit.com/r/skeptic/comments/76az0f/wheres_the_proof_that_mindfulness_meditation_works/dod3rpo/">reddit comment</a>]</li>
 <li><a href="https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184384"><em>Altered traits: science reveals how meditation changes your mind, brain, and body</em></a>, Goleman and Davidson 2017 [<a href="https://www.stitcher.com/podcast/abc-news/10-happier/e/51407909">Dan Harris’ podcast</a>]</li>
@@ -329,6 +328,7 @@ $(document).ready(function() {
 <li><a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/x4n4jcoDP7xh5LWLq">Book Summary: <em>Consciousness and the Brain</em></a></li>
 <li><a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/5gfqG3Xcopscta3st">Building up to an Internal Family Systems model</a></li>
 </ul></li>
+<li>Thomas Metzinger formalizes <a href="https://www.blogs.uni-mainz.de/fb05philosophie/files/2013/04/Metzinger_suffering_penultimate.pdf">necessary conditions for suffering</a>: 1. conscious experience 2. self-model 3. negative values in the self-model 4. identification with the self-model. Buddhism’s “no self” strives to eliminate 2 (and consequently 3 and 4).</li>
 </ul>
 <p><strong>Gaming</strong></p>
 <ul>
@@ -336,7 +336,7 @@ $(document).ready(function() {
 </ul>
 <p><strong>Anime</strong></p>
 <ul>
-<li>There is still a good <a href="https://www.nicovideo.jp/watch/sm34393460">Touhou anime parody</a> in 2019. (Onegai! Cinderella, The Idolm@ster Cinderella Girls)</li>
+<li>Good <a href="https://www.nicovideo.jp/watch/sm34393460">Touhou anime parody</a> still exists in 2019. (Onegai! Cinderella, The Idolm@ster Cinderella Girls)</li>
 <li><a href="https://foreignpolicy.com/2019/01/23/super-patriotic-anime-youth-wars-china-japan-pop-culture/">China’s responses to Japanese anime invasion</a></li>
 </ul>
 <p><strong>Musics</strong></p>
@@ -381,7 +381,7 @@ $(document).ready(function() {
     property="dc:created">20 Feb 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-02-20 13:52:48 +0000"
+            datetime="2019-02-20 15:29:17 +0000"
             property="dc:modified">20 Feb 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -414,7 +414,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/cacd0cb2b8d2fcfa6bf8f67e41585ba53659daa8/_posts/2019-02-19-jan-2019-log.md"> cacd0cb</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/6ec8064bb2face40d8752f35a63ed9901c1cbdc3/_posts/2019-02-19-jan-2019-log.md"> 6ec8064</a></tiny></p>
 </aside>
 
 <br /><br />

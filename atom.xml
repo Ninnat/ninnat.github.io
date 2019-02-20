@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-02-20T12:45:31+00:00</updated>
+ <updated>2019-02-20T13:01:52+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -17,10 +17,11 @@
    <link href="/jan-2019-log.html"/>
    <updated>2019-02-20T00:00:00+00:00</updated>
    <id>h/jan-2019-log</id>
-   <content type="html">&lt;h2 id=&quot;research&quot;&gt;1. Research&lt;/h2&gt;
+   <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from January 2019 (and a bit from December 2018).&lt;/p&gt;
+&lt;h2 id=&quot;research&quot;&gt;1. Research&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Generalized coherent states&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.62.867&quot;&gt;Coherent states: Theory and some applications (paywalled)&lt;/a&gt;, Zhang, Feng and Gilmore 1990&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.62.867&quot;&gt;Coherent states: Theory and some applications [paywalled]&lt;/a&gt;, Zhang, Feng and Gilmore 1990&lt;/p&gt;
 &lt;p&gt;The paper talks about group generalizations of the notion of &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_states&quot;&gt;coherent states&lt;/a&gt;, mainly of Perelomov and Gilmore. So naturally it mentions other approaches briefly but is quick to point out their drawbacks.&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;Coherent states as eigenstates of lowering operators&lt;/li&gt;
@@ -148,7 +149,7 @@
 &lt;p&gt;Touhou&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l_G3i92kX-Q&quot;&gt;弦魔術狂想曲&lt;/a&gt; (Mary the Magician), FAR EAST OF EAST -XVI- (C94), TatshMusicCircle&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=KsASO-I5ki0&quot;&gt;Never Ending Night&lt;/a&gt; (Spring Lane ~ Colorful Path), &lt;a href=&quot;https://vgmdb.net/album/21282&quot;&gt;Touhou Zerokyo Kitan ~ Sophisticated Insanity&lt;/a&gt; (C79), Zero Symphonic Battalion (Hiroki Kikuta, Jillian Aversa)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=KsASO-I5ki0&quot;&gt;Never Ending Night&lt;/a&gt; (Spring Lane ~ Colorful Path), &lt;a href=&quot;https://vgmdb.net/album/21282&quot;&gt;東方零響奇譚 ~ Sophisticated Insanity&lt;/a&gt; (C79), Zero Symphonic Battalion (Hiroki Kikuta, Jillian Aversa)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=V2JuT1tiKQs&quot;&gt;最終制御室～Final control room～&lt;/a&gt; (Last Remote), &lt;a href=&quot;https://vgmdb.net/album/35142&quot;&gt;東方幻霊殿&lt;/a&gt; (C82), Ryuuha Mikakutei&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9MiNHqR6yuw&quot;&gt;空へと沈む鬼と針の城&lt;/a&gt; (The Shining Needle Castle Sinking in the Air), &lt;a href=&quot;https://vgmdb.net/album/43555&quot;&gt;逆弾奏結界 反逆諧謔曲 Reversal Scherzo&lt;/a&gt; (C85), dBu&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ChEdrrrqn5s&quot;&gt;魔界地方遊戯ソリテェア&lt;/a&gt; (Makai Provincial City Esoteria), &lt;a href=&quot;https://vgmdb.net/album/17064&quot;&gt;Lotus&lt;/a&gt; (C77), Sound.AVE&lt;/li&gt;
@@ -160,7 +161,7 @@
 &lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;The Casimir eigenvalue is &lt;span class=&quot;math&quot;&gt;\(\av{\lambda,\lambda + 2\delta}\)&lt;/span&gt;, generalizing the &lt;span class=&quot;math&quot;&gt;\(j(j+1)\)&lt;/span&gt; of the squared angular momentum, where &lt;span class=&quot;math&quot;&gt;\(\delta = \frac{1}{2}\sum_{\alpha \in \Sigma_+} \alpha\)&lt;/span&gt; is the ubiquitous half-sum of positive roots (&lt;a href=&quot;https://www.amazon.com/Lie-Groups-Introduction-Anthony-Knapp/dp/0817642595&quot;&gt;Knapp&lt;/a&gt;, Proposition 5.28, p.295). For highest weight states, &lt;span class=&quot;math&quot;&gt;\(\sum_j \av{X_j}^2 = \av{\lambda,\lambda}\)&lt;/span&gt;, making the variance &lt;span class=&quot;math&quot;&gt;\(\av{\lambda,2\delta}\)&lt;/span&gt;.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;First, the set of Hermitian matrices are not closed under the commutator bracket so Hamiltonians don’t form a Lie algebra. Rather it is &lt;span class=&quot;math&quot;&gt;\(i\)&lt;/span&gt; times the Hamiltonians that are in &lt;span class=&quot;math&quot;&gt;\(\h\)&lt;/span&gt;. Second, the ground state would be the lowest weight state but, again, we can make it the highest weight state by a trivial relabeling.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;First, the set of Hermitian matrices are not closed under the commutator bracket so Hamiltonians don’t form a Lie algebra. Rather it is &lt;span class=&quot;math&quot;&gt;\(i\)&lt;/span&gt; times the Hamiltonians that are in &lt;span class=&quot;math&quot;&gt;\(\h\)&lt;/span&gt;. Second, the ground state would be the lowest weight state but, again, we can make it the highest weight state by a trivial relabeling.&lt;a href=&quot;#fnref3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;For each &lt;span class=&quot;math&quot;&gt;\(\alpha\)&lt;/span&gt;, the Lie algebra generated by &lt;span class=&quot;math&quot;&gt;\(\{ E_{\pm \alpha, H} \}\)&lt;/span&gt;, where &lt;span class=&quot;math&quot;&gt;\(E_{\pm \alpha} \in \g_{\pm \alpha}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(H \propto [E_{\alpha},E_{-\alpha}] \in h\)&lt;/span&gt; is isomorphic to the &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; Lie algebra. Note that &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; is what physicists call “&lt;span class=&quot;math&quot;&gt;\(\mathfrak{su}(2)\)&lt;/span&gt;” but it is actually the complexification of the &lt;em&gt;real&lt;/em&gt; Lie algebra &lt;span class=&quot;math&quot;&gt;\(\mathfrak{su}(2)\)&lt;/span&gt;.&lt;a href=&quot;#fnref4&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;For each &lt;span class=&quot;math&quot;&gt;\(\alpha\)&lt;/span&gt;, the Lie algebra generated by &lt;span class=&quot;math&quot;&gt;\(\{ E_{\pm \alpha}, H \}\)&lt;/span&gt;, where &lt;span class=&quot;math&quot;&gt;\(E_{\pm \alpha} \in \g_{\pm \alpha}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(H \propto [E_{\alpha},E_{-\alpha}] \in h\)&lt;/span&gt; is isomorphic to the &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; Lie algebra. Note that &lt;span class=&quot;math&quot;&gt;\(\sl(2,\C)\)&lt;/span&gt; is what physicists call “&lt;span class=&quot;math&quot;&gt;\(\mathfrak{su}(2)\)&lt;/span&gt;” but it is actually the complexification of the &lt;em&gt;real&lt;/em&gt; Lie algebra &lt;span class=&quot;math&quot;&gt;\(\mathfrak{su}(2)\)&lt;/span&gt;.&lt;a href=&quot;#fnref4&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>

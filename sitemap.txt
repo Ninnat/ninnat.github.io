@@ -16,7 +16,7 @@ http://ninnat.github.io/tools
 http://ninnat.github.io/writings/ 
 
 
-http://ninnat.github.io/jan-log.html 
+http://ninnat.github.io/jan-2019-log.html 
 http://ninnat.github.io/shor.html 
 http://ninnat.github.io/quantum-algorithms.html 
 http://ninnat.github.io/quantum-for-babies.html 

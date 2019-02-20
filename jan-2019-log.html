@@ -217,7 +217,7 @@ $(document).ready(function() {
 <p><strong>Generalized coherent states</strong></p>
 <ul>
 <li><p><a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.62.867">Coherent states: Theory and some applications [paywalled]</a>, Zhang, Feng and Gilmore 1990</p>
-<p>The paper talks about group generalizations of the notion of <a href="https://en.wikipedia.org/wiki/Coherent_states">coherent states</a>, mainly of Perelomov and Gilmore. So naturally it mentions other approaches briefly but is quick to point out their drawbacks.</p>
+<p>The paper talks about group generalizations of the notion of <a href="https://en.wikipedia.org/wiki/Coherent_states">coherent states</a>, mainly of Perelomov and Gilmore. Naturally, it briefly mentions other approaches but is quick to point out their drawbacks.</p>
 <ol type="1">
 <li>Coherent states as eigenstates of lowering operators</li>
 </ol>
@@ -230,13 +230,15 @@ $(document).ready(function() {
 <blockquote>
 <p>[…] this generalization has several limitations. First of all, these coherent states can only be constructed for the classically integrable systems in which there exists a set of canonical coordinates and momenta such that the respective Hamiltonians can be reduced to quadrature. This condition requires a flatness condition on the Lie algebra, which reduces the commutation relations to those of the standard photon creation and annihilation operators. Secondly, the wave packets with minimum uncertainty are not unique (see Fig. 1). Different ones may have different properties. Such states may also be incomplete, or even if they are complete it is not certain that a resolution of unity of the standard form exists (Klauder and Skagerstam, 198S). Thus minimum-uncertainty states appear to have few, if any, useful properties. For example, minimum-uncertainty states do not evolve into minimum-uncertainty states when they are driven by a Hamiltonian linear in the generators in the Lie group.</p>
 </blockquote>
-<p>Revisiting this paper after a couple of years, now I would say that the group approach in which <em>generalize coherent states</em> (GCSs) are defined to be the orbit of a <a href="https://en.wikipedia.org/wiki/Weight_(representation_theory)">highest weight state</a> does loosely generalize 1. and 2. as well.</p>
+<p>Revisiting this paper after a couple of years, now I would say that the group approach in which generalize coherent states (GCSs) are defined to be the orbit of a <a href="https://en.wikipedia.org/wiki/Weight_(representation_theory)">highest weight state</a> does loosely generalize 1. and 2. as well.</p>
 <p>Even though minimum-uncertainty states don’t generalize well, <em>minimum variance states</em> do. <span class="math">\(\psi\)</span> in an irrep of highest weight <span class="math">\(\lambda\)</span> is a GCS iff the variance <span class="math">\[\mathrm{Var}(\psi) := \sum_j \av{X_j^2} - \sum_j \av{X_j}^2 \]</span> is minimal. The first term is the <a href="https://en.wikipedia.org/wiki/Casimir_element">Casimir</a> eigenvalue which is fixed for a given irrep <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. The only states that maximize the second term are highest weight states with respect to <em>some</em> choices of <a href="https://en.wikipedia.org/wiki/Cartan_subalgebra">Cartan subalgebras</a>, and these are precisely in the orbit of the unique highest weight state with respect to a <em>fixed</em> Cartan subalgebra.</p>
 <p>The same trick of shifting Cartan subalgebras around allows an interpretation of (semisimple) GCSs as eigenvectors of “lowering operators”. Given a <a href="https://en.wikipedia.org/wiki/Semisimple_Lie_algebra">semisimple Lie algebra</a> <span class="math">\(\g\)</span> and its root space decomposition <span class="math">\[ \g = \bigoplus_{\alpha \in \Sigma_+} \g_{-\alpha} \oplus \h \oplus \bigoplus_{\alpha \in \Sigma_+} \g_{\alpha}, \]</span> where <span class="math">\(\h\)</span> is our choice of a Cartan subalgebra, the highest weight state is by definition the 0-eigenvector of the nilpotent subalgebra of all positive roots <span class="math">\(\bigoplus_{\alpha \in \Sigma_+} \g_{\alpha}\)</span>, and again each state in the orbit of this state is a highest weight state with respect to some choice of a Cartan subalgebra. (In fact, a GCS in finite dimensions can be <a href="https://arxiv.org/abs/0802.4008">defined</a> as an eigenvector of a <em>Borel subalgebra</em> <span class="math">\(\h \oplus \bigoplus_{\alpha \in \Sigma_+} \g_{\alpha}\)</span>. This is a part of the geometric highest weight theory.) The positive roots are the analogues of raising operators, but one might as well shuffle the labels between positive and negative roots and call elements in <span class="math">\(\bigoplus_{\alpha \in \Sigma_+} \g_{\alpha}\)</span> “lowering operators”.</p>
 <p>The comparison here with the traditional coherent states is a bit wonky as the Heisenberg group is nilpotent and not semisimple. Zhang et al. takes the symmetry algebra of single-mode coherent states to be generated by <span class="math">\(\{a,a\dgg,a\dgg a,1\}\)</span>, where 1 is the “scalar” in the commutator <span class="math">\([a\dgg,a] = 1\)</span> and <span class="math">\(a\dgg a\)</span> is the number operator. 1 and <span class="math">\(a\dgg a\)</span> each has some property of an element of a Cartan subalgebra but not all. For instance, <span class="math">\(a\)</span> and <span class="math">\(a\dgg\)</span> are eigenvectors of the adjoint action of <span class="math">\(a\dgg a\)</span> but <span class="math">\([a\dgg,a]\)</span> is not proportional to <span class="math">\(a\dgg a\)</span>.</p>
 <p>I learned these interesting characterizations of GCSs from:</p></li>
-<li><a href="https://arxiv.org/abs/quant-ph/0206012">Coherent states, entanglement, and geometric invariant theory</a>, Klyachko 2002 [<a href="https://arxiv.org/abs/0802.4008">Extended (and corrected) version</a>]</li>
+<li><a href="https://arxiv.org/abs/quant-ph/0206012">Coherent states, entanglement, and geometric invariant theory</a>, Klyachko 2002 [<a href="https://arxiv.org/abs/0802.4008">Extended (and corrected) version</a>]
+<ul>
 <li><a href="http://www.ams.org/journals/proc/1982-084-04/S0002-9939-1982-0643758-8/S0002-9939-1982-0643758-8.pdf">A system of quadrics describing the orbit of the highest weight vector</a>, Lichtenstein 1982 [<a href="https://mathoverflow.net/questions/49561/highest-weight-orbit-characterization-reformulated-and-extended">MO</a>]</li>
+</ul></li>
 <li><p><a href="https://arxiv.org/abs/quant-ph/0207149">Generalizations of entanglement based on coherent states and convex sets</a>, Barnum, Knill, Ortiz and Viola 2003</p></li>
 </ul>
 <p>More GCS:</p>
@@ -296,8 +298,10 @@ $(document).ready(function() {
 <p><strong>Meta-research/mathematics</strong></p>
 <ul>
 <li><a href="https://www.theatlantic.com/science/archive/2018/11/diminishing-returns-science/575665/">Science is getting less bang for its buck</a>, Collison and Nielsen, Atlantic</li>
-<li><a href="https://www.lesswrong.com/posts/XYYyzgyuRH5rFN64K/what-makes-people-intellectually-active">What makes people intellectually active?</a>, LW</li>
+<li><a href="https://www.lesswrong.com/posts/XYYyzgyuRH5rFN64K/what-makes-people-intellectually-active">What makes people intellectually active?</a>, LW
+<ul>
 <li>William Shockley <a href="https://dynamicecology.wordpress.com/2014/01/23/william-shockley-on-what-makes-a-person-write-a-lot-of-papers-and-the-superstar-researcher-system/">observed</a> that the distribution of productivity at Bell labs was <a href="https://en.wikipedia.org/wiki/Log-normal_distribution">log-normal</a>, which could arises from a product of i.i.d. distributions of several different abilities e.g. the ability to recognize a good problem, solve it, write about it, persevere in the battle with reviewers, write a grant proposal, bring in money etc. (On a related note, the median of the number of citations is apparently zero!)</li>
+</ul></li>
 <li>Physics Forums has a nice Insight article on <a href="https://www.physicsforums.com/insights/groups-and-geometry/">Klein geometries</a>.
 <ul>
 <li><em>Differential Geometry: Cartan’s Generalization of Klein’s Erlangen program</em>, Sharpe 1997 (More examples of planar Klein’s geometries. There are 23 families of two-dimensional Klein’s geometries)</li>
@@ -376,7 +380,7 @@ $(document).ready(function() {
     property="dc:created">20 Feb 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-02-20 13:21:55 +0000"
+            datetime="2019-02-20 13:36:18 +0000"
             property="dc:modified">20 Feb 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -409,7 +413,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/dda19afa3ec8d484cd2cea769016395d06762a76/_posts/2019-02-19-jan-2019-log.md"> dda19af</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/8c1405de65d50a62db3d5013df5dbdfecb24d1e7/_posts/2019-02-19-jan-2019-log.md"> 8c1405d</a></tiny></p>
 </aside>
 
 <br /><br />

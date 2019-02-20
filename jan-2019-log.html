@@ -246,7 +246,8 @@ $(document).ready(function() {
 <p>A highest weight state with respect to a choice of a Cartan subalgebra <span class="math">\(\h\)</span> has a physical interpretation as the ground state of a Hamiltonian in <span class="math">\(\h\)</span>. (That statement is manifestly false and requires two adjustments <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> but it has a nicer ring to it if you’re a physicist.) Suppose that your quantum computation starts in the ground state of a fixed <span class="math">\(\h_0\)</span> and after some time you don’t know what the state is anymore but you know that it is a GCS <span class="math">\(\ket{\psi}\)</span>. This paper shows how to reconstruct a quantum circuit that prepares the GCS from the initial ground state by measuring observables <span class="math">\(\{X_j\}\)</span> in <span class="math">\(\h_0\)</span>. The number of measurements and the reconstruction process are efficient in the dimension of the Lie algebra.</p>
 <p>Two neat tricks: The Hamiltonian <span class="math">\[ H = - \sum_j X_j \av{X_j}_{\psi}  \]</span> has <span class="math">\(\ket{\psi}\)</span> as the ground state because the expectation value <span class="math">\[ - \av{H} =  \sum_j \av{X_j}^2 \]</span> is exactly the quantity maximized only by <span class="math">\(\ket{\psi}\)</span>. Then one diagonalizes the Hamiltonian to be in <span class="math">\(\h_0\)</span>. Any complex semisimple <span class="math">\(\g\)</span> consists of a bunch of overlapping <span class="math">\(\sl(2,\C)\)</span> subalgebras <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, and the task turns out to break up into sequentially diagonalizing each <span class="math">\(\sl(2,\C)\)</span> subalgebra: find a rotation that brings a linear combination of <a href="https://en.wikipedia.org/wiki/Pauli_matrices">Paulis</a> to a pure, fixed Pauli, <span class="math">\(Z\)</span> for example.</p></li>
 <li><p><a href="http://aip.scitation.org/doi/abs/10.1063/1.522663">A note on coherent state representations of Lie groups</a>, Onofri 1975</p>
-<p>Let <span class="math">\(G\)</span> be a real Lie group, <span class="math">\(K \subset G\)</span> a stabilizer subgroup, <span class="math">\(G^{\C}\)</span> the complexification of <span class="math">\(G\)</span>, and <span class="math">\(B \subset P \subset G^{\C}\)</span> a Borel and a parabolic subgroup respectively. An argument for the (canonical) diffeomorphism <span class="math">\(G /T \cong G^{\C} /B\)</span> can be found in <a href="https://projecteuclid.org/euclid.cmp/1104200934">Hogreve et al. 1990</a>, Section 2.3, p.472: the real span of <span class="math">\(\g\)</span> and <span class="math">\(\mathfrak{b}\)</span> is all of <span class="math">\(\g^{\C}\)</span>, so the <span class="math">\(G\)</span>-orbit is open in the <span class="math">\(G^{\C}\)</span> orbit (<span class="math">\(G^{\C} /B\)</span>). On the other hand, the orbit is closed because of the compactness, thus they are the same. The argument extends to <span class="math">\(G /K \cong G^{\C} /P\)</span> by defining <span class="math">\(K = P \cap G\)</span>, then <span class="math">\(K\)</span> contains a maximal torus <span class="math">\(T\)</span>.</p></li>
+<p>Let <span class="math">\(G\)</span> be a real Lie group, <span class="math">\(T\)</span> a maximal torus, <span class="math">\(K \subset G\)</span> the stabilizer subgroup of a highest weight state, <span class="math">\(G^{\C}\)</span> the complexification of <span class="math">\(G\)</span>, and <span class="math">\(B \subset P \subset G^{\C}\)</span> a Borel and a parabolic subgroup respectively.</p>
+<p>An argument for the (canonical) diffeomorphism <span class="math">\(G /T \cong G^{\C} /B\)</span> can be found in <a href="https://projecteuclid.org/euclid.cmp/1104200934">Hogreve et al. 1990</a>, Section 2.3, p.472: the real span of <span class="math">\(\g\)</span> and <span class="math">\(\mathfrak{b}\)</span> is all of <span class="math">\(\g^{\C}\)</span>, so the <span class="math">\(G\)</span>-orbit is open in the <span class="math">\(G^{\C}\)</span> orbit (<span class="math">\(G^{\C} /B\)</span>). On the other hand, the orbit is closed because of the compactness, thus they are the same. The argument extends to <span class="math">\(G /K \cong G^{\C} /P\)</span> by defining <span class="math">\(K = P \cap G\)</span>, then <span class="math">\(K\)</span> contains a maximal torus <span class="math">\(T\)</span>.</p></li>
 </ul>
 <p><strong>Representation theory</strong></p>
 <ul>
@@ -303,6 +304,7 @@ $(document).ready(function() {
 <li><em>Differential Geometry: Cartan’s Generalization of Klein’s Erlangen program</em>, Sharpe 1997 (More examples of planar Klein’s geometries. There are 23 families of two-dimensional Klein’s geometries)</li>
 </ul></li>
 <li><a href="https://en.wikipedia.org/wiki/Desargues%27s_theorem">Desargues’ theorem</a> in projective geometry is quoted in several treatises of perspective drawing according to this <a href="https://hal.archives-ouvertes.fr/hal-01015873">paper</a>.</li>
+<li><a href="https://cube20.org/">God’s Number is 20</a>: the longest shortest sequence to solve a Rubik’s cube is 20 moves in the half-turn metric (any non-trivial turn of any face counts as one move) and 26 moves in the quarter-turn metric (literally each quarter turn counts as one move).</li>
 </ul>
 <p><strong>Physics/quantum</strong></p>
 <ul>
@@ -376,7 +378,7 @@ $(document).ready(function() {
     property="dc:created">20 Feb 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-02-20 12:56:01 +0000"
+            datetime="2019-02-20 13:09:46 +0000"
             property="dc:modified">20 Feb 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -390,7 +392,7 @@ $(document).ready(function() {
 
 
  <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
-   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2019-02-20-jan-2019-log.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2019-02-19-jan-2019-log.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
@@ -409,7 +411,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5bb2bded622556964aa1b9346017a568eb1ad08e/_posts/2019-02-20-jan-2019-log.md"> 5bb2bde</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/6e3ecc7b7c814e574572853ce7cab194183d51a7/_posts/2019-02-19-jan-2019-log.md"> 6e3ecc7</a></tiny></p>
 </aside>
 
 <br /><br />

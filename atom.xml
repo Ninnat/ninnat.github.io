@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-02-20T13:42:34+00:00</updated>
+ <updated>2019-02-20T13:57:52+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -73,6 +73,7 @@
 &lt;p&gt;Symmetric spaces and multiplicities&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Foundations of Differential Geometry Volume 2&lt;/em&gt;, Kobayashi and Nomizu 1963&lt;/li&gt;
+&lt;li&gt;Perspectives on Invariant Theory: Schur Duality, Multiplicity-Free Actions and Beyond in &lt;em&gt;The Schur Lectures&lt;/em&gt;, Howe 1992&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ims.nus.edu.sg/Programs/liegroups/files/mfalectures-chal-gail.pdf&quot;&gt;Notes on multiplicity-free actions&lt;/a&gt;, Benson and Ratcliff&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ams.org/journals/ert/2003-007-18/S1088-4165-03-00150-X/S1088-4165-03-00150-X.pdf&quot;&gt;Multiplicity-free products and restriction of Weyl characters&lt;/a&gt;, Stembridge 2003&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0021869384711458&quot;&gt;On spherical double cones&lt;/a&gt;, Littelmann 1994&lt;/li&gt;
@@ -112,7 +113,7 @@
 &lt;li&gt;&lt;em&gt;Differential Geometry: Cartan’s Generalization of Klein’s Erlangen program&lt;/em&gt;, Sharpe 1997 (More examples of planar Klein’s geometries. There are 23 families of two-dimensional Klein’s geometries)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Desargues%27s_theorem&quot;&gt;Desargues’ theorem&lt;/a&gt; in projective geometry is quoted in several treatises of perspective drawing according to this &lt;a href=&quot;https://hal.archives-ouvertes.fr/hal-01015873&quot;&gt;paper&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cube20.org/&quot;&gt;God’s Number is 20&lt;/a&gt;: the longest shortest sequence to solve a Rubik’s cube is 20 moves in the half-turn metric (any non-trivial turn of any face counts as one move) and 26 moves in the quarter-turn metric (literally each quarter turn counts as one move).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cube20.org/&quot;&gt;God’s Number is 20&lt;/a&gt;: the longest shortest sequence to solve a Rubik’s cube is 20 moves in the half-turn metric (any non-trivial turn of any face counts as one move).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Physics/quantum&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

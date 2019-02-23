@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-02-23T13:53:47+00:00</updated>
+ <updated>2019-02-23T14:16:50+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -76,7 +76,8 @@
 &lt;li&gt;Perspectives on Invariant Theory: Schur Duality, Multiplicity-Free Actions and Beyond in &lt;em&gt;The Schur Lectures&lt;/em&gt;, Howe 1992&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ims.nus.edu.sg/Programs/liegroups/files/mfalectures-chal-gail.pdf&quot;&gt;Notes on multiplicity-free actions&lt;/a&gt;, Benson and Ratcliff&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ams.org/journals/ert/2003-007-18/S1088-4165-03-00150-X/S1088-4165-03-00150-X.pdf&quot;&gt;Multiplicity-free products and restriction of Weyl characters&lt;/a&gt;, Stembridge 2003&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0021869384711458&quot;&gt;On spherical double cones&lt;/a&gt;, Littelmann 1994&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0021869384711458&quot;&gt;On spherical double cones&lt;/a&gt;, Littelmann 1994&lt;/p&gt;
+&lt;p&gt;I have been thinking about a tensor product representation of the form &lt;span class=&quot;math&quot;&gt;\(V_{\lambda} \otimes V^*_{\lambda}\)&lt;/span&gt; (linear operators in the context of quantum mechanics). This paper classifies all multiplicity-free tensor product representation &lt;span class=&quot;math&quot;&gt;\(V_{n\omega} \otimes V_{n\omega&amp;#39;}\)&lt;/span&gt; when &lt;span class=&quot;math&quot;&gt;\(\omega,\omega&amp;#39;\)&lt;/span&gt; are fundamental weights (the dual basis of simple roots) of simple Lie groups. It turns out, according to Stembridge, that for &lt;span class=&quot;math&quot;&gt;\(V \otimes W\)&lt;/span&gt; to be multiplicity-free, one of the weight has to be a multiple of a fundamental weight. Thus Littelmann has classified &lt;em&gt;all&lt;/em&gt; multiplicity-free tensor product representation of my interest.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;The Cartan-Helgason theorem [&lt;a href=&quot;https://en.wikipedia.org/wiki/Zonal_spherical_function#Cartan%E2%80%93Helgason_theore&quot;&gt;Wikipedia&lt;/a&gt;]
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Groups and Geometric Analysis&lt;/em&gt;, Helgason 1984 (p. 535)&lt;/li&gt;
@@ -137,9 +138,9 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Gaming&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=yhGjCzxJV3E&quot;&gt;Guilty Gear Xrd’s Art Style : The X Factor Between 2D and 3D&lt;/a&gt;, Junya C. Motomura, Lead character modeler&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=yhGjCzxJV3E&quot;&gt;Guilty Gear Xrd’s Art Style : The X Factor Between 2D and 3D&lt;/a&gt;, Junya C. Motomura, Lead character modeler&lt;/p&gt;
+&lt;p&gt;Team Red of Arc System Works was the only one that got anime-like cel-shading right. (They were thus given the job to handle &lt;a href=&quot;https://en.wikipedia.org/wiki/Dragon_Ball_FighterZ&quot;&gt;Dragon Ball FighterZ&lt;/a&gt; and now &lt;a href=&quot;(https://www.youtube.com/watch?v=ZQQo9vSj1_A)&quot;&gt;Granblue Fantasy Versus&lt;/a&gt;). Each character has its own fixed light source and the team manually adjusts the normal vector and the cel-shading threshold of each major polygon face (&lt;a href=&quot;https://youtu.be/yhGjCzxJV3E?t=970&quot;&gt;16:10&lt;/a&gt;) to make sure that every close-up frame looks good.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Team Red of Arc System Works was the only one that got anime-like cel-shading right. (They were thus given the job to handle &lt;a href=&quot;https://en.wikipedia.org/wiki/Dragon_Ball_FighterZ&quot;&gt;Dragon Ball FighterZ&lt;/a&gt; and now &lt;a href=&quot;(https://www.youtube.com/watch?v=ZQQo9vSj1_A)&quot;&gt;Granblue Fantasy Versus&lt;/a&gt;). Each character has its own fixed light source and the team manually adjusts the normal vector and the cel-shading threshold of each major polygon face (&lt;a href=&quot;https://youtu.be/yhGjCzxJV3E?t=970&quot;&gt;16:10&lt;/a&gt;) to make sure that every close-up frame looks good.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Anime&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Good &lt;a href=&quot;https://www.nicovideo.jp/watch/sm34393460&quot;&gt;Touhou anime parody&lt;/a&gt; still exists in 2019. (Onegai! Cinderella, The Idolm@ster Cinderella Girls)&lt;/li&gt;

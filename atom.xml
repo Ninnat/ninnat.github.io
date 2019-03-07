@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-03-07T09:18:44+00:00</updated>
+ <updated>2019-03-07T09:32:00+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -122,7 +122,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;a href=&quot;https://www.technologyreview.com/s/612596/the-man-turning-china-into-a-quantum-superpower/&quot;&gt;Pan Jianwei&lt;/a&gt; in MIT Techonology Review: &lt;a href=&quot;https://www.technologyreview.com/magazine/2019/01/&quot;&gt;The China Issue&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.02332&quot;&gt;Quantum cryptanalysis of symmetric, public-key and hash-based cryptographic schemes&lt;/a&gt;, Vlad Gheorghiu and Michele Mosca&lt;/p&gt;
 &lt;p&gt;Roughly speaking, the &lt;em&gt;physical footprint&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(nq\)&lt;/span&gt; is the number of qubits per CPU parallelizing Grover’s search, the best known quantum attack against symmetric cryptographic protocols and hash functions, and the &lt;em&gt;quantum security parameter&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(qs\)&lt;/span&gt; is the time resource, in this case surface code cycles, assuming that fault tolerence is achieved via surface codes.&lt;/p&gt;
-&lt;p&gt;RSA and ECC schemes may require at least a ten million qubits, &lt;span class=&quot;math&quot;&gt;\(10^{11}\)&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; gates, and &lt;span class=&quot;math&quot;&gt;\(10^{13}\)&lt;/span&gt; code cycles to break in 24 hours. Symmetric schemes may require &lt;span class=&quot;math&quot;&gt;\(&amp;gt;2^{100}\)&lt;/span&gt; cycles to break.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Breaking RSA and ECC schemes in 14 hours may require at least a ten million qubits, &lt;span class=&quot;math&quot;&gt;\(10^{11}\)&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; gates, and &lt;span class=&quot;math&quot;&gt;\(10^{13}\)&lt;/span&gt; cycles. Symmetric schemes may require &lt;span class=&quot;math&quot;&gt;\(&amp;gt;2^{100}\)&lt;/span&gt; cycles to break.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Meditation&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -146,7 +146,21 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 
 &lt;p&gt;Finnish &lt;a href=&quot;https://en.wikipedia.org/wiki/Power_metal&quot;&gt;power metal&lt;/a&gt; &lt;!--
 &quot;Classic&quot; Sonata Arctica AKA power metal before 2007 (Jani the guitarist also left the band in 2007. Cause or coincidence? Jani was [recruited by Altaria and later formed his own band Cain&#39;s Offering](https://en.wikipedia.org/wiki/List_of_power_metal_bands). The latter has released two albums so far: Gather the Faithful (2009) and Stormcrow (2015).)
-- [Happiest power metal](https://www.reddit.com/r/PowerMetal/comments/25gpwu/happiest_power_metal_you_know/), reddit --&gt; - Sonata Arctica (The guitarist &lt;a href=&quot;https://en.wikipedia.org/wiki/Jani_Liimatainen&quot;&gt;Jani&lt;/a&gt; left the band in 2007.) - [My Land] / [8th Commandment] / &lt;a href=&quot;https://www.youtube.com/watch?v=Gl1z5fuFnCg&quot;&gt;UnOpened&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=48-z85QquO8&quot;&gt;Destruction Preventer&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=oen3-gC-paI&quot;&gt;Ecliptica&lt;/a&gt; 1999 - &lt;a href=&quot;https://www.youtube.com/watch?v=ahjMrcHAVaw&quot;&gt;Weballergy&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=VA0IAbizUfg&quot;&gt;San Sebastian&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=pMVJsAZrodA&quot;&gt;Black Sheep&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=5yszaOJHPjA&quot;&gt;Wolf &amp;amp; Raven&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=G0NRdc9lm6g&quot;&gt;Silence&lt;/a&gt; 2001 - &lt;a href=&quot;https://www.youtube.com/watch?v=_nzwF3j4Gg4&quot;&gt;The Cage&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=ek7jUrVK04w&quot;&gt;Winterheart’s Guild&lt;/a&gt; 2003 - Stratovarius - &lt;a href=&quot;https://www.youtube.com/watch?v=N2l8KtdQ7Ek&quot;&gt;Hunting High and Low&lt;/a&gt;, Infinite 2000 - &lt;a href=&quot;https://www.youtube.com/watch?v=CCnn7WEQIDI&quot;&gt;Eagleheart&lt;/a&gt;, Elements Pt. 1 2002 - &lt;a href=&quot;https://www.youtube.com/watch?v=bxegqv87JhA&quot;&gt;Father Time&lt;/a&gt;, Episode 2010&lt;/p&gt;
+- [Happiest power metal](https://www.reddit.com/r/PowerMetal/comments/25gpwu/happiest_power_metal_you_know/), reddit --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sonata Arctica
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=W8Gqd0XPKsI&quot;&gt;My Land&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=iy81-mzwQoE&quot;&gt;8th Commandment&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=Gl1z5fuFnCg&quot;&gt;UnOpened&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=48-z85QquO8&quot;&gt;Destruction Preventer&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=oen3-gC-paI&quot;&gt;Ecliptica&lt;/a&gt; 1999&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ahjMrcHAVaw&quot;&gt;Weballergy&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=VA0IAbizUfg&quot;&gt;San Sebastian&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=pMVJsAZrodA&quot;&gt;Black Sheep&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=5yszaOJHPjA&quot;&gt;Wolf &amp;amp; Raven&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=G0NRdc9lm6g&quot;&gt;Silence&lt;/a&gt; 2001&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=_nzwF3j4Gg4&quot;&gt;The Cage&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=ek7jUrVK04w&quot;&gt;Winterheart’s Guild&lt;/a&gt; 2003&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Stratovarius
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=N2l8KtdQ7Ek&quot;&gt;Hunting High and Low&lt;/a&gt;, Infinite 2000&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=CCnn7WEQIDI&quot;&gt;Eagleheart&lt;/a&gt;, Elements Pt. 1 2002&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bxegqv87JhA&quot;&gt;Father Time&lt;/a&gt;, Episode 2010&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Similarity/homage&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Dngwio0eJS0&quot;&gt;Rising Force&lt;/a&gt;, Yngwie Malmsteen {&lt;a href=&quot;https://www.youtube.com/watch?v=_k27dYN8eCY&quot;&gt;Rising Scarlet&lt;/a&gt; (東方緋想天), THUNDER CONCERTO (C75), IRON ATTACK}&lt;/li&gt;

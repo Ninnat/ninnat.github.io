@@ -234,7 +234,7 @@ $(document).ready(function() {
 <li><p><a href="https://arxiv.org/abs/1806.05565">Efficient verification of pure quantum states with applications to hypergraph states</a>, Zhu and Hayashi 1806.05565</p>
 <p>The Pallister paper gives the optimal local measurement for all two-qubit pure states and optimal <em>stabilizer</em> measurements for all <span class="math">\(n\)</span>-qubit stabilizer states: <span class="math">\(\Delta_{\epsilon}\approx \epsilon/2\)</span> for measuring all stabilizer operators and <span class="math">\(\epsilon/n\)</span> for measuring only a set of stabilizer generators.</p></li>
 <li><p><a href="https://arxiv.org/abs/1808.10786">Validating and certifying stabilizer states</a>, Kalev and Kyrillidis 1808.10786</p>
-<p><a href="https://arxiv.org/abs/1104.4695">Direct fidelity estimation</a> is great because it doesn’t matter how many qubits you want to verify, the number of samples stay the same. However, it is also not great exactly because of the same reason; even though all we have now are on the order of 10-100 qubits, you still need the same number of samples as if you have a thousand of qubits.</p>
+<p><a href="https://arxiv.org/abs/1104.4695">Direct fidelity estimation</a> is great because it doesn’t matter how many qubits you want to verify, the number of samples stay the same. However, it is also not great <em>by the same reason</em>; even though all we have now are on the order of 10-100 qubits, you still need the same number of samples as if you have a thousand of qubits.</p>
 <p>The problem considered by the current paper is in a sense opposite to that in the Pallister paper. in the Pallister paper, we are given the worst case fidelity <span class="math">\(\epsilon\)</span> and are asked to find an optimal measurement, whereas in this paper we are given a (stabilizer) measurement and are asked for the worst case fidelity <span class="math">\(1-\epsilon\)</span> to a desired stabilizer state. The latter can be done with <span class="math">\(n^3\ln(2\delta^{-1})/2r^2\)</span> samples, where <span class="math">\(r\)</span> is the radius away from <span class="math">\(1-\epsilon\)</span>.</p></li>
 </ul>
 <p><strong>Representation theory</strong></p>
@@ -247,7 +247,7 @@ $(document).ready(function() {
 <p>The Borel-Weil theorem gives every irrep of a semisimple Lie group (or an algebraic group) over <span class="math">\(\C\)</span> a concrete realization as a subspace of <span class="math">\(\Gamma (G/T,L_{\lambda})\)</span>. As an <a href="https://en.wikipedia.org/wiki/Induced_representation#Geometric">induced representation</a>, <span class="math">\(\Gamma (G/T,L_{\lambda})\)</span> has the isotypic decomposition <span class="math">\[ \Gamma(G/T,L_{\lambda}) = \bigoplus_{\mu} V_{\mu} \otimes (V_{\mu}^*)_{-\lambda}, \]</span> where <span class="math">\((V^*_{\mu})_{-\lambda}\)</span> is the <span class="math">\(-\lambda\)</span>-weight space of <span class="math">\(V_{\mu}^*\)</span>. (The minus sign comes about because we’re acting on <span class="math">\(V^*_{\mu}\)</span>.) We could single out the irrep <span class="math">\(V_{\lambda}\)</span> by putting in by hand the condition that <span class="math">\(-\lambda\)</span> has to be a lowest weight, or equivalently, <span class="math">\(\lambda\)</span> has to be a highest weight <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>. What is beautiful about the Borel-Weil theorem is that this condition has a simple meaning in complex geometry (no pun intended): the sections have to be <em>holomorphic</em> for the following reason. The tangent space of <span class="math">\(G/T\)</span> at the identity is isomorphic to the even-dimensional Lie algebra of negative and positive roots consisting of <em>holomorphic</em> and <em>antiholomorphic</em> vectors: <span class="math">\[\begin{align}
      E_{\alpha} = \frac{\partial}{\partial z_{\alpha}}, &amp;&amp; E_{-\alpha} = \frac{\partial}{\partial \overline{z}_{\alpha}}.
  \end{align}\]</span> But <span class="math">\(-\lambda\)</span> is a lowest weight iff the corresponding section <span class="math">\(f\)</span> is annihilated by <span class="math">\(E_{-\alpha}\)</span> for all positive roots <span class="math">\(\alpha\)</span>. In other words, <span class="math">\(f\)</span> is a holomorphic function.</p>
-<p>The <span class="math">\(\SU(2)\)</span> example is given in <a href="http://www.math.columbia.edu/~woit/notes16.pdf">Lecture 16</a>, in which case the space of sections are homogeneous polynomials of degree <span class="math">\(k\)</span> in two variables, the standard result.</p></li>
+<p>The <span class="math">\(\SU(2)\)</span> example is given in <a href="http://www.math.columbia.edu/~woit/notes16.pdf">Lecture 16</a>, in which case the space of sections are homogeneous polynomials of degree <span class="math">\(k\)</span> in two variables, a standard textbook result.</p></li>
 <li>MO threads on <a href="https://mathoverflow.net/questions/74796/complex-structure-on-flag-manifolds">complex</a> and <a href="https://mathoverflow.net/questions/45004/kahler-structure-on-flag-manifolds">Kählerian</a> flag manifolds (Why are flag manifolds important to physicists? They exhaust all the possibilities of compact homogeneous Kähler manifolds associated with <span class="math">\(G\)</span> connected, compact, and semisimple.)
 <ul>
 <li>Flag Manifolds, Alekseevsky 1996 (11th Yugoslav Geometric Seminar)</li>
@@ -314,8 +314,8 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 <li><a href="http://jila.colorado.edu/qip2019/program.html">QIP 2019 videos</a> are now online.</li>
 <li><a href="https://www.technologyreview.com/s/612596/the-man-turning-china-into-a-quantum-superpower/">Pan Jianwei</a> in MIT Techonology Review: <a href="https://www.technologyreview.com/magazine/2019/01/">The China Issue</a></li>
 <li><p><a href="https://arxiv.org/abs/1902.02332">Quantum cryptanalysis of symmetric, public-key and hash-based cryptographic schemes</a>, Vlad Gheorghiu and Michele Mosca</p>
-<p>Roughly speaking, the <em>physical footprint</em> <span class="math">\(nq\)</span> is the number of qubits per CPU parallelizing Grover’s search, the best known quantum attack against symmetric cryptographic protocols and hash functions, and the <em>quantum security parameter</em> <span class="math">\(qs\)</span> is the time resource, in this case surface code cycles, assuming that fault tolerence is achieved via surface codes.</p>
-<p>Breaking RSA and ECC schemes in 14 hours may require at least a ten million qubits, <span class="math">\(10^{11}\)</span> <span class="math">\(T\)</span> gates, and <span class="math">\(10^{13}\)</span> cycles. Symmetric schemes may require <span class="math">\(&gt;2^{100}\)</span> cycles to break.</p></li>
+<p>Roughly speaking, the <em>physical footprint</em> <span class="math">\(nq\)</span> is a space resource and the <em>quantum security parameter</em> <span class="math">\(qs\)</span> is a time resource. <span class="math">\(nq\)</span> is the number of qubits per CPU parallelizing Grover’s search, the best known quantum attack against symmetric cryptographic protocols and hash functions. <span class="math">\(qs\)</span> in this case is the number of surface code cycles, assuming that fault tolerence is achieved via surface codes.</p>
+<p>Breaking RSA and ECC schemes in 24 hours may require at least a ten million qubits, <span class="math">\(10^{11}\)</span> <span class="math">\(T\)</span> gates, and <span class="math">\(10^{13}\)</span> cycles. Symmetric schemes may require <span class="math">\(&gt;2^{100}\)</span> cycles to break.</p></li>
 </ul>
 <p><strong>Meditation</strong></p>
 <ul>
@@ -384,7 +384,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
     property="dc:created">07 Mar 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-03-07 11:46:26 +0000"
+            datetime="2019-03-07 12:30:50 +0000"
             property="dc:modified">07 Mar 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -417,7 +417,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/190081754f06a83f89aada007458ae4e9b5402a3/_posts/2019-02-20-feb-2019-log.md"> 1900817</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/0c734fcc961eb5a2ad3127a29b0460040ad69e59/_posts/2019-02-20-feb-2019-log.md"> 0c734fc</a></tiny></p>
 </aside>
 
 <br /><br />

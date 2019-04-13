@@ -4,13 +4,110 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-03-13T03:27:50+00:00</updated>
+ <updated>2019-04-13T13:45:39+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>March 2019 Archive</title>
+   <link href="/mar-2019-log.html"/>
+   <updated>2019-04-13T00:00:00+00:00</updated>
+   <id>h/mar-2019-log</id>
+   <content type="html">&lt;h2 id=&quot;research&quot;&gt;1. research&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.00111&quot;&gt;Unbiased Simulation of Near-Clifford Quantum Circuits&lt;/a&gt;, Bennink et al. 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.09070&quot;&gt;Simulation of Qubit Quantum Circuits via Pauli Propagation&lt;/a&gt;, Rall, Liang, Cook and Kretschmer 1901.09070&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/1902.11257&quot;&gt;Efficient classical simulation of Clifford circuits with nonstabilizer input states&lt;/a&gt;, Bu and Koh 1902.11257&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_3\)&lt;/span&gt; be a circuit composed of gates from the third level of &lt;a href=&quot;https://arxiv.org/abs/quant-ph/9908010&quot;&gt;Clifford hierarchy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 1.&lt;/strong&gt; The output probabilities of a circuit &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_3\)&lt;/span&gt; on &lt;span class=&quot;math&quot;&gt;\(n+m\)&lt;/span&gt; qubits with input state &lt;span class=&quot;math&quot;&gt;\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)&lt;/span&gt; and computational basis measurement can be approximated up to &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt; norm &lt;span class=&quot;math&quot;&gt;\(\delta\)&lt;/span&gt; in &lt;span class=&quot;math&quot;&gt;\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(\lambda\)&lt;/span&gt; measures the mixedness of the most pure &lt;span class=&quot;math&quot;&gt;\(\rho_j\)&lt;/span&gt;. For instance, the &lt;span class=&quot;math&quot;&gt;\(\lambda\)&lt;/span&gt; for &lt;span class=&quot;math&quot;&gt;\((1-\epsilon)\ketbra{T}{T} + \epsilon\id/2\)&lt;/span&gt; is simply &lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt;. The &lt;span class=&quot;math&quot;&gt;\(1-2/\alpha\)&lt;/span&gt; comes from averaging the &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt; norm of the Fourier coefficients of the output probabilities (inspired by &lt;a href=&quot;https://arxiv.org/abs/1810.03176&quot;&gt;this paper&lt;/a&gt; by Gao and Duan) over the uniform distribution of Cliffords (a &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs&quot;&gt;unitary 2-design&lt;/a&gt;) and using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov%27s_inequality&quot;&gt;Markov inequality&lt;/a&gt;. When every input state is pure, the exponent blows up. For that, we have&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 2&lt;/strong&gt; The output probabilities of a circuit &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_3\)&lt;/span&gt; on &lt;span class=&quot;math&quot;&gt;\(n+m\)&lt;/span&gt; qubits with input state &lt;span class=&quot;math&quot;&gt;\(\ket{0}^{\otimes n} \otimes^m_{j=1} \ket{\psi_j}\)&lt;/span&gt; and computational basis measurement on &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; qubits, the number of of unmeasured qubits being greater than the log of the &lt;em&gt;Pauli rank&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\[ n+m-k \ge \sum^m_{j=1} \log \left( \frac{\chi(\psi_j)}{2} \right), \]&lt;/span&gt; can be approximated up to &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt; norm &lt;span class=&quot;math&quot;&gt;\(\delta\)&lt;/span&gt; in &lt;span class=&quot;math&quot;&gt;\[ (n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\mu \right]}, \]&lt;/span&gt; where now &lt;span class=&quot;math&quot;&gt;\[ \mu(\psi) := 2(1-\max_{\phi \in \mathrm{stab}} |\av{\phi|\psi}|^2). \]&lt;/span&gt; The fidelity to the closest stabilizer state is the &lt;em&gt;stabilizer rank&lt;/em&gt;. Curiously, the more “stabilizer-ness” the &lt;em&gt;worse&lt;/em&gt; the runtime!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Linear Algebraic Groups&lt;/em&gt;, Humphreys 1998 &lt;!-- *Symmetry, Representations, and Invariants*, Goodman and Wallach 2009
+- *Homogeneous Spaces and Equivalent Embeddings*, Timashev 2011
+- [Computing multiplicities of Lie group representations](https://arxiv.org/abs/1204.4379), Christandl, Doran and Walter 2012--&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;John Beaz on &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/01/geometric-quantization-part-1/&quot;&gt;Geometric quantization&lt;/a&gt; [&lt;a href=&quot;http://nautil.us/issue/69/patterns/the-math-that-takes-newton-into-the-quantum-world&quot;&gt;Nautilus&lt;/a&gt; article on how algebraic geometry (“Hartshorne”), or rather, algebraic topology, finally clicked for him]&lt;/p&gt;
+&lt;p&gt;According to some school of thought, quantization is a process of taking a symplectic manifold &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; and turn it into a complex Hilbert space (and smooth functions–classical observables–to linear operators). But that is really just a “&lt;a href=&quot;https://en.wikipedia.org/wiki/Geometric_quantization#Prequantization&quot;&gt;prequantization&lt;/a&gt;”. As Baez &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/26/geometric-quantization-part-2/&quot;&gt;points out&lt;/a&gt;, we need much more than that; we need a line bundle &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; over &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; and various structures (even if &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is already Kähler) that make &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; compatible with the symplectic, complex, and Riemannian structure on &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt;. (&lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/30/geometric-quantization-part-5/&quot;&gt;This&lt;/a&gt; shows you how it works for 2-spheres.) But the world is quantum so perhaps it makes little sense to expect that just the symplectic structure can take us all the way to the complex Hilbert space. Instead, Baez &lt;a href=&quot;https://en.wikipedia.org/wiki/Partially_ordered_set&quot;&gt;proposing&lt;/a&gt;, let us start with a complex projective variety &lt;span class=&quot;math&quot;&gt;\(\C P^n \subset \C^{n+1}\)&lt;/span&gt;, then take a smallest subspace in &lt;span class=&quot;math&quot;&gt;\(V \subset \C^{n+1}\)&lt;/span&gt; whose &lt;a href=&quot;https://en.wikipedia.org/wiki/Projectivization&quot;&gt;projectivized&lt;/a&gt; space &lt;span class=&quot;math&quot;&gt;\(\mathbb{P}V\)&lt;/span&gt; contains &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; to be its quantization &lt;span class=&quot;math&quot;&gt;\(Q(M) = V\)&lt;/span&gt;. Projectivization then gives back &lt;span class=&quot;math&quot;&gt;\(P(V) = M\)&lt;/span&gt;. In this way, we have &lt;a href=&quot;https://en.wikipedia.org/wiki/Partially_ordered_set&quot;&gt;poset&lt;/a&gt; category &lt;code&gt;Class&lt;/code&gt; of classical state spaces and &lt;code&gt;Quant&lt;/code&gt; of quantum state spaces and a pair of adjoint functors between them. You can make them &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/28/geometric-quantization-part-4/&quot;&gt;monoidal&lt;/a&gt; (essentially having the tensor product structure—Segre embedding for varieties) and &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2019/01/08/geometric-quantization-part-7/&quot;&gt;clone&lt;/a&gt; the system with symmetrized product (Veronese embedding for varieties). The latter is actually how you take a classical limit of a generalized coherent state (scaling up the &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2019/01/21/geometric-quantization-part-8/&quot;&gt;symplectic structure&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;links&quot;&gt;2. Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gravity_Research_Foundation&quot;&gt;Gravity Research Foundation&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;his wish to overcome gravity dated from the childhood drowning of his sister. “She was unable to fight gravity, which came up and seized her like a dragon and brought her to the bottom,” he wrote.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/the-spike/the-crimes-against-dopamine-b82b082d5f3d&quot;&gt;Dopamine: fast and slow&lt;/a&gt; (Fast spike or inhibition of dopamine signals the (emotionally positive or negative) error between prediction and reality, not reward. Slow dopamine is for wanting, motivation to work, not happiness.)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.1843magazine.com/features/the-scientists-who-make-apps-addictive&quot;&gt;The Scientists Who Make Apps Addictive&lt;/a&gt; (B.J. Fogg’s students went on to found Instagram or write books like &lt;em&gt;Hooked: How to Build Habit-Forming Products&lt;/em&gt;.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I look at some of my former students and I wonder if they’re really trying to make the world better, or just make money,” said Fogg. “What I always wanted to do was un-enslave people from technology.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Harris was Mike Krieger’s collaborator on Send the Sunshine in Fogg’s class of 2006. Like Krieger, Harris went on to create a real-world app, Apture, which was designed to give instant explanations of complex concepts to online readers […] Harris believed in his mission to explain, yet he could not persuade publishers that incorporating his app would lead to people spending more time on their sites. He came to believe that the internet’s potential to inform and enlighten was at loggerheads with the commercial imperative to seize and hold the attention of users by any means possible.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;After working for Google for a year or so, Harris resigned […] Before leaving, he gave a farewell presentation to Google’s staff in which he argued that they needed to see themselves as moral stewards of the attention of billions of people. Unexpectedly, the slides from his talk became a viral hit inside the company, travelling all the way to the boardroom. Harris was persuaded to stay on and pursue his research at Goo­gle, which created a new job title for him: design ethicist and product philosopher. After a while, Harris realised that although his colleagues were listening politely, they would never take his message seriously without pressure from the outside. He left Google for good earlier this year […]&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;If you think you’re in a bad place, your life could be worse if you are &lt;a href=&quot;https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona&quot;&gt;Facebook moderators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Das Sarma on &lt;a href=&quot;https://physicstoday.scitation.org/doi/10.1063/PT.3.4153&quot;&gt;how the scale of unifications in the present day physics is not so grand anymore&lt;/a&gt;, Physics Today&lt;/li&gt;
+&lt;li&gt;Chameleons change their colors by adjusting the osmotic pressure to &lt;a href=&quot;https://www.nature.com/articles/ncomms7368&quot;&gt;change the spacing of Guanine crystals in a lattice&lt;/a&gt;. See also &lt;a href=&quot;https://en.wikipedia.org/wiki/Animal_reflectors&quot;&gt;animal reflectors&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/d41586-019-00573-4&quot;&gt;Advanced LIGO+ will have frequency-dependent squeezing&lt;/a&gt;. (“LIGO is already able to spot black holes billions of parsecs away. By 2022, it should detect about one such event per day, and the subsequent ALIGO+ upgrade should push that to one event every few hours.”)&lt;/li&gt;
+&lt;li&gt;The 2019 Winter smog in Thailand &lt;a href=&quot;https://towardsdatascience.com/identifying-the-sources-of-winter-air-pollution-in-bangkok-part-ii-72539f9b767a&quot;&gt;seems to correlate most with fire&lt;/a&gt; from as far as 720 km away (Myanmar, Laos and Cambodia)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2019/01/01/what-happened-to-90s-environmentalism/&quot;&gt;What happened to 90s environmentalism?&lt;/a&gt;, SSC&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Insect biomass declines by 75% [&lt;a href=&quot;https://www.scientificamerican.com/article/insect-ldquo-armageddon-rdquo-5-crucial-questions-answered/&quot;&gt;SA&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html&quot;&gt;NYT&lt;/a&gt;] [&lt;a href=&quot;https://www.huffpost.com/entry/nature-destruction-climate-change-world-biodiversity_n_5c49e78ce4b06ba6d3bb2d44?utm_source=politics_fb&amp;amp;utm_campaign=hp_fb_pages&amp;amp;utm_medium=facebook&amp;amp;section=politics&amp;amp;ncid=fcbklnkushpmg00000013&quot;&gt;HuffPost&lt;/a&gt;] [&lt;a href=&quot;https://www.theguardian.com/environment/2019/jan/15/insect-collapse-we-are-destroying-our-life-support-systems&quot;&gt;Guardian&lt;/a&gt;] &lt;!--    - [Global insect declines: Why aren&#39;t we all dead yet?](https://www.lesswrong.com/posts/KwB9jA9FrsNczWr5F/global-insect-declines-why-aren-t-we-all-dead-yet) --&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mathematics/computer science&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The 1993 article, &lt;a href=&quot;https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf&quot;&gt;The Death of Proof&lt;/a&gt; doesn’t age well, and the author knows it: &lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/&quot;&gt;The Horgan Surface and the Death of Proof&lt;/a&gt;, &lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/&quot;&gt;Okay, Maybe Proofs Aren’t Dying After All&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Karen Uhlenback is &lt;a href=&quot;https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/&quot;&gt;the first woman to win the Abel Prize&lt;/a&gt;. (Uhlenback of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process&quot;&gt;Ornstein-Uhlenback process&lt;/a&gt; is her father-in-law.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html&quot;&gt;Geoffrey Hinton, Yann LeCun and Yoshua Bengio&lt;/a&gt; won the Turing Award.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Book of Why&lt;/em&gt;, Pearl and Mackenzie 2018 [&lt;a href=&quot;https://www.goodreads.com/review/show/2483026514?book_show_action=true&amp;amp;from_review_page=1&quot;&gt;critical review&lt;/a&gt; on Goodreads]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.inference.vc/untitled/&quot;&gt;ML beyond Curve Fitting: An Intro to Causal Inference and do-Calculus&lt;/a&gt; &lt;!--    - [Why am I only a half-Bayesian](http://ftp.cs.ucla.edu/pub/stat_ser/r284-reprint.pdf), Pearl 2001
+    - [The Seven Tools of Causal Inference with Reflections on Machine Learning](http://ftp.cs.ucla.edu/pub/stat_ser/r481.pdf), Pearl 2018--&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Recommended: &lt;a href=&quot;https://physicstoday.scitation.org/doi/10.1063/PT.3.4164&quot;&gt;Machine learning in many-body quantum physics and quantum ML algorithms&lt;/a&gt; in Physics Today&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Genetics/evolution&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://genestogenomes.org/kimura-crow-infinite-alleles/&quot;&gt;Kimura &amp;amp; Crow: Infinite Alleles&lt;/a&gt; (Wanting to “do something in genetics like what the theoretical physicists were doing in physics,” Kimura ended up writing a heat equation obeyed by genes that evolve neutrally.)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nature.com/scitable/topicpage/neutral-theory-the-null-hypothesis-of-molecular-839&quot;&gt;Why should we care about neutral evolution?&lt;/a&gt; (Neutral evolution provides a “null hypothesis”, the background noise to be compared and subtracted to get the signal.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/neutral-theory-of-evolution-challenged-by-evidence-for-dna-selection-20181108/&quot;&gt;An estimate of how much of the human genome undergoes neutral selection&lt;/a&gt;, Quanta (&amp;lt;5% and not all neutral alleles evolve follow Kimura’s theory, for example, those that are transmitted through a physical mechanism such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Genetic_linkage&quot;&gt;linkage&lt;/a&gt;.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/mathematics-shows-how-to-ensure-evolution-20180626/&quot;&gt;Natural selection on weighted graphs&lt;/a&gt;, Quanta&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/the-evolutionary-math-puzzle-20180815/&quot;&gt;The grandmother hypothesis&lt;/a&gt;, Quanta&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2019/mar/28/scientists-find-genetic-mutation-that-makes-woman-feel-no-pain&quot;&gt;Mutations render a woman unable to feel pain or anxiety&lt;/a&gt;. The mutations shut down the gene controlling &lt;a href=&quot;https://en.wikipedia.org/wiki/Fatty_acid_amide_hydrolase&quot;&gt;FAAH&lt;/a&gt; which breaks down &lt;a href=&quot;https://en.wikipedia.org/wiki/Anandamide&quot;&gt;anandamide&lt;/a&gt;, a natural cannabis-like substance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Meditation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Meditation as predictive processing, a comment on &lt;a href=&quot;https://slatestarcodex.com/2017/09/20/meditative-states-as-mental-feedback-loops/#comment-549013&quot;&gt;Meditative States as Mental Feedback Loops&lt;/a&gt;, SSC
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://link.springer.com/article/10.3758/BF03200092&quot;&gt;An approach through the looking-glass&lt;/a&gt;, Hershberger 1986&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://opentheory.net/2018/12/the-neuroscience-of-meditation/&quot;&gt;The Neuroscience of Meditation: Four Models&lt;/a&gt; (Buddhism, Predictive coding (“free-energy principle”), Connectome-specific harmonic waves, Neural annealing)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mindcoolness.com/blog/bayesian-brain-predictive-processing/&quot;&gt;The Bayesian Brain: An Introduction to Predictive Processing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/M4w2rdYgCKctbADMn/sequence-introduction-non-agent-and-multiagent-models-of&quot;&gt;Sequence introduction: non-agent and multiagent models of mind&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/AhcEaqWYpa2NieNsK/subagents-introspective-awareness-and-blending&quot;&gt;Subagents, introspective awareness, and blending&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/oJwJzeZ6ar2Hr7KAX&quot;&gt;Subagents, akrasia, and coherence in humans&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Musics/Gaming&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLj3Mg9WXbXd9MeOuI15OCw4xMvK4BKlIS&quot;&gt;Good covers of almost every Mega Man X5,X6 theme&lt;/a&gt; by Lenny Lederman&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Anime&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/12189/Hyouka&quot;&gt;Hyouka&lt;/a&gt; (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/37510/Mob_Psycho_100_II&quot;&gt;Mob Psycho 100 II&lt;/a&gt; (13 Episodes), Bones {ONE} [Webmanga] 2019&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>February 2019 Archive</title>
@@ -26,8 +123,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;suppose we have a two-outcome measurement &lt;span class=&quot;math&quot;&gt;\(E\)&lt;/span&gt; (let’s say, on &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; qubits), and suppose it accepts every product state with the same probability &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt;. Must &lt;span class=&quot;math&quot;&gt;\(E\)&lt;/span&gt; then accept every entangled state with probability &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; as well? Or, a closely-related question: suppose we know &lt;span class=&quot;math&quot;&gt;\(E\)&lt;/span&gt;’s acceptance probabilities on every product state. Is that enough to determine its acceptance probabilities on all &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt;-qubit states?&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The answer is that, yes, the acceptance probabilities are determined and, in fact, constant for all states. Let’s call the proposition “the acceptance probabilities are constant for all states” P. P follows from a result in the &lt;a href=&quot;https://arxiv.org/abs/quant-ph/9811018&quot;&gt;Braunstein et al 1999&lt;/a&gt;, specifically that there is always a ball of constant size around the maximally mixed state, all states in which are separable. This is in fact true only if amplitudes are complex.&lt;/p&gt;
-&lt;p&gt;However, to disprove P when it is false requires knowing the acceptance probabilities on product states to exponential accuracy. A non-example of P to illustrate this: the measurement projecting an &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt;-qubit state onto &lt;span class=&quot;math&quot;&gt;\(n/2\)&lt;/span&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Bell_state&quot;&gt;Bell pairs&lt;/a&gt; accepts every product state with exponentially small probability (but the probabilities are different for different product states) even though it accepts &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; Bell pairs with probability 1.&lt;/p&gt;
+&lt;p&gt;The answer is that, yes, the acceptance probabilities are determined and, in fact, constant for all states. This follows from a result in the &lt;a href=&quot;https://arxiv.org/abs/quant-ph/9811018&quot;&gt;Braunstein et al 1999&lt;/a&gt;, specifically that there is always a ball of constant size around the maximally mixed state, all states in which are separable. This is in fact true only if amplitudes are complex.&lt;/p&gt;
+&lt;p&gt;However, to disprove the statement “the acceptance probabilities are constant for all states” when it is false requires knowing the acceptance probabilities on product states to exponential accuracy. A non-example of the statement to illustrate this: the measurement projecting an &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt;-qubit state onto &lt;span class=&quot;math&quot;&gt;\(n/2\)&lt;/span&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Bell_state&quot;&gt;Bell pairs&lt;/a&gt; accepts every product state with exponentially small probability (but the probabilities are different for different product states) even though it accepts &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; Bell pairs with probability 1.&lt;/p&gt;
 &lt;p&gt;Quotable: “quantum mechanics over the quaternions is a &lt;strong&gt;flaming garbage fire&lt;/strong&gt;”.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1705.06719&quot;&gt;Single-copy entanglement detection&lt;/a&gt;, Dimić and Dakić 2018 (The idea of a test in which the acceptance probability for product states falls off exponentially can be used to detect entanglement.)&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1709.03353&quot;&gt;Optimal verification of entangled states with local measurements&lt;/a&gt;, Pallister, Linden, and Montanaro 2018&lt;/p&gt;
@@ -482,13 +579,13 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;ul&gt;
 &lt;li&gt;1,000,000 เม็ดในช่องที่ 20&lt;/li&gt;
 &lt;li&gt;1,000,000,000,000 เม็ดในช่องที่ 40&lt;/li&gt;
-&lt;li&gt;18,000,000,000,000,000,000 เม็ดในช่องสุดท้ายซึ่งถ้าตีเป็นน้ำหนักก็จะได้ประมาณ 460,000,000 ตัน&lt;/li&gt;
+&lt;li&gt;18,000,000,000,000,000,000 เม็ดในช่องสุดท้ายซึ่งถ้าตีเป็นน้ำหนักก็จะได้ประมาณ 460,000,000 ตัน!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;
 &lt;img src=&quot;/assets/img/posts/08-2017/rice-on-chessboard.jpeg&quot; style=&quot;width: 750px;&quot;/&gt;
 &lt;/center&gt;
 
-&lt;p&gt;บางเวอร์ชันของเรื่องเล่านี้จบลงที่พระราชาสั่งประหารคนผู้นั้นเมื่อรู้ตัวว่าโดนหลอกเข้าให้แล้ว บทเรียนหนึ่งของเรื่องนี้ก็คืออย่าไปกวนตีนคนที่มีอำนาจมากนัก แต่อีกบทเรียนที่สำคัญกว่าก็คือจำนวนที่โตแบบทวีคูณนั้นอาจจะโตเกินจินตนาการของเราได้ ถึงปัญหาจะไม่ใหญ่มาก แต่ถ้ามีแต่อัลกิริธึมที่ต้องใช้เวลาเป็นทวีคูณ ถึงจะใช้ซูเปอร์คอมพิวเตอร์ที่ทำการคำนวณได้กว่า 10 ยกกำลัง 15 ขึ้นตอนในหนึ่งวินาทีก็ยังอาจต้องใช้เวลาเกินอายุปัจจุบันของเอกภพ (13.7 พันล้านปี) ในขณะที่ดวงอาทิตย์อยู่ได้อีกแค่ประมาณห้าพันล้านปี อัลกอริธึมที่ช้าจึงไม่ใช่แค่ไม่ทันใจ แต่อาจจะไม่ทันโลกแตกด้วยซ้ำ! ปัญหาที่ต้องใช้เวลาเป็นทวีคูณในการแก้ถือเป็นปัญหาที่&lt;strong&gt;ยาก&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;บางเวอร์ชันของเรื่องเล่านี้จบลงที่พระราชาสั่งประหารคนผู้นั้นเมื่อรู้ตัวว่าโดนหลอกเข้าให้แล้ว บทเรียนหนึ่งของเรื่องนี้ก็คืออย่าไปกวนตีนคนที่มีอำนาจมากนัก แต่อีกบทเรียนที่สำคัญกว่าก็คือจำนวนที่โตแบบทวีคูณนั้นอาจจะโตเกินจินตนาการของเราได้ ถึงปัญหาจะไม่ใหญ่มาก แต่ถ้ามีแต่อัลกอริธึมที่ต้องใช้เวลาเป็นทวีคูณ ถึงจะใช้ซูเปอร์คอมพิวเตอร์ที่ทำการคำนวณได้กว่า 10 ยกกำลัง 15 ขึ้นตอนในหนึ่งวินาทีก็ยังอาจต้องใช้เวลาเกินอายุปัจจุบันของเอกภพ (13.7 พันล้านปี) ในขณะที่ดวงอาทิตย์อยู่ได้อีกแค่ประมาณห้าพันล้านปี อัลกอริธึมที่ช้าจึงไม่ใช่แค่ไม่ทันใจ แต่อาจจะไม่ทันโลกแตกด้วยซ้ำ! ปัญหาที่ต้องใช้เวลาเป็นทวีคูณในการแก้ถือเป็นปัญหาที่&lt;strong&gt;ยาก&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;บตรเครดต-เสยงดนตร-และคอมพวเตอรควอนตม&quot;&gt;บัตรเครดิต, เสียงดนตรี, และคอมพิวเตอร์ควอนตัม&lt;/h1&gt;
 &lt;p&gt;ไอเดียของคอมพิวเตอร์ที่อาศัยพฤติกรรมเชิงควอนตัมของสสารในการคำนวณมีมาตั้งแต่ปี 1980 แล้วแต่ในตอนนั้นยังไม่ชัดเจนว่าคอมพิวเตอร์ควอนตัมจะแก้ปัญหายากๆได้เร็วกว่าคอมพิวเตอร์ธรรมดาขนาดไหน จุดเปลี่ยนที่ทำให้คนหันมาสนใจคอมพิวเตอร์ควอนตัมในวงกว้างมาจากวงการที่แทบจะไม่เกี่ยวข้องกับฟิสิกส์เลย: วงการรหัสลับ&lt;/p&gt;
 &lt;p&gt;การส่งข้อความลับจะต้องมีกุญแจเข้ารหัส (encrypt) และกุญแจถอดรหัส (decrypt) รหัสลับก่อนสงครามโลกครั้งที่สองมักใช้กุญแจเดียวกันทั้งในการเข้าและถอดรหัส จึงถูกเรียกว่ากุญแจแบบสมมาตร (symmetric key) รหัสแบบนี้สามารถให้ความปลอดภัยอย่างสมบูรณ์แบบได้ในทางทฤษฎีเช่น one-time pad ที่มีกุญแจเป็นข้อความสุ่มมั่วๆเอามาใช้แปลงข้อความจริง ถ้ารู้ข้อความสุ่มนั้นก็จะกู้ข้อความจริงกลับมาได้ แต่กุญแจต้องใช้แล้วทิ้ง ห้ามใช้ซ้ำกัน ตามชื่อว่า one-time (การที่โปรเจ็กต์ VENONA ของ NSA สหรัฐอเมริกาจับตัวสายลับโซเวียตในช่วงสงครามโลกครั้งที่สองได้ก็เชื่อกันว่ามาจากการใช้กุญแจซ้ำของโซเวียตที่มีเหตุจากการเร่งการผลิตกุญแจลับเพราะการบุกของเยอรมัน) ยิ่งข้อความลับยาวกุญแจก็ยิ่งต้องใหญ่ นอกจากนี้การที่ทั้งผู้ส่งและผู้รับจะต้องมีกุญแจเดียวกันก็แปลว่าจะต้องมีการส่งกุญแจกันไปมา ถ้าถูกดักตีหัวขโมยกุญแจก็เสร็จ&lt;/p&gt;

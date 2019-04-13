@@ -225,8 +225,8 @@ $(document).ready(function() {
 <li><p><em>Linear Algebraic Groups</em>, Humphreys 1998 <!-- *Symmetry, Representations, and Invariants*, Goodman and Wallach 2009
 - *Homogeneous Spaces and Equivalent Embeddings*, Timashev 2011
 - [Computing multiplicities of Lie group representations](https://arxiv.org/abs/1204.4379), Christandl, Doran and Walter 2012--></p></li>
-<li><p>John Beaz on <a href="https://johncarlosbaez.wordpress.com/2018/12/01/geometric-quantization-part-1/">Geometric quantization</a> [<a href="http://nautil.us/issue/69/patterns/the-math-that-takes-newton-into-the-quantum-world">Nautilus</a> article on how algebraic geometry (“Hartshorne”), or rather, algebraic topology, finally clicked for him]</p>
-<p>According to some school of thought, quantization is a process of taking a symplectic manifold <span class="math">\(M\)</span> and turn it into a complex Hilbert space (and smooth functions–classical observables–to linear operators). But that is really just a “<a href="https://en.wikipedia.org/wiki/Geometric_quantization#Prequantization">prequantization</a>”. As Baez <a href="https://johncarlosbaez.wordpress.com/2018/12/26/geometric-quantization-part-2/">points out</a>, we need much more than that; we need a line bundle <span class="math">\(L\)</span> over <span class="math">\(M\)</span> and various structures (even if <span class="math">\(M\)</span> is already Kähler) that make <span class="math">\(L\)</span> compatible with the symplectic, complex, and Riemannian structure on <span class="math">\(M\)</span>. (<a href="https://johncarlosbaez.wordpress.com/2018/12/30/geometric-quantization-part-5/">This</a> shows you how it works for 2-spheres.) But the world is quantum so perhaps it makes little sense to expect that just the symplectic structure can take us all the way to the complex Hilbert space. Instead, Baez <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">proposing</a>, let us start with a complex projective variety <span class="math">\(\C P^n \subset \C^{n+1}\)</span>, then take a smallest subspace in <span class="math">\(V \subset \C^{n+1}\)</span> whose <a href="https://en.wikipedia.org/wiki/Projectivization">projectivized</a> space <span class="math">\(\mathbb{P}V\)</span> contains <span class="math">\(M\)</span> to be its quantization <span class="math">\(Q(M) = V\)</span>. Projectivization then gives back <span class="math">\(P(V) = M\)</span>. In this way, we have <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">poset</a> category <code>Class</code> of classical state spaces and <code>Quant</code> of quantum state spaces and a pair of adjoint functors between them. You can make them <a href="https://johncarlosbaez.wordpress.com/2018/12/28/geometric-quantization-part-4/">monoidal</a> (essentially having the tensor product structure—Segre embedding for varieties) and <a href="https://johncarlosbaez.wordpress.com/2019/01/08/geometric-quantization-part-7/">clone</a> the system with symmetrized product (Veronese embedding for varieties). The latter is actually how you take a classical limit of a generalized coherent state (scaling up the <a href="https://johncarlosbaez.wordpress.com/2019/01/21/geometric-quantization-part-8/">symplectic structure</a>).</p></li>
+<li><p>John Baez on <a href="https://johncarlosbaez.wordpress.com/2018/12/01/geometric-quantization-part-1/">Geometric quantization</a> [<a href="http://nautil.us/issue/69/patterns/the-math-that-takes-newton-into-the-quantum-world">Nautilus</a> article on how algebraic geometry (“Hartshorne”), or rather algebraic topology finally clicked for him]</p>
+<p>According to some school of thought, quantization is a process of taking a symplectic manifold <span class="math">\(M\)</span> and turn it into a complex Hilbert space (and smooth functions–classical observables–to linear operators). But that is really just a “<a href="https://en.wikipedia.org/wiki/Geometric_quantization#Prequantization">prequantization</a>”. Baez <a href="https://johncarlosbaez.wordpress.com/2018/12/26/geometric-quantization-part-2/">points out</a>. We need much more than that; we need a line bundle <span class="math">\(L\)</span> over <span class="math">\(M\)</span> and various structures (even if <span class="math">\(M\)</span> is already Kähler) that make <span class="math">\(L\)</span> compatible with the symplectic, complex, and Riemannian structure on <span class="math">\(M\)</span>. (<a href="https://johncarlosbaez.wordpress.com/2018/12/30/geometric-quantization-part-5/">This</a> shows you how it works for 2-spheres.) But the world is quantum so perhaps it makes little sense to expect that just the symplectic structure can take us all the way to the complex Hilbert space. Instead, Baez <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">proposing</a>, let us start with a complex projective variety <span class="math">\(\C P^n \subset \C^{n+1}\)</span>, then take a smallest subspace in <span class="math">\(V \subset \C^{n+1}\)</span> whose <a href="https://en.wikipedia.org/wiki/Projectivization">projectivized</a> space <span class="math">\(\mathbb{P}V\)</span> contains <span class="math">\(M\)</span> to be its quantization <span class="math">\(Q(M) = V\)</span>. Projectivization then gives back <span class="math">\(P(V) = M\)</span>. In this way, we have <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">poset</a> categories <code>Class</code> of classical state spaces and <code>Quant</code> of quantum state spaces and a pair of adjoint functors between them. You can make them <a href="https://johncarlosbaez.wordpress.com/2018/12/28/geometric-quantization-part-4/">monoidal</a> (essentially having the tensor product structure—Segre embedding for varieties) and <a href="https://johncarlosbaez.wordpress.com/2019/01/08/geometric-quantization-part-7/">clone</a> the system with symmetrized product (Veronese embedding for varieties). The latter is actually how you take a classical limit of a generalized coherent state (scaling up the <a href="https://johncarlosbaez.wordpress.com/2019/01/21/geometric-quantization-part-8/">symplectic structure</a>).</p></li>
 </ul>
 <h2 id="links">2. Links</h2>
 <ul>
@@ -255,15 +255,16 @@ $(document).ready(function() {
 </ul>
 <p><strong>Mathematics/computer science</strong></p>
 <ul>
-<li>The 1993 article, <a href="https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf">The Death of Proof</a> doesn’t age well, and the author knows it: <a href="https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/">The Horgan Surface and the Death of Proof</a>, <a href="https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/">Okay, Maybe Proofs Aren’t Dying After All</a></li>
-<li>Karen Uhlenback is <a href="https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/">the first woman to win the Abel Prize</a>. (Uhlenback of the <a href="https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process">Ornstein-Uhlenback process</a> is her father-in-law.)</li>
-<li><a href="https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html">Geoffrey Hinton, Yann LeCun and Yoshua Bengio</a> won the Turing Award.</li>
+<li><a href="https://physicstoday.scitation.org/doi/10.1063/PT.3.4164">Machine learning in many-body quantum physics and quantum ML algorithms</a>, recommended.</li>
+<li><a href="https://arxiv.org/abs/1903.10563">Machine learning and the physical sciences</a> 1903.10563 (review article)</li>
 <li><em>The Book of Why</em>, Pearl and Mackenzie 2018 [<a href="https://www.goodreads.com/review/show/2483026514?book_show_action=true&amp;from_review_page=1">critical review</a> on Goodreads]
 <ul>
 <li><a href="https://www.inference.vc/untitled/">ML beyond Curve Fitting: An Intro to Causal Inference and do-Calculus</a> <!--    - [Why am I only a half-Bayesian](http://ftp.cs.ucla.edu/pub/stat_ser/r284-reprint.pdf), Pearl 2001
     - [The Seven Tools of Causal Inference with Reflections on Machine Learning](http://ftp.cs.ucla.edu/pub/stat_ser/r481.pdf), Pearl 2018--></li>
 </ul></li>
-<li>Recommended: <a href="https://physicstoday.scitation.org/doi/10.1063/PT.3.4164">Machine learning in many-body quantum physics and quantum ML algorithms</a> in Physics Today</li>
+<li><a href="https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html">Geoffrey Hinton, Yann LeCun and Yoshua Bengio</a> won the Turing Award.</li>
+<li>Karen Uhlenback is <a href="https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/">the first woman to win the Abel Prize</a>. (Uhlenback of the <a href="https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process">Ornstein-Uhlenback process</a> is her father-in-law.)</li>
+<li>The 1993 article, <a href="https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf">The Death of Proof</a> doesn’t age well, and the author knows it: <a href="https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/">The Horgan Surface and the Death of Proof</a>, <a href="https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/">Okay, Maybe Proofs Aren’t Dying After All</a></li>
 </ul>
 <p><strong>Genetics/evolution</strong></p>
 <ul>
@@ -299,8 +300,9 @@ $(document).ready(function() {
 <p><strong>Anime</strong></p>
 <ul>
 <li><a href="https://myanimelist.net/anime/12189/Hyouka">Hyouka</a> (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012</li>
-<li><a href="https://myanimelist.net/anime/37510/Mob_Psycho_100_II">Mob Psycho 100 II</a> (13 Episodes), Bones {ONE} [Webmanga] 2019</li>
+<li><a href="https://myanimelist.net/anime/37510/Mob_Psycho_100_II">Mob Psycho 100 II</a> (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)</li>
 </ul>
+<p>Both are excellent coming-of-age stories.</p>
 
           </article>
 
@@ -318,7 +320,7 @@ $(document).ready(function() {
     property="dc:created">13 Apr 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-04-13 13:41:33 +0000"
+            datetime="2019-04-13 14:56:44 +0000"
             property="dc:modified">13 Apr 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -351,7 +353,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4f12e048fa9847606acfa980f74ec53d773da8fd/_posts/2019-03-09-mar-2019-log.md"> 4f12e04</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/0e048fd54228c5c7b999c335a135f21bfea5a78e/_posts/2019-03-09-mar-2019-log.md"> 0e048fd</a></tiny></p>
 </aside>
 
 <br /><br />

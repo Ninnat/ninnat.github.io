@@ -219,7 +219,7 @@ $(document).ready(function() {
 <li><a href="http://arxiv.org/abs/1902.11257">Efficient classical simulation of Clifford circuits with nonstabilizer input states</a>, Bu and Koh 1902.11257</li>
 </ul>
 <p>Let <span class="math">\(\mathcal{C}_3\)</span> be a circuit composed of gates from the third level of <a href="https://arxiv.org/abs/quant-ph/9908010">Clifford hierarchy</a>.</p>
-<p><strong>Theorem 1.</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)</span> and computational basis measurement can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]</span> <span class="math">\(\lambda\)</span> measures the mixedness of the most pure <span class="math">\(\rho_j\)</span>, namely the <span class="math">\(\lambda = \epsilon\)</span> for <span class="math">\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)</span>. The <span class="math">\(1-2/\alpha\)</span> comes from using the <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov inequality</a> on the average of the <span class="math">\(l_1\)</span> norm of the Fourier coefficients of the output probabilities (inspired by <a href="https://arxiv.org/abs/1810.03176">this paper</a> by Gao and Duan) over the uniform distribution of Cliffords (a <a href="https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs">unitary 2-design</a>).</p>
+<p><strong>Theorem 1.</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)</span> and computational basis measurement can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]</span> <span class="math">\(\lambda\)</span> measures the mixedness of the most pure <span class="math">\(\rho_j\)</span>, namely the <span class="math">\(\lambda = \epsilon\)</span> for every qubit state of the form <span class="math">\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)</span>. The <span class="math">\(1-2/\alpha\)</span> comes from using the <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov inequality</a> on the average of the <span class="math">\(l_1\)</span> norm of the Fourier coefficients of the output probabilities (inspired by <a href="https://arxiv.org/abs/1810.03176">this paper</a> by Gao and Duan) over the uniform distribution of Cliffords (a <a href="https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs">unitary 2-design</a>).</p>
 <p>When every input state is pure, the exponent blows up. For that, we have</p>
 <p><strong>Theorem 2</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ket{0}^{\otimes n} \otimes^m_{j=1} \ket{\psi_j}\)</span> and computational basis measurement on <span class="math">\(k\)</span> qubits, the number of of unmeasured qubits being greater than the log of the <em>Pauli rank</em> <span class="math">\[ n+m-k \ge \sum^m_{j=1} \log \left( \frac{\chi(\psi_j)}{2} \right), \]</span> can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[ (n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\mu \right]}, \]</span> where now <span class="math">\[ \mu(\psi) := 2(1-\max_{\phi \in \mathrm{stab}} |\av{\phi|\psi}|^2). \]</span> The fidelity to the closest stabilizer state is the <em>stabilizer rank</em>. Curiously, the more “stabilizer-ness” the <em>worse</em> the runtime!</p>
 <ul>
@@ -298,7 +298,7 @@ $(document).ready(function() {
 <p><strong>Musics/Gaming</strong></p>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLj3Mg9WXbXd9MeOuI15OCw4xMvK4BKlIS">Great covers of almost every Mega Man X5 and X6 theme</a> by Lenny Lederman</li>
-<li><a href="https://store.steampowered.com/app/851100/Touhou_Luna_Nights/">Touhou Luna Nights</a>, Team Ladybug (<em>Pros:</em> great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects. The water physics is especially cool. <em>Cons:</em> Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished <a href="https://store.steampowered.com/app/400910/RabiRibi/">Rabi-Ribi</a>; that one actually has a wondrous, sprawling map.)</li>
+<li><a href="https://store.steampowered.com/app/851100/Touhou_Luna_Nights/">Touhou Luna Nights</a>, Team Ladybug (<em>Pros:</em> great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects; the water physics is especially cool. <em>Cons:</em> Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished <a href="https://store.steampowered.com/app/400910/RabiRibi/">Rabi-Ribi</a>. That one, which is ironically an actual bullet hell, has a wondrous, sprawling map.)</li>
 </ul>
 <p><strong>Anime</strong></p>
 <ul>
@@ -323,8 +323,8 @@ $(document).ready(function() {
     property="dc:created">13 Apr 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-04-24 17:50:46 +0000"
-            property="dc:modified">24 Apr 2019</time></small></p>
+            datetime="2019-04-25 06:03:03 +0000"
+            property="dc:modified">25 Apr 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -356,7 +356,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/6fe99d402fb67bb74bb6bfcdd400f6a5423e91d1/_posts/2019-03-09-mar-2019-log.md"> 6fe99d4</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/7730006a9fa21491f77d4a57569a9e3c57c64b91/_posts/2019-03-09-mar-2019-log.md"> 7730006</a></tiny></p>
 </aside>
 
 <br /><br />

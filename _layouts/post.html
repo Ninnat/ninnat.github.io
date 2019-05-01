@@ -28,7 +28,7 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
-          <!-- </br> -->
+          {% include toc.html html=content %}
           {{ content }}
           </article>
         </div>

@@ -840,7 +840,7 @@ figcaption {
 }
 
 div#toc {
-  padding: 10px;
   border: 1px solid #aaa;
+  background: #fafafa;
   display: inline-block !important;
 }

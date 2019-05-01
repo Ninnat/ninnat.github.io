@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-05-01T16:01:22+00:00</updated>
+ <updated>2019-05-01T16:15:20+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -121,6 +121,9 @@
    <updated>2019-03-07T00:00:00+00:00</updated>
    <id>h/feb-2019-log</id>
    <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from February 2019.&lt;/p&gt;
+&lt;div id=&quot;toc&quot;&gt;
+
+&lt;/div&gt;
 &lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
 &lt;h2 id=&quot;quantum-state-verification&quot;&gt;Quantum state verification&lt;/h2&gt;
 &lt;ul&gt;
@@ -202,16 +205,16 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;You should read 10 most important papers of a field to pick up open problems, questions that you’d personally like answered, tricks, curious observations that seem important, and sometimes even field-wide blind spots.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/gifs/comments/arhwhf/pen_ink_on_a_leaf_zooming_through_a_puddle/&quot;&gt;Ink propulsion engine&lt;/a&gt;&lt;/p&gt;
 &lt;center&gt;
 &lt;iframe src=&#39;https://gfycat.com/ifr/FoolhardySoupyKoi&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; allowfullscreen width=&#39;309&#39; height=&#39;500&#39;&gt;&lt;/iframe&gt;&lt;p&gt;
 &lt;/center&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.pnas.org/content/early/2019/02/13/1818350116&quot;&gt;Linking plasma formation in grapes to microwave resonances of aqueous dimers&lt;/a&gt;, Khattak, Bianucci and Slepkov 2019 (Two grapes touching at a point &lt;a href=&quot;https://www.wired.com/story/why-a-grape-turns-into-a-fireball-in-a-microwave/&quot;&gt;create a plasma ball&lt;/a&gt; inside a microwave because wet, grape-sized objects sustains and amplifies standing microwaves, focusing the energy into a single point.) &lt;!-- - [inordinatum](https://inordinatum.wordpress.com), a blog on physics and maths of stochastic processes
-    - [Stochastic processes II](http://galton.uchicago.edu/~lalley/Courses/313/), University of Chicago, Steven Lalley --&gt;&lt;/li&gt;
+        - [Stochastic processes II](http://galton.uchicago.edu/~lalley/Courses/313/), University of Chicago, Steven Lalley --&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Daniel Harlow’s &lt;a href=&quot;https://www.facebook.com/daniel.harlow.31/posts/10104284984149212&quot;&gt;Facebook discussion&lt;/a&gt; on the &lt;a href=&quot;https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm&quot;&gt;NY Times piece&lt;/a&gt; by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;quantum&quot;&gt;Quantum&lt;/h2&gt;
 &lt;ul&gt;

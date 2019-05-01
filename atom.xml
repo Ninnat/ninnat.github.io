@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-05-01T15:03:11+00:00</updated>
+ <updated>2019-05-01T15:15:37+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -121,15 +121,6 @@
    <updated>2019-03-07T00:00:00+00:00</updated>
    <id>h/feb-2019-log</id>
    <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from February 2019.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;#research&quot;&gt;1. Research&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#links&quot;&gt;2. Links&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
 &lt;h2 id=&quot;quantum-state-verification&quot;&gt;Quantum state verification&lt;/h2&gt;
 &lt;ul&gt;

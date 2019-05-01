@@ -212,11 +212,12 @@ $(document).ready(function() {
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
           </br>
-          <font size="+1"><b> Contents </b></font>
+<!--          <font size="+1"><b> Contents </b></font>
           <ul>
 <li><a href="#research">1. Research</a></li>
 <li><a href="#links">2. Links</a></li>
-</ul>
+</ul> -->
+          <div id="toc"></div>
           <p>This is an archive of what I found useful, interesting, or simply enjoyable from January 2019 (and a bit from December 2018).</p>
 <h2 id="research">1. Research</h2>
 <p><strong>Generalized coherent states</strong></p>
@@ -604,6 +605,13 @@ $(document).ready(function() {
     }
   });
 	</script>
+
+<script src="assets/js/toc.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('#toc').toc({listType: 'ul',minimalHeaders:2});
+    });
+</script>
 
   </body>
 </html>

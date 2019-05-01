@@ -212,13 +212,18 @@ $(document).ready(function() {
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
           <!-- </br> -->
-          <ul>
-<li><a href="#research">1. Research</a></li>
-<li><a href="#links">2. Links</a></li>
-</ul>
           <p>This is an archive of what I found useful, interesting, or simply enjoyable from February 2019.</p>
-<h2 id="research">1. Research</h2>
-<p><strong>Quantum state verification</strong></p>
+<ul>
+<li>
+<a href="#research">1. Research</a>
+</li>
+<li>
+<a href="#links">2. Links</a>
+</li>
+</ul>
+
+<h1 id="research">Research</h1>
+<h2 id="quantum-state-verification">Quantum state verification</h2>
 <ul>
 <li><p><a href="https://www.scottaaronson.com/blog/?p=4021">Why are amplitudes complex?</a>, Shtetl-Optimized (An update on Scott’s personal conundrum)</p>
 <p>In the quantum foundations community, it is popular to derive the complex amplitudes (as opposed to real or quaternionic) from the “local tomography” principle <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> which Scott has never found intuitive. Now he stumbles upon the following question:</p>
@@ -241,7 +246,7 @@ $(document).ready(function() {
 <p><a href="https://arxiv.org/abs/1104.4695">Direct fidelity estimation</a> is great because it doesn’t matter how many qubits you want to verify, the number of samples stay the same. However, it is also not great <em>by the same reason</em>; even though all we have now are on the order of 10-100 qubits, you still need the same number of samples as if you have a thousand of qubits.</p>
 <p>The problem considered by the current paper is in a sense opposite to that in the Pallister paper. in the Pallister paper, we are given the worst case fidelity <span class="math">\(\epsilon\)</span> and are asked to find an optimal measurement, whereas in this paper we are given a (stabilizer) measurement and are asked for the worst case fidelity <span class="math">\(1-\epsilon\)</span> to a desired stabilizer state. The latter can be done with <span class="math">\(n^3\ln(2\delta^{-1})/2r^2\)</span> samples, where <span class="math">\(r\)</span> is the radius away from <span class="math">\(1-\epsilon\)</span>.</p></li>
 </ul>
-<p><strong>Representation theory</strong></p>
+<h2 id="representation-theory">Representation theory</h2>
 <ul>
 <li><p><a href="http://qinf.fisica.unimi.it/~paris/PDF/displa.pdf">Displacement operator by beam splitter</a>, Paris 1996</p>
 <p>How to implement a displacement operator (a Heisenberg group element) <span class="math">\[ D(\alpha) = \exp(\alpha b\dgg - \alpha^* b) \]</span> on an arbitrary quantum state using an auxillary laser mode and a beam splitter (a symplectic group element)? The beam splitter unitary <span class="math">\[ \mathrm{BS} = \exp \left[ i \tan^{-1} \sqrt{\frac{1-\tau}{\tau}} (ab\dgg + a\dgg b) \right] \]</span> looks almost like a displacement operator, if only we could replace <span class="math">\(a\)</span> by <span class="math">\(\alpha\)</span> and flip the sign. Here comes a cool trick: notice that <span class="math">\(ab\dgg\)</span> and <span class="math">\(a\dgg b\)</span> are respectively the raising and lowering operator in <span class="math">\(\sl(2)\)</span> made out of Schwinger’s bosons. (<span class="math">\(a\dgg a - b\dgg b\)</span> is <span class="math">\(Z\)</span>.) So I can do the <a href="https://www.encyclopediaofmath.org/index.php/Gauss_decomposition">Gauss decomposition</a> to move the exponentials of <span class="math">\(ab\dgg\)</span> and <span class="math">\(a\dgg b\)</span> to the left and the right, where <span class="math">\(\bra{z}\)</span> and <span class="math">\(\ket{z}\)</span> are waiting to turn <span class="math">\(b\)</span> into <span class="math">\(z\)</span>. This gives (barred some mistake) <span class="math">\[ \av{z|\mathrm{BS}|z} = \exp (\beta a\dgg a/2) \otimes \exp (\xi z^* b) \exp(-\beta b\dgg b/2) \exp (-\xi^* zb\dgg) \]</span> Then rotate the linear term by the quadratic Hamiltonian <span class="math">\(\beta b\dgg b/4\)</span> before taking the appropriate limits to obtain the result.</p></li>
@@ -263,7 +268,7 @@ $(document).ready(function() {
 <li><em>Lie Groups</em>, Duistermaat and Kolk 2000</li>
 </ul></li>
 </ul>
-<h2 id="links">2. Links</h2>
+<h1 id="links">Links</h1>
 <ul>
 <li>A <a href="http://www.decisionproblem.com/paperclips">game</a> you play as a <a href="https://wiki.lesswrong.com/wiki/Paperclip_maximizer">paperclip maximizer</a></li>
 <li><a href="http://www.bbc.com/future/story/20190218-are-we-on-the-road-to-civilisation-collapse">Are we on the road to civilization collapse?</a>, BBC
@@ -298,11 +303,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 </blockquote>
 <ul>
 <li>You should read 10 most important papers of a field to pick up open problems, questions that you’d personally like answered, tricks, curious observations that seem important, and sometimes even field-wide blind spots.</li>
-<li>Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.</li>
-</ul></li>
-</ul>
-<p><strong>Physics/quantum</strong></p>
-<ul>
+<li><p>Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.</p></li>
 <li><p><a href="https://www.reddit.com/r/gifs/comments/arhwhf/pen_ink_on_a_leaf_zooming_through_a_puddle/">Ink propulsion engine</a></p>
 <center>
 <iframe src='https://gfycat.com/ifr/FoolhardySoupyKoi' frameborder='0' scrolling='no' allowfullscreen width='309' height='500'></iframe><p>
@@ -310,7 +311,11 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 </li>
 <li><a href="https://www.pnas.org/content/early/2019/02/13/1818350116">Linking plasma formation in grapes to microwave resonances of aqueous dimers</a>, Khattak, Bianucci and Slepkov 2019 (Two grapes touching at a point <a href="https://www.wired.com/story/why-a-grape-turns-into-a-fireball-in-a-microwave/">create a plasma ball</a> inside a microwave because wet, grape-sized objects sustains and amplifies standing microwaves, focusing the energy into a single point.) <!-- - [inordinatum](https://inordinatum.wordpress.com), a blog on physics and maths of stochastic processes
     - [Stochastic processes II](http://galton.uchicago.edu/~lalley/Courses/313/), University of Chicago, Steven Lalley --></li>
-<li>Daniel Harlow’s <a href="https://www.facebook.com/daniel.harlow.31/posts/10104284984149212">Facebook discussion</a> on the <a href="https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm">NY Times piece</a> by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).</li>
+<li><p>Daniel Harlow’s <a href="https://www.facebook.com/daniel.harlow.31/posts/10104284984149212">Facebook discussion</a> on the <a href="https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm">NY Times piece</a> by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).</p></li>
+</ul></li>
+</ul>
+<h2 id="quantum">Quantum</h2>
+<ul>
 <li>Someone wrote a <a href="http://www.mustythoughts.com/jekyll/update/2019/01/12/how-I-got-a-job-in-QC.html">blog post</a> on what he did to get a job in quantum computing.</li>
 <li>Andy Matuschak and Michael Nielsen <a href="https://www.reddit.com/r/QuantumComputing/comments/anawy4/alpha_testers_needed_for_quantum_computing_for/">recruit alpha testers</a> for spaced-repetition-based “Quantum Computing for the Very Curious”</li>
 <li><a href="https://www.physicsforums.com/threads/find-your-ideal-quantum-interpretation.966905/">Find your ideal quantum interpretation.</a></li>
@@ -321,16 +326,16 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 <p>Roughly speaking, the <em>physical footprint</em> <span class="math">\(nq\)</span> is a space resource and the <em>quantum security parameter</em> <span class="math">\(qs\)</span> is a time resource. <span class="math">\(nq\)</span> is the number of qubits per CPU parallelizing Grover’s search, the best known quantum attack against symmetric cryptographic protocols and hash functions. <span class="math">\(qs\)</span> in this case is the number of surface code cycles, assuming that fault tolerence is achieved via the surface code.</p>
 <p>Breaking RSA and ECC schemes in 24 hours may require at least ten million qubits, <span class="math">\(10^{11}\)</span> <span class="math">\(T\)</span> gates, and <span class="math">\(10^{13}\)</span> cycles. Symmetric schemes may require <span class="math">\(&gt;2^{100}\)</span> cycles to break.</p></li>
 </ul>
-<p><strong>Meditation</strong></p>
+<h2 id="meditation">Meditation</h2>
 <ul>
 <li><a href="https://www.sciencedirect.com/science/article/pii/S0079612318301596?via%3Dihub">The neuroscience of meditation: classification, phenomenology, correlates, and mechanisms</a>, Brandmeyer, Delorme and Wahbehdf 2019</li>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3146707/">On the Relationship Between the Practice of Mindfulness Meditation and Personality—an Exploratory Analysis of the Mediating Role of Mindfulness Skills</a>, van den Hurk et al. 2011</li>
 </ul>
-<p><strong>Anime</strong></p>
+<h2 id="anime">Anime</h2>
 <ul>
 <li>A Carnival Phantasm <a href="https://www.nicovideo.jp/watch/sm34624137">Touhou parody</a></li>
 </ul>
-<p><strong>Musics</strong></p>
+<h2 id="musics">Musics</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=FB42AqX2wlM">March of the Spirits</a>, Imaginary Force, Bob Katsionis</li>
 <li>Marble Machine, Wintergatan</li>
@@ -387,8 +392,8 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
     property="dc:created">07 Mar 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-04-13 13:41:33 +0000"
-            property="dc:modified">13 Apr 2019</time></small></p>
+            datetime="2019-05-01 14:57:37 +0000"
+            property="dc:modified">01 May 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -420,7 +425,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/4f12e048fa9847606acfa980f74ec53d773da8fd/_posts/2019-02-20-feb-2019-log.md"> 4f12e04</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/567d945df277c12976e8c8dbf8db7035589d50b2/_posts/2019-02-20-feb-2019-log.md"> 567d945</a></tiny></p>
 </aside>
 
 <br /><br />

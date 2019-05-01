@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-05-01T14:50:17+00:00</updated>
+ <updated>2019-05-01T15:03:11+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -121,8 +121,17 @@
    <updated>2019-03-07T00:00:00+00:00</updated>
    <id>h/feb-2019-log</id>
    <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from February 2019.&lt;/p&gt;
-&lt;h2 id=&quot;research&quot;&gt;1. Research&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Quantum state verification&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&quot;#research&quot;&gt;1. Research&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;#links&quot;&gt;2. Links&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
+&lt;h2 id=&quot;quantum-state-verification&quot;&gt;Quantum state verification&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4021&quot;&gt;Why are amplitudes complex?&lt;/a&gt;, Shtetl-Optimized (An update on Scott’s personal conundrum)&lt;/p&gt;
 &lt;p&gt;In the quantum foundations community, it is popular to derive the complex amplitudes (as opposed to real or quaternionic) from the “local tomography” principle &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; which Scott has never found intuitive. Now he stumbles upon the following question:&lt;/p&gt;
@@ -145,7 +154,7 @@
 &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1104.4695&quot;&gt;Direct fidelity estimation&lt;/a&gt; is great because it doesn’t matter how many qubits you want to verify, the number of samples stay the same. However, it is also not great &lt;em&gt;by the same reason&lt;/em&gt;; even though all we have now are on the order of 10-100 qubits, you still need the same number of samples as if you have a thousand of qubits.&lt;/p&gt;
 &lt;p&gt;The problem considered by the current paper is in a sense opposite to that in the Pallister paper. in the Pallister paper, we are given the worst case fidelity &lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt; and are asked to find an optimal measurement, whereas in this paper we are given a (stabilizer) measurement and are asked for the worst case fidelity &lt;span class=&quot;math&quot;&gt;\(1-\epsilon\)&lt;/span&gt; to a desired stabilizer state. The latter can be done with &lt;span class=&quot;math&quot;&gt;\(n^3\ln(2\delta^{-1})/2r^2\)&lt;/span&gt; samples, where &lt;span class=&quot;math&quot;&gt;\(r\)&lt;/span&gt; is the radius away from &lt;span class=&quot;math&quot;&gt;\(1-\epsilon\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Representation theory&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;representation-theory&quot;&gt;Representation theory&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://qinf.fisica.unimi.it/~paris/PDF/displa.pdf&quot;&gt;Displacement operator by beam splitter&lt;/a&gt;, Paris 1996&lt;/p&gt;
 &lt;p&gt;How to implement a displacement operator (a Heisenberg group element) &lt;span class=&quot;math&quot;&gt;\[ D(\alpha) = \exp(\alpha b\dgg - \alpha^* b) \]&lt;/span&gt; on an arbitrary quantum state using an auxillary laser mode and a beam splitter (a symplectic group element)? The beam splitter unitary &lt;span class=&quot;math&quot;&gt;\[ \mathrm{BS} = \exp \left[ i \tan^{-1} \sqrt{\frac{1-\tau}{\tau}} (ab\dgg + a\dgg b) \right] \]&lt;/span&gt; looks almost like a displacement operator, if only we could replace &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(\alpha\)&lt;/span&gt; and flip the sign. Here comes a cool trick: notice that &lt;span class=&quot;math&quot;&gt;\(ab\dgg\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(a\dgg b\)&lt;/span&gt; are respectively the raising and lowering operator in &lt;span class=&quot;math&quot;&gt;\(\sl(2)\)&lt;/span&gt; made out of Schwinger’s bosons. (&lt;span class=&quot;math&quot;&gt;\(a\dgg a - b\dgg b\)&lt;/span&gt; is &lt;span class=&quot;math&quot;&gt;\(Z\)&lt;/span&gt;.) So I can do the &lt;a href=&quot;https://www.encyclopediaofmath.org/index.php/Gauss_decomposition&quot;&gt;Gauss decomposition&lt;/a&gt; to move the exponentials of &lt;span class=&quot;math&quot;&gt;\(ab\dgg\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(a\dgg b\)&lt;/span&gt; to the left and the right, where &lt;span class=&quot;math&quot;&gt;\(\bra{z}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\ket{z}\)&lt;/span&gt; are waiting to turn &lt;span class=&quot;math&quot;&gt;\(b\)&lt;/span&gt; into &lt;span class=&quot;math&quot;&gt;\(z\)&lt;/span&gt;. This gives (barred some mistake) &lt;span class=&quot;math&quot;&gt;\[ \av{z|\mathrm{BS}|z} = \exp (\beta a\dgg a/2) \otimes \exp (\xi z^* b) \exp(-\beta b\dgg b/2) \exp (-\xi^* zb\dgg) \]&lt;/span&gt; Then rotate the linear term by the quadratic Hamiltonian &lt;span class=&quot;math&quot;&gt;\(\beta b\dgg b/4\)&lt;/span&gt; before taking the appropriate limits to obtain the result.&lt;/p&gt;&lt;/li&gt;
@@ -167,7 +176,7 @@
 &lt;li&gt;&lt;em&gt;Lie Groups&lt;/em&gt;, Duistermaat and Kolk 2000&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;links&quot;&gt;2. Links&lt;/h2&gt;
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;A &lt;a href=&quot;http://www.decisionproblem.com/paperclips&quot;&gt;game&lt;/a&gt; you play as a &lt;a href=&quot;https://wiki.lesswrong.com/wiki/Paperclip_maximizer&quot;&gt;paperclip maximizer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.bbc.com/future/story/20190218-are-we-on-the-road-to-civilisation-collapse&quot;&gt;Are we on the road to civilization collapse?&lt;/a&gt;, BBC
@@ -202,11 +211,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;You should read 10 most important papers of a field to pick up open problems, questions that you’d personally like answered, tricks, curious observations that seem important, and sometimes even field-wide blind spots.&lt;/li&gt;
-&lt;li&gt;Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Physics/quantum&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/gifs/comments/arhwhf/pen_ink_on_a_leaf_zooming_through_a_puddle/&quot;&gt;Ink propulsion engine&lt;/a&gt;&lt;/p&gt;
 &lt;center&gt;
 &lt;iframe src=&#39;https://gfycat.com/ifr/FoolhardySoupyKoi&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; allowfullscreen width=&#39;309&#39; height=&#39;500&#39;&gt;&lt;/iframe&gt;&lt;p&gt;
@@ -214,7 +219,11 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.pnas.org/content/early/2019/02/13/1818350116&quot;&gt;Linking plasma formation in grapes to microwave resonances of aqueous dimers&lt;/a&gt;, Khattak, Bianucci and Slepkov 2019 (Two grapes touching at a point &lt;a href=&quot;https://www.wired.com/story/why-a-grape-turns-into-a-fireball-in-a-microwave/&quot;&gt;create a plasma ball&lt;/a&gt; inside a microwave because wet, grape-sized objects sustains and amplifies standing microwaves, focusing the energy into a single point.) &lt;!-- - [inordinatum](https://inordinatum.wordpress.com), a blog on physics and maths of stochastic processes
     - [Stochastic processes II](http://galton.uchicago.edu/~lalley/Courses/313/), University of Chicago, Steven Lalley --&gt;&lt;/li&gt;
-&lt;li&gt;Daniel Harlow’s &lt;a href=&quot;https://www.facebook.com/daniel.harlow.31/posts/10104284984149212&quot;&gt;Facebook discussion&lt;/a&gt; on the &lt;a href=&quot;https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm&quot;&gt;NY Times piece&lt;/a&gt; by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Daniel Harlow’s &lt;a href=&quot;https://www.facebook.com/daniel.harlow.31/posts/10104284984149212&quot;&gt;Facebook discussion&lt;/a&gt; on the &lt;a href=&quot;https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm&quot;&gt;NY Times piece&lt;/a&gt; by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;quantum&quot;&gt;Quantum&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;Someone wrote a &lt;a href=&quot;http://www.mustythoughts.com/jekyll/update/2019/01/12/how-I-got-a-job-in-QC.html&quot;&gt;blog post&lt;/a&gt; on what he did to get a job in quantum computing.&lt;/li&gt;
 &lt;li&gt;Andy Matuschak and Michael Nielsen &lt;a href=&quot;https://www.reddit.com/r/QuantumComputing/comments/anawy4/alpha_testers_needed_for_quantum_computing_for/&quot;&gt;recruit alpha testers&lt;/a&gt; for spaced-repetition-based “Quantum Computing for the Very Curious”&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.physicsforums.com/threads/find-your-ideal-quantum-interpretation.966905/&quot;&gt;Find your ideal quantum interpretation.&lt;/a&gt;&lt;/li&gt;
@@ -225,16 +234,16 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;p&gt;Roughly speaking, the &lt;em&gt;physical footprint&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(nq\)&lt;/span&gt; is a space resource and the &lt;em&gt;quantum security parameter&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(qs\)&lt;/span&gt; is a time resource. &lt;span class=&quot;math&quot;&gt;\(nq\)&lt;/span&gt; is the number of qubits per CPU parallelizing Grover’s search, the best known quantum attack against symmetric cryptographic protocols and hash functions. &lt;span class=&quot;math&quot;&gt;\(qs\)&lt;/span&gt; in this case is the number of surface code cycles, assuming that fault tolerence is achieved via the surface code.&lt;/p&gt;
 &lt;p&gt;Breaking RSA and ECC schemes in 24 hours may require at least ten million qubits, &lt;span class=&quot;math&quot;&gt;\(10^{11}\)&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; gates, and &lt;span class=&quot;math&quot;&gt;\(10^{13}\)&lt;/span&gt; cycles. Symmetric schemes may require &lt;span class=&quot;math&quot;&gt;\(&amp;gt;2^{100}\)&lt;/span&gt; cycles to break.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Meditation&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0079612318301596?via%3Dihub&quot;&gt;The neuroscience of meditation: classification, phenomenology, correlates, and mechanisms&lt;/a&gt;, Brandmeyer, Delorme and Wahbehdf 2019&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3146707/&quot;&gt;On the Relationship Between the Practice of Mindfulness Meditation and Personality—an Exploratory Analysis of the Mediating Role of Mindfulness Skills&lt;/a&gt;, van den Hurk et al. 2011&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Anime&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A Carnival Phantasm &lt;a href=&quot;https://www.nicovideo.jp/watch/sm34624137&quot;&gt;Touhou parody&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Musics&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=FB42AqX2wlM&quot;&gt;March of the Spirits&lt;/a&gt;, Imaginary Force, Bob Katsionis&lt;/li&gt;
 &lt;li&gt;Marble Machine, Wintergatan&lt;/li&gt;

@@ -211,7 +211,7 @@ $(document).ready(function() {
       <div class="row">
         <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
           <article>
-          </br>
+          <!-- </br> -->
           <div id="toc"></div>
           <h2 id="research">1. Research</h2>
 <ul>
@@ -310,6 +310,15 @@ $(document).ready(function() {
 
           </article>
 
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+          <sript src="/assets/js/toc.js"></sript>
+
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $('#toc').toc({listType:'ul', minimumHeaders:2});
+            });
+          </script>
         </div>
 
 

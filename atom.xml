@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-05-01T16:15:20+00:00</updated>
+ <updated>2019-05-01T16:37:59+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -18,7 +18,10 @@
    <updated>2019-04-13T00:00:00+00:00</updated>
    <id>h/mar-2019-log</id>
    <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from March 2019.&lt;/p&gt;
-&lt;h2 id=&quot;research&quot;&gt;1. Research&lt;/h2&gt;
+&lt;div id=&quot;toc&quot;&gt;
+
+&lt;/div&gt;
+&lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.00111&quot;&gt;Unbiased Simulation of Near-Clifford Quantum Circuits&lt;/a&gt;, Bennink et al. 2017&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.09070&quot;&gt;Simulation of Qubit Quantum Circuits via Pauli Propagation&lt;/a&gt;, Rall, Liang, Cook and Kretschmer 1901.09070&lt;/li&gt;
@@ -36,7 +39,7 @@
 &lt;p&gt;According to some school of thought, quantization is a process of taking a symplectic manifold &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; and turn it into a complex Hilbert space (and smooth functions–classical observables–to linear operators). But that is really just a “&lt;a href=&quot;https://en.wikipedia.org/wiki/Geometric_quantization#Prequantization&quot;&gt;prequantization&lt;/a&gt;”. Baez &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/26/geometric-quantization-part-2/&quot;&gt;points out&lt;/a&gt;. We need much more than that; we need a line bundle &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; over &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; and various structures (even if &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is already Kähler) that make &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; compatible with the symplectic, complex, and Riemannian structure on &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt;. (&lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/30/geometric-quantization-part-5/&quot;&gt;This&lt;/a&gt; shows you how it works for 2-spheres.)&lt;/p&gt;
 &lt;p&gt;The world is quantum so perhaps it makes little sense to expect that just the symplectic structure can take us all the way to the complex Hilbert space. Instead, Baez &lt;a href=&quot;https://en.wikipedia.org/wiki/Partially_ordered_set&quot;&gt;proposing&lt;/a&gt;, let us start with a complex projective variety &lt;span class=&quot;math&quot;&gt;\(\C P^n \subset \C^{n+1}\)&lt;/span&gt;, then take the smallest subspace in &lt;span class=&quot;math&quot;&gt;\(V \subset \C^{n+1}\)&lt;/span&gt; whose &lt;a href=&quot;https://en.wikipedia.org/wiki/Projectivization&quot;&gt;projectivized&lt;/a&gt; space &lt;span class=&quot;math&quot;&gt;\(\mathbb{P}V\)&lt;/span&gt; contains &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; to be its quantization &lt;span class=&quot;math&quot;&gt;\(Q(M) = V\)&lt;/span&gt;. Projectivization then gives back &lt;span class=&quot;math&quot;&gt;\(P(V) = M\)&lt;/span&gt;. In this way, we have &lt;a href=&quot;https://en.wikipedia.org/wiki/Partially_ordered_set&quot;&gt;poset&lt;/a&gt; categories &lt;code&gt;Class&lt;/code&gt; of classical state spaces and &lt;code&gt;Quant&lt;/code&gt; of quantum state spaces and a pair of adjoint functors between them. You can make them &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/28/geometric-quantization-part-4/&quot;&gt;monoidal&lt;/a&gt; (essentially having the tensor product structure—Segre embedding for varieties) and &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2019/01/08/geometric-quantization-part-7/&quot;&gt;clone&lt;/a&gt; the system with symmetrized product (Veronese embedding for varieties). The latter is actually how you take a classical limit of generalized coherent states (equivalently, &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2019/01/21/geometric-quantization-part-8/&quot;&gt;scaling up the symplectic structure&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;links&quot;&gt;2. Links&lt;/h2&gt;
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gravity_Research_Foundation&quot;&gt;Gravity Research Foundation&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -54,14 +57,24 @@
 &lt;p&gt;After working for Google for a year or so, Harris resigned […] Before leaving, he gave a farewell presentation to Google’s staff in which he argued that they needed to see themselves as moral stewards of the attention of billions of people. Unexpectedly, the slides from his talk became a viral hit inside the company, travelling all the way to the boardroom. Harris was persuaded to stay on and pursue his research at Goo­gle, which created a new job title for him: design ethicist and product philosopher. After a while, Harris realised that although his colleagues were listening politely, they would never take his message seriously without pressure from the outside. He left Google for good earlier this year […]&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;li&gt;If you think you’re in a bad place, your life could be worse if you are &lt;a href=&quot;https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona&quot;&gt;Facebook moderators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2019/01/01/what-happened-to-90s-environmentalism/&quot;&gt;What happened to 90s environmentalism?&lt;/a&gt;, SSC (Do environmental problems fall out of public consciousness because they have been solved successfully or because they were just a fad all along?)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Insect biomass declines by 75% [&lt;a href=&quot;https://www.scientificamerican.com/article/insect-ldquo-armageddon-rdquo-5-crucial-questions-answered/&quot;&gt;SA&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html&quot;&gt;NYT&lt;/a&gt;] [&lt;a href=&quot;https://www.huffpost.com/entry/nature-destruction-climate-change-world-biodiversity_n_5c49e78ce4b06ba6d3bb2d44?utm_source=politics_fb&amp;amp;utm_campaign=hp_fb_pages&amp;amp;utm_medium=facebook&amp;amp;section=politics&amp;amp;ncid=fcbklnkushpmg00000013&quot;&gt;HuffPost&lt;/a&gt;] [&lt;a href=&quot;https://www.theguardian.com/environment/2019/jan/15/insect-collapse-we-are-destroying-our-life-support-systems&quot;&gt;Guardian&lt;/a&gt;] &lt;!--    - [Global insect declines: Why aren&#39;t we all dead yet?](https://www.lesswrong.com/posts/KwB9jA9FrsNczWr5F/global-insect-declines-why-aren-t-we-all-dead-yet) --&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://genestogenomes.org/kimura-crow-infinite-alleles/&quot;&gt;Kimura &amp;amp; Crow: Infinite Alleles&lt;/a&gt; (Wanting to “do something in genetics like what the theoretical physicists were doing in physics,” Kimura ended up writing a heat equation obeyed by neutrally-evolved genes.)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nature.com/scitable/topicpage/neutral-theory-the-null-hypothesis-of-molecular-839&quot;&gt;Why should we care about neutral evolution?&lt;/a&gt; (Neutral evolution provides a “null hypothesis”, the background noise to be compared and subtracted to get the signal.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/neutral-theory-of-evolution-challenged-by-evidence-for-dna-selection-20181108/&quot;&gt;An estimate of how much of the human genome undergoes neutral selection&lt;/a&gt;, Quanta (&amp;lt;5% and not all neutral alleles evolve follow Kimura’s theory, for example, those that are transmitted through a physical mechanism such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Genetic_linkage&quot;&gt;linkage&lt;/a&gt;.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/mathematics-shows-how-to-ensure-evolution-20180626/&quot;&gt;Natural selection on weighted graphs&lt;/a&gt;, Quanta&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/the-evolutionary-math-puzzle-20180815/&quot;&gt;The grandmother hypothesis&lt;/a&gt;, Quanta&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2019/mar/28/scientists-find-genetic-mutation-that-makes-woman-feel-no-pain&quot;&gt;Mutations render a woman unable to feel pain or anxiety&lt;/a&gt;. The mutations shut down the gene controlling &lt;a href=&quot;https://en.wikipedia.org/wiki/Fatty_acid_amide_hydrolase&quot;&gt;FAAH&lt;/a&gt; which breaks down &lt;a href=&quot;https://en.wikipedia.org/wiki/Anandamide&quot;&gt;anandamide&lt;/a&gt;, a natural cannabis-like substance.&lt;/li&gt;
+&lt;li&gt;Karen Uhlenback is &lt;a href=&quot;https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/&quot;&gt;the first woman to win the Abel Prize&lt;/a&gt;. (Uhlenback of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process&quot;&gt;Ornstein-Uhlenback process&lt;/a&gt; is her father-in-law.)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The 1993 article, &lt;a href=&quot;https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf&quot;&gt;The Death of Proof&lt;/a&gt; doesn’t age well, and the author knows it: [&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/&quot;&gt;The Horgan Surface and the Death of Proof&lt;/a&gt;] [&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/&quot;&gt;Okay, Maybe Proofs Aren’t Dying After All&lt;/a&gt;]&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;physicsquantummachine-learning&quot;&gt;Physics/quantum/machine learning&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;Das Sarma on &lt;a href=&quot;https://physicstoday.scitation.org/doi/10.1063/PT.3.4153&quot;&gt;how the scale of unifications in the present day physics is not so grand anymore&lt;/a&gt;, Physics Today&lt;/li&gt;
 &lt;li&gt;Chameleons change their colors by adjusting the osmotic pressure to &lt;a href=&quot;https://www.nature.com/articles/ncomms7368&quot;&gt;change the spacing of Guanine crystals in a lattice&lt;/a&gt;. See also &lt;a href=&quot;https://en.wikipedia.org/wiki/Animal_reflectors&quot;&gt;animal reflectors&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/d41586-019-00573-4&quot;&gt;Advanced LIGO+ will have frequency-dependent squeezing&lt;/a&gt;. (“LIGO is already able to spot black holes billions of parsecs away. By 2022, it should detect about one such event per day, and the subsequent ALIGO+ upgrade should push that to one event every few hours.”)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2019/01/01/what-happened-to-90s-environmentalism/&quot;&gt;What happened to 90s environmentalism?&lt;/a&gt;, SSC (Do environmental problems fall out of public consciousness because they have been solved successfully or because they were just a fad all along?)&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Insect biomass declines by 75% [&lt;a href=&quot;https://www.scientificamerican.com/article/insect-ldquo-armageddon-rdquo-5-crucial-questions-answered/&quot;&gt;SA&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html&quot;&gt;NYT&lt;/a&gt;] [&lt;a href=&quot;https://www.huffpost.com/entry/nature-destruction-climate-change-world-biodiversity_n_5c49e78ce4b06ba6d3bb2d44?utm_source=politics_fb&amp;amp;utm_campaign=hp_fb_pages&amp;amp;utm_medium=facebook&amp;amp;section=politics&amp;amp;ncid=fcbklnkushpmg00000013&quot;&gt;HuffPost&lt;/a&gt;] [&lt;a href=&quot;https://www.theguardian.com/environment/2019/jan/15/insect-collapse-we-are-destroying-our-life-support-systems&quot;&gt;Guardian&lt;/a&gt;] &lt;!--    - [Global insect declines: Why aren&#39;t we all dead yet?](https://www.lesswrong.com/posts/KwB9jA9FrsNczWr5F/global-insect-declines-why-aren-t-we-all-dead-yet) --&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Machine learning/mathematics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;The 2019 Winter smog in Thailand &lt;a href=&quot;https://towardsdatascience.com/identifying-the-sources-of-winter-air-pollution-in-bangkok-part-ii-72539f9b767a&quot;&gt;seems to correlate most with fire&lt;/a&gt; from as far as 720 km away (Myanmar, Laos and Cambodia)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://physicstoday.scitation.org/doi/10.1063/PT.3.4164&quot;&gt;Machine learning in many-body quantum physics and quantum ML algorithms&lt;/a&gt;, recommended.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1903.10563&quot;&gt;Machine learning and the physical sciences&lt;/a&gt; 1903.10563 (review article)&lt;/li&gt;
@@ -71,21 +84,8 @@
     - [The Seven Tools of Causal Inference with Reflections on Machine Learning](http://ftp.cs.ucla.edu/pub/stat_ser/r481.pdf), Pearl 2018--&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html&quot;&gt;Geoffrey Hinton, Yann LeCun and Yoshua Bengio&lt;/a&gt; won the Turing Award.&lt;/li&gt;
-&lt;li&gt;Karen Uhlenback is &lt;a href=&quot;https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/&quot;&gt;the first woman to win the Abel Prize&lt;/a&gt;. (Uhlenback of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process&quot;&gt;Ornstein-Uhlenback process&lt;/a&gt; is her father-in-law.)&lt;/li&gt;
-&lt;li&gt;The 1993 article, &lt;a href=&quot;https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf&quot;&gt;The Death of Proof&lt;/a&gt; doesn’t age well, and the author knows it: [&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/&quot;&gt;The Horgan Surface and the Death of Proof&lt;/a&gt;] [&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/&quot;&gt;Okay, Maybe Proofs Aren’t Dying After All&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Evolution&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://genestogenomes.org/kimura-crow-infinite-alleles/&quot;&gt;Kimura &amp;amp; Crow: Infinite Alleles&lt;/a&gt; (Wanting to “do something in genetics like what the theoretical physicists were doing in physics,” Kimura ended up writing a heat equation obeyed by neutrally-evolved genes.)
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.nature.com/scitable/topicpage/neutral-theory-the-null-hypothesis-of-molecular-839&quot;&gt;Why should we care about neutral evolution?&lt;/a&gt; (Neutral evolution provides a “null hypothesis”, the background noise to be compared and subtracted to get the signal.)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/neutral-theory-of-evolution-challenged-by-evidence-for-dna-selection-20181108/&quot;&gt;An estimate of how much of the human genome undergoes neutral selection&lt;/a&gt;, Quanta (&amp;lt;5% and not all neutral alleles evolve follow Kimura’s theory, for example, those that are transmitted through a physical mechanism such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Genetic_linkage&quot;&gt;linkage&lt;/a&gt;.)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/mathematics-shows-how-to-ensure-evolution-20180626/&quot;&gt;Natural selection on weighted graphs&lt;/a&gt;, Quanta&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/the-evolutionary-math-puzzle-20180815/&quot;&gt;The grandmother hypothesis&lt;/a&gt;, Quanta&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2019/mar/28/scientists-find-genetic-mutation-that-makes-woman-feel-no-pain&quot;&gt;Mutations render a woman unable to feel pain or anxiety&lt;/a&gt;. The mutations shut down the gene controlling &lt;a href=&quot;https://en.wikipedia.org/wiki/Fatty_acid_amide_hydrolase&quot;&gt;FAAH&lt;/a&gt; which breaks down &lt;a href=&quot;https://en.wikipedia.org/wiki/Anandamide&quot;&gt;anandamide&lt;/a&gt;, a natural cannabis-like substance.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Meditation&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Meditation as predictive processing, a comment on &lt;a href=&quot;https://slatestarcodex.com/2017/09/20/meditative-states-as-mental-feedback-loops/#comment-549013&quot;&gt;Meditative States as Mental Feedback Loops&lt;/a&gt;, SSC
 &lt;ul&gt;
@@ -101,12 +101,12 @@
 &lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/oJwJzeZ6ar2Hr7KAX&quot;&gt;Subagents, akrasia, and coherence in humans&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Musics/Gaming&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;musicsgaming&quot;&gt;Musics/Gaming&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLj3Mg9WXbXd9MeOuI15OCw4xMvK4BKlIS&quot;&gt;Great covers of almost every Mega Man X5 and X6 theme&lt;/a&gt; by Lenny Lederman&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://store.steampowered.com/app/851100/Touhou_Luna_Nights/&quot;&gt;Touhou Luna Nights&lt;/a&gt;, Team Ladybug (&lt;em&gt;Pros:&lt;/em&gt; great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects; the water physics is especially cool. &lt;em&gt;Cons:&lt;/em&gt; Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished &lt;a href=&quot;https://store.steampowered.com/app/400910/RabiRibi/&quot;&gt;Rabi-Ribi&lt;/a&gt;. That one, which is ironically an actual bullet hell, has a wondrous, sprawling map.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Anime&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;anime&quot;&gt;Anime&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/12189/Hyouka&quot;&gt;Hyouka&lt;/a&gt; (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012 &lt;!-- [Mob Psycho 100 II](https://myanimelist.net/anime/37510/Mob_Psycho_100_II) (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)
 
@@ -207,6 +207,9 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;You should read 10 most important papers of a field to pick up open problems, questions that you’d personally like answered, tricks, curious observations that seem important, and sometimes even field-wide blind spots.&lt;/li&gt;
 &lt;li&gt;Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;physicsquantum&quot;&gt;Physics/quantum&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/gifs/comments/arhwhf/pen_ink_on_a_leaf_zooming_through_a_puddle/&quot;&gt;Ink propulsion engine&lt;/a&gt;&lt;/p&gt;
 &lt;center&gt;
 &lt;iframe src=&#39;https://gfycat.com/ifr/FoolhardySoupyKoi&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; allowfullscreen width=&#39;309&#39; height=&#39;500&#39;&gt;&lt;/iframe&gt;&lt;p&gt;
@@ -214,10 +217,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.pnas.org/content/early/2019/02/13/1818350116&quot;&gt;Linking plasma formation in grapes to microwave resonances of aqueous dimers&lt;/a&gt;, Khattak, Bianucci and Slepkov 2019 (Two grapes touching at a point &lt;a href=&quot;https://www.wired.com/story/why-a-grape-turns-into-a-fireball-in-a-microwave/&quot;&gt;create a plasma ball&lt;/a&gt; inside a microwave because wet, grape-sized objects sustains and amplifies standing microwaves, focusing the energy into a single point.) &lt;!-- - [inordinatum](https://inordinatum.wordpress.com), a blog on physics and maths of stochastic processes
         - [Stochastic processes II](http://galton.uchicago.edu/~lalley/Courses/313/), University of Chicago, Steven Lalley --&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Daniel Harlow’s &lt;a href=&quot;https://www.facebook.com/daniel.harlow.31/posts/10104284984149212&quot;&gt;Facebook discussion&lt;/a&gt; on the &lt;a href=&quot;https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm&quot;&gt;NY Times piece&lt;/a&gt; by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;quantum&quot;&gt;Quantum&lt;/h2&gt;
-&lt;ul&gt;
+&lt;li&gt;Daniel Harlow’s &lt;a href=&quot;https://www.facebook.com/daniel.harlow.31/posts/10104284984149212&quot;&gt;Facebook discussion&lt;/a&gt; on the &lt;a href=&quot;https://www.nytimes.com/2019/01/23/opinion/particle-physics-large-hadron-collider.htm&quot;&gt;NY Times piece&lt;/a&gt; by Sabine Hossenfelder. I agree with one of the comments that there are at least two social consequences of not building a next-generation collider that are tangled together (1) punishing theorists (because science is not self-correcting) for not learning from their mistakes and hyping a next-generation collider up for a wrong reason (2) punishing experimentalists for the mistakes made by theorists (which we don’t want).&lt;/li&gt;
 &lt;li&gt;Someone wrote a &lt;a href=&quot;http://www.mustythoughts.com/jekyll/update/2019/01/12/how-I-got-a-job-in-QC.html&quot;&gt;blog post&lt;/a&gt; on what he did to get a job in quantum computing.&lt;/li&gt;
 &lt;li&gt;Andy Matuschak and Michael Nielsen &lt;a href=&quot;https://www.reddit.com/r/QuantumComputing/comments/anawy4/alpha_testers_needed_for_quantum_computing_for/&quot;&gt;recruit alpha testers&lt;/a&gt; for spaced-repetition-based “Quantum Computing for the Very Curious”&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.physicsforums.com/threads/find-your-ideal-quantum-interpretation.966905/&quot;&gt;Find your ideal quantum interpretation.&lt;/a&gt;&lt;/li&gt;
@@ -248,9 +248,11 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 
 &lt;!-- [Elixir](https://www.youtube.com/watch?v=C91bls9Wm84), Loudspeaker, Marty Friedman --&gt;
 
-&lt;p&gt;Finnish &lt;a href=&quot;https://en.wikipedia.org/wiki/Power_metal&quot;&gt;power metal&lt;/a&gt; &lt;!--
+&lt;h3 id=&quot;finnish-power-metal&quot;&gt;Finnish &lt;a href=&quot;https://en.wikipedia.org/wiki/Power_metal&quot;&gt;power metal&lt;/a&gt;&lt;/h3&gt;
+&lt;!--
 &quot;Classic&quot; Sonata Arctica AKA power metal before 2007 (Jani the guitarist also left the band in 2007. Cause or coincidence? Jani was [recruited by Altaria and later formed his own band Cain&#39;s Offering](https://en.wikipedia.org/wiki/List_of_power_metal_bands). The latter has released two albums so far: Gather the Faithful (2009) and Stormcrow (2015).)
-- [Happiest power metal](https://www.reddit.com/r/PowerMetal/comments/25gpwu/happiest_power_metal_you_know/), reddit --&gt;&lt;/p&gt;
+- [Happiest power metal](https://www.reddit.com/r/PowerMetal/comments/25gpwu/happiest_power_metal_you_know/), reddit --&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Sonata Arctica
 &lt;ul&gt;
@@ -265,7 +267,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bxegqv87JhA&quot;&gt;Father Time&lt;/a&gt;, Episode 2010&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Similarity/homage&lt;/p&gt;
+&lt;h3 id=&quot;similarityhomage&quot;&gt;Similarity/homage&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Dngwio0eJS0&quot;&gt;Rising Force&lt;/a&gt;, Yngwie Malmsteen {&lt;a href=&quot;https://www.youtube.com/watch?v=_k27dYN8eCY&quot;&gt;Rising Scarlet&lt;/a&gt; (東方緋想天), THUNDER CONCERTO (C75), IRON ATTACK}&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=o8p4raXEQLU&quot;&gt;Back in the Village&lt;/a&gt;, Iron Maiden {&lt;a href=&quot;https://www.youtube.com/watch?v=Dn4zUG6O2lU&quot;&gt;Suck a Sage&lt;/a&gt;, Ishiwatari Daisuke}&lt;/li&gt;
@@ -286,9 +288,12 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
    <link href="/jan-2019-log.html"/>
    <updated>2019-02-20T00:00:00+00:00</updated>
    <id>h/jan-2019-log</id>
-   <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from January 2019 (and a bit from December 2018).&lt;/p&gt;
-&lt;h2 id=&quot;research&quot;&gt;1. Research&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Generalized coherent states&lt;/strong&gt;&lt;/p&gt;
+   <content type="html">&lt;div id=&quot;toc&quot;&gt;
+
+&lt;/div&gt;
+&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from January 2019 (and a bit from December 2018).&lt;/p&gt;
+&lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
+&lt;h2 id=&quot;generalized-coherent-states&quot;&gt;Generalized coherent states&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.62.867&quot;&gt;Coherent states: Theory and some applications [paywalled]&lt;/a&gt;, Zhang, Feng and Gilmore 1990&lt;/p&gt;
 &lt;p&gt;The paper talks about group generalizations of the notion of &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_states&quot;&gt;coherent states&lt;/a&gt;, mainly of Perelomov and Gilmore. Naturally, it briefly mentions other approaches but is quick to point out their drawbacks.&lt;/p&gt;
@@ -324,11 +329,11 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt; be a real Lie group, &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; a maximal torus, &lt;span class=&quot;math&quot;&gt;\(K \subset G\)&lt;/span&gt; the (projective) stabilizer subgroup of a highest weight state, &lt;span class=&quot;math&quot;&gt;\(G^{\C}\)&lt;/span&gt; the complexification of &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;, and &lt;span class=&quot;math&quot;&gt;\(B \subset P \subset G^{\C}\)&lt;/span&gt; the Borel and a parabolic subgroup respectively.&lt;/p&gt;
 &lt;p&gt;An argument for the (canonical) diffeomorphism &lt;span class=&quot;math&quot;&gt;\(G /T \cong G^{\C} /B\)&lt;/span&gt; can be found in &lt;a href=&quot;https://projecteuclid.org/euclid.cmp/1104200934&quot;&gt;Hogreve et al. 1990&lt;/a&gt;, Section 2.3, p.472: the real span of &lt;span class=&quot;math&quot;&gt;\(\g\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\mathfrak{b}\)&lt;/span&gt; is all of &lt;span class=&quot;math&quot;&gt;\(\g^{\C}\)&lt;/span&gt;, so the &lt;span class=&quot;math&quot;&gt;\(G\)&lt;/span&gt;-orbit is open in the &lt;span class=&quot;math&quot;&gt;\(G^{\C}\)&lt;/span&gt; orbit (&lt;span class=&quot;math&quot;&gt;\(G^{\C} /B\)&lt;/span&gt;). On the other hand, the orbit is closed because of the compactness, thus they are the same. The argument extends to &lt;span class=&quot;math&quot;&gt;\(G /K \cong G^{\C} /P\)&lt;/span&gt; by defining &lt;span class=&quot;math&quot;&gt;\(K = P \cap G\)&lt;/span&gt;, then &lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt; contains a maximal torus &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Representation theory&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;representation-theory&quot;&gt;Representation theory&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.math.stonybrook.edu/~aknapp/pdf-files/1-27.pdf&quot;&gt;Structure theory of semisimple Lie groups&lt;/a&gt;, Knapp 1997&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Algebraic groups&lt;/p&gt;
+&lt;h3 id=&quot;algebraic-groups&quot;&gt;Algebraic groups&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://hkumath.hku.hk/~imr/records0001/borel.pdf&quot;&gt;Lie Groups and Linear Algebraic Groups I. Complex and Real Groups&lt;/a&gt;, Borel&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.jmilne.org/math/CourseNotes/aag.pdf&quot;&gt;Algebraic Groups and Arithmetic Groups&lt;/a&gt;, Milne 2005&lt;/li&gt;
@@ -339,7 +344,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Distribution_on_a_linear_algebraic_group&quot;&gt;Distributions on a linear algebraic group&lt;/a&gt;, Wikipedia&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Symmetric spaces and multiplicities&lt;/p&gt;
+&lt;h3 id=&quot;symmetric-spaces-and-multiplicities&quot;&gt;Symmetric spaces and multiplicities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Foundations of Differential Geometry&lt;/em&gt;, Vol. 2, Kobayashi and Nomizu 1963&lt;/li&gt;
 &lt;li&gt;Perspectives on Invariant Theory: Schur Duality, Multiplicity-Free Actions and Beyond in &lt;em&gt;The Schur Lectures&lt;/em&gt;, Howe 1992&lt;/li&gt;
@@ -353,7 +358,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;em&gt;Symmetry, Representations, and Invariants&lt;/em&gt;, Goodman and Wallach 2009 (Chapter 12)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;links&quot;&gt;2. Links&lt;/h2&gt;
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Added to the list of great scientists we’ve lost in 2018 are &lt;a href=&quot;https://twitter.com/sapinker/status/1079436841017851906&quot;&gt;Judith Rich Harris&lt;/a&gt; of the &lt;em&gt;Nurture Assumption&lt;/em&gt; fame and &lt;a href=&quot;https://www.washingtonpost.com/local/obituaries/roy-glauber-nobel-winning-physicist-who-applied-quantum-mechanics-to-optics-dies-at-93/2018/12/30/b7e4e05e-0b24-11e9-a3f0-71c95106d96a_story.html&quot;&gt;Roy Glauber&lt;/a&gt;. Glauber and E.C.G. Sudarshan (who also passed away earlier in 2018), are both monumental figures that helped define the field of quantum optics that we know today.&lt;/li&gt;
 &lt;li&gt;Apparently living in an area with 22 &lt;span class=&quot;math&quot;&gt;\(\mu g/m^3\)&lt;/span&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/Particulates&quot;&gt;PM2.5&lt;/a&gt; is &lt;a href=&quot;http://berkeleyearth.org/air-pollution-and-cigarette-equivalence/&quot;&gt;equivalent to smoking a cigarette per day&lt;/a&gt;.&lt;/li&gt;
@@ -368,10 +373,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;blockquote&gt;
 &lt;p&gt;To paraphrase the investor Esther Dyson: in politics the dominant time frame is a term of office, in fashion and culture it’s a season, for corporations it’s a quarter, on the internet it’s minutes, and on the financial markets mere milliseconds.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;When is it acceptable to offset a bad deed by a good deed? A simple rule: &lt;a href=&quot;http://slatestarcodex.com/2017/08/28/contra-askell-on-moral-offsets/&quot;&gt;you can offset axiology, but not morality&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Meta-research/mathematics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;When is it acceptable to offset a bad deed by a good deed? A simple rule: &lt;a href=&quot;http://slatestarcodex.com/2017/08/28/contra-askell-on-moral-offsets/&quot;&gt;you can offset axiology, but not morality&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.theatlantic.com/science/archive/2018/11/diminishing-returns-science/575665/&quot;&gt;Science is getting less bang for its buck&lt;/a&gt;, Collison and Nielsen, Atlantic&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/XYYyzgyuRH5rFN64K/what-makes-people-intellectually-active&quot;&gt;What makes people intellectually active?&lt;/a&gt;, LW
 &lt;ul&gt;
@@ -382,9 +384,9 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;em&gt;Differential Geometry: Cartan’s Generalization of Klein’s Erlangen program&lt;/em&gt;, Sharpe 1997 (More examples of planar Klein’s geometries. There are 23 families of two-dimensional Klein’s geometries)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Desargues%27s_theorem&quot;&gt;Desargues’ theorem&lt;/a&gt; in projective geometry is quoted in several treatises of perspective drawing according to this &lt;a href=&quot;https://hal.archives-ouvertes.fr/hal-01015873&quot;&gt;paper&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cube20.org/&quot;&gt;God’s Number is 20&lt;/a&gt;: the longest shortest sequence to solve a Rubik’s cube is 20 moves in the half-turn metric (any non-trivial turn of a face counts as one move).&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://cube20.org/&quot;&gt;God’s Number is 20&lt;/a&gt;: the longest shortest sequence to solve a Rubik’s cube is 20 moves in the half-turn metric (any non-trivial turn of a face counts as one move).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Physics/quantum&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;physicsquantum&quot;&gt;Physics/quantum&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Trump signs the $1.2 billion &lt;a href=&quot;https://www.technologyreview.com/the-download/612679/president-trump-has-signed-a-12-billon-law-to-boost-us-quantum-tech/&quot;&gt;National Quantum Initiative Act&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://cognitivemedium.com/qc-a-science&quot;&gt;In what sense is quantum computing a science?&lt;/a&gt;, Nielsen&lt;/li&gt;
@@ -392,7 +394,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;Boaz Barak’s blog, &lt;a href=&quot;https://windowsontheory.org&quot;&gt;Windows on Theory&lt;/a&gt;, is having a series of guest blog posts on connections between computer science and physics. The topics range from statistical-physics-inspired algorithms to quantum information and black hole information paradox.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/has-ligo-seen-galaxy-warped-gravitational-waves/&quot;&gt;George Smoot thinks&lt;/a&gt; that the region of the universe around us lacks “low-metallica” stars, giant stars that can collapse and give rise to &amp;gt;20 solar-mass black holes that LIGO and Virgo have been detecting, and so surmises that the events we have seen took place “much farther away—on the order of 10 billion light-years distant—magnified and made visible through gravitational lensing”.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Meditation/self&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://journals.sagepub.com/doi/10.1177/1745691617709589&quot;&gt;Mind the Hype: A Critical Evaluation and Prescriptive Agenda for Research on Mindfulness and Meditation&lt;/a&gt;, Van Dam et al. 2017&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/wheres-the-proof-that-mindfulness-meditation-works1/&quot;&gt;Where’s the Proof That Mindfulness Meditation Works?&lt;/a&gt;, SA [&lt;a href=&quot;https://www.reddit.com/r/skeptic/comments/76az0f/wheres_the_proof_that_mindfulness_meditation_works/dod3rpo/&quot;&gt;reddit comment&lt;/a&gt;]&lt;/li&gt;
@@ -404,17 +406,17 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Thomas Metzinger formalizes &lt;a href=&quot;https://www.blogs.uni-mainz.de/fb05philosophie/files/2013/04/Metzinger_suffering_penultimate.pdf&quot;&gt;necessary conditions for suffering&lt;/a&gt;: 1. conscious experience 2. self-model 3. negative values in the self-model 4. identification with the self-model. Buddhism’s “no self” strives to eliminate 2 (and consequently 3 and 4).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Gaming&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;gaming&quot;&gt;Gaming&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=yhGjCzxJV3E&quot;&gt;Guilty Gear Xrd’s Art Style : The X Factor Between 2D and 3D&lt;/a&gt;, Junya C. Motomura, Lead character modeler&lt;/p&gt;
 &lt;p&gt;Team Red of Arc System Works was the only one that got anime-like cel-shading right. (They were thus given the job to handle &lt;a href=&quot;https://en.wikipedia.org/wiki/Dragon_Ball_FighterZ&quot;&gt;Dragon Ball FighterZ&lt;/a&gt; and now &lt;a href=&quot;(https://www.youtube.com/watch?v=ZQQo9vSj1_A)&quot;&gt;Granblue Fantasy Versus&lt;/a&gt;). Each character has its own fixed light source and the team manually adjusts the normal vector and the cel-shading threshold of each major polygon face (&lt;a href=&quot;https://youtu.be/yhGjCzxJV3E?t=970&quot;&gt;16:10&lt;/a&gt;) to make sure that every close-up frame looks good.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Anime&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Good &lt;a href=&quot;https://www.nicovideo.jp/watch/sm34393460&quot;&gt;Touhou anime parody&lt;/a&gt; still exists in 2019. (Onegai! Cinderella, The Idolm@ster Cinderella Girls)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://foreignpolicy.com/2019/01/23/super-patriotic-anime-youth-wars-china-japan-pop-culture/&quot;&gt;China’s responses to Japanese anime invasion&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Musics&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-tKVN2mAKRI&quot;&gt;Uchiage hanabi&lt;/a&gt;, DAOKO X Yonezu Kenshi&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Fj9Y9TGQn38&quot;&gt;Shadowgraph&lt;/a&gt;, Myth &amp;amp; Roid (Boogiepop wa warawanai 2019 OP)&lt;/li&gt;
@@ -422,7 +424,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-SjrlKsibqM&quot;&gt;Sayonara Gokko&lt;/a&gt;, amazarashi (Dororo 2019 ED)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://streamable.com/423z4&quot;&gt;Love Dramatic feat. Rikka Ihara&lt;/a&gt;, Masayuki Suzuki (Kaguya-sama wa kokurasetai OP)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Touhou&lt;/p&gt;
+&lt;h3 id=&quot;touhou&quot;&gt;Touhou&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l_G3i92kX-Q&quot;&gt;弦魔術狂想曲&lt;/a&gt; (Mary the Magician), FAR EAST OF EAST -XVI- (C94), TatshMusicCircle&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=KsASO-I5ki0&quot;&gt;Never Ending Night&lt;/a&gt; (Spring Lane ~ Colorful Path), &lt;a href=&quot;https://vgmdb.net/album/21282&quot;&gt;東方零響奇譚 ~ Sophisticated Insanity&lt;/a&gt; (C79), Zero Symphonic Battalion (Hiroki Kikuta, Jillian Aversa)&lt;/li&gt;

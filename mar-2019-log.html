@@ -214,14 +214,22 @@ $(document).ready(function() {
           </br>
 <!--          <font size="+1"><b> Contents </b></font>
           <ul>
-<li><a href="#research">Research</a></li>
+<li><a href="#research">Research</a>
+<ul>
+<li><a href="#stabilizer-quantum-mechanics">Stabilizer quantum mechanics</a></li>
+<li><a href="#algebraic-geometry">Algebraic geometry</a></li>
+</ul></li>
+<li><a href="#media">Media</a>
+<ul>
 <li><a href="#links">Links</a>
 <ul>
 <li><a href="#physicsquantummachine-learning">Physics/quantum/machine learning</a></li>
 <li><a href="#meditation">Meditation</a></li>
-<li><a href="#musicsgaming">Musics/Gaming</a></li>
 </ul></li>
+<li><a href="#musics">Musics</a></li>
 <li><a href="#anime">Anime</a></li>
+<li><a href="#video-games">Video games</a></li>
+</ul></li>
 </ul>
         <div id="toc"></div> -->
           <p>This is an archive of what I found useful, interesting, or simply enjoyable from March 2019.</p>
@@ -229,6 +237,7 @@ $(document).ready(function() {
 
 </div>
 <h1 id="research">Research</h1>
+<h2 id="stabilizer-quantum-mechanics">Stabilizer quantum mechanics</h2>
 <ul>
 <li><a href="https://arxiv.org/abs/1703.00111">Unbiased Simulation of Near-Clifford Quantum Circuits</a>, Bennink et al. 2017</li>
 <li><a href="https://arxiv.org/abs/1901.09070">Simulation of Qubit Quantum Circuits via Pauli Propagation</a>, Rall, Liang, Cook and Kretschmer 1901.09070</li>
@@ -238,6 +247,7 @@ $(document).ready(function() {
 <p><strong>Theorem 1.</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)</span> and computational basis measurement can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]</span> <span class="math">\(\lambda\)</span> measures the mixedness of the most pure <span class="math">\(\rho_j\)</span>, namely the <span class="math">\(\lambda = \epsilon\)</span> for every qubit state of the form <span class="math">\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)</span>. The <span class="math">\(1-2/\alpha\)</span> comes from using the <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov inequality</a> on the average of the <span class="math">\(l_1\)</span> norm of the Fourier coefficients of the output probabilities (inspired by <a href="https://arxiv.org/abs/1810.03176">this paper</a> by Gao and Duan) over the uniform distribution of Cliffords (a <a href="https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs">unitary 2-design</a>).</p>
 <p>When every input state is pure, the exponent blows up. For that, we have</p>
 <p><strong>Theorem 2</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ket{0}^{\otimes n} \otimes^m_{j=1} \ket{\psi_j}\)</span> and computational basis measurement on <span class="math">\(k\)</span> qubits, the number of of unmeasured qubits being greater than the log of the <em>Pauli rank</em> <span class="math">\[ n+m-k \ge \sum^m_{j=1} \log \left( \frac{\chi(\psi_j)}{2} \right), \]</span> can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[ (n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\mu \right]}, \]</span> where now <span class="math">\[ \mu(\psi) := 2(1-\max_{\phi \in \mathrm{stab}} |\av{\phi|\psi}|^2). \]</span> The fidelity to the closest stabilizer state is the <em>stabilizer rank</em>. Curiously, the more “stabilizer-ness” the <em>worse</em> the runtime!</p>
+<h2 id="algebraic-geometry">Algebraic geometry</h2>
 <ul>
 <li><p><em>Linear Algebraic Groups</em>, Humphreys 1998 <!-- *Symmetry, Representations, and Invariants*, Goodman and Wallach 2009
 - *Homogeneous Spaces and Equivalent Embeddings*, Timashev 2011
@@ -246,7 +256,8 @@ $(document).ready(function() {
 <p>According to some school of thought, quantization is a process of taking a symplectic manifold <span class="math">\(M\)</span> and turn it into a complex Hilbert space (and smooth functions–classical observables–to linear operators). But that is really just a “<a href="https://en.wikipedia.org/wiki/Geometric_quantization#Prequantization">prequantization</a>”. Baez <a href="https://johncarlosbaez.wordpress.com/2018/12/26/geometric-quantization-part-2/">points out</a>. We need much more than that; we need a line bundle <span class="math">\(L\)</span> over <span class="math">\(M\)</span> and various structures (even if <span class="math">\(M\)</span> is already Kähler) that make <span class="math">\(L\)</span> compatible with the symplectic, complex, and Riemannian structure on <span class="math">\(M\)</span>. (<a href="https://johncarlosbaez.wordpress.com/2018/12/30/geometric-quantization-part-5/">This</a> shows you how it works for 2-spheres.)</p>
 <p>The world is quantum so perhaps it makes little sense to expect that just the symplectic structure can take us all the way to the complex Hilbert space. Instead, Baez <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">proposing</a>, let us start with a complex projective variety <span class="math">\(\C P^n \subset \C^{n+1}\)</span>, then take the smallest subspace in <span class="math">\(V \subset \C^{n+1}\)</span> whose <a href="https://en.wikipedia.org/wiki/Projectivization">projectivized</a> space <span class="math">\(\mathbb{P}V\)</span> contains <span class="math">\(M\)</span> to be its quantization <span class="math">\(Q(M) = V\)</span>. Projectivization then gives back <span class="math">\(P(V) = M\)</span>. In this way, we have <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">poset</a> categories <code>Class</code> of classical state spaces and <code>Quant</code> of quantum state spaces and a pair of adjoint functors between them. You can make them <a href="https://johncarlosbaez.wordpress.com/2018/12/28/geometric-quantization-part-4/">monoidal</a> (essentially having the tensor product structure—Segre embedding for varieties) and <a href="https://johncarlosbaez.wordpress.com/2019/01/08/geometric-quantization-part-7/">clone</a> the system with symmetrized product (Veronese embedding for varieties). The latter is actually how you take a classical limit of generalized coherent states (equivalently, <a href="https://johncarlosbaez.wordpress.com/2019/01/21/geometric-quantization-part-8/">scaling up the symplectic structure</a>).</p></li>
 </ul>
-<h1 id="links">Links</h1>
+<h1 id="media">Media</h1>
+<h2 id="links">Links</h2>
 <ul>
 <li><p><a href="https://en.wikipedia.org/wiki/Gravity_Research_Foundation">Gravity Research Foundation</a></p>
 <blockquote>
@@ -277,7 +288,7 @@ $(document).ready(function() {
 <li>Karen Uhlenback is <a href="https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/">the first woman to win the Abel Prize</a>. (Uhlenback of the <a href="https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process">Ornstein-Uhlenback process</a> is her father-in-law.)</li>
 <li><p>The 1993 article, <a href="https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf">The Death of Proof</a> doesn’t age well, and the author knows it: [<a href="https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/">The Horgan Surface and the Death of Proof</a>] [<a href="https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/">Okay, Maybe Proofs Aren’t Dying After All</a>]</p></li>
 </ul>
-<h2 id="physicsquantummachine-learning">Physics/quantum/machine learning</h2>
+<h3 id="physicsquantummachine-learning">Physics/quantum/machine learning</h3>
 <ul>
 <li>Das Sarma on <a href="https://physicstoday.scitation.org/doi/10.1063/PT.3.4153">how the scale of unifications in the present day physics is not so grand anymore</a>, Physics Today</li>
 <li>Chameleons change their colors by adjusting the osmotic pressure to <a href="https://www.nature.com/articles/ncomms7368">change the spacing of Guanine crystals in a lattice</a>. See also <a href="https://en.wikipedia.org/wiki/Animal_reflectors">animal reflectors</a>.</li>
@@ -292,7 +303,7 @@ $(document).ready(function() {
 </ul></li>
 <li><a href="https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html">Geoffrey Hinton, Yann LeCun and Yoshua Bengio</a> won the Turing Award.</li>
 </ul>
-<h2 id="meditation">Meditation</h2>
+<h3 id="meditation">Meditation</h3>
 <ul>
 <li>Meditation as predictive processing, a comment on <a href="https://slatestarcodex.com/2017/09/20/meditative-states-as-mental-feedback-loops/#comment-549013">Meditative States as Mental Feedback Loops</a>, SSC
 <ul>
@@ -308,17 +319,23 @@ $(document).ready(function() {
 <li><a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/oJwJzeZ6ar2Hr7KAX">Subagents, akrasia, and coherence in humans</a></li>
 </ul></li>
 </ul>
-<h2 id="musicsgaming">Musics/Gaming</h2>
+<h2 id="musics">Musics</h2>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLj3Mg9WXbXd9MeOuI15OCw4xMvK4BKlIS">Great covers of almost every Mega Man X5 and X6 theme</a> by Lenny Lederman</li>
-<li><a href="https://store.steampowered.com/app/851100/Touhou_Luna_Nights/">Touhou Luna Nights</a>, Team Ladybug (<em>Pros:</em> great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects; the water physics is especially cool. <em>Cons:</em> Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished <a href="https://store.steampowered.com/app/400910/RabiRibi/">Rabi-Ribi</a>. That one, which is ironically an actual bullet hell, has a wondrous, sprawling map.)</li>
 </ul>
-<h1 id="anime">Anime</h1>
+<h2 id="anime">Anime</h2>
 <ul>
-<li><a href="https://myanimelist.net/anime/12189/Hyouka">Hyouka</a> (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012 <!-- [Mob Psycho 100 II](https://myanimelist.net/anime/37510/Mob_Psycho_100_II) (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)
-
-  Both are excellent coming-of-age stories. --></li>
+<li><a href="https://myanimelist.net/anime/12189/Hyouka">Hyouka</a> (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012 (Notable episodes: 17, 21)</li>
 </ul>
+<h2 id="video-games">Video games</h2>
+<ul>
+<li><a href="https://store.steampowered.com/app/851100/Touhou_Luna_Nights/">Touhou Luna Nights</a>, Team Ladybug (<em>Pros:</em> great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects. The water physics is especially cool. <em>Cons:</em> Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished <a href="https://store.steampowered.com/app/400910/RabiRibi/">Rabi-Ribi</a>. That one, which is ironically an actual bullet hell, has a wondrous, sprawling map.)</li>
+</ul>
+<!-- [Mob Psycho 100 II](https://myanimelist.net/anime/37510/Mob_Psycho_100_II) (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)
+
+  Both are excellent coming-of-age stories. -->
+
+
 
           </article>
         </div>
@@ -334,8 +351,8 @@ $(document).ready(function() {
     property="dc:created">13 Apr 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-05-01 16:34:04 +0000"
-            property="dc:modified">01 May 2019</time></small></p>
+            datetime="2019-05-04 07:31:36 +0000"
+            property="dc:modified">04 May 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -367,7 +384,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/9c7db2f846e71d488676d61792576c392fb6b6cf/_posts/2019-03-09-mar-2019-log.md"> 9c7db2f</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/7934e5817e73a0be15cfc92324919c4aca326d71/_posts/2019-03-09-mar-2019-log.md"> 7934e58</a></tiny></p>
 </aside>
 
 <br /><br />

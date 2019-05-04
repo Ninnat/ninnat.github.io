@@ -842,9 +842,6 @@ figcaption {
 div#toc {
   padding: 10px 10px 0px 0px;
   border: 1px solid #aaa;
+  background: #fafafa;
   display: inline-block !important;
-}
-
-.loading-toc-options {
-    display: inline;
 }

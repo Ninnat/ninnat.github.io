@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-05-02T03:56:27+00:00</updated>
+ <updated>2019-05-04T07:36:14+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -22,6 +22,7 @@
 
 &lt;/div&gt;
 &lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
+&lt;h2 id=&quot;stabilizer-quantum-mechanics&quot;&gt;Stabilizer quantum mechanics&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.00111&quot;&gt;Unbiased Simulation of Near-Clifford Quantum Circuits&lt;/a&gt;, Bennink et al. 2017&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.09070&quot;&gt;Simulation of Qubit Quantum Circuits via Pauli Propagation&lt;/a&gt;, Rall, Liang, Cook and Kretschmer 1901.09070&lt;/li&gt;
@@ -31,6 +32,7 @@
 &lt;p&gt;&lt;strong&gt;Theorem 1.&lt;/strong&gt; The output probabilities of a circuit &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_3\)&lt;/span&gt; on &lt;span class=&quot;math&quot;&gt;\(n+m\)&lt;/span&gt; qubits with input state &lt;span class=&quot;math&quot;&gt;\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)&lt;/span&gt; and computational basis measurement can be approximated up to &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt; norm &lt;span class=&quot;math&quot;&gt;\(\delta\)&lt;/span&gt; in &lt;span class=&quot;math&quot;&gt;\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(\lambda\)&lt;/span&gt; measures the mixedness of the most pure &lt;span class=&quot;math&quot;&gt;\(\rho_j\)&lt;/span&gt;, namely the &lt;span class=&quot;math&quot;&gt;\(\lambda = \epsilon\)&lt;/span&gt; for every qubit state of the form &lt;span class=&quot;math&quot;&gt;\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)&lt;/span&gt;. The &lt;span class=&quot;math&quot;&gt;\(1-2/\alpha\)&lt;/span&gt; comes from using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov%27s_inequality&quot;&gt;Markov inequality&lt;/a&gt; on the average of the &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt; norm of the Fourier coefficients of the output probabilities (inspired by &lt;a href=&quot;https://arxiv.org/abs/1810.03176&quot;&gt;this paper&lt;/a&gt; by Gao and Duan) over the uniform distribution of Cliffords (a &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs&quot;&gt;unitary 2-design&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;When every input state is pure, the exponent blows up. For that, we have&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Theorem 2&lt;/strong&gt; The output probabilities of a circuit &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_3\)&lt;/span&gt; on &lt;span class=&quot;math&quot;&gt;\(n+m\)&lt;/span&gt; qubits with input state &lt;span class=&quot;math&quot;&gt;\(\ket{0}^{\otimes n} \otimes^m_{j=1} \ket{\psi_j}\)&lt;/span&gt; and computational basis measurement on &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt; qubits, the number of of unmeasured qubits being greater than the log of the &lt;em&gt;Pauli rank&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\[ n+m-k \ge \sum^m_{j=1} \log \left( \frac{\chi(\psi_j)}{2} \right), \]&lt;/span&gt; can be approximated up to &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt; norm &lt;span class=&quot;math&quot;&gt;\(\delta\)&lt;/span&gt; in &lt;span class=&quot;math&quot;&gt;\[ (n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\mu \right]}, \]&lt;/span&gt; where now &lt;span class=&quot;math&quot;&gt;\[ \mu(\psi) := 2(1-\max_{\phi \in \mathrm{stab}} |\av{\phi|\psi}|^2). \]&lt;/span&gt; The fidelity to the closest stabilizer state is the &lt;em&gt;stabilizer rank&lt;/em&gt;. Curiously, the more “stabilizer-ness” the &lt;em&gt;worse&lt;/em&gt; the runtime!&lt;/p&gt;
+&lt;h2 id=&quot;algebraic-geometry&quot;&gt;Algebraic geometry&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;Linear Algebraic Groups&lt;/em&gt;, Humphreys 1998 &lt;!-- *Symmetry, Representations, and Invariants*, Goodman and Wallach 2009
 - *Homogeneous Spaces and Equivalent Embeddings*, Timashev 2011
@@ -39,7 +41,8 @@
 &lt;p&gt;According to some school of thought, quantization is a process of taking a symplectic manifold &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; and turn it into a complex Hilbert space (and smooth functions–classical observables–to linear operators). But that is really just a “&lt;a href=&quot;https://en.wikipedia.org/wiki/Geometric_quantization#Prequantization&quot;&gt;prequantization&lt;/a&gt;”. Baez &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/26/geometric-quantization-part-2/&quot;&gt;points out&lt;/a&gt;. We need much more than that; we need a line bundle &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; over &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; and various structures (even if &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; is already Kähler) that make &lt;span class=&quot;math&quot;&gt;\(L\)&lt;/span&gt; compatible with the symplectic, complex, and Riemannian structure on &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt;. (&lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/30/geometric-quantization-part-5/&quot;&gt;This&lt;/a&gt; shows you how it works for 2-spheres.)&lt;/p&gt;
 &lt;p&gt;The world is quantum so perhaps it makes little sense to expect that just the symplectic structure can take us all the way to the complex Hilbert space. Instead, Baez &lt;a href=&quot;https://en.wikipedia.org/wiki/Partially_ordered_set&quot;&gt;proposing&lt;/a&gt;, let us start with a complex projective variety &lt;span class=&quot;math&quot;&gt;\(\C P^n \subset \C^{n+1}\)&lt;/span&gt;, then take the smallest subspace in &lt;span class=&quot;math&quot;&gt;\(V \subset \C^{n+1}\)&lt;/span&gt; whose &lt;a href=&quot;https://en.wikipedia.org/wiki/Projectivization&quot;&gt;projectivized&lt;/a&gt; space &lt;span class=&quot;math&quot;&gt;\(\mathbb{P}V\)&lt;/span&gt; contains &lt;span class=&quot;math&quot;&gt;\(M\)&lt;/span&gt; to be its quantization &lt;span class=&quot;math&quot;&gt;\(Q(M) = V\)&lt;/span&gt;. Projectivization then gives back &lt;span class=&quot;math&quot;&gt;\(P(V) = M\)&lt;/span&gt;. In this way, we have &lt;a href=&quot;https://en.wikipedia.org/wiki/Partially_ordered_set&quot;&gt;poset&lt;/a&gt; categories &lt;code&gt;Class&lt;/code&gt; of classical state spaces and &lt;code&gt;Quant&lt;/code&gt; of quantum state spaces and a pair of adjoint functors between them. You can make them &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2018/12/28/geometric-quantization-part-4/&quot;&gt;monoidal&lt;/a&gt; (essentially having the tensor product structure—Segre embedding for varieties) and &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2019/01/08/geometric-quantization-part-7/&quot;&gt;clone&lt;/a&gt; the system with symmetrized product (Veronese embedding for varieties). The latter is actually how you take a classical limit of generalized coherent states (equivalently, &lt;a href=&quot;https://johncarlosbaez.wordpress.com/2019/01/21/geometric-quantization-part-8/&quot;&gt;scaling up the symplectic structure&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gravity_Research_Foundation&quot;&gt;Gravity Research Foundation&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -70,7 +73,7 @@
 &lt;li&gt;Karen Uhlenback is &lt;a href=&quot;https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/&quot;&gt;the first woman to win the Abel Prize&lt;/a&gt;. (Uhlenback of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process&quot;&gt;Ornstein-Uhlenback process&lt;/a&gt; is her father-in-law.)&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The 1993 article, &lt;a href=&quot;https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf&quot;&gt;The Death of Proof&lt;/a&gt; doesn’t age well, and the author knows it: [&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/&quot;&gt;The Horgan Surface and the Death of Proof&lt;/a&gt;] [&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/&quot;&gt;Okay, Maybe Proofs Aren’t Dying After All&lt;/a&gt;]&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;physicsquantummachine-learning&quot;&gt;Physics/quantum/machine learning&lt;/h2&gt;
+&lt;h3 id=&quot;physicsquantummachine-learning&quot;&gt;Physics/quantum/machine learning&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Das Sarma on &lt;a href=&quot;https://physicstoday.scitation.org/doi/10.1063/PT.3.4153&quot;&gt;how the scale of unifications in the present day physics is not so grand anymore&lt;/a&gt;, Physics Today&lt;/li&gt;
 &lt;li&gt;Chameleons change their colors by adjusting the osmotic pressure to &lt;a href=&quot;https://www.nature.com/articles/ncomms7368&quot;&gt;change the spacing of Guanine crystals in a lattice&lt;/a&gt;. See also &lt;a href=&quot;https://en.wikipedia.org/wiki/Animal_reflectors&quot;&gt;animal reflectors&lt;/a&gt;.&lt;/li&gt;
@@ -85,7 +88,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html&quot;&gt;Geoffrey Hinton, Yann LeCun and Yoshua Bengio&lt;/a&gt; won the Turing Award.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
+&lt;h3 id=&quot;meditation&quot;&gt;Meditation&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Meditation as predictive processing, a comment on &lt;a href=&quot;https://slatestarcodex.com/2017/09/20/meditative-states-as-mental-feedback-loops/#comment-549013&quot;&gt;Meditative States as Mental Feedback Loops&lt;/a&gt;, SSC
 &lt;ul&gt;
@@ -101,17 +104,23 @@
 &lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/oJwJzeZ6ar2Hr7KAX&quot;&gt;Subagents, akrasia, and coherence in humans&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;musicsgaming&quot;&gt;Musics/Gaming&lt;/h2&gt;
+&lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLj3Mg9WXbXd9MeOuI15OCw4xMvK4BKlIS&quot;&gt;Great covers of almost every Mega Man X5 and X6 theme&lt;/a&gt; by Lenny Lederman&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://store.steampowered.com/app/851100/Touhou_Luna_Nights/&quot;&gt;Touhou Luna Nights&lt;/a&gt;, Team Ladybug (&lt;em&gt;Pros:&lt;/em&gt; great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects; the water physics is especially cool. &lt;em&gt;Cons:&lt;/em&gt; Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished &lt;a href=&quot;https://store.steampowered.com/app/400910/RabiRibi/&quot;&gt;Rabi-Ribi&lt;/a&gt;. That one, which is ironically an actual bullet hell, has a wondrous, sprawling map.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;anime&quot;&gt;Anime&lt;/h1&gt;
+&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/12189/Hyouka&quot;&gt;Hyouka&lt;/a&gt; (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012 &lt;!-- [Mob Psycho 100 II](https://myanimelist.net/anime/37510/Mob_Psycho_100_II) (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)
-
-  Both are excellent coming-of-age stories. --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/12189/Hyouka&quot;&gt;Hyouka&lt;/a&gt; (22 Episodes), Kyoto Animation {Honezawa Yonobu} [Novel] 2012 (Notable episodes: 17, 21)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&quot;video-games&quot;&gt;Video games&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://store.steampowered.com/app/851100/Touhou_Luna_Nights/&quot;&gt;Touhou Luna Nights&lt;/a&gt;, Team Ladybug (&lt;em&gt;Pros:&lt;/em&gt; great pixel art and attentions to details. Time manipulation (Yes, you play as Sakuya) interacts with a variety of objects. The water physics is especially cool. &lt;em&gt;Cons:&lt;/em&gt; Snail Time and the grace mechanics makes the game really easy. The game is short and not sprawling enough for a Metroidvania, which reminds me that I haven’t finished &lt;a href=&quot;https://store.steampowered.com/app/400910/RabiRibi/&quot;&gt;Rabi-Ribi&lt;/a&gt;. That one, which is ironically an actual bullet hell, has a wondrous, sprawling map.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- [Mob Psycho 100 II](https://myanimelist.net/anime/37510/Mob_Psycho_100_II) (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)
+
+  Both are excellent coming-of-age stories. --&gt;
+
+
 </content>
  </entry>
  
@@ -170,7 +179,8 @@
 &lt;li&gt;&lt;em&gt;Lie Groups&lt;/em&gt;, Duistermaat and Kolk 2000&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A &lt;a href=&quot;http://www.decisionproblem.com/paperclips&quot;&gt;game&lt;/a&gt; you play as a &lt;a href=&quot;https://wiki.lesswrong.com/wiki/Paperclip_maximizer&quot;&gt;paperclip maximizer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.bbc.com/future/story/20190218-are-we-on-the-road-to-civilisation-collapse&quot;&gt;Are we on the road to civilization collapse?&lt;/a&gt;, BBC
@@ -208,7 +218,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;Avoid Ankify intellectually interesting but emotionally dried facts that are so removed from everything else you know (“orphan questions”), which will feel pointless to remember after a while. Find something related to personal projects.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;physicsquantum&quot;&gt;Physics/quantum&lt;/h2&gt;
+&lt;h3 id=&quot;physicsquantum&quot;&gt;Physics/quantum&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/gifs/comments/arhwhf/pen_ink_on_a_leaf_zooming_through_a_puddle/&quot;&gt;Ink propulsion engine&lt;/a&gt;&lt;/p&gt;
 &lt;center&gt;
@@ -228,12 +238,12 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;p&gt;Roughly speaking, the &lt;em&gt;physical footprint&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(nq\)&lt;/span&gt; is a space resource and the &lt;em&gt;quantum security parameter&lt;/em&gt; &lt;span class=&quot;math&quot;&gt;\(qs\)&lt;/span&gt; is a time resource. &lt;span class=&quot;math&quot;&gt;\(nq\)&lt;/span&gt; is the number of qubits per CPU parallelizing Grover’s search, the best known quantum attack against symmetric cryptographic protocols and hash functions. &lt;span class=&quot;math&quot;&gt;\(qs\)&lt;/span&gt; in this case is the number of surface code cycles, assuming that fault tolerence is achieved via the surface code.&lt;/p&gt;
 &lt;p&gt;Breaking RSA and ECC schemes in 24 hours may require at least ten million qubits, &lt;span class=&quot;math&quot;&gt;\(10^{11}\)&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; gates, and &lt;span class=&quot;math&quot;&gt;\(10^{13}\)&lt;/span&gt; cycles. Symmetric schemes may require &lt;span class=&quot;math&quot;&gt;\(&amp;gt;2^{100}\)&lt;/span&gt; cycles to break.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
+&lt;h3 id=&quot;meditation&quot;&gt;Meditation&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0079612318301596?via%3Dihub&quot;&gt;The neuroscience of meditation: classification, phenomenology, correlates, and mechanisms&lt;/a&gt;, Brandmeyer, Delorme and Wahbehdf 2019&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3146707/&quot;&gt;On the Relationship Between the Practice of Mindfulness Meditation and Personality—an Exploratory Analysis of the Mediating Role of Mindfulness Skills&lt;/a&gt;, van den Hurk et al. 2011&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
+&lt;h3 id=&quot;entertainment&quot;&gt;Entertainment&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;A Carnival Phantasm &lt;a href=&quot;https://www.nicovideo.jp/watch/sm34624137&quot;&gt;Touhou parody&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -267,7 +277,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bxegqv87JhA&quot;&gt;Father Time&lt;/a&gt;, Episode 2010&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;similarityhomage&quot;&gt;Similarity/homage&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Similarity/homage&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Dngwio0eJS0&quot;&gt;Rising Force&lt;/a&gt;, Yngwie Malmsteen {&lt;a href=&quot;https://www.youtube.com/watch?v=_k27dYN8eCY&quot;&gt;Rising Scarlet&lt;/a&gt; (東方緋想天), THUNDER CONCERTO (C75), IRON ATTACK}&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=o8p4raXEQLU&quot;&gt;Back in the Village&lt;/a&gt;, Iron Maiden {&lt;a href=&quot;https://www.youtube.com/watch?v=Dn4zUG6O2lU&quot;&gt;Suck a Sage&lt;/a&gt;, Ishiwatari Daisuke}&lt;/li&gt;
@@ -333,7 +343,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.math.stonybrook.edu/~aknapp/pdf-files/1-27.pdf&quot;&gt;Structure theory of semisimple Lie groups&lt;/a&gt;, Knapp 1997&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;algebraic-groups&quot;&gt;Algebraic groups&lt;/h3&gt;
+&lt;p&gt;Algebraic groups&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://hkumath.hku.hk/~imr/records0001/borel.pdf&quot;&gt;Lie Groups and Linear Algebraic Groups I. Complex and Real Groups&lt;/a&gt;, Borel&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.jmilne.org/math/CourseNotes/aag.pdf&quot;&gt;Algebraic Groups and Arithmetic Groups&lt;/a&gt;, Milne 2005&lt;/li&gt;
@@ -344,7 +354,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Distribution_on_a_linear_algebraic_group&quot;&gt;Distributions on a linear algebraic group&lt;/a&gt;, Wikipedia&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;symmetric-spaces-and-multiplicities&quot;&gt;Symmetric spaces and multiplicities&lt;/h3&gt;
+&lt;p&gt;Symmetric spaces and multiplicities&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Foundations of Differential Geometry&lt;/em&gt;, Vol. 2, Kobayashi and Nomizu 1963&lt;/li&gt;
 &lt;li&gt;Perspectives on Invariant Theory: Schur Duality, Multiplicity-Free Actions and Beyond in &lt;em&gt;The Schur Lectures&lt;/em&gt;, Howe 1992&lt;/li&gt;
@@ -358,7 +368,8 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;&lt;em&gt;Symmetry, Representations, and Invariants&lt;/em&gt;, Goodman and Wallach 2009 (Chapter 12)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Added to the list of great scientists we’ve lost in 2018 are &lt;a href=&quot;https://twitter.com/sapinker/status/1079436841017851906&quot;&gt;Judith Rich Harris&lt;/a&gt; of the &lt;em&gt;Nurture Assumption&lt;/em&gt; fame and &lt;a href=&quot;https://www.washingtonpost.com/local/obituaries/roy-glauber-nobel-winning-physicist-who-applied-quantum-mechanics-to-optics-dies-at-93/2018/12/30/b7e4e05e-0b24-11e9-a3f0-71c95106d96a_story.html&quot;&gt;Roy Glauber&lt;/a&gt;. Glauber and E.C.G. Sudarshan (who also passed away earlier in 2018), are both monumental figures that helped define the field of quantum optics that we know today.&lt;/li&gt;
 &lt;li&gt;Apparently living in an area with 22 &lt;span class=&quot;math&quot;&gt;\(\mu g/m^3\)&lt;/span&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/Particulates&quot;&gt;PM2.5&lt;/a&gt; is &lt;a href=&quot;http://berkeleyearth.org/air-pollution-and-cigarette-equivalence/&quot;&gt;equivalent to smoking a cigarette per day&lt;/a&gt;.&lt;/li&gt;
@@ -386,7 +397,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://cube20.org/&quot;&gt;God’s Number is 20&lt;/a&gt;: the longest shortest sequence to solve a Rubik’s cube is 20 moves in the half-turn metric (any non-trivial turn of a face counts as one move).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;physicsquantum&quot;&gt;Physics/quantum&lt;/h2&gt;
+&lt;h3 id=&quot;physicsquantum&quot;&gt;Physics/quantum&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Trump signs the $1.2 billion &lt;a href=&quot;https://www.technologyreview.com/the-download/612679/president-trump-has-signed-a-12-billon-law-to-boost-us-quantum-tech/&quot;&gt;National Quantum Initiative Act&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://cognitivemedium.com/qc-a-science&quot;&gt;In what sense is quantum computing a science?&lt;/a&gt;, Nielsen&lt;/li&gt;
@@ -394,7 +405,7 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;li&gt;Boaz Barak’s blog, &lt;a href=&quot;https://windowsontheory.org&quot;&gt;Windows on Theory&lt;/a&gt;, is having a series of guest blog posts on connections between computer science and physics. The topics range from statistical-physics-inspired algorithms to quantum information and black hole information paradox.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/has-ligo-seen-galaxy-warped-gravitational-waves/&quot;&gt;George Smoot thinks&lt;/a&gt; that the region of the universe around us lacks “low-metallica” stars, giant stars that can collapse and give rise to &amp;gt;20 solar-mass black holes that LIGO and Virgo have been detecting, and so surmises that the events we have seen took place “much farther away—on the order of 10 billion light-years distant—magnified and made visible through gravitational lensing”.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
+&lt;h3 id=&quot;meditation&quot;&gt;Meditation&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://journals.sagepub.com/doi/10.1177/1745691617709589&quot;&gt;Mind the Hype: A Critical Evaluation and Prescriptive Agenda for Research on Mindfulness and Meditation&lt;/a&gt;, Van Dam et al. 2017&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/wheres-the-proof-that-mindfulness-meditation-works1/&quot;&gt;Where’s the Proof That Mindfulness Meditation Works?&lt;/a&gt;, SA [&lt;a href=&quot;https://www.reddit.com/r/skeptic/comments/76az0f/wheres_the_proof_that_mindfulness_meditation_works/dod3rpo/&quot;&gt;reddit comment&lt;/a&gt;]&lt;/li&gt;
@@ -406,23 +417,20 @@ There seems to be an exaggeration regarding paraquat contamination in soil and w
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Thomas Metzinger formalizes &lt;a href=&quot;https://www.blogs.uni-mainz.de/fb05philosophie/files/2013/04/Metzinger_suffering_penultimate.pdf&quot;&gt;necessary conditions for suffering&lt;/a&gt;: 1. conscious experience 2. self-model 3. negative values in the self-model 4. identification with the self-model. Buddhism’s “no self” strives to eliminate 2 (and consequently 3 and 4).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;gaming&quot;&gt;Gaming&lt;/h2&gt;
+&lt;h3 id=&quot;entertainment&quot;&gt;Entertainment&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=yhGjCzxJV3E&quot;&gt;Guilty Gear Xrd’s Art Style : The X Factor Between 2D and 3D&lt;/a&gt;, Junya C. Motomura, Lead character modeler&lt;/p&gt;
 &lt;p&gt;Team Red of Arc System Works was the only one that got anime-like cel-shading right. (They were thus given the job to handle &lt;a href=&quot;https://en.wikipedia.org/wiki/Dragon_Ball_FighterZ&quot;&gt;Dragon Ball FighterZ&lt;/a&gt; and now &lt;a href=&quot;(https://www.youtube.com/watch?v=ZQQo9vSj1_A)&quot;&gt;Granblue Fantasy Versus&lt;/a&gt;). Each character has its own fixed light source and the team manually adjusts the normal vector and the cel-shading threshold of each major polygon face (&lt;a href=&quot;https://youtu.be/yhGjCzxJV3E?t=970&quot;&gt;16:10&lt;/a&gt;) to make sure that every close-up frame looks good.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
-&lt;ul&gt;
 &lt;li&gt;Good &lt;a href=&quot;https://www.nicovideo.jp/watch/sm34393460&quot;&gt;Touhou anime parody&lt;/a&gt; still exists in 2019. (Onegai! Cinderella, The Idolm@ster Cinderella Girls)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://foreignpolicy.com/2019/01/23/super-patriotic-anime-youth-wars-china-japan-pop-culture/&quot;&gt;China’s responses to Japanese anime invasion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://foreignpolicy.com/2019/01/23/super-patriotic-anime-youth-wars-china-japan-pop-culture/&quot;&gt;China’s responses to Japanese anime invasion&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-tKVN2mAKRI&quot;&gt;Uchiage hanabi&lt;/a&gt;, DAOKO X Yonezu Kenshi&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Fj9Y9TGQn38&quot;&gt;Shadowgraph&lt;/a&gt;, Myth &amp;amp; Roid (Boogiepop wa warawanai 2019 OP)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DpCfhRVqJWU&quot;&gt;99.9&lt;/a&gt;, MOB CHOIR feat. sajou no hana (Mob Psycho 100 II OP)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-SjrlKsibqM&quot;&gt;Sayonara Gokko&lt;/a&gt;, amazarashi (Dororo 2019 ED)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://streamable.com/423z4&quot;&gt;Love Dramatic feat. Rikka Ihara&lt;/a&gt;, Masayuki Suzuki (Kaguya-sama wa kokurasetai OP)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Fj9Y9TGQn38&quot;&gt;Shadowgraph&lt;/a&gt;, Myth &amp;amp; Roid {Boogiepop wa warawanai 2019} [OP]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DpCfhRVqJWU&quot;&gt;99.9&lt;/a&gt;, MOB CHOIR feat. sajou no hana {Mob Psycho 100 II} [OP]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-SjrlKsibqM&quot;&gt;Sayonara Gokko&lt;/a&gt;, amazarashi {Dororo 2019} [ED]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://streamable.com/423z4&quot;&gt;Love Dramatic feat. Rikka Ihara&lt;/a&gt;, Masayuki Suzuki {Kaguya-sama wa kokurasetai} [OP]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;touhou&quot;&gt;Touhou&lt;/h3&gt;
 &lt;ul&gt;

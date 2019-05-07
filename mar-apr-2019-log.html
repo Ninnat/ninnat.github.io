@@ -247,15 +247,13 @@ $(document).ready(function() {
 <ul>
 <li><a href="https://arxiv.org/abs/1703.00111">Unbiased Simulation of Near-Clifford Quantum Circuits</a>, Bennink et al. 2017</li>
 <li><a href="https://arxiv.org/abs/1901.09070">Simulation of Qubit Quantum Circuits via Pauli Propagation</a>, Rall, Liang, Cook and Kretschmer 1901.09070</li>
-<li><a href="http://arxiv.org/abs/1902.11257">Efficient classical simulation of Clifford circuits with nonstabilizer input states</a>, Bu and Koh 1902.11257</li>
-</ul>
+<li><p><a href="http://arxiv.org/abs/1902.11257">Efficient classical simulation of Clifford circuits with nonstabilizer input states</a>, Bu and Koh 1902.11257</p>
 <p>Let <span class="math">\(\mathcal{C}_3\)</span> be a circuit composed of gates from the third level of <a href="https://arxiv.org/abs/quant-ph/9908010">Clifford hierarchy</a>.</p>
 <p><strong>Theorem 1.</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)</span> and computational basis measurement can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]</span> <span class="math">\(\lambda\)</span> measures the mixedness of the most pure <span class="math">\(\rho_j\)</span>, namely the <span class="math">\(\lambda = \epsilon\)</span> for every qubit state of the form <span class="math">\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)</span>. The <span class="math">\(1-2/\alpha\)</span> comes from using the <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov inequality</a> on the average of the <span class="math">\(l_1\)</span> norm of the Fourier coefficients of the output probabilities over the uniform distribution of Cliffords (a <a href="https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs">unitary 2-design</a>).<br /> Since qudit (<span class="math">\(d \ge 3\)</span>) Cliffords also form a 2-design, the latter technique should generalize. (The set of qubit Cliffords is not just a 2-design but also a <a href="https://arxiv.org/abs/1510.02619">3</a>-<a href="https://arxiv.org/abs/1510.02769">design</a>.)</p>
 <p>When every input state is pure, the exponent blows up. For that, we have</p>
 <p><strong>Theorem 2</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ket{0}^{\otimes n} \otimes^m_{j=1} \ket{\psi_j}\)</span> and computational basis measurement on <span class="math">\(k\)</span> qubits, the number of of unmeasured qubits being greater than the log of the <em>Pauli rank</em> <span class="math">\[ n+m-k \ge \sum^m_{j=1} \log \left( \frac{\chi(\psi_j)}{2} \right), \]</span> can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[ (n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\mu \right]}, \]</span> where now <span class="math">\[ \mu(\psi) := 2(1-\max_{\phi \in \mathrm{stab}} |\av{\phi|\psi}|^2). \]</span> The fidelity to the closest stabilizer state is the <em>stabilizer rank</em>. Curiously, the more “stabilizer-ness” the <em>worse</em> the runtime!</p>
-<p>The method is inspired by <a href="https://arxiv.org/abs/1810.03176">“Efficient classical simulation of noisy quantum computation”</a> by Gao and Duan, and much like that paper, Bu and Koh’s paper is about <em>average-case</em> difficulty. Notably Gao and Duan’s paper gives a classical simulation of a random quantum circuit with constant noise, seemingly contradicting the threshold theorem, but a fault-tolerant circuit is hardly a random circuit.</p>
-<ul>
-<li>Having talked to Kaifeng Bu, his <a href="https://arxiv.org/abs/1812.00224">“Classical simulation of quantum circuits by half Gauss sums”</a> is also interesting. Curiously, the paper also has something to say about the “Holant function”, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.634.7031&amp;rep=rep1&amp;type=pdf">related to perfect matchings on weighted graphs</a> (matchgate tensors).</li>
+<p>The method is inspired by <a href="https://arxiv.org/abs/1810.03176">“Efficient classical simulation of noisy quantum computation”</a> by Gao and Duan, and much like that paper, Bu and Koh’s paper is about <em>average-case</em> difficulty. Notably Gao and Duan’s paper gives a classical simulation of a random quantum circuit with constant noise, seemingly contradicting the threshold theorem, but a fault-tolerant circuit is hardly a random circuit.</p></li>
+<li><p>Having talked to Kaifeng Bu, his <a href="https://arxiv.org/abs/1812.00224">“Classical simulation of quantum circuits by half Gauss sums”</a> is also interesting. Curiously, the paper also has something to say about the “Holant function”, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.634.7031&amp;rep=rep1&amp;type=pdf">related to perfect matchings on weighted graphs</a> (matchgate tensors).</p></li>
 </ul>
 <h2 id="representation-theory">Representation theory</h2>
 <ul>
@@ -280,12 +278,10 @@ $(document).ready(function() {
 </ul>
 <h2 id="linear-programming">Linear programming</h2>
 <ul>
-<li><a href="https://mathoverflow.net/a/145079/54448">Why are optimization problems called “programs”?</a>, MO</li>
-</ul>
+<li><p><a href="https://mathoverflow.net/a/145079/54448">Why are optimization problems called “programs”?</a>, MO</p>
 <blockquote>
 <p>The military refer to their various plans or proposed schedules of training, logistical supply and deployment of combat units as a program. When I first analyzed the Air Force planning problem and saw that it could be formulated as a system of linear inequalities, I called my paper Programming in a Linear Structure. Note that the term ‘program’ was used for linear programs long before it was used as the set of instructions used by a computer. In the early days, these instructions were called codes.</p>
-</blockquote>
-<ul>
+</blockquote></li>
 <li><a href="https://doi.org/10.1017/S0962492900002646">Eigenvalue optimization [paywalled]</a>, Lewis and Overton 1996 <!-- [Minimum $l_{\infty}$ Norm Solutions To Finite Dimensional Algebraic Underdetermined Linear Systems](http://wiredspace.wits.ac.za/bitstream/handle/10539/16858/20140910_Infinity%2020Norm%20Minimization_MSc%20Thesis_EarleAC.pdf?sequence=1), Adam Christopher Earle, University of Witwatersrand thesis 2014 --></li>
 <li>Minimization largest eigenvalue (minimizing the <span class="math">\(l_{\infty}\)</span>-norm) <a href="https://math.stackexchange.com/questions/2589887/how-can-the-infinity-norm-minimization-problem-be-rewritten-as-a-linear-program">can be written as a linear program</a>.</li>
 <li>Finding the sparsest solution (minimizing the <span class="math">\(l_0\)</span>-“norm”) is NP-hard. The standard trick is to instead <a href="https://ieeexplore.ieee.org/abstract/document/1255564">optimize for the <span class="math">\(l_1\)</span>-norm</a>. But for the problem I’m concerning, I’m optimizing over probability vectors so that is out of the question.</li>
@@ -325,10 +321,9 @@ $(document).ready(function() {
 <li><a href="https://www.quantamagazine.org/the-evolutionary-math-puzzle-20180815/">The grandmother hypothesis</a>, Quanta</li>
 <li><a href="https://www.theguardian.com/science/2019/mar/28/scientists-find-genetic-mutation-that-makes-woman-feel-no-pain">Mutations render a woman unable to feel pain or anxiety</a>. The mutations shut down the gene controlling <a href="https://en.wikipedia.org/wiki/Fatty_acid_amide_hydrolase">FAAH</a> which breaks down <a href="https://en.wikipedia.org/wiki/Anandamide">anandamide</a>, a natural cannabis-like substance.</li>
 <li>Karen Uhlenback is <a href="https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/">the first woman to win the Abel Prize</a>. (Uhlenback of the <a href="https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process">Ornstein-Uhlenback process</a> is her father-in-law.)</li>
-<li><p>The 1993 article, <a href="https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf">The Death of Proof</a> doesn’t age well, and the author knows it: [<a href="https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/">The Horgan Surface and the Death of Proof</a>] [<a href="https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/">Okay, Maybe Proofs Aren’t Dying After All</a>]</p></li>
+<li>The 1993 article, <a href="https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf">The Death of Proof</a> doesn’t age well, and the author knows it: [<a href="https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/">The Horgan Surface and the Death of Proof</a>] [<a href="https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/">Okay, Maybe Proofs Aren’t Dying After All</a>]</li>
 <li>Corn production is estimated to account for <a href="https://www.npr.org/sections/thesalt/2019/04/01/708818581/growing-corn-is-a-major-contributor-to-air-pollution-study-finds">4,300 premature deaths related to air pollution in the US per year</a>. Ammonia from fertilizer application was by far the largest contributor to corn’s air pollution footprint. 86% of PM2.5 emissions happen on farm</li>
-<li><p><a href="https://www.newyorker.com/magazine/2019/04/08/the-day-the-dinosaurs-died">The Day the Dinosaurs Died</a>, New Yorker</p></li>
-</ul>
+<li><p><a href="https://www.newyorker.com/magazine/2019/04/08/the-day-the-dinosaurs-died">The Day the Dinosaurs Died</a>, New Yorker</p>
 <blockquote>
 <p>One day sixty-six million years ago, life on Earth almost came to a shattering end. The world that emerged after the impact was a much simpler place. When sunlight finally broke through the haze, it illuminated a hellish landscape. The oceans were empty. The land was covered with drifting ash. The forests were charred stumps. The cold gave way to extreme heat as a greenhouse effect kicked in. Life mostly consisted of mats of algae and growths of fungus: for years after the impact, the Earth was covered with little other than ferns. Furtive, ratlike mammals lived in the gloomy understory. But eventually life emerged and blossomed again, in new forms.</p>
 </blockquote>
@@ -336,12 +331,11 @@ $(document).ready(function() {
 <p>In the 70’s, Walter (geologist) and Luis Alvarez (nuclear physicist) discovered a KT layer laced with iridium, conjectured to be from the asteroid impact. The impact crater (named Chicxulub) was found in 1991. The debate was considered largely settled <a href="http://science.sciencemag.org/content/327/5970/1214">in 2010</a> (wow!) that the asteroid caused the extinction.</p>
 <p>“3 metre problem”: almost no dinosaur remains have before been found 3 metres below the so-called “KT boundary”, a layer of sediment that preserves the asteroid’s debris and ash from the extinction event.</p>
 <p><a href="https://www.pnas.org/content/early/2019/03/27/1817407116">The new paper</a> is a result from the discovery dated back to 2012 by a grad student Robert DePalma of the KT site “Tanis” (a Raiders-of-the-Lost-Ark reference) at Hell Creek in North Dakota. They even found preserved microtektites, a sort of glass beads or spindles that formed from molten rock ejected during the impact and solidified when re-entering the atmosphere. This suggests that the site recorded the first hours or so of the extinction event.</p>
-<p>Geophysics problem: there was not enough time for the flood that would preserve the microtektites to reach the site from the source of impact. They conjectured that the flood was caused by seiches that can happen far away from the source, and estimated the time all kinds of different seismic waves would arrive at the site to cause such seiches (6, 10, and 13 minutes).</p>
-<ul>
+<p>Geophysics problem: there was not enough time for the flood that would preserve the microtektites to reach the site from the source of impact. They conjectured that the flood was caused by seiches that can happen far away from the source, and estimated the time all kinds of different seismic waves would arrive at the site to cause such seiches (6, 10, and 13 minutes).</p></li>
 <li><a href="https://www.sciencemag.org/news/2019/04/astonishment-skepticism-greet-fossils-claimed-record-dinosaur-killing-asteroid-impact">Skepticism greet fossils claimed to record dinosaur-killing asteroid impact</a>, ScienceMag</li>
 <li>Tax preparation companies lobby Congress to <a href="https://www.vox.com/2019/4/9/18301943/last-minute-tax-preparation-h-r-block-turbotax">ban IRS from creating their own free tax preparation software</a>.</li>
 <li>Weighted average of opinions based on prediction track records is <a href="https://www.vox.com/future-perfect/2019/4/5/18290870/forecasting-tetlock-prediction-markets-betting">at least as accurate as prediction markets</a> (n=535)</li>
-<li><a href="https://www.reddit.com/user/LimbRetrieval-Bot">You dropped this \</a></li>
+<li><p><a href="https://www.reddit.com/user/LimbRetrieval-Bot">You dropped this \</a></p></li>
 </ul>
 <h3 id="physicsquantummachine-learning">Physics/quantum/machine learning</h3>
 <ul>
@@ -349,14 +343,12 @@ $(document).ready(function() {
 <li>Das Sarma on <a href="https://physicstoday.scitation.org/doi/10.1063/PT.3.4153">how the scale of unifications in the present day physics is not so grand anymore</a>, Physics Today</li>
 <li>The 2016 Nobel laureate David Thouless <a href="https://physicsworld.com/a/topological-physics-pioneer-and-nobel-laureate-david-thouless-dies-at-84">passes away at 84</a>.</li>
 <li><a href="https://www.nature.com/articles/d41586-019-00573-4">Advanced LIGO+ will have frequency-dependent squeezing</a>. (“LIGO is already able to spot black holes billions of parsecs away. By 2022, it should detect about one such event per day, and the subsequent ALIGO+ upgrade should push that to one event every few hours.”)</li>
-<li><a href="https://physicstoday.scitation.org/do/10.1063/PT.6.1.20190411a/full/">What It Took to Capture a Black Hole</a>, Physics Todays</li>
-</ul>
+<li><p><a href="https://physicstoday.scitation.org/do/10.1063/PT.6.1.20190411a/full/">What It Took to Capture a Black Hole</a>, Physics Todays</p>
 <blockquote>
 <p>the team was able to resolve superheated plasma streaking just outside the photon orbit radius, the distance from the center of a black hole at which any inward-moving photon no longer has a chance to escape (as opposed to the event horizon, where nothing, regardless of its motion, can escape).</p>
 </blockquote>
 <p>The data were from the observing runs all in April 2017. The research team dedicated to imaging was divided into four groups, crunching the data in four different ways. The final image is essential a composite of the four group images “update with higher-quality data”.</p>
-<p>The next observing run in Spring next year should give us the spin of M87<em>. Meanwhile, the data that we have from observing Sagittarius A</em>, the black hole at the center of our galaxy, should already be enough to create a similar image. The only things required are “further advances in computational analysis” due to time variation.</p>
-<ul>
+<p>The next observing run in Spring next year should give us the spin of M87<em>. Meanwhile, the data that we have from observing Sagittarius A</em>, the black hole at the center of our galaxy, should already be enough to create a similar image. The only things required are “further advances in computational analysis” due to time variation.</p></li>
 <li><a href="https://www.nytimes.com/2019/04/11/science/katie-bouman-black-hole.html">How Katie Bouman Accidentally Became the Face of the Black Hole Project</a>, NY Times</li>
 <li>Alán Aspuru-Guzik now has a quantum computing startup <a href="https://www.forbes.com/sites/alexknapp/2019/04/17/this-startup-just-raised-21-million-to-bring-quantum-computing-to-enterprise-applications/">Zapata Computing</a>. (He <a href="https://www.thecrimson.com/article/2018/3/30/chem-prof-to-canada/">left Harvard for Toronto</a> last year.)</li>
 <li>Michael Nielsen’s <a href="https://quantum.country/search/">spaced-repetition based pedagogical article</a> on Grover’s search algorithm</li>
@@ -414,9 +406,9 @@ $(document).ready(function() {
 </ul>
 <h2 id="video-games">Video games</h2>
 <ul>
-<li><a href="https://store.steampowered.com/app/851100/Touhou_Luna_Nights/">Touhou Luna Nights</a>, Team Ladybug</li>
+<li><p><a href="https://store.steampowered.com/app/851100/Touhou_Luna_Nights/">Touhou Luna Nights</a>, Team Ladybug</p>
+<p><em>Pros:</em> Great pixel art and attentions to details. Quite a number of objects interacts with time manipulation. (Yes, you play as Sakuya.) The water physics is especially cool. <em>Cons:</em> Snail Time and the grace mechanics makes the game really easy, in addition to the short length and the map not sprawling enough for a Metroidvania, which reminds me that I haven’t finished <a href="https://store.steampowered.com/app/400910/RabiRibi/">Rabi-Ribi</a>. That one has a wondrous, sprawling map. (It is funny to bring up Rabi-Ribi as a comparison because it is a bullet hell game while Luna Nights is not, even though the latter is technically a Touhou game.)</p></li>
 </ul>
-<p><em>Pros:</em> Great pixel art and attentions to details. Quite a number of objects interacts with time manipulation. (Yes, you play as Sakuya.) The water physics is especially cool. <em>Cons:</em> Snail Time and the grace mechanics makes the game really easy, in addition to the short length and the map not sprawling enough for a Metroidvania, which reminds me that I haven’t finished <a href="https://store.steampowered.com/app/400910/RabiRibi/">Rabi-Ribi</a>. That one has a wondrous, sprawling map. (It is funny to bring up Rabi-Ribi as a comparison because it is a bullet hell game while Luna Nights is not, even though the latter is technically a Touhou game.)</p>
 <!-- [Mob Psycho 100 II](https://myanimelist.net/anime/37510/Mob_Psycho_100_II) (13 Episodes), Bones {ONE} [Webmanga] 2019 (Technically the last episode aired on April 1st, but whatever.)
 
   Both are excellent coming-of-age stories. -->
@@ -437,7 +429,7 @@ $(document).ready(function() {
     property="dc:created">07 May 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-05-07 14:14:17 +0000"
+            datetime="2019-05-07 14:23:30 +0000"
             property="dc:modified">07 May 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -470,7 +462,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/6ff9c281d44a2348ecc989e948030ece50680929/_posts/2019-05-01-mar-apr-2019-log.md"> 6ff9c28</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5667796c552272eec839d74d02aaca4373f3ae23/_posts/2019-05-01-mar-apr-2019-log.md"> 5667796</a></tiny></p>
 </aside>
 
 <br /><br />

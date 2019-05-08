@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-05-07T14:28:38+00:00</updated>
+ <updated>2019-05-08T03:01:31+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -63,10 +63,11 @@
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://doi.org/10.1017/S0962492900002646&quot;&gt;Eigenvalue optimization [paywalled]&lt;/a&gt;, Lewis and Overton 1996 &lt;!-- [Minimum $l_{\infty}$ Norm Solutions To Finite Dimensional Algebraic Underdetermined Linear Systems](http://wiredspace.wits.ac.za/bitstream/handle/10539/16858/20140910_Infinity%2020Norm%20Minimization_MSc%20Thesis_EarleAC.pdf?sequence=1), Adam Christopher Earle, University of Witwatersrand thesis 2014 --&gt;&lt;/li&gt;
 &lt;li&gt;Minimization largest eigenvalue (minimizing the &lt;span class=&quot;math&quot;&gt;\(l_{\infty}\)&lt;/span&gt;-norm) &lt;a href=&quot;https://math.stackexchange.com/questions/2589887/how-can-the-infinity-norm-minimization-problem-be-rewritten-as-a-linear-program&quot;&gt;can be written as a linear program&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Finding the sparsest solution (minimizing the &lt;span class=&quot;math&quot;&gt;\(l_0\)&lt;/span&gt;-“norm”) is NP-hard. The standard trick is to instead &lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/1255564&quot;&gt;optimize for the &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt;-norm&lt;/a&gt;. But for the problem I’m concerning, I’m optimizing over probability vectors so that is out of the question.&lt;/li&gt;
+&lt;li&gt;Finding the sparsest solution (minimizing the &lt;span class=&quot;math&quot;&gt;\(l_0\)&lt;/span&gt;-“norm”) is NP-hard. The standard trick is to instead &lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/1255564&quot;&gt;optimize for the &lt;span class=&quot;math&quot;&gt;\(l_1\)&lt;/span&gt;-norm&lt;/a&gt;. But for the problem I’m concerning, I’m optimizing over probability vectors so that is out of the question.
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.math.unipd.it/~rinaldi/papers/thesis0.pdf&quot;&gt;Mathematical Programming Methods for Minimizing the Zero-norm over Polyhedral Sets&lt;/a&gt;, Francesco Rinaldi, University of Rome thesis &lt;!-- [Linear programming in python](https://stackoverflow.com/a/10705799), SE --&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The example pages for&lt;a href=&quot;https://www.cvxpy.org/install/index.html&quot;&gt;&lt;code&gt;cvxpy&lt;/code&gt;&lt;/a&gt; has a code for &lt;a href=&quot;https://www.cvxpy.org/examples/applications/sparse_solution.html&quot;&gt;iterative logarithm heuristic&lt;/a&gt; to find a sparse solution. &lt;code&gt;cvxpy&lt;/code&gt; needs Microsoft Visual C++ 14.0. Go and download &lt;a href=&quot;https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017&quot;&gt;Visual Studio 2019 (16.0) (Community)&lt;/a&gt;. Open the installer and &lt;a href=&quot;https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat&quot;&gt;check “Desktop Development with C++”&lt;/a&gt;. To be safe, also upgrade the &lt;code&gt;setuptools&lt;/code&gt; with&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install --upgrade setuptools&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The example pages for&lt;a href=&quot;https://www.cvxpy.org/install/index.html&quot;&gt;&lt;code&gt;cvxpy&lt;/code&gt;&lt;/a&gt; has a code for &lt;a href=&quot;https://www.cvxpy.org/examples/applications/sparse_solution.html&quot;&gt;iterative logarithm heuristic&lt;/a&gt; to find a sparse solution. &lt;code&gt;cvxpy&lt;/code&gt; needs Microsoft Visual C++ 14.0. Go and download &lt;a href=&quot;https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017&quot;&gt;Visual Studio 2019 (16.0) (Community)&lt;/a&gt;. Open the installer and &lt;a href=&quot;https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat&quot;&gt;check “Desktop Development with C++”&lt;/a&gt;. To be safe, also upgrade the &lt;code&gt;setuptools&lt;/code&gt; with &lt;code&gt;pip install --upgrade setuptools&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
 &lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
@@ -170,7 +171,8 @@
 &lt;/ul&gt;
 &lt;h3 id=&quot;touhou&quot;&gt;Touhou&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kSjVejxBI-g&quot;&gt;邪な炎&lt;/a&gt; (Solar Sect of Mystic Wisdom ~ Nuclear Fusion), Abyss (C95), BUTAOTOME&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=4vegkBjpO9A&quot;&gt;2&lt;/a&gt;+&lt;a href=&quot;https://www.youtube.com/watch?v=qcSVPCWCPbk&quot;&gt;1&lt;/a&gt; hours of Touhou trance remixes by D-514&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kSjVejxBI-g&quot;&gt;邪な炎&lt;/a&gt; (Solar Sect of Mystic Wisdom ~ Nuclear Fusion), &lt;a href=&quot;http://butaotome.com/2018/c95/&quot;&gt;Abyss&lt;/a&gt; (C95), BUTAOTOME&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SxaS9KWCBNw&quot;&gt;Tick-Tock Anthology&lt;/a&gt; (Kid’s Festival ~ Innocent Treasures &amp;amp; Gensokyo The Gods Loved), &lt;a href=&quot;https://huringcatmark.booth.pm/items/364619&quot;&gt;Baby Little City&lt;/a&gt; (C90), Fuling Cat Mark (Genre: &lt;a href=&quot;https://en.wikipedia.org/wiki/Shibuya-kei&quot;&gt;Shibuya-Kei&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;manga&quot;&gt;Manga&lt;/h2&gt;

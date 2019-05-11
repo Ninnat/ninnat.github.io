@@ -249,11 +249,11 @@ $(document).ready(function() {
 <li><a href="https://arxiv.org/abs/1901.09070">Simulation of Qubit Quantum Circuits via Pauli Propagation</a>, Rall, Liang, Cook and Kretschmer 1901.09070</li>
 <li><p><a href="http://arxiv.org/abs/1902.11257">Efficient classical simulation of Clifford circuits with nonstabilizer input states</a>, Bu and Koh 1902.11257</p>
 <p>Let <span class="math">\(\mathcal{C}_3\)</span> be a circuit composed of gates from the third level of <a href="https://arxiv.org/abs/quant-ph/9908010">Clifford hierarchy</a>.</p>
-<p><strong>Theorem 1.</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)</span> and computational basis measurement can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]</span> <span class="math">\(\lambda\)</span> measures the mixedness of the most pure <span class="math">\(\rho_j\)</span>, namely the <span class="math">\(\lambda = \epsilon\)</span> for every qubit state of the form <span class="math">\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)</span>. The <span class="math">\(1-2/\alpha\)</span> comes from using the <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov inequality</a> on the average of the <span class="math">\(l_1\)</span> norm of the Fourier coefficients of the output probabilities over the uniform distribution of Cliffords (a <a href="https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs">unitary 2-design</a>).<br /> Since qudit (<span class="math">\(d \ge 3\)</span>) Cliffords also form a 2-design, the latter technique should generalize. (The set of qubit Cliffords is not just a 2-design but also a <a href="https://arxiv.org/abs/1510.02619">3</a>-<a href="https://arxiv.org/abs/1510.02769">design</a>.)</p>
+<p><strong>Theorem 1.</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ketbra{0}{0}^{\otimes n} \otimes^m_{j=1} \rho_j\)</span> and computational basis measurement can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[(n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\lambda \right]}.\]</span> <span class="math">\(\lambda\)</span> measures the mixedness of the most pure <span class="math">\(\rho_j\)</span>, namely the <span class="math">\(\lambda = \epsilon\)</span> for every qubit state of the form <span class="math">\((1-\epsilon)\ketbra{\psi}{\psi} + \epsilon\id/2\)</span>. The <span class="math">\(1-2/\alpha\)</span> comes from using the <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov inequality</a> on the average of the <span class="math">\(l_1\)</span> norm of the Fourier coefficients of the output probabilities over the uniform distribution of Cliffords (a <a href="https://en.wikipedia.org/wiki/Quantum_t-design#Unitary_t-Designs">unitary 2-design</a>). Since qudit (<span class="math">\(d \ge 3\)</span>) Cliffords also form a 2-design, the latter technique should generalize. (The set of qubit Cliffords is not just a 2-design but also a <a href="https://arxiv.org/abs/1510.02619">3</a>-<a href="https://arxiv.org/abs/1510.02769">design</a>.)</p>
 <p>When every input state is pure, the exponent blows up. For that, we have</p>
 <p><strong>Theorem 2</strong> The output probabilities of a circuit <span class="math">\(\mathcal{C}_3\)</span> on <span class="math">\(n+m\)</span> qubits with input state <span class="math">\(\ket{0}^{\otimes n} \otimes^m_{j=1} \ket{\psi_j}\)</span> and computational basis measurement on <span class="math">\(k\)</span> qubits, the number of of unmeasured qubits being greater than the log of the <em>Pauli rank</em> <span class="math">\[ n+m-k \ge \sum^m_{j=1} \log \left( \frac{\chi(\psi_j)}{2} \right), \]</span> can be approximated up to <span class="math">\(l_1\)</span> norm <span class="math">\(\delta\)</span> in <span class="math">\[ (n+m)^{\mathcal{O}(1)} m^{\mathcal{O}\left[ \log \left( \sqrt{\alpha} /\delta \right)/\mu \right]}, \]</span> where now <span class="math">\[ \mu(\psi) := 2(1-\max_{\phi \in \mathrm{stab}} |\av{\phi|\psi}|^2). \]</span> The fidelity to the closest stabilizer state is the <em>stabilizer rank</em>. Curiously, the more “stabilizer-ness” the <em>worse</em> the runtime!</p>
 <p>The method is inspired by <a href="https://arxiv.org/abs/1810.03176">“Efficient classical simulation of noisy quantum computation”</a> by Gao and Duan, and much like that paper, Bu and Koh’s paper is about <em>average-case</em> difficulty. Notably Gao and Duan’s paper gives a classical simulation of a random quantum circuit with constant noise, seemingly contradicting the threshold theorem, but a fault-tolerant circuit is hardly a random circuit.</p></li>
-<li><p>Having talked to Kaifeng Bu, his <a href="https://arxiv.org/abs/1812.00224">“Classical simulation of quantum circuits by half Gauss sums”</a> is also interesting. Curiously, the paper also has something to say about the “Holant function”, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.634.7031&amp;rep=rep1&amp;type=pdf">related to perfect matchings on weighted graphs</a> (matchgate tensors).</p></li>
+<li><p>Having talked to Kaifeng Bu, I should read his <a href="https://arxiv.org/abs/1812.00224">“Classical simulation of quantum circuits by half Gauss sums”</a>. Interestingly, the paper also has something to say about the “Holant function”, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.634.7031&amp;rep=rep1&amp;type=pdf">related to perfect matchings on weighted graphs</a> (“matchgate tensors”).</p></li>
 </ul>
 <h2 id="representation-theory">Representation theory</h2>
 <ul>
@@ -283,12 +283,12 @@ $(document).ready(function() {
 <p>The military refer to their various plans or proposed schedules of training, logistical supply and deployment of combat units as a program. When I first analyzed the Air Force planning problem and saw that it could be formulated as a system of linear inequalities, I called my paper Programming in a Linear Structure. Note that the term ‘program’ was used for linear programs long before it was used as the set of instructions used by a computer. In the early days, these instructions were called codes.</p>
 </blockquote></li>
 <li><a href="https://doi.org/10.1017/S0962492900002646">Eigenvalue optimization [paywalled]</a>, Lewis and Overton 1996 <!-- [Minimum $l_{\infty}$ Norm Solutions To Finite Dimensional Algebraic Underdetermined Linear Systems](http://wiredspace.wits.ac.za/bitstream/handle/10539/16858/20140910_Infinity%2020Norm%20Minimization_MSc%20Thesis_EarleAC.pdf?sequence=1), Adam Christopher Earle, University of Witwatersrand thesis 2014 --></li>
-<li>Minimization largest eigenvalue (minimizing the <span class="math">\(l_{\infty}\)</span>-norm) <a href="https://math.stackexchange.com/questions/2589887/how-can-the-infinity-norm-minimization-problem-be-rewritten-as-a-linear-program">can be written as a linear program</a>.</li>
+<li>Minimizing the largest eigenvalue (minimizing the <span class="math">\(l_{\infty}\)</span>-norm) <a href="https://math.stackexchange.com/questions/2589887/how-can-the-infinity-norm-minimization-problem-be-rewritten-as-a-linear-program">can be written as a linear program</a>.</li>
 <li>Finding the sparsest solution (minimizing the <span class="math">\(l_0\)</span>-“norm”) is NP-hard. The standard trick is to instead <a href="https://ieeexplore.ieee.org/abstract/document/1255564">optimize for the <span class="math">\(l_1\)</span>-norm</a>. But for the problem I’m concerning, I’m optimizing over probability vectors so that is out of the question.
 <ul>
-<li><a href="https://www.math.unipd.it/~rinaldi/papers/thesis0.pdf">Mathematical Programming Methods for Minimizing the Zero-norm over Polyhedral Sets</a>, Francesco Rinaldi, University of Rome thesis <!-- [Linear programming in python](https://stackoverflow.com/a/10705799), SE --></li>
+<li><a href="https://www.math.unipd.it/~rinaldi/papers/thesis0.pdf">Mathematical Programming Methods for Minimizing the Zero-norm over Polyhedral Sets</a>, Francesco Rinaldi, University of Rome thesis <!-- [[Linear programming in python]](https://stackoverflow.com/a/10705799)  --></li>
+<li>The example pages for<a href="https://www.cvxpy.org/install/index.html"><code>cvxpy</code></a> has a code for the <a href="https://www.cvxpy.org/examples/applications/sparse_solution.html">iterative logarithm heuristic</a> to find a sparse solution. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
 </ul></li>
-<li><p>The example pages for<a href="https://www.cvxpy.org/install/index.html"><code>cvxpy</code></a> has a code for <a href="https://www.cvxpy.org/examples/applications/sparse_solution.html">iterative logarithm heuristic</a> to find a sparse solution. <code>cvxpy</code> needs Microsoft Visual C++ 14.0. Go and download <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017">Visual Studio 2019 (16.0) (Community)</a>. Open the installer and <a href="https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat">check “Desktop Development with C++”</a>. To be safe, also upgrade the <code>setuptools</code> with <code>pip install --upgrade setuptools</code></p></li>
 </ul>
 <h1 id="media">Media</h1>
 <h2 id="links">Links</h2>
@@ -298,7 +298,7 @@ $(document).ready(function() {
 <p>his wish to overcome gravity dated from the childhood drowning of his sister. “She was unable to fight gravity, which came up and seized her like a dragon and brought her to the bottom,” he wrote.</p>
 </blockquote></li>
 <li><a href="https://medium.com/the-spike/the-crimes-against-dopamine-b82b082d5f3d">Dopamine: fast and slow</a> (Fast spike or inhibition of dopamine signals the (emotionally positive or negative) error between prediction and reality, not reward. Slow dopamine is for wanting, motivation to work, not happiness.)</li>
-<li><p><a href="https://www.1843magazine.com/features/the-scientists-who-make-apps-addictive">The Scientists Who Make Apps Addictive</a> (B.J. Fogg’s students went on to found Instagram or write books like <em>Hooked: How to Build Habit-Forming Products</em>.)</p>
+<li><p><a href="https://www.1843magazine.com/features/the-scientists-who-make-apps-addictive">The Scientists Who Make Apps Addictive</a> (B.J. Fogg’s students went on to found Instagram and write books like <em>Hooked: How to Build Habit-Forming Products</em>.)</p>
 <blockquote>
 <p>“I look at some of my former students and I wonder if they’re really trying to make the world better, or just make money,” said Fogg. “What I always wanted to do was un-enslave people from technology.”</p>
 </blockquote>
@@ -312,11 +312,11 @@ $(document).ready(function() {
 <li>The bad PowerPoint slide <a href="https://mcdreeamiemusings.com/new-blog/2019/4/13/gsux1h6bnt8lqjd7w2t2mtvfg81uhx">that contributes to the Space Shuttle Columbia disaster</a></li>
 <li>If you think you’re in a bad place, your life could be worse if you are <a href="https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona">Facebook moderators</a></li>
 <li><a href="https://slatestarcodex.com/2019/01/01/what-happened-to-90s-environmentalism/">What happened to 90s environmentalism?</a>, SSC (Do environmental problems fall out of public consciousness because they have been solved successfully or because they were just a fad all along?)</li>
-<li><p>Insect biomass declines by 75% [<a href="https://www.scientificamerican.com/article/insect-ldquo-armageddon-rdquo-5-crucial-questions-answered/">SA</a>] [<a href="https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html">NYT</a>] [<a href="https://www.huffpost.com/entry/nature-destruction-climate-change-world-biodiversity_n_5c49e78ce4b06ba6d3bb2d44?utm_source=politics_fb&amp;utm_campaign=hp_fb_pages&amp;utm_medium=facebook&amp;section=politics&amp;ncid=fcbklnkushpmg00000013">HuffPost</a>] [<a href="https://www.theguardian.com/environment/2019/jan/15/insect-collapse-we-are-destroying-our-life-support-systems">Guardian</a>] (Not sure what to conclude from all these.) <!--    - [Global insect declines: Why aren't we all dead yet?](https://www.lesswrong.com/posts/KwB9jA9FrsNczWr5F/global-insect-declines-why-aren-t-we-all-dead-yet) --></p></li>
+<li>Insect biomass declines by 75% [<a href="https://www.scientificamerican.com/article/insect-ldquo-armageddon-rdquo-5-crucial-questions-answered/">SA</a>] [<a href="https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html">NYT</a>] [<a href="https://www.huffpost.com/entry/nature-destruction-climate-change-world-biodiversity_n_5c49e78ce4b06ba6d3bb2d44?utm_source=politics_fb&amp;utm_campaign=hp_fb_pages&amp;utm_medium=facebook&amp;section=politics&amp;ncid=fcbklnkushpmg00000013">HuffPost</a>] [<a href="https://www.theguardian.com/environment/2019/jan/15/insect-collapse-we-are-destroying-our-life-support-systems">Guardian</a>] (Not sure what to conclude from all these.) <!--    - [Global insect declines: Why aren't we all dead yet?](https://www.lesswrong.com/posts/KwB9jA9FrsNczWr5F/global-insect-declines-why-aren-t-we-all-dead-yet) --></li>
 <li><a href="http://genestogenomes.org/kimura-crow-infinite-alleles/">Kimura &amp; Crow: Infinite Alleles</a> (Wanting to “do something in genetics like what the theoretical physicists were doing in physics,” Kimura ended up writing a heat equation obeyed by neutrally-evolved genes.)
 <ul>
 <li><a href="https://www.nature.com/scitable/topicpage/neutral-theory-the-null-hypothesis-of-molecular-839">Why should we care about neutral evolution?</a> (Neutral evolution provides a “null hypothesis”, the background noise to be compared and subtracted to get the signal.)</li>
-<li><a href="https://www.quantamagazine.org/neutral-theory-of-evolution-challenged-by-evidence-for-dna-selection-20181108/">An estimate of how much of the human genome undergoes neutral selection</a>, Quanta (&lt;5% and not all neutral alleles evolve follow Kimura’s theory, for example, those that are transmitted through a physical mechanism such as <a href="https://en.wikipedia.org/wiki/Genetic_linkage">linkage</a>.)</li>
+<li><a href="https://www.quantamagazine.org/neutral-theory-of-evolution-challenged-by-evidence-for-dna-selection-20181108/">An estimate of how much of the human genome undergoes neutral selection</a>, Quanta (&lt;5% and not all neutral alleles evolve following Kimura’s theory, for example, those that are transmitted through physical mechanism such as <a href="https://en.wikipedia.org/wiki/Genetic_linkage">linkage</a>.)</li>
 </ul></li>
 <li><a href="https://www.quantamagazine.org/mathematics-shows-how-to-ensure-evolution-20180626/">Natural selection on weighted graphs</a>, Quanta</li>
 <li><a href="https://www.quantamagazine.org/the-evolutionary-math-puzzle-20180815/">The grandmother hypothesis</a>, Quanta</li>
@@ -324,6 +324,7 @@ $(document).ready(function() {
 <li>Karen Uhlenback is <a href="https://www.quantamagazine.org/karen-uhlenbeck-uniter-of-geometry-and-analysis-wins-abel-prize-20190319/">the first woman to win the Abel Prize</a>. (Uhlenback of the <a href="https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process">Ornstein-Uhlenback process</a> is her father-in-law.)</li>
 <li>The 1993 article, <a href="https://www.math.uh.edu/~tomforde/Articles/DeathOfProof.pdf">The Death of Proof</a> doesn’t age well, and the author knows it: [<a href="https://blogs.scientificamerican.com/cross-check/the-horgan-surface-and-the-death-of-proof/">The Horgan Surface and the Death of Proof</a>] [<a href="https://blogs.scientificamerican.com/cross-check/okay-maybe-proofs-arent-dying-after-all/">Okay, Maybe Proofs Aren’t Dying After All</a>]</li>
 <li>Corn production is estimated to account for <a href="https://www.npr.org/sections/thesalt/2019/04/01/708818581/growing-corn-is-a-major-contributor-to-air-pollution-study-finds">4,300 premature deaths related to air pollution in the US per year</a>. Ammonia from fertilizer application was by far the largest contributor to corn’s air pollution footprint. 86% of PM2.5 emissions happen on farm</li>
+<li>The 2019 Winter smog in Thailand <a href="https://towardsdatascience.com/identifying-the-sources-of-winter-air-pollution-in-bangkok-part-ii-72539f9b767a">seems to correlate most with fire</a> from as far as 720 km away (Myanmar, Laos and Cambodia)</li>
 <li><p><a href="https://www.newyorker.com/magazine/2019/04/08/the-day-the-dinosaurs-died">The Day the Dinosaurs Died</a>, New Yorker</p>
 <blockquote>
 <p>One day sixty-six million years ago, life on Earth almost came to a shattering end. The world that emerged after the impact was a much simpler place. When sunlight finally broke through the haze, it illuminated a hellish landscape. The oceans were empty. The land was covered with drifting ash. The forests were charred stumps. The cold gave way to extreme heat as a greenhouse effect kicked in. Life mostly consisted of mats of algae and growths of fungus: for years after the impact, the Earth was covered with little other than ferns. Furtive, ratlike mammals lived in the gloomy understory. But eventually life emerged and blossomed again, in new forms.</p>
@@ -356,8 +357,7 @@ $(document).ready(function() {
 <li><a href="https://physicstoday.scitation.org/doi/10.1063/PT.3.4164">Machine learning in many-body quantum physics and quantum ML algorithms</a>, recommended.</li>
 <li><a href="https://arxiv.org/abs/1903.10563">Machine learning and the physical sciences</a> 1903.10563 (review article)</li>
 <li><a href="https://www.nytimes.com/2019/03/27/technology/turing-award-ai.html">Geoffrey Hinton, Yann LeCun and Yoshua Bengio</a> won the Turing Award.</li>
-<li>The 2019 Winter smog in Thailand <a href="https://towardsdatascience.com/identifying-the-sources-of-winter-air-pollution-in-bangkok-part-ii-72539f9b767a">seems to correlate most with fire</a> from as far as 720 km away (Myanmar, Laos and Cambodia)</li>
-<li><em>The Book of Why</em>, Pearl and Mackenzie 2018 [<a href="https://www.goodreads.com/review/show/2483026514?book_show_action=true&amp;from_review_page=1">critical review</a> on Goodreads]
+<li><em>The Book of Why</em>, Pearl and Mackenzie 2018 [A <a href="https://www.goodreads.com/review/show/2483026514?book_show_action=true&amp;from_review_page=1">critical review</a> on Goodreads]
 <ul>
 <li><a href="https://www.inference.vc/untitled/">ML beyond Curve Fitting: An Intro to Causal Inference and do-Calculus</a></li>
 </ul></li>
@@ -380,7 +380,7 @@ $(document).ready(function() {
 </ul>
 <h3 id="entertainment">Entertainment</h3>
 <ul>
-<li>A documentary on the CGI animation industry (1/3)
+<li>A documentary on the CGI animation industry (1/n)
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wRA8N0R81fc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
@@ -398,7 +398,7 @@ $(document).ready(function() {
 </ul>
 <h2 id="manga">Manga</h2>
 <ul>
-<li><a href="https://myanimelist.net/manga/96792/Kimetsu_no_Yaiba">Kimetsu no Yaiba</a> (Chapter 20 - 58), Gotouge Koyoharu (One of the manga recommended by Togashi Yoshihiro, the other two being <a href="https://www.reddit.com/r/HunterXHunter/comments/5ggzud/the_3_manga_togashi_recommends/">Gunjou no Magmel and EX-ARM</a>)</li>
+<li><a href="https://myanimelist.net/manga/96792/Kimetsu_no_Yaiba">Kimetsu no Yaiba</a> (Chapter 20 - 58), Gotouge Koyoharu (One of the manga <a href="https://www.reddit.com/r/HunterXHunter/comments/5ggzud/the_3_manga_togashi_recommends/">recommended by Togashi Yoshihiro</a>, the other two being Gunjou no Magmel and EX-ARM</li>
 </ul>
 <h2 id="anime">Anime</h2>
 <ul>
@@ -415,7 +415,12 @@ $(document).ready(function() {
 
   Both are excellent coming-of-age stories. -->
 
-
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><code>cvxpy</code> needs Microsoft Visual C++ 14.0. Go and download <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017">Visual Studio 2019 (16.0) (Community)</a>. Open the installer and <a href="https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat">check “Desktop Development with C++”</a>. To be safe, also upgrade the <code>setuptools</code> with <code>pip install --upgrade setuptools</code><a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 
           </article>
         </div>
@@ -431,8 +436,8 @@ $(document).ready(function() {
     property="dc:created">07 May 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-05-08 02:56:22 +0000"
-            property="dc:modified">08 May 2019</time></small></p>
+            datetime="2019-05-11 14:01:50 +0000"
+            property="dc:modified">11 May 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -464,7 +469,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/657b0931e93d081542efe1ff56af72583f26cfe6/_posts/2019-05-01-mar-apr-2019-log.md"> 657b093</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/acbea97571300749e57b685f52d34699532711cf/_posts/2019-05-01-mar-apr-2019-log.md"> acbea97</a></tiny></p>
 </aside>
 
 <br /><br />

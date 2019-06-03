@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Induced Representations [Drafted]</title>
+    <title>Induction as an Adjoint Functor [Drafted]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
@@ -20,13 +20,13 @@
 
 
 
-  <meta name="description" content="Induced Representations [Drafted]" />
+  <meta name="description" content="Induction as an Adjoint Functor [Drafted]" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="Induced Representations [Drafted]" />
+<meta property="dc:title" content="Induction as an Adjoint Functor [Drafted]" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
 <meta property="dc:date" content="2019-05-31 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
@@ -38,7 +38,7 @@
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="Induced Representations [Drafted]" />
+<meta property="og:title" content="Induction as an Adjoint Functor [Drafted]" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
@@ -49,14 +49,14 @@
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
 <meta name="citation_date" content="2019-05-31 00:00:00 +0000"/>
-<meta name="citation_title" content="Induced Representations [Drafted]"/>
+<meta name="citation_title" content="Induction as an Adjoint Functor [Drafted]"/>
 <meta name="citation_journal_title" content="Schur's Lemming"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Induced Representations [Drafted]" />
-<meta name="twitter:description" content="Induced Representations [Drafted]" />
+<meta name="twitter:title" content="Induction as an Adjoint Functor [Drafted]" />
+<meta name="twitter:description" content="Induction as an Adjoint Functor [Drafted]" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">Induced Representations [Drafted]</h1>
+    <h1 class="entry-title">Induction as an Adjoint Functor [Drafted]</h1>
     <h3></h3>
 </header>
 
@@ -227,21 +227,23 @@ $(document).ready(function() {
 <li><a href="#extension-of-scalars">Extension of scalars</a></li>
 </ul>
         <div id="toc"></div> -->
-          <p>Induction (and co-induction) are important constructions in representation theory that I found mysterious at first. In this post, I want to explain what they are.</p>
+          <div id="toc">
+
+</div>
+<p>Induction (and co-induction) are important and versatile constructions in representation theory that I found mysterious at first. In this post, I want to explain what they are.</p>
 <p>Given a representation <span class="math">\(\rho: G \to \GL(V)\)</span>, we can easily restrict it to a representation <span class="math">\(\rho\big|_{H}{}_{}\)</span> of a subgroup <span class="math">\(H \subset G\)</span>, and we can ask e.g. how <span class="math">\(V\)</span> breaks up into irreducible <span class="math">\(H\)</span>-representations. The inverse process is not so easy to cook up. Given a representation of a subgroup, how can we assign to it a unique representation of <span class="math">\(G\)</span>? What should the properties of this <em>induced</em> representation be?</p>
 <p>There are more than one answers which can be given precisely by <em>adjuntions</em> of the restriction.</p>
 <p>A kind of pseudo-inverse of restriction can be given in the framework of <em>adjoint functor</em>. For this, it will be also be very useful to think of a <span class="math">\(G\)</span>-representation <span class="math">\((\rho,V)\)</span> as a <em>module</em>, in particular, a module over the group ring <span class="math">\(\C[G]\)</span>.</p>
 <h1 id="modules">Modules</h1>
-<p><em>Modules</em> are generalizations of vector spaces. A vector space is an <a href="https://en.wikipedia.org/wiki/Abelian_group">abelian group</a> <span class="math">\(M\)</span> of vectors with addition, together with rules on how to multiply vectors by “scalars” from a number <a href="https://en.wikipedia.org/wiki/Field_(mathematics)">field</a> <span class="math">\(k\)</span> such as <span class="math">\(\R\)</span> or <span class="math">\(\C\)</span>: <span class="math">\[\begin{align}
+<p><em>Modules</em> are generalizations of vector spaces. A vector space is an <a href="https://en.wikipedia.org/wiki/Abelian_group">abelian group</a> <span class="math">\(M\)</span> of vectors with addition, together with the rules on how to scale vectors by numbers from a <a href="https://en.wikipedia.org/wiki/Field_(mathematics)">field</a> <span class="math">\(k\)</span> such as <span class="math">\(\R\)</span> or <span class="math">\(\C\)</span>: <span class="math">\[\begin{align}
   1m &amp;= m, \\
-  (r+s)m &amp;= rm + sm, \\
-  r(sm) &amp;= (rs)m, \\
-  r(m+n) &amp;= rm + rn,
-\end{align}\]</span> where <span class="math">\(1,r,s \in k\)</span>, 1 being the multiplicative identity in <span class="math">\(k\)</span>, and <span class="math">\(m,n \in M\)</span>. To obtain a module, one only has to change a field <span class="math">\(k\)</span> to a <a href="https://en.wikipedia.org/wiki/Ring_(mathematics)#Notes_on_the_definition"><em>ring with unity</em></a> <span class="math">\(R\)</span>. In other words, an <strong>(left) <span class="math">\(R\)</span>-module</strong> is an abelian group <span class="math">\(M\)</span> together with a ring homomorphism from a ring with unity <span class="math">\(R\)</span> to the <a href="https://en.wikipedia.org/wiki/Endomorphism_ring">endomorphism ring</a> of <span class="math">\(M\)</span> <span class="math">\[\begin{align}
+  (a+b)m &amp;= am + bm, \\
+  a(bm) &amp;= (ab)m, \\
+  a(m+n) &amp;= am + an,
+\end{align}\]</span> where <span class="math">\(a,b \in k\)</span>, 1 is the multiplicative identity in <span class="math">\(k\)</span>, and <span class="math">\(m,n \in M\)</span>. To obtain a module, one only has to replace the field <span class="math">\(k\)</span> in the definition with a <a href="https://en.wikipedia.org/wiki/Ring_(mathematics)#Notes_on_the_definition">ring with unity</a> <span class="math">\(R\)</span>. In other words, a <strong>(left) <span class="math">\(R\)</span>-module</strong> is an abelian group <span class="math">\(M\)</span> together with a ring homomorphism from a ring with unity <span class="math">\(R\)</span> to the <a href="https://en.wikipedia.org/wiki/Endomorphism_ring">endomorphism ring</a> of <span class="math">\(M\)</span> <span class="math">\[\begin{align}
   R &amp;\overset{\varphi}{\to} \End(M) \\
   \varphi(r)(m) &amp;\eqqcolon rm
-\end{align}\]</span> (this takes care of the first three rules above) that is also a group endomorphism of <span class="math">\(M\)</span> (the last rule). A right module is defined similarly but with multiplication from the right: <span class="math">\(\varphi(r)(m) \eqqcolon mr\)</span>.</p>
-<p>An important example, and in fact the only example that we need in this post, is when <span class="math">\(R\)</span> is a ring of matrices. That is, we think of matrices as “scalars”—noncommutative scalars!</p>
+\end{align}\]</span> (this takes care of the first three rules above) that is also a group endomorphism of <span class="math">\(M\)</span> (the last rule). A right <span class="math">\(R\)</span>-module is defined similarly but with multiplication from the right: <span class="math">\(\varphi(r)(m) \eqqcolon mr\)</span>. An important example, and in fact the only example that we will look at, is when <span class="math">\(R\)</span> is a ring of matrices. That is, the matrices are now “scalars” but they are not commutative!</p>
 <p>–R-linear maps</p>
 <h1 id="categories-and-functors">Categories and functors</h1>
 <p>A <strong>category</strong> <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them. If <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are <strong>objects</strong> in <span class="math">\(\mathcal{C}\)</span>, the class of <strong>morphisms</strong> between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> is denoted by <span class="math">\(\mathrm{Hom}(X,Y)\)</span>. They are also represented diagrammatically as arrows <span class="math">\(f:X \to Y\)</span> for <span class="math">\(f \in \mathrm{Hom}(X,Y)\)</span>. For <span class="math">\(\mathcal{C}\)</span> to be a category, there must be a identity morphism and the compositions of morphisms must be associative. Here are some categories.</p>
@@ -321,10 +323,10 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
 <p>When all the modules are finite-dimensional vector spaces over the same field (so that <span class="math">\(\mathrm{Hom}(M,N) \simeq N^* \otimes M\)</span>), the tensor-hom adjunction is the trivial statement that taking the dual of <span class="math">\(P\)</span> and <span class="math">\(N\)</span> at once is equivalent to taking the dual of <span class="math">\(N\)</span> first and then <span class="math">\(P\)</span>. This is essentially the idea of the proof: breaking up a map that takes multiple inputs into a sequence of single-input maps (so-called <em>currying</em> in programming). The only thing complicated about the proof is the bookkeeping.</p>
 <p><strong>Proof.</strong></p>
 <p><span class="math">\(\blacksquare\)</span> In one direction, given an <span class="math">\(A\)</span>-module homomorphism <span class="math">\(\varphi\)</span> from <span class="math">\(P \otimes_B N\)</span> to <span class="math">\(M\)</span>, we want to define a corresponding <span class="math">\(B\)</span>-module homomorphism from <span class="math">\(N\)</span> to <span class="math">\(\mathrm{Hom}_A (P,M)\)</span>. By linearity, <span class="math">\(\varphi\)</span> is determined by its values on all rank-one tensors <span class="math">\[\varphi(p \otimes_B n) \in M.\]</span> So let us define <span class="math">\[\psi_n(-) \coloneqq \varphi(- \otimes_B n).\]</span> The <span class="math">\(A\)</span>-linearity of <span class="math">\(\psi_n\)</span> follows immediately from the <span class="math">\(A\)</span>-linearity of <span class="math">\(\varphi\)</span>. The <span class="math">\(B\)</span>-linearity of <span class="math">\(\psi\)</span> is not hard to show either: <span class="math">\[\psi_{bn_1 + n_2}(p) = \varphi(p \otimes_B (bn_1 + n_2)) = \psi_{n_1}(pb) + \psi_{n_2}(p) = b\psi_{n_1}(p) + \psi_{n_2}(p).\]</span> (The last equality is just the left-<span class="math">\(B\)</span>-action on <span class="math">\(\mathrm{Hom}_A (P,M)\)</span> ).</p>
-<p>Conversely, given a <span class="math">\(B\)</span>-module homomorphism <span class="math">\(\psi\)</span> from <span class="math">\(N\)</span> to <span class="math">\(\mathrm{Hom}_A (P,M)\)</span>, define <span class="math">\[\varphi(\odot_1 \otimes_B \odot_2) \coloneqq \psi_{\odot_2} (\odot_1)\]</span> and extend by linearity. One can verify that <span class="math">\(\varphi\)</span> is <span class="math">\(A\)</span>-linear. Finally, since the constructions of <span class="math">\(\psi\)</span> from <span class="math">\(\varphi\)</span> and vice versa are obviously inverses of each other, the isomorphism  is established. <span class="math">\(\Box\)</span></p>
+<p>Conversely, given a <span class="math">\(B\)</span>-module homomorphism <span class="math">\(\psi\)</span> from <span class="math">\(N\)</span> to <span class="math">\(\mathrm{Hom}_A (P,M)\)</span>, define <span class="math">\[\varphi(-_1 \otimes_B -_2) \coloneqq \psi_{-_2} (-_1{}_{})\]</span> and extend by linearity. One can verify that <span class="math">\(\varphi\)</span> is <span class="math">\(A\)</span>-linear. Finally, since the constructions of <span class="math">\(\psi\)</span> from <span class="math">\(\varphi\)</span> and vice versa are obviously inverses of each other, the isomorphism  is established. <span class="math">\(\Box\)</span></p>
 <h1 id="extension-of-scalars">Extension of scalars</h1>
 <p>Let <span class="math">\(B \subset A\)</span> be two rings with identities. An <span class="math">\(A\)</span>-module <span class="math">\(M\)</span> is also a <span class="math">\(B\)</span>-module by restricting the scalars to <span class="math">\(B\)</span>. The resulting module is denoted by <span class="math">\(\mathrm{Res} M\)</span> or <span class="math">\(\res{M}{A}{B}\)</span> when <span class="math">\(A\)</span> and <span class="math">\(B\)</span> are needed to be specified.</p>
-<p>We ought to have an “inverse” process of extending the scalars. Categorically, an extension of scalars should be an adjoint functor to the restriction. In the context of representation theory, the left and the right adjoints are called  and  respectively. - Thinking of <span class="math">\(A\)</span> as an <span class="math">\((A,B)\)</span>-module, <span class="math">\(\mathrm{Res} M = \mathrm{Hom}_A (A,M)\)</span>. Then by the tensor-hom adjunction, <span class="math">\[\mathrm{Hom}_B (N,\mathrm{Hom}_A (A,M)) \simeq \mathrm{Hom}_A (A \otimes_B N,M),\]</span> the left adjoint of Res is <span class="math">\(\ind{N}{B}{A} = A \otimes_B N\)</span>. - Thinking of <span class="math">\(A\)</span> as a <span class="math">\((B,A)\)</span>-module, <span class="math">\(\mathrm{Res} M = A \otimes_A M\)</span>. Then by the tensor-hom adjunction, <span class="math">\[\mathrm{Hom}_B (A \otimes_A M,N) \simeq  \mathrm{Hom}_A (M,\mathrm{Hom}_B (A,N)),\]</span> the right adjoint of Res is <span class="math">\(\coind{N}{B}{A} = \mathrm{Hom}_B (A,N)\)</span>,. \end{itemize}</p>
+<p>We ought to have an “inverse” process of extending the scalars. Categorically, an extension of scalars should be an adjoint functor to the restriction. In the context of representation theory, the left and the right adjoints are called <strong>induction</strong> and <strong>coinduction</strong> respectively. - Thinking of <span class="math">\(A\)</span> as an <span class="math">\((A,B)\)</span>-module, <span class="math">\(\mathrm{Res} M = \mathrm{Hom}_A (A,M)\)</span>. Then by the tensor-hom adjunction, <span class="math">\[\mathrm{Hom}_B (N,\mathrm{Hom}_A (A,M)) \simeq \mathrm{Hom}_A (A \otimes_B N,M),\]</span> the left adjoint of Res is <span class="math">\(\ind{N}{B}{A} = A \otimes_B N\)</span>. - Thinking of <span class="math">\(A\)</span> as a <span class="math">\((B,A)\)</span>-module, <span class="math">\(\mathrm{Res} M = A \otimes_A M\)</span>. Then by the tensor-hom adjunction, <span class="math">\[\mathrm{Hom}_B (A \otimes_A M,N) \simeq  \mathrm{Hom}_A (M,\mathrm{Hom}_B (A,N)),\]</span> the right adjoint of Res is <span class="math">\(\coind{N}{B}{A} = \mathrm{Hom}_B (A,N)\)</span>,. \end{itemize}</p>
 <p>To obtain a (co)induced representation from a (co)induced module, we just set the two rings to be the group algebras <span class="math">\(\mathbb{C}[K]\)</span> and <span class="math">\(\mathbb{C}[G]\)</span>, where <span class="math">\(K\)</span> is a subgroup of <span class="math">\(G\)</span>. Let <span class="math">\((\rho,V)\)</span> be a <span class="math">\(G\)</span>-representation and <span class="math">\((\sigma,W)\)</span> be a <span class="math">\(K\)</span>-representation. Then <span class="math">\[\begin{align}
     \ind{W}{K}{G} = \mathbb{C}[G] \otimes_{\mathbb{C}[K]} W, &amp;&amp;
     \coind{W}{K}{G} &amp;= \mathrm{Hom}_{\mathbb{C}[K]} (\mathbb{C}[G],W),
@@ -337,7 +339,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Not necessarily <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">partially ordered</a>.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>A <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">partially ordered set</a> is a preorder that is also antisymmetric: <span class="math">\(a \le b\)</span> and <span class="math">\(b \le a\)</span> implies <span class="math">\(a=b\)</span>.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>There is a right adjoint to the forgetful functor <a href="https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor">from the category of sets with <span class="math">\(G\)</span>-actions <strong>Set(G)</strong> to <strong>Set</strong></a>.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
@@ -356,8 +358,8 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
     property="dc:created">31 May 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-05-31 13:06:23 +0000"
-            property="dc:modified">31 May 2019</time></small></p>
+            datetime="2019-06-03 09:16:02 +0000"
+            property="dc:modified">03 Jun 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -378,10 +380,6 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
     
       <a rel="dc:subject" class="category"
          href="/categories.html#Representation+theory">Representation theory</a>
-    , 
-    
-      <a rel="dc:subject" class="category"
-         href="/categories.html#Category+theory">Category theory</a>
     
     </p>
 
@@ -393,7 +391,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/881525918bfa8361b72ea7ec784d3152472560f1/_posts/2019-05-09-induction-as-adjoint.md"> 8815259</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/35ee556a18b2c62be7f2bb8f6ecde47bc41116d5/_posts/2019-05-09-induction-as-adjoint.md"> 35ee556</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -450,7 +448,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=Induced Representations [Drafted]
+      &amp;rft.title=Induction as an Adjoint Functor [Drafted]
       &amp;rft.creator=Ninnat Dangniam
       &amp;rft.date=2019-05-31
       &amp;rft.language='en-US, zh-Hans'

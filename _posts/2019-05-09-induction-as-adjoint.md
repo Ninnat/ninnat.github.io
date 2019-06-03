@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Induced Representations [Drafted]
+title: Induction as an Adjoint Functor [Drafted]
 subtitle:
 date: 2019-05-31
 categories:
   - Representation theory
-  - Category theory
 tags:
 ---
 
-Induction (and co-induction) are important constructions in representation theory that I found mysterious at first. In this post, I want to explain what they are.
+<div id="toc"></div>
+
+Induction (and co-induction) are important and versatile constructions in representation theory that I found mysterious at first. In this post, I want to explain what they are.
 
 Given a representation $\rho: G \to \GL(V)$, we can easily restrict it to a representation $\rho\big|_{H}{}_{}$ of a subgroup $H \subset G$, and we can ask e.g. how $V$ breaks up into irreducible $H$-representations. The inverse process is not so easy to cook up. Given a representation of a subgroup, how can we assign to it a unique representation of $G$? What should the properties of this *induced* representation be?
 
@@ -19,22 +20,21 @@ A kind of pseudo-inverse of restriction can be given in the framework of *adjoin
 
 # Modules
 
-*Modules* are generalizations of vector spaces. A vector space is an [abelian group](https://en.wikipedia.org/wiki/Abelian_group) $M$ of vectors with addition, together with rules on how to multiply vectors by "scalars" from a number [field](https://en.wikipedia.org/wiki/Field_(mathematics)) $k$ such as $\R$ or $\C$:
+*Modules* are generalizations of vector spaces. A vector space is an [abelian group](https://en.wikipedia.org/wiki/Abelian_group) $M$ of vectors with addition, together with the rules on how to scale vectors by numbers from a [field](https://en.wikipedia.org/wiki/Field_(mathematics)) $k$ such as $\R$ or $\C$:
 $$\begin{align}
   1m &= m, \\
-  (r+s)m &= rm + sm, \\
-  r(sm) &= (rs)m, \\
-  r(m+n) &= rm + rn,
+  (a+b)m &= am + bm, \\
+  a(bm) &= (ab)m, \\
+  a(m+n) &= am + an,
 \end{align}$$
-where $1,r,s \in k$, 1 being the multiplicative identity in $k$, and $m,n \in M$. To obtain a module, one only has to change a field $k$ to a [*ring with unity*](https://en.wikipedia.org/wiki/Ring_(mathematics)#Notes_on_the_definition) $R$. In other words, an **(left) $R$-module** is an abelian group $M$ together with a ring homomorphism from a ring with unity $R$ to the [endomorphism ring](https://en.wikipedia.org/wiki/Endomorphism_ring) of $M$
+where $a,b \in k$, 1 is the multiplicative identity in $k$, and $m,n \in M$. To obtain a module, one only has to replace the field $k$ in the definition with a [ring with unity](https://en.wikipedia.org/wiki/Ring_(mathematics)#Notes_on_the_definition) $R$. In other words, a **(left) $R$-module** is an abelian group $M$ together with a ring homomorphism from a ring with unity $R$ to the [endomorphism ring](https://en.wikipedia.org/wiki/Endomorphism_ring) of $M$
 $$\begin{align}
   R &\overset{\varphi}{\to} \End(M) \\
   \varphi(r)(m) &\eqqcolon rm
 \end{align}$$
 (this takes care of the first three rules above) that is also a group endomorphism of $M$ (the last rule).
-A right module is defined similarly but with multiplication from the right: $\varphi(r)(m) \eqqcolon mr$.
-
-An important example, and in fact the only example that we need in this post, is when $R$ is a ring of matrices. That is, we think of matrices as "scalars"---noncommutative scalars!
+A right $R$-module is defined similarly but with multiplication from the right: $\varphi(r)(m) \eqqcolon mr$.
+An important example, and in fact the only example that we will look at, is when $R$ is a ring of matrices. That is, the matrices are now "scalars" but they are not commutative!
 
 --R-linear maps
 
@@ -163,14 +163,14 @@ The $A$-linearity of $\psi_n$ follows immediately from the $A$-linearity of $\va
 (The last equality is just the left-$B$-action on $\mathrm{Hom}_A (P,M)$ \eqref{B-action}).
 
 Conversely, given a $B$-module homomorphism $\psi$ from $N$ to $\mathrm{Hom}_A (P,M)$, define
-  $$\varphi(\odot_1 \otimes_B \odot_2) \coloneqq \psi_{\odot_2} (\odot_1)$$
+  $$\varphi(-_1 \otimes_B -_2) \coloneqq \psi_{-_2} (-_1{}_{})$$
 and extend by linearity. One can verify that $\varphi$ is $A$-linear. Finally, since the constructions of $\psi$ from $\varphi$ and vice versa are obviously inverses of each other, the isomorphism \eqref{tensor-hom} is established. $\Box$
 
 # Extension of scalars
 
 Let $B \subset A$ be two rings with identities. An $A$-module $M$ is also a $B$-module by restricting the scalars to $B$. The resulting module is denoted by $\mathrm{Res} M$ or $\res{M}{A}{B}$ when $A$ and $B$ are needed to be specified.
 
-We ought to have an "inverse" process of extending the scalars. Categorically, an extension of scalars should be an adjoint functor to the restriction. In the context of representation theory, the left and the right adjoints are called \emph{induction} and \emph{coinduction} respectively.
+We ought to have an "inverse" process of extending the scalars. Categorically, an extension of scalars should be an adjoint functor to the restriction. In the context of representation theory, the left and the right adjoints are called **induction** and **coinduction** respectively.
 - Thinking of $A$ as an $(A,B)$-module, $\mathrm{Res} M = \mathrm{Hom}_A (A,M)$. Then by the tensor-hom adjunction,
 	$$\mathrm{Hom}_B (N,\mathrm{Hom}_A (A,M)) \simeq \mathrm{Hom}_A (A \otimes_B N,M),$$
 	the left adjoint of Res is $\ind{N}{B}{A} = A \otimes_B N$.
@@ -192,6 +192,6 @@ $$\begin{align}
 	\mathrm{Hom}_K (\res{V}{G}{K},W) &\simeq \mathrm{Hom}_G (V,\coind{W}{K}{G}).
 \end{align}$$
 
-[^1]: Not necessarily [partially ordered](https://en.wikipedia.org/wiki/Partially_ordered_set).
+[^1]: A [partially ordered set](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also antisymmetric: $a \le b$ and $b \le a$ implies $a=b$.
 
 [^2]: There is a right adjoint to the forgetful functor [from the category of sets with $G$-actions **Set(G)** to **Set**](https://math.stackexchange.com/questions/1922107/the-right-adjoint-of-forgetful-functor).

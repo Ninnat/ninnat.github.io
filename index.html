@@ -404,6 +404,7 @@ var _hmt = _hmt || [];
     MathJax.Hub.Config({
       TeX: {
         Macros: {
+          pder: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle {#1} \\right|}",1],
           av: ["{\\left\\langle{#1}\\right\\rangle}",1],
@@ -427,8 +428,8 @@ var _hmt = _hmt || [];
           dgg: "{^{\\dagger}}",
           ind: ["{\\mathrm{Ind}_{#2}^{#3} {#1}}",3],
           cind: ["{\\mathrm{Coind}_{#2}^{#3} {#1}}",3],
-          ad: "{\\mathrm{ad}}",
-          Ad: "{\\mathrm{Ad}}",
+          ad: "{\\mathrm{ad}\\,}",
+          Ad: "{\\mathrm{Ad}\\,}",
           kill: "{\\mathrm{Kill}(#1,#2)}",
           rank: "{\\mathrm{rank}\\,}",
           GL: "{\\mathrm{GL}}",

@@ -265,7 +265,7 @@ X(fg) &amp;= f X(g) + X(f) g\end{align}\]</span> for every <span class="math">\(
 <!----------------------------------->
 
 <ul>
-<li>The cross product <span class="math">\(A \times B\)</span> is bilinear, antisymmetric, and satisfies the Jacobi identity. (Can you prove it?) Thus, vectors in <span class="math">\(\R^3\)</span> equipped with the cross product is a Lie algebra, more specifically, <span class="math">\(\so(3,\R)\)</span>. To see this, we can use the idea of a <a href="https://en.wikipedia.org/wiki/Tensor_operator"><em>vector operator</em></a> from physics to identify <span class="math">\[\begin{align}
+<li><p>The cross product <span class="math">\(A \times B\)</span> is bilinear, antisymmetric, and satisfies the Jacobi identity. (Can you prove it?) Thus, vectors in <span class="math">\(\R^3\)</span> equipped with the cross product is a Lie algebra, more specifically, <span class="math">\(\so(3,\R)\)</span>. To see this, we may use the concept of a <a href="https://en.wikipedia.org/wiki/Tensor_operator"><em>tensor operator</em></a> (which is really an <a href="https://en.wikipedia.org/wiki/Equivariant_map">intertwiner</a> of representations, something that I want to explain in a separate post) from physics to identify <span class="math">\[\begin{align}
   x \leftrightarrow L_x = \begin{pmatrix}
 0 &amp; 0 &amp; 0 \\
 0 &amp; 0 &amp; -1 \\
@@ -285,11 +285,9 @@ X(fg) &amp;= f X(g) + X(f) g\end{align}\]</span> for every <span class="math">\(
   v \times w \leftrightarrow [L_v,L_w],
 \end{align}\]</span> and directly verify the <span class="math">\(\so(3,\R)\)</span> commutation relations <span class="math">\[\begin{align}
   [L_x,L_y] = L_z, &amp;&amp; [L_y,L_z] = L_x, &amp;&amp; [L_z,L_x]=L_y.
-\end{align}\]</span></li>
-</ul>
-<p>That something like this could happen relies on an accidental isomorphism that only occurs in three dimensions, namely that <em>specifying a rotation is equivalent to specifying a plane (hence an axis) of rotation</em>. This is not true in higher dimensions <span class="math">\(n\)</span>, as you need up to <span class="math">\(\lfloor n/2\rfloor\)</span> planes to specify a rotation. The Lie algebra <span class="math">\(\so(n,\R)\)</span> is the set of planes of rotations <span class="math">\(\wedge^2 \R^n\)</span>, where <span class="math">\(\wedge^k \R^n\)</span> is the <span class="math">\(k\)</span>th <a href="https://en.wikipedia.org/wiki/Exterior_algebra"><em>exterior power</em></a> of <span class="math">\(\R^n\)</span> of dimension <span class="math">\(n \choose k\)</span>. In general, each vector in <span class="math">\(\wedge^k V\)</span> is a subspace of <span class="math">\(V\)</span> spanned by <span class="math">\(k\)</span> vectors. Since <span class="math">\(\wedge^k V\)</span> and <span class="math">\(\wedge^{n-k}V\)</span> have the same dimension, there is a linear isomorphism between them. The (generalized) cross product is just an isomorphism <span class="math">\(\wedge^2 \R^n \cong \so(n,\R) \to \wedge^{n-2} \R^n\)</span>, the latter of which is <span class="math">\(\R^n\)</span> if and only if <span class="math">\(n=3\)</span>.</p>
-<ul>
-<li>Another important Lie algebra in physics is the <a href="https://en.wikipedia.org/wiki/Poisson_bracket">Poisson bracket</a> <span class="math">\[\{f,g\} = \pder{f}{q}\pder{g}{p} - \pder{f}{p}\pder{g}{q}.\]</span></li>
+\end{align}\]</span></p>
+<p>This only happens because of an accidental isomorphism in three dimensions, namely that <em>specifying a rotation is equivalent to specifying a plane (hence an axis) of rotation</em>. This is not true in higher dimensions <span class="math">\(n\)</span>, as you need up to <span class="math">\(\lfloor n/2\rfloor\)</span> planes. The Lie algebra <span class="math">\(\so(n,\R)\)</span> is the set of planes of rotations <span class="math">\(\wedge^2 \R^n\)</span>, where <span class="math">\(\wedge^k \R^n\)</span> is the <span class="math">\(k\)</span>th <a href="https://en.wikipedia.org/wiki/Exterior_algebra"><em>exterior power</em></a> of <span class="math">\(\R^n\)</span> of dimension <span class="math">\(n \choose k\)</span>. In general, each vector in <span class="math">\(\wedge^k V\)</span> is a subspace of <span class="math">\(V\)</span> spanned by <span class="math">\(k\)</span> linearly independent vectors. Since <span class="math">\(\wedge^k V\)</span> and <span class="math">\(\wedge^{n-k}V\)</span> have the same dimension, there is a linear isomorphism between them. The (generalized) cross product is just an isomorphism <span class="math">\(\wedge^2 \R^n \cong \so(n,\R) \to \wedge^{n-2} \R^n\)</span>, the latter of which is <span class="math">\(\R^n\)</span> if and only if <span class="math">\(n=3\)</span>.</p></li>
+<li><p>Another important Lie algebra in physics is the <a href="https://en.wikipedia.org/wiki/Poisson_bracket">Poisson bracket</a> <span class="math">\[\{f,g\} = \pder{f}{q}\pder{g}{p} - \pder{f}{p}\pder{g}{q}.\]</span></p></li>
 </ul>
 <!----------------------------------->
 <h2 id="the-adjoint-representation">The adjoint representation</h2>
@@ -372,8 +370,8 @@ TM = \bigcup_{p \in M} T_p M,\end{align}\]</span> itself a manifold of dimension
     property="dc:created">12 Jun 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-06-15 18:58:48 +0000"
-            property="dc:modified">15 Jun 2019</time></small></p>
+            datetime="2019-06-16 04:14:37 +0000"
+            property="dc:modified">16 Jun 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -405,7 +403,7 @@ TM = \bigcup_{p \in M} T_p M,\end{align}\]</span> itself a manifold of dimension
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5a44c8c4d8c6859f8e45091c6a0a01c69a5b49af/_posts/2019-06-12-lie-group.md"> 5a44c8c</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/f857f9b3f8e34cb2ec4a4df122395089b66323c0/_posts/2019-06-12-lie-group.md"> f857f9b</a></tiny></p>
 </aside>
 
 <br /><br />

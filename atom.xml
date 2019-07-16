@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-07-16T08:47:24+00:00</updated>
+ <updated>2019-07-16T09:46:20+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -13,15 +13,15 @@
 
  
  <entry>
-   <title>May-July 2019 Archive</title>
+   <title>May-June 2019 Archive</title>
    <link href="/may-2019-log.html"/>
    <updated>2019-07-16T00:00:00+00:00</updated>
    <id>h/may-2019-log</id>
-   <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from May, June and some of July 2019.&lt;/p&gt;
+   <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from May, June and the first week of July 2019.&lt;/p&gt;
 &lt;div id=&quot;toc&quot;&gt;
 
 &lt;/div&gt;
-&lt;p&gt;My research reading in the past couple of months has been a bit nebulous and hard to summarize so I want to leave that out for now .&lt;/p&gt;
+&lt;p&gt;My research reading in the past couple of months has been a bit nebulous, so I want to leave that out for now.&lt;/p&gt;
 &lt;!-- # Research
 
 Research is a bit nebulous these months, with so much that I want to talk about but so little that I can comfortably do.
@@ -39,15 +39,7 @@ Research is a bit nebulous these months, with so much that I want to talk about 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.bangkokpost.com/lifestyle/social-and-lifestyle/314880/a-lifelong-love-of-learning&quot;&gt;Prasert Na Nagara&lt;/a&gt; (ประเสริฐ ณ นคร) 1919 - 2019&lt;/li&gt;
 &lt;li&gt;Mitchell Feigenbaum, a pioneer of chaos theory &lt;a href=&quot;https://www.rockefeller.edu/news/26289-mitchell-feigenbaum-physicist-pioneered-chaos-theory-died/&quot;&gt;passed away&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-qgreAUpPwM&quot;&gt;Drawing with Fourier series and epicycles&lt;/a&gt;, 3Blue1Brown&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.insidehighered.com/news/2019/05/03/icelands-universities-worry-about-small-numbers-male-students-they-attract&quot;&gt;Males are underrepresented in Iceland higher education&lt;/a&gt; because fishing career is more attractive. “in 2017 Icelandic men still earned 15.5 percent more per hour than women.”&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://praxis.fortelabs.co/how-emotions-are-made/&quot;&gt;How Emotions Are Made: The Theory of Constructed Emotion&lt;/a&gt;, Tiago Forte&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When you experience an emotion without knowing the precise cause, you are more likely to treat that emotion as information about the &lt;em&gt;world&lt;/em&gt;, rather than your &lt;em&gt;experience&lt;/em&gt; of the world. This is known as &lt;em&gt;affective realism&lt;/em&gt;. Affective realism causes us to experience supposed “facts” about the world that are in fact created by our feelings. It can leave us trapped in an emotional world of our own making, without realizing that we are the ones who imprisoned ourselves.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If you can learn to distinguish more precise meanings for “Feeling great” (happy, content, thrilled, relaxed, joyful, hopeful, inspired, prideful, adoring, grateful, blissful . . .) or “Feeling crappy” (angry, aggravated, alarmed, spiteful, grumpy, remorseful, gloomy, mortified, uneasy, dread-ridden, resentful, afraid, envious, woeful, melancholy . . .), your brain will have many more options for predicting, categorizing, and perceiving emotions.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Kevin Simler has an interactive blog post on &lt;a href=&quot;https://meltingasphalt.com/interactive/going-critical/&quot;&gt;network criticality&lt;/a&gt; that nicely illustrates concepts like herd immunity and transmission of knowledge. One point that is obvious once heard but I’ve never internalized before:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;there are ideas and cultural practices that can take root and spread in a city that simply can’t spread out in the countryside. (Mathematically can’t.) These are the very same ideas and the very same kinds of people. It’s not that rural folks are e.g. “small-minded”; when exposed to one of these ideas, they’re exactly as likely to adopt it as someone in the city. Rather, it’s that the idea itself can’t go viral in the countryside because there aren’t as many connections along which it can spread.&lt;/p&gt;
@@ -60,12 +52,19 @@ Research is a bit nebulous these months, with so much that I want to talk about 
 &lt;li&gt;First time the world has &lt;a href=&quot;https://ourworldindata.org/population-aged-65-outnumber-children&quot;&gt;more people over 64 than children younger than 5&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/cf19b956-60a2-11e9-b285-3acd5d43599e&quot;&gt;Who is using your face?&lt;/a&gt;, FT [&lt;a href=&quot;https://old.reddit.com/r/EmergingRisks/comments/bewxkp/whos_using_your_face_the_ugly_truth_about_facial/&quot;&gt;without paywall&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2019/07/13/technology/databases-faces-facial-recognition-technology.html&quot;&gt;NYTimes&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;In the low-trust society, the Chinese welcome &lt;a href=&quot;https://slate.com/technology/2019/05/china-mobile-5g-facial-recognition-ad.html&quot;&gt;facial recognition technology&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mpg.de/13566273/periodic-system-elements&quot;&gt;The periodic system as ordered hypergraphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The periodic system as &lt;a href=&quot;https://www.mpg.de/13566273/periodic-system-elements&quot;&gt;ordered hypergraphs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Lanthanum hydride, a compound rich in hydrogen exhibits &lt;a href=&quot;https://www.nature.com/articles/d41586-019-01583-y&quot;&gt;superconductivity at 250 K&lt;/a&gt; under more than a million times Earth’s atmospheric pressure. In general, the lower the atomic mass, the higher the critical temperature.&lt;/li&gt;
 &lt;li&gt;The &lt;a href=&quot;https://english.stackexchange.com/questions/448865/is-the-etymology-of-salary-a-myth&quot;&gt;myth of the etymology of salary&lt;/a&gt; from salarium, “salt money”&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://castel.dev/post/lecture-notes-1/&quot;&gt;How I’m able to take notes in mathematics lectures using LaTeX and Vim&lt;/a&gt;, Gilles Castel&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/notable/notable&quot;&gt;Notable&lt;/a&gt;, a markdown-based, Wikipedia-style note-taking app, currently with &lt;a href=&quot;https://github.com/notable/notable/issues&quot;&gt;numerous bugs&lt;/a&gt; and inconveniences (e.g. can’t define global LaTeX macros, single-letter LaTeX codes don’t render)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/47527140&quot;&gt;Collaboratory&lt;/a&gt; let you share Jupyter notebooks with collaborators.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://praxis.fortelabs.co/how-emotions-are-made/&quot;&gt;How Emotions Are Made: The Theory of Constructed Emotion&lt;/a&gt;, Tiago Forte&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When you experience an emotion without knowing the precise cause, you are more likely to treat that emotion as information about the &lt;em&gt;world&lt;/em&gt;, rather than your &lt;em&gt;experience&lt;/em&gt; of the world. This is known as &lt;em&gt;affective realism&lt;/em&gt;. Affective realism causes us to experience supposed “facts” about the world that are in fact created by our feelings. It can leave us trapped in an emotional world of our own making, without realizing that we are the ones who imprisoned ourselves.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can learn to distinguish more precise meanings for “Feeling great” (happy, content, thrilled, relaxed, joyful, hopeful, inspired, prideful, adoring, grateful, blissful . . .) or “Feeling crappy” (angry, aggravated, alarmed, spiteful, grumpy, remorseful, gloomy, mortified, uneasy, dread-ridden, resentful, afraid, envious, woeful, melancholy . . .), your brain will have many more options for predicting, categorizing, and perceiving emotions.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.polygon.com/2019/6/19/18683634/neon-genesis-evangelion-hideaki-anno-depression-shinji-anime-characters-movies&quot;&gt;Neverending Evangelion&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In a statement of intent titled “What Were We Trying To Make Here,” drafted in July 1995 during production of this new series, Anno wrote: “I tried to include everything of myself in Neon Genesis Evangelion — myself, a broken man who could do nothing for four years. A man who ran away for four years, one who was simply not dead. Then one thought. ‘You can’t run away,’ came to me, and I restarted this production. It is a production where my only thought was to burn my feelings into film.”&lt;/p&gt;
@@ -80,12 +79,15 @@ Research is a bit nebulous these months, with so much that I want to talk about 
 &lt;p&gt;Anno later declared in the Japanese magazine NewType that “Evangelion is like a puzzle, you know. Any person can see it and give his/her own answer. In other words, we’re offering viewers to think by themselves, so that each person can imagine his/her own world. We will never offer the answers, even in the theatrical version. As for many Evangelion viewers, they may expect us to provide the ‘all-about Eva’ manuals, but there is no such thing. Don’t expect to get answers by someone. Don’t expect to be catered to all the time. We all have to find our own answers.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://twitter.com/QiaochuYuan/status/1132020145851736066&quot;&gt;Why do stories need ending?&lt;/a&gt;, Qiaochu Yuan&lt;/li&gt;
-&lt;li&gt;SSC book reviews:&lt;/li&gt;
+&lt;li&gt;SSC book reviews:
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/&quot;&gt;&lt;em&gt;The Secret of Our Success&lt;/em&gt;&lt;/a&gt; (Highly recommended, too long to summarize here)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2018/11/28/book-review-the-mind-illuminated/&quot;&gt;&lt;em&gt;The Mind Illuminated&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/hnLutdvjC8kPScPAj/integrating-disagreeing-subagents&quot;&gt;Integrating disagreeing subagents&lt;/a&gt;, Kaj Sotala&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.gwern.net/The-Narrowing-Circle&quot;&gt;The Narrowing Circle&lt;/a&gt;, Gwern (Our experience strongly points toward the “expanding circle” thesis being true, that human ethics expand over time to include more people, more organisms, more things. But is that really the case?)&lt;/li&gt;
 &lt;li&gt;Japanese &lt;a href=&quot;https://mymodernmet.com/japanese-rice-paddy-art&quot;&gt;rice paddy art&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-qgreAUpPwM&quot;&gt;Drawing with Fourier series and epicycles&lt;/a&gt;, 3Blue1Brown&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Sit back, relax, and enjoy watching Protozoans while listening to Hank Green&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;
@@ -174,7 +176,7 @@ https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&q
 &lt;blockquote&gt;
 &lt;p&gt;Once you start thinking about how much DNA matters, it is difficult to point to any psychological experiences completely devoid of possible genetic influence. For example, accidents are not always accidental. Some children have more accidents than others; the number of children’s scrapes and bruises shows genetic influence. For adults, automobile accidents are not always accidental either, of course. Automobile crashes are often caused by reckless driving – driving too fast, taking chances or driving under the influence of alcohol and other drugs. Sometimes accidents do just happen, but genetic differences in personality can increase the likelihood of accidents happening. […] The only events free from genetic influence are those over which we have little control, such as the death or illness of relatives and friends.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The author understandably spends a lot of time discussing how the result could be true and how &lt;em&gt;not&lt;/em&gt; to misinterpret. Crucially, the measure is statistical and hence accurate on the population level, not the individual level. The result is conditioned on “normal” experience e.g. no neglect, torture etc. More generally, equality of opportunity means more pronounced genetic effects because privilege means less.&lt;/p&gt;
+&lt;p&gt;The author understandably spends a lot of time discussing how the result could be true and how &lt;em&gt;not&lt;/em&gt; to misinterpret it. Crucially, the measure is statistical and hence accurate on the population level, not the individual level. The result is conditioned on “normal” experience e.g. no neglect, torture etc. More generally, equality of opportunity means more pronounced genetic effects because privilege means less.&lt;/p&gt;
 &lt;p&gt;Parenting&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;parenting correlates with children’s outcomes for three reasons considered earlier. One reason is that parents and their children are 50 per cent similar genetically. Put crudely, nice parents have nice children because they are all nice genetically. Another reason is that parenting is often a response to, rather than a cause of, children’s genetic propensities. It is awkward to be an affectionate parent to a child who is not a cuddler. Finally, children make their own environments, regardless of their parents. That is, they select, modify and create environments correlated with their genetic propensities. Children who want to do something like play sports or a musical instrument will badger their parents to make it happen. […]&lt;/p&gt;
@@ -198,14 +200,14 @@ https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&q
 &lt;/ul&gt;
 &lt;h2 id=&quot;video-games&quot;&gt;Video games&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://vgmdb.net/album/88456&quot;&gt;Bloodstained: Ritual of the Night&lt;/a&gt; (ROTN), a spiritual successor of &lt;a href=&quot;https://en.wikipedia.org/wiki/Castlevania:_Symphony_of_the_Night&quot;&gt;one of the best games of all time&lt;/a&gt; (SOTN)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://vgmdb.net/album/88456&quot;&gt;Bloodstained: Ritual of the Night&lt;/a&gt; (ROTN), a spiritual successor of &lt;a href=&quot;https://en.wikipedia.org/wiki/Castlevania:_Symphony_of_the_Night&quot;&gt;one of the best games of all time&lt;/a&gt; (SOTN)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pros:&lt;/em&gt; What sold me was the musics by Michiru Yamane, among others. The game itself is fun with plenty of replay values and not as easy as SOTN e.g. the first boss in hard mode is Nintendo hard. There are varieties of movement options and intentional glitches for speedrunning and sequence-breaking. &lt;em&gt;Cons:&lt;/em&gt; The graphic looks toy-ish and “cheap”. I wish they take advantage of different camera angles more. &lt;em&gt;Not really a con but a warning to keyboard users:&lt;/em&gt; &lt;code&gt;Aim&lt;/code&gt; doesn’t seem to work if assigned to a keyboard button. A touchpad button is fine but clunky and downright impractical mid-combat.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Pros:&lt;/em&gt; What sold me was the musics by Michiru Yamane, among others. The game itself is fun with plenty of replay values and not as easy as SOTN e.g. the first boss in hard mode is Nintendo hard. There are varieties of movement options and intentional glitches for speedrunning and sequence-breaking. &lt;em&gt;Cons:&lt;/em&gt; The graphic looks toy-ish and “cheap”. I wish they take advantage of different camera angles more. &lt;em&gt;Not really a con but a warning to keyboard users:&lt;/em&gt; &lt;code&gt;Aim&lt;/code&gt; doesn’t seem to work if assigned to a keyboard button. A touchpad button is fine but clunky and downright impractical mid-combat.&lt;/p&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Notable exceptions are religious and political beliefs for which shared environment explains 20% of the variance.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;In these cases, polygenic scores are more powerful predictors than traditional ones such as the psychollogical disorders in parents. Most traits are highly &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygene&quot;&gt;polygenic&lt;/a&gt;, with an exception of Alzheimer’s disease which is mostly due to a single gene call [&lt;em&gt;APOE&lt;/em&gt;](https://en.wikipedia.org/wiki/Apolipoprotein_E#Alzheimer’s_disease).&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;In these cases, polygenic scores are more powerful predictors than traditional ones such as the psychollogical disorders in parents. Most traits are highly &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygene&quot;&gt;polygenic&lt;/a&gt;, with an exception of Alzheimer’s disease which is mostly due to a single gene called [&lt;em&gt;APOE&lt;/em&gt;](https://en.wikipedia.org/wiki/Apolipoprotein_E#Alzheimer’s_disease).&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>

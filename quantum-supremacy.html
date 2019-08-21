@@ -216,17 +216,20 @@ $(document).ready(function() {
           
         <div id="toc"></div> -->
           <p><em>Epistemic status: Summarizing research literature</em></p>
-<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then the <a href="http://arxiv.org/abs/1011.3245">2010 BosonSampling paper</a> by Aaronson and Arkhipov kicked start the experimental race for quantum supremacy that continues today. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring. In other words, if tomorrow someone figures out a fast way to factor integers on a classical computer, we will have to switch to a different encryption scheme. But other than that, the reality that we know of will still mostly be the same as before.</p>
-Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, especially in a <em>random quantum circuit</em> architecture? In this setting, there is an ensemble of quantum circuits <span class="math">\(U\)</span>‘s’
+<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then <a href="http://arxiv.org/abs/1011.3245">BosonSampling</a> by Aaronson and Arkhipov in 2010 kicked start the experimental race for quantum supremacy that continues to today. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring. In other words, if tomorrow someone figures out a fast way to factor integers on a classical computer, we will have to switch to a different encryption scheme. But other than that, the reality that we know of will still mostly be the same as before.</p>
+Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, especially in a <em>random quantum circuit</em> architecture? In this setting, there is an ensemble <span class="math">\(\mathcal{E}\)</span> of quantum circuits <span class="math">\(U\)</span>
 <center>
 <img src="/assets/img/2019/qcircuit.png" style="width: 1000px;"/>
 </center>
 
-<p>and we want to “simulate” the outcome probabilities <span class="math">\(p_x\)</span> for some <span class="math">\(x \in \{0,1\}^{2^n}\)</span>. There are two major “axes” of possible kinds of simulations.</p>
+<p>and we want to “simulate” the outcome probabilities <span class="math">\(p_x = |\av{x|U|0}|^2\)</span> for some <span class="math">\(x \in \{0,1\}^{2^n}\)</span>. There are two major “axes” of possible kinds of simulations.</p>
 <ol type="1">
-<li><p>By “simulate”, we may want to exactly compute <span class="math">\(p_x\)</span> or equivalently give an estimate <span class="math">\(q_x\)</span> up to multiplicative precision <span class="math">\[ \frac{1}{c}p_x \le |p_x - q_x| \le cp_x\]</span> <em>or</em> we may want to estimate up to additive precision <span class="math">\[ |p_x - q_x| \le \epsilon. \]</span></p></li>
-<li><p>We may want to simulate all quantum circuits <em>or</em> we may want to simulate some fraction of quantum circuits.</p></li>
+<li><p>By “simulate”, we may want to estimate <span class="math">\(p_x\)</span> up to a multiplicative precision <span class="math">\[ |p_x - q_x| \le \gamma p_x,\]</span> <em>or</em> we just want to estimate <span class="math">\(p_x\)</span> up to an additive precision <span class="math">\[ |p_x - q_x| \le \epsilon. \]</span></p></li>
+<li><p>We may want to simulate all quantum circuits in <span class="math">\(\epsilon\)</span> <em>or</em> just some fraction of quantum circuits.</p></li>
 </ol>
+<p>An approximation with multiplicative error is much stronger than with additive error; if <span class="math">\(p_x = 0\)</span>, then <span class="math">\(q_x\)</span> must be exactly <span class="math">\(p_x\)</span>.</p>
+<p>Fun fact: exactly computing <span class="math">\(p_x\)</span>, even for a subclass of quantum circuits that does only classical probabilistic computation (Toffolis interleaved with Hadamards to simulate coin flips) <a href="https://arxiv.org/abs/0811.0898">is <span class="math">\(\#\cc P\)</span> hard</a>. (Just encode a counting problem in an outcome probability.)</p>
+<p>Ideally, we would like a result that says that an additive-error approximation of <span class="math">\(p_x\)</span> by a classical machine is hard on average.</p>
 <!--
 A problem $A$ is as hard as a problem $B$, written as $A \ge B$ in symbols, if the ability to solve $A$ implies the ability to solve $B$ with a polynomial time overhead. In which case, we say that there is a *polynomial-time reduction* from $A$ to $B$.
 
@@ -257,7 +260,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     property="dc:created">21 Aug 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-08-21 12:45:12 +0000"
+            datetime="2019-08-21 13:22:49 +0000"
             property="dc:modified">21 Aug 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -278,11 +281,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   <p><i class="glyphicon glyphicon-list"></i> Posted in
     
       <a rel="dc:subject" class="category"
-         href="/categories.html#Quantum">Quantum</a>
-    , 
-    
-      <a rel="dc:subject" class="category"
-         href="/categories.html#computing">computing</a>
+         href="/categories.html#Quantum+computing">Quantum computing</a>
     
     </p>
 
@@ -294,7 +293,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/bcae255bc3f947b77d23ca1b24a660f61a838611/_posts/2019-08-21-quantum-supremacy.md"> bcae255</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5169192b957c22c6d15d07ac26baf6d7967e93b1/_posts/2019-08-21-quantum-supremacy.md"> 5169192</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -316,7 +315,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     
       <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
     
-      <li><span>20 Feb 2019</span> &raquo; <a href="/jan-2019-log.html">January 2019 Archive</a></li>
+      <li><span>07 Mar 2019</span> &raquo; <a href="/feb-2019-log.html">February 2019 Archive</a></li>
     
   </ul>
 </div>
@@ -402,6 +401,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     MathJax.Hub.Config({
       TeX: {
         Macros: {
+          cc: ["{\\mathrm}"],
           pder: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle {#1} \\right|}",1],

@@ -4,13 +4,48 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-07-16T12:46:02+00:00</updated>
+ <updated>2019-08-21T12:49:06+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Ingredients for quantum computational supremacy arguments [Draft]</title>
+   <link href="/quantum-supremacy.html"/>
+   <updated>2019-08-21T00:00:00+00:00</updated>
+   <id>h/quantum-supremacy</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Epistemic status: Summarizing research literature&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term &lt;em&gt;quantum supremacy&lt;/em&gt;, &lt;a href=&quot;https://arxiv.org/abs/1203.5813&quot;&gt;coined by John Preskill&lt;/a&gt;, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy&lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; goes back to the &lt;a href=&quot;https://arxiv.org/abs/quant-ph/0205133&quot;&gt;2002 paper by Terhal and DiVincenzo&lt;/a&gt; (published in 2004). Then the &lt;a href=&quot;http://arxiv.org/abs/1011.3245&quot;&gt;2010 BosonSampling paper&lt;/a&gt; by Aaronson and Arkhipov kicked start the experimental race for quantum supremacy that continues today. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring. In other words, if tomorrow someone figures out a fast way to factor integers on a classical computer, we will have to switch to a different encryption scheme. But other than that, the reality that we know of will still mostly be the same as before.&lt;/p&gt;
+Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, especially in a &lt;em&gt;random quantum circuit&lt;/em&gt; architecture? In this setting, there is an ensemble of quantum circuits &lt;span class=&quot;math&quot;&gt;\(U\)&lt;/span&gt;‘s’
+&lt;center&gt;
+&lt;img src=&quot;/assets/img/2019/qcircuit.png&quot; style=&quot;width: 1000px;&quot;/&gt;
+&lt;/center&gt;
+
+&lt;p&gt;and we want to “simulate” the outcome probabilities &lt;span class=&quot;math&quot;&gt;\(p_x\)&lt;/span&gt; for some &lt;span class=&quot;math&quot;&gt;\(x \in \{0,1\}^{2^n}\)&lt;/span&gt;. There are two major “axes” of possible kinds of simulations.&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;By “simulate”, we may want to exactly compute &lt;span class=&quot;math&quot;&gt;\(p_x\)&lt;/span&gt; or equivalently give an estimate &lt;span class=&quot;math&quot;&gt;\(q_x\)&lt;/span&gt; up to multiplicative precision &lt;span class=&quot;math&quot;&gt;\[ \frac{1}{c}p_x \le |p_x - q_x| \le cp_x\]&lt;/span&gt; &lt;em&gt;or&lt;/em&gt; we may want to estimate up to additive precision &lt;span class=&quot;math&quot;&gt;\[ |p_x - q_x| \le \epsilon. \]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We may want to simulate all quantum circuits &lt;em&gt;or&lt;/em&gt; we may want to simulate some fraction of quantum circuits.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!--
+A problem $A$ is as hard as a problem $B$, written as $A \ge B$ in symbols, if the ability to solve $A$ implies the ability to solve $B$ with a polynomial time overhead. In which case, we say that there is a *polynomial-time reduction* from $A$ to $B$.
+
+There is quite a few notions of polynomial-time reduction. We will use the oracular one (*Cook reduction*) since it allows us to reduce decision problems to function problems (especially counting problems in $\textrm{P}^{\#\textrm{P}}$). In this notion, a problem $B$ is Cook-reducible to problem $A$ if $B$ can be solved a polynomial time of calls to an oracle that solves $A$ suffices to solve $B$.
+
+# Stockmeyer&#39;s approximate counting
+
+$\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem](https://en.wikipedia.org/wiki/Sipser%E2%80%93Lautemann_theorem)) It is not know that $\textrm{BPP}\subset\textrm{NP}$. (The NP-analogue for BPP is [MA](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol). Thus, BQP, being more similar to BPP than to P, has [QMA](https://en.wikipedia.org/wiki/QMA) as the NP-analogue.)--&gt;
+
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;in a non-black-box setting. Quantum advantage in a black box setting was already established long ago in the noiseless case by the &lt;a href=&quot;https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm&quot;&gt;Deutsch-Jozsa algorithm&lt;/a&gt; and in the noisy case by &lt;a href=&quot;https://en.wikipedia.org/wiki/Simon_algorithm&quot;&gt;Simon’s algorithm&lt;/a&gt;.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
  
  <entry>
    <title>May-June 2019 Archive</title>
@@ -50,7 +85,7 @@ Research is a bit nebulous these months, with so much that I want to talk about 
 &lt;/blockquote&gt;&lt;/li&gt;
 &lt;li&gt;A candidate gene for depression is another house of cards. [&lt;a href=&quot;https://www.theatlantic.com/science/archive/2019/05/waste-1000-studies/589684/&quot;&gt;Atlantic&lt;/a&gt;] [&lt;a href=&quot;https://slatestarcodex.com/2019/05/07/5-httlpr-a-pointed-review/&quot;&gt;SSC&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;First time the world has &lt;a href=&quot;https://ourworldindata.org/population-aged-65-outnumber-children&quot;&gt;more people over 64 than children younger than 5&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/cf19b956-60a2-11e9-b285-3acd5d43599e&quot;&gt;Who is using your face?&lt;/a&gt;, FT [&lt;a href=&quot;https://old.reddit.com/r/EmergingRisks/comments/bewxkp/whos_using_your_face_the_ugly_truth_about_facial/&quot;&gt;without paywall&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2019/07/13/technology/databases-faces-facial-recognition-technology.html&quot;&gt;NYTimes&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/cf19b956-60a2-11e9-b285-3acd5d43599e&quot;&gt;Who is using your face?&lt;/a&gt;, FT [&lt;a href=&quot;https://old.reddit.com/r/EmergingRisks/comments/bewxkp/whos_using_your_face_the_ugly_truth_about_facial/&quot;&gt;Without paywall&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2019/07/13/technology/databases-faces-facial-recognition-technology.html&quot;&gt;NYTimes&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;In the low-trust society, the Chinese welcome &lt;a href=&quot;https://slate.com/technology/2019/05/china-mobile-5g-facial-recognition-ad.html&quot;&gt;facial recognition technology&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;The periodic system as &lt;a href=&quot;https://www.mpg.de/13566273/periodic-system-elements&quot;&gt;ordered hypergraphs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Lanthanum hydride, a compound rich in hydrogen exhibits &lt;a href=&quot;https://www.nature.com/articles/d41586-019-01583-y&quot;&gt;superconductivity at 250 K&lt;/a&gt; under more than a million times Earth’s atmospheric pressure. In general, the lower the atomic mass, the higher the critical temperature.&lt;/li&gt;
@@ -93,7 +128,7 @@ Research is a bit nebulous these months, with so much that I want to talk about 
 &lt;p&gt;In other words, did we stop burning witches because we have a higher moral standard or because our beliefs are better-adjusted to reality?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Japanese &lt;a href=&quot;https://mymodernmet.com/japanese-rice-paddy-art&quot;&gt;rice paddy art&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-qgreAUpPwM&quot;&gt;Drawing with Fourier series and epicycles&lt;/a&gt;, 3Blue1Brown&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sit back, relax, and enjoy watching Protozoans while listening to Hank Green&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sit back, relax, and enjoy watching swimming Protozoans while listening to Hank Green&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;
@@ -107,11 +142,12 @@ https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&q
 &lt;li&gt;White House &lt;a href=&quot;https://www.washingtonpost.com/climate-environment/2019/06/08/white-house-blocked-intelligence-aides-written-testimony-saying-human-caused-climate-change-could-be-possibly-catastrophic/?utm_term=.36fad422e920&quot;&gt;barred an intelligence agency&lt;/a&gt; from a written submission that warns againsts the risk of climate change. One of the critics is an atomic physicist &lt;a href=&quot;https://www.npr.org/2019/03/01/698073442/heres-the-white-houses-top-climate-change-skeptic&quot;&gt;William Happer&lt;/a&gt; who has long been arguing for a benefit of increasing CO2.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/Economics/comments/5g6ese/the_simple_analytics_of_an_nit_ubi_and_eitc/&quot;&gt;The simple analytics of UBI, NIT, and EITC&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;SSC on &lt;a href=&quot;https://slatestarcodex.com/2019/06/10/book-review-the-prices-are-too-dmn-high/&quot;&gt;Baumol’s cost disease&lt;/a&gt; and a &lt;a href=&quot;https://slatestarcodex.com/2019/06/17/followup-on-the-baumol-effect-thanks-o-baumol/&quot;&gt;follow-up&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;A standard example of the power of default opt-in: organ donation is &lt;a href=&quot;https://jasoncollins.blog/2015/02/11/charts-that-dont-seem-quite-right-organ-donation-edition/&quot;&gt;misleading&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;A standard example of the power of default opt-in, organ donation, is &lt;a href=&quot;https://jasoncollins.blog/2015/02/11/charts-that-dont-seem-quite-right-organ-donation-edition/&quot;&gt;misleading&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.nybooks.com/articles/2019/05/09/kidnapping-efficient-business/&quot;&gt;Kidnapping: A Very Efficient Business&lt;/a&gt;, NY Review of Books [&lt;a href=&quot;https://sundiatapost.com/2019/04/28/world-of-kidnapping-a-very-efficient-business/&quot;&gt;Without paywall&lt;/a&gt;] [&lt;a href=&quot;https://news.ycombinator.com/item?id=19712238&quot;&gt;ycombinator&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;quantummachine-learning&quot;&gt;Quantum/machine learning&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1803.03453&quot;&gt;The Surprising Creativity of Digital Evolution: A Collection of Anecdotes from the Evolutionary Computation and Artificial Life Research Communities&lt;/a&gt; Lehman et al. (Goodhart’s law in evolutionary algorithms)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://openai.com/blog/musenet&quot;&gt;MuseNet&lt;/a&gt;, a neural network that learns musical styles&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://nostalgebraist.tumblr.com/post/185326092369/the-transformer-explained&quot;&gt;Transformer architecture explained&lt;/a&gt; (GPT-2, BERT, AlphaStar)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=p1b5aiTrGzY&quot;&gt;Few-Shot Adversarial Learning of Realistic Neural Talking Head Models&lt;/a&gt; (Go to the end of the video to see Marilyn Monroe, Einstein, and Mona Lisa talking.)&lt;/li&gt;
@@ -158,7 +194,11 @@ https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&q
 &lt;li&gt;&lt;a href=&quot;https://www.gwern.net/docs/genetics/2016-plomin.pdf&quot;&gt;Top 10 Replicated Findings From Behavioral Genetics&lt;/a&gt;, Plomin, DeFries, Knopik and Neiderhiser 2016&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/mp2014105&quot;&gt;Genetics and intelligence differences: five special findings&lt;/a&gt;, Plomin and Deary 2014&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://infoproc.blogspot.com/&quot;&gt;Steve Hsu&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/slatestarcodex/comments/4sp6sw/metaanalysis_of_the_heritability_of_human_traits/d5b1abn/&quot;&gt;Gwern&lt;/a&gt; have been saying for years that &lt;em&gt;the blank slate is broken&lt;/em&gt;. Unfortunately, no one has done &lt;a href=&quot;https://www.goodreads.com/review/show/1061022300&quot;&gt;a good job&lt;/a&gt; of summarizing the recent advances in the genetic origins of behavioral traits for the general public. Not until now.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;/assets/img/2019/plomin_blueprint_cover.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://infoproc.blogspot.com/&quot;&gt;Steve Hsu&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/slatestarcodex/comments/4sp6sw/metaanalysis_of_the_heritability_of_human_traits/d5b1abn/&quot;&gt;Gwern&lt;/a&gt; have been saying for years that &lt;em&gt;the blank slate is broken&lt;/em&gt;. Unfortunately, &lt;a href=&quot;https://www.goodreads.com/review/show/1061022300&quot;&gt;no one has done a good job&lt;/a&gt; of summarizing the recent advances in the genetic origins of behavioral traits for the general public. Not until now.&lt;/p&gt;
 &lt;p&gt;The first part of the book covers robust classic findings from decades of adoption and twin studies, &lt;!--(such as Colorado Adoption project (n = 250 + 250 controls) and Twin Early Development Study (n = 16000))--&gt; namely the counterintuitive &lt;a href=&quot;https://www.psychologytoday.com/gb/blog/the-scientific-fundamentalist/200809/the-50-0-50-rule-why-parenting-has-virtually-no-effect&quot;&gt;50-0-50 rule&lt;/a&gt;: parenting and schooling have virtually no effect on childrens, while the rest of the contribution comes equally from genetics and “unshared environment” which can be &lt;a href=&quot;https://slatestarcodex.com/2016/03/16/non-shared-environment-doesnt-just-mean-schools-and-peers/&quot;&gt;anything including measurement errors&lt;/a&gt; &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Very roughly speaking, any phenotype &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; has two contributions: genetic &lt;span class=&quot;math&quot;&gt;\(g\)&lt;/span&gt; and environmental &lt;span class=&quot;math&quot;&gt;\(e\)&lt;/span&gt;. So the variance is &lt;span class=&quot;math&quot;&gt;\[ \mathrm{Var}(p) = \mathrm{Var}(g) + \mathrm{Var}(e) + 2\mathrm{Cov}(g,e) \]&lt;/span&gt; Heritability (“in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Heritability#Definition&quot;&gt;broad sense&lt;/a&gt;”) is defined to be &lt;span class=&quot;math&quot;&gt;\(\mathrm{Var}(g)/\mathrm{Var}(p)\)&lt;/span&gt;. Once controlled for the “nature of nurture”, &lt;span class=&quot;math&quot;&gt;\(\mathrm{Cov}(g,e) = 0\)&lt;/span&gt;, the effect of nurture often disappears.&lt;/p&gt;
 &lt;p&gt;Divorce&lt;/p&gt;
 &lt;blockquote&gt;
@@ -184,7 +224,7 @@ https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&q
 &lt;blockquote&gt;
 &lt;p&gt;Once you start thinking about how much DNA matters, it is difficult to point to any psychological experiences completely devoid of possible genetic influence. For example, accidents are not always accidental. Some children have more accidents than others; the number of children’s scrapes and bruises shows genetic influence. For adults, automobile accidents are not always accidental either, of course. Automobile crashes are often caused by reckless driving – driving too fast, taking chances or driving under the influence of alcohol and other drugs. Sometimes accidents do just happen, but genetic differences in personality can increase the likelihood of accidents happening. […] The only events free from genetic influence are those over which we have little control, such as the death or illness of relatives and friends.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The author understandably spends a lot of time discussing how the result could be true and how &lt;em&gt;not&lt;/em&gt; to misinterpret it. Crucially, the measure is statistical and hence only applies on the population, not individual, level. Moreover, the result is conditioned on “normal” experience e.g. no neglect, torture etc. More generally, equality of opportunity means more pronounced genetic effects because privilege matters less.&lt;/p&gt;
+&lt;p&gt;The author understandably spends a lot of time discussing how the result could be true and how &lt;em&gt;not&lt;/em&gt; to misinterpret it. Most importantly, the measure is statistical, hence only applies at the population, not individual, level, and conditioned on “normal” experience e.g. no neglect, torture etc. More generally, equality of opportunity means more pronounced genetic effects because privilege matters less.&lt;/p&gt;
 &lt;p&gt;Parenting&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;parenting correlates with children’s outcomes for three reasons considered earlier. One reason is that parents and their children are 50 per cent similar genetically. Put crudely, nice parents have nice children because they are all nice genetically. Another reason is that parenting is often a response to, rather than a cause of, children’s genetic propensities. It is awkward to be an affectionate parent to a child who is not a cuddler. Finally, children make their own environments, regardless of their parents. That is, they select, modify and create environments correlated with their genetic propensities. Children who want to do something like play sports or a musical instrument will badger their parents to make it happen. […]&lt;/p&gt;
@@ -215,7 +255,7 @@ https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&q
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Notable exceptions are religious and political beliefs for which shared environment explains 20% of the variance.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;In these cases, polygenic scores are more powerful predictors than traditional ones such as whether there you have a family member with the disorder. Most traits are highly &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygene&quot;&gt;polygenic&lt;/a&gt;, with an exception of Alzheimer’s disease which is mostly due to a single gene called &lt;a href=&quot;https://en.wikipedia.org/wiki/Apolipoprotein_E#Alzheimers_disease&quot;&gt;&lt;em&gt;APOE&lt;/em&gt;&lt;/a&gt;.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;Polygenic scores in these cases are more powerful predictors than traditional ones, namely whether you have a family member with the disorder. Most traits are highly &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygene&quot;&gt;polygenic&lt;/a&gt;, with an exception of Alzheimer’s disease which is mostly due to a single gene called &lt;a href=&quot;https://en.wikipedia.org/wiki/Apolipoprotein_E#Alzheimers_disease&quot;&gt;&lt;em&gt;APOE&lt;/em&gt;&lt;/a&gt;.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>

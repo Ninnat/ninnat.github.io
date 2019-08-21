@@ -576,7 +576,7 @@ $(document).ready(function() {
     MathJax.Hub.Config({
       TeX: {
         Macros: {
-          cc: ["{\\mathrm}"],
+          cc: ["{\\mathrm{#1}}",1],
           pder: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle {#1} \\right|}",1],

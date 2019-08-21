@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Ingredients for quantum computational supremacy arguments [Draft]</title>
+    <title>Ingredients for quantum computational supremacy [Draft]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
@@ -20,13 +20,13 @@
 
 
 
-  <meta name="description" content="Ingredients for quantum computational supremacy arguments [Draft]" />
+  <meta name="description" content="Ingredients for quantum computational supremacy [Draft]" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="Ingredients for quantum computational supremacy arguments [Draft]" />
+<meta property="dc:title" content="Ingredients for quantum computational supremacy [Draft]" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
 <meta property="dc:date" content="2019-08-21 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
@@ -38,7 +38,7 @@
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="Ingredients for quantum computational supremacy arguments [Draft]" />
+<meta property="og:title" content="Ingredients for quantum computational supremacy [Draft]" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
@@ -49,14 +49,14 @@
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
 <meta name="citation_date" content="2019-08-21 00:00:00 +0000"/>
-<meta name="citation_title" content="Ingredients for quantum computational supremacy arguments [Draft]"/>
+<meta name="citation_title" content="Ingredients for quantum computational supremacy [Draft]"/>
 <meta name="citation_journal_title" content="Schur's Lemming"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Ingredients for quantum computational supremacy arguments [Draft]" />
-<meta name="twitter:description" content="Ingredients for quantum computational supremacy arguments [Draft]" />
+<meta name="twitter:title" content="Ingredients for quantum computational supremacy [Draft]" />
+<meta name="twitter:description" content="Ingredients for quantum computational supremacy [Draft]" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">Ingredients for quantum computational supremacy arguments [Draft]</h1>
+    <h1 class="entry-title">Ingredients for quantum computational supremacy [Draft]</h1>
     <h3></h3>
 </header>
 
@@ -213,10 +213,20 @@ $(document).ready(function() {
           <article>
           </br>
 <!--          <font size="+1"><b> Contents </b></font>
-          
+          <ul>
+<li><a href="#good-multiplicative-approximation-in-ccbppnp">Good multiplicative approximation in <span class="math">()</span></a>
+<ul>
+<li><a href="#anti-concentration">Anti-concentration</a>
+<ul>
+<li><a href="#by-unitary-2-designs">By unitary 2-designs</a></li>
+</ul></li>
+<li><a href="#are-anti-concentrate-probabilities-really-anti-concentrate">Are “anti-concentrate” probabilities really anti-concentrate?</a></li>
+</ul></li>
+<li><a href="#worst-to-average-case-reduction">Worst-to-average case reduction</a></li>
+</ul>
         <div id="toc"></div> -->
           <p><em>Epistemic status: Summarizing research literature</em></p>
-<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then <a href="http://arxiv.org/abs/1011.3245">BosonSampling</a> by Aaronson and Arkhipov in 2010 kicked start the experimental race for quantum supremacy that continues to today. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring. In other words, if tomorrow someone figures out a fast way to factor integers on a classical computer, we will have to switch to a different encryption scheme. But other than that, the reality that we know of will still mostly be the same as before.</p>
+<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then <a href="http://arxiv.org/abs/1011.3245">BosonSampling</a> by Aaronson and Arkhipov in 2010 kicked start the experimental race for quantum supremacy that continues to this day. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring. In other words, if tomorrow someone figures out a fast way to factor integers on a classical computer <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, we will have to switch to a different encryption scheme. But other than that, the reality that we know of will still mostly be the same as before.</p>
 Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, especially in a <em>random quantum circuit</em> architecture? In this setting, there is an ensemble <span class="math">\(\mathcal{E}\)</span> of quantum circuits <span class="math">\(U\)</span>
 <center>
 <img src="/assets/img/2019/qcircuit.png" style="width: 1000px;"/>
@@ -225,11 +235,54 @@ Now switching from a very general exposition to a technical question that I’m 
 <p>and we want to “simulate” the outcome probabilities <span class="math">\(p_x = |\av{x|U|0}|^2\)</span> for some <span class="math">\(x \in \{0,1\}^{2^n}\)</span>. There are two major “axes” of possible kinds of simulations.</p>
 <ol type="1">
 <li><p>By “simulate”, we may want to estimate <span class="math">\(p_x\)</span> up to a multiplicative precision <span class="math">\[ |p_x - q_x| \le \gamma p_x,\]</span> <em>or</em> we just want to estimate <span class="math">\(p_x\)</span> up to an additive precision <span class="math">\[ |p_x - q_x| \le \epsilon. \]</span></p></li>
-<li><p>We may want to simulate all quantum circuits in <span class="math">\(\epsilon\)</span> <em>or</em> just some fraction of quantum circuits.</p></li>
+<li><p>We may want to simulate all quantum circuits in <span class="math">\(\mathcal{E}\)</span> <em>or</em> just some fraction of them.</p></li>
 </ol>
 <p>An approximation with multiplicative error is much stronger than with additive error; if <span class="math">\(p_x = 0\)</span>, then <span class="math">\(q_x\)</span> must be exactly <span class="math">\(p_x\)</span>.</p>
-<p>Fun fact: exactly computing <span class="math">\(p_x\)</span>, even for a subclass of quantum circuits that does only classical probabilistic computation (Toffolis interleaved with Hadamards to simulate coin flips) <a href="https://arxiv.org/abs/0811.0898">is <span class="math">\(\#\cc P\)</span> hard</a>. (Just encode a counting problem in an outcome probability.)</p>
-<p>Ideally, we would like a result that says that an additive-error approximation of <span class="math">\(p_x\)</span> by a classical machine is hard on average.</p>
+<p>Fun fact: exactly computing <span class="math">\(p_x\)</span>, even for a subclass of quantum circuits that does only classical probabilistic computation (Toffolis interleaved with Hadamards to simulate coin flips) <a href="https://arxiv.org/abs/0811.0898">is <span class="math">\(\cc{\#P}\)</span>-complete</a>. (Does this mean that proving quantum supremacy is easier than we thought?) When a problem is <span class="math">\(\cc{\#P}\)</span>-complete, it can be shown that multiplicative approximations to solutions of these problems are still <span class="math">\(\cc{\#P}\)</span>-complete. <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> (I can’t confirm this statement, but it seems likely.)</p>
+<p>Ideally, we would like a result that says that an additive approximation of <span class="math">\(p_x\)</span> by a classical machine is hard on average.</p>
+<ol type="1">
+<li>PH does not collapse.</li>
+<li>Worst-to-average case reduction</li>
+<li>Anti-concentration</li>
+</ol>
+<h1 id="good-multiplicative-approximation-in-ccbppnp">Good multiplicative approximation in <span class="math">\(\cc{BPP^{NP}}\)</span></h1>
+<p>We follow the argument in</p>
+<ul>
+<li>Bremner, Montanaro and Shepherd, <a href="https://arxiv.org/abs/1504.07999"><em>Average-case complexity versus approximate simulation of commuting quantum computations</em></a> (2016)</li>
+</ul>
+<p>also repeated for random quantum circuits in - Boixo <em>et al.</em>, <a href="http://arxiv.org/abs/1608.00263"><em>Characterizing Quantum Supremacy in Near-Term Devices</em></a> (2018).</p>
+<p>Suppose that there exists a classical sampler that gives an additive estimate <span class="math">\(q_x\)</span> of <span class="math">\(p_x\)</span>: <span class="math">\[\sum_{x\in\{0,1\}^{2^n}} |p_x - q_x| \le \epsilon.\]</span> By Stockmeyer’s counting, there is an <span class="math">\(\mathrm{BPP^{NP}}\)</span> machines that turns this into an estimate <span class="math">\(\tilde{q}_x\)</span> multiplicatively closed to <span class="math">\(q_x\)</span> <span class="math">\[ |q_x - \tilde{q}_x| \le \frac{q_x}{\mathrm{poly}(n)} \]</span> If <span class="math">\(p_x\)</span> anti-concentrates, <span class="math">\(\tilde{q}_x\)</span> turns out to be an estimate of <span class="math">\(p_x\)</span> with relative multiplicative error <span class="math">\[ |p_x-\tilde{q}_x| \le p_x \left(\frac{1}{4} + \frac{1}{\mathrm{poly}(n)}\right) \]</span> for a substantial fraction of the circuits</p>
+<p><strong>Proof.</strong> <span class="math">\[\begin{align}
+    |p_x-\tilde{q}_x| &amp;\le |p_x-q_x| + |q_x - \tilde{q}_x|   &amp;\text{Triangle inequality}\\
+        &amp;\le |p_x-q_x| + \frac{q_x}{\mathrm{poly}(n)}     &amp;\text{Stockmeyer&#39;s counting}\\
+        &amp;\le |p_x-q_x| + \frac{|p_x - q_x| + p_x}{\mathrm{poly}(n)}    &amp;\text{Triangle inequality}\\
+        &amp;= \frac{p_x}{\textrm{Poly}(n)} + |p_x-q_x|\left(1 + \frac{1}{\textrm{poly}(n)}\right)
+\end{align}\]</span> Using <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov’s inequality</a>, <span class="math">\[\begin{align}
+    \mathrm{Pr} \left[ |p_x-q_x| \ge \frac{\epsilon}{2^n\delta} \right] &amp;\le \frac{\mathbb{E}(|p_x-q_x|)2^n\delta}{\epsilon} = \delta \\
+    \mathrm{Pr} \left[ |p_x-q_x| \le \frac{\epsilon}{2^n\delta} \right] &amp;\ge 1-\delta
+\end{align}\]</span> and an <a href="https://arxiv.org/abs/1706.03786">anti-concentration bound</a> from approximate unitary 2-designs (or, in the Google paper, a similar property of the Porter-Thomas distribution) <span class="math">\[\begin{align}
+    \mathrm{Pr} \left[ p_x &gt; \frac{\epsilon}{2^n\delta\gamma}  \right] &amp;\ge \eta,
+\end{align}\]</span> Then for a <span class="math">\((1- \delta)\cap\eta\)</span> fraction of quantum circuits, <span class="math">\[\begin{align}
+    |p_x-\tilde{q}_x| &amp;\le p_x\left(\gamma + \frac{1}{\mathrm{poly}(n)}\right),
+\end{align}\]</span> where <span class="math">\(0 &lt; \gamma &lt;1\)</span> is some small constant, which we can choose to be 1/4. Note that we need to choose <span class="math">\(\delta\)</span> such that <span class="math">\((1- \delta)\cup\eta &gt; 1\)</span> to make the intersection <span class="math">\((1- \delta)\cap\eta\)</span> nonzero.</p>
+<p>We therefore obtain a multiplicative error estimate of <span class="math">\(p_z\)</span> for some fraction of quantum circuits. If <span class="math">\(p_z\)</span> is hard (<span class="math">\(\cc{\#P}\)</span>) to compute <em>on average</em>, then we have shown that <span class="math">\(\cc{P^{\#P}}\subset\cc{BPP^{NP}}\)</span> which is contained in the third level of <span class="math">\(\cc{PH}\)</span> by the <a href="https://en.wikipedia.org/wiki/Sipser%E2%80%93Lautemann_theorem">Sipser–Gács–Lautemann theorem</a>. But by <a href="https://en.wikipedia.org/wiki/Toda%27s_theorem">Toda’s theorem</a>, <span class="math">\(\cc{PH}\subset\cc{P^{\#P}}\)</span> so <span class="math">\(\cc{PH}\)</span> collapses to the third level.</p>
+<center>
+<img src="/assets/img/2019/complexity-classes.png" style="width: 750px;"/>
+</center>
+
+<h2 id="anti-concentration">Anti-concentration</h2>
+<h3 id="by-unitary-2-designs">By unitary 2-designs</h3>
+<ul>
+<li>Hangleiter, Bermejo-Vega, Schwarz and Eisert, <a href="http://arxiv.org/abs/1706.03786"><em>Anticoncentration theorems for schemes showing a quantum speedup</em></a> (2018)</li>
+</ul>
+<h2 id="are-anti-concentrate-probabilities-really-anti-concentrate">Are “anti-concentrate” probabilities really anti-concentrate?</h2>
+<ul>
+<li>Hangleiter, Kliescha, Eisert and Gogolin, <a href="http://arxiv.org/abs/1812.01023"><em>Sample complexity of device-independently certified “quantum supremacy”</em></a> (2019)</li>
+</ul>
+<h1 id="worst-to-average-case-reduction">Worst-to-average case reduction</h1>
+<ul>
+<li>Bouland, Fefferman, Nirkhe and Vazirani,<a href="http://arxiv.org/abs/1803.04402"><em>Quantum Supremacy and the Complexity of Random Circuit Sampling</em></a> 1803.04402</li>
+</ul>
 <!--
 A problem $A$ is as hard as a problem $B$, written as $A \ge B$ in symbols, if the ability to solve $A$ implies the ability to solve $B$ with a polynomial time overhead. In which case, we say that there is a *polynomial-time reduction* from $A$ to $B$.
 
@@ -243,6 +296,8 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
 <hr />
 <ol>
 <li id="fn1"><p>in a non-black-box setting. Quantum advantage in a black box setting was already established long ago in the noiseless case by the <a href="https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm">Deutsch-Jozsa algorithm</a> and in the noisy case by <a href="https://en.wikipedia.org/wiki/Simon_algorithm">Simon’s algorithm</a>.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Henry Cohn, “<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">Factoring may be easier than you think</a>”<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>More accurately, in the quantum setting <a href="https://www.nature.com/articles/s41534-017-0018-2">we consider <span class="math">\(\cc{GapP}\)</span></a> instead of <span class="math">\(\cc{\#P}\)</span> complexity classes.<a href="#fnref3">↩</a></p></li>
 </ol>
 </section>
 
@@ -260,7 +315,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     property="dc:created">21 Aug 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-08-21 13:22:49 +0000"
+            datetime="2019-08-21 14:13:28 +0000"
             property="dc:modified">21 Aug 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -293,7 +348,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5169192b957c22c6d15d07ac26baf6d7967e93b1/_posts/2019-08-21-quantum-supremacy.md"> 5169192</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/85a13b22cb206cfaec42b8b201c9b109298344ab/_posts/2019-08-21-quantum-supremacy.md"> 85a13b2</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -311,9 +366,9 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>16 Jul 2019</span> &raquo; <a href="/may-2019-log.html">May-June 2019 Archive</a></li>
-    
       <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
+    
+      <li><span>16 Jul 2019</span> &raquo; <a href="/may-2019-log.html">May-June 2019 Archive</a></li>
     
       <li><span>07 Mar 2019</span> &raquo; <a href="/feb-2019-log.html">February 2019 Archive</a></li>
     
@@ -350,7 +405,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=Ingredients for quantum computational supremacy arguments [Draft]
+      &amp;rft.title=Ingredients for quantum computational supremacy [Draft]
       &amp;rft.creator=Ninnat Dangniam
       &amp;rft.date=2019-08-21
       &amp;rft.language='en-US, zh-Hans'
@@ -401,7 +456,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     MathJax.Hub.Config({
       TeX: {
         Macros: {
-          cc: ["{\\mathrm}"],
+          cc: ["{\\mathrm{#1}}",1],
           pder: ["{\\frac{\\partial #1}{\\partial #2}}",2],
           ket: ["{\\left| {#1} \\right\\rangle}",1],
           bra: ["{\\left\\langle {#1} \\right|}",1],

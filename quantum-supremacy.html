@@ -214,72 +214,81 @@ $(document).ready(function() {
           </br>
 <!--          <font size="+1"><b> Contents </b></font>
           <ul>
-<li><a href="#good-multiplicative-approximation-in-ccbppnp">Good multiplicative approximation in <span class="math">()</span></a>
-<ul>
+<li><a href="#good-multiplicative-approximation-in-ccbppnp">Good multiplicative approximation in <span class="math">()</span></a></li>
 <li><a href="#anti-concentration">Anti-concentration</a>
 <ul>
 <li><a href="#by-unitary-2-designs">By unitary 2-designs</a></li>
+<li><a href="#do-anti-concentrate-probabilities-actually-anti-concentrate">Do “anti-concentrate” probabilities actually anti-concentrate?</a></li>
 </ul></li>
-<li><a href="#are-anti-concentrate-probabilities-really-anti-concentrate">Are “anti-concentrate” probabilities really anti-concentrate?</a></li>
-</ul></li>
-<li><a href="#worst-to-average-case-reduction">Worst-to-average case reduction</a></li>
+<li><a href="#average-case-hardness-for-random-quantum-circuits">Average-case hardness for random quantum circuits</a></li>
 </ul>
         <div id="toc"></div> -->
-          <p><em>Epistemic status: Summarizing research literature</em></p>
-<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then <a href="http://arxiv.org/abs/1011.3245">BosonSampling</a> by Aaronson and Arkhipov in 2010 kicked start the experimental race for quantum supremacy that continues to this day. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring. In other words, if tomorrow someone figures out a fast way to factor integers on a classical computer <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, we will have to switch to a different encryption scheme. But other than that, the reality that we know of will still mostly be the same as before.</p>
-Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, especially in a <em>random quantum circuit</em> architecture? In this setting, there is an ensemble <span class="math">\(\mathcal{E}\)</span> of quantum circuits <span class="math">\(U\)</span>
+          <p><em>Epistemic status: Summarizing research literature while trying to learn the topic</em></p>
+<div id="toc">
+
+</div>
+<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. I believe that the search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then <a href="http://arxiv.org/abs/1011.3245">BosonSampling</a> by Aaronson and Arkhipov in 2010 kick-started the experimental race for quantum supremacy in near-term quantum devices that continues to this day. These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the polynomial hierarchy”, which is deemed unlikely by computer scientists. Such an argument is not known for factoring; if tomorrow someone figures out a fast way to factor integers on a classical computer <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, we will have to switch to a different encryption scheme but that’s about it. The concept of reality as we know it will still remain unchallenged, while a collapse of the polynomial hierarchy will bring us closer to the world in which <span class="math">\(\cc{P=NP}\)</span>.</p>
+Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, particularly in a <em>random quantum circuit</em> architecture? In this setting, there is an ensemble <span class="math">\(\mathcal{E}\)</span> of quantum circuits <span class="math">\(U\)</span>
 <center>
 <img src="/assets/img/2019/qcircuit.png" style="width: 1000px;"/>
 </center>
 
 <p>and we want to “simulate” the outcome probabilities <span class="math">\(p_x = |\av{x|U|0}|^2\)</span> for some <span class="math">\(x \in \{0,1\}^{2^n}\)</span>. There are two major “axes” of possible kinds of simulations.</p>
 <ol type="1">
-<li><p>By “simulate”, we may want to estimate <span class="math">\(p_x\)</span> up to a multiplicative precision <span class="math">\[ |p_x - q_x| \le \gamma p_x,\]</span> <em>or</em> we just want to estimate <span class="math">\(p_x\)</span> up to an additive precision <span class="math">\[ |p_x - q_x| \le \epsilon. \]</span></p></li>
+<li><p>By “simulate”, we may want to estimate <span class="math">\(p_x\)</span> up to a multiplicative precision <span class="math">\[ |p_x - q_x| \le \eta p_x,\]</span> <em>or</em> we just want to estimate <span class="math">\(p_x\)</span> up to an additive precision <span class="math">\[ |p_x - q_x| \le \epsilon. \]</span></p></li>
 <li><p>We may want to simulate all quantum circuits in <span class="math">\(\mathcal{E}\)</span> <em>or</em> just some fraction of them.</p></li>
 </ol>
-<p>An approximation with multiplicative error is much stronger than with additive error; if <span class="math">\(p_x = 0\)</span>, then <span class="math">\(q_x\)</span> must be exactly <span class="math">\(p_x\)</span>.</p>
-<p>Fun fact: exactly computing <span class="math">\(p_x\)</span>, even for a subclass of quantum circuits that does only classical probabilistic computation (Toffolis interleaved with Hadamards to simulate coin flips) <a href="https://arxiv.org/abs/0811.0898">is <span class="math">\(\cc{\#P}\)</span>-complete</a>. (Does this mean that proving quantum supremacy is easier than we thought?) When a problem is <span class="math">\(\cc{\#P}\)</span>-complete, it can be shown that multiplicative approximations to solutions of these problems are still <span class="math">\(\cc{\#P}\)</span>-complete. <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> (I can’t confirm this statement, but it seems likely.)</p>
-<p>Ideally, we would like a result that says that an additive approximation of <span class="math">\(p_x\)</span> by a classical machine is hard on average.</p>
+<p>Multiplicative approximation is much stronger than additive one; if <span class="math">\(p_x = 0\)</span>, then a multiplicative estimate <span class="math">\(q_x\)</span> must exactly equal <span class="math">\(p_x\)</span>. When a problem is <span class="math">\(\cc{\#P}\)</span>-complete, it can be shown that multiplicative approximation to solutions of these problems are still <span class="math">\(\cc{\#P}\)</span>-complete. <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></p>
+<p>Fun fact: exactly computing <span class="math">\(p_x\)</span>, even for a subclass of quantum circuits that does only classical probabilistic computation (a layer of Hadamard’s to simulate coin flips, followed by diagonal gates) <a href="https://arxiv.org/abs/0811.0898">is <span class="math">\(\cc{\#P}\)</span>-complete</a> <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>. (Does this mean that proving quantum supremacy is easier than we thought?)</p>
+<p>Ideally, we would like a result that says that additive approximation of <span class="math">\(p_x\)</span> by a classical machine is hard on average…</p>
 <ol type="1">
 <li>PH does not collapse.</li>
-<li>Worst-to-average case reduction</li>
+<li>Average-case hardness</li>
 <li>Anti-concentration</li>
 </ol>
 <h1 id="good-multiplicative-approximation-in-ccbppnp">Good multiplicative approximation in <span class="math">\(\cc{BPP^{NP}}\)</span></h1>
+<p>All existing proofs of quantum supremacy require a <span class="math">\(\cc{\#P}\)</span>-hard problem that can’t be solved efficiently on any classical computer. It is a fairly common misconception that these hard problems can, in contrast, be solved efficiently on a quantum computer (by simulating BosonSampling for example). So let me state this clearly: <strong>quantum computers are not believed to be able to solve <span class="math">\(\cc{NP}\)</span>-complete problems efficiently, let alone <span class="math">\(\cc{\#P}\)</span>-complete problems.</strong> The arguments for quantum supremacy are more subtle and rely on an unphysical process known as <em>Stockmeyer’s counting</em> that, given a classical machine that outputs a probability <span class="math">\(q_x\)</span>, there is a <span class="math">\(\cc{BPP^{NP}}\)</span> machine that produces a multiplicative estimate <span class="math">\(\tilde{q}_x\)</span>. Aaronson and Arkhipov’s insight was that sometimes this estimate <span class="math">\(\tilde{q}_x\)</span> is also a <em>multiplicative</em> estimate to the probability <span class="math">\(p_x\)</span> to which the output <span class="math">\(q_x\)</span> of the classical device is an additive estimate. In other words, Stockmeyer’s counting can sometimes improves an additive estimate to a multiplicative one. While additive approximation to <span class="math">\(p_x\)</span> doesn’t let you solve a <span class="math">\(\cc{\#P}\)</span>-complete problem in polynomial time, it does if you also have an <span class="math">\(\cc{NP}\)</span> oracle.</p>
 <p>We follow the argument in</p>
 <ul>
 <li>Bremner, Montanaro and Shepherd, <a href="https://arxiv.org/abs/1504.07999"><em>Average-case complexity versus approximate simulation of commuting quantum computations</em></a> (2016)</li>
 </ul>
-<p>also repeated for random quantum circuits in - Boixo <em>et al.</em>, <a href="http://arxiv.org/abs/1608.00263"><em>Characterizing Quantum Supremacy in Near-Term Devices</em></a> (2018).</p>
-<p>Suppose that there exists a classical sampler that gives an additive estimate <span class="math">\(q_x\)</span> of <span class="math">\(p_x\)</span>: <span class="math">\[\sum_{x\in\{0,1\}^{2^n}} |p_x - q_x| \le \epsilon.\]</span> By Stockmeyer’s counting, there is an <span class="math">\(\mathrm{BPP^{NP}}\)</span> machines that turns this into an estimate <span class="math">\(\tilde{q}_x\)</span> multiplicatively closed to <span class="math">\(q_x\)</span> <span class="math">\[ |q_x - \tilde{q}_x| \le \frac{q_x}{\mathrm{poly}(n)} \]</span> If <span class="math">\(p_x\)</span> anti-concentrates, <span class="math">\(\tilde{q}_x\)</span> turns out to be an estimate of <span class="math">\(p_x\)</span> with relative multiplicative error <span class="math">\[ |p_x-\tilde{q}_x| \le p_x \left(\frac{1}{4} + \frac{1}{\mathrm{poly}(n)}\right) \]</span> for a substantial fraction of the circuits</p>
-<p><strong>Proof.</strong> <span class="math">\[\begin{align}
+<p>also repeated for random quantum circuits in Appendix G of - Boixo <em>et al.</em>, <a href="http://arxiv.org/abs/1608.00263"><em>Characterizing Quantum Supremacy in Near-Term Devices</em></a> (2018).</p>
+<p>Suppose that there exists a classical sampler that gives an additive estimate <span class="math">\(q_x\)</span> of <span class="math">\(p_x\)</span>: <span class="math">\[\sum_{x\in\{0,1\}^{2^n}} |p_x - q_x| \le \epsilon.\]</span> By Stockmeyer’s counting, <span class="math">\(q_x\)</span> can be approximated with multiplicative precision by a <span class="math">\(\mathrm{BPP^{NP}}\)</span> machine <span class="math">\[ |q_x - \tilde{q}_x| \le \frac{q_x}{\mathrm{poly}(n)}. \]</span> Let’s combine these two facts together. <span class="math">\[\begin{align}
     |p_x-\tilde{q}_x| &amp;\le |p_x-q_x| + |q_x - \tilde{q}_x|   &amp;\text{Triangle inequality}\\
         &amp;\le |p_x-q_x| + \frac{q_x}{\mathrm{poly}(n)}     &amp;\text{Stockmeyer&#39;s counting}\\
         &amp;\le |p_x-q_x| + \frac{|p_x - q_x| + p_x}{\mathrm{poly}(n)}    &amp;\text{Triangle inequality}\\
         &amp;= \frac{p_x}{\textrm{Poly}(n)} + |p_x-q_x|\left(1 + \frac{1}{\textrm{poly}(n)}\right)
-\end{align}\]</span> Using <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov’s inequality</a>, <span class="math">\[\begin{align}
-    \mathrm{Pr} \left[ |p_x-q_x| \ge \frac{\epsilon}{2^n\delta} \right] &amp;\le \frac{\mathbb{E}(|p_x-q_x|)2^n\delta}{\epsilon} = \delta \\
-    \mathrm{Pr} \left[ |p_x-q_x| \le \frac{\epsilon}{2^n\delta} \right] &amp;\ge 1-\delta
-\end{align}\]</span> and an <a href="https://arxiv.org/abs/1706.03786">anti-concentration bound</a> from approximate unitary 2-designs (or, in the Google paper, a similar property of the Porter-Thomas distribution) <span class="math">\[\begin{align}
-    \mathrm{Pr} \left[ p_x &gt; \frac{\epsilon}{2^n\delta\gamma}  \right] &amp;\ge \eta,
-\end{align}\]</span> Then for a <span class="math">\((1- \delta)\cap\eta\)</span> fraction of quantum circuits, <span class="math">\[\begin{align}
-    |p_x-\tilde{q}_x| &amp;\le p_x\left(\gamma + \frac{1}{\mathrm{poly}(n)}\right),
-\end{align}\]</span> where <span class="math">\(0 &lt; \gamma &lt;1\)</span> is some small constant, which we can choose to be 1/4. Note that we need to choose <span class="math">\(\delta\)</span> such that <span class="math">\((1- \delta)\cup\eta &gt; 1\)</span> to make the intersection <span class="math">\((1- \delta)\cap\eta\)</span> nonzero.</p>
-<p>We therefore obtain a multiplicative error estimate of <span class="math">\(p_z\)</span> for some fraction of quantum circuits. If <span class="math">\(p_z\)</span> is hard (<span class="math">\(\cc{\#P}\)</span>) to compute <em>on average</em>, then we have shown that <span class="math">\(\cc{P^{\#P}}\subset\cc{BPP^{NP}}\)</span> which is contained in the third level of <span class="math">\(\cc{PH}\)</span> by the <a href="https://en.wikipedia.org/wiki/Sipser%E2%80%93Lautemann_theorem">Sipser–Gács–Lautemann theorem</a>. But by <a href="https://en.wikipedia.org/wiki/Toda%27s_theorem">Toda’s theorem</a>, <span class="math">\(\cc{PH}\subset\cc{P^{\#P}}\)</span> so <span class="math">\(\cc{PH}\)</span> collapses to the third level.</p>
+\end{align}\]</span> If <span class="math">\(|p_x-q_x|\)</span> can be bounded above by <span class="math">\(p_x\)</span>, then <span class="math">\(\tilde{q}_x\)</span> is a multiplicative approximation to <span class="math">\(p_x\)</span> that we want. This is done in two steps:</p>
+<!-- If $p_x$ anti-concentrates, $\tilde{q}_x$ turns out to be an estimate of $p_x$ with relative multiplicative error
+$$ |p_x-\tilde{q}_x| \le p_x \left(\frac{1}{4} + \frac{1}{\mathrm{poly}(n)}\right) $$
+for a substantial fraction of the circuits-->
+
+<ol type="1">
+<li><p>Use <a href="https://en.wikipedia.org/wiki/Markov%27s_inequality">Markov’s inequality</a> <span class="math">\[\begin{align}
+\mathrm{Pr} \left[ |p_x-q_x| \ge \frac{\epsilon}{2^n\delta} \right] \le \frac{\mathbb{E}(|p_x-q_x|)2^n\delta}{\epsilon} \le \delta \iff
+\mathrm{Pr} \left[ |p_x-q_x| \le \frac{\epsilon}{2^n\delta} \right] \ge 1-\delta
+\end{align}\]</span> to bound <span class="math">\(|p_x-q_x|\)</span> by a constant for <span class="math">\(1-\delta\)</span> fraction of quantum circuits.</p></li>
+<li><p>Invoke “anti-concentration” of probabilities (conjectured for BosonSampling, proved for random quantum circuits and more) <span class="math">\[\begin{align}
+\mathrm{Pr} \left[ p_x &gt; \frac{\epsilon}{2^n\delta\eta}  \right] &amp;\ge \gamma,
+\end{align}\]</span> to bound the constant by <span class="math">\(p_x\)</span>, where <span class="math">\(\eta\)</span> is some small constant. Now <span class="math">\((1- \delta)\cap\gamma\)</span> fraction of quantum circuits will satisfy <span class="math">\[\begin{align}
+|p_x-\tilde{q}_x| &amp;\le p_x\left(\eta + \frac{1}{\mathrm{poly}(n)}\right).
+\end{align}\]</span> For <span class="math">\((1- \delta)\cap\gamma\)</span> to be non-empty, we need to pick <span class="math">\(\delta\)</span> such that <span class="math">\((1- \delta)\cup\gamma &gt; 1\)</span>.</p></li>
+</ol>
+<p>If <span class="math">\(p_z\)</span> is <span class="math">\(\cc{\#P}\)</span>-hard to compute for this fraction of quantum circuits, then we have shown that <span class="math">\(\cc{P^{\#P}}\subset\cc{BPP^{NP}}\)</span> which is contained in the third level of <span class="math">\(\cc{PH}\)</span> by the <a href="https://en.wikipedia.org/wiki/Sipser%E2%80%93Lautemann_theorem">Sipser–Gács–Lautemann theorem</a> on the one hand. On the other hand, <span class="math">\(\cc{PH}\subset\cc{P^{\#P}}\)</span> by <a href="https://en.wikipedia.org/wiki/Toda%27s_theorem">Toda’s theorem</a>, so <span class="math">\(\cc{PH}\)</span> collapses to the third level.</p>
 <center>
 <img src="/assets/img/2019/complexity-classes.png" style="width: 750px;"/>
 </center>
 
-<h2 id="anti-concentration">Anti-concentration</h2>
-<h3 id="by-unitary-2-designs">By unitary 2-designs</h3>
+<h1 id="anti-concentration">Anti-concentration</h1>
+<h2 id="by-unitary-2-designs">By unitary 2-designs</h2>
 <ul>
 <li>Hangleiter, Bermejo-Vega, Schwarz and Eisert, <a href="http://arxiv.org/abs/1706.03786"><em>Anticoncentration theorems for schemes showing a quantum speedup</em></a> (2018)</li>
 </ul>
-<h2 id="are-anti-concentrate-probabilities-really-anti-concentrate">Are “anti-concentrate” probabilities really anti-concentrate?</h2>
+<h2 id="do-anti-concentrate-probabilities-actually-anti-concentrate">Do “anti-concentrate” probabilities actually anti-concentrate?</h2>
 <ul>
 <li>Hangleiter, Kliescha, Eisert and Gogolin, <a href="http://arxiv.org/abs/1812.01023"><em>Sample complexity of device-independently certified “quantum supremacy”</em></a> (2019)</li>
 </ul>
-<h1 id="worst-to-average-case-reduction">Worst-to-average case reduction</h1>
+<h1 id="average-case-hardness-for-random-quantum-circuits">Average-case hardness for random quantum circuits</h1>
 <ul>
 <li>Bouland, Fefferman, Nirkhe and Vazirani,<a href="http://arxiv.org/abs/1803.04402"><em>Quantum Supremacy and the Complexity of Random Circuit Sampling</em></a> 1803.04402</li>
 </ul>
@@ -298,6 +307,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
 <li id="fn1"><p>in a non-black-box setting. Quantum advantage in a black box setting was already established long ago in the noiseless case by the <a href="https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm">Deutsch-Jozsa algorithm</a> and in the noisy case by <a href="https://en.wikipedia.org/wiki/Simon_algorithm">Simon’s algorithm</a>.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>Henry Cohn, “<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">Factoring may be easier than you think</a>”<a href="#fnref2">↩</a></p></li>
 <li id="fn3"><p>More accurately, in the quantum setting <a href="https://www.nature.com/articles/s41534-017-0018-2">we consider <span class="math">\(\cc{GapP}\)</span></a> instead of <span class="math">\(\cc{\#P}\)</span> complexity classes.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>And not arbitrary Hadamards in the circuits, as Toffolis + Hadarmards is <a href="https://arxiv.org/abs/0908.1467">known to be a universal gate set</a>.<a href="#fnref4">↩</a></p></li>
 </ol>
 </section>
 
@@ -315,7 +325,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     property="dc:created">21 Aug 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-08-21 14:13:28 +0000"
+            datetime="2019-08-21 16:51:40 +0000"
             property="dc:modified">21 Aug 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -348,7 +358,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/85a13b22cb206cfaec42b8b201c9b109298344ab/_posts/2019-08-21-quantum-supremacy.md"> 85a13b2</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/20ed8eca795d1be877a4a2413947acc79dd129a8/_posts/2019-08-21-quantum-supremacy.md"> 20ed8ec</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -366,9 +376,9 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
-    
       <li><span>16 Jul 2019</span> &raquo; <a href="/may-2019-log.html">May-June 2019 Archive</a></li>
+    
+      <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
     
       <li><span>07 Mar 2019</span> &raquo; <a href="/feb-2019-log.html">February 2019 Archive</a></li>
     

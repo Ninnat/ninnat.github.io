@@ -10,11 +10,11 @@ tags:
 
 <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
 
-Representation theory is Fourier analysis (substantially generalized). Given a representation $V$ of a group $G$, it decomposes (under some assumptions on $G$ and $V$) into a direct sum of irreducible parts
+*Representation theory is Fourier analysis* (substantially generalized). Given a representation $V$ of a group $G$, it decomposes (under some assumptions on $G$ and $V$) into a direct sum of irreducible parts
 $$V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j $$
-with $n_j$ copies of each isomorphic irreducible representation (*irrep*) $V_j$. The canonical Fourier analysis is such a decomposition when the left hand side is the *group algebra* of $\R$ or $\SO(2) \cong \U(1)$ (for periodic functions) and can be generalized to a large class of groups.
+with $n_j$ copies of each isomorphic irreducible representation (*irrep*) $V_j$. The canonical Fourier analysis is such a decomposition when the left hand side is the group algebra (introduced below) of $\R$ or $\SO(2) \cong \U(1)$ (for periodic functions) and can be generalized to a large class of groups.
 
-In this post, I want to talk about the decomposition of representations of the form $\End V = V^* \otimes V$, that is, linear operators over $V$, and in cases that $V$ is described more explicitly such as $V$ being a symmetric power $\Sym^k W$ of the defining representation of [classical groups](https://en.wikipedia.org/wiki/Classical_group#The_classical_groups) $A_n,B_n,C_n,D_n$. The decomposition of $\End V$ in the generic form (1) might very loosely count as a "Fourier analysis" but I will be more ambitious and try to relate such decomposition to actual harmonic analysis, more precisely the decomposition of functions on a space with a $G$-action. As a teaser example, for $\SO(3)$ we have that
+In this post, I want to talk about the decomposition of representations of the form $\End V = V^* \otimes V$, that is, linear operators over $V$, and in cases that $V$ is described more explicitly such as $V$ being a symmetric power $\Sym^k W$ of the defining representation of [classical groups](https://en.wikipedia.org/wiki/Classical_group#The_classical_groups) $A_n,B_n,C_n,D_n$. The decomposition of $\End V$ in the generic form (1) might very loosely count as a "Fourier analysis" but I will be more ambitious and try to relate such decomposition to actual Fourier analysis, more precisely the decomposition of functions on a space equipped with a $G$-action. As a teaser, for $\SO(3)$ we have that
 $$\begin{align}
   \lim_{k\to\infty}\End (\Sym^k V) \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1},
 \end{align}$$
@@ -51,7 +51,9 @@ $$\begin{align}
 \end{align}$$
  In fact, it is not just a ring but also an algebra (because it is a vector space) called the **group algebra**. Given a $G$-representation, the span of $\rho(g)$ gives a $k[G]$-module. Conversely, given a $k[G]$-module, there is a vector space $V$ over $k$ (because $k\id \in k[G]$), on which the $G$-action gives a group homomorphism $G \to \GL(V)$, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in $k[G]$. In other words, they are simply *$k[G]$-linear maps*, generalizing the fact that linear operators (all of which commute with the scalars) are morphisms in the category of vector spaces.
 
-Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using little linear algebra) but powerful result. Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
+### Schur's lemma
+
+Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using a little linear algebra) but powerful result. Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
 
 **Lemma 1.** (Schur's lemma)
 
@@ -71,7 +73,7 @@ $$\begin{align}
 ### The meaning of tensor operators
 <!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
 
-I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a *vector operator*. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between representations $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \circ \rho(R)$) induces a rotation of $\mathbf{r}$: [^2]
+I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a *vector operator*. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between irreps $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \circ \rho(R)$) induces a rotation of $\mathbf{r}$: [^2]
 $$\begin{align}
   \sigma\dgg(R)T(\mathbf{r}_j)\rho(R) = R_j{}^k T(\mathbf{r}_k).
 \end{align}$$
@@ -91,29 +93,35 @@ Does anyone remember what [the Wigner-Eckart theorem](https://en.wikipedia.org/w
 
 For us, a generalization of *spherical tensor operators* will prove convenient to provide a *weight* (of a Lie algebra)-operator basis for the space of linear operators.
 
-
 ## Functors
 
-### Free functors
+### The restriction functor
 
-### The induction functor
+The reason for introducing $G$-representations as a category is that now I can talk about maps between categories: *functors*.
+
+### Adjoint functors
+
+[preorder](https://en.wikipedia.org/wiki/Preorder) [^1], a category with only one morphism $x\to y$, which can be though of as a comparison $x\le y$. For example, the product in this category is the infimum and the coproduct is the supremum. A functor between two preorders $A$ and $B$ is a *monotone function* if it is an order-preserving map
+$$ x \le_A y \implies f(x) \le_B f(b). $$
+A pair of monotone functions $f$ and $G$ is an *adjoint pair* if they satisfy the *Galois connection*:
+$$ f(a) \le_B b \iff a \le_A g(b). $$
+Suppose, for instance, that $A = B = \mathbb{N}$, the natural numbers. The monotone function $x \to 2x$ has no inverse but it does have right and left adjoints: the ceiling $\lceil x/2 \rceil$ and the floor $\lfloor x/2 \rfloor$ respectively. The notion of Galois connection generalizes to that of [adjunction](https://en.wikipedia.org/wiki/Adjoint_functors), an example of which in re
+
+### Tensor-Hom adjunction
 
 Given a group $G$ and its subgroup $H\subset G$, any representation $V$ of $G$ can be restricted to $V\bigr|{}_H$ of $H$. (Restriction of an irrep is not necessarily irreducible. Think of the restriction to an abelian $H$.)
 
-It is easy to describe what restriction to a subgroup $H\subset G$ does to a $G$-representation.
+### The induction functor
 
-A regular representation is a *free representation*.
+### As a free functor
 
-
-  A useful trick (that I learned from Qiaochu Yuan's [answer](https://math.stackexchange.com/a/25515)) to understand anything in category theory is to first consider as a toy model a [preorder](https://en.wikipedia.org/wiki/Preorder) [^1], a category with only one morphism $x\to y$, which can be though of as a comparison $x\le y$. For example, the product in this category is the infimum and the coproduct is the supremum. A functor between two preorders $A$ and $B$ is a *monotone function* if it is an order-preserving map
-  $$ x \le_A y \implies f(x) \le_B f(b). $$
-  A pair of monotone functions $f$ and $G$ is an *adjoint pair* if they satisfy the *Galois connection*:
-  $$ f(a) \le_B b \iff a \le_A g(b). $$
-  Suppose, for instance, that $A = B = \mathbb{N}$, the natural numbers. The monotone function $x \to 2x$ has no inverse but it does have right and left adjoints: the ceiling $\lceil x/2 \rceil$ and the floor $\lfloor x/2 \rfloor$ respectively. The notion of Galois connection generalizes to that of [adjunction](https://en.wikipedia.org/wiki/Adjoint_functors), an example of which in representation theory is [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity).
+# Tensor product representations
 
 # Fourier analysis
 
-## Duals, tensor products, and Lie algebra representations
+## A little algebraic geometry
+
+## The Borel subgroup
 
 ## Geometric multiplicity-free condition
 

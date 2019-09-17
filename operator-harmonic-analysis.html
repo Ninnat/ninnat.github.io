@@ -3,14 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>First Post</title>
+    <title>Fourier analysis of linear operators [Draft]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
       <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    <meta name="subtitle" content="How this is made">
+    <meta name="subtitle" content="">
     <meta name="author" content="Ninnat Dangniam">
 
     <!-- HTML5 metadata -->
@@ -20,43 +20,43 @@
 
 
 
-  <meta name="description" content="How this is made" />
+  <meta name="description" content="Fourier analysis of linear operators [Draft]" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="First Post" />
+<meta property="dc:title" content="Fourier analysis of linear operators [Draft]" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
-<meta property="dc:date" content="2016-07-20 00:00:00 +0000" />
+<meta property="dc:date" content="2019-09-17 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="/first-post.html" />
+<meta property="dc:identifier" content="/operator-harmonic-analysis.html" />
 <meta property="dc:rights" content="CC-BY" />
 <meta property="dc:source" content="Schur's Lemming" />
 <meta property="dc:subject" content="Physics" />
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="First Post" />
+<meta property="og:title" content="Fourier analysis of linear operators [Draft]" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2016-07-20 00:00:00 +0000" />
+<meta property="http://ogp.me/ns/article#published_time" content="2019-09-17 00:00:00 +0000" />
 <meta property="og:site_name" content="Schur's Lemming" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://ninnat.github.io/first-post.html" />
+<meta property="og:url" content="http://ninnat.github.io/operator-harmonic-analysis.html" />
 <meta property="og:type" content="website" />
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
-<meta name="citation_date" content="2016-07-20 00:00:00 +0000"/>
-<meta name="citation_title" content="First Post"/>
+<meta name="citation_date" content="2019-09-17 00:00:00 +0000"/>
+<meta name="citation_title" content="Fourier analysis of linear operators [Draft]"/>
 <meta name="citation_journal_title" content="Schur's Lemming"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="First Post" />
-<meta name="twitter:description" content="How this is made" />
+<meta name="twitter:title" content="Fourier analysis of linear operators [Draft]" />
+<meta name="twitter:description" content="Fourier analysis of linear operators [Draft]" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -178,8 +178,8 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">First Post</h1>
-    <h3>How this is made</h3>
+    <h1 class="entry-title">Fourier analysis of linear operators [Draft]</h1>
+    <h3></h3>
 </header>
 
 <!-- <style>
@@ -213,42 +213,67 @@ $(document).ready(function() {
           <article>
           </br>
 <!--          <font size="+1"><b> Contents </b></font>
-          
+          <ul>
+<li><a href="#categories-of-representations">Categories of representations</a>
+<ul>
+<li><a href="#tensor-operators-and-the-wigner-eckart-theorem">“Tensor operators” and the Wigner-Eckart theorem</a></li>
+<li><a href="#restriction-and-induction-functors">Restriction and induction functors</a></li>
+<li><a href="#lie-algebra-and-dual-representations">Lie algebra and dual representations</a></li>
+</ul></li>
+<li><a href="#borel-weil">Borel-Weil</a></li>
+</ul>
         <div id="toc"></div> -->
-          <p>First post on my Jekyll-powered blog!</p>
-<p>I’ve been blogging on <a href="https://ninnatdangniam.wordpress.com/">Wordpress</a> for a long time (in Thai) but despite how easy it is to setup the blog, there isn’t much I can do without paying. Now you can follow <a href="https://ninnat.github.io/README.html">what I did</a> and get your own blog hosted on a free (public) Git repository.</p>
-<p>Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and displayed using <a href="https://www.mathjax.org/">MathJax</a>. Math in a paragraph (in-line math) is delimited by <code>$...$</code>, while displaying math in its own paragraph uses <code>$$...$$</code>. Use <code>\begin{aligned}...\end{aligned}</code> for aligned equations and <code>\begin{aligned}...\end{aligned}</code> for numbered aligned equations. (Both delimiters have to be placed inside <code>$$...$$</code>.) A quick guide on MathJax syntax can be found <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
-<p>Let’s test this by writing the Maxwell’s equations in cgs units:</p>
-<p><span class="math">\[
-\begin{align}
-\nabla \cdot \mathbf{E} &amp;= 4\pi \rho , \\
-\nabla \times \mathbf{E} &amp;= -\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} , \\
-\nabla \cdot \mathbf{B} &amp;= 0, \\
-\nabla \times \mathbf{B} &amp;= \frac{4\pi}{c} \mathbf{J} + \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}.
-\end{align}
-\]</span></p>
-<p>Another indispensable feature that I’ve always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it’s just me but it’s tempting to take a peek at footnotes even when I know they aren’t necessary to the main text.) A much better way to implement a digital footnote is using, for example, <a href="http://www.bigfootjs.com/">Bigfoot</a> like this.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> All you have to do is pasting the css into <code>/assets/css/style.css</code>, putting the javascript file to, say, <code>/assets/js</code> and calling it with</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/bigfoot.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $.bigfoot({
-        activateCallback: function($popover, $button) {
-                if (MathJax &amp;&amp; !$button.data(&#39;mathjax-processed&#39;)) {
-                        var content_wrapper = $popover.find(&#39;.bigfoot-footnote__content&#39;)[0];
-                        MathJax.Hub.Queue([&#39;Typeset&#39;, MathJax.Hub, content_wrapper]);
-                        MathJax.Hub.Queue(function () {
-                                $button.attr(&#39;data-bigfoot-footnote&#39;, content_wrapper.innerHTML);
-                                $button.data(&#39;mathjax-processed&#39;, true);
-                        });
-                }
-        }
-    });
-&lt;/script&gt;</code></pre>
-<p>within <code>/_includes/javascript.html</code>. For searchability, I also choose to show footnotes in the footer.</p>
-<p><em>3 Jan 2017</em>: <a href="https://esham.io/2014/07/mathjax-and-bigfoot">Benjamin Esham</a> provides a code to enable MathJax in the footnotes.</p>
+          <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
+
+<p>Representation theory is Fourier analysis (substantially generalized). Given a representation <span class="math">\(V\)</span> of a group <span class="math">\(G\)</span>, it decomposes (under some assumptions on <span class="math">\(G\)</span> and <span class="math">\(V\)</span>) into a direct sum of irreducible parts <span class="math">\[V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \]</span> with <span class="math">\(n_j\)</span> copies of each isomorphic irreducible representation (<em>irrep</em>) <span class="math">\(V_j\)</span>. A Fourier transform is a linear map</p>
+<h1 id="categories-of-representations">Categories of representations</h1>
+<p>The standard way to introduce a representation of a group <span class="math">\(G\)</span> is as a pair <span class="math">\((\rho,V)\)</span> of a vector space <span class="math">\(V\)</span> and a group homomorphism <span class="math">\(\rho: G \to \GL(V)\)</span>. That is, for <span class="math">\(g_1,g_2 \in G\)</span>, <span class="math">\(\rho(g_1)\)</span> and <span class="math">\(\rho(g_2)\)</span> are invertible matrices over a vector space <span class="math">\(V\)</span> such that the group structure is respected: <span class="math">\(\rho(g_1)\rho(g_2) = \rho(g_1 g_2)\)</span>. Group homomorphisms are examples of ubiquitous structure-preserving maps or <em>morphisms</em> between mathematical objects. Morphisms for sets are arbitrary (total i.e. defined for all inputs) maps between sets. For vector spaces, we have linear operators. Of course, not only algebraic objects have morphisms. For example, for topological spaces and smooth manifolds, we have continuous maps and smooth maps respectively. (In particular, <a href="https://en.wikipedia.org/wiki/Homeomorphism">homeomorphisms</a> are isomorphisms between topological spaces, and <a href="https://en.wikipedia.org/wiki/Diffeomorphism">diffeomorphisms</a> are isomorphisms between smooth manifolds.) Once we have objects and morphisms, we have a <em>category</em>. Formally, a <strong>category</strong> <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them such that there is an identity morphism <span class="math">\(1\circ f = f\circ 1 = f\)</span> and the composition of morphisms is associative: <span class="math">\((f \circ g) \circ h = f\ \circ (g \circ h)\)</span>. It should be emphasized that all the information contained in the definition is about morphisms; the objects can be anything. The lesson here is that morphisms are as important, if not more, than the objects we want to study.</p>
+What would be the morphisms in a category of <span class="math">\(G\)</span>-representations? They are <em><span class="math">\(G\)</span>-equivariant maps</em> or <em>intertwiners</em>. Let <span class="math">\((\rho,V)\)</span> and <span class="math">\((\sigma,W)\)</span> be <span class="math">\(G\)</span>-representations. A linear map <span class="math">\(\varphi:V\to W\)</span> is <strong><span class="math">\(G\)</span>-equivariant</strong> if it does not matter if one applies the transformation <span class="math">\(g\)</span> on the vector space first or <span class="math">\(\varphi\)</span> first. That is, <span class="math">\(\varphi\circ\rho(g) = \sigma(g)\circ\varphi\)</span> for all <span class="math">\(g \in G\)</span>. Pictorially, we say that the following diagram “commutes”.
+<center>
+<img src="/assets/img/2019/intertwiner.png" style="width: 300px;"/>
+</center>
+
+<p>When <span class="math">\(\rho=\sigma\)</span>, this just says that <span class="math">\(\varphi\)</span> commutes with <span class="math">\(\rho(g)\)</span> for all <span class="math">\(g \in G\)</span>. This is a pretty natural definition (and should be formalizable as a <a href="https://en.wikipedia.org/wiki/Natural_transformation">natural transformation</a> in category theory) but can be made more obvious by thinking of <span class="math">\(G\)</span>-representations as <span class="math">\(k[G]\)</span>-<em>modules</em>. The notion of a module generalizes that of a vector space by extending the multiplication by scalars to elements of a ring (such as matrices). Given a ring <span class="math">\(R\)</span> with an identity, a (left) <strong><span class="math">\(R\)</span>-module</strong> is an abelian group <span class="math">\(M\)</span> representing “vector addition”, and a “scalar multiplication” <span class="math">\(R \times M \to M\)</span> a ring homomorphism from <span class="math">\(R\)</span> to the endomorphism ring <span class="math">\(\End(M)\)</span> that also respects the group addition; in equations, <span class="math">\[\begin{align}
+  1m &amp;= m, \\
+  (r+s)m &amp;= rm + sm, \\
+  (rs)m &amp;= r(sm), \\
+  r(m+n) &amp;= rm + rn,
+\end{align}\]</span> for all <span class="math">\(r,s \in R\)</span> and <span class="math">\(m,n \in M\)</span>. Now the ring <span class="math">\(k[G]\)</span> is the matrix ring formally spanned by <span class="math">\(g \in G\)</span> over a field <span class="math">\(k\)</span> with the convolution product * inherited from the group multiplication: <span class="math">\[\begin{align}
+  \left(\sum_{g_1}f_{g_1} g_1 \right) * \left(\sum_{g_2}h_{g_2} g_2 \right) = \sum_{g_1,g} f_{g_1} h_{g_1^{-1}g} g.
+\end{align}\]</span> In fact, it is not just a ring but also an algebra (because it is a vector space) called the <strong>group algebra</strong>. Given a <span class="math">\(G\)</span>-representation, the span of <span class="math">\(\rho(g)\)</span> gives a <span class="math">\(k[G]\)</span>-module. Conversely, given a <span class="math">\(k[G]\)</span>-module, there is a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> (because <span class="math">\(k\id \in k[G]\)</span>), on which the <span class="math">\(G\)</span>-action gives a group homomorphism <span class="math">\(G \to \GL(V)\)</span>, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in <span class="math">\(k[G]\)</span>. In other words, they are simply <em><span class="math">\(k[G]\)</span>-linear maps</em>, generalizing the fact that linear operators (all of which commute with the scalars) are morphisms in the category of vector spaces.</p>
+<p>All intertwiners between irreps are characterized by <strong>Schur’s lemma</strong>. The space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> is denoted by <span class="math">\(\Hom_G(V,W)\)</span>. Schur’s lemma says that, when <span class="math">\(k\)</span> is algebraically-closed, intertwiners between irreps behave like the Kronecker delta <span class="math">\[\begin{align}
+  \dim\Hom_G(V,W) \cong
+  \begin{cases}
+    1, V \cong W, \\
+    0, V \not\cong W.
+  \end{cases}
+\end{align}\]</span> <strong>Lemma.</strong> <em>(Schur’s lemma)</em> - (Burnside) Every intertwiner between irreps is either an isomorphism or zero. - (Schur) For <span class="math">\(k\)</span> algebraically closed, <span class="math">\(\End_G(V) = k\)</span>. That is, every intertwiner is of the form <span class="math">\(k\id\)</span>. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
+
+<h2 id="tensor-operators-and-the-wigner-eckart-theorem">“Tensor operators” and the Wigner-Eckart theorem</h2>
+<p>Given a group <span class="math">\(G\)</span> and its subgroup <span class="math">\(H\subset G\)</span>, any representation <span class="math">\(V\)</span> of <span class="math">\(G\)</span> can be restricted to <span class="math">\(V\bigr|{}_H\)</span> of <span class="math">\(H\)</span>. (Restriction of an irrep is not necessarily irreducible. Think of the restriction to an abelian <span class="math">\(H\)</span>.)</p>
+<h2 id="restriction-and-induction-functors">Restriction and induction functors</h2>
+<p>It is easy to describe what restriction to a subgroup <span class="math">\(H\subset G\)</span> does to a <span class="math">\(G\)</span>-representation.</p>
+<p>A regular representation is a <em>free representation</em>.</p>
+<p>A useful trick (that I learned from Qiaochu Yuan’s <a href="https://math.stackexchange.com/a/25515">answer</a>) to understand anything in category theory is to first consider as a toy model a <a href="https://en.wikipedia.org/wiki/Preorder">preorder</a> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, a category with only one morphism <span class="math">\(x\to y\)</span>, which can be though of as a comparison <span class="math">\(x\le y\)</span>. For example, the product in this category is the infimum and the coproduct is the supremum. A functor between two preorders <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is a <em>monotone function</em> if it is an order-preserving map <span class="math">\[ x \le_A y \implies f(x) \le_B f(b). \]</span> A pair of monotone functions <span class="math">\(f\)</span> and <span class="math">\(G\)</span> is an <em>adjoint pair</em> if they satisfy the <em>Galois connection</em>: <span class="math">\[ f(a) \le_B b \iff a \le_A g(b). \]</span> Suppose, for instance, that <span class="math">\(A = B = \mathbb{N}\)</span>, the natural numbers. The monotone function <span class="math">\(x \to 2x\)</span> has no inverse but it does have right and left adjoints: the ceiling <span class="math">\(\lceil x/2 \rceil\)</span> and the floor <span class="math">\(\lfloor x/2 \rfloor\)</span> respectively. The notion of Galois connection generalizes to that of <a href="https://en.wikipedia.org/wiki/Adjoint_functors">adjunction</a>, an example of which in representation theory is <a href="https://en.wikipedia.org/wiki/Frobenius_reciprocity">Frobenius reciprocity</a>.</p>
+<h2 id="lie-algebra-and-dual-representations">Lie algebra and dual representations</h2>
+<h1 id="borel-weil">Borel-Weil</h1>
+<p>The Borel-Weil theorem states that every irreducible representation of a Lie group <span class="math">\(G\)</span> is “holomorphically” induced from the torus.</p>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Alan Jacobs, <a href="http://www.theatlantic.com/technology/archive/2012/03/the-technology-of-a-better-footnote/254403/">“The Technology of a Better Footnote,”</a> <em>The Atlantic</em>, March 2012.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>The assumption that <span class="math">\(k\)</span> is algebraically closed is necessary. Consider a representation of <span class="math">\(\Z_4\)</span> on <span class="math">\(\R^2\)</span> as discrete rotations with the generator <span class="math">\[\begin{align*}
+\rep(e) = \begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}.
+\end{align*}\]</span> It is irreducible because <span class="math">\(\rho(id)\)</span> cannot be diagonalized over <span class="math">\(\R\)</span>. But every <span class="math">\(\rho(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rho(id)\)</span> for some <span class="math">\(a,b \in \R\)</span>, a two-dimensional real vector space.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>The assumption that <span class="math">\(k\)</span> is algebraically closed is necessary. Consider a representation of <span class="math">\(\Z_4\)</span> on <span class="math">\(\R^2\)</span> as discrete rotations with the generator <span class="math">\[\begin{align*}
+\rep(e) = \begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}.
+\end{align*}\]</span> It is irreducible because <span class="math">\(\rho(id)\)</span> cannot be diagonalized over <span class="math">\(\R\)</span>. But every <span class="math">\(\rho(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rho(id)\)</span> for some <span class="math">\(a,b \in \R\)</span>, a two-dimensional real vector space.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
@@ -262,27 +287,33 @@ $(document).ready(function() {
 
 <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="glyphicon glyphicon-calendar"></i><small>
-    <time datetime="2016-07-20 00:00:00 +0000"
-    property="dc:created">20 Jul 2016</time></small></p>
+    <time datetime="2019-09-17 00:00:00 +0000"
+    property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-04-13 14:02:14 +0000"
-            property="dc:modified">13 Apr 2019</time></small></p>
+            datetime="2019-09-17 07:25:03 +0000"
+            property="dc:modified">17 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
           
+            <p><a class="btn btn-default" href='/quantum-supremacy.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
           
-            <a class="btn btn-default" href='/quantum-for-babies.html'>next <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+          
+            </p>
           
 
 
  <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
-   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2016-07-20-first-post.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2019-09-15-operator-harmonic-analysis.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
 
   <br><br>
 
   <p><i class="glyphicon glyphicon-list"></i> Posted in
+    
+      <a rel="dc:subject" class="category"
+         href="/categories.html#Representation+theory">Representation theory</a>
+    
     </p>
 
   <p><i class="glyphicon glyphicon-tag"></i> Tags:
@@ -293,7 +324,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/c40dc1fb9822a5f5189d80b273f15920353cfabb/_posts/2016-07-20-first-post.md"> c40dc1f</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/9bbbe0cc51e1b7382ccfb0e4f836022407549653/_posts/2019-09-15-operator-harmonic-analysis.md"> 9bbbe0c</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -311,11 +342,11 @@ $(document).ready(function() {
   <h2>Related Posts</h2>
   <ul class="posts">
     
-      <li><span>16 Jul 2019</span> &raquo; <a href="/may-2019-log.html">May-June 2019 Archive</a></li>
-    
-      <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
+      <li><span>20 Feb 2019</span> &raquo; <a href="/jan-2019-log.html">January 2019 Archive</a></li>
     
       <li><span>07 Mar 2019</span> &raquo; <a href="/feb-2019-log.html">February 2019 Archive</a></li>
+    
+      <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
     
   </ul>
 </div>
@@ -350,12 +381,12 @@ $(document).ready(function() {
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=First Post
+      &amp;rft.title=Fourier analysis of linear operators [Draft]
       &amp;rft.creator=Ninnat Dangniam
-      &amp;rft.date=2016-07-20
+      &amp;rft.date=2019-09-17
       &amp;rft.language='en-US, zh-Hans'
       &amp;rft.rights='CC-BY'
-      &amp;rft_id=http://ninnat.github.io/first-post.html">
+      &amp;rft_id=http://ninnat.github.io/operator-harmonic-analysis.html">
   </span>
 
     </footer>

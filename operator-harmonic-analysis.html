@@ -219,17 +219,23 @@ $(document).ready(function() {
 <li><a href="#morphisms">Morphisms</a>
 <ul>
 <li><a href="#in-terms-of-modules">In terms of modules</a></li>
+<li><a href="#schurs-lemma">Schur’s lemma</a></li>
 <li><a href="#the-meaning-of-tensor-operators">The meaning of tensor operators</a></li>
 </ul></li>
 <li><a href="#functors">Functors</a>
 <ul>
-<li><a href="#free-functors">Free functors</a></li>
+<li><a href="#the-restriction-functor">The restriction functor</a></li>
+<li><a href="#adjoint-functors">Adjoint functors</a></li>
+<li><a href="#tensor-hom-adjunction">Tensor-Hom adjunction</a></li>
 <li><a href="#the-induction-functor">The induction functor</a></li>
+<li><a href="#as-a-free-functor">As a free functor</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#tensor-product-representations">Tensor product representations</a></li>
 <li><a href="#fourier-analysis">Fourier analysis</a>
 <ul>
-<li><a href="#duals-tensor-products-and-lie-algebra-representations">Duals, tensor products, and Lie algebra representations</a></li>
+<li><a href="#a-little-algebraic-geometry">A little algebraic geometry</a></li>
+<li><a href="#the-borel-subgroup">The Borel subgroup</a></li>
 <li><a href="#geometric-multiplicity-free-condition">Geometric multiplicity-free condition</a>
 <ul>
 <li><a href="#borel-weil">Borel-Weil</a></li>
@@ -240,8 +246,8 @@ $(document).ready(function() {
         <div id="toc"></div> -->
           <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
 
-<p>Representation theory is Fourier analysis (substantially generalized). Given a representation <span class="math">\(V\)</span> of a group <span class="math">\(G\)</span>, it decomposes (under some assumptions on <span class="math">\(G\)</span> and <span class="math">\(V\)</span>) into a direct sum of irreducible parts <span class="math">\[V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \]</span> with <span class="math">\(n_j\)</span> copies of each isomorphic irreducible representation (<em>irrep</em>) <span class="math">\(V_j\)</span>. The canonical Fourier analysis is such a decomposition when the left hand side is the <em>group algebra</em> of <span class="math">\(\R\)</span> or <span class="math">\(\SO(2) \cong \U(1)\)</span> (for periodic functions) and can be generalized to a large class of groups.</p>
-<p>In this post, I want to talk about the decomposition of representations of the form <span class="math">\(\End V = V^* \otimes V\)</span>, that is, linear operators over <span class="math">\(V\)</span>, and in cases that <span class="math">\(V\)</span> is described more explicitly such as <span class="math">\(V\)</span> being a symmetric power <span class="math">\(\Sym^k W\)</span> of the defining representation of <a href="https://en.wikipedia.org/wiki/Classical_group#The_classical_groups">classical groups</a> <span class="math">\(A_n,B_n,C_n,D_n\)</span>. The decomposition of <span class="math">\(\End V\)</span> in the generic form (1) might very loosely count as a “Fourier analysis” but I will be more ambitious and try to relate such decomposition to actual harmonic analysis, more precisely the decomposition of functions on a space with a <span class="math">\(G\)</span>-action. As a teaser example, for <span class="math">\(\SO(3)\)</span> we have that <span class="math">\[\begin{align}
+<p><em>Representation theory is Fourier analysis</em> (substantially generalized). Given a representation <span class="math">\(V\)</span> of a group <span class="math">\(G\)</span>, it decomposes (under some assumptions on <span class="math">\(G\)</span> and <span class="math">\(V\)</span>) into a direct sum of irreducible parts <span class="math">\[V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \]</span> with <span class="math">\(n_j\)</span> copies of each isomorphic irreducible representation (<em>irrep</em>) <span class="math">\(V_j\)</span>. The canonical Fourier analysis is such a decomposition when the left hand side is the group algebra (introduced below) of <span class="math">\(\R\)</span> or <span class="math">\(\SO(2) \cong \U(1)\)</span> (for periodic functions) and can be generalized to a large class of groups.</p>
+<p>In this post, I want to talk about the decomposition of representations of the form <span class="math">\(\End V = V^* \otimes V\)</span>, that is, linear operators over <span class="math">\(V\)</span>, and in cases that <span class="math">\(V\)</span> is described more explicitly such as <span class="math">\(V\)</span> being a symmetric power <span class="math">\(\Sym^k W\)</span> of the defining representation of <a href="https://en.wikipedia.org/wiki/Classical_group#The_classical_groups">classical groups</a> <span class="math">\(A_n,B_n,C_n,D_n\)</span>. The decomposition of <span class="math">\(\End V\)</span> in the generic form (1) might very loosely count as a “Fourier analysis” but I will be more ambitious and try to relate such decomposition to actual Fourier analysis, more precisely the decomposition of functions on a space equipped with a <span class="math">\(G\)</span>-action. As a teaser, for <span class="math">\(\SO(3)\)</span> we have that <span class="math">\[\begin{align}
   \lim_{k\to\infty}\End (\Sym^k V) \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1},
 \end{align}\]</span> where the right hand side contains <em>all</em> <a href="https://en.wikipedia.org/wiki/Spherical_harmonics">spherical harmonics</a> without redundancy.</p>
 <div id="toc">
@@ -265,7 +271,8 @@ Once we have objects and morphisms, we have a <em>category</em>. Formally, a <st
 \end{align}\]</span> for all <span class="math">\(r,s \in R\)</span> and <span class="math">\(m,n \in M\)</span>. Now the ring <span class="math">\(k[G]\)</span> is the matrix ring formally spanned by <span class="math">\(g \in G\)</span> over a field <span class="math">\(k\)</span> with the convolution product * inherited from the group multiplication: <span class="math">\[\begin{align}
   \left(\sum_{g_1}f_{g_1} g_1 \right) * \left(\sum_{g_2}h_{g_2} g_2 \right) = \sum_{g_1,g} f_{g_1} h_{g_1^{-1}g} g.
 \end{align}\]</span> In fact, it is not just a ring but also an algebra (because it is a vector space) called the <strong>group algebra</strong>. Given a <span class="math">\(G\)</span>-representation, the span of <span class="math">\(\rho(g)\)</span> gives a <span class="math">\(k[G]\)</span>-module. Conversely, given a <span class="math">\(k[G]\)</span>-module, there is a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> (because <span class="math">\(k\id \in k[G]\)</span>), on which the <span class="math">\(G\)</span>-action gives a group homomorphism <span class="math">\(G \to \GL(V)\)</span>, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in <span class="math">\(k[G]\)</span>. In other words, they are simply <em><span class="math">\(k[G]\)</span>-linear maps</em>, generalizing the fact that linear operators (all of which commute with the scalars) are morphisms in the category of vector spaces.</p>
-<p>Intertwiners between irreps are completely characterized by <strong>Schur’s lemma</strong>, a very basic (easily proved using little linear algebra) but powerful result. Denote the space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> by <span class="math">\(\Hom_G(V,W)\)</span> (and <span class="math">\(\End_G(V)\)</span> if <span class="math">\(V=W\)</span>).</p>
+<h3 id="schurs-lemma">Schur’s lemma</h3>
+<p>Intertwiners between irreps are completely characterized by <strong>Schur’s lemma</strong>, a very basic (easily proved using a little linear algebra) but powerful result. Denote the space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> by <span class="math">\(\Hom_G(V,W)\)</span> (and <span class="math">\(\End_G(V)\)</span> if <span class="math">\(V=W\)</span>).</p>
 <p><strong>Lemma 1.</strong> (Schur’s lemma)</p>
 <ul>
 <li>(Burnside) <em>Every intertwiner between irreps is either an isomorphism or zero.</em></li>
@@ -281,7 +288,7 @@ Once we have objects and morphisms, we have a <em>category</em>. Formally, a <st
 <h3 id="the-meaning-of-tensor-operators">The meaning of tensor operators</h3>
 <!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
 
-I claim that one does not really understand the concept of <a href="https://en.wikipedia.org/wiki/Tensor_operator">tensor operators</a> in physics until one understands intertwiners. Why? Because <em>tensor operators are, by definition, intertwiners</em>. This can be seen by unpacking the seemingly circular definition of tensor operators as “operators that act like tensors”. For concreteness, let us think about one of the simplest non-trivial cases of a <em>vector operator</em>. Let <span class="math">\((R,\R^3)\)</span> be the defining representation of <span class="math">\(\SO(3)\)</span> and <span class="math">\(\mathbf{r} \in \R^3\)</span>. A <strong>vector operator</strong> <span class="math">\(T(\mathbf{r})\)</span> has components <span class="math">\(T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3\)</span> that are linear maps between representations <span class="math">\((\rho,V),(\sigma,W)\)</span> of <span class="math">\(\SO(3)\)</span> (that is, <span class="math">\(T_j \in\Hom(V,W) = V^* \otimes W\)</span>) such that the <span class="math">\(G\)</span>-action on <span class="math">\(\Hom(V,W)\)</span> (a superoperator <span class="math">\(\sigma\dgg(R) \circ \rho(R)\)</span>) induces a rotation of <span class="math">\(\mathbf{r}\)</span>: <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> <span class="math">\[\begin{align}
+I claim that one does not really understand the concept of <a href="https://en.wikipedia.org/wiki/Tensor_operator">tensor operators</a> in physics until one understands intertwiners. Why? Because <em>tensor operators are, by definition, intertwiners</em>. This can be seen by unpacking the seemingly circular definition of tensor operators as “operators that act like tensors”. For concreteness, let us think about one of the simplest non-trivial cases of a <em>vector operator</em>. Let <span class="math">\((R,\R^3)\)</span> be the defining representation of <span class="math">\(\SO(3)\)</span> and <span class="math">\(\mathbf{r} \in \R^3\)</span>. A <strong>vector operator</strong> <span class="math">\(T(\mathbf{r})\)</span> has components <span class="math">\(T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3\)</span> that are linear maps between irreps <span class="math">\((\rho,V),(\sigma,W)\)</span> of <span class="math">\(\SO(3)\)</span> (that is, <span class="math">\(T_j \in\Hom(V,W) = V^* \otimes W\)</span>) such that the <span class="math">\(G\)</span>-action on <span class="math">\(\Hom(V,W)\)</span> (a superoperator <span class="math">\(\sigma\dgg(R) \circ \rho(R)\)</span>) induces a rotation of <span class="math">\(\mathbf{r}\)</span>: <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> <span class="math">\[\begin{align}
   \sigma\dgg(R)T(\mathbf{r}_j)\rho(R) = R_j{}^k T(\mathbf{r}_k).
 \end{align}\]</span> Writing this in the coördinate-independent form <span class="math">\[\begin{align}
   \sigma\dgg(R)T(\mathbf{r})\rho(R) = T(R\mathbf{r}),
@@ -294,14 +301,18 @@ I claim that one does not really understand the concept of <a href="https://en.w
 <p>Does anyone remember what <a href="https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem">the Wigner-Eckart theorem</a> says in the form usually taught in a quantum mechanics class? Not me. But the Wigner-Eckart theorem is simply Schur’s lemma applied to the intertwiners between <span class="math">\(U\)</span> and <span class="math">\(\Hom(V,W)\)</span>; the basis-independence of the “reduced matrix element” is just the statement that the tensor operator is proportional to the identity <span class="math">\(T = c\id\)</span> (because it commutes with every <span class="math">\(G\)</span>-action because it is <span class="math">\(G\)</span>-equivariant) in the block isomorphic to the irrep <span class="math">\(U\)</span>.</p>
 <p>For us, a generalization of <em>spherical tensor operators</em> will prove convenient to provide a <em>weight</em> (of a Lie algebra)-operator basis for the space of linear operators.</p>
 <h2 id="functors">Functors</h2>
-<h3 id="free-functors">Free functors</h3>
-<h3 id="the-induction-functor">The induction functor</h3>
+<h3 id="the-restriction-functor">The restriction functor</h3>
+<p>The reason for introducing <span class="math">\(G\)</span>-representations as a category is that now I can talk about maps between categories: <em>functors</em>.</p>
+<h3 id="adjoint-functors">Adjoint functors</h3>
+<p><a href="https://en.wikipedia.org/wiki/Preorder">preorder</a> <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, a category with only one morphism <span class="math">\(x\to y\)</span>, which can be though of as a comparison <span class="math">\(x\le y\)</span>. For example, the product in this category is the infimum and the coproduct is the supremum. A functor between two preorders <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is a <em>monotone function</em> if it is an order-preserving map <span class="math">\[ x \le_A y \implies f(x) \le_B f(b). \]</span> A pair of monotone functions <span class="math">\(f\)</span> and <span class="math">\(G\)</span> is an <em>adjoint pair</em> if they satisfy the <em>Galois connection</em>: <span class="math">\[ f(a) \le_B b \iff a \le_A g(b). \]</span> Suppose, for instance, that <span class="math">\(A = B = \mathbb{N}\)</span>, the natural numbers. The monotone function <span class="math">\(x \to 2x\)</span> has no inverse but it does have right and left adjoints: the ceiling <span class="math">\(\lceil x/2 \rceil\)</span> and the floor <span class="math">\(\lfloor x/2 \rfloor\)</span> respectively. The notion of Galois connection generalizes to that of <a href="https://en.wikipedia.org/wiki/Adjoint_functors">adjunction</a>, an example of which in re</p>
+<h3 id="tensor-hom-adjunction">Tensor-Hom adjunction</h3>
 <p>Given a group <span class="math">\(G\)</span> and its subgroup <span class="math">\(H\subset G\)</span>, any representation <span class="math">\(V\)</span> of <span class="math">\(G\)</span> can be restricted to <span class="math">\(V\bigr|{}_H\)</span> of <span class="math">\(H\)</span>. (Restriction of an irrep is not necessarily irreducible. Think of the restriction to an abelian <span class="math">\(H\)</span>.)</p>
-<p>It is easy to describe what restriction to a subgroup <span class="math">\(H\subset G\)</span> does to a <span class="math">\(G\)</span>-representation.</p>
-<p>A regular representation is a <em>free representation</em>.</p>
-<p>A useful trick (that I learned from Qiaochu Yuan’s <a href="https://math.stackexchange.com/a/25515">answer</a>) to understand anything in category theory is to first consider as a toy model a <a href="https://en.wikipedia.org/wiki/Preorder">preorder</a> <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, a category with only one morphism <span class="math">\(x\to y\)</span>, which can be though of as a comparison <span class="math">\(x\le y\)</span>. For example, the product in this category is the infimum and the coproduct is the supremum. A functor between two preorders <span class="math">\(A\)</span> and <span class="math">\(B\)</span> is a <em>monotone function</em> if it is an order-preserving map <span class="math">\[ x \le_A y \implies f(x) \le_B f(b). \]</span> A pair of monotone functions <span class="math">\(f\)</span> and <span class="math">\(G\)</span> is an <em>adjoint pair</em> if they satisfy the <em>Galois connection</em>: <span class="math">\[ f(a) \le_B b \iff a \le_A g(b). \]</span> Suppose, for instance, that <span class="math">\(A = B = \mathbb{N}\)</span>, the natural numbers. The monotone function <span class="math">\(x \to 2x\)</span> has no inverse but it does have right and left adjoints: the ceiling <span class="math">\(\lceil x/2 \rceil\)</span> and the floor <span class="math">\(\lfloor x/2 \rfloor\)</span> respectively. The notion of Galois connection generalizes to that of <a href="https://en.wikipedia.org/wiki/Adjoint_functors">adjunction</a>, an example of which in representation theory is <a href="https://en.wikipedia.org/wiki/Frobenius_reciprocity">Frobenius reciprocity</a>.</p>
+<h3 id="the-induction-functor">The induction functor</h3>
+<h3 id="as-a-free-functor">As a free functor</h3>
+<h1 id="tensor-product-representations">Tensor product representations</h1>
 <h1 id="fourier-analysis">Fourier analysis</h1>
-<h2 id="duals-tensor-products-and-lie-algebra-representations">Duals, tensor products, and Lie algebra representations</h2>
+<h2 id="a-little-algebraic-geometry">A little algebraic geometry</h2>
+<h2 id="the-borel-subgroup">The Borel subgroup</h2>
 <h2 id="geometric-multiplicity-free-condition">Geometric multiplicity-free condition</h2>
 <h3 id="borel-weil">Borel-Weil</h3>
 <p>The Borel-Weil theorem states that every irreducible representation of a Lie group <span class="math">\(G\)</span> is “holomorphically” induced from the torus.</p>
@@ -330,7 +341,7 @@ I claim that one does not really understand the concept of <a href="https://en.w
     property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-17 12:53:56 +0000"
+            datetime="2019-09-17 13:34:21 +0000"
             property="dc:modified">17 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -363,7 +374,7 @@ I claim that one does not really understand the concept of <a href="https://en.w
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/437468abfd5300e8f61d601a344fad3220555d1e/_posts/2019-09-15-operator-harmonic-analysis.md"> 437468a</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/3f07153ce99e6bd8d92743ceb3d8132132fac205/_posts/2019-09-15-operator-harmonic-analysis.md"> 3f07153</a></tiny></p>
 </aside>
 
 <br /><br />

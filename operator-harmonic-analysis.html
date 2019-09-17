@@ -227,13 +227,14 @@ $(document).ready(function() {
 
 <p>Representation theory is Fourier analysis (substantially generalized). Given a representation <span class="math">\(V\)</span> of a group <span class="math">\(G\)</span>, it decomposes (under some assumptions on <span class="math">\(G\)</span> and <span class="math">\(V\)</span>) into a direct sum of irreducible parts <span class="math">\[V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \]</span> with <span class="math">\(n_j\)</span> copies of each isomorphic irreducible representation (<em>irrep</em>) <span class="math">\(V_j\)</span>. A Fourier transform is a linear map</p>
 <h1 id="categories-of-representations">Categories of representations</h1>
-<p>The standard way to introduce a representation of a group <span class="math">\(G\)</span> is as a pair <span class="math">\((\rho,V)\)</span> of a vector space <span class="math">\(V\)</span> and a group homomorphism <span class="math">\(\rho: G \to \GL(V)\)</span>. That is, for <span class="math">\(g_1,g_2 \in G\)</span>, <span class="math">\(\rho(g_1)\)</span> and <span class="math">\(\rho(g_2)\)</span> are invertible matrices over a vector space <span class="math">\(V\)</span> such that the group structure is respected: <span class="math">\(\rho(g_1)\rho(g_2) = \rho(g_1 g_2)\)</span>. Group homomorphisms are examples of ubiquitous structure-preserving maps or <em>morphisms</em> between mathematical objects. Morphisms for sets are arbitrary (total i.e. defined for all inputs) maps between sets. For vector spaces, we have linear operators. Of course, not only algebraic objects have morphisms. For example, for topological spaces and smooth manifolds, we have continuous maps and smooth maps respectively. (In particular, <a href="https://en.wikipedia.org/wiki/Homeomorphism">homeomorphisms</a> are isomorphisms between topological spaces, and <a href="https://en.wikipedia.org/wiki/Diffeomorphism">diffeomorphisms</a> are isomorphisms between smooth manifolds.) Once we have objects and morphisms, we have a <em>category</em>. Formally, a <strong>category</strong> <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them such that there is an identity morphism <span class="math">\(1\circ f = f\circ 1 = f\)</span> and the composition of morphisms is associative: <span class="math">\((f \circ g) \circ h = f\ \circ (g \circ h)\)</span>. It should be emphasized that all the information contained in the definition is about morphisms; the objects can be anything. The lesson here is that morphisms are as important, if not more, than the objects we want to study.</p>
-What would be the morphisms in a category of <span class="math">\(G\)</span>-representations? They are <em><span class="math">\(G\)</span>-equivariant maps</em> or <em>intertwiners</em>. Let <span class="math">\((\rho,V)\)</span> and <span class="math">\((\sigma,W)\)</span> be <span class="math">\(G\)</span>-representations. A linear map <span class="math">\(\varphi:V\to W\)</span> is <strong><span class="math">\(G\)</span>-equivariant</strong> if it does not matter if one applies the transformation <span class="math">\(g\)</span> on the vector space first or <span class="math">\(\varphi\)</span> first. That is, <span class="math">\(\varphi\circ\rho(g) = \sigma(g)\circ\varphi\)</span> for all <span class="math">\(g \in G\)</span>. Pictorially, we say that the following diagram “commutes”.
+<p>The standard way to introduce a representation of a group <span class="math">\(G\)</span> is as a pair <span class="math">\((\rho,V)\)</span> of a vector space <span class="math">\(V\)</span> and a group homomorphism <span class="math">\(\rho: G \to \GL(V)\)</span>. That is, for <span class="math">\(g_1,g_2 \in G\)</span>, <span class="math">\(\rho(g_1)\)</span> and <span class="math">\(\rho(g_2)\)</span> are invertible matrices over a vector space <span class="math">\(V\)</span> such that the group structure is respected: <span class="math">\(\rho(g_1)\rho(g_2) = \rho(g_1 g_2)\)</span>. Group homomorphisms are examples of ubiquitous structure-preserving maps or <em>morphisms</em> between mathematical objects. Morphisms for sets are arbitrary (total i.e. defined for all inputs) maps between sets. For vector spaces, we have linear operators. Of course, not only algebraic objects have morphisms. For example, for topological spaces and smooth manifolds, we have continuous maps and smooth maps respectively. (In particular, <a href="https://en.wikipedia.org/wiki/Homeomorphism">homeomorphisms</a> are isomorphisms between topological spaces, and <a href="https://en.wikipedia.org/wiki/Diffeomorphism">diffeomorphisms</a> are isomorphisms between smooth manifolds.)</p>
+Once we have objects and morphisms, we have a <em>category</em>. Formally, a <strong>category</strong> <span class="math">\(\mathcal{C}\)</span> is a class of objects and morphisms between them such that there is an identity morphism <span class="math">\(1\circ f = f\circ 1 = f\)</span> and the composition of morphisms is associative: <span class="math">\((f \circ g) \circ h = f\ \circ (g \circ h)\)</span>. It should be emphasized that all the information contained in the definition is about morphisms; the objects can be anything. The lesson here is that morphisms are as important, if not more, than the objects we want to study. What would be the morphisms in a category of <span class="math">\(G\)</span>-representations? They are <em><span class="math">\(G\)</span>-equivariant maps</em> or <em>intertwiners</em>. Let <span class="math">\((\rho,V)\)</span> and <span class="math">\((\sigma,W)\)</span> be <span class="math">\(G\)</span>-representations. A linear map <span class="math">\(\varphi:V\to W\)</span> is <strong><span class="math">\(G\)</span>-equivariant</strong> if it does not matter if one applies the transformation <span class="math">\(g\)</span> on the vector space first or <span class="math">\(\varphi\)</span> first. That is, <span class="math">\(\varphi\circ\rho(g) = \sigma(g)\circ\varphi\)</span> for all <span class="math">\(g \in G\)</span>. Pictorially, we say that the following diagram “commutes”.
 <center>
-<img src="/assets/img/2019/intertwiner.png" style="width: 300px;"/>
+<img src="/assets/img/2019/intertwiner.PNG" style="width: 300px;"/>
 </center>
 
-<p>When <span class="math">\(\rho=\sigma\)</span>, this just says that <span class="math">\(\varphi\)</span> commutes with <span class="math">\(\rho(g)\)</span> for all <span class="math">\(g \in G\)</span>. This is a pretty natural definition (and should be formalizable as a <a href="https://en.wikipedia.org/wiki/Natural_transformation">natural transformation</a> in category theory) but can be made more obvious by thinking of <span class="math">\(G\)</span>-representations as <span class="math">\(k[G]\)</span>-<em>modules</em>. The notion of a module generalizes that of a vector space by extending the multiplication by scalars to elements of a ring (such as matrices). Given a ring <span class="math">\(R\)</span> with an identity, a (left) <strong><span class="math">\(R\)</span>-module</strong> is an abelian group <span class="math">\(M\)</span> representing “vector addition”, and a “scalar multiplication” <span class="math">\(R \times M \to M\)</span> a ring homomorphism from <span class="math">\(R\)</span> to the endomorphism ring <span class="math">\(\End(M)\)</span> that also respects the group addition; in equations, <span class="math">\[\begin{align}
+<p>When <span class="math">\(\rho=\sigma\)</span>, this just says that <span class="math">\(\varphi\)</span> commutes with <span class="math">\(\rho(g)\)</span> for all <span class="math">\(g \in G\)</span>. This is a pretty natural definition (and should be formalizable as a <a href="https://en.wikipedia.org/wiki/Natural_transformation">natural transformation</a> in category theory) but can be made more obvious by thinking of <span class="math">\(G\)</span>-representations as <span class="math">\(k[G]\)</span>-<em>modules</em>.</p>
+<p>The notion of a module generalizes that of a vector space by extending the multiplication by scalars to elements of a ring (such as matrices). Given a ring <span class="math">\(R\)</span> with an identity, a (left) <strong><span class="math">\(R\)</span>-module</strong> is an abelian group <span class="math">\(M\)</span> representing “vector addition”, and a “scalar multiplication” <span class="math">\(R \times M \to M\)</span> a ring homomorphism from <span class="math">\(R\)</span> to the endomorphism ring <span class="math">\(\End(M)\)</span> that also respects the group addition; in equations, <span class="math">\[\begin{align}
   1m &amp;= m, \\
   (r+s)m &amp;= rm + sm, \\
   (rs)m &amp;= r(sm), \\
@@ -241,13 +242,17 @@ What would be the morphisms in a category of <span class="math">\(G\)</span>-rep
 \end{align}\]</span> for all <span class="math">\(r,s \in R\)</span> and <span class="math">\(m,n \in M\)</span>. Now the ring <span class="math">\(k[G]\)</span> is the matrix ring formally spanned by <span class="math">\(g \in G\)</span> over a field <span class="math">\(k\)</span> with the convolution product * inherited from the group multiplication: <span class="math">\[\begin{align}
   \left(\sum_{g_1}f_{g_1} g_1 \right) * \left(\sum_{g_2}h_{g_2} g_2 \right) = \sum_{g_1,g} f_{g_1} h_{g_1^{-1}g} g.
 \end{align}\]</span> In fact, it is not just a ring but also an algebra (because it is a vector space) called the <strong>group algebra</strong>. Given a <span class="math">\(G\)</span>-representation, the span of <span class="math">\(\rho(g)\)</span> gives a <span class="math">\(k[G]\)</span>-module. Conversely, given a <span class="math">\(k[G]\)</span>-module, there is a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> (because <span class="math">\(k\id \in k[G]\)</span>), on which the <span class="math">\(G\)</span>-action gives a group homomorphism <span class="math">\(G \to \GL(V)\)</span>, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in <span class="math">\(k[G]\)</span>. In other words, they are simply <em><span class="math">\(k[G]\)</span>-linear maps</em>, generalizing the fact that linear operators (all of which commute with the scalars) are morphisms in the category of vector spaces.</p>
-<p>All intertwiners between irreps are characterized by <strong>Schur’s lemma</strong>. The space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> is denoted by <span class="math">\(\Hom_G(V,W)\)</span>. Schur’s lemma says that, when <span class="math">\(k\)</span> is algebraically-closed, intertwiners between irreps behave like the Kronecker delta <span class="math">\[\begin{align}
+<p>All intertwiners between irreps are characterized by <strong>Schur’s lemma</strong>. Denote the space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> by <span class="math">\(\Hom_G(V,W)\)</span> (and <span class="math">\(\End_G(V)\)</span> if <span class="math">\(V=W\)</span>). Schur’s lemma says that, when <span class="math">\(k\)</span> is algebraically-closed, intertwiners between irreps behave like the Kronecker delta <span class="math">\[\begin{align}
   \dim\Hom_G(V,W) \cong
   \begin{cases}
     1, V \cong W, \\
     0, V \not\cong W.
   \end{cases}
-\end{align}\]</span> <strong>Lemma.</strong> <em>(Schur’s lemma)</em> - (Burnside) Every intertwiner between irreps is either an isomorphism or zero. - (Schur) For <span class="math">\(k\)</span> algebraically closed, <span class="math">\(\End_G(V) = k\)</span>. That is, every intertwiner is of the form <span class="math">\(k\id\)</span>. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+\end{align}\]</span> <strong>Lemma.</strong> (Schur’s lemma)</p>
+<ul>
+<li>(Burnside) <em>Every intertwiner between irreps is either an isomorphism or zero.</em></li>
+<li>(Schur) <em>For <span class="math">\(k\)</span> algebraically closed, every intertwiner is of the form <span class="math">\(k\id\)</span>. That is, <span class="math">\(\End_G(V) = k\)</span>.</em> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+</ul>
 <!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
 
 <h2 id="tensor-operators-and-the-wigner-eckart-theorem">“Tensor operators” and the Wigner-Eckart theorem</h2>
@@ -263,17 +268,17 @@ What would be the morphisms in a category of <span class="math">\(G\)</span>-rep
 <hr />
 <ol>
 <li id="fn1"><p>The assumption that <span class="math">\(k\)</span> is algebraically closed is necessary. Consider a representation of <span class="math">\(\Z_4\)</span> on <span class="math">\(\R^2\)</span> as discrete rotations with the generator <span class="math">\[\begin{align*}
-\rep(e) = \begin{pmatrix}
+\rho(1) = \begin{pmatrix}
 0 &amp; -1 \\
 1 &amp; 0
 \end{pmatrix}.
-\end{align*}\]</span> It is irreducible because <span class="math">\(\rho(id)\)</span> cannot be diagonalized over <span class="math">\(\R\)</span>. But every <span class="math">\(\rho(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rho(id)\)</span> for some <span class="math">\(a,b \in \R\)</span>, a two-dimensional real vector space.<a href="#fnref1">↩</a></p></li>
+\end{align*}\]</span> It is irreducible because <span class="math">\(\rho(1)\)</span> cannot be diagonalized over <span class="math">\(\R\)</span>. But every <span class="math">\(\rho(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rho(1)\)</span> for some <span class="math">\(a,b \in \R\)</span>, a two-dimensional real vector space.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>The assumption that <span class="math">\(k\)</span> is algebraically closed is necessary. Consider a representation of <span class="math">\(\Z_4\)</span> on <span class="math">\(\R^2\)</span> as discrete rotations with the generator <span class="math">\[\begin{align*}
-\rep(e) = \begin{pmatrix}
+\rho(1) = \begin{pmatrix}
 0 &amp; -1 \\
 1 &amp; 0
 \end{pmatrix}.
-\end{align*}\]</span> It is irreducible because <span class="math">\(\rho(id)\)</span> cannot be diagonalized over <span class="math">\(\R\)</span>. But every <span class="math">\(\rho(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rho(id)\)</span> for some <span class="math">\(a,b \in \R\)</span>, a two-dimensional real vector space.<a href="#fnref2">↩</a></p></li>
+\end{align*}\]</span> It is irreducible because <span class="math">\(\rho(1)\)</span> cannot be diagonalized over <span class="math">\(\R\)</span>. But every <span class="math">\(\rho(g)\)</span> commutes with matrices of the form <span class="math">\(a\id + b\rho(1)\)</span> for some <span class="math">\(a,b \in \R\)</span>, a two-dimensional real vector space.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
@@ -291,7 +296,7 @@ What would be the morphisms in a category of <span class="math">\(G\)</span>-rep
     property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-17 07:25:03 +0000"
+            datetime="2019-09-17 08:03:23 +0000"
             property="dc:modified">17 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -324,7 +329,7 @@ What would be the morphisms in a category of <span class="math">\(G\)</span>-rep
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/9bbbe0cc51e1b7382ccfb0e4f836022407549653/_posts/2019-09-15-operator-harmonic-analysis.md"> 9bbbe0c</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/2ba3ad71885fdc14dc26d972419b42305802f2ea/_posts/2019-09-15-operator-harmonic-analysis.md"> 2ba3ad7</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -448,11 +453,13 @@ What would be the morphisms in a category of <span class="math">\(G\)</span>-rep
           inject: "{\\unicode{x21AA}}",
           R: "{\\mathbb{R}}",
           C: "{\\mathbb{C}}",
+          Z: "{\\mathbb{Z}}",
           SU: "{\\mathrm{SU}}",
           SO: "{\\mathrm{SO}}",
           Sp: "{\\mathrm{Sp}}",
           hilb: "{\\mathcal{H}}",
           End: "{\\mathrm{End}\\,}",
+          Hom: "{\\mathrm{Hom}\\,}",
           Sym: "{\\mathrm{Sym}}",
           dgg: "{^{\\dagger}}",
           ind: ["{\\mathrm{Ind}_{#2}^{#3} {#1}}",3],

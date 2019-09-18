@@ -53,7 +53,7 @@ $$\begin{align}
 
 ### Schur's lemma
 
-Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using a little linear algebra) but powerful result. Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
+Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using only a little linear algebra) but powerful result. Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
 
 **Lemma 1.** (Schur's lemma)
 
@@ -65,7 +65,7 @@ $$\begin{align}
   \dim\Hom_G(V,W) =
   \begin{cases}
     1, V \cong W, \\
-    0, V \not\cong W.
+    0, V \unicode{0x2246} W.
   \end{cases}
 \end{align}$$
 
@@ -108,92 +108,54 @@ $$\begin{align}
 \end{align}$$
 Restriction belongs to a simple kind of functors, *forgetful functors* that simply forget information, in this case the structure of $G$. Restriction therefore cannot have a strict inverse. An insight from the category viewpoint is that we can construct the induction functor as a kind of "weak inverse" to the restriction functor called an *adjoint*. More precisely, there is a left adjoint
 $$\begin{align}
-  \Hom_G(\textrm{Ind}\,V,W) \cong \Hom_H(V,\textrm{Res}\,W)
+  \Hom_G(\textrm{Ind}_L\,V,W) \cong \Hom_H(V,\textrm{Res}\,W)
 \end{align}$$
 and a right adjoint
 $$\begin{align}
-  \Hom_G(,V,\textrm{Ind}\W) \cong \Hom_H(\textrm{Res}\,V,W)
+  \Hom_G(,V,\textrm{Ind}_R\,W) \cong \Hom_H(\textrm{Res}\,V,W)
 \end{align}$$
-to the restriction functor. [^5] Further, we will see that the distinction between the left and the right adjoint comes precisely from the choice to think of $k[G]$ either as a $(k[G],k[H])$-bi-module or a $(k[H],k[G])$-bi-module.
+to the restriction functor. [^5] Further, we will see that the distinction between the left and right adjoints comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or a $(k[H],k[G])$-bi-module.
 
-hese relationships (14,15), which are so important they have a name: [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity), *define* what the induction is. They are the raison d'être of induced representations.
+These relationships (14,15) *define* what induction is. They are the raison d'être of induced representation---so important that we give them a name: [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity).
 
 <!-- There are only two universal properties: that of being initial and terminal. This translates to the usual way of presenting universal properties in terms of commutative diagrams when one realizes that commutative diagrams are morphisms in a category of morphisms e.g. "[slice category](https://en.wikipedia.org/wiki/Comma_category#Slice_category)".-->
 
-### The simplest adjoint functor
+### Example: The simplest adjoint functor
 
 What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^6]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/).) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
 $$ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). $$
-A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a one-to-one correspondence, the *Galois connection*
+A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one-to-one correspondence](https://en.wikipedia.org/wiki/Galois_connection)
 $$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$
-Suppose, for instance, that $\mathcal A = \mathcal B = \mathbb{N}$, the natural numbers. The monotone function $x \to 2x$ has no strict inverse because $y/2$ may not be an integer, but it does have right and left adjoints: the ceiling $\lceil x/2 \rceil$ and the floor $\lfloor x/2 \rfloor$ respectively. (Verify.) In this case, we got a one-to-one correspondence between the morphism in $\mathcal C$ and the morphism in $\mathcal D$. The Galois connection generalizes to the adjunction.
+Suppose, for instance, that $\mathcal A = \mathcal B = \mathbb{N}$, the natural numbers. The monotone function $x \to 2x$ has no strict inverse because $y/2$ may not be an integer, but it does have right and left adjoints: the ceiling $\lceil x/2 \rceil$ and the floor $\lfloor x/2 \rfloor$ respectively. (Verify this.) Adjunction generalizes this one-to-one correspondence.
 
-### Adjoint to a forgetful functor
+### Example: Free functors
 
-Many useful constructions, like those of induced representations, are adjoint functors to a forgetful functor. The **free functor** $\mathcal F:$ **Set** $\to$ **Grp** sending a set to its "[free group](https://en.wikipedia.org/wiki/Free_group)". Given a set $S$, $\mathcal F(S)$ is the set of all expressions that can be composed from elements of $S$: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of $S$ as generators. The categorical way to say this is that the free functor has the universal property that giving a map $\sigma$ from $S$ to some group $G$ is equivalent to giving a unique group homomorphism $\varphi$ from the free group $F(S)$ to $G$. (The empty set gives the trivial group.)
+Many useful constructions, like those of induced representations, are adjoint functors of a forgetful functor. The **free functor** $\mathcal F:$ from the category of all sets to the category of all groups sends any set to its [*free group*](https://en.wikipedia.org/wiki/Free_group), the group of all "words", non-commutative product constructed from the alphabet in $S$ and their inverses i.e. $S$ generates $\mathcal F(S)$ without any [constraint](https://en.wikipedia.org/wiki/Presentation_of_a_group). The free functor is defined by the universal property [^7] that giving a function $f$ from $S$ to (the underlying set of) any group $G$ is equivalent to giving a *unique* group homomorphism $\varphi$ from the free group $\mathcal F(S)$ to $G$. For example, the empty set gives the trivial group with one element. (The empty word is the identity.) In other words, $\mathcal F(S)$ can simulate any interaction between $S$ and an arbitrary group $G$ and does so optimally (the uniqueness of $\varphi$).
 <center>
-<img src="/assets/img/posts/01-2017/free-group.png" style="width: 200px;"/>
-</center>
-<!-- \begin{align}
-	\xymatrix{
-      S \ar[r]\ar[dr]_{\sigma} & F(S) \ar[d]^{\varphi} \\
-      & G
-	}
-\end{align} -->
-
-The free functor sends an object in **Set** to an object in **Grp**, and the forgetful functor sends an object in **Grp** to an object in **Set**. But their composition is not the identity map. Nevertheless, they are a kind of generalized inverses in the sense formalized in the notion of an adjoint functor.
-
-Functors $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ are **adjoint functors** if for any $X \in \mathcal{C}$ and $Y \in \mathcal{D}$, there is an [isomorphism](https://en.wikipedia.org/wiki/Adjoint_functors#Hom-set_adjunction)
-$$ \begin{aligned}
-\mathrm{Hom}_{\mathcal{D}} (F(X),Y) \simeq \mathrm{Hom}_{\mathcal{C}} (X,G(Y)).
-\end{aligned} $$
-<center>
-<img src="/assets/img/posts/01-2017/adjoint.png" style="width: 250px;"/>
-</center>
-<!-- \begin{align*}
-	\xymatrix{
-      F(X)\ar[r]^{\mathrm{Hom}_{\mathcal{D}}(F(X),Y)} & Y\ar[d] \\
-      X\ar[u]\ar[r]_{\mathrm{Hom}_{\mathcal{C}}(X,G(Y))} & G(Y)
-	}
-\end{align*} -->
-
-$F$ is called a **left adjoint** of $G$ and $G$ is called a **right adjoint** of $F$.
-
-Why should this be true in the case of the forgetful functor $R$ and the free functor $F$ between **Set** and **Grp**? A group homomorphism $\varphi :F(S) \to G$ is completely determined if we know what it does to each generator of $F(S)$ i.e. each element of $S$. In other words, what $\varphi$ really acts on is the underlying set of $G$. That is, giving $\varphi$ is equivalent to giving $\psi : S \to R(G)$.
-$$ \begin{aligned}
-\mathrm{Hom}_{\bf{Grp}} (F(S),G) \simeq \mathrm{Hom}_{\bf{Set}} (S,R(G))
-\end{aligned} $$
-<center>
-<img src="/assets/img/posts/01-2017/free-functor.png" style="width: 250 px;"/>
-</center>
-so that the free functor is a left adjoint of the forgetful functor.
-
-Possessing an adjoint on one side does not imply possessing an adjoint on the other side, as this example also demonstrates; the forgetful functor $R:{\bf Grp} \to {\bf Set}$ does not have a right adjoint. The desired isomorphism
-$$ \begin{aligned}
-\mathrm{Hom}_{\bf{Grp}} (G,F(S)) \simeq \mathrm{Hom}_{\bf{Set}} (R(G),S)
-\end{aligned}, $$
-<center>
-<img src="/assets/img/posts/01-2017/cofree-functor.png" style="width: 250 px;"/>
+<img src="/assets/img/2019/free-group.PNG" style="width: 200px;"/>
 </center>
 
-where now $F$ is a cofree functor, fails when $S$ is an empty set. Given a group homormophism from $G$ to $F(S)$, there is no corresponding map (with a non-empty image) from $R(G)$ to an empty set.
+The free functor $\mathcal F$ should be an adjoint of the forgetful functor $\mathcal R$ that maps a group to its underlying set. This is because every group homomorphism $\varphi :F(S) \to G$ is completely determined if we know what it does to each generator of $\mathcal F(S)$. Since the generators are just elements of $S$, what $\varphi$ really acts on is the underlying set of the group. Thus, we have the following commutative diagram
+<center>
+<img src="/assets/img/2019/free-group-adjunction.PNG" style="width: 200px;"/>
+</center>
 
-
-
-# Tensor-Hom Adjunction
-
-The tensor product of a right-$R$-module $M$ and a left-$R$-module $N$ is distributive with respective to the abelian group addition:
+which says that the free functor is a left adjoint of the forgetful functor:
 $$\begin{align}
-	(m_1 + m_2) \otimes n &= m_1\otimes n + m_2 \otimes n, \\
-	m\otimes (n_1 + n_2) &= m\otimes n_1+ m\otimes n_2,
+  \Hom_{\mathbf{Grp}}(\mathcal F(S),G) \cong \Hom_{\mathbf{Set}}(S,\mathcal R(G)).
 \end{align}$$
-and commutes with $R$:
-$$\begin{align}
-	mr \otimes n &= m \otimes rn.
-\end{align}$$
-In essence, $M \otimes_R N$ is the vector space $M \otimes N$ quotient by the relation $mr \otimes n - m \otimes rn$. A tensor product of nonzero modules can turn out to be zero. For example, $\mathbb{Z}/a\mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{Z}/b\mathbb{Z} = 0$ when $a$ and $b$ are coprime.
 
-With an $(A,B)$-module $P$ at the disposal, we can turn an $A$-module into a $B$-module and vice versa. Let $M$ be a left-$A$-module and $N$ be a left-$B$-module,
+Beware that having an adjoint on one side does not imply having the adjoint on the other side, as the forgetful functor from **Grp** to **Set** illustrates. Having the right adjoint implies the following commutative diagram.
+<center>
+<img src="/assets/img/2019/free-group-wrong-adjunction.PNG" style="width: 200px;"/>
+</center>
+
+But this is impossible when $S=\emptyset$ because
+there is no (total) function to an empty set, while there is always a (single, unique) group homomorphism to $\mathcal F(\emptyset)$ the trivial group with one element (which is indeed the *terminal object* in **Grp**.)
+
+### Extensions of scalars
+
+The tensor product $M \otimes_R N$ of a right-$R$-module $M$ and a left-$R$-module $N$ is the vector space $M \otimes N$ quotient by the relation $mr \otimes n - m \otimes rn$. ("$\otimes$ commutes with $R$.") A tensor product of nonzero modules can turn out to be zero. For example, $\mathbb{Z}/a\mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{Z}/b\mathbb{Z} = 0$ when $a$ and $b$ are coprime. With an $(A,B)$-module $P$ at the disposal, we can turn an $A$-module into a $B$-module and vice versa. Let $M$ be a left-$A$-module and $N$ be a left-$B$-module,
 - $P \otimes_B N$ is a left-$A$-module.
 - $\mathrm{Hom}_A (P,M)$ is a left-$B$-module.
 
@@ -206,11 +168,11 @@ $$\begin{align}
 
 The **tensor-hom adjunction** is the natural isomorphism between $A$- and $B$-module-homomorphisms
 $$\begin{align}
-	\mathrm{Hom}_A (P \otimes_B N,M) \simeq  \mathrm{Hom}_B (N,\mathrm{Hom}_A (P,M))\,.
+	\Hom_A (P \otimes_B N,M) \simeq  \Hom_B (N,\Hom_A (P,M))\,.
 \end{align}$$
-In other words, the tensor functor $\odot \otimes_B N$ is the left adjoint of the hom functor $\mathrm{Hom}_A (-,M)$, the dash $-$ denoting a placeholder for an argument.
+In other words, the tensor functor $\otimes_B N$ is the left adjoint of the hom functor $\Hom_A (\odot,M)$.
 
-When all the modules are finite-dimensional vector spaces over the same field (so that $\mathrm{Hom}(M,N) \simeq N^* \otimes M$), the tensor-hom adjunction is the trivial statement that taking the dual of $P$ and $N$ at once is equivalent to taking the dual of $N$ first and then $P$. This is essentially the idea of the proof: breaking up a map that takes multiple inputs into a sequence of single-input maps (so-called *currying* in programming). The only thing complicated about the proof is the bookkeeping.
+When all the modules are finite-dimensional vector spaces over the same field (so that $\Hom(M,N) \simeq N^* \otimes M$), the tensor-hom adjunction is the trivial statement that taking the dual of $P$ and $N$ at once is equivalent to taking the dual of $N$ first and then $P$. This is essentially the idea of the proof: breaking up a map that takes multiple inputs into a sequence of single-input maps (so-called *currying* in programming). The only thing complicated about the proof is the bookkeeping.
 
 **Proof.**
 
@@ -226,7 +188,6 @@ Conversely, given a $B$-module homomorphism $\psi$ from $N$ to $\mathrm{Hom}_A (
   $$\varphi(-_1 \otimes_B -_2) \coloneqq \psi_{-_2} (-_1{}_{})$$
 and extend by linearity. One can verify that $\varphi$ is $A$-linear. Finally, since the constructions of $\psi$ from $\varphi$ and vice versa are obviously inverses of each other, the isomorphism \eqref{tensor-hom} is established. $\Box$
 
-# Extension of scalars
 
 Let $B \subset A$ be two rings with identities. An $A$-module $M$ is also a $B$-module by restricting the scalars to $B$. The resulting module is denoted by $\mathrm{Res} M$ or $\res{M}{A}{B}$ when $A$ and $B$ are needed to be specified.
 
@@ -251,6 +212,8 @@ $$\begin{align}
 	\mathrm{Hom}_K (W,\res{V}{G}{K}) &\simeq \mathrm{Hom}_G (\ind{W}{K}{G},V), \\
 	\mathrm{Hom}_K (\res{V}{G}{K},W) &\simeq \mathrm{Hom}_G (V,\coind{W}{K}{G}).
 \end{align}$$
+
+### Induced representations, explicitly
 
 # Tensor product representations
 
@@ -284,6 +247,6 @@ It is irreducible because $\rho(1)$ cannot be diagonalized over $\R$. But every 
 [^5]: The name "adjoint" comes from the similarity to how the adjoint of a linear operator in an inner product space is defined:
 $\av{x,Ay} = \av{A\dgg x,y}$.
 
-[^6]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the product in this category is the infimum and the coproduct is the supremum.
+[^6]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
 
-[^7]:
+[^7]: I recommend reading [this blog post](https://jeremykun.com/2013/05/24/universal-properties/) by Jeremy Kun. Excerpt: "There are only two universal properties and they are that of being *initial* and *final*."

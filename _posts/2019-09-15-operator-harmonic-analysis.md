@@ -128,7 +128,7 @@ A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one
 $$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$
 Suppose, for instance, that $\mathcal A = \mathcal B = \mathbb{N}$, the natural numbers. The monotone function $x \to 2x$ has no strict inverse because $y/2$ may not be an integer, but it does have right and left adjoints: the ceiling $\lceil x/2 \rceil$ and the floor $\lfloor x/2 \rfloor$ respectively. (Verify this.) Adjunction generalizes this one-to-one correspondence.
 
-### Example: Free functors
+### Example: A free functor
 
 Many useful constructions, like those of induced representations, are adjoint functors of a forgetful functor. The **free functor** $\mathcal F:$ from the category of all sets to the category of all groups sends any set to its [*free group*](https://en.wikipedia.org/wiki/Free_group), the group of all "words", non-commutative product constructed from the alphabet in $S$ and their inverses i.e. $S$ generates $\mathcal F(S)$ without any [constraint](https://en.wikipedia.org/wiki/Presentation_of_a_group). The free functor is defined by the universal property [^7] that giving a function $f$ from $S$ to (the underlying set of) an arbitrary group $G$ is equivalent to giving a *unique* group homomorphism $\varphi$ from the free group $\mathcal F(S)$ to $G$. For example, the empty set gives the trivial group with one element. (The empty word is the identity.) In other words, $\mathcal F(S)$ can simulate any interaction between $S$ and an arbitrary group $G$ and does so optimally (the uniqueness of $\varphi$).
 <center>
@@ -153,11 +153,11 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 But this is impossible when $S=\emptyset$ because
 there is no (total) function to an empty set, whereas there is always a (single, unique) group homomorphism to $\mathcal F(\emptyset)$ the trivial group with one element (which is indeed the [*terminal object*](https://en.wikipedia.org/wiki/Initial_and_terminal_objects) in **Grp**).
 
-## The induction functor
+## Induction
 
 Having seen some examples of functors, let us go back to our original goal of making sense of induction. In the language of modules, induction corresponds to an *extension of scalars*, similar to how a real vector space $V$ can be complexified to $V^{\C} = V \oplus iV = V \otimes_{\R} \C$. We begin by looking for an adjunction involving tensor products.
 
-### The tensor-hom adjunction
+### Tensor-hom adjunction
 
 A hint comes from a trivial identity between three finite-dimensional vector spaces $M,N,P$
 $$\begin{align}
@@ -214,10 +214,14 @@ and extend by linearity. $\varphi$ can be verified to be $B$-linear. Finally, si
 I claim that the restriction of scalars from $R$ to a subring $S\subset R$ have *both* left and right adjoints. Again, $M$ is a left $R$-module and $N$ is a left $S$-module.
 
 - Thinking of $R$ as an $(R,S)$-bi-module, $\mathrm{Res} N \coloneqq \Hom_R (R,N)$ gives a left $S$-module. Then by the tensor-hom adjunction
-$\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M)$,
-we have that the left adjoint of restriction is $\mathrm{Ind}_L N = R \otimes_S N$, often called the **extension of scalars**.
-- Thinking of $R$ as a $(S,R)$-bi-module, $\mathrm{Res} M \coloneqq R \otimes_R M$ gives a left $S$-module. Then by the tensor-hom adjunction $\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N))$,
-we have that the right adjoint of restriction is $\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)$ called the **co-extension of scalars** to distinguish it from the left adjoint.
+$$\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M),$$
+
+    we have that the left adjoint of restriction is $\mathrm{Ind}_L N = R \otimes_S N$, often called the **extension of scalars**.
+
+- Thinking of $R$ as a $(S,R)$-bi-module, $\mathrm{Res} M \coloneqq R \otimes_R M$ gives a left $S$-module. Then by the tensor-hom adjunction
+$$\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N)),$$
+
+    we have that the right adjoint of restriction is $\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)$ called the **co-extension of scalars** to distinguish it from the left adjoint.
 
 ### Frobenius reciprocity
 

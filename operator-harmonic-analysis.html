@@ -224,12 +224,12 @@ $(document).ready(function() {
 </ul></li>
 <li><a href="#functors">Functors</a>
 <ul>
-<li><a href="#the-simplest-adjoint-functor">The simplest adjoint functor</a></li>
-<li><a href="#adjoint-to-a-forgetful-functor">Adjoint to a forgetful functor</a></li>
+<li><a href="#example-the-simplest-adjoint-functor">Example: The simplest adjoint functor</a></li>
+<li><a href="#example-free-functors">Example: Free functors</a></li>
+<li><a href="#extensions-of-scalars">Extensions of scalars</a></li>
+<li><a href="#induced-representations-explicitly">Induced representations, explicitly</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#tensor-hom-adjunction">Tensor-Hom Adjunction</a></li>
-<li><a href="#extension-of-scalars">Extension of scalars</a></li>
 <li><a href="#tensor-product-representations">Tensor product representations</a></li>
 <li><a href="#fourier-analysis">Fourier analysis</a>
 <ul>
@@ -271,7 +271,7 @@ Once we have objects and morphisms, we have a <em>category</em>. Formally, a <st
   \left(\sum_{g_1}f_{g_1} g_1 \right) * \left(\sum_{g_2}h_{g_2} g_2 \right) = \sum_{g_1,g} f_{g_1} h_{g_1^{-1}g} g.
 \end{align}\]</span> In fact, <span class="math">\(k[G]\)</span> is not just a ring but also an algebra (because it is a vector space) called the <strong>group algebra</strong>. Given a <span class="math">\(G\)</span>-representation, the span of <span class="math">\(\rho(g)\)</span> gives a <span class="math">\(k[G]\)</span>-module. Conversely, given a <span class="math">\(k[G]\)</span>-module, there is a vector space <span class="math">\(V\)</span> over <span class="math">\(k\)</span> (because <span class="math">\(k\id \in k[G]\)</span>), on which the <span class="math">\(G\)</span>-action gives a group homomorphism <span class="math">\(G \to \GL(V)\)</span>, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in <span class="math">\(k[G]\)</span>. In other words, they are simply <em><span class="math">\(k[G]\)</span>-linear maps</em>, generalizing the fact that linear operators (all of which commute with the scalars) are morphisms in the category of vector spaces.</p>
 <h3 id="schurs-lemma">Schur’s lemma</h3>
-<p>Intertwiners between irreps are completely characterized by <strong>Schur’s lemma</strong>, a very basic (easily proved using a little linear algebra) but powerful result. Denote the space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> by <span class="math">\(\Hom_G(V,W)\)</span> (and <span class="math">\(\End_G(V)\)</span> if <span class="math">\(V=W\)</span>).</p>
+<p>Intertwiners between irreps are completely characterized by <strong>Schur’s lemma</strong>, a very basic (easily proved using only a little linear algebra) but powerful result. Denote the space of intertwiners between <span class="math">\(G\)</span>-representations <span class="math">\(V\)</span> and <span class="math">\(W\)</span> by <span class="math">\(\Hom_G(V,W)\)</span> (and <span class="math">\(\End_G(V)\)</span> if <span class="math">\(V=W\)</span>).</p>
 <p><strong>Lemma 1.</strong> (Schur’s lemma)</p>
 <ul>
 <li>(Burnside) <em>Every intertwiner between irreps is either an isomorphism or zero.</em></li>
@@ -281,7 +281,7 @@ Once we have objects and morphisms, we have a <em>category</em>. Formally, a <st
   \dim\Hom_G(V,W) =
   \begin{cases}
     1, V \cong W, \\
-    0, V \not\cong W.
+    0, V \unicode{0x2246} W.
   \end{cases}
 \end{align}\]</span></p>
 <h3 id="the-meaning-of-tensor-operators">The meaning of tensor operators</h3>
@@ -306,76 +306,47 @@ I claim that one does not really understand the concept of <a href="https://en.w
   \mathcal{F}(1_{\mathcal C}) &amp;= 1_{\mathcal D}, \\
   \mathcal{F}(f\circ g) &amp;= \mathcal{F}(f) \circ \mathcal{F}(g).
 \end{align}\]</span> Restriction belongs to a simple kind of functors, <em>forgetful functors</em> that simply forget information, in this case the structure of <span class="math">\(G\)</span>. Restriction therefore cannot have a strict inverse. An insight from the category viewpoint is that we can construct the induction functor as a kind of “weak inverse” to the restriction functor called an <em>adjoint</em>. More precisely, there is a left adjoint <span class="math">\[\begin{align}
-  \Hom_G(\textrm{Ind}\,V,W) \cong \Hom_H(V,\textrm{Res}\,W)
+  \Hom_G(\textrm{Ind}_L\,V,W) \cong \Hom_H(V,\textrm{Res}\,W)
 \end{align}\]</span> and a right adjoint <span class="math">\[\begin{align}
-  \Hom_G(,V,\textrm{Ind}\W) \cong \Hom_H(\textrm{Res}\,V,W)
-\end{align}\]</span> to the restriction functor. <a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> Further, we will see that the distinction between the left and the right adjoint comes precisely from the choice to think of <span class="math">\(k[G]\)</span> either as a <span class="math">\((k[G],k[H])\)</span>-bi-module or a <span class="math">\((k[H],k[G])\)</span>-bi-module.</p>
-<p>hese relationships (14,15), which are so important they have a name: <a href="https://en.wikipedia.org/wiki/Frobenius_reciprocity">Frobenius reciprocity</a>, <em>define</em> what the induction is. They are the raison d’être of induced representations.</p>
+  \Hom_G(,V,\textrm{Ind}_R\,W) \cong \Hom_H(\textrm{Res}\,V,W)
+\end{align}\]</span> to the restriction functor. <a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> Further, we will see that the distinction between the left and right adjoints comes precisely from the choice of thinking of <span class="math">\(k[G]\)</span> either as a <span class="math">\((k[G],k[H])\)</span>-bi-module or a <span class="math">\((k[H],k[G])\)</span>-bi-module.</p>
+<p>These relationships (14,15) <em>define</em> what induction is. They are the raison d’être of induced representation—so important that we give them a name: <a href="https://en.wikipedia.org/wiki/Frobenius_reciprocity">Frobenius reciprocity</a>.</p>
 <!-- There are only two universal properties: that of being initial and terminal. This translates to the usual way of presenting universal properties in terms of commutative diagrams when one realizes that commutative diagrams are morphisms in a category of morphisms e.g. "[slice category](https://en.wikipedia.org/wiki/Comma_category#Slice_category)".-->
 
-<h3 id="the-simplest-adjoint-functor">The simplest adjoint functor</h3>
-<p>What does an adjoint functor look like in a category with <em>only one</em> morphism? Such a morphism <span class="math">\(x\to y\)</span> can be though of as a comparison <span class="math">\(x\le y\)</span>, a <a href="https://en.wikipedia.org/wiki/Preorder">preorder</a> if you will <a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. (I learned this example from John Baez’ online <a href="https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/">Applied Category Theory Course</a>.) A functor between two preorders <span class="math">\(\mathcal C\)</span> and <span class="math">\(\mathcal D\)</span> is a <em>monotone function</em> if it is order-preserving: <span class="math">\[ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). \]</span> A pair of monotone functions <span class="math">\(f\)</span> and <span class="math">\(g\)</span> is an <em>adjoint pair</em> if there is a one-to-one correspondence, the <em>Galois connection</em> <span class="math">\[ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). \]</span> Suppose, for instance, that <span class="math">\(\mathcal A = \mathcal B = \mathbb{N}\)</span>, the natural numbers. The monotone function <span class="math">\(x \to 2x\)</span> has no strict inverse because <span class="math">\(y/2\)</span> may not be an integer, but it does have right and left adjoints: the ceiling <span class="math">\(\lceil x/2 \rceil\)</span> and the floor <span class="math">\(\lfloor x/2 \rfloor\)</span> respectively. (Verify.) In this case, we got a one-to-one correspondence between the morphism in <span class="math">\(\mathcal C\)</span> and the morphism in <span class="math">\(\mathcal D\)</span>. The Galois connection generalizes to the adjunction.</p>
-<h3 id="adjoint-to-a-forgetful-functor">Adjoint to a forgetful functor</h3>
-Many useful constructions, like those of induced representations, are adjoint functors to a forgetful functor. The <strong>free functor</strong> <span class="math">\(\mathcal F:\)</span> <strong>Set</strong> <span class="math">\(\to\)</span> <strong>Grp</strong> sending a set to its “<a href="https://en.wikipedia.org/wiki/Free_group">free group</a>”. Given a set <span class="math">\(S\)</span>, <span class="math">\(\mathcal F(S)\)</span> is the set of all expressions that can be composed from elements of <span class="math">\(S\)</span>: every power and inverse of each and every element and (noncommutative) products of them; it is the least constrained group that can be built from elements of <span class="math">\(S\)</span> as generators. The categorical way to say this is that the free functor has the universal property that giving a map <span class="math">\(\sigma\)</span> from <span class="math">\(S\)</span> to some group <span class="math">\(G\)</span> is equivalent to giving a unique group homomorphism <span class="math">\(\varphi\)</span> from the free group <span class="math">\(F(S)\)</span> to <span class="math">\(G\)</span>. (The empty set gives the trivial group.)
+<h3 id="example-the-simplest-adjoint-functor">Example: The simplest adjoint functor</h3>
+<p>What does an adjoint functor look like in a category with <em>only one</em> morphism? Such a morphism <span class="math">\(x\to y\)</span> can be though of as a comparison <span class="math">\(x\le y\)</span>, a <a href="https://en.wikipedia.org/wiki/Preorder">preorder</a> if you will <a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. (I learned this example from John Baez’ online <a href="https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/">Applied Category Theory Course</a>.) A functor between two preorders <span class="math">\(\mathcal C\)</span> and <span class="math">\(\mathcal D\)</span> is a <em>monotone function</em> if it is order-preserving: <span class="math">\[ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). \]</span> A pair of monotone functions <span class="math">\(f\)</span> and <span class="math">\(g\)</span> is an <em>adjoint pair</em> if there is a <a href="https://en.wikipedia.org/wiki/Galois_connection">one-to-one correspondence</a> <span class="math">\[ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). \]</span> Suppose, for instance, that <span class="math">\(\mathcal A = \mathcal B = \mathbb{N}\)</span>, the natural numbers. The monotone function <span class="math">\(x \to 2x\)</span> has no strict inverse because <span class="math">\(y/2\)</span> may not be an integer, but it does have right and left adjoints: the ceiling <span class="math">\(\lceil x/2 \rceil\)</span> and the floor <span class="math">\(\lfloor x/2 \rfloor\)</span> respectively. (Verify this.) Adjunction generalizes this one-to-one correspondence.</p>
+<h3 id="example-free-functors">Example: Free functors</h3>
+Many useful constructions, like those of induced representations, are adjoint functors of a forgetful functor. The <strong>free functor</strong> <span class="math">\(\mathcal F:\)</span> from the category of all sets to the category of all groups sends any set to its <a href="https://en.wikipedia.org/wiki/Free_group"><em>free group</em></a>, the group of all “words”, non-commutative product constructed from the alphabet in <span class="math">\(S\)</span> and their inverses i.e. <span class="math">\(S\)</span> generates <span class="math">\(\mathcal F(S)\)</span> without any <a href="https://en.wikipedia.org/wiki/Presentation_of_a_group">constraint</a>. The free functor is defined by the universal property <a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> that giving a function <span class="math">\(f\)</span> from <span class="math">\(S\)</span> to (the underlying set of) any group <span class="math">\(G\)</span> is equivalent to giving a <em>unique</em> group homomorphism <span class="math">\(\varphi\)</span> from the free group <span class="math">\(\mathcal F(S)\)</span> to <span class="math">\(G\)</span>. For example, the empty set gives the trivial group with one element. (The empty word is the identity.) In other words, <span class="math">\(\mathcal F(S)\)</span> can simulate any interaction between <span class="math">\(S\)</span> and an arbitrary group <span class="math">\(G\)</span> and does so optimally (the uniqueness of <span class="math">\(\varphi\)</span>).
 <center>
-<img src="/assets/img/posts/01-2017/free-group.png" style="width: 200px;"/>
-</center>
-<!-- \begin{align}
-    \xymatrix{
-      S \ar[r]\ar[dr]_{\sigma} & F(S) \ar[d]^{\varphi} \\
-      & G
-    }
-\end{align} -->
-
-<p>The free functor sends an object in <strong>Set</strong> to an object in <strong>Grp</strong>, and the forgetful functor sends an object in <strong>Grp</strong> to an object in <strong>Set</strong>. But their composition is not the identity map. Nevertheless, they are a kind of generalized inverses in the sense formalized in the notion of an adjoint functor.</p>
-Functors <span class="math">\(F: \mathcal{C} \to \mathcal{D}\)</span> and <span class="math">\(G: \mathcal{D} \to \mathcal{C}\)</span> are <strong>adjoint functors</strong> if for any <span class="math">\(X \in \mathcal{C}\)</span> and <span class="math">\(Y \in \mathcal{D}\)</span>, there is an <a href="https://en.wikipedia.org/wiki/Adjoint_functors#Hom-set_adjunction">isomorphism</a> <span class="math">\[ \begin{aligned}
-\mathrm{Hom}_{\mathcal{D}} (F(X),Y) \simeq \mathrm{Hom}_{\mathcal{C}} (X,G(Y)).
-\end{aligned} \]</span>
-<center>
-<img src="/assets/img/posts/01-2017/adjoint.png" style="width: 250px;"/>
-</center>
-<!-- \begin{align*}
-    \xymatrix{
-      F(X)\ar[r]^{\mathrm{Hom}_{\mathcal{D}}(F(X),Y)} & Y\ar[d] \\
-      X\ar[u]\ar[r]_{\mathrm{Hom}_{\mathcal{C}}(X,G(Y))} & G(Y)
-    }
-\end{align*} -->
-
-<p><span class="math">\(F\)</span> is called a <strong>left adjoint</strong> of <span class="math">\(G\)</span> and <span class="math">\(G\)</span> is called a <strong>right adjoint</strong> of <span class="math">\(F\)</span>.</p>
-Why should this be true in the case of the forgetful functor <span class="math">\(R\)</span> and the free functor <span class="math">\(F\)</span> between <strong>Set</strong> and <strong>Grp</strong>? A group homomorphism <span class="math">\(\varphi :F(S) \to G\)</span> is completely determined if we know what it does to each generator of <span class="math">\(F(S)\)</span> i.e. each element of <span class="math">\(S\)</span>. In other words, what <span class="math">\(\varphi\)</span> really acts on is the underlying set of <span class="math">\(G\)</span>. That is, giving <span class="math">\(\varphi\)</span> is equivalent to giving <span class="math">\(\psi : S \to R(G)\)</span>. <span class="math">\[ \begin{aligned}
-\mathrm{Hom}_{\bf{Grp}} (F(S),G) \simeq \mathrm{Hom}_{\bf{Set}} (S,R(G))
-\end{aligned} \]</span>
-<center>
-<img src="/assets/img/posts/01-2017/free-functor.png" style="width: 250 px;"/>
-</center>
-<p>so that the free functor is a left adjoint of the forgetful functor.</p>
-Possessing an adjoint on one side does not imply possessing an adjoint on the other side, as this example also demonstrates; the forgetful functor <span class="math">\(R:{\bf Grp} \to {\bf Set}\)</span> does not have a right adjoint. The desired isomorphism <span class="math">\[ \begin{aligned}
-\mathrm{Hom}_{\bf{Grp}} (G,F(S)) \simeq \mathrm{Hom}_{\bf{Set}} (R(G),S)
-\end{aligned}, \]</span>
-<center>
-<img src="/assets/img/posts/01-2017/cofree-functor.png" style="width: 250 px;"/>
+<img src="/assets/img/2019/free-group.PNG" style="width: 200px;"/>
 </center>
 
-<p>where now <span class="math">\(F\)</span> is a cofree functor, fails when <span class="math">\(S\)</span> is an empty set. Given a group homormophism from <span class="math">\(G\)</span> to <span class="math">\(F(S)\)</span>, there is no corresponding map (with a non-empty image) from <span class="math">\(R(G)\)</span> to an empty set.</p>
-<h1 id="tensor-hom-adjunction">Tensor-Hom Adjunction</h1>
-<p>The tensor product of a right-<span class="math">\(R\)</span>-module <span class="math">\(M\)</span> and a left-<span class="math">\(R\)</span>-module <span class="math">\(N\)</span> is distributive with respective to the abelian group addition: <span class="math">\[\begin{align}
-    (m_1 + m_2) \otimes n &amp;= m_1\otimes n + m_2 \otimes n, \\
-    m\otimes (n_1 + n_2) &amp;= m\otimes n_1+ m\otimes n_2,
-\end{align}\]</span> and commutes with <span class="math">\(R\)</span>: <span class="math">\[\begin{align}
-    mr \otimes n &amp;= m \otimes rn.
-\end{align}\]</span> In essence, <span class="math">\(M \otimes_R N\)</span> is the vector space <span class="math">\(M \otimes N\)</span> quotient by the relation <span class="math">\(mr \otimes n - m \otimes rn\)</span>. A tensor product of nonzero modules can turn out to be zero. For example, <span class="math">\(\mathbb{Z}/a\mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{Z}/b\mathbb{Z} = 0\)</span> when <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are coprime.</p>
-<p>With an <span class="math">\((A,B)\)</span>-module <span class="math">\(P\)</span> at the disposal, we can turn an <span class="math">\(A\)</span>-module into a <span class="math">\(B\)</span>-module and vice versa. Let <span class="math">\(M\)</span> be a left-<span class="math">\(A\)</span>-module and <span class="math">\(N\)</span> be a left-<span class="math">\(B\)</span>-module, - <span class="math">\(P \otimes_B N\)</span> is a left-<span class="math">\(A\)</span>-module. - <span class="math">\(\mathrm{Hom}_A (P,M)\)</span> is a left-<span class="math">\(B\)</span>-module.</p>
+The free functor <span class="math">\(\mathcal F\)</span> should be an adjoint of the forgetful functor <span class="math">\(\mathcal R\)</span> that maps a group to its underlying set. This is because every group homomorphism <span class="math">\(\varphi :F(S) \to G\)</span> is completely determined if we know what it does to each generator of <span class="math">\(\mathcal F(S)\)</span>. Since the generators are just elements of <span class="math">\(S\)</span>, what <span class="math">\(\varphi\)</span> really acts on is the underlying set of the group. Thus, we have the following commutative diagram
+<center>
+<img src="/assets/img/2019/free-group-adjunction.PNG" style="width: 200px;"/>
+</center>
+
+<p>which says that the free functor is a left adjoint of the forgetful functor: <span class="math">\[\begin{align}
+  \Hom_{\mathbf{Grp}}(\mathcal F(S),G) \cong \Hom_{\mathbf{Set}}(S,\mathcal R(G)).
+\end{align}\]</span></p>
+Beware that having an adjoint on one side does not imply having the adjoint on the other side, as the forgetful functor from <strong>Grp</strong> to <strong>Set</strong> illustrates. Having the right adjoint implies the following commutative diagram.
+<center>
+<img src="/assets/img/2019/free-group-wrong-adjunction.PNG" style="width: 200px;"/>
+</center>
+
+<p>But this is impossible when <span class="math">\(S=\emptyset\)</span> because there is no (total) function to an empty set, while there is always a (single, unique) group homomorphism to <span class="math">\(\mathcal F(\emptyset)\)</span> the trivial group with one element (which is indeed the <em>terminal object</em> in <strong>Grp</strong>.)</p>
+<h3 id="extensions-of-scalars">Extensions of scalars</h3>
+<p>The tensor product <span class="math">\(M \otimes_R N\)</span> of a right-<span class="math">\(R\)</span>-module <span class="math">\(M\)</span> and a left-<span class="math">\(R\)</span>-module <span class="math">\(N\)</span> is the vector space <span class="math">\(M \otimes N\)</span> quotient by the relation <span class="math">\(mr \otimes n - m \otimes rn\)</span>. (“<span class="math">\(\otimes\)</span> commutes with <span class="math">\(R\)</span>.”) A tensor product of nonzero modules can turn out to be zero. For example, <span class="math">\(\mathbb{Z}/a\mathbb{Z} \otimes_{\mathbb{Z}} \mathbb{Z}/b\mathbb{Z} = 0\)</span> when <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are coprime. With an <span class="math">\((A,B)\)</span>-module <span class="math">\(P\)</span> at the disposal, we can turn an <span class="math">\(A\)</span>-module into a <span class="math">\(B\)</span>-module and vice versa. Let <span class="math">\(M\)</span> be a left-<span class="math">\(A\)</span>-module and <span class="math">\(N\)</span> be a left-<span class="math">\(B\)</span>-module, - <span class="math">\(P \otimes_B N\)</span> is a left-<span class="math">\(A\)</span>-module. - <span class="math">\(\mathrm{Hom}_A (P,M)\)</span> is a left-<span class="math">\(B\)</span>-module.</p>
 <p><span class="math">\(\mathrm{Hom}_A (P,M)\)</span> makes sense because both <span class="math">\(P\)</span> and <span class="math">\(M\)</span> are left-<span class="math">\(A\)</span>-modules. The obvious <span class="math">\(B\)</span>-action <span class="math">\[  b\varphi(p) = \varphi(pb)\]</span> turns <span class="math">\(\mathrm{Hom}_A (P,M)\)</span> into a left-<span class="math">\(B\)</span>-module. One can verify that the action satisfies the axioms for modules, for example, <span class="math">\[\begin{align}
     (b_1 b_2) \varphi(p) = \varphi(p (b_1 b_2)) = b_2 \varphi(p b_1) = b_1 (b_2 \varphi(p)).
 \end{align}\]</span></p>
 <p>The <strong>tensor-hom adjunction</strong> is the natural isomorphism between <span class="math">\(A\)</span>- and <span class="math">\(B\)</span>-module-homomorphisms <span class="math">\[\begin{align}
-    \mathrm{Hom}_A (P \otimes_B N,M) \simeq  \mathrm{Hom}_B (N,\mathrm{Hom}_A (P,M))\,.
-\end{align}\]</span> In other words, the tensor functor <span class="math">\(\odot \otimes_B N\)</span> is the left adjoint of the hom functor <span class="math">\(\mathrm{Hom}_A (-,M)\)</span>, the dash <span class="math">\(-\)</span> denoting a placeholder for an argument.</p>
-<p>When all the modules are finite-dimensional vector spaces over the same field (so that <span class="math">\(\mathrm{Hom}(M,N) \simeq N^* \otimes M\)</span>), the tensor-hom adjunction is the trivial statement that taking the dual of <span class="math">\(P\)</span> and <span class="math">\(N\)</span> at once is equivalent to taking the dual of <span class="math">\(N\)</span> first and then <span class="math">\(P\)</span>. This is essentially the idea of the proof: breaking up a map that takes multiple inputs into a sequence of single-input maps (so-called <em>currying</em> in programming). The only thing complicated about the proof is the bookkeeping.</p>
+    \Hom_A (P \otimes_B N,M) \simeq  \Hom_B (N,\Hom_A (P,M))\,.
+\end{align}\]</span> In other words, the tensor functor <span class="math">\(\otimes_B N\)</span> is the left adjoint of the hom functor <span class="math">\(\Hom_A (\odot,M)\)</span>.</p>
+<p>When all the modules are finite-dimensional vector spaces over the same field (so that <span class="math">\(\Hom(M,N) \simeq N^* \otimes M\)</span>), the tensor-hom adjunction is the trivial statement that taking the dual of <span class="math">\(P\)</span> and <span class="math">\(N\)</span> at once is equivalent to taking the dual of <span class="math">\(N\)</span> first and then <span class="math">\(P\)</span>. This is essentially the idea of the proof: breaking up a map that takes multiple inputs into a sequence of single-input maps (so-called <em>currying</em> in programming). The only thing complicated about the proof is the bookkeeping.</p>
 <p><strong>Proof.</strong></p>
 <p><span class="math">\(\blacksquare\)</span> In one direction, given an <span class="math">\(A\)</span>-module homomorphism <span class="math">\(\varphi\)</span> from <span class="math">\(P \otimes_B N\)</span> to <span class="math">\(M\)</span>, we want to define a corresponding <span class="math">\(B\)</span>-module homomorphism from <span class="math">\(N\)</span> to <span class="math">\(\mathrm{Hom}_A (P,M)\)</span>. By linearity, <span class="math">\(\varphi\)</span> is determined by its values on all rank-one tensors <span class="math">\[\varphi(p \otimes_B n) \in M.\]</span> So let us define <span class="math">\[\psi_n(-) \coloneqq \varphi(- \otimes_B n).\]</span> The <span class="math">\(A\)</span>-linearity of <span class="math">\(\psi_n\)</span> follows immediately from the <span class="math">\(A\)</span>-linearity of <span class="math">\(\varphi\)</span>. The <span class="math">\(B\)</span>-linearity of <span class="math">\(\psi\)</span> is not hard to show either: <span class="math">\[\psi_{bn_1 + n_2}(p) = \varphi(p \otimes_B (bn_1 + n_2)) = \psi_{n_1}(pb) + \psi_{n_2}(p) = b\psi_{n_1}(p) + \psi_{n_2}(p).\]</span> (The last equality is just the left-<span class="math">\(B\)</span>-action on <span class="math">\(\mathrm{Hom}_A (P,M)\)</span> ).</p>
 <p>Conversely, given a <span class="math">\(B\)</span>-module homomorphism <span class="math">\(\psi\)</span> from <span class="math">\(N\)</span> to <span class="math">\(\mathrm{Hom}_A (P,M)\)</span>, define <span class="math">\[\varphi(-_1 \otimes_B -_2) \coloneqq \psi_{-_2} (-_1{}_{})\]</span> and extend by linearity. One can verify that <span class="math">\(\varphi\)</span> is <span class="math">\(A\)</span>-linear. Finally, since the constructions of <span class="math">\(\psi\)</span> from <span class="math">\(\varphi\)</span> and vice versa are obviously inverses of each other, the isomorphism  is established. <span class="math">\(\Box\)</span></p>
-<h1 id="extension-of-scalars">Extension of scalars</h1>
 <p>Let <span class="math">\(B \subset A\)</span> be two rings with identities. An <span class="math">\(A\)</span>-module <span class="math">\(M\)</span> is also a <span class="math">\(B\)</span>-module by restricting the scalars to <span class="math">\(B\)</span>. The resulting module is denoted by <span class="math">\(\mathrm{Res} M\)</span> or <span class="math">\(\res{M}{A}{B}\)</span> when <span class="math">\(A\)</span> and <span class="math">\(B\)</span> are needed to be specified.</p>
 <p>We ought to have an “inverse” process of extending the scalars. Categorically, an extension of scalars should be an adjoint functor to the restriction. In the context of representation theory, the left and the right adjoints are called <strong>induction</strong> and <strong>coinduction</strong> respectively. - Thinking of <span class="math">\(A\)</span> as an <span class="math">\((A,B)\)</span>-module, <span class="math">\(\mathrm{Res} M = \mathrm{Hom}_A (A,M)\)</span>. Then by the tensor-hom adjunction, <span class="math">\[\mathrm{Hom}_B (N,\mathrm{Hom}_A (A,M)) \simeq \mathrm{Hom}_A (A \otimes_B N,M),\]</span> the left adjoint of Res is <span class="math">\(\ind{N}{B}{A} = A \otimes_B N\)</span>. - Thinking of <span class="math">\(A\)</span> as a <span class="math">\((B,A)\)</span>-module, <span class="math">\(\mathrm{Res} M = A \otimes_A M\)</span>. Then by the tensor-hom adjunction, <span class="math">\[\mathrm{Hom}_B (A \otimes_A M,N) \simeq  \mathrm{Hom}_A (M,\mathrm{Hom}_B (A,N)),\]</span> the right adjoint of Res is <span class="math">\(\coind{N}{B}{A} = \mathrm{Hom}_B (A,N)\)</span>,. \end{itemize}</p>
 <p>To obtain a (co)induced representation from a (co)induced module, we just set the two rings to be the group algebras <span class="math">\(\mathbb{C}[K]\)</span> and <span class="math">\(\mathbb{C}[G]\)</span>, where <span class="math">\(K\)</span> is a subgroup of <span class="math">\(G\)</span>. Let <span class="math">\((\rho,V)\)</span> be a <span class="math">\(G\)</span>-representation and <span class="math">\((\sigma,W)\)</span> be a <span class="math">\(K\)</span>-representation. Then <span class="math">\[\begin{align}
@@ -387,6 +358,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
     \mathrm{Hom}_K (W,\res{V}{G}{K}) &amp;\simeq \mathrm{Hom}_G (\ind{W}{K}{G},V), \\
     \mathrm{Hom}_K (\res{V}{G}{K},W) &amp;\simeq \mathrm{Hom}_G (V,\coind{W}{K}{G}).
 \end{align}\]</span></p>
+<h3 id="induced-representations-explicitly">Induced representations, explicitly</h3>
 <h1 id="tensor-product-representations">Tensor product representations</h1>
 <h1 id="fourier-analysis">Fourier analysis</h1>
 <h2 id="a-little-algebraic-geometry">A little algebraic geometry</h2>
@@ -403,7 +375,8 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
 <li id="fn3"><p>We think of <span class="math">\(R\)</span> as both a rotation matrix (the defining representation of <span class="math">\(\SO(3)\)</span>) and an abstract group element. We also assume the <a href="https://en.wikipedia.org/wiki/Einstein_notation">Einstein summation convention</a>.<a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p>Why can’t there be more than one copy of <span class="math">\((R,\R^3)\)</span> in <span class="math">\(\Hom(V,W)\)</span>? Because every tensor product <span class="math">\(V\otimes W\)</span> of irreducible <span class="math">\(\SO(3)\)</span>-representations decomposes <em>without multiplicity</em>. Wigner gave a characterization of some of these so-called <em>simply reducible groups</em> which was then <a href="https://projecteuclid.org/euclid.pjm/1103039895">generalized by Mackey</a>.<a href="#fnref4">↩</a></p></li>
 <li id="fn5"><p>The name “adjoint” comes from the similarity to how the adjoint of a linear operator in an inner product space is defined: <span class="math">\(\av{x,Ay} = \av{A\dgg x,y}\)</span>.<a href="#fnref5">↩</a></p></li>
-<li id="fn6"><p>A <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">partial order</a> is a preorder that is also “antisymmetric”: <span class="math">\(a \le b\)</span> and <span class="math">\(b \le a\)</span> implies <span class="math">\(a=b\)</span>. Also for the curious, the product in this category is the infimum and the coproduct is the supremum.<a href="#fnref6">↩</a></p></li>
+<li id="fn6"><p>A <a href="https://en.wikipedia.org/wiki/Partially_ordered_set">partial order</a> is a preorder that is also “antisymmetric”: <span class="math">\(a \le b\)</span> and <span class="math">\(b \le a\)</span> implies <span class="math">\(a=b\)</span>. Also for the curious, the <a href="https://en.wikipedia.org/wiki/Product_(category_theory)">product</a> in this category is the infimum and the <a href="https://en.wikipedia.org/wiki/Coproduct">coproduct</a> is the supremum.<a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>I recommend reading <a href="https://jeremykun.com/2013/05/24/universal-properties/">this blog post</a> by Jeremy Kun. Excerpt: “There are only two universal properties and they are that of being <em>initial</em> and <em>final</em>.”<a href="#fnref7">↩</a></p></li>
 </ol>
 </section>
 
@@ -421,7 +394,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
     property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-18 07:28:51 +0000"
+            datetime="2019-09-18 10:39:25 +0000"
             property="dc:modified">18 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -454,7 +427,7 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/dd5ecf45524785be5702db8b7788ac3521dddb93/_posts/2019-09-15-operator-harmonic-analysis.md"> dd5ecf4</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/1d3f20c0fb7935ffd89e073317a382bebd6ce8ff/_posts/2019-09-15-operator-harmonic-analysis.md"> 1d3f20c</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -583,8 +556,8 @@ Possessing an adjoint on one side does not imply possessing an adjoint on the ot
           SO: "{\\mathrm{SO}}",
           Sp: "{\\mathrm{Sp}}",
           hilb: "{\\mathcal{H}}",
-          End: "{\\mathrm{End}\\,}",
-          Hom: "{\\mathrm{Hom}\\,}",
+          End: "{\\mathrm{End}}",
+          Hom: "{\\mathrm{Hom}}",
           Sym: "{\\mathrm{Sym}}",
           dgg: "{^{\\dagger}}",
           ind: ["{\\mathrm{Ind}_{#2}^{#3} {#1}}",3],

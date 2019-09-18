@@ -225,11 +225,11 @@ $(document).ready(function() {
 <li><a href="#adjoint-functors">Adjoint functors</a>
 <ul>
 <li><a href="#example-the-simplest-adjoint-functor">Example: The simplest adjoint functor</a></li>
-<li><a href="#example-free-functors">Example: Free functors</a></li>
+<li><a href="#example-a-free-functor">Example: A free functor</a></li>
 </ul></li>
-<li><a href="#the-induction-functor">The induction functor</a>
+<li><a href="#induction">Induction</a>
 <ul>
-<li><a href="#the-tensor-hom-adjunction">The tensor-hom adjunction</a></li>
+<li><a href="#tensor-hom-adjunction">Tensor-hom adjunction</a></li>
 <li><a href="#co-extension-of-scalars">(Co-)extension of scalars</a></li>
 <li><a href="#frobenius-reciprocity">Frobenius reciprocity</a></li>
 </ul></li>
@@ -308,7 +308,7 @@ I claim that one does not really understand the concept of <a href="https://en.w
 
 <h3 id="example-the-simplest-adjoint-functor">Example: The simplest adjoint functor</h3>
 <p>What does an adjoint functor look like in a category with <em>only one</em> morphism? Such a morphism <span class="math">\(x\to y\)</span> can be though of as a comparison <span class="math">\(x\le y\)</span>, a <a href="https://en.wikipedia.org/wiki/Preorder">preorder</a> if you will <a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. (I learned this example from John Baez’ online <a href="https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/">Applied Category Theory Course</a>.) A functor between two preorders <span class="math">\(\mathcal C\)</span> and <span class="math">\(\mathcal D\)</span> is a <em>monotone function</em> if it is order-preserving: <span class="math">\[ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). \]</span> A pair of monotone functions <span class="math">\(f\)</span> and <span class="math">\(g\)</span> is an <em>adjoint pair</em> if there is a <a href="https://en.wikipedia.org/wiki/Galois_connection">one-to-one correspondence</a> <span class="math">\[ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). \]</span> Suppose, for instance, that <span class="math">\(\mathcal A = \mathcal B = \mathbb{N}\)</span>, the natural numbers. The monotone function <span class="math">\(x \to 2x\)</span> has no strict inverse because <span class="math">\(y/2\)</span> may not be an integer, but it does have right and left adjoints: the ceiling <span class="math">\(\lceil x/2 \rceil\)</span> and the floor <span class="math">\(\lfloor x/2 \rfloor\)</span> respectively. (Verify this.) Adjunction generalizes this one-to-one correspondence.</p>
-<h3 id="example-free-functors">Example: Free functors</h3>
+<h3 id="example-a-free-functor">Example: A free functor</h3>
 Many useful constructions, like those of induced representations, are adjoint functors of a forgetful functor. The <strong>free functor</strong> <span class="math">\(\mathcal F:\)</span> from the category of all sets to the category of all groups sends any set to its <a href="https://en.wikipedia.org/wiki/Free_group"><em>free group</em></a>, the group of all “words”, non-commutative product constructed from the alphabet in <span class="math">\(S\)</span> and their inverses i.e. <span class="math">\(S\)</span> generates <span class="math">\(\mathcal F(S)\)</span> without any <a href="https://en.wikipedia.org/wiki/Presentation_of_a_group">constraint</a>. The free functor is defined by the universal property <a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> that giving a function <span class="math">\(f\)</span> from <span class="math">\(S\)</span> to (the underlying set of) an arbitrary group <span class="math">\(G\)</span> is equivalent to giving a <em>unique</em> group homomorphism <span class="math">\(\varphi\)</span> from the free group <span class="math">\(\mathcal F(S)\)</span> to <span class="math">\(G\)</span>. For example, the empty set gives the trivial group with one element. (The empty word is the identity.) In other words, <span class="math">\(\mathcal F(S)\)</span> can simulate any interaction between <span class="math">\(S\)</span> and an arbitrary group <span class="math">\(G\)</span> and does so optimally (the uniqueness of <span class="math">\(\varphi\)</span>).
 <center>
 <img src="/assets/img/2019/free-group.PNG" style="height: 150px;"/>
@@ -328,9 +328,9 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 </center>
 
 <p>But this is impossible when <span class="math">\(S=\emptyset\)</span> because there is no (total) function to an empty set, whereas there is always a (single, unique) group homomorphism to <span class="math">\(\mathcal F(\emptyset)\)</span> the trivial group with one element (which is indeed the <a href="https://en.wikipedia.org/wiki/Initial_and_terminal_objects"><em>terminal object</em></a> in <strong>Grp</strong>).</p>
-<h2 id="the-induction-functor">The induction functor</h2>
+<h2 id="induction">Induction</h2>
 <p>Having seen some examples of functors, let us go back to our original goal of making sense of induction. In the language of modules, induction corresponds to an <em>extension of scalars</em>, similar to how a real vector space <span class="math">\(V\)</span> can be complexified to <span class="math">\(V^{\C} = V \oplus iV = V \otimes_{\R} \C\)</span>. We begin by looking for an adjunction involving tensor products.</p>
-<h3 id="the-tensor-hom-adjunction">The tensor-hom adjunction</h3>
+<h3 id="tensor-hom-adjunction">Tensor-hom adjunction</h3>
 <p>A hint comes from a trivial identity between three finite-dimensional vector spaces <span class="math">\(M,N,P\)</span> <span class="math">\[\begin{align}
   \Hom (P\otimes M,N) = \Hom (M,\Hom(P,N))
 \end{align}\]</span> since they both express <span class="math">\(P^* \otimes M^* \otimes N\)</span> but without using the dual. This makes the tensoring with <span class="math">\(P\)</span> and the “hom” map <span class="math">\(\Hom(P,\odot)\)</span> look like an adjoint pair, the tensoring being the left adjoint and hom being the right adjoint. Interestingly, this adjunction continues to hold when the vector spaces, which are <span class="math">\(k\)</span>-modules, are replaced by general modules. Then it is called the <a href="https://en.wikipedia.org/wiki/Tensor-hom_adjunction"><strong>tensor-hom adjunction</strong></a> <span class="math">\[\begin{align}
@@ -361,8 +361,10 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 <h3 id="co-extension-of-scalars">(Co-)extension of scalars</h3>
 <p>I claim that the restriction of scalars from <span class="math">\(R\)</span> to a subring <span class="math">\(S\subset R\)</span> have <em>both</em> left and right adjoints. Again, <span class="math">\(M\)</span> is a left <span class="math">\(R\)</span>-module and <span class="math">\(N\)</span> is a left <span class="math">\(S\)</span>-module.</p>
 <ul>
-<li>Thinking of <span class="math">\(R\)</span> as an <span class="math">\((R,S)\)</span>-bi-module, <span class="math">\(\mathrm{Res} N \coloneqq \Hom_R (R,N)\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\(\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M)\)</span>, we have that the left adjoint of restriction is <span class="math">\(\mathrm{Ind}_L N = R \otimes_S N\)</span>, often called the <strong>extension of scalars</strong>.</li>
-<li>Thinking of <span class="math">\(R\)</span> as a <span class="math">\((S,R)\)</span>-bi-module, <span class="math">\(\mathrm{Res} M \coloneqq R \otimes_R M\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\(\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N))\)</span>, we have that the right adjoint of restriction is <span class="math">\(\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)\)</span> called the <strong>co-extension of scalars</strong> to distinguish it from the left adjoint.</li>
+<li><p>Thinking of <span class="math">\(R\)</span> as an <span class="math">\((R,S)\)</span>-bi-module, <span class="math">\(\mathrm{Res} N \coloneqq \Hom_R (R,N)\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\[\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M),\]</span></p>
+<p>we have that the left adjoint of restriction is <span class="math">\(\mathrm{Ind}_L N = R \otimes_S N\)</span>, often called the <strong>extension of scalars</strong>.</p></li>
+<li><p>Thinking of <span class="math">\(R\)</span> as a <span class="math">\((S,R)\)</span>-bi-module, <span class="math">\(\mathrm{Res} M \coloneqq R \otimes_R M\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\[\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N)),\]</span></p>
+<p>we have that the right adjoint of restriction is <span class="math">\(\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)\)</span> called the <strong>co-extension of scalars</strong> to distinguish it from the left adjoint.</p></li>
 </ul>
 <h3 id="frobenius-reciprocity">Frobenius reciprocity</h3>
 <p>Setting <span class="math">\(R = k[G]\)</span> and <span class="math">\(S = k[H]\)</span>, we obtain both versions of Frobenius reciprocity (14,15): <span class="math">\[\begin{align}
@@ -413,7 +415,7 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
     property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-18 15:48:30 +0000"
+            datetime="2019-09-18 16:05:02 +0000"
             property="dc:modified">18 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -446,7 +448,7 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5268f180c341ab7ac26667aa1c36996f371daec7/_posts/2019-09-15-operator-harmonic-analysis.md"> 5268f18</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/d761608e4c98542c374e596dfc41c706a9da5f78/_posts/2019-09-15-operator-harmonic-analysis.md"> d761608</a></tiny></p>
 </aside>
 
 <br /><br />

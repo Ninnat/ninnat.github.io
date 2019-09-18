@@ -170,6 +170,7 @@ $$\begin{align}
 and to unpack its meaning we have to properly define what $M,N,P$ and these [tensor products between modules](https://en.wikipedia.org/wiki/Tensor_product_of_modules) are.
 
 The tensor product $M \otimes_R N$ of a right $R$-module $M$ and a left-$R$-module $N$ is the vector space $M \otimes N$ quotient by the relation $mr \otimes n - m \otimes rn = 0$ for every $r \in R$. ("$\otimes$ commutes with $R$.") [^8] With a $(S,R)$-bi-module $P$ at our disposal, we can turn an $R$-module into an $S$-module and vice versa. Let $M$ be a left $R$-module and $N$ be a left $S$-module.
+
 - $P \otimes_R M$ is a left $S$-module.
 - $\Hom_S (P,N)$ is a left $R$-module.
 
@@ -208,25 +209,25 @@ $$\begin{align}
 \end{align}$$
 and extend by linearity. $\varphi$ can be verified to be $B$-linear. Finally, since the construction of $\psi$ from $\varphi$ and vice versa is an inverse of each other, the tensor-hom adjunction is established. $\Box$
 
-### Extensions by scalars
+### (Co-)extension of scalars
 
 I claim that the restriction of scalars from $R$ to a subring $S\subset R$ have *both* left and right adjoints. Again, $M$ is a left $R$-module and $N$ is a left $S$-module.
 
 - Thinking of $R$ as an $(R,S)$-bi-module, $\mathrm{Res} N \coloneqq \Hom_R (R,N)$ gives a left $S$-module. Then by the tensor-hom adjunction
 $\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M)$,
-we have that the left adjoint of restriction is $\mathrm{Ind}_L N = R \otimes_S N$.
+we have that the left adjoint of restriction is $\mathrm{Ind}_L N = R \otimes_S N$, often called the **extension of scalars**.
 - Thinking of $R$ as a $(S,R)$-bi-module, $\mathrm{Res} M \coloneqq R \otimes_R M$ gives a left $S$-module. Then by the tensor-hom adjunction $\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N))$,
-we have that the right adjoint of restriction is $\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)$.
+we have that the right adjoint of restriction is $\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)$ called the **co-extension of scalars** to distinguish it from the left adjoint.
 
 ### Frobenius reciprocity
 
-Setting $R = k[G]$ and $S = k[H]$, we obtain both versions of the Frobenius reciprocity (14,15) restated here for convenience:
+Setting $R = k[G]$ and $S = k[H]$, we obtain both versions of Frobenius reciprocity (14,15):
 $$\begin{align}
-  \Hom_G(\mathrm{Ind}_L\,V = k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W) \\
-  \Hom_G(,V,\mathrm{Ind}_R\,W = \Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W)
+  \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W) \\
+  \Hom_G(,V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W)
 \end{align}$$
 
----
+
 
 <!-- # Tensor product representations
 

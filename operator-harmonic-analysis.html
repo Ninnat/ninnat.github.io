@@ -230,7 +230,7 @@ $(document).ready(function() {
 <li><a href="#the-induction-functor">The induction functor</a>
 <ul>
 <li><a href="#the-tensor-hom-adjunction">The tensor-hom adjunction</a></li>
-<li><a href="#extensions-by-scalars">Extensions by scalars</a></li>
+<li><a href="#co-extension-of-scalars">(Co-)extension of scalars</a></li>
 <li><a href="#frobenius-reciprocity">Frobenius reciprocity</a></li>
 </ul></li>
 </ul></li>
@@ -336,7 +336,11 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 \end{align}\]</span> since they both express <span class="math">\(P^* \otimes M^* \otimes N\)</span> but without using the dual. This makes the tensoring with <span class="math">\(P\)</span> and the “hom” map <span class="math">\(\Hom(P,\odot)\)</span> look like an adjoint pair, the tensoring being the left adjoint and hom being the right adjoint. Interestingly, this adjunction continues to hold when the vector spaces, which are <span class="math">\(k\)</span>-modules, are replaced by general modules. Then it is called the <a href="https://en.wikipedia.org/wiki/Tensor-hom_adjunction"><strong>tensor-hom adjunction</strong></a> <span class="math">\[\begin{align}
   \Hom_S (P\otimes_R M,N) = \Hom_R (M,\Hom_S(P,N)),
 \end{align}\]</span> and to unpack its meaning we have to properly define what <span class="math">\(M,N,P\)</span> and these <a href="https://en.wikipedia.org/wiki/Tensor_product_of_modules">tensor products between modules</a> are.</p>
-<p>The tensor product <span class="math">\(M \otimes_R N\)</span> of a right <span class="math">\(R\)</span>-module <span class="math">\(M\)</span> and a left-<span class="math">\(R\)</span>-module <span class="math">\(N\)</span> is the vector space <span class="math">\(M \otimes N\)</span> quotient by the relation <span class="math">\(mr \otimes n - m \otimes rn = 0\)</span> for every <span class="math">\(r \in R\)</span>. (“<span class="math">\(\otimes\)</span> commutes with <span class="math">\(R\)</span>.”) <a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a> With a <span class="math">\((S,R)\)</span>-bi-module <span class="math">\(P\)</span> at our disposal, we can turn an <span class="math">\(R\)</span>-module into an <span class="math">\(S\)</span>-module and vice versa. Let <span class="math">\(M\)</span> be a left <span class="math">\(R\)</span>-module and <span class="math">\(N\)</span> be a left <span class="math">\(S\)</span>-module. - <span class="math">\(P \otimes_R M\)</span> is a left <span class="math">\(S\)</span>-module. - <span class="math">\(\Hom_S (P,N)\)</span> is a left <span class="math">\(R\)</span>-module.</p>
+<p>The tensor product <span class="math">\(M \otimes_R N\)</span> of a right <span class="math">\(R\)</span>-module <span class="math">\(M\)</span> and a left-<span class="math">\(R\)</span>-module <span class="math">\(N\)</span> is the vector space <span class="math">\(M \otimes N\)</span> quotient by the relation <span class="math">\(mr \otimes n - m \otimes rn = 0\)</span> for every <span class="math">\(r \in R\)</span>. (“<span class="math">\(\otimes\)</span> commutes with <span class="math">\(R\)</span>.”) <a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a> With a <span class="math">\((S,R)\)</span>-bi-module <span class="math">\(P\)</span> at our disposal, we can turn an <span class="math">\(R\)</span>-module into an <span class="math">\(S\)</span>-module and vice versa. Let <span class="math">\(M\)</span> be a left <span class="math">\(R\)</span>-module and <span class="math">\(N\)</span> be a left <span class="math">\(S\)</span>-module.</p>
+<ul>
+<li><span class="math">\(P \otimes_R M\)</span> is a left <span class="math">\(S\)</span>-module.</li>
+<li><span class="math">\(\Hom_S (P,N)\)</span> is a left <span class="math">\(R\)</span>-module.</li>
+</ul>
 <p><span class="math">\(\Hom_S (P,N)\)</span> makes sense because both <span class="math">\(P\)</span> and <span class="math">\(N\)</span> are left <span class="math">\(S\)</span>-modules. The obvious <span class="math">\(R\)</span>-action <span class="math">\[  r\varphi(p) = \varphi(pr)\]</span> turns <span class="math">\(\Hom_S (P,N)\)</span> into a left <span class="math">\(R\)</span>-module. One can verify that the action satisfies the axioms for modules, for example, <span class="math">\[\begin{align}
     (r_1 r_2) \varphi(p) = \varphi(p (r_1 r_2)) = r_2 \varphi(p r_1) = r_1 (r_2 \varphi(r)).
 \end{align}\]</span></p>
@@ -354,18 +358,17 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 <p>Conversely, given an <span class="math">\(R\)</span>-module homomorphism <span class="math">\(\psi\)</span> from <span class="math">\(M\)</span> to <span class="math">\(\Hom_S (P,N)\)</span>, define <span class="math">\[\begin{align}
   \varphi(\odot_1 \otimes_R \odot_2) \coloneqq \psi_{\odot_2} (\odot_1{}_{})
 \end{align}\]</span> and extend by linearity. <span class="math">\(\varphi\)</span> can be verified to be <span class="math">\(B\)</span>-linear. Finally, since the construction of <span class="math">\(\psi\)</span> from <span class="math">\(\varphi\)</span> and vice versa is an inverse of each other, the tensor-hom adjunction is established. <span class="math">\(\Box\)</span></p>
-<h3 id="extensions-by-scalars">Extensions by scalars</h3>
+<h3 id="co-extension-of-scalars">(Co-)extension of scalars</h3>
 <p>I claim that the restriction of scalars from <span class="math">\(R\)</span> to a subring <span class="math">\(S\subset R\)</span> have <em>both</em> left and right adjoints. Again, <span class="math">\(M\)</span> is a left <span class="math">\(R\)</span>-module and <span class="math">\(N\)</span> is a left <span class="math">\(S\)</span>-module.</p>
 <ul>
-<li>Thinking of <span class="math">\(R\)</span> as an <span class="math">\((R,S)\)</span>-bi-module, <span class="math">\(\mathrm{Res} N \coloneqq \Hom_R (R,N)\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\(\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M)\)</span>, we have that the left adjoint of restriction is <span class="math">\(\mathrm{Ind}_L N = R \otimes_S N\)</span>.</li>
-<li>Thinking of <span class="math">\(R\)</span> as a <span class="math">\((S,R)\)</span>-bi-module, <span class="math">\(\mathrm{Res} M \coloneqq R \otimes_R M\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\(\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N))\)</span>, we have that the right adjoint of restriction is <span class="math">\(\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)\)</span>.</li>
+<li>Thinking of <span class="math">\(R\)</span> as an <span class="math">\((R,S)\)</span>-bi-module, <span class="math">\(\mathrm{Res} N \coloneqq \Hom_R (R,N)\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\(\Hom_S (N,\Hom_R (R,M)) \cong \Hom_R (R \otimes_S N,M)\)</span>, we have that the left adjoint of restriction is <span class="math">\(\mathrm{Ind}_L N = R \otimes_S N\)</span>, often called the <strong>extension of scalars</strong>.</li>
+<li>Thinking of <span class="math">\(R\)</span> as a <span class="math">\((S,R)\)</span>-bi-module, <span class="math">\(\mathrm{Res} M \coloneqq R \otimes_R M\)</span> gives a left <span class="math">\(S\)</span>-module. Then by the tensor-hom adjunction <span class="math">\(\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N))\)</span>, we have that the right adjoint of restriction is <span class="math">\(\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)\)</span> called the <strong>co-extension of scalars</strong> to distinguish it from the left adjoint.</li>
 </ul>
 <h3 id="frobenius-reciprocity">Frobenius reciprocity</h3>
-<p>Setting <span class="math">\(R = k[G]\)</span> and <span class="math">\(S = k[H]\)</span>, we obtain both versions of the Frobenius reciprocity (14,15) restated here for convenience: <span class="math">\[\begin{align}
-  \Hom_G(\mathrm{Ind}_L\,V = k[G]\otimes_{k[H]} V,W) &amp;\cong \Hom_H(V,\mathrm{Res}\,W) \\
-  \Hom_G(,V,\mathrm{Ind}_R\,W = \Hom_{k[H]}(k[G],W)) &amp;\cong \Hom_H(\mathrm{Res}\,V,W)
+<p>Setting <span class="math">\(R = k[G]\)</span> and <span class="math">\(S = k[H]\)</span>, we obtain both versions of Frobenius reciprocity (14,15): <span class="math">\[\begin{align}
+  \Hom_G(k[G]\otimes_{k[H]} V,W) &amp;\cong \Hom_H(V,\mathrm{Res}\,W) \\
+  \Hom_G(,V,\Hom_{k[H]}(k[G],W)) &amp;\cong \Hom_H(\mathrm{Res}\,V,W)
 \end{align}\]</span></p>
-<hr />
 <!-- # Tensor product representations
 
 # Fourier analysis
@@ -410,7 +413,7 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
     property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-18 15:23:50 +0000"
+            datetime="2019-09-18 15:48:30 +0000"
             property="dc:modified">18 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -443,7 +446,7 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/e3667a7ed49692abb1c227e821fc9a3f8ac86596/_posts/2019-09-15-operator-harmonic-analysis.md"> e3667a7</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5268f180c341ab7ac26667aa1c36996f371daec7/_posts/2019-09-15-operator-harmonic-analysis.md"> 5268f18</a></tiny></p>
 </aside>
 
 <br /><br />

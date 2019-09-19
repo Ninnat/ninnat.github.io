@@ -4,13 +4,248 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-09-19T03:29:09+00:00</updated>
+ <updated>2019-09-19T07:58:39+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>May-July 2019 Archive</title>
+   <link href="/may-2019-log.html"/>
+   <updated>2019-09-19T00:00:00+00:00</updated>
+   <id>h/may-2019-log</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Updated: 19 Aug 2019&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from May to July and a bit of August 2019.&lt;/p&gt;
+&lt;div id=&quot;toc&quot;&gt;
+
+&lt;/div&gt;
+&lt;p&gt;My research reading in the past couple of months has been a bit nebulous, so I want to leave that out for now.&lt;/p&gt;
+&lt;!-- # Research
+
+Research is a bit nebulous these months, with so much that I want to talk about but so little that I can comfortably do.
+
+- [Efficient verification of bosonic quantum channels via benchmarking](https://arxiv.org/abs/1904.10682), Wu and Sanders 1904.10682
+    - [Reliable quantum certification of photonic state preparations](https://arxiv.org/abs/1407.4817), Aolita, Gogolin, Kliesch and Eisert 2015
+        - [Graphical calculus for Gaussian pure states](https://arxiv.org/abs/1007.0725), Menicucci, Flammia and van Loock 2011
+    - [Fidelity witnesses for fermionic quantum simulations](http://arxiv.org/abs/1703.03152), Gluza , Kliesch, Eisert and Aolita 2018
+    - [Certifying quantumness: Benchmarks for the optimal processing of generalized coherent and squeezed states](http://arxiv.org/abs/1407.4133), Yang, Chiribella and Adesso 2015
+- [Phase space simulation method for quantum computation with magic states on qubits](https://scirate.com/arxiv/1905.05374), Raussendorf et al. 1905.05374 [[Scirate discussion](https://scirate.com/arxiv/1905.05374#1342)]   
+- [All fermionic non-Gaussian states are magic states for matchgate computations](https://scirate.com/arxiv/1905.08584), Hebenstreit et al. 1905.08584 --&gt;
+
+&lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bangkokpost.com/lifestyle/social-and-lifestyle/314880/a-lifelong-love-of-learning&quot;&gt;Prasert Na Nagara&lt;/a&gt; (ประเสริฐ ณ นคร) 1919 - 2019&lt;/li&gt;
+&lt;li&gt;Mitchell Feigenbaum, a pioneer of chaos theory &lt;a href=&quot;https://www.rockefeller.edu/news/26289-mitchell-feigenbaum-physicist-pioneered-chaos-theory-died/&quot;&gt;passed away&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.insidehighered.com/news/2019/05/03/icelands-universities-worry-about-small-numbers-male-students-they-attract&quot;&gt;Males are underrepresented in Iceland higher education&lt;/a&gt; because fishing career is more attractive. “in 2017 Icelandic men still earned 15.5 percent more per hour than women.”&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kevin Simler has an interactive blog post on &lt;a href=&quot;https://meltingasphalt.com/interactive/going-critical/&quot;&gt;network criticality&lt;/a&gt; that nicely illustrates concepts like herd immunity and transmission of knowledge. One point that is obvious once heard but I’ve never internalized before:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;there are ideas and cultural practices that can take root and spread in a city that simply can’t spread out in the countryside. (Mathematically can’t.) These are the very same ideas and the very same kinds of people. It’s not that rural folks are e.g. “small-minded”; when exposed to one of these ideas, they’re exactly as likely to adopt it as someone in the city. Rather, it’s that the idea itself can’t go viral in the countryside because there aren’t as many connections along which it can spread.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://hbr.org/2019/03/the-feedback-fallacy&quot;&gt;The feedback fallacy&lt;/a&gt;, HBR&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Excellence is also not the opposite of failure. […] Study disease and you will learn a lot about disease and precious little about health. Eradicating depression will get you no closer to joy. Divorce is mute on the topic of happy marriage. Exit interviews with employees who leave tell you nothing about why others stay. If you study failure, you’ll learn a lot about failure but nothing about how to achieve excellence.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;A candidate gene for depression is another house of cards. [&lt;a href=&quot;https://www.theatlantic.com/science/archive/2019/05/waste-1000-studies/589684/&quot;&gt;Atlantic&lt;/a&gt;] [&lt;a href=&quot;https://slatestarcodex.com/2019/05/07/5-httlpr-a-pointed-review/&quot;&gt;SSC&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;First time the world has &lt;a href=&quot;https://ourworldindata.org/population-aged-65-outnumber-children&quot;&gt;more people over 64 than children younger than 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thailand’s underpopulation: &lt;a href=&quot;https://www.bloomberg.com/graphics/2019-thailand-baby-bust/&quot;&gt;first-world problem in a developing country&lt;/a&gt;, Bloomberg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/cf19b956-60a2-11e9-b285-3acd5d43599e&quot;&gt;Who is using your face?&lt;/a&gt;, FT [&lt;a href=&quot;https://old.reddit.com/r/EmergingRisks/comments/bewxkp/whos_using_your_face_the_ugly_truth_about_facial/&quot;&gt;Without paywall&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2019/07/13/technology/databases-faces-facial-recognition-technology.html&quot;&gt;NYTimes&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;In the low-trust society, the Chinese welcome &lt;a href=&quot;https://slate.com/technology/2019/05/china-mobile-5g-facial-recognition-ad.html&quot;&gt;facial recognition technology&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The periodic system as &lt;a href=&quot;https://www.mpg.de/13566273/periodic-system-elements&quot;&gt;ordered hypergraphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://petapixel.com/2019/07/05/goodbye-aberration-physicist-solves-2000-year-old-optical-problem/&quot;&gt;Goodbye aberration&lt;/a&gt; [&lt;a href=&quot;https://www.reddit.com/r/Physics/comments/c9ti1r/goodbye_aberration_physicist_solves_2000yearold/et80c08/&quot;&gt;reddit comment&lt;/a&gt;] (A numerically checked analytical “solution”: “The formula given in the paper”proves&amp;quot; the following: for any profile of one surface of the lens of the given thickness at the axis, for each point on the lens axis there exists such profile of the second surface that makes that point aplanatic.“)&lt;/li&gt;
+&lt;li&gt;Lanthanum hydride, a compound rich in hydrogen exhibits &lt;a href=&quot;https://www.nature.com/articles/d41586-019-01583-y&quot;&gt;superconductivity at 250 K&lt;/a&gt; under more than a million times Earth’s atmospheric pressure. In general, the lower the atomic mass, the higher the critical temperature.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;https://english.stackexchange.com/questions/448865/is-the-etymology-of-salary-a-myth&quot;&gt;myth of the etymology of salary&lt;/a&gt; from salarium, “salt money”&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://castel.dev/post/lecture-notes-1/&quot;&gt;How I’m able to take notes in mathematics lectures using LaTeX and Vim&lt;/a&gt;, Gilles Castel&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/notable/notable&quot;&gt;Notable&lt;/a&gt;, a markdown-based, Wikipedia-style note-taking app, currently with &lt;a href=&quot;https://github.com/notable/notable/issues&quot;&gt;numerous bugs&lt;/a&gt; and inconveniences (e.g. can’t define global LaTeX macros, single-letter LaTeX codes don’t render)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/47527140&quot;&gt;Collaboratory&lt;/a&gt; let you share Jupyter notebooks with collaborators.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://praxis.fortelabs.co/how-emotions-are-made/&quot;&gt;How Emotions Are Made: The Theory of Constructed Emotion&lt;/a&gt;, Tiago Forte&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When you experience an emotion without knowing the precise cause, you are more likely to treat that emotion as information about the &lt;em&gt;world&lt;/em&gt;, rather than your &lt;em&gt;experience&lt;/em&gt; of the world. This is known as &lt;em&gt;affective realism&lt;/em&gt;. Affective realism causes us to experience supposed “facts” about the world that are in fact created by our feelings. It can leave us trapped in an emotional world of our own making, without realizing that we are the ones who imprisoned ourselves.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can learn to distinguish more precise meanings for “Feeling great” (happy, content, thrilled, relaxed, joyful, hopeful, inspired, prideful, adoring, grateful, blissful . . .) or “Feeling crappy” (angry, aggravated, alarmed, spiteful, grumpy, remorseful, gloomy, mortified, uneasy, dread-ridden, resentful, afraid, envious, woeful, melancholy . . .), your brain will have many more options for predicting, categorizing, and perceiving emotions.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.polygon.com/2019/6/19/18683634/neon-genesis-evangelion-hideaki-anno-depression-shinji-anime-characters-movies&quot;&gt;Neverending Evangelion&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In a statement of intent titled “What Were We Trying To Make Here,” drafted in July 1995 during production of this new series, Anno wrote: “I tried to include everything of myself in Neon Genesis Evangelion — myself, a broken man who could do nothing for four years. A man who ran away for four years, one who was simply not dead. Then one thought. ‘You can’t run away,’ came to me, and I restarted this production. It is a production where my only thought was to burn my feelings into film.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In episode 16, about halfway through production of the series, creatively blocked and unable to go further writing the story for the character of the ambiguous Rei, Anno asked a friend for a suggestion on some reading about mental illness in an attempt to better understand her. The book he picked up startled him. What he found within was a diagnosis of his own problems in life. It was revelatory. Anno had been struggling with depression all these years and hadn’t had the language or understanding for it, or even accepted that it could be a clinical diagnosis. […] Evangelion changed after Anno recognized his own life’s struggle. The show became more tragic, and more apocalyptic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In what remains of a few fan-translated fragments of a Japanese interview conducted by manga author Nariko Enomoto, finishing the series while recognizing his own depression left Anno in a state of deep existential crisis. He reportedly contemplated suicide. Hayao Miyazaki consoled him, a memory that to this day moves Anno to tears. He has stressed over the years how much of himself he put into Evangelion, and how it left him utterly empty.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Anno later declared in the Japanese magazine NewType that “Evangelion is like a puzzle, you know. Any person can see it and give his/her own answer. In other words, we’re offering viewers to think by themselves, so that each person can imagine his/her own world. We will never offer the answers, even in the theatrical version. As for many Evangelion viewers, they may expect us to provide the ‘all-about Eva’ manuals, but there is no such thing. Don’t expect to get answers by someone. Don’t expect to be catered to all the time. We all have to find our own answers.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://twitter.com/QiaochuYuan/status/1132020145851736066&quot;&gt;Why do stories need ending?&lt;/a&gt;, Qiaochu Yuan&lt;/li&gt;
+&lt;li&gt;SSC book reviews:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/&quot;&gt;&lt;em&gt;The Secret of Our Success&lt;/em&gt;&lt;/a&gt; (Highly recommended, too long to summarize here)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2018/11/28/book-review-the-mind-illuminated/&quot;&gt;&lt;em&gt;The Mind Illuminated&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/hnLutdvjC8kPScPAj/integrating-disagreeing-subagents&quot;&gt;Integrating disagreeing subagents&lt;/a&gt;, Kaj Sotala&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.gwern.net/The-Narrowing-Circle&quot;&gt;The Narrowing Circle&lt;/a&gt;, Gwern&lt;/p&gt;
+&lt;p&gt;Globalization and environmentalism give an impression of the “expanding circle” thesis being true, that human ethics expand over time to care about more people, more organisms, more things. But is that really the case? Even the possiblity of giving a definitive answer might be stymied by the following point by C.S. Lewis:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I have met people who exaggerate the differences [between the morality of different cultures], because they have not distinguished between differences of morality and differences of belief about facts. […] surely the reason we do not execute witches is that we do not believe there are such things. If we did […] surely we would all agree that if anyone deserved the death penalty, then these filthy quislings did. There is no difference of moral principle here: the difference is simply about matter of fact.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words, did we stop burning witches because we have a higher moral standard or because our beliefs are better-adjusted to reality?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Japan &lt;a href=&quot;https://www.nature.com/articles/d41586-019-02275-3&quot;&gt;approves human-animal embryo experiments&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Japanese &lt;a href=&quot;https://mymodernmet.com/japanese-rice-paddy-art&quot;&gt;rice paddy art&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-qgreAUpPwM&quot;&gt;Drawing with Fourier series and epicycles&lt;/a&gt;, 3Blue1Brown&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sit back, relax, and enjoy watching swimming Protozoans while listening to Hank Green&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;
+https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+
+&lt;h3 id=&quot;environmenteconomicspolicies&quot;&gt;Environment/economics/policies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;There are more &lt;a href=&quot;https://en.wikipedia.org/wiki/Energy_accidents#Fatalities&quot;&gt;deaths per petawatt hour&lt;/a&gt; from rooftop solar panel installation than those from nuclear power.&lt;/li&gt;
+&lt;li&gt;Greenland ice melt has become extreme in the past decade, &lt;a href=&quot;https://edition.cnn.com/2019/06/14/us/greenland-sudden-ice-melt-wxc/index.html&quot;&gt;losing two gigaton of ice on one day this year&lt;/a&gt;. &lt;a href=&quot;https://nsidc.org/greenland-today/greenland-surface-melt-extent-interactive-chart/&quot;&gt;Plots&lt;/a&gt; from Greenland’s National Snow and Ice Center.&lt;/li&gt;
+&lt;li&gt;White House &lt;a href=&quot;https://www.washingtonpost.com/climate-environment/2019/06/08/white-house-blocked-intelligence-aides-written-testimony-saying-human-caused-climate-change-could-be-possibly-catastrophic/?utm_term=.36fad422e920&quot;&gt;barred an intelligence agency&lt;/a&gt; from a written submission that warns againsts the risk of climate change. One of the critics is an atomic physicist &lt;a href=&quot;https://www.npr.org/2019/03/01/698073442/heres-the-white-houses-top-climate-change-skeptic&quot;&gt;William Happer&lt;/a&gt; who has long been arguing for a benefit of increasing CO2.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/Economics/comments/5g6ese/the_simple_analytics_of_an_nit_ubi_and_eitc/&quot;&gt;The simple analytics of UBI, NIT, and EITC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SSC on &lt;a href=&quot;https://slatestarcodex.com/2019/06/10/book-review-the-prices-are-too-dmn-high/&quot;&gt;Baumol’s cost disease&lt;/a&gt; and a &lt;a href=&quot;https://slatestarcodex.com/2019/06/17/followup-on-the-baumol-effect-thanks-o-baumol/&quot;&gt;follow-up&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;A standard example of the power of default opt-in, organ donation, is &lt;a href=&quot;https://jasoncollins.blog/2015/02/11/charts-that-dont-seem-quite-right-organ-donation-edition/&quot;&gt;misleading&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nybooks.com/articles/2019/05/09/kidnapping-efficient-business/&quot;&gt;Kidnapping: A Very Efficient Business&lt;/a&gt;, NY Review of Books [&lt;a href=&quot;https://sundiatapost.com/2019/04/28/world-of-kidnapping-a-very-efficient-business/&quot;&gt;Without paywall&lt;/a&gt;] [&lt;a href=&quot;https://news.ycombinator.com/item?id=19712238&quot;&gt;ycombinator&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;quantummachine-learning&quot;&gt;Quantum/machine learning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1803.03453&quot;&gt;The Surprising Creativity of Digital Evolution: A Collection of Anecdotes from the Evolutionary Computation and Artificial Life Research Communities&lt;/a&gt; Lehman et al. (Goodhart’s law in evolutionary algorithms)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://openai.com/blog/musenet&quot;&gt;MuseNet&lt;/a&gt;, a neural network that learns musical styles&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nostalgebraist.tumblr.com/post/185326092369/the-transformer-explained&quot;&gt;Transformer architecture explained&lt;/a&gt; (GPT-2, BERT, AlphaStar)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=p1b5aiTrGzY&quot;&gt;Few-Shot Adversarial Learning of Realistic Neural Talking Head Models&lt;/a&gt; (Go to the end of the video to see Marilyn Monroe, Einstein, and Mona Lisa talking.)&lt;/li&gt;
+&lt;li&gt;Ewin Tang’s &lt;a href=&quot;https://ewintang.com/blog/2019/01/28/an-overview-of-quantum-inspired-sampling/&quot;&gt;blog post&lt;/a&gt; on her quantum-inspired machine learning algorithms. &lt;em&gt;Related:&lt;/em&gt; &lt;a href=&quot;https://arxiv.org/abs/1905.10415&quot;&gt;Quantum-inspired algorithms in practice&lt;/a&gt;, Arrazola, Delgado, Bardhan and Lloyd 1905.10415&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.quantamagazine.org/does-nevens-law-describe-quantum-computings-rise-20190618/&quot;&gt;Neven’s Law&lt;/a&gt;: the number of qubits increase doubly exponentially with time. Thus, so they say, quantum supremacy is right around the corner. Compare this to &lt;a href=&quot;https://www.nap.edu/catalog/25196/quantum-computing-progress-and-prospects&quot;&gt;the 2019 consensus report&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Although many people think that there will be a Moore’s law-type scaling for the number of qubits in a system, it is important to remember that Moore’s law resulted from a virtuous cycle, where improved technology generated exponentially increasing revenue, enabling reinvestment in research and development (R&amp;amp;D) and attracting new talent and industries to help innovate and scale the technology to the next level. As with silicon technology, a Moore’s law-type of sustained exponential growth for qubits requires an exponentially growing investment, sustaining this investment will likely require a similar virtuous cycle for quantum computers […]&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;An honest and informative &lt;a href=&quot;https://www.youtube.com/watch?v=cd1MSiH8vGA&quot;&gt;interview about NISQ computers&lt;/a&gt;, Software Engineering Institute, Carnegie Mellon [&lt;a href=&quot;https://resources.sei.cmu.edu/asset_files/Video/2019_500_100_546391.pdf&quot;&gt;transcript&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/how-to-turn-a-quantum-computer-into-the-ultimate-randomness-generator-20190619/&quot;&gt;Certified random numbers&lt;/a&gt; from NISQ machines&lt;/li&gt;
+&lt;li&gt;Sabine Hossenfelder: &lt;a href=&quot;https://www.youtube.com/watch?v=GKnfVA1v5ow&quot;&gt;“[NISQ] is really a term invented to make investors believe that quantum computing will have practical applications in the next decade or so.”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Scott Aaronson on Neven’s law and Sabine: &lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4207&quot;&gt;Quantum of Solace&lt;/a&gt;, &lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4220&quot;&gt;Quantum Sabinacy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chris Monroe: &lt;a href=&quot;https://venturebeat.com/2019/04/21/quantum-computing-is-a-marathon-not-a-sprint/&quot;&gt;Quantum computing is a marathon not a sprint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.pbs.org/wgbh/nova/article/what-makes-great-qubit-diamonds-and-ions-could-hold-answer&quot;&gt;Diamond- and ion-based qubits&lt;/a&gt;, PBS Nova&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/d41586-019-00647-3&quot;&gt;Continuous-variable information processing&lt;/a&gt; with GKP code and exponential SWAP, Nature News and Views&lt;/li&gt;
+&lt;li&gt;Chemistry is &lt;a href=&quot;https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html&quot;&gt;quantum computing’s killer app&lt;/a&gt;, American Chemistry Society&lt;/li&gt;
+&lt;li&gt;Boston Consulting Group &lt;a href=&quot;https://www.bcg.com/publications/2019/quantum-computers-create-value-when.aspx&quot;&gt;analyzes future value that will be created by quantum computers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chris Granade and Sarah Kaiser are writing a &lt;a href=&quot;https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp&quot;&gt;book&lt;/a&gt; on quantum programming with Python and Q#&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/computer-scientists-expand-the-frontier-of-verifiable-knowledge-20190523/&quot;&gt;NEEXP is contained in quantum MIP&lt;/a&gt;, Quanta [&lt;a href=&quot;https://mycqstate.wordpress.com/2019/04/14/randomness-and-interaction-entanglement-ups-the-game/&quot;&gt;Thomas Vidick&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;David Deutsch &lt;a href=&quot;https://www.theringer.com/movies/2019/5/3/18527776/marvel-avengers-endgame-time-travel-david-deutsch-proposition-scott-aaronson&quot;&gt;has no idea&lt;/a&gt; what “Deutsch’s proposition” in &lt;em&gt;Avengers: Endgame&lt;/em&gt; means.&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&quot;https://www.youtube.com/watch?v=hC3ckLqsL5M&quot;&gt;interview&lt;/a&gt; with Tim Maudlin on quantum interpretations&lt;/li&gt;
+&lt;li&gt;Minute Physics explains &lt;a href=&quot;https://www.youtube.com/watch?v=lvTqbM5Dq4Q&quot;&gt;Shor’s algorithm&lt;/a&gt;, with a follow-up &lt;a href=&quot;https://www.youtube.com/watch?v=FRZQ-efABeQ&quot;&gt;example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/quantum-computing-for-english-majors/&quot;&gt;“Ask Peter Shor Anything”&lt;/a&gt; (Math proofs, the now-infamous &lt;a href=&quot;https://spectrum.ieee.org/computing/hardware/the-case-against-quantum-computing&quot;&gt;Dyakonov’s article&lt;/a&gt;, arguments from beauty in physics, anti-science movements)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gizmodo.com/this-is-an-image-of-quantum-entanglement-sort-of-1836506100&quot;&gt;Explaining&lt;/a&gt; the first-ever “image” of quantum entanglement&lt;/li&gt;
+&lt;li&gt;UNSW built &lt;a href=&quot;https://www.sciencealert.com/quantum-scientists-have-built-the-first-silicon-two-qubit-gate-between-atom-qubits&quot;&gt;first silicon-based entangling gate&lt;/a&gt;. (0.8 ns SWAP with ~87% fidelity, so only one gate and not-so-great a fidelity but a starting point nonetheless)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://techsauce.co/tech-and-biz/thailands-future-and-the-second-quantum-revolution/&quot;&gt;อนาคตไทยกับการปฏิวัติทางควอนตัมครั้งที่สอง&lt;/a&gt;, ธิปรัตน์ โชติบุตร&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RichaadEB
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zG325qCKH9o&quot;&gt;Pure Furies ~ Whereabouts of the Heart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ugqjcXjpCts&quot;&gt;Night of Nights&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vgmdb.net/album/88456&quot;&gt;Bloodstained: Ritual of the Night&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=KPtF0yAQ1KY&quot;&gt;Voyage of Promise&lt;/a&gt; [&lt;a href=&quot;https://www.youtube.com/watch?v=kc1ObxtJSJ4&quot;&gt;Gabocarina96&lt;/a&gt;] / &lt;a href=&quot;https://www.youtube.com/watch?v=jBtcs3VE_Ws&quot;&gt;Bibliotheca Ex Machina&lt;/a&gt;, Michiru Yamane&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vg8damWdjR0&quot;&gt;Gears of Fortune&lt;/a&gt; [&lt;a href=&quot;https://www.youtube.com/watch?v=zHgbvnlo-2k&quot;&gt;RichaadEB&lt;/a&gt;], Ryusuke Fujioka&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dIH1nOPvrQ0&quot;&gt;Veil&lt;/a&gt;, Suda Keina {Enen no Shouboutai} [ED]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ADiqimk9TLE&quot;&gt;Rakuen Toshi&lt;/a&gt;, Masayoshi Ooishi {Cop Craft} [OP]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=o94gVQeP6PQ&quot;&gt;Mukanjyo&lt;/a&gt;, Survive Said the Prophet {Vinland Saga} [OP]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=rSQbRYX3Kks&quot;&gt;Torches&lt;/a&gt;, Aimer {Vinland Saga} [ED]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=D94yoe5MmKI&quot;&gt;Lift Will Change&lt;/a&gt; (Life Will Change {Persona 5} X Onegai Muscle {Dumbbell Nan Kilo Moteru?} [OP])&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;touhou&quot;&gt;Touhou&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=gtvy9-PTy6k&quot;&gt;Mizuiro Raindrops&lt;/a&gt; (Beware the Umbrella Left There Forever), STILL HERE (C95), &lt;a href=&quot;http://akatsuki-records.com/drcd0044_46.html&quot;&gt;Akatsuki Records&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toho Jazz Messengers
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=fLJ4a9J3dKg&quot;&gt;girls apartment&lt;/a&gt; (&lt;a href=&quot;(https://vgmdb.net/album/23123)&quot;&gt;C78&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MUVoBFl3ckA&quot;&gt;girls apartment 2&lt;/a&gt; (&lt;a href=&quot;(https://vgmdb.net/album/27564)&quot;&gt;C80&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Kokyo Active NEETs
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oXVK_Od9dyE&quot;&gt;Kid’s festival ~ innocent treasures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=YDMdwPDS1nw&quot;&gt;Suite Hifuu Club&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
+&lt;p&gt;Non-fiction&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Blueprint: How DNA Makes Us Who We Are&lt;/em&gt;, Plomin 2018
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gwern.net/docs/genetics/2016-plomin.pdf&quot;&gt;Top 10 Replicated Findings From Behavioral Genetics&lt;/a&gt;, Plomin, DeFries, Knopik and Neiderhiser 2016&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/mp2014105&quot;&gt;Genetics and intelligence differences: five special findings&lt;/a&gt;, Plomin and Deary 2014&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://infoproc.blogspot.com/&quot;&gt;Steve Hsu&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/slatestarcodex/comments/4sp6sw/metaanalysis_of_the_heritability_of_human_traits/d5b1abn/&quot;&gt;Gwern&lt;/a&gt; have been saying for years that &lt;em&gt;the blank slate is broken&lt;/em&gt;. Unfortunately, &lt;a href=&quot;https://www.goodreads.com/review/show/1061022300&quot;&gt;no one has done a good job&lt;/a&gt; of summarizing the recent advances in the genetic origins of behavioral traits for the general public. Not until now.&lt;/p&gt;
+&lt;p&gt;The first part of the book covers robust classic findings from decades of adoption and twin studies, &lt;!--(such as Colorado Adoption project (n = 250 + 250 controls) and Twin Early Development Study (n = 16000))--&gt; namely the counterintuitive &lt;a href=&quot;https://www.psychologytoday.com/gb/blog/the-scientific-fundamentalist/200809/the-50-0-50-rule-why-parenting-has-virtually-no-effect&quot;&gt;50-0-50 rule&lt;/a&gt;: parenting and schooling have virtually no effect on childrens, while the rest of the contribution comes equally from genetics and “unshared environment” which can be &lt;a href=&quot;https://slatestarcodex.com/2016/03/16/non-shared-environment-doesnt-just-mean-schools-and-peers/&quot;&gt;anything including measurement errors&lt;/a&gt; &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Very roughly speaking, any phenotype &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; has two contributions: genetic &lt;span class=&quot;math&quot;&gt;\(g\)&lt;/span&gt; and environmental &lt;span class=&quot;math&quot;&gt;\(e\)&lt;/span&gt;. So the variance is &lt;span class=&quot;math&quot;&gt;\[ \mathrm{Var}(p) = \mathrm{Var}(g) + \mathrm{Var}(e) + 2\mathrm{Cov}(g,e) \]&lt;/span&gt; Heritability (“in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Heritability#Definition&quot;&gt;broad sense&lt;/a&gt;”) is defined to be &lt;span class=&quot;math&quot;&gt;\(\mathrm{Var}(g)/\mathrm{Var}(p)\)&lt;/span&gt;. Once controlled for the “nature of nurture”, &lt;span class=&quot;math&quot;&gt;\(\mathrm{Cov}(g,e) = 0\)&lt;/span&gt;, the effect of nurture often disappears.&lt;/p&gt;
+&lt;p&gt;Divorce&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first genetic study of divorce caused a stir. In a study of 1,500 pairs of adult twins, concordance for divorce was much greater for identical than for fraternal twins (55 per cent versus 16 per cent) […] It has long been known that the offspring of divorced parents are more likely to get divorced themselves. Possible environmental explanations leap to mind, for example, living through their parents’ divorce causes children to have relationship problems, or because they do not have good models for a stable relationship. However, a recent adoption study in Sweden showed that the link between divorce in parents and divorce in their children is forged genetically, not environmentally. For a sample of 20,000 adopted individuals, the likelihood of divorce was greater if their biological mother, who did not rear the individual, had later in life become divorced than if the adoptive parents who reared them had become divorced.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The heritability of divorce is about 40 per cent across studies. This is a long way from 100 per cent, meaning that non-genetic factors are also important. However, the major systematic factor affecting divorce is genetics. In contrast, no environmental predictors of divorce have been identified in research after controlling for genetics.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Watching TV&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Children’s television viewing is a quintessential measure of the environment, which, by the 1980s, had been used in more than 2,000 studies exploring its effect on children’s development. None of these studies questioned the assumption that how much television children watched was a measure of the environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;most parents back then put no restrictions on the amount of time their children watched television. How much children watched television was up to the children, which leaves the door open for genetic differences between children to shape how much television they watch. […] Non-adoptive parents and their children were significantly more similar (0.30) in how much television they watched than were adoptive parents and their adopted children (0.15). […] The most astonishing result was that birth mothers’ television viewing correlated significantly (0.15) with their adopted-away children’s television viewing, even though these birth mothers had not seen their adopted-away children after the first week of life.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;we can turn the television on or off as we please, but turning it off or leaving it on pleases individuals differently, in part due to genetic factors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Other psychological experiences&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since then, more than 150 papers have looked at environmental measures in genetically sensitive studies. They consistently find substantial genetic influence and the average heritability is still about 25 per cent. What’s new is that these studies have greatly extended the list of environmental measures that show genetic influence. For example, evidence for genetic influence has been found for home environments such as chaotic family environments, for classroom environments such as supportive teachers, peer characteristics such as being bullied, neighbourhood safety, being exposed to drugs, work environments and the quality of one’s marriage.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once you start thinking about how much DNA matters, it is difficult to point to any psychological experiences completely devoid of possible genetic influence. For example, accidents are not always accidental. Some children have more accidents than others; the number of children’s scrapes and bruises shows genetic influence. For adults, automobile accidents are not always accidental either, of course. Automobile crashes are often caused by reckless driving – driving too fast, taking chances or driving under the influence of alcohol and other drugs. Sometimes accidents do just happen, but genetic differences in personality can increase the likelihood of accidents happening. […] The only events free from genetic influence are those over which we have little control, such as the death or illness of relatives and friends.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The author understandably spends a lot of time discussing how the result could be true and how &lt;em&gt;not&lt;/em&gt; to misinterpret it. Most importantly, the measure is statistical, hence only applies at the population, not individual, level, and conditioned on “normal” experience e.g. no neglect, torture etc. More generally, equality of opportunity means more pronounced genetic effects because privilege matters less.&lt;/p&gt;
+&lt;p&gt;Parenting&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;parenting correlates with children’s outcomes for three reasons considered earlier. One reason is that parents and their children are 50 per cent similar genetically. Put crudely, nice parents have nice children because they are all nice genetically. Another reason is that parenting is often a response to, rather than a cause of, children’s genetic propensities. It is awkward to be an affectionate parent to a child who is not a cuddler. Finally, children make their own environments, regardless of their parents. That is, they select, modify and create environments correlated with their genetic propensities. Children who want to do something like play sports or a musical instrument will badger their parents to make it happen. […]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;genetic research describes &lt;em&gt;what is&lt;/em&gt;, not &lt;em&gt;what could be&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The second half of the book goes into the genetic basis of psychological behaviors and how, with increasingly low cost of DNA sequencing, &lt;a href=&quot;https://en.wikipedia.org/wiki/Genome-wide_association_study&quot;&gt;GWAS&lt;/a&gt; has become a powerful tool to solve the &lt;a href=&quot;https://en.wikipedia.org/wiki/Missing_heritability_problem&quot;&gt;missing heritability problem&lt;/a&gt;: if behaviors are 50% genetic, where are the genes responsible for them? &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygenic_score&quot;&gt;Polygenic scores&lt;/a&gt; can now predict 7% of variance of the susceptibility for Schizophrenia, 4% for major depressive disorder, 10% for bipolar disorder, 5% of Alzeimer’s disease &lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, and &amp;gt;10% for years of education (already &amp;gt;15% &lt;a href=&quot;https://twitter.com/kph3k/status/1009875245900156928&quot;&gt;last year&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fiction&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Old Man and the Sea&lt;/em&gt;, Hemmingway 1952&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/manga/98270/Fire_Punch&quot;&gt;Fire Punch&lt;/a&gt; Vol. 1-8 (completed) and &lt;a href=&quot;https://myanimelist.net/manga/116778/Chainsaw_Man&quot;&gt;Chainsaw Man&lt;/a&gt;, Fujimoto Tatsuki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kizumonogatari: &lt;a href=&quot;https://myanimelist.net/anime/9260/Kizumonogatari_I__Tekketsu-hen&quot;&gt;Tekketsu-hen&lt;/a&gt;, &lt;a href=&quot;https://myanimelist.net/anime/31757/Kizumonogatari_II__Nekketsu-hen&quot;&gt;Nekketsu-hen&lt;/a&gt;, &lt;a href=&quot;https://myanimelist.net/anime/31758/Kizumonogatari_III__Reiketsu-hen&quot;&gt;Reiketsu-hen&lt;/a&gt;, Shaft {Nisio Isin} [Light novel] 2016, 2017 &lt;em&gt;(Rewatch)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/10357/Jinrui_wa_Suitai_Shimashita&quot;&gt;Jinrui wa Suitai Shimashita&lt;/a&gt; (12 Episodes), AIC A.S.T.A. {Tanaka Romeo} [Light novel] 2012 Notable episode: 8 (My headcanon is that the fairies are Robin Hanson’s &lt;a href=&quot;https://ageofem.com/&quot;&gt;EMs&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/35557/Houseki_no_Kuni&quot;&gt;Houseki no Kuni&lt;/a&gt; (12 Episodes), Orange {Ichikawa Haruko} [Manga] 2017 (Better than the manga)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen&quot;&gt;Kaguya-sama wa Kokurasetai&lt;/a&gt; (12 Episodes), A-1 Pictures {Akasaka Aka} [Manga] 2019&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;video-games&quot;&gt;Video games&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://vgmdb.net/album/88456&quot;&gt;Bloodstained: Ritual of the Night&lt;/a&gt; (ROTN), a spiritual successor of &lt;a href=&quot;https://en.wikipedia.org/wiki/Castlevania:_Symphony_of_the_Night&quot;&gt;one of the best games of all time&lt;/a&gt; (SOTN)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pros:&lt;/em&gt; What sold me was the musics by Michiru Yamane, among other composers. The game itself is fun with plenty of replay value while not being as easy as SOTN e.g. the first boss in hard mode is Nintendo hard. There are varieties of movement options and intentional glitches for speedrunning and &lt;a href=&quot;https://www.youtube.com/watch?v=2x_I0_Og_iM&quot;&gt;sequence-breaking&lt;/a&gt;. &lt;em&gt;Cons:&lt;/em&gt; The graphic looks toy-ish and “cheap”. I wish they take advantage of different camera angles more. &lt;em&gt;Not really a con but a warning to keyboard users:&lt;/em&gt; &lt;code&gt;Aim&lt;/code&gt; doesn’t seem to work if assigned to a keyboard button. A touchpad button is fine but clunky and downright impractical mid-combat.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Notable exceptions are religious and political beliefs for which shared environment explains 20% of the variance.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;Polygenic scores in these cases are more powerful predictors than traditional ones, namely whether you have a family member with the disorder. Most traits are highly &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygene&quot;&gt;polygenic&lt;/a&gt;, with an exception of Alzheimer’s disease which is mostly due to a single gene called &lt;a href=&quot;https://en.wikipedia.org/wiki/Apolipoprotein_E#Alzheimers_disease&quot;&gt;&lt;em&gt;APOE&lt;/em&gt;&lt;/a&gt;.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Fourier analysis of linear operators I [Draft]</title>
@@ -296,216 +531,6 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
 &lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;Multiplicative approximation is much stronger than additive one; if &lt;span class=&quot;math&quot;&gt;\(p_x = 0\)&lt;/span&gt;, then a multiplicative estimate &lt;span class=&quot;math&quot;&gt;\(q_x\)&lt;/span&gt; must exactly equal &lt;span class=&quot;math&quot;&gt;\(p_x\)&lt;/span&gt;.&lt;a href=&quot;#fnref3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;The permanent is like the determinant but without the minus signs.&lt;a href=&quot;#fnref4&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn5&quot;&gt;&lt;p&gt;Multiplicative approximation is much stronger than additive one; if &lt;span class=&quot;math&quot;&gt;\(p_x = 0\)&lt;/span&gt;, then a multiplicative estimate &lt;span class=&quot;math&quot;&gt;\(q_x\)&lt;/span&gt; must exactly equal &lt;span class=&quot;math&quot;&gt;\(p_x\)&lt;/span&gt;.&lt;a href=&quot;#fnref5&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>May-June 2019 Archive</title>
-   <link href="/may-2019-log.html"/>
-   <updated>2019-07-16T00:00:00+00:00</updated>
-   <id>h/may-2019-log</id>
-   <content type="html">&lt;p&gt;This is an archive of what I found useful, interesting, or simply enjoyable from May, June and the first week of July 2019.&lt;/p&gt;
-&lt;div id=&quot;toc&quot;&gt;
-
-&lt;/div&gt;
-&lt;p&gt;My research reading in the past couple of months has been a bit nebulous, so I want to leave that out for now.&lt;/p&gt;
-&lt;!-- # Research
-
-Research is a bit nebulous these months, with so much that I want to talk about but so little that I can comfortably do.
-
-- [Efficient verification of bosonic quantum channels via benchmarking](https://arxiv.org/abs/1904.10682), Wu and Sanders 1904.10682
-    - [Reliable quantum certification of photonic state preparations](https://arxiv.org/abs/1407.4817), Aolita, Gogolin, Kliesch and Eisert 2015
-        - [Graphical calculus for Gaussian pure states](https://arxiv.org/abs/1007.0725), Menicucci, Flammia and van Loock 2011
-    - [Fidelity witnesses for fermionic quantum simulations](http://arxiv.org/abs/1703.03152), Gluza , Kliesch, Eisert and Aolita 2018
-    - [Certifying quantumness: Benchmarks for the optimal processing of generalized coherent and squeezed states](http://arxiv.org/abs/1407.4133), Yang, Chiribella and Adesso 2015
-- [Phase space simulation method for quantum computation with magic states on qubits](https://scirate.com/arxiv/1905.05374), Raussendorf et al. 1905.05374 [[Scirate discussion](https://scirate.com/arxiv/1905.05374#1342)]   
-- [All fermionic non-Gaussian states are magic states for matchgate computations](https://scirate.com/arxiv/1905.08584), Hebenstreit et al. 1905.08584 --&gt;
-
-&lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.bangkokpost.com/lifestyle/social-and-lifestyle/314880/a-lifelong-love-of-learning&quot;&gt;Prasert Na Nagara&lt;/a&gt; (ประเสริฐ ณ นคร) 1919 - 2019&lt;/li&gt;
-&lt;li&gt;Mitchell Feigenbaum, a pioneer of chaos theory &lt;a href=&quot;https://www.rockefeller.edu/news/26289-mitchell-feigenbaum-physicist-pioneered-chaos-theory-died/&quot;&gt;passed away&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.insidehighered.com/news/2019/05/03/icelands-universities-worry-about-small-numbers-male-students-they-attract&quot;&gt;Males are underrepresented in Iceland higher education&lt;/a&gt; because fishing career is more attractive. “in 2017 Icelandic men still earned 15.5 percent more per hour than women.”&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Kevin Simler has an interactive blog post on &lt;a href=&quot;https://meltingasphalt.com/interactive/going-critical/&quot;&gt;network criticality&lt;/a&gt; that nicely illustrates concepts like herd immunity and transmission of knowledge. One point that is obvious once heard but I’ve never internalized before:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;there are ideas and cultural practices that can take root and spread in a city that simply can’t spread out in the countryside. (Mathematically can’t.) These are the very same ideas and the very same kinds of people. It’s not that rural folks are e.g. “small-minded”; when exposed to one of these ideas, they’re exactly as likely to adopt it as someone in the city. Rather, it’s that the idea itself can’t go viral in the countryside because there aren’t as many connections along which it can spread.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://hbr.org/2019/03/the-feedback-fallacy&quot;&gt;The feedback fallacy&lt;/a&gt;, HBR&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Excellence is also not the opposite of failure. […] Study disease and you will learn a lot about disease and precious little about health. Eradicating depression will get you no closer to joy. Divorce is mute on the topic of happy marriage. Exit interviews with employees who leave tell you nothing about why others stay. If you study failure, you’ll learn a lot about failure but nothing about how to achieve excellence.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;A candidate gene for depression is another house of cards. [&lt;a href=&quot;https://www.theatlantic.com/science/archive/2019/05/waste-1000-studies/589684/&quot;&gt;Atlantic&lt;/a&gt;] [&lt;a href=&quot;https://slatestarcodex.com/2019/05/07/5-httlpr-a-pointed-review/&quot;&gt;SSC&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;First time the world has &lt;a href=&quot;https://ourworldindata.org/population-aged-65-outnumber-children&quot;&gt;more people over 64 than children younger than 5&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/cf19b956-60a2-11e9-b285-3acd5d43599e&quot;&gt;Who is using your face?&lt;/a&gt;, FT [&lt;a href=&quot;https://old.reddit.com/r/EmergingRisks/comments/bewxkp/whos_using_your_face_the_ugly_truth_about_facial/&quot;&gt;Without paywall&lt;/a&gt;] [&lt;a href=&quot;https://www.nytimes.com/2019/07/13/technology/databases-faces-facial-recognition-technology.html&quot;&gt;NYTimes&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;In the low-trust society, the Chinese welcome &lt;a href=&quot;https://slate.com/technology/2019/05/china-mobile-5g-facial-recognition-ad.html&quot;&gt;facial recognition technology&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The periodic system as &lt;a href=&quot;https://www.mpg.de/13566273/periodic-system-elements&quot;&gt;ordered hypergraphs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Lanthanum hydride, a compound rich in hydrogen exhibits &lt;a href=&quot;https://www.nature.com/articles/d41586-019-01583-y&quot;&gt;superconductivity at 250 K&lt;/a&gt; under more than a million times Earth’s atmospheric pressure. In general, the lower the atomic mass, the higher the critical temperature.&lt;/li&gt;
-&lt;li&gt;The &lt;a href=&quot;https://english.stackexchange.com/questions/448865/is-the-etymology-of-salary-a-myth&quot;&gt;myth of the etymology of salary&lt;/a&gt; from salarium, “salt money”&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://castel.dev/post/lecture-notes-1/&quot;&gt;How I’m able to take notes in mathematics lectures using LaTeX and Vim&lt;/a&gt;, Gilles Castel&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/notable/notable&quot;&gt;Notable&lt;/a&gt;, a markdown-based, Wikipedia-style note-taking app, currently with &lt;a href=&quot;https://github.com/notable/notable/issues&quot;&gt;numerous bugs&lt;/a&gt; and inconveniences (e.g. can’t define global LaTeX macros, single-letter LaTeX codes don’t render)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/47527140&quot;&gt;Collaboratory&lt;/a&gt; let you share Jupyter notebooks with collaborators.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://praxis.fortelabs.co/how-emotions-are-made/&quot;&gt;How Emotions Are Made: The Theory of Constructed Emotion&lt;/a&gt;, Tiago Forte&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When you experience an emotion without knowing the precise cause, you are more likely to treat that emotion as information about the &lt;em&gt;world&lt;/em&gt;, rather than your &lt;em&gt;experience&lt;/em&gt; of the world. This is known as &lt;em&gt;affective realism&lt;/em&gt;. Affective realism causes us to experience supposed “facts” about the world that are in fact created by our feelings. It can leave us trapped in an emotional world of our own making, without realizing that we are the ones who imprisoned ourselves.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If you can learn to distinguish more precise meanings for “Feeling great” (happy, content, thrilled, relaxed, joyful, hopeful, inspired, prideful, adoring, grateful, blissful . . .) or “Feeling crappy” (angry, aggravated, alarmed, spiteful, grumpy, remorseful, gloomy, mortified, uneasy, dread-ridden, resentful, afraid, envious, woeful, melancholy . . .), your brain will have many more options for predicting, categorizing, and perceiving emotions.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.polygon.com/2019/6/19/18683634/neon-genesis-evangelion-hideaki-anno-depression-shinji-anime-characters-movies&quot;&gt;Neverending Evangelion&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In a statement of intent titled “What Were We Trying To Make Here,” drafted in July 1995 during production of this new series, Anno wrote: “I tried to include everything of myself in Neon Genesis Evangelion — myself, a broken man who could do nothing for four years. A man who ran away for four years, one who was simply not dead. Then one thought. ‘You can’t run away,’ came to me, and I restarted this production. It is a production where my only thought was to burn my feelings into film.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In episode 16, about halfway through production of the series, creatively blocked and unable to go further writing the story for the character of the ambiguous Rei, Anno asked a friend for a suggestion on some reading about mental illness in an attempt to better understand her. The book he picked up startled him. What he found within was a diagnosis of his own problems in life. It was revelatory. Anno had been struggling with depression all these years and hadn’t had the language or understanding for it, or even accepted that it could be a clinical diagnosis. […] Evangelion changed after Anno recognized his own life’s struggle. The show became more tragic, and more apocalyptic.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In what remains of a few fan-translated fragments of a Japanese interview conducted by manga author Nariko Enomoto, finishing the series while recognizing his own depression left Anno in a state of deep existential crisis. He reportedly contemplated suicide. Hayao Miyazaki consoled him, a memory that to this day moves Anno to tears. He has stressed over the years how much of himself he put into Evangelion, and how it left him utterly empty.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Anno later declared in the Japanese magazine NewType that “Evangelion is like a puzzle, you know. Any person can see it and give his/her own answer. In other words, we’re offering viewers to think by themselves, so that each person can imagine his/her own world. We will never offer the answers, even in the theatrical version. As for many Evangelion viewers, they may expect us to provide the ‘all-about Eva’ manuals, but there is no such thing. Don’t expect to get answers by someone. Don’t expect to be catered to all the time. We all have to find our own answers.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://twitter.com/QiaochuYuan/status/1132020145851736066&quot;&gt;Why do stories need ending?&lt;/a&gt;, Qiaochu Yuan&lt;/li&gt;
-&lt;li&gt;SSC book reviews:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/&quot;&gt;&lt;em&gt;The Secret of Our Success&lt;/em&gt;&lt;/a&gt; (Highly recommended, too long to summarize here)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://slatestarcodex.com/2018/11/28/book-review-the-mind-illuminated/&quot;&gt;&lt;em&gt;The Mind Illuminated&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/hnLutdvjC8kPScPAj/integrating-disagreeing-subagents&quot;&gt;Integrating disagreeing subagents&lt;/a&gt;, Kaj Sotala&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.gwern.net/The-Narrowing-Circle&quot;&gt;The Narrowing Circle&lt;/a&gt;, Gwern&lt;/p&gt;
-&lt;p&gt;Globalization and environmentalism give an impression of the “expanding circle” thesis being true, that human ethics expand over time to care about more people, more organisms, more things. But is that really the case? Even the possiblity of giving a definitive answer might be stymied by the following point by C.S. Lewis:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I have met people who exaggerate the differences [between the morality of different cultures], because they have not distinguished between differences of morality and differences of belief about facts. […] surely the reason we do not execute witches is that we do not believe there are such things. If we did […] surely we would all agree that if anyone deserved the death penalty, then these filthy quislings did. There is no difference of moral principle here: the difference is simply about matter of fact.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In other words, did we stop burning witches because we have a higher moral standard or because our beliefs are better-adjusted to reality?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Japanese &lt;a href=&quot;https://mymodernmet.com/japanese-rice-paddy-art&quot;&gt;rice paddy art&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-qgreAUpPwM&quot;&gt;Drawing with Fourier series and epicycles&lt;/a&gt;, 3Blue1Brown&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sit back, relax, and enjoy watching swimming Protozoans while listening to Hank Green&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;center&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;
-https://www.youtube.com/embed/PZoaKzEXzi8?controls=0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/center&gt;
-
-&lt;h3 id=&quot;environmenteconomicspolicies&quot;&gt;Environment/economics/policies&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;There are more &lt;a href=&quot;https://en.wikipedia.org/wiki/Energy_accidents#Fatalities&quot;&gt;deaths per petawatt hour&lt;/a&gt; from rooftop solar panel installation than those from nuclear power.&lt;/li&gt;
-&lt;li&gt;Greenland ice melt has become extreme in the past decade, &lt;a href=&quot;https://edition.cnn.com/2019/06/14/us/greenland-sudden-ice-melt-wxc/index.html&quot;&gt;losing two gigaton of ice on one day this year&lt;/a&gt;. &lt;a href=&quot;https://nsidc.org/greenland-today/greenland-surface-melt-extent-interactive-chart/&quot;&gt;Plots&lt;/a&gt; from Greenland’s National Snow and Ice Center.&lt;/li&gt;
-&lt;li&gt;White House &lt;a href=&quot;https://www.washingtonpost.com/climate-environment/2019/06/08/white-house-blocked-intelligence-aides-written-testimony-saying-human-caused-climate-change-could-be-possibly-catastrophic/?utm_term=.36fad422e920&quot;&gt;barred an intelligence agency&lt;/a&gt; from a written submission that warns againsts the risk of climate change. One of the critics is an atomic physicist &lt;a href=&quot;https://www.npr.org/2019/03/01/698073442/heres-the-white-houses-top-climate-change-skeptic&quot;&gt;William Happer&lt;/a&gt; who has long been arguing for a benefit of increasing CO2.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/Economics/comments/5g6ese/the_simple_analytics_of_an_nit_ubi_and_eitc/&quot;&gt;The simple analytics of UBI, NIT, and EITC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SSC on &lt;a href=&quot;https://slatestarcodex.com/2019/06/10/book-review-the-prices-are-too-dmn-high/&quot;&gt;Baumol’s cost disease&lt;/a&gt; and a &lt;a href=&quot;https://slatestarcodex.com/2019/06/17/followup-on-the-baumol-effect-thanks-o-baumol/&quot;&gt;follow-up&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;A standard example of the power of default opt-in, organ donation, is &lt;a href=&quot;https://jasoncollins.blog/2015/02/11/charts-that-dont-seem-quite-right-organ-donation-edition/&quot;&gt;misleading&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.nybooks.com/articles/2019/05/09/kidnapping-efficient-business/&quot;&gt;Kidnapping: A Very Efficient Business&lt;/a&gt;, NY Review of Books [&lt;a href=&quot;https://sundiatapost.com/2019/04/28/world-of-kidnapping-a-very-efficient-business/&quot;&gt;Without paywall&lt;/a&gt;] [&lt;a href=&quot;https://news.ycombinator.com/item?id=19712238&quot;&gt;ycombinator&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;quantummachine-learning&quot;&gt;Quantum/machine learning&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1803.03453&quot;&gt;The Surprising Creativity of Digital Evolution: A Collection of Anecdotes from the Evolutionary Computation and Artificial Life Research Communities&lt;/a&gt; Lehman et al. (Goodhart’s law in evolutionary algorithms)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://openai.com/blog/musenet&quot;&gt;MuseNet&lt;/a&gt;, a neural network that learns musical styles&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nostalgebraist.tumblr.com/post/185326092369/the-transformer-explained&quot;&gt;Transformer architecture explained&lt;/a&gt; (GPT-2, BERT, AlphaStar)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=p1b5aiTrGzY&quot;&gt;Few-Shot Adversarial Learning of Realistic Neural Talking Head Models&lt;/a&gt; (Go to the end of the video to see Marilyn Monroe, Einstein, and Mona Lisa talking.)&lt;/li&gt;
-&lt;li&gt;Ewin Tang’s &lt;a href=&quot;https://ewintang.com/blog/2019/01/28/an-overview-of-quantum-inspired-sampling/&quot;&gt;blog post&lt;/a&gt; on her quantum-inspired machine learning algorithms. &lt;em&gt;Related:&lt;/em&gt; &lt;a href=&quot;https://arxiv.org/abs/1905.10415&quot;&gt;Quantum-inspired algorithms in practice&lt;/a&gt;, Arrazola, Delgado, Bardhan and Lloyd 1905.10415&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.quantamagazine.org/does-nevens-law-describe-quantum-computings-rise-20190618/&quot;&gt;Neven’s Law&lt;/a&gt;: the number of qubits increase doubly exponentially with time. Thus, so they say, quantum supremacy is right around the corner. Compare this to &lt;a href=&quot;https://www.nap.edu/catalog/25196/quantum-computing-progress-and-prospects&quot;&gt;the 2019 consensus report&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Although many people think that there will be a Moore’s law-type scaling for the number of qubits in a system, it is important to remember that Moore’s law resulted from a virtuous cycle, where improved technology generated exponentially increasing revenue, enabling reinvestment in research and development (R&amp;amp;D) and attracting new talent and industries to help innovate and scale the technology to the next level. As with silicon technology, a Moore’s law-type of sustained exponential growth for qubits requires an exponentially growing investment, sustaining this investment will likely require a similar virtuous cycle for quantum computers […]&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;An honest and informative &lt;a href=&quot;https://www.youtube.com/watch?v=cd1MSiH8vGA&quot;&gt;interview about NISQ computers&lt;/a&gt;, Software Engineering Institute, Carnegie Mellon [&lt;a href=&quot;https://resources.sei.cmu.edu/asset_files/Video/2019_500_100_546391.pdf&quot;&gt;transcript&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/how-to-turn-a-quantum-computer-into-the-ultimate-randomness-generator-20190619/&quot;&gt;Certified random numbers&lt;/a&gt; from NISQ machines&lt;/li&gt;
-&lt;li&gt;Sabine Hossenfelder: &lt;a href=&quot;https://www.youtube.com/watch?v=GKnfVA1v5ow&quot;&gt;“[NISQ] is really a term invented to make investors believe that quantum computing will have practical applications in the next decade or so.”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Scott Aaronson on Neven’s law and Sabine: &lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4207&quot;&gt;Quantum of Solace&lt;/a&gt;, &lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4220&quot;&gt;Quantum Sabinacy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Chris Monroe: &lt;a href=&quot;https://venturebeat.com/2019/04/21/quantum-computing-is-a-marathon-not-a-sprint/&quot;&gt;Quantum computing is a marathon not a sprint&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.pbs.org/wgbh/nova/article/what-makes-great-qubit-diamonds-and-ions-could-hold-answer&quot;&gt;Diamond- and ion-based qubits&lt;/a&gt;, PBS Nova&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/d41586-019-00647-3&quot;&gt;Continuous-variable information processing&lt;/a&gt; with GKP code and exponential SWAP, Nature News and Views&lt;/li&gt;
-&lt;li&gt;Chemistry is &lt;a href=&quot;https://cen.acs.org/articles/95/i43/Chemistry-quantum-computings-killer-app.html&quot;&gt;quantum computing’s killer app&lt;/a&gt;, American Chemistry Society&lt;/li&gt;
-&lt;li&gt;Boston Consulting Group &lt;a href=&quot;https://www.bcg.com/publications/2019/quantum-computers-create-value-when.aspx&quot;&gt;analyzes future value that will be created by quantum computers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Chris Granade and Sarah Kaiser are writing a &lt;a href=&quot;https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp&quot;&gt;book&lt;/a&gt; on quantum programming with Python and Q#&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quantamagazine.org/computer-scientists-expand-the-frontier-of-verifiable-knowledge-20190523/&quot;&gt;NEEXP is contained in quantum MIP&lt;/a&gt;, Quanta [&lt;a href=&quot;https://mycqstate.wordpress.com/2019/04/14/randomness-and-interaction-entanglement-ups-the-game/&quot;&gt;Thomas Vidick&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;David Deutsch &lt;a href=&quot;https://www.theringer.com/movies/2019/5/3/18527776/marvel-avengers-endgame-time-travel-david-deutsch-proposition-scott-aaronson&quot;&gt;has no idea&lt;/a&gt; what “Deutsch’s proposition” in &lt;em&gt;Avengers: Endgame&lt;/em&gt; means.&lt;/li&gt;
-&lt;li&gt;An &lt;a href=&quot;https://www.youtube.com/watch?v=hC3ckLqsL5M&quot;&gt;interview&lt;/a&gt; with Tim Maudlin on quantum interpretations&lt;/li&gt;
-&lt;li&gt;Minute Physics explains &lt;a href=&quot;https://www.youtube.com/watch?v=lvTqbM5Dq4Q&quot;&gt;Shor’s algorithm&lt;/a&gt;, with a follow-up &lt;a href=&quot;https://www.youtube.com/watch?v=FRZQ-efABeQ&quot;&gt;example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blogs.scientificamerican.com/cross-check/quantum-computing-for-english-majors/&quot;&gt;“Ask Peter Shor Anything”&lt;/a&gt; (Math proofs, the now-infamous &lt;a href=&quot;https://spectrum.ieee.org/computing/hardware/the-case-against-quantum-computing&quot;&gt;Dyakonov’s article&lt;/a&gt;, arguments from beauty in physics, anti-science movements)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;RichaadEB
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zG325qCKH9o&quot;&gt;Pure Furies ~ Whereabouts of the Heart&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ugqjcXjpCts&quot;&gt;Night of Nights&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vgmdb.net/album/88456&quot;&gt;Bloodstained: Ritual of the Night&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=KPtF0yAQ1KY&quot;&gt;Voyage of Promise&lt;/a&gt; [&lt;a href=&quot;https://www.youtube.com/watch?v=kc1ObxtJSJ4&quot;&gt;Gabocarina96&lt;/a&gt;] / &lt;a href=&quot;https://www.youtube.com/watch?v=jBtcs3VE_Ws&quot;&gt;Bibliotheca Ex Machina&lt;/a&gt;, Michiru Yamane&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vg8damWdjR0&quot;&gt;Gears of Fortune&lt;/a&gt; [&lt;a href=&quot;https://www.youtube.com/watch?v=zHgbvnlo-2k&quot;&gt;RichaadEB&lt;/a&gt;], Ryusuke Fujioka&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dIH1nOPvrQ0&quot;&gt;Veil&lt;/a&gt;, Suda Keina {Enen no Shouboutai} [ED]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
-&lt;p&gt;Non-fiction&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Blueprint: How DNA Makes Us Who We Are&lt;/em&gt;, Plomin 2018
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gwern.net/docs/genetics/2016-plomin.pdf&quot;&gt;Top 10 Replicated Findings From Behavioral Genetics&lt;/a&gt;, Plomin, DeFries, Knopik and Neiderhiser 2016&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/mp2014105&quot;&gt;Genetics and intelligence differences: five special findings&lt;/a&gt;, Plomin and Deary 2014&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://infoproc.blogspot.com/&quot;&gt;Steve Hsu&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/slatestarcodex/comments/4sp6sw/metaanalysis_of_the_heritability_of_human_traits/d5b1abn/&quot;&gt;Gwern&lt;/a&gt; have been saying for years that &lt;em&gt;the blank slate is broken&lt;/em&gt;. Unfortunately, &lt;a href=&quot;https://www.goodreads.com/review/show/1061022300&quot;&gt;no one has done a good job&lt;/a&gt; of summarizing the recent advances in the genetic origins of behavioral traits for the general public. Not until now.&lt;/p&gt;
-&lt;p&gt;The first part of the book covers robust classic findings from decades of adoption and twin studies, &lt;!--(such as Colorado Adoption project (n = 250 + 250 controls) and Twin Early Development Study (n = 16000))--&gt; namely the counterintuitive &lt;a href=&quot;https://www.psychologytoday.com/gb/blog/the-scientific-fundamentalist/200809/the-50-0-50-rule-why-parenting-has-virtually-no-effect&quot;&gt;50-0-50 rule&lt;/a&gt;: parenting and schooling have virtually no effect on childrens, while the rest of the contribution comes equally from genetics and “unshared environment” which can be &lt;a href=&quot;https://slatestarcodex.com/2016/03/16/non-shared-environment-doesnt-just-mean-schools-and-peers/&quot;&gt;anything including measurement errors&lt;/a&gt; &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Very roughly speaking, any phenotype &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; has two contributions: genetic &lt;span class=&quot;math&quot;&gt;\(g\)&lt;/span&gt; and environmental &lt;span class=&quot;math&quot;&gt;\(e\)&lt;/span&gt;. So the variance is &lt;span class=&quot;math&quot;&gt;\[ \mathrm{Var}(p) = \mathrm{Var}(g) + \mathrm{Var}(e) + 2\mathrm{Cov}(g,e) \]&lt;/span&gt; Heritability (“in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Heritability#Definition&quot;&gt;broad sense&lt;/a&gt;”) is defined to be &lt;span class=&quot;math&quot;&gt;\(\mathrm{Var}(g)/\mathrm{Var}(p)\)&lt;/span&gt;. Once controlled for the “nature of nurture”, &lt;span class=&quot;math&quot;&gt;\(\mathrm{Cov}(g,e) = 0\)&lt;/span&gt;, the effect of nurture often disappears.&lt;/p&gt;
-&lt;p&gt;Divorce&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The first genetic study of divorce caused a stir. In a study of 1,500 pairs of adult twins, concordance for divorce was much greater for identical than for fraternal twins (55 per cent versus 16 per cent) […] It has long been known that the offspring of divorced parents are more likely to get divorced themselves. Possible environmental explanations leap to mind, for example, living through their parents’ divorce causes children to have relationship problems, or because they do not have good models for a stable relationship. However, a recent adoption study in Sweden showed that the link between divorce in parents and divorce in their children is forged genetically, not environmentally. For a sample of 20,000 adopted individuals, the likelihood of divorce was greater if their biological mother, who did not rear the individual, had later in life become divorced than if the adoptive parents who reared them had become divorced.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The heritability of divorce is about 40 per cent across studies. This is a long way from 100 per cent, meaning that non-genetic factors are also important. However, the major systematic factor affecting divorce is genetics. In contrast, no environmental predictors of divorce have been identified in research after controlling for genetics.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Watching TV&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Children’s television viewing is a quintessential measure of the environment, which, by the 1980s, had been used in more than 2,000 studies exploring its effect on children’s development. None of these studies questioned the assumption that how much television children watched was a measure of the environment.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;most parents back then put no restrictions on the amount of time their children watched television. How much children watched television was up to the children, which leaves the door open for genetic differences between children to shape how much television they watch. […] Non-adoptive parents and their children were significantly more similar (0.30) in how much television they watched than were adoptive parents and their adopted children (0.15). […] The most astonishing result was that birth mothers’ television viewing correlated significantly (0.15) with their adopted-away children’s television viewing, even though these birth mothers had not seen their adopted-away children after the first week of life.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;we can turn the television on or off as we please, but turning it off or leaving it on pleases individuals differently, in part due to genetic factors.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Other psychological experiences&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Since then, more than 150 papers have looked at environmental measures in genetically sensitive studies. They consistently find substantial genetic influence and the average heritability is still about 25 per cent. What’s new is that these studies have greatly extended the list of environmental measures that show genetic influence. For example, evidence for genetic influence has been found for home environments such as chaotic family environments, for classroom environments such as supportive teachers, peer characteristics such as being bullied, neighbourhood safety, being exposed to drugs, work environments and the quality of one’s marriage.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Once you start thinking about how much DNA matters, it is difficult to point to any psychological experiences completely devoid of possible genetic influence. For example, accidents are not always accidental. Some children have more accidents than others; the number of children’s scrapes and bruises shows genetic influence. For adults, automobile accidents are not always accidental either, of course. Automobile crashes are often caused by reckless driving – driving too fast, taking chances or driving under the influence of alcohol and other drugs. Sometimes accidents do just happen, but genetic differences in personality can increase the likelihood of accidents happening. […] The only events free from genetic influence are those over which we have little control, such as the death or illness of relatives and friends.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author understandably spends a lot of time discussing how the result could be true and how &lt;em&gt;not&lt;/em&gt; to misinterpret it. Most importantly, the measure is statistical, hence only applies at the population, not individual, level, and conditioned on “normal” experience e.g. no neglect, torture etc. More generally, equality of opportunity means more pronounced genetic effects because privilege matters less.&lt;/p&gt;
-&lt;p&gt;Parenting&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;parenting correlates with children’s outcomes for three reasons considered earlier. One reason is that parents and their children are 50 per cent similar genetically. Put crudely, nice parents have nice children because they are all nice genetically. Another reason is that parenting is often a response to, rather than a cause of, children’s genetic propensities. It is awkward to be an affectionate parent to a child who is not a cuddler. Finally, children make their own environments, regardless of their parents. That is, they select, modify and create environments correlated with their genetic propensities. Children who want to do something like play sports or a musical instrument will badger their parents to make it happen. […]&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;genetic research describes &lt;em&gt;what is&lt;/em&gt;, not &lt;em&gt;what could be&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The second half of the book goes into the genetic basis of psychological behaviors and how, with increasingly low cost of DNA sequencing, &lt;a href=&quot;https://en.wikipedia.org/wiki/Genome-wide_association_study&quot;&gt;GWAS&lt;/a&gt; has become a powerful tool to solve the &lt;a href=&quot;https://en.wikipedia.org/wiki/Missing_heritability_problem&quot;&gt;missing heritability problem&lt;/a&gt;: if behaviors are 50% genetic, where are the genes responsible for them? &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygenic_score&quot;&gt;Polygenic scores&lt;/a&gt; can now predict 7% of variance of the susceptibility for Schizophrenia, 4% for major depressive disorder, 10% for bipolar disorder, 5% of Alzeimer’s disease &lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, and &amp;gt;10% for years of education (already &amp;gt;15% &lt;a href=&quot;https://twitter.com/kph3k/status/1009875245900156928&quot;&gt;last year&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fiction&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Old Man and the Sea&lt;/em&gt;, Hemmingway 1952&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/manga/98270/Fire_Punch&quot;&gt;Fire Punch&lt;/a&gt; Vol. 1-8 (completed) and &lt;a href=&quot;https://myanimelist.net/manga/116778/Chainsaw_Man&quot;&gt;Chainsaw Man&lt;/a&gt;, Fujimoto Tatsuki&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Kizumonogatari: &lt;a href=&quot;https://myanimelist.net/anime/9260/Kizumonogatari_I__Tekketsu-hen&quot;&gt;Tekketsu-hen&lt;/a&gt;, &lt;a href=&quot;https://myanimelist.net/anime/31757/Kizumonogatari_II__Nekketsu-hen&quot;&gt;Nekketsu-hen&lt;/a&gt;, &lt;a href=&quot;https://myanimelist.net/anime/31758/Kizumonogatari_III__Reiketsu-hen&quot;&gt;Reiketsu-hen&lt;/a&gt;, Shaft {Nisio Isin} [Light novel] 2016, 2017 &lt;em&gt;(Rewatch)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/10357/Jinrui_wa_Suitai_Shimashita&quot;&gt;Jinrui wa Suitai Shimashita&lt;/a&gt; (12 Episodes), AIC A.S.T.A. {Tanaka Romeo} [Light novel] 2012 Notable episode: 8 (My headcanon is that the fairies are Robin Hanson’s &lt;a href=&quot;https://ageofem.com/&quot;&gt;EMs&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/35557/Houseki_no_Kuni&quot;&gt;Houseki no Kuni&lt;/a&gt; (12 Episodes), Orange {Ichikawa Haruko} [Manga] 2017 (Better than the manga)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen&quot;&gt;Kaguya-sama wa Kokurasetai&lt;/a&gt; (12 Episodes), A-1 Pictures {Akasaka Aka} [Manga] 2019&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;video-games&quot;&gt;Video games&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://vgmdb.net/album/88456&quot;&gt;Bloodstained: Ritual of the Night&lt;/a&gt; (ROTN), a spiritual successor of &lt;a href=&quot;https://en.wikipedia.org/wiki/Castlevania:_Symphony_of_the_Night&quot;&gt;one of the best games of all time&lt;/a&gt; (SOTN)&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Pros:&lt;/em&gt; What sold me was the musics by Michiru Yamane, among other composers. The game itself is fun with plenty of replay value while not being as easy as SOTN e.g. the first boss in hard mode is Nintendo hard. There are varieties of movement options and intentional glitches for speedrunning and &lt;a href=&quot;https://www.youtube.com/watch?v=2x_I0_Og_iM&quot;&gt;sequence-breaking&lt;/a&gt;. &lt;em&gt;Cons:&lt;/em&gt; The graphic looks toy-ish and “cheap”. I wish they take advantage of different camera angles more. &lt;em&gt;Not really a con but a warning to keyboard users:&lt;/em&gt; &lt;code&gt;Aim&lt;/code&gt; doesn’t seem to work if assigned to a keyboard button. A touchpad button is fine but clunky and downright impractical mid-combat.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;section class=&quot;footnotes&quot;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Notable exceptions are religious and political beliefs for which shared environment explains 20% of the variance.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;Polygenic scores in these cases are more powerful predictors than traditional ones, namely whether you have a family member with the disorder. Most traits are highly &lt;a href=&quot;https://en.wikipedia.org/wiki/Polygene&quot;&gt;polygenic&lt;/a&gt;, with an exception of Alzheimer’s disease which is mostly due to a single gene called &lt;a href=&quot;https://en.wikipedia.org/wiki/Apolipoprotein_E#Alzheimers_disease&quot;&gt;&lt;em&gt;APOE&lt;/em&gt;&lt;/a&gt;.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>

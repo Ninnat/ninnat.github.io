@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fourier analysis of linear operators I: preliminaries [Draft]
+title: Fourier analysis of linear operators I [Draft]
 subtitle:
 date: 2019-09-17
 categories:
@@ -18,7 +18,7 @@ In this series of posts, I will talk about the decomposition of representations 
 $$\begin{align}
   \lim_{k\to\infty}\End (V_k) \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1} \cong L^2(S^2),
 \end{align}$$
-where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The point is that the space of linear operators on the left contains *all* [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right.
+where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The point is that the space of linear operators on the left contains *all* [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) is not difficult to show. (It follows from the well known Clebsch-Gordan formula.)
 
 <div id="toc"></div>
 

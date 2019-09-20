@@ -222,12 +222,13 @@ $(document).ready(function() {
 </ul></li>
 <li><a href="#induction">Induction</a>
 <ul>
-<li><a href="#foundation-adjoint-functors">Foundation: adjoint functors</a>
+<li><a href="#foundation-adjoint-functor">Foundation: adjoint functor</a>
 <ul>
 <li><a href="#example-the-simplest-adjoint-functor">Example: The simplest adjoint functor</a></li>
 <li><a href="#example-free-functor">Example: Free functor</a></li>
 <li><a href="#tensor-hom-adjunction">Tensor-hom adjunction</a></li>
 <li><a href="#co-extension-of-scalars">(Co-)extension of scalars</a></li>
+<li><a href="#induced-representation-finally">Induced representation, finally</a></li>
 </ul></li>
 <li><a href="#applications-multiplicity">Applications: multiplicity</a></li>
 </ul></li>
@@ -235,10 +236,12 @@ $(document).ready(function() {
         <div id="toc"></div> -->
           <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
 
-<p><em>Representation theory is Fourier analysis</em> (substantially generalized). Given a representation <span class="math">\(V\)</span> of a group <span class="math">\(G\)</span>, it decomposes (under some assumptions on <span class="math">\(G\)</span> and <span class="math">\(V\)</span>) into a direct sum of irreducible parts <span class="math">\[V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \]</span> with <span class="math">\(n_j\)</span> copies of each isomorphic irreducible representation (<em>irrep</em>) <span class="math">\(V_j\)</span>. The canonical Fourier analysis is such a decomposition when the left hand side is the group algebra (to be introduced below) of <span class="math">\(\R\)</span> or <span class="math">\(\SO(2) \cong \U(1)\)</span> (for periodic functions) and can be generalized to a large class of groups.</p>
-<p>In this series of posts, I will talk about the decomposition of representations of the form <span class="math">\(\End V = V^* \otimes V\)</span>, the space of linear operators over <span class="math">\(V\)</span>, especially when <span class="math">\(V\)</span> is a symmetric power <span class="math">\(\Sym^k W\)</span> of some irrep of <a href="https://en.wikipedia.org/wiki/Classical_group#The_classical_groups">the classical groups</a> <span class="math">\(A_n,B_n,C_n,D_n\)</span>. The decomposition of <span class="math">\(\End V\)</span> in the generic form (1) might very loosely count as a “Fourier analysis” but I want to be more ambitious and find a decomposition that is as similar as possible to the canonical Fourier analysis (now for non-abelian groups). In particular, there will be a space <span class="math">\(X\)</span> with symmetry group <span class="math">\(G\)</span> such that the space of functions on <span class="math">\(X\)</span> decomposes as <span class="math">\(G\)</span>-representations <em>without multiplicity</em>, that is, <span class="math">\(n_j\)</span> is either 0 or 1. As a teaser, for <span class="math">\(\SO(3)\)</span> we have that <span class="math">\[\begin{align}
-  \lim_{k\to\infty}\End (V_k) \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1} \cong L^2(S^2),
-\end{align}\]</span> where <span class="math">\(V_{2j+1}\)</span> is the unique <span class="math">\((2j+1)\)</span>-dimensional (“spin-<span class="math">\(j\)</span>”) irrep of <span class="math">\(\SO(3)\)</span>. The point is that the space of linear operators on the left contains <em>all</em> <a href="https://en.wikipedia.org/wiki/Spherical_harmonics">spherical harmonics</a> without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere <span class="math">\(S^2\)</span> on the right. To be clear, (2) is not difficult to show. (It follows from the well known Clebsch-Gordan formula.)</p>
+<p><em>Representation theory is Fourier analysis</em> (substantially generalized). Given a representation <span class="math">\(V\)</span> of a group <span class="math">\(G\)</span>, it decomposes (under some assumptions on <span class="math">\(G\)</span> and <span class="math">\(V\)</span>) into a direct sum of irreducible parts <span class="math">\[\begin{align}
+V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \label{generic}
+\end{align}\]</span> with <span class="math">\(n_j\)</span> copies of each isomorphic irreducible representation or <em>irrep</em> <span class="math">\(V_j\)</span> in short. The canonical Fourier analysis is such a decomposition when the left hand side is the group algebra (to be introduced below) of <span class="math">\(\R\)</span> or <span class="math">\(\SO(2) \cong \U(1)\)</span> for periodic functions and can be generalized to a large class of groups.</p>
+<p>In this series of posts, I will talk about the decomposition of representations of the form <span class="math">\(\End V = V^* \otimes V\)</span>, the space of linear operators over <span class="math">\(V\)</span>, especially when <span class="math">\(V\)</span> is a symmetric power <span class="math">\(\Sym^k W\)</span> of some irrep of <a href="https://en.wikipedia.org/wiki/Classical_group#The_classical_groups">the classical groups</a> <span class="math">\(A_n,B_n,C_n,D_n\)</span>. The decomposition of <span class="math">\(\End V\)</span> in the generic form  might very loosely count as a “Fourier analysis” but I want to be more ambitious and find a decomposition that is as similar as possible to the canonical Fourier analysis (but for non-abelian groups). In particular, there will be a space <span class="math">\(X\)</span> with symmetry group <span class="math">\(G\)</span> such that the space of functions on <span class="math">\(X\)</span> decomposes as <span class="math">\(G\)</span>-representations <em>without multiplicity</em>, that is, <span class="math">\(n_j\)</span> is either 0 or 1. As a teaser, for <span class="math">\(\SO(3)\)</span> we have that <span class="math">\[\begin{align}
+  \lim_{k\to\infty}\End V_k \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1} \cong L^2(S^2),
+\end{align}\]</span> where <span class="math">\(V_{2j+1}\)</span> is the unique <span class="math">\((2j+1)\)</span>-dimensional (“spin-<span class="math">\(j\)</span>”) irrep of <span class="math">\(\SO(3)\)</span>. The point is that the space of linear operators on the left contains <em>all</em> <a href="https://en.wikipedia.org/wiki/Spherical_harmonics">spherical harmonics</a> without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere <span class="math">\(S^2\)</span> on the right. To be clear, (2) follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups <span class="math">\(G\)</span> and spaces with <span class="math">\(G\)</span>-symmetry.</p>
 <div id="toc">
 
 </div>
@@ -285,22 +288,26 @@ I claim that one does not really understand the concept of <a href="https://en.w
 <img src="/assets/img/2019/wigner-eckart.PNG" style="height: 150px;"/>
 </center>
 
-<p>By the first part of Schur’s lemma, <span class="math">\(T\)</span> is an isomorphism between <span class="math">\((R,\R^3)\)</span> and its copy within <span class="math">\(\Hom(V,W)\)</span> (if the latter exists). <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> This justifies labeling the components of the image <span class="math">\(T_j\)</span> in the same way as labeling the components of a vector <span class="math">\(\mathbf{r} \in \R^3\)</span>. More generally, <span class="math">\(\R^3\)</span> can be replaced by any irrep <span class="math">\(U\)</span> of <span class="math">\(\SO(3)\)</span>.</p>
+<p>By the first part of Schur’s lemma, <span class="math">\(T\)</span> is an isomorphism between <span class="math">\((R,\R^3)\)</span> and its copy within <span class="math">\(\Hom(V,W)\)</span> if it exists. <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> This justifies labeling the components of the image <span class="math">\(T_j\)</span> in the same way as labeling the components of a vector <span class="math">\(\mathbf{r} \in \R^3\)</span>. More generally, <span class="math">\(\R^3\)</span> can be replaced by any irrep <span class="math">\(U\)</span> of <span class="math">\(\SO(3)\)</span>.</p>
 <p>The celebrated <a href="https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem">Wigner-Eckart theorem</a> is also Schur’s lemma in disguise. Does anyone remember what the theorem says in the form usually taught in a quantum mechanics class? Definitely not me. But by recognizing tensor operators as intertwiners, the theorem is just the second part of Schur’s lemma for intertwiners between <span class="math">\(U\)</span> and <span class="math">\(\Hom(V,W)\)</span>; the basis-independence of the “reduced matrix element” <span class="math">\(\av{j&#39;,m&#39;||T_k||j,m}\)</span> is just the statement that the tensor operator is proportional to the identity <span class="math">\(T = c\id\)</span> (because it commutes with every <span class="math">\(G\)</span>-action because it is <span class="math">\(G\)</span>-equivariant) in the block isomorphic to the irrep <span class="math">\(U\)</span>.</p>
 <p>For us, a generalization of <em>spherical tensor operators</em> will provide a convenient basis for the space of linear operators.</p>
 <h1 id="induction">Induction</h1>
-<h2 id="foundation-adjoint-functors">Foundation: adjoint functors</h2>
 <p>Given a representation of <span class="math">\(G\)</span>, we can always restrict it to a representation of a subgroup <span class="math">\(H \subset G\)</span>. What about the inverse process of constructing a <span class="math">\(G\)</span>-representation out of an arbitrary <span class="math">\(H\)</span>-representation? The language of categories and modules will prove useful here. Restriction is a <em>functor</em> from the category of <span class="math">\(G\)</span>-representations to the category of <span class="math">\(H\)</span>-representations. Given categories <span class="math">\(\mathcal C\)</span> and <span class="math">\(\mathcal D\)</span>, a (covariant) <strong>functor</strong> <span class="math">\(\mathcal{F}:\mathcal C\to \mathcal D\)</span> assigns to every object in <span class="math">\(\mathcal C\)</span> an object in <span class="math">\(\mathcal D\)</span> and to every morphism in <span class="math">\(\mathcal C\)</span> a morphism in <span class="math">\(\mathcal D\)</span>: <span class="math">\[\begin{align}
   \mathcal{F}:\Hom_{\mathcal C}(A,B) \to \Hom_{\mathcal D}(\mathcal{F}(A),\mathcal{F}(B)),
 \end{align}\]</span> where <span class="math">\(A,B\in\mathcal C\)</span>, such that the identity and the composition is preserved: <span class="math">\[\begin{align}
   \mathcal{F}(1_{\mathcal C}) &amp;= 1_{\mathcal D}, \\
   \mathcal{F}(f\circ g) &amp;= \mathcal{F}(f) \circ \mathcal{F}(g).
-\end{align}\]</span> Restriction belongs to a simple kind of functors, <em>forgetful functors</em> that simply forget information, in this case the structure of <span class="math">\(G\)</span>. Restriction therefore cannot have a strict inverse. An insight from category theory is that we can construct the induction functor as a kind of “weak inverse” to the restriction functor called an <em>adjoint</em>. More precisely, there is a <em>left adjoint</em> <span class="math">\[\begin{align}
-  \Hom_G(\mathrm{Ind}_L\,V,W) \cong \Hom_H(V,\mathrm{Res}\,W)
-\end{align}\]</span> and a <em>right adjoint</em> <span class="math">\[\begin{align}
-  \Hom_G(,V,\mathrm{Ind}_R\,W) \cong \Hom_H(\mathrm{Res}\,V,W)
-\end{align}\]</span> to the restriction functor. <a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> Furthermore, we will see that the distinction between the left and right adjoints comes precisely from the choice of thinking of <span class="math">\(k[G]\)</span> either as a <span class="math">\((k[G],k[H])\)</span>-bi-module or as a <span class="math">\((k[H],k[G])\)</span>-bi-module.</p>
-<p>The relationships (14,15) <em>define</em> what induction is. They are the raison d’être of induced representation—so important that we give them a name: <a href="https://en.wikipedia.org/wiki/Frobenius_reciprocity">Frobenius reciprocity</a>.</p>
+\end{align}\]</span> Restriction belongs to a simple kind of functors, <em>forgetful functors</em> that simply forget information, in this case the structure of <span class="math">\(G\)</span>. Restriction therefore cannot have a strict inverse. An insight from category theory is that we can construct the induction functor as a kind of “weak inverse” to the restriction functor called an <em>adjoint</em>. More precisely, induction should be defined as a <em>left adjoint</em> (because <span class="math">\(\mathrm{Ind}\)</span> is in the left slot) <span class="math">\[\begin{align}
+  \Hom_G(\mathrm{Ind}_L\,V,W) \cong \Hom_H(V,\mathrm{Res}\,W) \label{left-adjoint}
+\end{align}\]</span> or a <em>right adjoint</em> <span class="math">\[\begin{align}
+  \Hom_G(V,\mathrm{Ind}_R\,W) \cong \Hom_H(\mathrm{Res}\,V,W) \label{right-adjoint}
+\end{align}\]</span> to the restriction functor <span class="math">\(\mathrm{Res}\)</span>. <a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> These supposedly canonical isomorphisms  of intertwiner space are known as <a href="https://en.wikipedia.org/wiki/Frobenius_reciprocity">Frobenius reciprocity</a>. Furthermore, we will see that the distinction between the left and right adjoints comes precisely from the choice of thinking of <span class="math">\(k[G]\)</span> either as a <span class="math">\((k[G],k[H])\)</span>-bi-module or as a <span class="math">\((k[H],k[G])\)</span>-bi-module.</p>
+<p>To reiterate, induction is defined so that it satisfies Frobenius reciprocity. This point might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is right one, there are also many inequivalent definitions of induced representation: <span class="math">\[\begin{align}
+  \mathrm{Ind} W &amp;= \bigoplus_{k \in G/H} kW &amp;&amp; \text{(Induction for finite groups)}, \label{finite-ind} \\
+  \mathrm{Ind} W &amp;= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} &amp;&amp; \text{(Induction for Lie groups)}, \label{lie-ind} \\
+  \mathrm{Ind} W &amp;= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), \text{ $f$ has a compact support on }G/H  \} &amp;&amp; \text{(Compact induction for Lie groups)}, \label{compact-ind}
+\end{align}\]</span> to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the <em>raison d’être</em> of induced representation.</p>
+<h2 id="foundation-adjoint-functor">Foundation: adjoint functor</h2>
 <!-- There are only two universal properties: that of being initial and terminal. This translates to the usual way of presenting universal properties in terms of commutative diagrams when one realizes that commutative diagrams are morphisms in a category of morphisms e.g. "[slice category](https://en.wikipedia.org/wiki/Comma_category#Slice_category)".-->
 
 <h3 id="example-the-simplest-adjoint-functor">Example: The simplest adjoint functor</h3>
@@ -363,10 +370,23 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 <p>we have that the right adjoint of restriction is <span class="math">\(\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)\)</span> called the <strong>co-extension of scalars</strong> to distinguish it from the left adjoint.</p></li>
 </ul>
 <p>Setting <span class="math">\(R = k[G]\)</span> and <span class="math">\(S = k[H]\)</span> gives both versions of Frobenius reciprocity (14,15): <span class="math">\[\begin{align}
-  \Hom_G(k[G]\otimes_{k[H]} V,W) &amp;\cong \Hom_H(V,\mathrm{Res}\,W), \\
-  \Hom_G(V,\Hom_{k[H]}(k[G],W)) &amp;\cong \Hom_H(\mathrm{Res}\,V,W).
-\end{align}\]</span></p>
+  \Hom_G(k[G]\otimes_{k[H]} V,W) &amp;\cong \Hom_H(V,\mathrm{Res}\,W), \label{ind} \\
+  \Hom_G(V,\Hom_{k[H]}(k[G],W)) &amp;\cong \Hom_H(\mathrm{Res}\,V,W). \label{coind}
+\end{align}\]</span> We may call the former <strong>induced representation</strong> of <span class="math">\(V\)</span> and the latter <strong>co-induced representation</strong> of <span class="math">\(W\)</span>.</p>
+<h3 id="induced-representation-finally">Induced representation, finally</h3>
+<p>Let’s see how  and  correctly give the various definitions of induced representations </p>
 <h2 id="applications-multiplicity">Applications: multiplicity</h2>
+<p>Let <span class="math">\(\hat{G}\)</span> be the collection of all inequivalent irreps of <span class="math">\(G\)</span>. A completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps <span class="math">\(V_{\lambda}\)</span> <span class="math">\[\begin{align}
+V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
+\end{align}\]</span> each with (possibly zero)  <span class="math">\(n_{\lambda}\)</span>. A decomposition is said to be  if every <span class="math">\(n_{\lambda}\)</span> is either 0 or 1. By Schur’s lemma, <span class="math">\[\begin{align}
+\text{Hom}_G (V_{\lambda},V) &amp;\simeq \bigoplus^{n_{\lambda}} \text{Hom}_G ( V_{\lambda}, V_{\lambda} ) \simeq \mathbb{C}^{n_{\lambda}}.
+\end{align}\]</span> <span class="math">\(\mathbb{C}^{n_{\lambda}}\)</span> is called the  where <span class="math">\(n_{\lambda} = \dim \text{Hom}_G (V_{\lambda},V)\)</span>. Putting these together, we obtain the  of <span class="math">\(V\)</span>: <span class="math">\[\begin{align}
+V &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{n_{\lambda}}
+\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \text{Hom}_G (V_{\lambda},V).
+\end{align}\]</span> An important special case is when <span class="math">\(V\)</span> is a tensor product of irreps. <span class="math">\(V\)</span> may not be irreducible and we have the  <span class="math">\[\begin{align}
+    V_{\mu} \otimes V_{\nu} &amp;\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{n^{\lambda}_{\mu\nu}}.
+\end{align}\]</span> The collection of <span class="math">\(\lambda\)</span> that appears in the direct sum is called the , and the overlap between a vector in <span class="math">\(V_{\mu} \otimes V_{\nu}\)</span> and a vector in <span class="math">\(V_{\lambda}\)</span> is a .</p>
+<p><a href="https://math.stackexchange.com/questions/225730/left-adjoint-and-right-adjoint-nakayama-isomorphism">Nakayama isomorphism</a></p>
 <!-- # Tensor product representations
 
 # Fourier analysis
@@ -411,8 +431,8 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
     property="dc:created">17 Sep 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-19 03:25:08 +0000"
-            property="dc:modified">19 Sep 2019</time></small></p>
+            datetime="2019-09-20 05:11:59 +0000"
+            property="dc:modified">20 Sep 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -444,7 +464,7 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/a8a9a0acceacc1b190f94be76cfcc6deb1191416/_posts/2019-09-15-operator-harmonic-analysis.md"> a8a9a0a</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/97e1a30c219942f2eb92f6ec1bb1051a9207fe2f/_posts/2019-09-15-operator-harmonic-analysis.md"> 97e1a30</a></tiny></p>
 </aside>
 
 <br /><br />

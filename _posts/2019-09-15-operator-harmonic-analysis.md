@@ -120,7 +120,7 @@ To emphasize, induction is defined so that it satisfies Frobenius reciprocity. T
 $$\begin{align}
   \mathrm{Ind} W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \label{finite-ind} \\
   \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \label{lie-ind} \\
-  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has a compact support on } G/H \} && \text{(Induction for Lie groups)}, \label{compact-ind}
+  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)}, \label{compact-ind}
 \end{align}$$
 to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
 

@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-09-20T07:13:09+00:00</updated>
+ <updated>2019-09-20T10:16:02+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -323,7 +323,7 @@ I claim that one does not really understand the concept of &lt;a href=&quot;http
 &lt;p&gt;To emphasize, induction is defined so that it satisfies Frobenius reciprocity. This point might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the right one, there are also inequivalent definitions of induced representation: &lt;span class=&quot;math&quot;&gt;\[\begin{align}
   \mathrm{Ind} W &amp;amp;= \bigoplus_{k \in G/H} kW &amp;amp;&amp;amp; \text{(Induction for finite groups)}, \label{finite-ind} \\
   \mathrm{Ind} W &amp;amp;= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} &amp;amp;&amp;amp; \text{(Induction for Lie groups)}, \label{lie-ind} \\
-  \mathrm{Ind} W &amp;amp;= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has a compact support on } G/H \} &amp;amp;&amp;amp; \text{(Induction for Lie groups)}, \label{compact-ind}
+  \mathrm{Ind} W &amp;amp;= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} &amp;amp;&amp;amp; \text{(Compact induction for Lie groups)}, \label{compact-ind}
 \end{align}\]&lt;/span&gt; to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the &lt;em&gt;raison d’être&lt;/em&gt; of induced representation.&lt;/p&gt;
 &lt;h2 id=&quot;foundation-adjoint-functor&quot;&gt;Foundation: adjoint functor&lt;/h2&gt;
 &lt;!-- There are only two universal properties: that of being initial and terminal. This translates to the usual way of presenting universal properties in terms of commutative diagrams when one realizes that commutative diagrams are morphisms in a category of morphisms e.g. &quot;[slice category](https://en.wikipedia.org/wiki/Comma_category#Slice_category)&quot;.--&gt;

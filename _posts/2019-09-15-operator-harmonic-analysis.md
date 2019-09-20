@@ -16,11 +16,11 @@ V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \label{generic}
 \end{align}$$
 with $n_j$ copies of each isomorphic irreducible representation or *irrep* $V_j$ in short. The canonical Fourier analysis is such a decomposition when the left hand side is the group algebra (to be introduced below) of $\R$ or $\SO(2) \cong \U(1)$ for periodic functions and can be generalized to a large class of groups.
 
-In this series of posts, I will talk about the decomposition of representations of the form $\End V = V^* \otimes V$, the space of linear operators over $V$, especially when $V$ is a symmetric power $\Sym^k W$ of some irrep of [the classical groups](https://en.wikipedia.org/wiki/Classical_group#The_classical_groups) $A_n,B_n,C_n,D_n$. The decomposition of $\End V$ in the generic form \eqref{generic} might very loosely count as a "Fourier analysis" but I want to be more ambitious and find a decomposition that is as similar as possible to the canonical Fourier analysis (but for non-abelian groups). In particular, there will be a space $X$ with symmetry group $G$ such that the space of functions on $X$ decomposes as $G$-representations *without multiplicity*, that is, $n_j$ is either 0 or 1. As a teaser, for $\SO(3)$ we have that
+In this series of posts, I will talk about the decomposition of representations of the form $\End V = V^* \otimes V$, the space of linear operators over $V$, especially when $V$ is a symmetric power $\Sym^k W$ of some irrep of [the classical groups](https://en.wikipedia.org/wiki/Classical_group#The_classical_groups) $A_n,B_n,C_n,D_n$. The decomposition of $\End V$ in the generic form (1) might very loosely count as a "Fourier analysis" but I want to be more ambitious and find a decomposition that is as similar as possible to the canonical Fourier analysis (but for non-abelian groups). In particular, there will be a space $X$ with symmetry group $G$ such that the space of functions on $X$ decomposes as $G$-representations *without multiplicity*, that is, $n_j$ is either 0 or 1. As a teaser, for $\SO(3)$ we have that
 $$\begin{align}
   \lim_{k\to\infty}\End V_k \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1} \cong L^2(S^2),
 \end{align}$$
-where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The point is that the space of linear operators on the left contains *all* [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups $G$ and spaces with $G$-symmetry.
+where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The point is that the space of linear operators on the left contains *all* [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) easily follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups $G$ and spaces with $G$-symmetry.
 
 <div id="toc"></div>
 
@@ -114,13 +114,13 @@ or a *right adjoint*
 $$\begin{align}
   \Hom_G(V,\mathrm{Ind}_R\,W) \cong \Hom_H(\mathrm{Res}\,V,W) \label{right-adjoint}
 \end{align}$$
-to the restriction functor $\mathrm{Res}$. [^5] These supposedly canonical isomorphisms \eqref{left-adjoint,right-adjoint} of intertwiner space are known as [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity). Furthermore, we will see that the distinction between the left and right adjoints comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or as a $(k[H],k[G])$-bi-module.
+to the restriction functor $\mathrm{Res}$. [^5] These canonical isomorphisms (14,15) of intertwiner space are known as [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity). Furthermore, we will see that the distinction between left and right adjoint comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or as a $(k[H],k[G])$-bi-module.
 
-To reiterate, induction is defined so that it satisfies Frobenius reciprocity. This point might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is right one, there are also many inequivalent definitions of induced representation:
+To emphasize, induction is defined so that it satisfies Frobenius reciprocity. This point might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the right one, there are also inequivalent definitions of induced representation:
 $$\begin{align}
   \mathrm{Ind} W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \label{finite-ind} \\
   \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \label{lie-ind} \\
-  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), \text{ $f$ has a compact support on }G/H  \} && \text{(Compact induction for Lie groups)}, \label{compact-ind}
+  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has a compact support on } G/H \} && \text{(Induction for Lie groups)}, \label{compact-ind}
 \end{align}$$
 to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
 
@@ -234,14 +234,14 @@ $$\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N)),$$
 
 Setting $R = k[G]$ and $S = k[H]$ gives both versions of Frobenius reciprocity (14,15):
 $$\begin{align}
-  \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W), \label{ind} \\
-  \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W). \label{coind}
-\end{align}$$
+  \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W), \label{ind}\\
+  \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W).
+\end{align} \label{coind}$$
 We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$.
 
 ### Induced representation, finally
 
-Let's see how \eqref{ind} and \eqref{coind} correctly give the various definitions of induced representations \eqref{finite-ind,lie-ind,compact-ind}
+Let's see how (33) and (34) correctly give the definitions (16,17,18).
 
 ## Applications: multiplicity
 

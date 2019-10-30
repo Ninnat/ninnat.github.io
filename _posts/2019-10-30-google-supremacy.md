@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Google's Quantum Supremacy: Hypes and Facts
+title: `Google's Quantum Supremacy: Hypes and Facts`
 subtitle:
 date: 2019-10-30
 categories:
-  - Quantum computing
 tags:
 ---
 

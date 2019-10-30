@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google's Quantum Supremacy&#58 Hypes and Facts
+title: Google's quantum supremacy&#58 hype and facts
 subtitle:
 date: 2019-10-30
 categories:

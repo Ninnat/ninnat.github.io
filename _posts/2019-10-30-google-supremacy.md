@@ -1,6 +1,6 @@
 ---
 layout: post
-title: `Google's Quantum Supremacy: Hypes and Facts`
+title: Google's Quantum Supremacy&#58 Hypes and Facts
 subtitle:
 date: 2019-10-30
 categories:

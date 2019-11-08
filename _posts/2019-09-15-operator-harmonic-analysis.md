@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fourier analysis of linear operators I [Draft]
-subtitle:
+subtitle: Schur's lemma and Frobenius reciprocity
 date: 2019-09-17
 categories:
   - Representation theory
@@ -10,25 +10,27 @@ tags:
 
 <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
 
-*Representation theory is Fourier analysis* (substantially generalized). Given a representation $V$ of a group $G$, it decomposes (under some assumptions on $G$ and $V$) into a direct sum of irreducible parts
+*Representation theory is Fourier analysis* (substantially generalized). Given a representation $V$ of a group $G$, it decomposes (under some assumptions on $G$ and $V$, for example if $G$ is compact) into a direct sum of irreducible parts
 $$\begin{align}
-V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j \label{generic}
+V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j
 \end{align}$$
-with $n_j$ copies of each isomorphic irreducible representation or *irrep* $V_j$ in short. The canonical Fourier analysis is such a decomposition when the left hand side is the group algebra (to be introduced below) of $\R$ or $\SO(2) \cong \U(1)$ for periodic functions and can be generalized to a large class of groups.
+with $n_j$ copies of each isomorphic irreducible representation $V_j$ or *irrep* in short. The left hand side in the case of the canonical Fourier analysis is the group algebra (to be introduced below) of the group of translation on the real line $\R$ or the circle $\SO(2) \cong \U(1)$ for periodic functions. This can be generalized to a large class of groups.
 
-In this series of posts, I will talk about the decomposition of representations of the form $\End V = V^* \otimes V$, the space of linear operators over $V$, especially when $V$ is a symmetric power $\Sym^k W$ of some irrep of [the classical groups](https://en.wikipedia.org/wiki/Classical_group#The_classical_groups) $A_n,B_n,C_n,D_n$. The decomposition of $\End V$ in the generic form (1) might very loosely count as a "Fourier analysis" but I want to be more ambitious and find a decomposition that is as similar as possible to the canonical Fourier analysis (but for non-abelian groups). In particular, there will be a space $X$ with symmetry group $G$ such that the space of functions on $X$ decomposes as $G$-representations *without multiplicity*, that is, $n_j$ is either 0 or 1. As a teaser, for $\SO(3)$ we have that
+In this series of posts, I would like to talk about
+
+I will talk about the decomposition of representations of the form $\End V = V^* \otimes V$, the space of linear operators ("endomorphisms") over $V$, especially when $V$ is a symmetric power $\Sym^k W$ of some irrep of [the classical groups](https://en.wikipedia.org/wiki/Classical_group#The_classical_groups) $A_n,B_n,C_n,D_n$. The decomposition of $\End V$ in the generic form (1) might very loosely count as a "Fourier analysis" but I want to be more ambitious and find a decomposition that is as similar as possible to the canonical Fourier analysis (but for non-abelian groups). In particular, there will be a space $X$ with symmetry group $G$ such that the space of functions on $X$ decomposes as $G$-representations *without multiplicity*, that is, $n_j$ is either 0 or 1. As a teaser, for $\SO(3)$ we have that
 $$\begin{align}
   \lim_{k\to\infty}\End V_k \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1} \cong L^2(S^2),
 \end{align}$$
-where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The point is that the space of linear operators on the left contains *all* [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) without redundancy, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) easily follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups $G$ and spaces with $G$-symmetry.
+where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The space of linear operators on the left contains all [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) *without redundancy*, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) easily follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups $G$ and spaces with $G$-symmetry.
 
 <div id="toc"></div>
 
-# Categories of $G$-representations
+# Morphisms
 
-The standard way to introduce a representation of a group $G$ is as a pair $(\rho,V)$ of a vector space $V$ and a group homomorphism $\rho: G \to \GL(V)$. That is, for $g_1,g_2 \in G$, $\rho(g_1)$ and $\rho(g_2)$ are invertible matrices over a vector space $V$ such that the group structure is respected: $\rho(g_1)\rho(g_2) = \rho(g_1 g_2)$. Group homomorphisms are examples of ubiquitous structure-preserving maps or *morphisms* between mathematical objects. Morphisms for sets are arbitrary functions (total i.e. defined for all inputs) between sets. For vector spaces, we have linear operators. Of course, not only algebraic objects have morphisms. For example, for topological spaces and smooth manifolds, we have continuous maps and smooth maps respectively. (In particular, [homeomorphisms](https://en.wikipedia.org/wiki/Homeomorphism) are isomorphisms between topological spaces, and [diffeomorphisms](https://en.wikipedia.org/wiki/Diffeomorphism) are isomorphisms between smooth manifolds.)
+The standard way to introduce a representation of a group $G$ is as a pair $(\rho,V)$ of a vector space $V$ and a group homomorphism $\rho: G \to \GL(V)$. That is, for $g_1,g_2 \in G$, $\rho(g_1)$ and $\rho(g_2)$ are invertible matrices over a vector space $V$ such that the group structure is respected: $\rho(g_1)\rho(g_2) = \rho(g_1 g_2)$. Group homomorphisms are examples of ubiquitous structure-preserving maps or *morphisms* between mathematical objects. Morphisms for sets are arbitrary functions (total i.e. defined for all inputs) between sets. For vector spaces, we have linear operators. Of course, not only algebraic objects have morphisms. For example, continuous maps and smooth maps are morphisms, respectively, for topological spaces and smooth manifolds. (In particular, [homeomorphisms](https://en.wikipedia.org/wiki/Homeomorphism) are isomorphisms between topological spaces, and [diffeomorphisms](https://en.wikipedia.org/wiki/Diffeomorphism) are isomorphisms between smooth manifolds.)
 
-Once we have objects and morphisms, we have a *category*. Formally, a **category** $\mathcal{C}$ is a class [^1] of objects and morphisms between them such that there is an identity morphism $1\circ f = f\circ 1 = f$ and the composition of morphisms is associative: $(f \circ g) \circ h = f\ \circ (g \circ h)$. It should be emphasized that all the information contained in the definition is about morphisms, whereas the objects can be anything. (Perhaps the lesson here is that morphisms are as important, if not more, than the objects we want to study.) What would be the morphisms in a category of $G$-representations? They are *$G$-equivariant maps* or *intertwiners*. Let $(\rho,V)$ and $(\sigma,W)$ be $G$-representations. A linear map $\varphi:V\to W$ is **$G$-equivariant** if it does not matter if one applies the transformation $g$ on the vector space first or $\varphi$ first. That is, $\varphi\circ\rho(g) = \sigma(g)\circ\varphi$ for all $g \in G$. Pictorially, we say that the following diagram "commutes".
+Once we have objects and morphisms, we have a *category*. Formally, a **category** $\mathcal{C}$ is a class [^1] of objects and morphisms between them such that there is an identity morphism $1\circ f = f\circ 1 = f$ and the composition of morphisms is associative: $(f \circ g) \circ h = f \circ (g \circ h)$. It should be emphasized that all the information contained in the definition is about morphisms, whereas the objects can be anything. (Perhaps the lesson here is that morphisms are as important, if not more, than the objects we want to study.) What would be the morphisms in a category of $G$-representations? They are *$G$-equivariant maps* or *intertwiners*. Let $(\rho,V)$ and $(\sigma,W)$ be $G$-representations. A linear map $\varphi:V\to W$ is **$G$-equivariant** if it does not matter if one applies a transformation $g$ on the vector space first or $\varphi$ first. That is, $\varphi\circ\rho(g) = \sigma(g)\circ\varphi$ for all $g \in G$. Pictorially, we say that the following diagram "commutes".
 <center>
 <img src="/assets/img/2019/intertwiner.PNG" style="height: 150px;"/>
 </center>
@@ -38,14 +40,14 @@ This is a pretty natural definition (and should be formalizable as a [natural tr
 
 ## In terms of modules
 
-The notion of a module generalizes that of a vector space by extending the multiplication by scalars to elements of a ring (such as matrices). Given a ring $R$ with an identity, a (left) **$R$-module** is an abelian group $M$ representing "vector addition", and "scalar multiplication" $R \times M \to M$ a ring homomorphism from $R$ to the endomorphism ring $\End(M)$ that also respects the group addition; in equations,
+The notion of a module generalizes that of a vector space by extending multiplication by scalars to elements of a ring (such as matrices). Given a ring $R$ with an identity, a (left) **$R$-module** is an abelian group $M$ representing "vector addition", and "scalar multiplication" $R \times M \to M$ a ring homomorphism from $R$ to the endomorphism ring $\End(M)$ that also respects the group addition; in equations,
 $$\begin{align}
   1m &= m, \\
   (r+s)m &= rm + sm, \\
   (rs)m &= r(sm), \\
   r(m+n) &= rm + rn,
 \end{align}$$
-for all $r,s \in R$ and $m,n \in M$. A right $R$-module or even a left-right $(S,R)$ *bi-module* is similarly defined but with the R-multiplication from the right and $S$-multiplication from the left. Left and right $R$-modules may not coincide if the ring is not commutative.  Now the ring $k[G]$ is the matrix ring formally spanned by $g \in G$ over a field $k$ with the convolution product * inherited from the group multiplication:
+for all $r,s \in R$ and $m,n \in M$. A right $R$-module or even a left-right $(S,R)$ *bi-module* is similarly defined but with the R-multiplication from the right and $S$-multiplication from the left. (Left and right $R$-modules may not coincide.)  Now the ring $k[G]$ is the matrix ring formally spanned by $g \in G$ over a field $k$ with the convolution product * inherited from the group multiplication:
 $$\begin{align}
   \left(\sum_{g_1}f_{g_1} g_1 \right) * \left(\sum_{g_2}h_{g_2} g_2 \right) = \sum_{g_1,g} f_{g_1} h_{g_1^{-1}g} g.
 \end{align}$$
@@ -53,14 +55,14 @@ $$\begin{align}
 
 ## Schur's lemma
 
-Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using only a little linear algebra) but powerful result. Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
+Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using only a little linear algebra) but powerful result (and obviously what inspired the title of this blog). Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
 
 **Lemma 1.** (Schur's lemma)
 
 - (Burnside) *Every intertwiner between irreps is either an isomorphism or zero.*
 - (Schur) *For $k$ algebraically closed, every intertwiner is of the form $k\id$. That is, $\End_G(V) = k$.* [^2]
 
-Schur's lemma can be summarized as follows: when $k$ is algebraically closed, intertwiners between irreps behave like the Kronecker delta
+The lemma can also be summarized as follows: when $k$ is algebraically closed, intertwiners between irreps behave like the Kronecker delta
 $$\begin{align}
   \dim\Hom_G(V,W) =
   \begin{cases}
@@ -73,7 +75,7 @@ $$\begin{align}
 ## The meaning of tensor operator
 <!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
 
-I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a *vector operator*. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between irreps $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \odot \rho(R)$ where $\odot$ is a placeholder for the argument) induces a rotation of $\mathbf{r}$: [^3]
+I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a *vector operator*. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between irreps $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \odot \rho(R)$ where $\odot$ is a placeholder for an argument) induces a rotation of $\mathbf{r}$: [^3]
 $$\begin{align}
   \sigma\dgg(R)T(\mathbf{r}_j)\rho(R) = R_j{}^k T(\mathbf{r}_k).
 \end{align}$$
@@ -86,15 +88,14 @@ one can see that $T$ is nothing but a linear map that makes the following diagra
 <img src="/assets/img/2019/wigner-eckart.PNG" style="height: 150px;"/>
 </center>
 
-By the first part of Schur's lemma, $T$ is an isomorphism between $(R,\R^3)$ and its copy within $\Hom(V,W)$ if it exists. [^4] This justifies labeling the components of the image $T_j$ in the same way as labeling the components of a vector $\mathbf{r} \in \R^3$. More generally, $\R^3$ can be replaced by any
+By the first part of Schur's lemma, $T$ is an isomorphism between $(R,\R^3)$ and its copy within $\Hom(V,W)$ if it exists. [^4] This justifies labeling the components of the image $T_j$ the same way we label the components of a vector $\mathbf{r} \in \R^3$. More generally, $\R^3$ can be replaced by any
 irrep $U$ of $\SO(3)$.
 
-The celebrated [Wigner-Eckart theorem](https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem) is also Schur's lemma in disguise.
-Does anyone remember what the theorem says in the form usually taught in a quantum mechanics class? Definitely not me. But by recognizing tensor operators as intertwiners, the theorem is just the second part of Schur's lemma for intertwiners between $U$ and $\Hom(V,W)$; the basis-independence of the "reduced matrix element" $\av{j',m'||T_k||j,m}$ is just the statement that the tensor operator is proportional to the identity $T = c\id$ (because it commutes with every $G$-action because it is $G$-equivariant) in the block isomorphic to the irrep $U$.
+Does anyone remember what the celebrated [Wigner-Eckart theorem](https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem) says in the form usually taught in a quantum mechanics class? Definitely not me. But by recognizing tensor operators as intertwiners, the theorem is just Schur's lemma in disguise, specialized to intertwiners between $U$ and $\Hom(V,W)$; the basis-independence of the "reduced matrix element" $\av{j',m'||T_k||j,m}$ is just the statement that the tensor operator is proportional to the identity $T = c\id$ (because it commutes with every $G$-action because it is $G$-equivariant) in the block isomorphic to the irrep $U$.
 
 For us, a generalization of *spherical tensor operators* will provide a convenient basis for the space of linear operators.
 
-# Induction
+# The induction functor
 
 Given a representation of $G$, we can always restrict it to a representation of a subgroup $H \subset G$. What about the inverse process of constructing a $G$-representation out of an arbitrary $H$-representation? The language of categories and modules will prove useful here. Restriction is a *functor* from the category of $G$-representations to the category of $H$-representations. Given categories $\mathcal C$ and $\mathcal D$, a (covariant) **functor** $\mathcal{F}:\mathcal C\to \mathcal D$ assigns to every object in $\mathcal C$ an object in $\mathcal D$ and to every morphism in $\mathcal C$ a morphism in $\mathcal D$:
 $$\begin{align}
@@ -118,9 +119,9 @@ to the restriction functor $\mathrm{Res}$. [^5] These canonical isomorphisms (14
 
 To emphasize, induction is defined so that it satisfies Frobenius reciprocity. This point might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the right one, there are also inequivalent definitions of induced representation:
 $$\begin{align}
-  \mathrm{Ind} W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \label{finite-ind} \\
-  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \label{lie-ind} \\
-  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)}, \label{compact-ind}
+  \mathrm{Ind} W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \\
+  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \\
+  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)},
 \end{align}$$
 to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
 
@@ -133,7 +134,7 @@ to give a few. The functorial viewpoint makes it clear that Frobenius reciprocit
 
 ### Example: The simplest adjoint functor
 
-What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^6]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/).) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
+What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^6]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer(https://math.stackexchange.com/a/25515)] from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
 $$ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). $$
 A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one-to-one correspondence](https://en.wikipedia.org/wiki/Galois_connection)
 $$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$
@@ -168,7 +169,7 @@ Having seen some examples of functors, let us go back to our original goal of ma
 
 ### Tensor-hom adjunction
 
-A hint comes from a trivial identity between three finite-dimensional vector spaces $M,N,P$
+A hint comes from a trivial identity given three finite-dimensional vector spaces $M,N,P$
 $$\begin{align}
   \Hom (P\otimes M,N) = \Hom (M,\Hom(P,N))
 \end{align}$$
@@ -234,14 +235,26 @@ $$\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N)),$$
 
 Setting $R = k[G]$ and $S = k[H]$ gives both versions of Frobenius reciprocity (14,15):
 $$\begin{align}
-  \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W), \label{ind}\\
+  \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W),\\
   \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W).
-\end{align} \label{coind}$$
+\end{align}$$
 We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$.
 
-### Induced representation, finally
+## Induced representation, finally
 
-Let's see how (33) and (34) correctly give the definitions (16,17,18).
+The left adjoint (33) is the same as
+$$\begin{align}
+  \mathrm{Ind}_L W &= \bigoplus_{k \in G/H} kW.
+\end{align}$$
+$$\begin{align}
+  \mathrm{Ind}_R W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \\
+  \mathrm{Ind}_L W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)},
+\end{align}$$
+
+Let's make sure that (33) and (34) correctly give the definition (16) in the case of finite groups. (
+
+  (I will not explain the Lie-group version in this post REU 2015 paper of [Santiago Chaves Aguilar
+](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf)))
 
 ## Applications: multiplicity
 

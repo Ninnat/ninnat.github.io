@@ -216,13 +216,19 @@ $(document).ready(function() {
           <ul>
 <li><a href="#writings">Writings</a>
 <ul>
-<li><a href="#quantum-supremacy">Quantum supremacy</a></li>
+<li><a href="#quantum-computational-supremacy">Quantum computational supremacy</a></li>
 </ul></li>
 <li><a href="#research">Research</a>
 <ul>
-<li><a href="#quantum-supremacy-1">Quantum supremacy</a></li>
+<li><a href="#quantum-computational-supremacy-1">Quantum computational supremacy</a>
+<ul>
+<li><a href="#a-literature-review">A literature review</a></li>
+<li><a href="#what-does-an-np-oracle-actually-do">What does an NP oracle actually do?</a></li>
+</ul></li>
 <li><a href="#quantum-state-learning">Quantum state learning</a></li>
 </ul></li>
+<li><a href="#media">Media</a>
+<ul>
 <li><a href="#links">Links</a>
 <ul>
 <li><a href="#quantum">Quantum</a></li>
@@ -232,8 +238,9 @@ $(document).ready(function() {
 <ul>
 <li><a href="#touhou">Touhou</a></li>
 </ul></li>
-<li><a href="#books">Books</a></li>
+<li><a href="#manga">Manga</a></li>
 <li><a href="#anime">Anime</a></li>
+</ul></li>
 </ul>
         <div id="toc"></div> -->
           <p>This is an archive of what I found useful, interesting, or simply enjoyable from September to October 2019.</p>
@@ -241,7 +248,7 @@ $(document).ready(function() {
 
 </div>
 <h1 id="writings">Writings</h1>
-<h2 id="quantum-supremacy">Quantum supremacy</h2>
+<h2 id="quantum-computational-supremacy">Quantum computational supremacy</h2>
 <p>You would have to live under a rock to not hear of the leaked Google’s paper and the subsequent <a href="https://ai.googleblog.com/2019/10/quantum-supremacy-using-programmable.html">official announcement</a> of their demonstration of “quantum supremacy”. - Back before the leak, I gave an online talk (organized by <a href="https://qtft.org/">Quantum Technology Foundation of Thailand</a>) in which I tried to explain what quantum supremacy really means by explaining what “collapse of the polynomial hierarchy (PH)” means.</p>
 <center>
 <iframe width="576" height="420" src="https://slides.com/ninnat/deck-8/embed" frameborder="0" allowfullscreen>
@@ -254,7 +261,8 @@ $(document).ready(function() {
 <li>Misunderstanding ensued after the Google’s announcement went viral (for example, that we now have a fully functional quantum computer that can break codes), which compelled me to write <a href="https://ninnat.github.io/google-supremacy.html">Google’s quantum supremacy FAQ</a> (in Thai) targeted at an interested layperson.</li>
 </ul>
 <h1 id="research">Research</h1>
-<h2 id="quantum-supremacy-1">Quantum supremacy</h2>
+<h2 id="quantum-computational-supremacy-1">Quantum computational supremacy</h2>
+<h3 id="a-literature-review">A literature review</h3>
 <center>
 
 <table>
@@ -283,7 +291,7 @@ $(document).ready(function() {
 </table>
 </center>
 
-<p>My attempt at classifying some milestone supremacy results; the notions of strong and weak simulations are the ones from <a href="https://arxiv.org/abs/quant-ph/0205133">Terhal and DiVincenzo 2004</a>. <br></p>
+<p>My attempt at classifying some milestone supremacy results <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> <br></p>
 <p>Reviews</p>
 <ul>
 <li><a href="http://arxiv.org/abs/1809.07442">Quantum computational supremacy</a>, Harrow and Montanaro 2017</li>
@@ -318,6 +326,7 @@ $(document).ready(function() {
 </ul>
 <!-- [A blueprint for demonstrating quantum supremacy with superconducting qubits](https://arxiv.org/abs/1709.06678), Neill et al 2018 [[Supplementary materials](https://science.sciencemag.org/content/sci/suppl/2018/04/11/360.6385.195.DC1/aao4309_Neill_SM.pdf) (driven Hubbard model)] -->
 
+<h3 id="what-does-an-np-oracle-actually-do">What does an NP oracle actually do?</h3>
 <ul>
 <li><p>In my experience, the most subtle concept to correctly explain when talking about PH is the idea of an <a href="https://en.wikipedia.org/wiki/Oracle_machine"><em>oracle</em></a>.</p>
 <p>An oracle for a problem <span class="math">\(O\)</span> is a magical black box that can answer the question <span class="math">\(O\)</span> with a single querying. Generally having access to an oracle boosts the power of a computational model. For instance, one can have an oracle for an <a href="https://en.wikipedia.org/wiki/Undecidable_problem">undecidable problem</a>; there is no Turing machine that can <a href="https://en.wikipedia.org/wiki/Halting_problem">decide whether an arbitrary Turing machine halts or not</a>, but an oracle for the halting problem (upon inputting a Turing machine <span class="math">\(M\)</span>) would just give the one-bit answer HALT or NOT HALT in one step.</p>
@@ -329,7 +338,7 @@ $(document).ready(function() {
 <ul>
 <li><a href="https://theoryofcomputing.org/articles/gs007/">A Survey of Quantum Property Testing</a>, Montanaro and Wolf 2016</li>
 <li><p><a href="https://arxiv.org/abs/1508.01797">Sample-optimal tomography of quantum states</a>, Haah et al 2017</p>
-<p>For i.i.d. <span class="math">\(\rho^{\otimes N}\)</span>, the <a href="https://en.wikipedia.org/wiki/Trace_distance">trace distance</a> decays exponentially with the rate the <a href="https://arxiv.org/abs/1102.2684">Chernoff information</a>, which is between <span class="math">\((\ln F^{-1})/2\)</span> and <span class="math">\(\ln F^{-1}\)</span> for <span class="math">\(F\)</span> <a href="https://en.wikipedia.org/wiki/Fidelity_of_quantum_states">the fidelity</a>, so the fidelity is a good figure of merit for the task of distinguishing between <span class="math">\(\rho^{\otimes N}\)</span> and <span class="math">\(\sigma^{\otimes N}\)</span>, while the single-copy trace distance tends to overestimate the sample complexity. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p></li>
+<p>For i.i.d. <span class="math">\(\rho^{\otimes N}\)</span>, the <a href="https://en.wikipedia.org/wiki/Trace_distance">trace distance</a> decays exponentially with the rate the <a href="https://arxiv.org/abs/1102.2684">Chernoff information</a>, which is between <span class="math">\((\ln F^{-1})/2\)</span> and <span class="math">\(\ln F^{-1}\)</span> for <span class="math">\(F\)</span> <a href="https://en.wikipedia.org/wiki/Fidelity_of_quantum_states">the fidelity</a>, so the fidelity is a good figure of merit for the task of distinguishing between <span class="math">\(\rho^{\otimes N}\)</span> and <span class="math">\(\sigma^{\otimes N}\)</span>, while the single-copy trace distance tends to overestimate the sample complexity. <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p></li>
 <li><a href="https://arxiv.org/abs/1303.0436">Adaptive quantum state tomography improves accuracy quadratically</a>, Mahler et al 2013
 <ul>
 <li><a href="https://arxiv.org/abs/1612.04581">Discontinuities of the quantum Fisher information and the Bures metric</a>, Šafránek 2017</li>
@@ -356,11 +365,11 @@ $(document).ready(function() {
 - [Reductive groups and Steinberg maps](https://arxiv.org/abs/1608.01156), Meinolf Geck, Gunter Malle 1608.01156 (First chapter of a book draft on characters of finite groups of Lie type)
 - *Representations of $\mathrm{SL}_2 (\mathbb{F}_q)$*, Cédric Bonnafé 2011 -->
 
-<h1 id="links">Links</h1>
+<h1 id="media">Media</h1>
+<h2 id="links">Links</h2>
 <!-- - IBM claims that they can [simulate Google's "10,000-year-to-simulate" quantum circuits in 2.5 days](https://www.ibm.com/blogs/research/2019/10/on-quantum-supremacy/).
     - [Leveraging Secondary Storage to Simulate Deep 54-qubit Sycamore Circuits](https://arxiv.org/abs/1910.09534), Pednault et al.
 
-- [Ambigious LIGO detection](https://gizmodo.com/mystery-deepens-around-newly-detected-ripples-in-space-1837581646)
 - Randomized control trial on poverty [won economics Nobel Prize](https://www.nature.com/articles/d41586-019-03125-y).
 - [Introducing Lagrange multipliers](http://www.slimy.com/~steuard/teaching/tutorials/Lagrange.html) using the milkmaid problem
 - [Thailand's first photo of single atoms](https://medium.com/qtft/thailands-first-photograph-of-single-atoms-by-quantum-scientists-at-chiang-mai-university-2f654affe41b)
@@ -368,9 +377,15 @@ $(document).ready(function() {
     - [Uncertainty](https://infoproc.blogspot.com/2017/06/epistemic-caution-and-climate-change.html) in climate models, Steve Hsu
 - [(Infinitely large) napkin](https://web.evanchen.cc/napkin.html), a math book by Evan Chen-->
 <ul>
+<li>LIGO might be detecting a <a href="https://gizmodo.com/mystery-deepens-around-newly-detected-ripples-in-space-1837581646">black hole-neutron star merger or something else</a>. (“Given the vastness of the universe, ambiguous detections like S190814bv are likely to be the norm for this new, multimessenger era of astronomy”)</li>
+<li><p><a href="https://blogs.scientificamerican.com/observations/the-problem-with-failing-to-admit-we-dont-know/">Talking about epistemic uncertainties without losing trust</a>, SA</p>
+<blockquote>
+<p>Our experiments, conducted on thousands of participants, suggest that trust is not lost if the communicators can be confident about their uncertainty. This is fine if we have a good survey, because then we can quantify our margins of error, as for unemployment. But surveys may not be reliable, and there may be extra sources of systematic bias which cast doubt on the calculated intervals.</p>
+</blockquote></li>
+<li><a href="https://www.youtube.com/watch?v=Pe9GEMeQ4cs">Theoretical Physics as a Rigorous Approach to Understand Nature</a>, ธิปรัชต์ โชติบุตร</li>
 <li>A <a href="https://www.nature.com/articles/d41586-019-02937-2">not-so-flattering history</a> of Chinese science</li>
 <li><a href="https://scholars-stage.blogspot.com/2019/09/public-opinion-in-authoritarian-states.html">Public opinion in authoritarian states</a> (“The purpose of censorship and thought management differs from regime to regime. The contention of this post is that for many of the most effective authoritarian systems, controlling the <em>thoughts</em> of the ruled is secondary to shaping <em>social cleavages</em> in the population.”)</li>
-<li><p>The arrival of <a href="https://www.nytimes.com/2019/10/20/world/europe/russia-internet-norilsk-youtube-arctic.html">fast internet in Norilsk, Russia, disrupts political calm</a>.</p>
+<li><p>Fast internet <a href="https://www.nytimes.com/2019/10/20/world/europe/russia-internet-norilsk-youtube-arctic.html">disrupts political calm</a>.</p>
 <blockquote>
 <p>“At the direction of the acting prosecutor,” a typical announcement in the municipal newspaper reads, “an examination has been conducted based on information posted on the social network known as ‘Instagram’ on the network known as ‘the internet.’”</p>
 </blockquote></li>
@@ -393,25 +408,26 @@ $(document).ready(function() {
 <li><a href="https://www.nature.com/articles/s41467-019-12808-z">New elevation data triple estimates of global vulnerability to sea-level rise and coastal flooding</a>, Kulp and Strauss 2019 (“Here we show – employing CoastalDEM—that 190 M people (150–250 M, 90% CI) currently occupy global land below projected high tide lines for 2100 under low carbon emissions”)</li>
 </ul></li>
 </ul>
-<h2 id="quantum">Quantum</h2>
+<h3 id="quantum">Quantum</h3>
 <ul>
-<li><a href="http://blog.jessriedel.com/2019/07/24/faq-about-experimental-quantum-darwinism/">Experimental quantum Darwinism FAQ</a>, Jess Riedel</li>
 <li><a href="https://www.scottaaronson.com/blog/?p=4342">Scott Aaronson</a> on Nature’s bizarrely oversold <a href="https://www.nature.com/articles/s41586-019-1557-9">p-bit paper</a></li>
 <li><a href="https://www.nature.com/articles/d41586-019-02675-5">Keep quantum computing global and open</a></li>
-<li><a href="https://phys.org/news/2019-10-quantum-processors-laser.html">Generation of 2D cluster state</a> for universal measurement-based quantum computing with light</li>
+<li><a href="https://phys.org/news/2019-10-quantum-processors-laser.html">Generation of 2D cluster state of light</a> for universal measurement-based quantum computing achieved simultaneously by two independent labs.</li>
+<li><a href="https://www.technologyreview.com/s/614160/quantum-radar-has-been-demonstrated-for-the-first-time/">Quantum radar demonstrated</a> detecting an object one meter away.</li>
+<li><a href="http://blog.jessriedel.com/2019/07/24/faq-about-experimental-quantum-darwinism/">Experimental quantum Darwinism FAQ</a>, Jess Riedel</li>
 <li><a href="http://arxiv.org/abs/1910.06343">Quantum certification and benchmarking</a>, Eisert et al. 1910.06343</li>
 <li><a href="http://www.mkliesch.eu/cvqs.html">Lecture notes on QCVV</a> by Martin Kliesch</li>
 <li><a href="https://arxiv.org/abs/1904.00031">NetKet: A machine learning toolkit for many-body quantum systems</a>, Carleo et al 2019 [<a href="https://github.com/netket/netket">github</a>]</li>
 <li>Peter Wittek <a href="https://globalnews.ca/news/5978926/university-toronto-professor-india/">went missing</a> on September 29 after an avalanche hits Mount Trishul. [<a href="https://www.gofundme.com/f/find-peter-wittek">GoFundMe</a> page]</li>
 </ul>
-<h2 id="meditationconsciousness">Meditation/consciousness</h2>
+<h3 id="meditationconsciousness">Meditation/consciousness</h3>
 <ul>
 <li><a href="https://rationaldharma.com/blog/i-wasted-8-years-of-meditation-because-i-didnt-understand-these-4-things/">I wasted 8 years of meditation because I didn’t understand these 4 things</a>
 <ul>
 <li><a href="http://rationaldharma.com/blog/the-sort-of-complete-guide-to-actually-getting-better-at-meditation/">The (sort of) complete guide to actually getting better at meditation</a></li>
 </ul></li>
 <li><a href="https://slatestarcodex.com/2019/10/16/is-enlightenment-compatible-with-sex-scandals/">Is enlightenment compatible with sex scandal?</a>, SSC (Culasada, the author of the highly acclaimed meditation guide <a href="https://www.amazon.com/Mind-Illuminated-Meditation-Integrating-Mindfulness/dp/1501156985">The Mind Illuminated</a>, allergedly cheat on his wife.)</li>
-<li>New posts on the <a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip">multi-agent models of mind</a> sequence
+<li>New posts in <a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip">multi-agent models of mind</a> sequence
 <ul>
 <li><a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/HbXXd2givHBBLxr3d">Against “System 1” and “System 2”</a></li>
 <li><a href="https://www.lesswrong.com/s/ZbmRyDN8TCpBTZSip/p/i9xyZBS3qzA8nFXNQ">Book Summary: Unlocking the Emotional Brain</a></li>
@@ -420,16 +436,16 @@ $(document).ready(function() {
 </ul></li>
 <li><a href="https://qualiacomputing.com/2019/08/10/logarithmic-scales-of-pleasure-and-pain-rating-ranking-and-comparing-peak-experiences-suggest-the-existence-of-long-tails-for-bliss-and-suffering/">Logarithimic scales of pleasure and pain</a></li>
 </ul>
-<h1 id="musics">Musics</h1>
+<h2 id="musics">Musics</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=3J_7BEHLRTE">Dark Crow</a>, Man with a Mission {Vinland Saga} [OP2]</li>
+<li><a href="https://www.youtube.com/watch?v=3J_7BEHLRTE">Dark Crow</a>, Man with a Mission {Vinland Saga} [OP2] (Definitely Askeladd’s song)</li>
 <li><a href="https://www.youtube.com/watch?v=mBcEfYE3j_E">Sayonara no Yukue</a>, Alisa Takogawa {Owarimonogatari} [ED]</li>
 <li><a href="https://www.youtube.com/watch?v=Mum8Fw6MsUw">Shiny Days</a>, Asaka {Yuru Camp△} [OP]</li>
 <li><a href="https://www.youtube.com/watch?v=kJsk9gz0wLM">Furu Biyori</a>, Eri Sasaki {Yuru Camp△} [ED]</li>
-<li><a href="https://www.youtube.com/watch?v=stWUWcChkBE">Dance of Pales piano cover</a> by Laurence Manning (My favorite Castlevania Symphony of the Night’s soundtrack)</li>
-<li><a href="https://scarletmoonrecords.bandcamp.com/album/indivisible-original-game-soundtrack">Indivisible OST</a>, Hiroki Kikuta (composer for Secret of Mana and Soukaigi)</li>
+<li><a href="https://www.youtube.com/watch?v=stWUWcChkBE">Dance of Pales piano cover</a> by Laurence Manning</li>
+<li><a href="https://scarletmoonrecords.bandcamp.com/album/indivisible-original-game-soundtrack">Indivisible</a>, Hiroki Kikuta: Indivisible / Enter the Evil (1:46 is very Soukaigi-esque) / Degenerate</li>
 </ul>
-<h2 id="touhou">Touhou</h2>
+<h3 id="touhou">Touhou</h3>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLX3DzfJYomB-PMhX_P6cZO8cXk7jOGKN7">YaboiMatoi</a>
 <ul>
@@ -437,25 +453,21 @@ $(document).ready(function() {
 <li><a href="https://www.youtube.com/watch?v=aSUS7pOYUF4">Touhou Kikeijuu medley</a></li>
 </ul></li>
 </ul>
-<h1 id="books">Books</h1>
-<p>Fiction</p>
+<h2 id="manga">Manga</h2>
 <ul>
 <li><a href="https://myanimelist.net/manga/642/Vinland_Saga">Vinland Saga</a>, Vol. 1-14 (Chapter 1-100), Yukimura Makoto</li>
 <li><a href="https://myanimelist.net/manga/112268/Sono_Bisque_Doll_wa_Koi_wo_Suru">Sono Bisque Doll wa Koi wo suru</a>, Vol. 1-4, Fukuda shinichi</li>
 </ul>
-<h1 id="anime">Anime</h1>
+<h2 id="anime">Anime</h2>
 <ul>
-<li><a href="https://myanimelist.net/anime/39198/Kanata_no_Astra">Kanata no Astra</a> (12 Episodes) Lerche {Shinohara Kenta} [Manga] 2019</li>
-<li><a href="https://myanimelist.net/anime/39026/Dumbbell_Nan_Kilo_Moteru?q=dumbell">Dumbbell Nan Kilo Moteru?</a> (12 Episodes) Doga Kobo {Sandrovich Yabako} [Manga] 2019</li>
+<li><a href="https://myanimelist.net/anime/39198/Kanata_no_Astra">Kanata no Astra</a> (12 Episodes) Lerche {Shinohara Kenta} <a href="#manga">Manga</a> 2019</li>
+<li><a href="https://myanimelist.net/anime/39026/Dumbbell_Nan_Kilo_Moteru?q=dumbell">Dumbbell Nan Kilo Moteru?</a> (12 Episodes) Doga Kobo {Sandrovich Yabako} <a href="#manga">Manga</a> 2019</li>
 </ul>
-<!-- # Video Games
-
-- Indivisible, Lab Zero Games-->
-
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Suppose that the error in the trace distance is <span class="math">\(\tau\)</span>, then for small <span class="math">\(\epsilon\)</span>, <span class="math">\(\frac{\epsilon}{2} \le \tau \le \sqrt{\epsilon}\)</span> because <span class="math">\(1-\sqrt{F} \le T \le \sqrt{1-F}\)</span>. Thus, the scaling <span class="math">\(O(1/\epsilon)\)</span> in the infidelity translates to the scaling <span class="math">\(O(1/\epsilon^2)\)</span> in the trace distance. Note that it doesn’t matter for small infidelity <span class="math">\(\epsilon\)</span> whether we use the definition <span class="math">\(F(\rho,\sigma) = \left(\Tr\sqrt{\sqrt{\rho}\sigma\sqrt{\rho}}\right)^2\)</span> or its square root for the fidelity because <span class="math">\(\epsilon = 1-\sqrt{1-\epsilon_{\surd}} \approx \epsilon_{\surd}/2\)</span>.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>The nomenclature “strong” and “weak” simulation comes from <a href="https://arxiv.org/abs/0811.0898">Van den Nest</a>. <a href="https://arxiv.org/abs/quant-ph/0205133">Terhal and DiVincenzo</a> called the former “density computation” and the latter just simulation. A strong simulation computes the outcome probabilities <span class="math">\(p_z\)</span> of a quantum circuit (up to some precision) while a weak simulation samples from a probability distribution <span class="math">\(q_z\)</span> closed to the ideal one. An efficient strong simulation <a href="https://arxiv.org/abs/quant-ph/0205133">implies</a> an efficient weak simulation with no error <span class="math">\(|p_z - q_z| = 0\)</span>.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Suppose that the error in the trace distance is <span class="math">\(\tau\)</span>, then for small <span class="math">\(\epsilon\)</span>, <span class="math">\(\frac{\epsilon}{2} \le \tau \le \sqrt{\epsilon}\)</span> because <span class="math">\(1-\sqrt{F} \le T \le \sqrt{1-F}\)</span>. Thus, the scaling <span class="math">\(O(1/\epsilon)\)</span> in the infidelity translates to the scaling <span class="math">\(O(1/\epsilon^2)\)</span> in the trace distance. Note that it doesn’t matter for small infidelity <span class="math">\(\epsilon\)</span> whether we use the definition <span class="math">\(F(\rho,\sigma) = \left(\Tr\sqrt{\sqrt{\rho}\sigma\sqrt{\rho}}\right)^2\)</span> or its square root for the fidelity because <span class="math">\(\epsilon = 1-\sqrt{1-\epsilon_{\surd}} \approx \epsilon_{\surd}/2\)</span>.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
@@ -473,7 +485,7 @@ $(document).ready(function() {
     property="dc:created">10 Nov 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-11-10 08:49:55 +0000"
+            datetime="2019-11-10 11:47:33 +0000"
             property="dc:modified">10 Nov 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
@@ -506,7 +518,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/f642ee61f314a2977dd7b1b597ddba85d10d6a37/_posts/2019-10-01-sep-oct-2019-log.md"> f642ee6</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/b052ab7990d7f29038311b39c671f135b2c9ed7f/_posts/2019-10-01-sep-oct-2019-log.md"> b052ab7</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -528,7 +540,7 @@ $(document).ready(function() {
     
       <li><span>21 Aug 2019</span> &raquo; <a href="/quantum-supremacy.html">Ingredients for quantum supremacy [Draft]</a></li>
     
-      <li><span>07 May 2019</span> &raquo; <a href="/mar-apr-2019-log.html">March-April 2019 Archive</a></li>
+      <li><span>17 Sep 2019</span> &raquo; <a href="/operator-harmonic-analysis.html">Fourier analysis of linear operators I [Draft]</a></li>
     
   </ul>
 </div>

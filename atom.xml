@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-11-10T11:51:42+00:00</updated>
+ <updated>2019-11-10T12:18:19+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -159,7 +159,7 @@
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Pe9GEMeQ4cs&quot;&gt;Theoretical Physics as a Rigorous Approach to Understand Nature&lt;/a&gt;, ธิปรัชต์ โชติบุตร&lt;/li&gt;
 &lt;li&gt;A &lt;a href=&quot;https://www.nature.com/articles/d41586-019-02937-2&quot;&gt;not-so-flattering history&lt;/a&gt; of Chinese science&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://scholars-stage.blogspot.com/2019/09/public-opinion-in-authoritarian-states.html&quot;&gt;Public opinion in authoritarian states&lt;/a&gt; (“The purpose of censorship and thought management differs from regime to regime. The contention of this post is that for many of the most effective authoritarian systems, controlling the &lt;em&gt;thoughts&lt;/em&gt; of the ruled is secondary to shaping &lt;em&gt;social cleavages&lt;/em&gt; in the population.”)&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Fast internet &lt;a href=&quot;https://www.nytimes.com/2019/10/20/world/europe/russia-internet-norilsk-youtube-arctic.html&quot;&gt;disrupts political calm&lt;/a&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Fast internet &lt;a href=&quot;https://www.nytimes.com/2019/10/20/world/europe/russia-internet-norilsk-youtube-arctic.html&quot;&gt;disrupts political calm&lt;/a&gt; in Norilsk, Russia.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“At the direction of the acting prosecutor,” a typical announcement in the municipal newspaper reads, “an examination has been conducted based on information posted on the social network known as ‘Instagram’ on the network known as ‘the internet.’”&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
@@ -212,12 +212,12 @@
 &lt;/ul&gt;
 &lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3J_7BEHLRTE&quot;&gt;Dark Crow&lt;/a&gt;, Man with a Mission {Vinland Saga} [OP2] (Definitely Askeladd’s song)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3J_7BEHLRTE&quot;&gt;Dark Crow&lt;/a&gt;, Man with a Mission {Vinland Saga} [OP2] (Definitely Askeladd’s song. OP1 is Thorfinn’s song.)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mBcEfYE3j_E&quot;&gt;Sayonara no Yukue&lt;/a&gt;, Alisa Takogawa {Owarimonogatari} [ED]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Mum8Fw6MsUw&quot;&gt;Shiny Days&lt;/a&gt;, Asaka {Yuru Camp△} [OP]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kJsk9gz0wLM&quot;&gt;Furu Biyori&lt;/a&gt;, Eri Sasaki {Yuru Camp△} [ED]&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=stWUWcChkBE&quot;&gt;Dance of Pales piano cover&lt;/a&gt; by Laurence Manning&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://scarletmoonrecords.bandcamp.com/album/indivisible-original-game-soundtrack&quot;&gt;Indivisible&lt;/a&gt;, Hiroki Kikuta: Indivisible / Enter the Evil (1:46 is very Soukaigi-esque) / Degenerate&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://scarletmoonrecords.bandcamp.com/album/indivisible-original-game-soundtrack&quot;&gt;Indivisible&lt;/a&gt;, Hiroki Kikuta: Indivisible / Enter the Evil (1:46 is very &lt;a href=&quot;https://en.wikipedia.org/wiki/Soukaigi&quot;&gt;Soukaigi&lt;/a&gt;-esque) / Degenerate&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;touhou&quot;&gt;Touhou&lt;/h3&gt;
 &lt;ul&gt;
@@ -240,7 +240,7 @@
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;The nomenclature “strong” and “weak” simulation comes from &lt;a href=&quot;https://arxiv.org/abs/0811.0898&quot;&gt;Van den Nest&lt;/a&gt;. &lt;a href=&quot;https://arxiv.org/abs/quant-ph/0205133&quot;&gt;Terhal and DiVincenzo&lt;/a&gt; called the former “density computation” and the latter just simulation. A strong simulation computes the outcome probabilities &lt;span class=&quot;math&quot;&gt;\(p_z\)&lt;/span&gt; of a quantum circuit (up to some precision) while a weak simulation samples from a probability distribution &lt;span class=&quot;math&quot;&gt;\(q_z\)&lt;/span&gt; closed to the ideal one. An efficient strong simulation &lt;a href=&quot;https://arxiv.org/abs/quant-ph/0205133&quot;&gt;implies&lt;/a&gt; an efficient weak simulation with no error &lt;span class=&quot;math&quot;&gt;\(|p_z - q_z| = 0\)&lt;/span&gt;.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;The nomenclature “strong” and “weak” simulation comes from &lt;a href=&quot;https://arxiv.org/abs/0811.0898&quot;&gt;Van den Nest&lt;/a&gt;. &lt;a href=&quot;https://arxiv.org/abs/quant-ph/0205133&quot;&gt;Terhal and DiVincenzo&lt;/a&gt; called the former “density computation” and the latter just simulation. A strong simulation computes an arbitrary outcome probability &lt;span class=&quot;math&quot;&gt;\(p_z\)&lt;/span&gt; of a quantum circuit (up to some precision) while a weak simulation samples from a probability distribution &lt;span class=&quot;math&quot;&gt;\(q_z\)&lt;/span&gt; closed to the ideal one. An efficient strong simulation &lt;a href=&quot;https://arxiv.org/abs/quant-ph/0205133&quot;&gt;implies&lt;/a&gt; an efficient weak simulation with no error &lt;span class=&quot;math&quot;&gt;\(|p_z - q_z| = 0\)&lt;/span&gt;.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;Suppose that the error in the trace distance is &lt;span class=&quot;math&quot;&gt;\(\tau\)&lt;/span&gt;, then for small &lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(\frac{\epsilon}{2} \le \tau \le \sqrt{\epsilon}\)&lt;/span&gt; because &lt;span class=&quot;math&quot;&gt;\(1-\sqrt{F} \le T \le \sqrt{1-F}\)&lt;/span&gt;. Thus, the scaling &lt;span class=&quot;math&quot;&gt;\(O(1/\epsilon)\)&lt;/span&gt; in the infidelity translates to the scaling &lt;span class=&quot;math&quot;&gt;\(O(1/\epsilon^2)\)&lt;/span&gt; in the trace distance. Note that it doesn’t matter for small infidelity &lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt; whether we use the definition &lt;span class=&quot;math&quot;&gt;\(F(\rho,\sigma) = \left(\Tr\sqrt{\sqrt{\rho}\sigma\sqrt{\rho}}\right)^2\)&lt;/span&gt; or its square root for the fidelity because &lt;span class=&quot;math&quot;&gt;\(\epsilon = 1-\sqrt{1-\epsilon_{\surd}} \approx \epsilon_{\surd}/2\)&lt;/span&gt;.&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;

@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-11-12T05:14:25+00:00</updated>
+ <updated>2019-11-12T07:25:05+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -110,11 +110,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&quot;quantum-state-learning&quot;&gt;Quantum state learning&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://theoryofcomputing.org/articles/gs007/&quot;&gt;A Survey of Quantum Property Testing&lt;/a&gt;, Montanaro and Wolf 2016&lt;/li&gt;
-&lt;/ul&gt;
-&lt;object data=&quot;files/quantum_testing_notes.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&#39;application/pdf&#39;/&gt;&lt;/object&gt;
-
-&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://theoryofcomputing.org/articles/gs007/&quot;&gt;A Survey of Quantum Property Testing&lt;/a&gt;, Montanaro and Wolf 2016 [&lt;a href=&quot;https://drive.google.com/file/d/1iSVap34TRnuUJ7U5fzgBkt-8SzloA_-1/view?usp=sharing&quot;&gt;Testing of classical properties handwritten notes&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1508.01797&quot;&gt;Sample-optimal tomography of quantum states&lt;/a&gt;, Haah et al 2017&lt;/p&gt;
 &lt;p&gt;For i.i.d. &lt;span class=&quot;math&quot;&gt;\(\rho^{\otimes N}\)&lt;/span&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Trace_distance&quot;&gt;trace distance&lt;/a&gt; decays exponentially with the rate the &lt;a href=&quot;https://arxiv.org/abs/1102.2684&quot;&gt;Chernoff information&lt;/a&gt;, which is between &lt;span class=&quot;math&quot;&gt;\((\ln F^{-1})/2\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\ln F^{-1}\)&lt;/span&gt; for &lt;span class=&quot;math&quot;&gt;\(F\)&lt;/span&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Fidelity_of_quantum_states&quot;&gt;the fidelity&lt;/a&gt;, so the fidelity is a good figure of merit for the task of distinguishing between &lt;span class=&quot;math&quot;&gt;\(\rho^{\otimes N}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\sigma^{\otimes N}\)&lt;/span&gt;, while the single-copy trace distance tends to overestimate the sample complexity. &lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1303.0436&quot;&gt;Adaptive quantum state tomography improves accuracy quadratically&lt;/a&gt;, Mahler et al 2013

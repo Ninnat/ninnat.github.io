@@ -299,7 +299,7 @@ $(document).ready(function() {
 </ul>
 <p>Boson sampling</p>
 <ul>
-<li><a href="https://arxiv.org/abs/1011.3245">The Computational Complexity of Linear Optics</a> Aaronson and Arkhipov 2011 <!-- [Photonic implementation of boson sampling: a review](https://www.spiedigitallibrary.org/journals/Advanced-Photonics/volume-1/issue-03/034001/Photonic-implementation-of-boson-sampling-a-review/10.1117/1.AP.1.3.034001.full?SSO=1) Brod et al. 2019--></li>
+<li><a href="https://arxiv.org/abs/1011.3245">The Computational Complexity of Linear Optics</a>, Aaronson and Arkhipov 2011 <!-- [Photonic implementation of boson sampling: a review](https://www.spiedigitallibrary.org/journals/Advanced-Photonics/volume-1/issue-03/034001/Photonic-implementation-of-boson-sampling-a-review/10.1117/1.AP.1.3.034001.full?SSO=1) Brod et al. 2019--></li>
 </ul>
 <p>Random circuit sampling</p>
 <ul>
@@ -317,7 +317,7 @@ $(document).ready(function() {
 <li><a href="https://www.scottaaronson.com/blog/?p=4372">Quantum supremacy: the gloves are off</a>, Scott Aaronson</li>
 <li><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-019-1666-5/MediaObjects/41586_2019_1666_MOESM1_ESM.pdf">Supplementary information</a> (pdf)</li>
 </ul>
-<p>The paper claims <em>not</em> to rely on the typical hardness conjecture for approximated sampling, which requires samlpling from a distribution closed to the ideal distribution. (Their fidelity of 0.2% is really low.) Instead they prove that the ability to classically sample from <span class="math">\(F|\av{x|U|0}|^2 + (1-F)/2^n\)</span> in time <span class="math">\(T\)</span> would give a good estimate to the probability <span class="math">\(|\av{0|U|0}|^2\)</span> in time <span class="math">\(\propto T/F\)</span> in the complexity class <a href="https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol">AM</a>, which lies in the third level of the polynomial hierarchy (PH). In their words, “global white noise leads to no more than a linear decrease in fidelity in classical simulation time”. Therefore, a polynomial time <span class="math">\(T/F\)</span> would collapse PH to the third level. (But doesn’t the fidelity decrease exponentially with the number of qubits?)</p></li>
+<p>The paper claims <em>not</em> to rely on the typical hardness conjecture for approximated sampling, which requires sampling from a distribution closed to the ideal distribution. (Their fidelity of 0.2% is really low.) Instead they prove that the ability to classically sample from <span class="math">\(F|\av{x|U|0}|^2 + (1-F)/2^n\)</span> in time <span class="math">\(T\)</span> would give a good estimate to the probability <span class="math">\(|\av{0|U|0}|^2\)</span> in time <span class="math">\(\propto T/F\)</span> in the complexity class <a href="https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol">AM</a>, which lies in the third level of the polynomial hierarchy (PH). In their words, “global white noise leads to no more than a linear decrease in fidelity in classical simulation time”. Therefore, a polynomial time <span class="math">\(T/F\)</span> would collapse PH to the third level. (But doesn’t the fidelity decrease exponentially with the number of qubits?)</p></li>
 <li>Talk by John Martinis at Caltech
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FklMpRiTeTA" frameborder="0" allowfullscreen></iframe>
@@ -337,6 +337,10 @@ $(document).ready(function() {
 <h2 id="quantum-state-learning">Quantum state learning</h2>
 <ul>
 <li><a href="https://theoryofcomputing.org/articles/gs007/">A Survey of Quantum Property Testing</a>, Montanaro and Wolf 2016</li>
+</ul>
+<object data="files/quantum_testing_notes.pdf" width="1000" height="1000" type='application/pdf'/></object>
+
+<ul>
 <li><p><a href="https://arxiv.org/abs/1508.01797">Sample-optimal tomography of quantum states</a>, Haah et al 2017</p>
 <p>For i.i.d. <span class="math">\(\rho^{\otimes N}\)</span>, the <a href="https://en.wikipedia.org/wiki/Trace_distance">trace distance</a> decays exponentially with the rate the <a href="https://arxiv.org/abs/1102.2684">Chernoff information</a>, which is between <span class="math">\((\ln F^{-1})/2\)</span> and <span class="math">\(\ln F^{-1}\)</span> for <span class="math">\(F\)</span> <a href="https://en.wikipedia.org/wiki/Fidelity_of_quantum_states">the fidelity</a>, so the fidelity is a good figure of merit for the task of distinguishing between <span class="math">\(\rho^{\otimes N}\)</span> and <span class="math">\(\sigma^{\otimes N}\)</span>, while the single-copy trace distance tends to overestimate the sample complexity. <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p></li>
 <li><a href="https://arxiv.org/abs/1303.0436">Adaptive quantum state tomography improves accuracy quadratically</a>, Mahler et al 2013
@@ -486,8 +490,8 @@ $(document).ready(function() {
     property="dc:created">10 Nov 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-11-11 01:16:37 +0000"
-            property="dc:modified">11 Nov 2019</time></small></p>
+            datetime="2019-11-12 05:09:52 +0000"
+            property="dc:modified">12 Nov 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -519,7 +523,7 @@ $(document).ready(function() {
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/deb5748a661170a1ae5efdc0187ff8c0da6ac2dd/_posts/2019-10-01-sep-oct-2019-log.md"> deb5748</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/e23c5ce766fb1eaeee3368789ed72bb68f1d47c1/_posts/2019-10-01-sep-oct-2019-log.md"> e23c5ce</a></tiny></p>
 </aside>
 
 <br /><br />

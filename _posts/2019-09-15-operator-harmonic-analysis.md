@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Representations: morphisms and functors
+title: Representations&#58; morphisms and functors
 subtitle: Schur's lemma and Frobenius reciprocity for induction and restriction
 date: 2019-11-13
 categories:

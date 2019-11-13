@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Fourier analysis of linear operators I [Draft]
-subtitle: Schur's lemma and Frobenius reciprocity
-date: 2019-09-17
+title: Representations: morphisms and functors
+subtitle: Schur's lemma and Frobenius reciprocity for induction and restriction
+date: 2019-11-13
 categories:
   - Representation theory
 tags:
 ---
 
+*created: 17 Sep 2019; modified: 13 Nov 2019; status: finished*
+
 <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
 
-*Representation theory is Fourier analysis* (substantially generalized). Given a representation $V$ of a group $G$, it decomposes (under some assumptions on $G$ and $V$, for example if $G$ is compact) into a direct sum of irreducible parts
+<!-- *Representation theory is Fourier analysis* (substantially generalized). Given a representation $V$ of a group $G$, it decomposes (under some assumptions on $G$ and $V$, for example if $G$ is compact) into a direct sum of irreducible parts
 $$\begin{align}
 V \underset{G}{\cong} \bigoplus_j \bigoplus^{n_j} V_j
 \end{align}$$
@@ -22,7 +24,7 @@ I will talk about the decomposition of representations of the form $\End V = V^*
 $$\begin{align}
   \lim_{k\to\infty}\End V_k \underset{\SO(3)}{\cong} \bigoplus_{j=0}^{\infty} V_{2j+1} \cong L^2(S^2),
 \end{align}$$
-where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The space of linear operators on the left contains all [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) *without redundancy*, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) easily follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups $G$ and spaces with $G$-symmetry.
+where $V_{2j+1}$ is the unique $(2j+1)$-dimensional ("spin-$j$") irrep of $\SO(3)$. The space of linear operators on the left contains all [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics) *without redundancy*, and thus can be identified with the space of (square-integrable) functions on the sphere $S^2$ on the right. To be clear, (2) easily follows from the well known Clebsch-Gordan formula. The point is how to generalize to other groups $G$ and spaces with $G$-symmetry. -->
 
 <div id="toc"></div>
 
@@ -95,7 +97,7 @@ Does anyone remember what the celebrated [Wigner-Eckart theorem](https://en.wiki
 
 For us, a generalization of *spherical tensor operators* will provide a convenient basis for the space of linear operators.
 
-# The induction functor
+# Induced representations
 
 Given a representation of $G$, we can always restrict it to a representation of a subgroup $H \subset G$. What about the inverse process of constructing a $G$-representation out of an arbitrary $H$-representation? The language of categories and modules will prove useful here. Restriction is a *functor* from the category of $G$-representations to the category of $H$-representations. Given categories $\mathcal C$ and $\mathcal D$, a (covariant) **functor** $\mathcal{F}:\mathcal C\to \mathcal D$ assigns to every object in $\mathcal C$ an object in $\mathcal D$ and to every morphism in $\mathcal C$ a morphism in $\mathcal D$:
 $$\begin{align}
@@ -107,7 +109,7 @@ $$\begin{align}
   \mathcal{F}(1_{\mathcal C}) &= 1_{\mathcal D}, \\
   \mathcal{F}(f\circ g) &= \mathcal{F}(f) \circ \mathcal{F}(g).
 \end{align}$$
-Restriction belongs to a simple kind of functors, *forgetful functors* that simply forget information, in this case the structure of $G$. Restriction therefore cannot have a strict inverse. An insight from category theory is that we can construct the induction functor as a kind of "weak inverse" to the restriction functor called an *adjoint*. More precisely, induction should be defined as a *left adjoint* (because $\mathrm{Ind}$ is in the left slot)
+Restriction belongs to a simple kind of functors, *forgetful functors* that simply forget information, in this case the structure of $G$. Restriction therefore cannot have a strict inverse. An insight from category theory is that we can construct the induction functor as a kind of "weak inverse" to the restriction functor called an *adjoint*. More precisely, induction should be define as a *left adjoint* (because $\mathrm{Ind}$ is in the left slot)
 $$\begin{align}
   \Hom_G(\mathrm{Ind}_L\,V,W) \cong \Hom_H(V,\mathrm{Res}\,W) \label{left-adjoint}
 \end{align}$$
@@ -115,9 +117,9 @@ or a *right adjoint*
 $$\begin{align}
   \Hom_G(V,\mathrm{Ind}_R\,W) \cong \Hom_H(\mathrm{Res}\,V,W) \label{right-adjoint}
 \end{align}$$
-to the restriction functor $\mathrm{Res}$. [^5] These canonical isomorphisms (14,15) of intertwiner space are known as [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity). Furthermore, we will see that the distinction between left and right adjoint comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or as a $(k[H],k[G])$-bi-module.
+to the restriction functor $\mathrm{Res}$. [^5] These canonical isomorphisms (14,15) of intertwiner space are known as [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity). (We will see that the distinction between left and right adjoint comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or as a $(k[H],k[G])$-bi-module.)
 
-To emphasize, induction is defined so that it satisfies Frobenius reciprocity. This point might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the right one, there are also inequivalent definitions of induced representation:
+The point that induction is defined so that it satisfies Frobenius reciprocity might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the right one, there are also inequivalent definitions of induced representation:
 $$\begin{align}
   \mathrm{Ind} W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \\
   \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \\
@@ -125,16 +127,45 @@ $$\begin{align}
 \end{align}$$
 to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
 
+## Application: Multiplicity
+
+Before we figure out what Frobenius reciprocity really means, let us take for granted the definition of the induced representation for finite groups and think about what they are.
+Inspecting the simplest case, when $H$ is just the identity element, would tell you that the induced representation
+$$\mathrm{Ind} \ket{e} =  \bigoplus_{g}g\ket{e}$$
+where $\ket{e}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and the $G$-action is simply group multiplication $g\ket{g'} = \ket{gg'}$. This representation is nothing but the represention *on the group algebra* $\C[G]$ (called a regular representation). Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
+
+Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. Every completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
+$$\begin{align}
+V &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
+\end{align}$$
+each with (possibly zero) multiplicity $n_{\lambda}$. An important special is when the left hand side is a tensor product of irreps, then (19) is the *Clebsch-Gordan decomposition*, the multiplicities in which when $G$ is a unitary group $\U(d)$ are known as the *Littlewood-Richardson coefficients*.  
+
+We are going to rewrite (19) so that there is no sum over multiplcities using Schur's lemma magic.
+$$\begin{align}
+V &
+\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathrm{Hom}_G (V_{\lambda},V)
+\end{align}$$
+because
+$$\begin{align}
+\mathrm{Hom}_G (V_{\lambda},V) &\simeq \bigoplus^{n_{\lambda}} \mathrm{Hom}_G ( V_{\lambda}, V_{\lambda} ) \simeq \mathbb{C}^{n_{\lambda}}.
+\end{align}$$
+(20) is called an *isotypic decomposition* of a representation where each term in the summand is an isotype. Now $n_{\lambda}$ is the dimension of the *multiplicity space* $\mathrm{Hom}_G (V_{\lambda},V)$ and this is exactly what shows up in Frobenius reciprocity! In particular,
+$$\begin{align}
+  \dim \Hom_G(\mathrm{Ind}_L\,V,W) = \dim \Hom_H(V,\mathrm{Res}\,W)
+\end{align}$$
+says that the number of times a $G$-irrep $W$ appears in the representation $\mathrm{Ind}V$ induced from $V$ is the same as the number of times the restriction $\mathrm{Res}W$ to $H$ appears in an $H$-irrep $V$. [^6]
+
+When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension and that
+$$\dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.$$
 
 
-
-## Foundation: adjoint functor
+## Foundation: Adjoint functor
 
 <!-- There are only two universal properties: that of being initial and terminal. This translates to the usual way of presenting universal properties in terms of commutative diagrams when one realizes that commutative diagrams are morphisms in a category of morphisms e.g. "[slice category](https://en.wikipedia.org/wiki/Comma_category#Slice_category)".-->
 
 ### Example: The simplest adjoint functor
 
-What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^6]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer(https://math.stackexchange.com/a/25515)] from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
+What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^7]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer(https://math.stackexchange.com/a/25515)] from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
 $$ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). $$
 A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one-to-one correspondence](https://en.wikipedia.org/wiki/Galois_connection)
 $$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$
@@ -142,7 +173,7 @@ Suppose, for instance, that $\mathcal A = \mathcal B = \mathbb{N}$, the natural 
 
 ### Example: Free functor
 
-Many useful constructions, like those of induced representations, are adjoint functors of a forgetful functor. The **free functor** $\mathcal F:$ from the category of all sets to the category of all groups sends any set to its [*free group*](https://en.wikipedia.org/wiki/Free_group), the group of all "words", non-commutative product constructed from the alphabet in $S$ and their inverses i.e. $S$ generates $\mathcal F(S)$ without any [constraint](https://en.wikipedia.org/wiki/Presentation_of_a_group). The free functor is defined by the universal property [^7] that giving a function $f$ from $S$ to (the underlying set of) an arbitrary group $G$ is equivalent to giving a *unique* group homomorphism $\varphi$ from the free group $\mathcal F(S)$ to $G$. For example, the empty set gives the trivial group with one element. (The empty word is the identity.) In other words, $\mathcal F(S)$ can simulate any interaction between $S$ and an arbitrary group $G$ and does so optimally (the uniqueness of $\varphi$).
+Many useful constructions, like those of induced representations, are adjoint functors of a forgetful functor. The **free functor** $\mathcal F:$ from the category of all sets to the category of all groups sends any set to its [*free group*](https://en.wikipedia.org/wiki/Free_group), the group of all "words", non-commutative product constructed from the alphabet in $S$ and their inverses i.e. $S$ generates $\mathcal F(S)$ without any [constraint](https://en.wikipedia.org/wiki/Presentation_of_a_group). The free functor is defined by the universal property [^8] that giving a function $f$ from $S$ to (the underlying set of) an arbitrary group $G$ is equivalent to giving a *unique* group homomorphism $\varphi$ from the free group $\mathcal F(S)$ to $G$. For example, the empty set gives the trivial group with one element. (The empty word is the identity.) In other words, $\mathcal F(S)$ can simulate any interaction between $S$ and an arbitrary group $G$ and does so optimally (the uniqueness of $\varphi$).
 <center>
 <img src="/assets/img/2019/free-group.PNG" style="height: 150px;"/>
 </center>
@@ -179,7 +210,7 @@ $$\begin{align}
 \end{align}$$
 To unpack its meaning, we have to properly define what $M,N,P$ and these [tensor products between modules](https://en.wikipedia.org/wiki/Tensor_product_of_modules) are.
 
-The tensor product $M \otimes_R N$ of a right $R$-module $M$ and a left-$R$-module $N$ is the vector space $M \otimes N$ quotient by the relation $mr \otimes n - m \otimes rn = 0$ for every $r \in R$. ("$\otimes$ commutes with $R$.") [^8] With a $(S,R)$-bi-module $P$ at our disposal, we can turn an $R$-module into an $S$-module and vice versa. Let $M$ be a left $R$-module and $N$ be a left $S$-module.
+The tensor product $M \otimes_R N$ of a right $R$-module $M$ and a left-$R$-module $N$ is the vector space $M \otimes N$ quotient by the relation $mr \otimes n - m \otimes rn = 0$ for every $r \in R$. ("$\otimes$ commutes with $R$.") [^9] With a $(S,R)$-bi-module $P$ at our disposal, we can turn an $R$-module into an $S$-module and vice versa. Let $M$ be a left $R$-module and $N$ be a left $S$-module.
 
 - $P \otimes_R M$ is a left $S$-module.
 - $\Hom_S (P,N)$ is a left $R$-module.
@@ -238,49 +269,15 @@ $$\begin{align}
   \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W),\\
   \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W).
 \end{align}$$
-We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$.
+We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, () is the same as $\mathrm{Ind}_L W = \bigoplus_{k\in G/H} kW$.
 
-## Induced representation, finally
+There is much more that can be said about induced representations. (How the right adjoint is isomorphic to the left adjoint for finite groups. What the left and right adjoints [look like](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).)
 
-The left adjoint (33) is the same as
-$$\begin{align}
-  \mathrm{Ind}_L W &= \bigoplus_{k \in G/H} kW.
-\end{align}$$
-$$\begin{align}
-  \mathrm{Ind}_R W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \\
-  \mathrm{Ind}_L W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)},
-\end{align}$$
 
-Let's make sure that (33) and (34) correctly give the definition (16) in the case of finite groups. (
-
-  (I will not explain the Lie-group version in this post REU 2015 paper of [Santiago Chaves Aguilar
-](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf)))
-
-## Applications: multiplicity
-
-Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. A completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
-$$\begin{align}
-V &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
-\end{align}$$
-each with (possibly zero) \emph{multiplicity} $n_{\lambda}$. A decomposition is said to be \emph{multiplicity-free} if every $n_{\lambda}$ is either 0 or 1. By Schur's lemma,
-$$\begin{align}
-\text{Hom}_G (V_{\lambda},V) &\simeq \bigoplus^{n_{\lambda}} \text{Hom}_G ( V_{\lambda}, V_{\lambda} ) \simeq \mathbb{C}^{n_{\lambda}}.
-\end{align}$$
-$\mathbb{C}^{n_{\lambda}}$ is called the \emph{multiplicity space} where $n_{\lambda} = \dim \text{Hom}_G (V_{\lambda},V)$. Putting these together, we obtain the \emph{isotypic decomposition} of $V$:
-$$\begin{align}
-V &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{n_{\lambda}}
-\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \text{Hom}_G (V_{\lambda},V).
-\end{align}$$
-An important special case is when $V$ is a tensor product of irreps. $V$ may not be irreducible and we have the \emph{Clebsch-Gordan decomposition}
-$$\begin{align}
-	V_{\mu} \otimes V_{\nu} &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathbb{C}^{n^{\lambda}_{\mu\nu}}.
-\end{align}$$
-The collection of $\lambda$ that appears in the direct sum is called the \emph{Clebsch-Gordan series}, and the overlap between a vector in $V_{\mu} \otimes V_{\nu}$ and a vector in $V_{\lambda}$ is a \emph{Clebsch-Gordan coefficient}.
-
+<!--
 [Nakayama isomorphism](https://math.stackexchange.com/questions/225730/left-adjoint-and-right-adjoint-nakayama-isomorphism)
 
-
-<!-- # Tensor product representations
+# Tensor product representations
 
 # Fourier analysis
 
@@ -312,8 +309,10 @@ It is irreducible because $\rho(1)$ cannot be diagonalized over $\R$. But every 
 [^5]: The name "adjoint" comes from the similarity to how the adjoint of a linear operator in an inner product space is defined:
 $\av{x,Ay} = \av{A\dgg x,y}$.
 
-[^6]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
+[^6]: As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = \C[G]$ since the regular representation of an abelian group contains only one copy of each irrep.
 
-[^7]: I recommend reading [this blog post](https://jeremykun.com/2013/05/24/universal-properties/) by Jeremy Kun. Excerpt: "There are only two universal properties and they are that of being *initial* and *final*."
+[^7]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
 
-[^8]: A tensor product of two nonzero modules can turn out to be zero. For example, $\Z/2\Z \otimes_{\Z} \Z/3\Z = 0$ because $1m\otimes_{\Z} n = (3-2)m\otimes_{\Z} n = m\otimes_{\Z} 3n - 2m\otimes_{\Z} n = 0$ vanishes identically for any $m \in \Z/2\Z$ and $n \in \Z/3\Z$. More generally, the same conclusion can be reached for $\Z/a\Z \otimes_{\Z} \Z/b\Z$ when $a$ and $b$ are [coprime](https://en.wikipedia.org/wiki/Coprime_integers) since we can always find integers $x$ and $y$ such that $ax+by=1$.
+[^8]: I recommend reading [this blog post](https://jeremykun.com/2013/05/24/universal-properties/) by Jeremy Kun. Excerpt: "There are only two universal properties and they are that of being *initial* and *final*."
+
+[^9]: A tensor product of two nonzero modules can turn out to be zero. For example, $\Z/2\Z \otimes_{\Z} \Z/3\Z = 0$ because $1m\otimes_{\Z} n = (3-2)m\otimes_{\Z} n = m\otimes_{\Z} 3n - 2m\otimes_{\Z} n = 0$ vanishes identically for any $m \in \Z/2\Z$ and $n \in \Z/3\Z$. More generally, the same conclusion can be reached for $\Z/a\Z \otimes_{\Z} \Z/b\Z$ when $a$ and $b$ are [coprime](https://en.wikipedia.org/wiki/Coprime_integers) since we can always find integers $x$ and $y$ such that $ax+by=1$.

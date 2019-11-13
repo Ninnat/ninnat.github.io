@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Category of representations&#58; morphisms and induction functor
-subtitle: Schur's lemma and Frobenius reciprocity
+title: Representations&#58; morphisms and induction functor
+subtitle: Schur's lemma and Frobenius reciprocity for induction and restriction
 date: 2019-11-13
 categories:
   - Representation theory

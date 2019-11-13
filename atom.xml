@@ -4,7 +4,7 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2019-11-13T08:49:51+00:00</updated>
+ <updated>2019-11-13T09:03:38+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
@@ -13,10 +13,10 @@
 
  
  <entry>
-   <title>Representations&#58; morphisms and functors</title>
-   <link href="/operator-harmonic-analysis.html"/>
+   <title>Category of representations&#58; morphisms and induction functor</title>
+   <link href="/representation-category.html"/>
    <updated>2019-11-13T00:00:00+00:00</updated>
-   <id>h/operator-harmonic-analysis</id>
+   <id>h/representation-category</id>
    <content type="html">&lt;p&gt;&lt;em&gt;created: 17 Sep 2019; modified: 13 Nov 2019; status: finished&lt;/em&gt;&lt;/p&gt;
 &lt;!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.--&gt;
 

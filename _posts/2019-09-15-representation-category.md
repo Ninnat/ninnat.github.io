@@ -77,7 +77,7 @@ $$\begin{align}
 ## The meaning of tensor operator
 <!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
 
-I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a *vector operator*. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between irreps $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \odot \rho(R)$ where $\odot$ is a placeholder for an argument) induces a rotation of $\mathbf{r}$: [^3]
+I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a vector operator. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between irreps $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \odot \rho(R)$ where $\odot$ is a placeholder for an argument) induces a rotation of $\mathbf{r}$: [^3]
 $$\begin{align}
   \sigma\dgg(R)T(\mathbf{r}_j)\rho(R) = R_j{}^k T(\mathbf{r}_k).
 \end{align}$$
@@ -109,13 +109,13 @@ $$\begin{align}
   \mathcal{F}(1_{\mathcal C}) &= 1_{\mathcal D}, \\
   \mathcal{F}(f\circ g) &= \mathcal{F}(f) \circ \mathcal{F}(g).
 \end{align}$$
-Restriction belongs to a simple kind of functors, *forgetful functors* that simply forget information, in this case the structure of $G$. Restriction therefore cannot have a strict inverse. An insight from category theory is that we can construct the induction functor as a kind of "weak inverse" to the restriction functor called an *adjoint*. More precisely, induction should be define as a *left adjoint* (because $\mathrm{Ind}$ is in the left slot)
+Restriction belongs to a simple kind of functors, *forgetful functors* that simply forget information, in this case the structure of $G$. Restriction therefore cannot have a strict inverse. An insight from category theory is that we can construct the induction functor as a kind of "weak inverse" to the restriction functor called an *adjoint*. More precisely, induction should be define as a **left adjoint** (because $\mathrm{Ind}$ is in the left slot)
 $$\begin{align}
-  \Hom_G(\mathrm{Ind}_L\,V,W) \cong \Hom_H(V,\mathrm{Res}\,W) \label{left-adjoint}
+  \Hom_G(\mathrm{Ind}_L\,V,W) \cong \Hom_H(V,\mathrm{Res}\,W)
 \end{align}$$
-or a *right adjoint*
+or a **right adjoint**
 $$\begin{align}
-  \Hom_G(V,\mathrm{Ind}_R\,W) \cong \Hom_H(\mathrm{Res}\,V,W) \label{right-adjoint}
+  \Hom_G(V,\mathrm{Ind}_R\,W) \cong \Hom_H(\mathrm{Res}\,V,W)
 \end{align}$$
 to the restriction functor $\mathrm{Res}$. [^5] These canonical isomorphisms (14,15) of intertwiner space are known as [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity). (We will see that the distinction between left and right adjoint comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or as a $(k[H],k[G])$-bi-module.)
 
@@ -130,9 +130,9 @@ to give a few. The functorial viewpoint makes it clear that Frobenius reciprocit
 ## Application: Multiplicity
 
 Before we delve into what Frobenius reciprocity really means, let us take for granted the definition of the induced representation for finite groups and think about what they are.
-Inspecting the simplest case, when $H$ is just the identity element, would tell you that the induced representation
-$$\mathrm{Ind} \ket{e} =  \bigoplus_{g}g\ket{e}$$
-where $\ket{e}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and $G$ acts by group multiplication $g\ket{g'} = \ket{gg'}$. This representation is nothing but the represention *on the group algebra* $k[G]$ (called a **regular representation**). Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
+Inspecting the simplest case when $H$ is just the identity element would tell you that the induced representation
+$$\mathrm{Ind} 1 =  \bigoplus_{g}g\ket{1}$$
+where $\ket{1}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and $G$ acts by group multiplication $g\ket{g'} = \ket{gg'}$ ($g\ket{1}=\ket{g}$). This is nothing but the represention *on the group algebra* $k[G]$, the (left) **regular representation**. Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
 
 Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. Every completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
 $$\begin{align}
@@ -155,9 +155,9 @@ $$\begin{align}
 \end{align}$$
 says that the number of times a $G$-irrep $W$ appears in the representation $\mathrm{Ind}V$ induced from $V$ is the same as the number of times the restriction $\mathrm{Res}W$ to $H$ appears in an $H$-irrep $V$. [^6]
 
-When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension and that
+When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension and in particular
 $$\dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.$$
-But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical variety](https://en.wikipedia.org/wiki/Spherical_variety)).
+But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical varieties](https://en.wikipedia.org/wiki/Spherical_variety)).
 
 
 ## Foundation: Adjoint functor
@@ -305,7 +305,7 @@ It is irreducible because $\rho(1)$ cannot be diagonalized over $\R$. But every 
 
 [^3]: We think of $R$ as both a rotation matrix (the defining representation of $\SO(3)$) and an abstract group element. We also assume the [Einstein summation convention](https://en.wikipedia.org/wiki/Einstein_notation).
 
-[^4]: Why can't there be more than one copy of $(R,\R^3)$ in $\Hom(V,W)$? Because every tensor product $V\otimes W$ of irreducible $\SO(3)$-representations decomposes *without multiplicity*. Wigner gave a characterization of some of these so-called *simply reducible groups* which was then [generalized by Mackey](https://projecteuclid.org/euclid.pjm/1103039895).
+[^4]: Why can't there be more than one copy of $(R,\R^3)$ in $\Hom(V,W)$? Because every tensor product $V\otimes W$ of irreducible $\SO(3)$-representations decomposes *without multiplicity*. Wigner gave a characterization of some of these so-called *simply reducible groups* which was later [generalized by Mackey](https://projecteuclid.org/euclid.pjm/1103039895).
 
 [^5]: The name "adjoint" comes from the similarity to how the adjoint of a linear operator in an inner product space is defined:
 $\av{x,Ay} = \av{A\dgg x,y}$.

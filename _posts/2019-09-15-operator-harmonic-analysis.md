@@ -95,7 +95,7 @@ irrep $U$ of $\SO(3)$.
 
 Does anyone remember what the celebrated [Wigner-Eckart theorem](https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem) says in the form usually taught in a quantum mechanics class? Definitely not me. But by recognizing tensor operators as intertwiners, the theorem is just Schur's lemma in disguise, specialized to intertwiners between $U$ and $\Hom(V,W)$; the basis-independence of the "reduced matrix element" $\av{j',m'||T_k||j,m}$ is just the statement that the tensor operator is proportional to the identity $T = c\id$ (because it commutes with every $G$-action because it is $G$-equivariant) in the block isomorphic to the irrep $U$.
 
-For us, a generalization of *spherical tensor operators* will provide a convenient basis for the space of linear operators.
+<!--For us, a generalization of *spherical tensor operators* will provide a convenient basis for the space of linear operators.-->
 
 # Induced representations
 
@@ -129,18 +129,18 @@ to give a few. The functorial viewpoint makes it clear that Frobenius reciprocit
 
 ## Application: Multiplicity
 
-Before we figure out what Frobenius reciprocity really means, let us take for granted the definition of the induced representation for finite groups and think about what they are.
+Before we delve into what Frobenius reciprocity really means, let us take for granted the definition of the induced representation for finite groups and think about what they are.
 Inspecting the simplest case, when $H$ is just the identity element, would tell you that the induced representation
 $$\mathrm{Ind} \ket{e} =  \bigoplus_{g}g\ket{e}$$
-where $\ket{e}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and the $G$-action is simply group multiplication $g\ket{g'} = \ket{gg'}$. This representation is nothing but the represention *on the group algebra* $\C[G]$ (called a regular representation). Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
+where $\ket{e}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and $G$ acts by group multiplication $g\ket{g'} = \ket{gg'}$. This representation is nothing but the represention *on the group algebra* $k[G]$ (called a **regular representation**). Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
 
 Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. Every completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
 $$\begin{align}
 V &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
 \end{align}$$
-each with (possibly zero) multiplicity $n_{\lambda}$. An important special is when the left hand side is a tensor product of irreps, then (19) is the *Clebsch-Gordan decomposition*, the multiplicities in which when $G$ is a unitary group $\U(d)$ are known as the *Littlewood-Richardson coefficients*.  
+each with (possibly zero) multiplicity $n_{\lambda}$. An important special is when the left hand side is a tensor product of irreps, then (19) is the **Clebsch-Gordan decomposition**, the multiplicities in which when $G$ is a unitary group $\U(d)$ are known as the [Littlewood-Richardson coefficients](https://en.wikipedia.org/wiki/Littlewood%E2%80%93Richardson_rule#Littlewood%E2%80%93Richardson_coefficients).  
 
-We are going to rewrite (19) so that there is no sum over multiplcities using Schur's lemma magic.
+We are going to rewrite (18) so that there is no sum over multiplcities using Schur's lemma magic.
 $$\begin{align}
 V &
 \stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathrm{Hom}_G (V_{\lambda},V)
@@ -149,7 +149,7 @@ because
 $$\begin{align}
 \mathrm{Hom}_G (V_{\lambda},V) &\simeq \bigoplus^{n_{\lambda}} \mathrm{Hom}_G ( V_{\lambda}, V_{\lambda} ) \simeq \mathbb{C}^{n_{\lambda}}.
 \end{align}$$
-(20) is called an *isotypic decomposition* of a representation where each term in the summand is an isotype. Now $n_{\lambda}$ is the dimension of the *multiplicity space* $\mathrm{Hom}_G (V_{\lambda},V)$ and this is exactly what shows up in Frobenius reciprocity! In particular,
+(19) is called an **isotypic decomposition** of a representation where each term in the summand is an isotype. Now $n_{\lambda}$ is the dimension of the **multiplicity space** $\mathrm{Hom}_G (V_{\lambda},V)$ which is exactly what shows up in Frobenius reciprocity! In particular,
 $$\begin{align}
   \dim \Hom_G(\mathrm{Ind}_L\,V,W) = \dim \Hom_H(V,\mathrm{Res}\,W)
 \end{align}$$
@@ -157,6 +157,7 @@ says that the number of times a $G$-irrep $W$ appears in the representation $\ma
 
 When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension and that
 $$\dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.$$
+But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical variety](https://en.wikipedia.org/wiki/Spherical_variety)).
 
 
 ## Foundation: Adjoint functor
@@ -165,7 +166,7 @@ $$\dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.$$
 
 ### Example: The simplest adjoint functor
 
-What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^7]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer(https://math.stackexchange.com/a/25515)] from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
+What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^7]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer](https://math.stackexchange.com/a/25515)] from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
 $$ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). $$
 A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one-to-one correspondence](https://en.wikipedia.org/wiki/Galois_connection)
 $$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$
@@ -269,9 +270,9 @@ $$\begin{align}
   \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W),\\
   \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W).
 \end{align}$$
-We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, () is the same as $\mathrm{Ind}_L W = \bigoplus_{k\in G/H} kW$.
+We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, $k[G]\otimes_{k[H]} V$ in (37) is the same as $\mathrm{Ind}_L W = \bigoplus_{k\in G/H} kW$.
 
-There is much more that can be said about induced representations. (How the right adjoint is isomorphic to the left adjoint for finite groups. What the left and right adjoints [look like](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).)
+There is much more that can be said about induced representations. (How the right and left adjoints for finite groups are [isomorphic](https://math.stackexchange.com/a/226493). How they are in general [not isomorphic](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).) But that would be a topic for another day.
 
 
 <!--

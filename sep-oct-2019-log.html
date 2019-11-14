@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Sep-Oct 2019 Archive</title>
+    <title>September-October 2019 Archive</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
       <!--[if lt IE 9]>
@@ -20,13 +20,13 @@
 
 
 
-  <meta name="description" content="Sep-Oct 2019 Archive" />
+  <meta name="description" content="September-October 2019 Archive" />
   
 
 
 <meta http-equiv="Content-Language" content="en">
 <!-- RDFa Metadata (in DublinCore) -->
-<meta property="dc:title" content="Sep-Oct 2019 Archive" />
+<meta property="dc:title" content="September-October 2019 Archive" />
 <meta property="dc:creator" content="Ninnat Dangniam" />
 <meta property="dc:date" content="2019-11-10 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
@@ -38,7 +38,7 @@
 <meta property="dc:type" content="website" />
 <meta name="dc.language" content="en, zh-Hans, cmn">
 <!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="Sep-Oct 2019 Archive" />
+<meta property="og:title" content="September-October 2019 Archive" />
 <meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
@@ -49,14 +49,14 @@
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="Ninnat Dangniam"/>
 <meta name="citation_date" content="2019-11-10 00:00:00 +0000"/>
-<meta name="citation_title" content="Sep-Oct 2019 Archive"/>
+<meta name="citation_title" content="September-October 2019 Archive"/>
 <meta name="citation_journal_title" content="Schur's Lemming"/>
 <!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
 <!-- Twitter card summary -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Sep-Oct 2019 Archive" />
-<meta name="twitter:description" content="Sep-Oct 2019 Archive" />
+<meta name="twitter:title" content="September-October 2019 Archive" />
+<meta name="twitter:description" content="September-October 2019 Archive" />
 <meta name="twitter:image" content="/assets/img/capybara.png" />
 
     <!-- Le styles -->
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
     <!-- Custom masthead (big titles) -->
 
 <header class="jumbotron subhead">
-    <h1 class="entry-title">Sep-Oct 2019 Archive</h1>
+    <h1 class="entry-title">September-October 2019 Archive</h1>
     <h3></h3>
 </header>
 
@@ -214,13 +214,10 @@ $(document).ready(function() {
           </br>
 <!--          <font size="+1"><b> Contents </b></font>
           <ul>
-<li><a href="#writings">Writings</a>
-<ul>
-<li><a href="#quantum-computational-supremacy">Quantum computational supremacy</a></li>
-</ul></li>
+<li><a href="#writings">Writings</a></li>
 <li><a href="#research">Research</a>
 <ul>
-<li><a href="#quantum-computational-supremacy-1">Quantum computational supremacy</a>
+<li><a href="#quantum-computational-supremacy">Quantum computational supremacy</a>
 <ul>
 <li><a href="#a-literature-review">A literature review</a></li>
 <li><a href="#what-does-an-np-oracle-actually-do">What does an NP oracle actually do?</a></li>
@@ -248,10 +245,9 @@ $(document).ready(function() {
 
 </div>
 <h1 id="writings">Writings</h1>
-<h2 id="quantum-computational-supremacy">Quantum computational supremacy</h2>
 <p>You would have to live under a rock to not hear of the leaked Google’s paper and the subsequent <a href="https://ai.googleblog.com/2019/10/quantum-supremacy-using-programmable.html">official announcement</a> of their demonstration of “quantum supremacy”.</p>
 <ul>
-<li>Back before the leak, I gave an online talk (organized by <a href="https://qtft.org/">Quantum Technology Foundation of Thailand</a>) in which I tried to explain what quantum supremacy really means by explaining what “collapse of the polynomial hierarchy (PH)” means.</li>
+<li>Back before the leak, I gave an online talk (organized by <a href="https://qtft.org/">Quantum Technology Foundation of Thailand</a>) in which I tried to explain what quantum supremacy really means by explaining the “collapse of the polynomial hierarchy (PH)”.</li>
 </ul>
 <center>
 <iframe width="576" height="420" src="https://slides.com/ninnat/deck-8/embed" frameborder="0" allowfullscreen>
@@ -264,7 +260,7 @@ $(document).ready(function() {
 <li>Misunderstanding ensued after the Google’s announcement went viral (for example, that we now have a fully functional quantum computer that can break codes), which compelled me to write <a href="https://ninnat.github.io/google-supremacy.html">Google’s quantum supremacy FAQ</a> (in Thai) targeted at an interested layperson.</li>
 </ul>
 <h1 id="research">Research</h1>
-<h2 id="quantum-computational-supremacy-1">Quantum computational supremacy</h2>
+<h2 id="quantum-computational-supremacy">Quantum computational supremacy</h2>
 <h3 id="a-literature-review">A literature review</h3>
 My attempt at classifying some milestone supremacy results <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>
 <center>
@@ -471,7 +467,7 @@ My attempt at classifying some milestone supremacy results <a href="#fn1" class=
 <hr />
 <ol>
 <li id="fn1"><p>The nomenclature “strong” and “weak” simulation comes from <a href="https://arxiv.org/abs/0811.0898">Van den Nest</a>. <a href="https://arxiv.org/abs/quant-ph/0205133">Terhal and DiVincenzo</a> called the former “density computation” and the latter just simulation. A strong simulation computes an arbitrary outcome probability <span class="math">\(p_z\)</span> of a quantum circuit (up to some precision) while a weak simulation samples from a probability distribution <span class="math">\(q_z\)</span> closed to the ideal one. An efficient strong simulation <a href="https://arxiv.org/abs/quant-ph/0205133">implies</a> an efficient weak simulation with no error <span class="math">\(|p_z - q_z| = 0\)</span>.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Suppose that the error in the trace distance is <span class="math">\(\tau\)</span>, then for small <span class="math">\(\epsilon\)</span>, <span class="math">\(\frac{\epsilon}{2} \le \tau \le \sqrt{\epsilon}\)</span> because <span class="math">\(1-\sqrt{F} \le T \le \sqrt{1-F}\)</span>. Thus, the scaling <span class="math">\(O(1/\epsilon)\)</span> in the infidelity translates to the scaling <span class="math">\(O(1/\epsilon^2)\)</span> in the trace distance. Note that it doesn’t matter for small infidelity <span class="math">\(\epsilon\)</span> whether we use the definition <span class="math">\(F(\rho,\sigma) = \left(\Tr\sqrt{\sqrt{\rho}\sigma\sqrt{\rho}}\right)^2\)</span> or its square root for the fidelity because <span class="math">\(\epsilon = 1-\sqrt{1-\epsilon_{\surd}} \approx \epsilon_{\surd}/2\)</span>.<a href="#fnref2">↩</a></p></li>
+<li id="fn2"><p>Suppose that the error in the trace distance is <span class="math">\(\tau\)</span>, then for small <span class="math">\(\epsilon\)</span>, <span class="math">\(\frac{\epsilon}{2} \le \tau \le \sqrt{\epsilon}\)</span> because <span class="math">\(1-\sqrt{F} \le T \le \sqrt{1-F}\)</span>. Thus, the scaling <span class="math">\(O(1/\epsilon)\)</span> in the infidelity translates to the scaling <span class="math">\(O(1/\epsilon^2)\)</span> in the trace distance. Note that it doesn’t matter for small infidelity <span class="math">\(\epsilon\)</span> whether we use the definition <span class="math">\(F(\rho,\sigma) = \left(\mathrm{Tr}\sqrt{\sqrt{\rho}\sigma\sqrt{\rho}}\right)^2\)</span> or its square root for the fidelity because <span class="math">\(\epsilon = 1-\sqrt{1-\epsilon_{\surd}} \approx \epsilon_{\surd}/2\)</span>.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
@@ -489,8 +485,8 @@ My attempt at classifying some milestone supremacy results <a href="#fn1" class=
     property="dc:created">10 Nov 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-11-13 07:51:50 +0000"
-            property="dc:modified">13 Nov 2019</time></small></p>
+            datetime="2019-11-14 11:07:40 +0000"
+            property="dc:modified">14 Nov 2019</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -522,7 +518,7 @@ My attempt at classifying some milestone supremacy results <a href="#fn1" class=
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/c99c0be305e2530e033aff9e2c758d88eb38094b/_posts/2019-10-01-sep-oct-2019-log.md"> c99c0be</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/c7df40a5b01575451cf6136806ed6f434dbf47dc/_posts/2019-10-01-sep-oct-2019-log.md"> c7df40a</a></tiny></p>
 </aside>
 
 <br /><br />
@@ -579,7 +575,7 @@ My attempt at classifying some milestone supremacy results <a href="#fn1" class=
       title="ctx_ver=Z39.88-2004
       &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-      &amp;rft.title=Sep-Oct 2019 Archive
+      &amp;rft.title=September-October 2019 Archive
       &amp;rft.creator=Ninnat Dangniam
       &amp;rft.date=2019-11-10
       &amp;rft.language='en-US, zh-Hans'

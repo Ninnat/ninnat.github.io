@@ -132,7 +132,7 @@ to give a few. The functorial viewpoint makes it clear that Frobenius reciprocit
 Before we delve into what Frobenius reciprocity really means, let us take for granted the definition of the induced representation for finite groups and think about what they are.
 Inspecting the simplest case when $H$ is just the identity element would tell you that the induced representation
 $$\mathrm{Ind} 1 =  \bigoplus_{g}g\ket{1}$$
-where $\ket{1}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and $G$ acts by group multiplication $g\ket{g'} = \ket{gg'}$ ($g\ket{1}=\ket{g}$). This is nothing but the represention *on the group algebra* $k[G]$, the (left) **regular representation**. Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
+where $\ket{1}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and $G$ acts by group multiplication $g\ket{g'} = \ket{gg'}$ ($g\ket{1}=\ket{g}$). This is nothing but the represention on the group algebra $k[G]$, the (left) **regular representation**. Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
 
 Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. Every completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
 $$\begin{align}
@@ -140,7 +140,7 @@ V &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} 
 \end{align}$$
 each with (possibly zero) multiplicity $n_{\lambda}$. An important special is when the left hand side is a tensor product of irreps, then (19) is the **Clebsch-Gordan decomposition**, the multiplicities in which when $G$ is a unitary group $\U(d)$ are known as the [Littlewood-Richardson coefficients](https://en.wikipedia.org/wiki/Littlewood%E2%80%93Richardson_rule#Littlewood%E2%80%93Richardson_coefficients).  
 
-We are going to rewrite (18) so that there is no sum over multiplcities using Schur's lemma magic.
+We are going to rewrite (18) so that there is no sum over multiplicities using Schur's lemma magic.
 $$\begin{align}
 V &
 \stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathrm{Hom}_G (V_{\lambda},V)
@@ -265,14 +265,14 @@ $$\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N)),$$
 
     we have that the right adjoint of restriction is $\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)$ called the **co-extension of scalars** to distinguish it from the left adjoint.
 
-Setting $R = k[G]$ and $S = k[H]$ gives both versions of Frobenius reciprocity (14,15):
+Setting $R = k[G]$ and $S = k[H]$ gives both versions of Frobenius reciprocity (12,13):
 $$\begin{align}
   \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W),\\
   \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W).
 \end{align}$$
 We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, $k[G]\otimes_{k[H]} V$ in (37) is the same as $\mathrm{Ind}_L W = \bigoplus_{k\in G/H} kW$.
 
-There is much more that can be said about induced representations. (How the right and left adjoints for finite groups are [isomorphic](https://math.stackexchange.com/a/226493). How they are in general [not isomorphic](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).) But that would be a topic for another day.
+There is much more that can be said about induced representations. (How the right and left adjoints for finite groups are [isomorphic](https://math.stackexchange.com/a/226493). How they are in general [not isomorphic](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).) But those would be topics for another day.
 
 
 <!--
@@ -308,9 +308,9 @@ It is irreducible because $\rho(1)$ cannot be diagonalized over $\R$. But every 
 [^4]: Why can't there be more than one copy of $(R,\R^3)$ in $\Hom(V,W)$? Because every tensor product $V\otimes W$ of irreducible $\SO(3)$-representations decomposes *without multiplicity*. Wigner gave a characterization of some of these so-called *simply reducible groups* which was later [generalized by Mackey](https://projecteuclid.org/euclid.pjm/1103039895).
 
 [^5]: The name "adjoint" comes from the similarity to how the adjoint of a linear operator in an inner product space is defined:
-$\av{x,Ay} = \av{A\dgg x,y}$.
+$\langle x,Ay\rangle = \langle A\dgg x,y\rangle$.
 
-[^6]: As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = \C[G]$ since the regular representation of an abelian group contains only one copy of each irrep.
+[^6]: As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.
 
 [^7]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
 

@@ -8,7 +8,9 @@ categories:
 tags:
 ---
 
-*created: 17 Sep 2019; modified: 13 Nov 2019; status: finished*
+*Representation theory in the language of categories; how tensor operators are actually intertwiners and Wigner-Eckart theorem is Schur's lemma; induction as an adjoint functor to the much simpler restriction of representations to a subgroup*
+
+*created: 17 Sep 2019; significantly modified: 13 Nov 2019; status: finished*
 
 <!-- There are many ways to make new representations from ones. $V\otimes V$, $\Sym^k V$, $\wedge^k V$, the space of polynomials over $V$, or induction.-->
 
@@ -119,13 +121,13 @@ $$\begin{align}
 \end{align}$$
 to the restriction functor $\mathrm{Res}$. [^5] These canonical isomorphisms (14,15) of intertwiner space are known as [Frobenius reciprocity](https://en.wikipedia.org/wiki/Frobenius_reciprocity). (We will see that the distinction between left and right adjoint comes precisely from the choice of thinking of $k[G]$ either as a $(k[G],k[H])$-bi-module or as a $(k[H],k[G])$-bi-module.)
 
-The point that induction is defined so that it satisfies Frobenius reciprocity might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the right one, there are also inequivalent definitions of induced representation:
+The point that induction is defined so that it satisfies Frobenius reciprocity might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the correct one, there are also inequivalent definitions of induced representation:
 $$\begin{align}
-  \mathrm{Ind} W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \\
-  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \\
-  \mathrm{Ind} W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)},
+  \mathrm{Ind}_L W &= \bigoplus_{k \in G/H} kW && \text{(Induction for finite groups)}, \\
+  \mathrm{Ind}_R W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g)  \} && \text{(Induction for Lie groups)}, \\
+  \mathrm{Ind}_L W &= \{f:G\to W|f(gh)=\sigma(h^{-1})f(g), f \textrm{ has compact support on } G/H \} && \text{(Compact induction for Lie groups)},
 \end{align}$$
-to give a few. The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
+to give a few (while spoiling you which one is left and which one is right adjoint). The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
 
 ## Application: Multiplicity
 
@@ -136,20 +138,20 @@ where $\ket{1}$ is the (one-dimensional) trivial irrep, is one in which every ve
 
 Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. Every completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
 $$\begin{align}
-V &\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
+V &\overset{G}{\cong} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
 \end{align}$$
 each with (possibly zero) multiplicity $n_{\lambda}$. An important special is when the left hand side is a tensor product of irreps, then (19) is the **Clebsch-Gordan decomposition**, the multiplicities in which when $G$ is a unitary group $\U(d)$ are known as the [Littlewood-Richardson coefficients](https://en.wikipedia.org/wiki/Littlewood%E2%80%93Richardson_rule#Littlewood%E2%80%93Richardson_coefficients).  
 
 We are going to rewrite (18) so that there is no sum over multiplicities using Schur's lemma magic.
 $$\begin{align}
 V &
-\stackrel{G}{\simeq} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathrm{Hom}_G (V_{\lambda},V)
+\overset{G}{\cong} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \mathrm{Hom}_G (V_{\lambda},V)
 \end{align}$$
 because
 $$\begin{align}
-\mathrm{Hom}_G (V_{\lambda},V) &\simeq \bigoplus^{n_{\lambda}} \mathrm{Hom}_G ( V_{\lambda}, V_{\lambda} ) \simeq \mathbb{C}^{n_{\lambda}}.
+\mathrm{Hom}_G (V_{\lambda},V) &= \bigoplus^{n_{\lambda}} \mathrm{Hom}_G ( V_{\lambda}, V_{\lambda} ) \cong \mathbb{C}^{n_{\lambda}}.
 \end{align}$$
-(19) is called an **isotypic decomposition** of a representation where each term in the summand is an isotype. Now $n_{\lambda}$ is the dimension of the **multiplicity space** $\mathrm{Hom}_G (V_{\lambda},V)$ which is exactly what shows up in Frobenius reciprocity! In particular,
+(19) is called an **isotypic decomposition** of the representation. Now $n_{\lambda}$ is the dimension of the **multiplicity space** $\mathrm{Hom}_G (V_{\lambda},V)$ which is exactly what shows up in Frobenius reciprocity! In particular,
 $$\begin{align}
   \dim \Hom_G(\mathrm{Ind}_L\,V,W) = \dim \Hom_H(V,\mathrm{Res}\,W)
 \end{align}$$
@@ -157,7 +159,7 @@ says that the number of times a $G$-irrep $W$ appears in the representation $\ma
 
 When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension and in particular
 $$\dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.$$
-But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical varieties](https://en.wikipedia.org/wiki/Spherical_variety)).
+But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find (infinite-dimensional) unitary representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical varieties](https://en.wikipedia.org/wiki/Spherical_variety)).
 
 
 ## Foundation: Adjoint functor
@@ -166,7 +168,7 @@ But we can induce from subgroups beyond the trivial subgroup and representations
 
 ### Example: The simplest adjoint functor
 
-What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^7]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer](https://math.stackexchange.com/a/25515)] from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
+What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^7]. (I learned this example from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [Qiaochu Yuan's answer](https://math.stackexchange.com/a/25515) from Math Stack Exchange) A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
 $$ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). $$
 A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one-to-one correspondence](https://en.wikipedia.org/wiki/Galois_connection)
 $$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$

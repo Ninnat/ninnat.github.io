@@ -214,7 +214,8 @@ $(document).ready(function() {
           </br>
 <!--          <font size="+1"><b> Contents </b></font>
           <ul>
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#misconception-1">Misconception 1:</a></li>
+<li><a href="#np-oracle-and-the-polynomial-hierarchy">NP oracle and the polynomial hierarchy</a> - <a href="#what-does-an-np-oracle-actually-do">What does an NP oracle actually do?</a></li>
 <li><a href="#anatomy-of-average-case-argument">Anatomy of average-case argument</a>
 <ul>
 <li><a href="#good-multiplicative-approximation-in-ccbppnp">Good multiplicative approximation in <span class="math">()</span></a></li>
@@ -231,12 +232,24 @@ $(document).ready(function() {
 <div id="toc">
 
 </div>
-<h1 id="introduction">Introduction</h1>
-<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term <em>quantum supremacy</em>, <a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a>, to mean such an achievement. The search for rigorous, complexity-theoretic proof of quantum supremacy<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> I believe goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 paper by Terhal and DiVincenzo</a> (published in 2004). Then <a href="http://arxiv.org/abs/1011.3245">Boson-Sampling</a> by Aaronson and Arkhipov in 2010 kick-started the experimental race for quantum supremacy in near-term quantum devices that continues to this day.</p>
-<p>These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the <a href="https://en.wikipedia.org/wiki/Polynomial_hierarchy">polynomial hierarchy</a>” (henceforth <span class="math">\(\cc{PH}\)</span>), which is deemed extremely unlikely by computer scientists. Such an argument is not known for factoring; if tomorrow someone figures out a fast way to factor integers on a classical computer <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, we will have to switch to a different encryption scheme but that’s about it. The concept of reality as we know it will still remain unchallenged, while a collapse of the polynomial hierarchy will bring us closer to the world in which <span class="math">\(\cc{P=NP}\)</span>. From Impagliazzo’s <a href="https://www.karlin.mff.cuni.cz/~krajicek/ri5svetu.pdf"><em>A Personal View of Average-Case Complexity</em></a>,</p>
+<p>Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? The search for a rigorous, complexity-theoretic proof of the so-called <em>quantum (computational) supremacy</em> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> goes back to the <a href="https://arxiv.org/abs/quant-ph/0205133">2002 preprint by Terhal and DiVincenzo</a>. Subsequent theoretical works on quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, “collapse of the <a href="https://en.wikipedia.org/wiki/Polynomial_hierarchy">polynomial hierarchy</a> (PH)”, which is deemed extremely unlikely by computer scientists. Such an argument is not known for <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">factoring</a>; if tomorrow someone figures out a fast way to factor integers on a classical computer <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, we will have to switch to a different encryption scheme but that’s about it. The concept of reality as we know will remain unchallenged, while a collapse of the polynomial hierarchy will bring us closer to the world in which P=NP—from Russell Impagliazzo’s <a href="https://www.karlin.mff.cuni.cz/~krajicek/ri5svetu.pdf"><em>A Personal View of Average-Case Complexity</em></a>,</p>
 <blockquote>
 <p>Algorithmica is the world where <span class="math">\(\cc{P=NP}\)</span> or its moral equivalent (e.g., <span class="math">\(\cc{NP\subseteq BPP}\)</span>). To be more concrete, let’s define Algorithmica as the world where there exists a simple and magical linear time algorithm for the SAT problem. […] this world is a computational utopia. We would be able to automate various tasks that currently require significant creativity: engineering, programming, mathematics, and perhaps even writing, composing, and painting. On the other hand, this algorithm could also be used to break cryptographic schemes, and hence almost all of the cryptographic applications currently used will disappear.</p>
 </blockquote>
+<!-- in a non-black-box setting. Quantum advantage in a black box setting was already established since the 90's by [Simon's algorithm](https://en.wikipedia.org/wiki/Simon_algorithm).
+
+ These days we use the term *quantum supremacy*, [coined by John Preskill](https://arxiv.org/abs/1203.5813), to mean such an achievement. The search for rigorous, complexity-theoretic proof of quantum supremacy[^1] I believe goes back to the [2002 paper by Terhal and DiVincenzo](https://arxiv.org/abs/quant-ph/0205133) (published in 2004). Then  [Boson-Sampling](http://arxiv.org/abs/1011.3245) by Aaronson and Arkhipov in 2010 kick-started the experimental race for quantum supremacy in near-term quantum devices that continues to this day.-->
+
+<p>There are plenty of public misconceptions about quantum supremacy, as witnessed from the Google’s announcement. But in this blog post I will talk about misconceptions among scientists who are not familiar with computational complexity.</p>
+<p>How do we go about proving the collapse of PH?</p>
+<p>If FP is the class of problems that can be solved by a flying pig, and you have a strong reason to believe that it has a certain relationship with another complexity class, then a mathematical statement that implies the opposite of such relationship would be thought of as unlikely regardless of whether a flying pig exists or not.</p>
+<h1 id="misconception-1">Misconception 1:</h1>
+<h1 id="np-oracle-and-the-polynomial-hierarchy">NP oracle and the polynomial hierarchy</h1>
+<h3 id="what-does-an-np-oracle-actually-do">What does an NP oracle actually do?</h3>
+<p>An <a href="https://en.wikipedia.org/wiki/Oracle_machine">oracle</a> for a problem <span class="math">\(O\)</span> is a magical black box that can answer the question <span class="math">\(O\)</span> with a single querying. Generally having access to an oracle boosts the power of a computational model. For instance, one can have an oracle for an <a href="https://en.wikipedia.org/wiki/Undecidable_problem">undecidable problem</a>; there is no Turing machine that can <a href="https://en.wikipedia.org/wiki/Halting_problem">decide whether an arbitrary Turing machine halts or not</a>, but an oracle for the halting problem (upon inputting a Turing machine <span class="math">\(M\)</span>) would just give the one-bit answer HALT or NOT HALT in one step.</p>
+<p>Similarly, one can have an oracle for an NP-complete problem, 3SAT for concreteness. Every Boolean formula can be expressed in the <a href="https://en.wikipedia.org/wiki/Conjunctive_normal_form">conjunctive normal form</a> (CNF) <span class="math">\(\vee_j \left(\wedge_k u_{jk}\right)\)</span> where each <span class="math">\(u_{jk}\)</span> is a Boolean variable, <span class="math">\(j\)</span> labels the <em>clauses</em>, and <span class="math">\(k\)</span> labels the <em>literals</em>. The problem kSAT asks if a given Boolean formula wherein each clause has <span class="math">\(k\)</span> literals is satisfiable i.e. the value of each <span class="math">\(u_{jk}\)</span> can be set so that the formula evaluates to TRUE. NP is the class of problems where there is a short certificate for every YES instance. For example in 3SAT, if a Boolean formula is satisfiable, I can prove it by giving you a set of satisfying arguments. SAT and 3SAT are NP-complete, while 2SAT is in P.</p>
+<p>But note the asymmetry; there is no obvious short proof that I can show to convince you that a Boolean formula is <em>unsatisfiable</em> without trying all combinations of the Boolean variables. A class of problems such that there is a short proof for every NO instance is called coNP. Factoring is special in that both YES and NO instances can be checked quickly, so it is in <span class="math">\(\mathrm{NP \cap coNP}\)</span> and is not believed to be NP-complete.</p>
+<p>For the above reason, <span class="math">\(\mathrm{P^{NP}}\)</span> is believed to be larger than NP (containing both NP and coNP) because when I ask the oracle “is this Boolean formula satisfiable?”, the oracle can give the answer NO, which seems to be beyond the capability of an NP machine. Similarly, <span class="math">\(\mathrm{NP^{NP}}\)</span> is believed to be larger than NP. Hence we define the <strong>polynomial hierarchy</strong> to be the infinite tower <span class="math">\(\mathrm{NP^{NP^{NP^{\cdots}}}}\)</span>, each level <span class="math">\(\Sigma_{k+1} = \Sigma_k^{\mathrm{NP}}\)</span> appears to be more computationally powerful than the one below. (<span class="math">\(\Sigma_0 \coloneqq \mathrm{P}\)</span> and <span class="math">\(\Sigma_1 \coloneqq \mathrm{NP}\)</span>.)</p>
 <p><strong>Random quantum circuits</strong></p>
 Now switching from a very general exposition to a technical question that I’m interested in: what are the ingredients for proofs of quantum supremacy, particularly in a <em>random quantum circuit</em> architecture? In this setting, there is an ensemble <span class="math">\(\mathcal{E}\)</span> of quantum circuits <span class="math">\(U\)</span>
 <center>
@@ -250,6 +263,11 @@ Now switching from a very general exposition to a technical question that I’m 
 </ol>
 <p>To get the strongest result, we would like to assume weakest notion of simulation,</p>
 <p>a result that says that additive approximation of <span class="math">\(p_x\)</span> by a classical machine is hard on average. The main goal of this blog post is to figure out how much we presently can and can’t say along this line.</p>
+<center>
+
+|Simulation|Strong|Weak|Comments| |———-|——|—-|——–| |Worst|<a href="https://arxiv.org/abs/1011.3245">Aaronson’11</a><br><a href="https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0301">Bremner’10</a>|(Multiplicative)<br><a href="https://arxiv.org/abs/1011.3245">Aaronson’11</a><br><a href="https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0301">Bremner’10</a>|Postselection| |Average|<a href="https://arxiv.org/abs/1011.3245">Aaronson’11</a><br><a href="https://arxiv.org/abs/1803.04402">Bouland’18</a>|<em>Conjectured</em><br>(Additive)<br><a href="https://arxiv.org/abs/1504.07999">Bremner’16</a><br><a href="https://arxiv.org/abs/1608.00263">Boixo’18</a>|Stockmeyer<br>Random circuits <a href="https://arxiv.org/abs/1706.03786">anticoncentrate</a>|
+</center>
+
 <h1 id="anatomy-of-average-case-argument">Anatomy of average-case argument</h1>
 <p>Most proposals of quantum supremacy relate sampling from quantum circuits to a <span class="math">\(\cc{\#P}\)</span>-complete problem. <span class="math">\(\cc{\#P}\)</span> is a class of problems that count the number of solutions to an <span class="math">\(\cc{NP}\)</span> problem (thus at least as hard as <span class="math">\(\cc{NP}\)</span>). The suffix “-complete” means that the problem is at least as hard as any problem in the complexity class <em>and</em> is itself in the class. Examples of <span class="math">\(\cc{\#P}\)</span>-complete problem are computing <a href="https://en.wikipedia.org/wiki/Computing_the_permanent">the permanent</a> <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> of a matrix and counting <a href="https://en.wikipedia.org/wiki/Matching_(graph_theory)">perfect matchings</a> of a graph. For physicists, bosons are “permanental” while fermions are “determinantal”. That’s why Boson-Sampling is hard while the analogous task of <a href="https://arxiv.org/abs/quant-ph/0108010">simulating fermion number states</a> is easy.</p>
 <!-- Aaronson and Arkhipov's insight is that simulating bosons might also be hard *on average* assuming a plausible conjecture. (?)-->
@@ -330,8 +348,8 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>in a non-black-box setting. Quantum advantage in a black box setting was already established since the 90’s by <a href="https://en.wikipedia.org/wiki/Simon_algorithm">Simon’s algorithm</a>.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Henry Cohn, “<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">Factoring may be easier than you think</a>”<a href="#fnref2">↩</a></p></li>
+<li id="fn1"><p><a href="https://arxiv.org/abs/1203.5813">coined by John Preskill</a> and <a href="https://www.quantamagazine.org/john-preskill-explains-quantum-supremacy-20191002/">disliked by many</a> because of the word’s racial connotation [<a href="https://scirate.com/arxiv/1705.06768">scirate</a>] [<a href="https://www.nature.com/articles/d41586-019-03781-0">Nature correspondence</a>]<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Henry Cohn’s “<a href="http://math.mit.edu/~cohn/Thoughts/factoring.html">Factoring may be easier than you think</a>”<a href="#fnref2">↩</a></p></li>
 <li id="fn3"><p>Multiplicative approximation is much stronger than additive one; if <span class="math">\(p_x = 0\)</span>, then a multiplicative estimate <span class="math">\(q_x\)</span> must exactly equal <span class="math">\(p_x\)</span>.<a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p>The permanent is like the determinant but without the minus signs.<a href="#fnref4">↩</a></p></li>
 <li id="fn5"><p>Multiplicative approximation is much stronger than additive one; if <span class="math">\(p_x = 0\)</span>, then a multiplicative estimate <span class="math">\(q_x\)</span> must exactly equal <span class="math">\(p_x\)</span>.<a href="#fnref5">↩</a></p></li>
@@ -352,8 +370,8 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
     property="dc:created">21 Aug 2019</time></small></p>
   
   <p><small> Updated: <time
-            datetime="2019-09-18 15:23:50 +0000"
-            property="dc:modified">18 Sep 2019</time></small></p>
+            datetime="2020-04-04 08:18:51 +0000"
+            property="dc:modified">04 Apr 2020</time></small></p>
   
 <!-- page.modified datetime="" -->
  <br />
@@ -371,10 +389,6 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   <br><br>
 
   <p><i class="glyphicon glyphicon-list"></i> Posted in
-    
-      <a rel="dc:subject" class="category"
-         href="/categories.html#Quantum+computing">Quantum computing</a>
-    
     </p>
 
   <p><i class="glyphicon glyphicon-tag"></i> Tags:
@@ -385,7 +399,7 @@ $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem]
   
 
   <br/>
-  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/e3667a7ed49692abb1c227e821fc9a3f8ac86596/_posts/2019-08-21-quantum-supremacy.md"> e3667a7</a></tiny></p>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/5053f3730022d55ff5d3269eed2c4584887efa35/_posts/2019-08-21-quantum-supremacy.md"> 5053f37</a></tiny></p>
 </aside>
 
 <br /><br />

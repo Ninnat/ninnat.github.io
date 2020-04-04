@@ -4,7 +4,6 @@ title: Ingredients for quantum supremacy [Draft]
 subtitle:
 date: 2019-08-21
 categories:
-  - Quantum computing
 tags:
 ---
 
@@ -12,14 +11,37 @@ tags:
 
 <div id="toc"></div>
 
-# Introduction
-
-Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? These days we use the term *quantum supremacy*, [coined by John Preskill](https://arxiv.org/abs/1203.5813), to mean such an achievement. The search for rigorous, complexity-theoretic proof of quantum supremacy[^1] I believe goes back to the [2002 paper by Terhal and DiVincenzo](https://arxiv.org/abs/quant-ph/0205133) (published in 2004). Then  [Boson-Sampling](http://arxiv.org/abs/1011.3245) by Aaronson and Arkhipov in 2010 kick-started the experimental race for quantum supremacy in near-term quantum devices that continues to this day.
-
-These theoretical proofs of quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, "collapse of the [polynomial hierarchy](https://en.wikipedia.org/wiki/Polynomial_hierarchy)" (henceforth $\cc{PH}$), which is deemed extremely unlikely by computer scientists. Such an argument is not known for factoring; if tomorrow someone figures out a fast way to factor integers on a classical computer [^2], we will have to switch to a different encryption scheme but that's about it. The concept of reality as we know it will still remain unchallenged, while a collapse of the polynomial hierarchy will bring us closer to the world in which $\cc{P=NP}$. From Impagliazzo's [*A Personal View of Average-Case Complexity*](https://www.karlin.mff.cuni.cz/~krajicek/ri5svetu.pdf),
+Is there a task in which quantum computers can achieve beyond what any classical algorithm can do, even those yet undiscovered? The search for a rigorous, complexity-theoretic proof of the so-called *quantum (computational) supremacy* [^1] goes back to the [2002 preprint by Terhal and DiVincenzo](https://arxiv.org/abs/quant-ph/0205133).
+Subsequent theoretical works on quantum supremacy all rule out classical simulations of certain quantum systems by arguing that if such simulations are possible, then there will be a devastating consequence, "collapse of the [polynomial hierarchy](https://en.wikipedia.org/wiki/Polynomial_hierarchy) (PH)", which is deemed extremely unlikely by computer scientists. Such an argument is not known for [factoring](https://en.wikipedia.org/wiki/Shor%27s_algorithm); if tomorrow someone figures out a fast way to factor integers on a classical computer [^2], we will have to switch to a different encryption scheme but that's about it. The concept of reality as we know will remain unchallenged, while a collapse of the polynomial hierarchy will bring us closer to the world in which P=NP---from Russell Impagliazzo's [*A Personal View of Average-Case Complexity*](https://www.karlin.mff.cuni.cz/~krajicek/ri5svetu.pdf),
 
 > Algorithmica is the world where $\cc{P=NP}$ or its moral equivalent (e.g., $\cc{NP\subseteq BPP}$). To be more concrete, let’s define Algorithmica as the world where there exists a simple and magical linear time algorithm for the SAT problem. [...] this world is a computational utopia. We would be able to automate various tasks that currently require significant creativity: engineering, programming, mathematics, and perhaps even writing, composing, and painting. On the other hand, this algorithm could also be used to break cryptographic schemes, and hence almost all
 of the cryptographic applications currently used will disappear.
+
+<!-- in a non-black-box setting. Quantum advantage in a black box setting was already established since the 90's by [Simon's algorithm](https://en.wikipedia.org/wiki/Simon_algorithm).
+
+ These days we use the term *quantum supremacy*, [coined by John Preskill](https://arxiv.org/abs/1203.5813), to mean such an achievement. The search for rigorous, complexity-theoretic proof of quantum supremacy[^1] I believe goes back to the [2002 paper by Terhal and DiVincenzo](https://arxiv.org/abs/quant-ph/0205133) (published in 2004). Then  [Boson-Sampling](http://arxiv.org/abs/1011.3245) by Aaronson and Arkhipov in 2010 kick-started the experimental race for quantum supremacy in near-term quantum devices that continues to this day.-->
+
+ There are plenty of public misconceptions about quantum supremacy, as witnessed from the Google's announcement. But in this blog post I will talk about misconceptions among scientists who are not familiar with computational complexity.
+
+ How do we go about proving the collapse of PH?
+
+ If FP is the class of problems that can be solved by a flying pig, and you have a strong reason to believe that it has a certain relationship with another complexity class, then a mathematical statement that implies the opposite of such relationship would be thought of as unlikely regardless of whether a flying pig exists or not.
+
+# Misconception 1:
+
+# NP oracle and the polynomial hierarchy
+
+
+
+### What does an NP oracle actually do?
+
+An [oracle](https://en.wikipedia.org/wiki/Oracle_machine) for a problem $O$ is a magical black box that can answer the question $O$ with a single querying. Generally having access to an oracle boosts the power of a computational model. For instance, one can have an oracle for an [undecidable problem](https://en.wikipedia.org/wiki/Undecidable_problem); there is no Turing machine that can [decide whether an arbitrary Turing machine halts or not](https://en.wikipedia.org/wiki/Halting_problem), but an oracle for the halting problem (upon inputting a Turing machine $M$) would just give the one-bit answer HALT or NOT HALT in one step.
+
+Similarly, one can have an oracle for an NP-complete problem, 3SAT for concreteness. Every Boolean formula can be expressed in the [conjunctive normal form](https://en.wikipedia.org/wiki/Conjunctive_normal_form) (CNF) $\vee_j \left(\wedge_k u_{jk}\right)$ where each $u_{jk}$ is a Boolean variable, $j$ labels the *clauses*, and $k$ labels the *literals*. The problem kSAT asks if a given Boolean formula wherein each clause has $k$ literals is satisfiable i.e. the value of each $u_{jk}$ can be set so that the formula evaluates to TRUE. NP is the class of problems where there is a short certificate for every YES instance. For example in 3SAT, if a Boolean formula is satisfiable, I can prove it by giving you a set of satisfying arguments. SAT and 3SAT are NP-complete, while 2SAT is in P.
+
+But note the asymmetry; there is no obvious short proof that I can show to convince you that a Boolean formula is *unsatisfiable* without trying all combinations of the Boolean variables. A class of problems such that there is a short proof for every NO instance is called coNP. Factoring is special in that both YES and NO instances can be checked quickly, so it is in $\mathrm{NP \cap coNP}$ and is not believed to be NP-complete.
+
+For the above reason, $\mathrm{P^{NP}}$ is believed to be larger than NP (containing both NP and coNP) because when I ask the oracle "is this Boolean formula satisfiable?", the oracle can give the answer NO, which seems to be beyond the capability of an NP machine. Similarly, $\mathrm{NP^{NP}}$ is believed to be larger than NP. Hence we define the **polynomial hierarchy** to be the infinite tower $\mathrm{NP^{NP^{NP^{\cdots}}}}$, each level $\Sigma_{k+1} = \Sigma_k^{\mathrm{NP}}$ appears to be more computationally powerful than the one below. ($\Sigma_0 \coloneqq \mathrm{P}$ and $\Sigma_1 \coloneqq \mathrm{NP}$.)
 
 **Random quantum circuits**
 
@@ -40,6 +62,14 @@ and we want to show that classically "simulating" the outcome probabilities $p_x
 To get the strongest result, we would like to assume weakest notion of simulation,
 
  a result that says that additive approximation of $p_x$ by a classical machine is hard on average. The main goal of this blog post is to figure out how much we presently can and can't say along this line.
+
+ <center>
+
+ |Simulation|Strong|Weak|Comments|
+ |----------|------|----|--------|
+ |Worst|[Aaronson'11](https://arxiv.org/abs/1011.3245)<br>[Bremner'10](https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0301)|(Multiplicative)<br>[Aaronson'11](https://arxiv.org/abs/1011.3245)<br>[Bremner'10](https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0301)|Postselection|
+ |Average|[Aaronson'11](https://arxiv.org/abs/1011.3245)<br>[Bouland'18](https://arxiv.org/abs/1803.04402)|*Conjectured*<br>(Additive)<br>[Bremner'16](https://arxiv.org/abs/1504.07999)<br>[Boixo'18](https://arxiv.org/abs/1608.00263)|Stockmeyer<br>Random circuits [anticoncentrate](https://arxiv.org/abs/1706.03786)|
+ </center>
 
 # Anatomy of average-case argument
 
@@ -142,9 +172,9 @@ There is quite a few notions of polynomial-time reduction. We will use the oracu
 
 $\textrm{BPP} \subset \Sigma_2 \cap \Pi_2$ ([Sipser–Gács–Lautemann theorem](https://en.wikipedia.org/wiki/Sipser%E2%80%93Lautemann_theorem)) It is not know that $\textrm{BPP}\subset\textrm{NP}$. (The NP-analogue for BPP is [MA](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol). Thus, BQP, being more similar to BPP than to P, has [QMA](https://en.wikipedia.org/wiki/QMA) as the NP-analogue.)-->
 
-[^1]: in a non-black-box setting. Quantum advantage in a black box setting was already established since the 90's by [Simon's algorithm](https://en.wikipedia.org/wiki/Simon_algorithm).
+[^1]: [coined by John Preskill](https://arxiv.org/abs/1203.5813) and [disliked by many](https://www.quantamagazine.org/john-preskill-explains-quantum-supremacy-20191002/) because of the word's racial connotation [[scirate](https://scirate.com/arxiv/1705.06768)] [[Nature correspondence](https://www.nature.com/articles/d41586-019-03781-0)]
 
-[^2]: Henry Cohn, "[Factoring may be easier than you think](http://math.mit.edu/~cohn/Thoughts/factoring.html)"
+[^2]: Henry Cohn's "[Factoring may be easier than you think](http://math.mit.edu/~cohn/Thoughts/factoring.html)"
 
 [^3]: Multiplicative approximation is much stronger than additive one; if $p_x = 0$, then a multiplicative estimate $q_x$ must exactly equal $p_x$.
 

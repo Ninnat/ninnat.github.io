@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <!--[if lt IE 9]>
+      <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <meta name="subtitle" content="">
+    <meta name="author" content="Ninnat Dangniam">
+
+    <!-- HTML5 metadata -->
+
+  <meta name="keywords" content="Ninnat Dangniam, " />
+  
+
+
+
+  <meta name="description" content="บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ" />
+  
+
+
+<meta http-equiv="Content-Language" content="en">
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ" />
+<meta property="dc:creator" content="Ninnat Dangniam" />
+<meta property="dc:date" content="2020-04-08 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/rosser.html" />
+<meta property="dc:rights" content="CC-BY" />
+<meta property="dc:source" content="Schur's Lemming" />
+<meta property="dc:subject" content="Physics" />
+<meta property="dc:type" content="website" />
+<meta name="dc.language" content="en, zh-Hans, cmn">
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ" />
+<meta property="og:author" content="http://ninnat.github.io/index.html" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Ninnat"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Dangniam"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2020-04-08 00:00:00 +0000" />
+<meta property="og:site_name" content="Schur's Lemming" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://ninnat.github.io/rosser.html" />
+<meta property="og:type" content="website" />
+<!-- Google Scholar Metadata -->
+<meta name="citation_author" content="Ninnat Dangniam"/>
+<meta name="citation_date" content="2020-04-08 00:00:00 +0000"/>
+<meta name="citation_title" content="บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ"/>
+<meta name="citation_journal_title" content="Schur's Lemming"/>
+<!--NOTE: see also the COinS Metadata in span element in coins.html and footer. -->
+<!-- Twitter card summary -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ" />
+<meta name="twitter:description" content="บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ" />
+<meta name="twitter:image" content="/assets/img/capybara.png" />
+
+    <!-- Le styles -->
+   <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans:bold,bolditalic,italic|Quattrocento+Sans">
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rosario:bold,bolditalic,italic|Rosario">
+   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">-->
+   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/quattrocento-sans" type="text/css"/>
+   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/rosario" type="text/css"/>
+    <!-- <link href="/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light">
+    <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" id="stl" title="light"> -->
+    <!-- bootstrap style -->
+    <!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
+    <!--- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href = "/assets/css/bootstrap.min.css" rel = "stylesheet">-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href = "/assets/css/bootstrap.min.css" rel = "stylesheet">
+    <!-- Self-defined style -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/tupleblog.css">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-79420814-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <!-- Help the browser identify the RSS feed automatically -->
+    <link rel="alternate" type="application/rss+xml" title="Ninnat's notes" href="/atom.xml" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5761ec473416b238" async="async"></script>
+
+  <body>
+
+  
+<!-- Navbar  ================================================== -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="glyphicon glyphicon-info-sign"></i></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+         
+            
+            
+            
+            <li class=""><a href="/">Main</a></li>
+         
+            
+            
+            
+            <li class=""><a href="/about/">About</a></li>
+         
+        </ul>
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:http://ninnat.github.io" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search this site"/>
+          </div>
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+    <!-- Custom masthead (big titles) -->
+
+<header class="jumbotron subhead">
+    <h1 class="entry-title">บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ</h1>
+    <h3></h3>
+</header>
+
+<!-- <style>
+div #sticker {
+  width:auto;
+  padding:10px;
+  margin-right:20px;
+  float:right;
+}
+.stick {
+    position:fixed;
+    top:30px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script> -->
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-1 col-sm-12" style="background-color:#FFF">
+          <article>
+          </br>
+<!--          <font size="+1"><b> Contents </b></font>
+          <ul>
+<li><a href="#ทฤษฎบทของ-gödel">ทฤษฎีบทของ Gödel</a></li>
+<li><a href="#เครองจกร-turing">เครื่องจักร Turing</a>
+<ul>
+<li><a href="#เราหยดแลว-แตเรายงไมหยด">เราหยุดแล้ว แต่เรายังไม่หยุด</a></li>
+</ul></li>
+<li><a href="#ทฤษฎบทของ-rosser">ทฤษฎีบทของ Rosser</a></li>
+</ul>
+        <div id="toc"></div> -->
+          <p>หลายคนอาจจะเคยได้ยินทฤษฎีบทในตรรกศาสตร์ของ Kurt Gödel (1906-1978) เกี่ยวกับความ “ไม่สมบูรณ์” ของ axiomatic system (“มีความจริงที่พิสูจน์ไม่ได้” ที่ถูกให้ใครต่อใครเอาไปใช้ผิดๆเต็มไปหมด รวมเล่มใน Gödel’s Theorem: An Incomplete Guide to Its Uses and Abuses ของ Torkel Franzén) ผมอยากจะนำเสนอว่าจากมุมมองของทฤษฎีคอมพิวเตอร์ ทฤษฎีบทนี้ (รวมทั้งที่ปรับปรุงโดย Rosser) พิสูจน์ได้ไม่ยุ่งยาก บทพิสูจน์ทั้งหมดในโพสท์นี้มาจาก Scott Aaronson <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> แต่ถ้ามีตรงไหนที่มั่วอันนั้นเป็นความผิดของผมเอง</p>
+<h1 id="ทฤษฎบทของ-gödel">ทฤษฎีบทของ Gödel</h1>
+<p>สำหรับคนที่ไม่ชอบเรื่องยุ่งยาก มันจะดีไม่น้อยถ้าเราสามารถค้นพบทุกความจริงได้ด้วยเซ็ตของ “ความจริงพื้นฐาน” ที่เล็กกว่าเซ็ตของความจริงทั้งหมด ในคณิตศาสตร์หมายความว่าเราต้องการความจริง (“axiom”) ที่นิยามด้วยกระบวนการที่สามารถปฏิบัติตามเป็นขั้นๆได้ (ไม่ใช่ตั้งทุกๆความจริงให้เป็น axioms ทั้งที่ไม่รู้ด้วยซ้ำว่าอะไรคือความจริงบ้าง) <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> ที่สามารถนำไปใช้พิสูจน์ทุกความจริงได้เมื่อมีกฎในการพิสูจน์ (อย่างการอุปนัย) เช่น เรามี Peano axioms ของระบบจำนวนเต็ม หรือ axioms ของ ZFC set theory</p>
+<p>เราจะรู้ได้อย่างไรว่า axioms เหล่านี้เป็น axioms ของระบบในความเป็นจริง ระบบในความเป็นจริงจะต้องไม่มีข้อขัดแย้งในตัวมันเอง (consistent) (ความขัดแย้งคือมีประพจน์ P ที่สามารถพิสูจน์ได้ทั้งว่าเป็นจริงและเป็นเท็จ (P และ not P))</p>
+<p>Gödel พิสูจน์ทฤษฎีบทความสมบูรณ์ (completeness theorem) ที่กล่าวว่า ถ้า axiomatic system A <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> มีความขัดแย้งในตัวมันเอง เราจะสามารถหามันได้ใน axioms หรือกลับกัน ถ้า เราไม่สามารถหาข้อขัดแย้งจาก axioms ได้ ทุกๆ realization ที่มาจาก axioms นั้นก็จะไม่มีข้อขัดแย้ง</p>
+<p>แต่ Gödel (1931) ก็ดันพิสูจน์ทฤษฎีบทความไม่สมบูรณ์ (incompleteness theorem) ซึ่งมีสองส่วน เราเชื่อว่าทุกๆประพจน์ใน A ถ้าไม่เป็นจริงก็เป็นเท็จ และเราอาจจะหวังด้วยว่าเราสามารถพิสูจน์มันได้ด้วย axioms (สมบัติที่เรียกว่าความสมบูรณ์ (completeness) <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>) แต่ Gödel บอกว่าความสมบูรณ์ต้องแลกมาด้วย unsoundness ซึ่งแปลว่าสิ่งที่พิสูจน์ได้อาจจะไม่เป็นจริง (พูดอีกแบบคือไม่มี A ที่สามารถพิสูจน์ทุกๆและเฉพาะประพจน์ที่เป็นจริงได้) ซึ่งเราไม่ต้องการในคณิตศาสตร์แน่ๆ อีกอย่างหนึ่งทีเราหวังว่าจะทำได้คือพิสูจน์ว่า A ไม่มีความขัดแย้งจาก axioms ของ A เองได้ (ต่างกับทฤษฎีบทความสมบูรณ์ที่บอกว่าพิสูจน์ว่า A มีความขัดแย้งจาก axioms ได้) แต่ Gödel ก็บอกอีกว่า A ที่พิสูจน์ความไม่ขัดแย้งของตัวมันเองได้มีแต่ A ที่มีความขัดแย้งในตัวมันเอง</p>
+<p>สิ่งที่ Gödel ทำเพื่อพิสูจน์ทฤษฎีบทความไม่สมบูรณ์ส่วนแรกคือเขียนประพจน์ (“ประโยค Gödel”) G=“ประพจน์นี้ไม่สามารถพิสูจน์ใน A ได้” ใน A (ในบทพิสูจน์ของ Gödel A คือ axioms ใน Principia Mathematica ที่ใช้เกือบ 400 หน้าในการพิสูจน์ว่า 1+1=2 ของ Russell และ Whitehead ซึ่งซับซ้อนพอที่จะเขียนประพจน์นี้ได้) นี่คือส่วนที่ยาว แต่เมื่อเขียนได้แล้วคราวนี้เราก็สมมติว่า A สมบูรณ์ ถ้าพิสูจน์ G ได้ G ก็จะพิสูจน์ได้และพิสูจน์ไม่ได้ในเวลาเดียวกัน (มีความขัดแย้ง ซึ่ง implies unsoundness <a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>) ถ้าพิสูจน์ not G ““ประพจน์นี้ไม่สามารถพิสูจน์ใน A ได้” สามารถพิสูจน์ใน A ได้” ได้ ถ้า not G ไม่เป็นจริง A ก็จะ unsound ในขณะที่ถ้า not G เป็นจริง A ก็จะพิสูจน์ว่ามันพิสูจน์ G ได้ ถ้ามันพิสูจน์ได้จริงก็วนกลับไปเคสแรก ถ้ามันพิสูจน์ไม่ได้ก็ unsound เพราะมันพิสูจน์ “มันพิสูจน์ G” ที่ไม่เป็นจริงได้</p>
+<p>ทั้งหมดที่ว่ามาแปลว่าเราไม่สามารถหาบางสิ่งที่ต้องการในตรรกศาสตร์ได้ แล้วมันเกี่ยวอะไรกับการหาคำตอบของปัญหาที่มีประโยชน์มากกว่านี้หรือเปล่า?</p>
+<h1 id="เครองจกร-turing">เครื่องจักร Turing</h1>
+<p>หลังจากนั้นไม่นาน (1936) Alan Turing (1912-1954) ขณะที่กำลังศึกษาระดับ undergraduate ที่ Cambridge ก็พูดถึงคณิตศาสตร์ของคอมพิวเตอร์ ในสมัยนั้นเมื่อยังไม่มีคอมพิวเตอร์แบบในปัจจุบัน ความหมายเดิมของคอมพิวเตอร์คือผู้คำนวณที่ทำตามกระบวนการที่กำหนดไว้แล้วโดยไม่ต้องใช้ความคิดสร้างสรรค์ (คุ้นๆไหม?) ซึ่งกลายเป็นโมเดลของเครื่องจักร Turing (Turing machine) มีหน่วยความจำเป็น bit string แทนแผ่นกระดาษซึ่งทำหน้าที่รับ input และเขียนการคำนวณลงไปได้ จะเขียนอะไรก็ขึ้นอยู่กับชุดคำสั่งและสิ่งที่เขียนอยู่บนหน่วยความจำไว้ก่อนหน้า คอมพิวเตอร์สามารถอ่านหน่วยความจำได้ทีละช่องและถ้าจะเปลี่ยนไปยังช่องไกลๆต้องเคลื่อนที่ผ่านไปทีละช่องๆ นั่นก็คือมันต้องใช้เวลาในการเข้าถึงหน่วยความจำขนาดใหญ่ (คุณสมบัติซึ่งถูกใช้ในการพิสูจน์ “NP-completeness ของปัญหา 3SAT”) นี่คือเครื่องจักร Turing เครื่องจักร Turing ไม่ใช่โมเดลของคอมพิวเตอร์จริงๆ แต่เป็นไอเดียทางทฤษฎี <a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> บางคนอาจจะนึกว่ามันต้องเป็นฮาร์ดแวร์แต่มันเป็นตัวแก้ปัญหาจึงจะคิดว่ามันเป็นซอฟต์แวร์หรือโปรแกรมก็ได้ และในที่สุดแล้วทุกอย่างเกี่ยวกับเครื่องจักร Turing สามารถเข้ารหัสเป็น bit string ได้ จึงคิดว่ามันเป็น input ก็ได้เช่นกัน นี่เป็นไอเดียที่ธรรมดามากสำหรับคนยุคนี้ว่าทุกอย่างที่จำลองในคอมพิวเตอร์ได้ก็แค่การคำนวณบน bit string แต่มันไม่ธรรมดาในสมัยนั้น</p>
+<p>มีโมเดลในการคำนวณอื่นที่ถูกคิดค้นขึ้นมาในเวลาใกล้เคียงกันโดยเฉพาะ Lambda calculus ของ Alonzo Church Turing จึงถือโอกาสทำงานในระดับ graduate กับ Church ที่ Princeton แต่ปรากฎว่าโมเดลเหล่านี้มีพลังในการคำนวณเท่ากัน(ซึ่งเดี๋ยวก็จะได้เห็นว่าสำหรับจุดประสงค์ของโพสท์นี้แล้วจริงๆเราไม่จำเป็นจะต้องรู้กลไกการทำงานของเครื่องจักร Turing เลย แต่นั่นคือประเด็น ถึงแม้ว่าหลายๆอย่างท้ายที่สุดแล้วจะไม่ขึ้นกับทุกตัวอักษรของนิยามแต่ก็ต้องนิยามถึงจะทำการวิเคราะห์ทางคณิตศาสตร์ได้ โดยเฉพาะถ้าสนใจ computational complexity ต่อ) จึงได้ถือกำเนิดธีสิส (Thesis) ของ Church-Turing (ซึ่ง Stephen Kleene เป็นคนเรียก (1952)) ที่ว่าทุกๆอย่างที่คำนวณได้สามารถคำนวณได้ด้วยเครื่องจักร Turing <a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> คำถามก็คือธีสิสนี้ตั้งใจจะมีความหมายแบบไหนกันแน่ มันนิยาม “การคำนวณ” ด้วยเครื่องจักร Turing? หรือมันบอกว่าโมเดลการคำนวณที่เป็นไปได้ตามกฏของธรรมชาติไม่สามารถเอาชนะเครื่องจักร Turing ได้? ถ้าเข้าใจตามแบบหลัง จากความรู้ทั้งหมดที่มีอยู่(รวมทั้งควอนตัมคอมพิวเตอร์)ดูเหมือนว่าธีสิสของ Church-Turing จะเป็นจริง</p>
+<p>ในเปเปอร์ปี 1936 Turing พิสูจน์สองอย่าง หนึ่งว่ามีเครื่องจักรของเขาที่อเนกประสงค์ (universal) คือเราไม่จำเป็นต้องสร้างคอมพิวเตอร์แบบหนึ่งเพื่อทำงาน อีกแบบเพื่อฟังเพลง อีกแบบเพื่อเล่นเกม ไอเดียคือการประมวลผลข้อมูลขึ้นอยู่กับกระบวนการเท่านั้นและไม่ขึ้นกับลักษณะทางกายภาพ จะเป็นเครื่องจักรกล สิ่งมีชีวิต ปรากฎการณ์ทางธรรมชาติ กาแล็กซี ก็เป็นคอมพิวเตอร์ได้ถ้ามันมีศักยภาพพอที่จะให้เราเข้ารหัสทำการคำนวณได้ พิสูจน์อย่างที่สองคือมีปัญหาที่เครื่องจักร Turing แก้ไม่ได้ และสิ่งที่เราอยากจะเสนอ (ซึ่งเป็นที่รู้กันทั่วไปในวิทยาศาสตร์คอมพิวเตอร์) คือทฤษฎีบทความไม่สมบูรณ์ของ Gödel เป็นจริงก็เพราะมีปัญหาที่แก้ไม่ได้บนเครื่องจักร Turing นั่นคือเราสามารถพิสูจน์ทฤษฎีบทความไม่สมบูรณ์ของ Gödel ได้ด้วยทฤษฎีคอมพิวเตอร์</p>
+<h2 id="เราหยดแลว-แตเรายงไมหยด">เราหยุดแล้ว แต่เรายังไม่หยุด</h2>
+<p>เครื่องจักร Turing ที่จะมีประโยชน์มากคือเครื่องจักร H ที่ตัดสินได้ว่าเมื่อเครื่องจักร Turing ได้รับ input หนึ่งๆเข้าไปจะรันไปโดยไม่มีวันหยุดหรือหยุดและให้คำตอบออกมา ถ้ามีเครื่องจักรนี้ก็จะช่วยในการแก้ปัญหาคณิตศาสตร์ได้อย่างมหาศาล เช่นถ้าจะพิสูจน์ข้อสันนิษฐานของ Goldbach“ทุกจำนวนคู่มากกว่า 2 เป็นผลบวกของสองจำนวนเฉพาะ” ก็แค่เอาเครื่องจักร Turing G ที่ตรวจสอบข้อสันนิษฐานนี้กับจำนวนคู่ทีละตัวๆ แล้วถาม H ว่า G จะหยุดไหม (เข้ารหัสโปรแกรม G เป็น bit string ป้อนให้ H เขียนแทนด้วย H(G)) ถ้าไม่หยุด ข้อสันนิษฐานของ Goldbach ก็เป็นจริง ปัญหาอื่นๆที่ต้องเช็คคุณสมบัติอะไรบางอย่างกับทุกๆสมาชิกก็จะแก้ได้โดยวิธีเดียวกัน</p>
+<p>แต่ Turing เข้าใจได้ว่าไม่มีโปรแกรมที่จะแก้ปัญหานี้ได้ ทำไมน่ะเหรอ? อย่างที่บอกว่าเราสามารถป้อนเครื่องจักร Turing หนึ่ง เรียกว่า M ให้กับอีกเครื่องจักร Turing หนึ่งได้ โดยเฉพาะเราสามารถป้อน M ให้กับ M เองได้</p>
+<p>M(M(M(…)))</p>
+<p>คราวนี้นิยาม H’ ให้ H’(M) รันไปตลอดกาลถ้า M(M) หยุด และ H’(M) หยุดถ้า M(M) รันไปตลอดกาล แล้วก็ป้อน H’ ให้ตัวมันเอง ก็จะได้ว่า H’(H’) ทั้งหยุดทั้งรันไปตลอดกาลในเวลาเดียวกัน เป็นข้อขัดแย้งซึ่งบอกว่าเราไม่สามารถมี H (และ H’) ได้ตั้งแต่แรกแล้ว นี่คือ Halting problem ที่แก้ไม่ได้ซึ่งจะให้ทฤษฎีบทของ Gödel ตามมา</p>
+<p>เราจะพิสูจน์โดยการหาข้อขัดแย้ง (proof by contradiction) เริ่มจากสมมติว่าทฤษฎีบทความไม่สมบูรณ์ส่วนแรกไม่เป็นจริง และจะพิสูจน์ว่าเราแก้ halting problem ได้ เราจึงต้องพูดถึงทุกอย่างใน axiomatic system A แต่สิ่งที่ทำให้ง่ายในคราวนี้คือเราไม่ต้องสร้างประโยค Gödel แล้ว (self-reference เกิดไปแล้วในบทพิสูจน์ว่า halting problem แก้ไม่ได้ด้านบน) ประพจน์เกี่ยวกับการหยุดของโปรแกรมก็เป็นแค่ประพจน์เกี่ยวกับ bit string ซึ่งสามารถ express ได้ใน A ที่เข้าใจระบบจำนวนเต็ม เนื่องจาก A สมบูรณ์ ถ้าไม่พิสูจน์ได้ว่าโปรแกรมหนึ่งๆรันตลอดกาลก็ต้องพิสูจน์ได้ว่ามันหยุด สิ่งที่เราต้องทำก็คือเสิร์ชหาบทพิสูจน์นั้น เมื่อหาเจอแล้ว เนื่องจาก A sound สิ่งที่ A พิสูจน์จะต้องเป็นจริง A จึงแก้ halting problem ได้ แต่เรารู้แล้วว่ามันเป็นปัญหาที่แก้ไม่ได้จึงไม่มี A ที่ทำได้ดังที่กล่าวมา</p>
+<p>แน่นอนว่าจะใช้ปัญหาที่แก้ไม่ได้เกี่ยวกับเครื่องจักร Turing ปัญหาไหนในการพิสูจน์ก็ได้ และจริงๆแล้วทฤษฎี computability มีผลกระทบต่อคณิตศาสตร์สาขาอื่นๆเพราะมีหลายปัญหาที่คนอยากแต่พบว่าแก้ไม่ได้ในทำนองเดียวกันถึงแม้ว่าดูจะไม่มีอะไรที่ “ตลอดกาล” ในปัญหาเหมือน halting problem เช่นใน group theory, เราสามารถกำหนด group ได้ด้วย generators และความสัมพันธ์ระหว่าง generators (relations) สมาชิกของ group อาจจะเขียนในรูปของ generators ได้หลายแบบ (เรียกว่า “คำ” (word)) แต่มี finitely presented group (มี finite generators และ finite relations) ที่ปัญหาว่าคำสองคำแทนสมาชิกตัวเดียวกันหรือไม่ไม่สามารถแก้ได้ (ทฤษฎีบท Novikov-Boone) อีกตัวอย่างใน quantum information เร็วๆนี้คือปัญหาว่าระบบควอนตัมมี “spectral gap” – ช่องว่างระหว่างระดับพลังงานที่ต่ำที่สุดกับระดับถัดขึ้นมา – ใน thermodynamic limit หรือไม่ถูกแสดงว่าแก้ไม่ได้ในกรณีทั่วไป (จริงๆแล้วที่บอกไปไม่ใช่ปัญหาที่เขาพิสูจน์ว่าแก้ไม่ได้ซะทีเดียว ปัญหาของเขามีเงื่อนไขมากกว่านี้)</p>
+<p>คราวนี้ลองจินตนาการบทพิสูจน์ด้านบนว่า halting problem แก้ไม่ได้ในเวอร์ชัน “โปรแกรมที่เชื่อบางอย่างเกี่ยวกับตัวมันเอง” สมมติ axiomatic system A ซึ่งเข้าใจประพจน์อีกครั้ง และนิยามให้ H’(M) รันไปตลอดกาลถ้าพิสูจน์ได้ว่า M(M) หยุด และ H’(M) หยุดถ้าพิสูจน์ได้ว่า M(M) รันไปตลอดกาล จะเกิดอะไรขึ้นกับ H’(H’)? ถ้า A พิสูจน์ได้ว่า H’(H’) หยุด H’(H’) จะรันตลอดกาล และถ้าพิสูจน์ได้ว่า H’(H’) รันตลอดกาล H’(H’) จะหยุด แต่ H’(H’) ไม่จำเป็นจะต้องทั้งหยุดทั้งรันตลอดกาลในเวลาเดียวกันเพราะ</p>
+<p>โปรแกรมที่หลอกตัวเอง: ถ้า A มีความขัดแย้งในตัวมันเองก็จะ unsound ดังนั้นมันจึงไม่มีปัญหาที่จะพิสูจน์สิ่งที่เป็นเท็จได้ถึงแม้จะเห็นความจริงอยู่ต่อหน้าก็ตาม จึงไม่สามารถสรุปอะไรได้</p>
+<p>โปรแกรมที่ไม่เข้าใจตัวเอง: ถ้า A ไม่มีความขัดแย้งในตัวมันเอง มันจะไม่สามารถพิสูจน์ว่า H’(H’) รันไปตลอดกาลได้ เพราะถ้าพิสูจน์ได้ H’(H’) ก็จะหยุดเป็นตัวพิสูจน์ว่า H’(H’) หยุด H’(H’) จึงต้องรันไปตลอดกาล แต่ A ต้องไม่รู้ว่ามันไม่มีความขัดแย้งในตัวมันเองเพราะหาก A พิสูจน์ได้เมื่อไรว่ามันไม่มีความขัดแย้งในตัวมันเองก็เท่ากับพิสูจน์ได้ว่า H’(H’) ต้องรันตลอดกาล ทำให้มันต้องหยุดและเจอกับความขัดแย้งในตัวมันเอง ซึ่งเป็นไปไม่ได้เพราะเราสมมติตั้งแต่ต้นว่ามันไม่มีความขัดแย้งในตัวมันเอง axiomatic system ที่ไม่ความขัดแย้งในตัวเองจึงไม่สามารถพิสูจน์ได้ว่ามันไม่ขัดแย้งในตัวเอง</p>
+<p>ทฤษฎีบทความไม่สมบูรณ์ของ Gödel ทั้งสองส่วนจึงพิสูจน์ได้ด้วยไอเดียของ Turing</p>
+<h1 id="ทฤษฎบทของ-rosser">ทฤษฎีบทของ Rosser</h1>
+<p>แต่ทฤษฎีบทความไม่สมบูรณ์ของ Gödel ที่ผมมักได้ยินไม่มี unsoundness แต่เป็น “axiomatic system ที่สมบูรณ์ต้องมีความขัดแย้งในตัวมันเอง” แทน ซึ่ง strong กว่าทฤษฎีบทข้างต้นเพราะความขัดแย้งในตัวเอง implies unsoundness ปรากฎว่านี่ไม่ใช่ทฤษฎีบทที่ Gödel พิสูจน์แต่เป็น John Barkey Rosser (1907-1989) ในปี 1936 ปีเดียวกับที่ Turing พูดถึงเครื่องจักร Turing โดยเขียนประพจน์</p>
+<p>R = “มีบทหักล้างของประพจน์นี้ที่สั้นกว่าทุกๆบทพิสูจน์ของประพจน์นี้ใน A”</p>
+<p>ถ้าพิสูจน์ R ได้ก็จะหาบทหักล้าง (พิสูจน์ not R) ได้เพียงแค่เสิร์ช string ใน A ที่สั้นกว่าบทพิสูจน์ของ R ถ้าเจอก็มีความขัดแย้งใน A ถ้าไม่เจอก็จะเป็นบทพิสูจน์ของ not R เหมือนกัน(“สั้นกว่า”จึงเป็นจุดสำคัญ) ในทางกลับกันน่าสนใจว่าการพิสูจน์ not R ได้ให้ผลที่ mirror การพิสูจน์ R ได้เป๊ะๆ: “มีบทพิสูจน์ของประพจน์นี้ที่สั้นกว่าทุกๆบทหักล้างของประพจน์นี้ใน A” และนำไปสู่ความขัดแย้งด้วยเหตุผลเดียวกัน</p>
+<p>ทฤษฎีบทของ Rosser ก็พิสูจน์โดยไม่ต้องสร้าง R ใน axiomatic system ได้! กำหนดปัญหาเรียกว่า Q: โปรแกรมจะ output 0 หรือ 1 หรือรันไปตลอดกาลเมื่อให้ input หนึ่งๆกับมัน? สมมติว่ามีโปรแกรม R ที่แก้ปัญหานี้ได้นิยาม R’ ให้ R’(M) output 0 ถ้า M(M) output 1, R’(M) output 1 ถ้า M(M) output 0, และสุดท้าย R’(M) หยุดและ output อะไรก็ได้ถ้า M(M) ไม่หยุด ไม่มีโปรแกรม R’ (และ R) ที่ทำอย่างนี้ได้</p>
+<p>เนื่องจาก A สมบูรณ์ ถ้าพิสูจน์ไม่ได้ว่า M(M) output 0 ก็ต้องหักล้างได้ เราก็เสิร์ชหาบทพิสูจน์หรือบทหักล้าง ถึงแม้ A จะไม่มีความขัดแย้งในตัวมันเองแต่มันอาจจะ unsound ซึ่งอาจเห็นเป็นปัญหาแต่จริงๆแล้วไม่เป็นเพราะถ้า M(M) หยุด ความไม่ขัดแย้งในตัวเองของ A จะบังคับให้ A ตอบ output ที่ถูกต้องมิฉะนั้น output ของ M(M) จะเป็นบทพิสูจน์หรือหักล้างที่ขัดแย้งกับสิ่งที่ A เชื่อ และเกิด M(M) รันไปตลอดกาล A อยากจะทำอะไรก็เรื่องของมัน สรุปแล้ว: ตอบ 0 เมื่อพิสูจน์ได้และตอบ 1 เมื่อหักล้างได้ว่า M(M) output 0 ก็จะแก้ปัญหา Q ได้ แต่เรารู้แล้วว่ามันเป็นปัญหาที่แก้ไม่ได้จึงไม่มี A ที่ทำได้ดังที่กล่าวมา</p>
+<p>ดังนั้นเราอาจจะพูดได้ว่า บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ โดยมีบทพิสูจน์ของทฤษฎีบทความไม่สมบูรณ์ของ Gödel-Rosser ด้วยเครื่องจักร Turing เป็นหลักฐานว่าเราสามารถให้โมเดลของการคำนวณโดยที่ไม่ขึ้นกับ axiomatic system ว่าเราจะยกอะไรให้เป็น “ความจริงพื้นฐาน”ได้ ดังที่ Gödel เองกล่าวไว้ (1946)</p>
+<p>[Turing] has for the first time succeeded in giving an absolute definition of an interesting epistemological notion, i.e., one not depending on the formalism chosen.</p>
+<p>จากการหาๆดูบนอินเตอร์เน็ต “บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ” มีทฤษฎีที่ลึกกว่านี้เยอะซึ่งสรุปได้ใน Curry-Howard-Lambek isomorphism ซึ่งแสดงความเหมือนของตรรกศาสตร์และการคำนวณที่เข้าถึงเนื้อหาทาง categorical ที่เหมือนกัน (การให้ objects, morphisms, functors ฯลฯ)</p>
+<!------>
+
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p> Scott Aaronson, Quantum Computing Since Democritus Lecture 3: Gödel, Turing, and Friends และ “Rosser’s Theorem via Turing Machines”<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>ตรงนี้ไม่ได้ห้ามให้มีจำนวน axioms เป็นอนันต์<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>ทฤษฎีบทนี้เฉพาะในระบบที่ใช้ first-order logic แต่ทฤษฎีบทความไม่สมบูรณ์ยังใช้ได้กับ second-order logic และสูงขึ้นไป <a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>บางคนนิยามความสมบูรณ์ให้ตรงข้ามกับ soundness แทน ความไม่สมบูรณ์ก็จะหมายความว่ามีความจริงที่พิสูจน์ไม่ได้<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Soundness implies ความไม่ขัดแย้งในตัวเอง ในทางกลับกัน ความขัดแย้งในตัวเอง implies unsoundness<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p> เครื่องจักร Turing ในทฤษฎีมีเทปที่ยาวไม่รู้จบ แต่ปัญหาที่เราคิดว่าแก้ได้ในทางปฏิบัติไม่จำเป็นต้องใช้เทปยาวไม่รู้จบ (เพราะ “PSPACE เป็นคลาสที่ใหญ่มาก”)<a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>โมเดลที่พลังน้อยกว่าก็มีอย่าง finite state automata กับ pushdown automata ที่ไม่สามารถแก้บางปัญหาที่เครื่องจักร Turing แก้ได้<a href="#fnref7">↩</a></p></li>
+</ol>
+</section>
+
+          </article>
+        </div>
+
+        <!-- Custom sidebar -->
+        <div class="col-md-2 col-sm-12">
+          <!-- <div id="sticker" style="width:250px"> --> <!--class="sidebar">-->
+             <!-- | replace '_posts/', '' -->
+
+<aside prefix="og:https://ogp.me/ns/article#">
+  <p> <i class="glyphicon glyphicon-calendar"></i><small>
+    <time datetime="2020-04-08 00:00:00 +0000"
+    property="dc:created">08 Apr 2020</time></small></p>
+  
+  <p><small> Updated: <time
+            datetime="2020-04-07 23:57:55 +0000"
+            property="dc:modified">07 Apr 2020</time></small></p>
+  
+<!-- page.modified datetime="" -->
+ <br />
+          
+            <p><a class="btn btn-default" href='/representation-category.html'><i class="glyphicon glyphicon-chevron-left"></i> prev</a>
+          
+          
+            </p>
+          
+
+
+ <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); return false;"  class="btn btn-default"
+   href="https://github.com/ninnat/ninnat.github.io/commits/dev/_posts/2020-04-08-rosser.md"><i class="glyphicon glyphicon-time"></i> edit history</a>
+
+  <br><br>
+
+  <p><i class="glyphicon glyphicon-list"></i> Posted in
+    </p>
+
+  <p><i class="glyphicon glyphicon-tag"></i> Tags:
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><tiny> <i class="glyphicon glyphicon-barcode"></i> SHA Hash: <a href="https://github.com/ninnat/ninnat.github.io/commit/a3809eb05b77b146282dd69936d99ad8368c3351/_posts/2020-04-08-rosser.md"> a3809eb</a></tiny></p>
+</aside>
+
+<br /><br />
+<div style="font-weight:bold; text-align:center;font-size:1.0em;">
+ <i class="glyphicon glyphicon-chevron-left"></i> <a href="/archives.html">Archieves by date,</a>
+ <i class="glyphicon glyphicon-list"></i> <a href="/categories.html">by category,</a>
+ <!--<i class="glyphicon glyphicon-tag"></i>--> <a href="/tags.html">by tag.</a>
+</div>
+
+         <!-- </div> -->
+       </div>
+
+      </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>21 Aug 2019</span> &raquo; <a href="/quantum-supremacy.html">Ingredients for quantum supremacy [Draft]</a></li>
+    
+      <li><span>13 Nov 2019</span> &raquo; <a href="/representation-category.html">Representations&#58; morphisms and induction functor</a></li>
+    
+      <li><span>10 Nov 2019</span> &raquo; <a href="/sep-oct-2019-log.html">September-October 2019 Archive</a></li>
+    
+  </ul>
+</div>
+
+
+      <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span12">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'ninnat'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+    <footer class="footer" style="clear:both;">
+      <div class="row" align="center" clear="both">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. </span></a>
+		<br>
+	</div>
+      
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ
+      &amp;rft.creator=Ninnat Dangniam
+      &amp;rft.date=2020-04-08
+      &amp;rft.language='en-US, zh-Hans'
+      &amp;rft.rights='CC-BY'
+      &amp;rft_id=http://ninnat.github.io/rosser.html">
+  </span>
+
+    </footer>
+   </div><!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- JQuery, used on a few pages -->
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/mixitup-mine.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="//cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
+    <!-- XY-pic extension -->
+    <script type="text/x-mathjax-config>
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        },
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+        TeX: {extensions: ["AMSmath.js","AMSsymbols.js","/assets/js/xypic.js"]}
+      }); </script>
+    <!-- Self-defined extensions and macros. -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"],
+        unicode: ["Extension","unicode"]
+      });
+    });
+    </script>
+    <!-- Customize this part for LaTeX macros.-->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          cc: ["{\\mathrm{#1}}",1],
+          pder: ["{\\frac{\\partial #1}{\\partial #2}}",2],
+          ket: ["{\\left| {#1} \\right\\rangle}",1],
+          bra: ["{\\left\\langle {#1} \\right|}",1],
+          av: ["{\\left\\langle{#1}\\right\\rangle}",1],
+          ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
+          cong: "{\\,\\unicode{x2245}\\,}",
+          Tr: "{\\mathrm{Tr}}",
+          id: "{\\unicode{x1D7D9}}",
+          Id: "{\\mathbf{I}}",
+          coloneqq: "{\\unicode{x2254}}",
+          eqqcolon: "{\\unicode{x2255}}",
+          surject: "{\\unicode{x21A0}}",
+          inject: "{\\unicode{x21AA}}",
+          R: "{\\mathbb{R}}",
+          C: "{\\mathbb{C}}",
+          Z: "{\\mathbb{Z}}",
+          SU: "{\\mathrm{SU}}",
+          SO: "{\\mathrm{SO}}",
+          Sp: "{\\mathrm{Sp}}",
+          hilb: "{\\mathcal{H}}",
+          End: "{\\mathrm{End}}",
+          Hom: "{\\mathrm{Hom}}",
+          Sym: "{\\mathrm{Sym}}",
+          dgg: "{^{\\dagger}}",
+          ind: ["{\\mathrm{Ind}_{#2}^{#3} {#1}}",3],
+          cind: ["{\\mathrm{Coind}_{#2}^{#3} {#1}}",3],
+          ad: "{\\mathrm{ad}\\,}",
+          Ad: "{\\mathrm{Ad}\\,}",
+          kill: "{\\mathrm{Kill}(#1,#2)}",
+          rank: "{\\mathrm{rank}\\,}",
+          GL: "{\\mathrm{GL}}",
+          SL: "{\\mathrm{SL}}",
+          U: "{\\mathrm{U}}",
+          g: "{\\mathfrak{g}}",
+          h: "{\\mathfrak{h}}",
+          n: "{\\mathfrak{n}}",
+          gl: "{\\mathfrak{gl}}",
+          sl: "{\\mathfrak{sl}}",
+          so: "{\\mathfrak{so}}",
+          sp: "{\\mathfrak{sp}}",
+        }
+      <!-- extensions: ["autoload-all.js"]-->
+      }
+    });
+
+    </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <script src="/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <!-- Unused Twitter Bootstrap Javascript
+    <script src="http://ninnat.github.io/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://ninnat.github.io/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-transition.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-alert.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-modal.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-tab.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-popover.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-button.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://ninnat.github.io/assets/js/bootstrap-typeahead.js"></script>
+    <script src="http://ninnat.github.io/assets/js/application.js"></script>
+    -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+    <script src = "https://code.jquery.com/jquery.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src = "/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bigfoot.js"></script>
+	<script type="text/javascript">
+  $.bigfoot({
+    activateCallback: function($popover, $button) {
+        if (MathJax && !$button.data('mathjax-processed')) {
+            var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+            MathJax.Hub.Queue(function () {
+                $button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+                $button.data('mathjax-processed', true);
+            });
+        }
+    }
+  });
+	</script>
+
+<script src="assets/js/toc.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('#toc').toc({listType: 'ol',minimalHeaders:2});
+    });
+</script>
+
+  </body>
+</html>
+

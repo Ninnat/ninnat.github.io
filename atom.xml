@@ -4,13 +4,37 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2020-04-09T08:06:54+00:00</updated>
+ <updated>2020-04-19T08:43:52+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>MIP* = RE ตอนที่ 1</title>
+   <link href="/mip-star-equals-re.html"/>
+   <updated>2020-04-19T00:00:00+00:00</updated>
+   <id>h/mip-star-equals-re</id>
+   <content type="html">&lt;p&gt;ถ้าจะมีอะไรที่ทำให้ผมออกจาก hiatus การเขียนบล็อกได้ก็ต้องเป็นเรื่องใหญ่พอสมควร เรื่องนั้นคือบทพิสูจน์ &lt;a href=&quot;https://arxiv.org/abs/2001.04383&quot;&gt;MIP*=RE&lt;/a&gt; ในทฤษฎีความซับซ้อนเชิงการคำนวณที่นักวิทยาศาสตร์ควอนตัมหลายคนไม่คิดว่าชั่วชีวิตนี้จะได้เห็นข้อสรุป (เช่น&lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4512#comment-1828159&quot;&gt;คนนี้&lt;/a&gt;และ&lt;a href=&quot;https://twitter.com/jfitzsimons/status/1216908264396378112&quot;&gt;คนนี้&lt;/a&gt;) ผลงานนี้มาได้ตรงจังหวะ ไม่กี่วันหลังจากผมกลับมาจากงานประชุม &lt;a href=&quot;http://www.szpclab.com/qip2020&quot;&gt;QIP2020&lt;/a&gt; ที่เชินเจิ้น ซึ่ง Anand Natarajan ได้พูดเรื่อง &lt;a href=&quot;https://arxiv.org/abs/1904.05870&quot;&gt;NEEXT &lt;span class=&quot;math&quot;&gt;\(\subset\)&lt;/span&gt; MIP*&lt;/a&gt; และทิ้งท้ายด้วยคำถามว่า “ทำไมเราจะต้องหยุดที่ NEEXT ล่ะ?”&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;/assets/img/NEXT_in_MIP_future.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;ทำไมผมถึงตื่นเต้นกับงานชิ้นนี้? สมมติว่าอยู่ดีๆมีคนคนหนึ่งมาเคาะประตูแล้วบอกว่าเขาเป็นพระเจ้าผู้ทรงมีอำนาจไม่สิ้นสุด จะมีวิธีอะไรที่จะทดสอบเขาโดยไม่ต้องอาศัยความเชื่อได้? วิธึหนึ่งคือการให้แก้ปัญหายากๆ ที่เราสามารถเช็คคำตอบได้ในเวลาสั้นๆ อย่างปัญหา &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-complete&lt;/a&gt; แต่ถ้าเรายังคลางแคลงใจเนื่องจากยังไม่มีการพิสูจน์ &lt;a href=&quot;https://en.wikipedia.org/wiki/P_versus_NP_problem&quot;&gt;P &lt;span class=&quot;math&quot;&gt;\(\neq\)&lt;/span&gt; NP&lt;/a&gt; ปัญหา NP-complete จริงๆแล้วอาจจะง่ายก็ได้ เราอาจจะอยากถามปัญหาที่ตัวตนที่มีขีดจำกัด (finite being) อย่างมนุษย์ไม่มีทางตอบได้ไม่ว่าจะใช้เวลานานเท่าไรก็ตามเช่นคำถามว่าเครื่อง Turing จะหยุดหรือไม่ (ปัญหา &lt;a href=&quot;https://en.wikipedia.org/wiki/Halting_problem&quot;&gt;halting&lt;/a&gt;) แต่เราจะเช็คคำตอบได้ยังไงล่ะ? MIP* = RE บอกเราว่า&lt;strong&gt;ถ้ามีคนสองคนที่ไม่สามารถสื่อสารกันแต่สร้างเอนแทงเกิลเมนต์ปริมาณอนันต์ระหว่างกันได้ เราจะสามารถให้เขาเช็คได้ว่าเครื่องจักร Turing จะหยุด&lt;/strong&gt; &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;!--งานชิ้นนี้เผยความสัมพันธ์ที่ไม่คาดคิดระหว่างทฤษฎีควอนตัมและ[ทฤษฎีบทความไม่สมบูรณ์ของ Gödel](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems) ซึ่งเทียบเท่ากับปัญหา halting. ทั้งสองเป็นเรื่องที่ผมสนใจก่อนจะมาเรียนฟิสิกส์ (เหตุผลที่ทำให้ผมเรียนฟิสิกส์คือปรัชญา :smiley:) เพราะทั้งคู่ดูเหมือนจะกล่าวถึงขอบเขตจำกัดของสิ่งที่เรารู้ได้ ([ความไม่แน่นอนของ Heisenberg](https://en.wikipedia.org/wiki/Uncertainty_principle))
+ แต่ MIP*=RE เป็นอีกครั้งที่การค้นพบในสารสนเทศควอนตัมพลิกความคาดหมายว่าทฤษฎีควอนตัมไม่ใช่ข้อจำกัด แต่เป็นความเป็นไปได้ใหม่--&gt;
+
+&lt;p&gt;ในช่วง social distancing นี้ ผมจึงอยากจะหาคำตอบด้วยการเขียนบล็อกว่าเอนแทงเกิลเมนต์ช่วยเช็คคำตอบของปัญหา halting ได้อย่างไร (แต่ไม่ได้กะจะเข้าใจบทพิสูจน์ MIP*=RE นะ) แต่สำหรับผู้อ่านผมจะต้องอธิบายปัญหา halting และเอนแทงเกิลเมนต์ก่อน ก่อนที่จะไปทำความเข้าใจ&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0404076&quot;&gt;เกมควอนตัมในฐานะ interactive proof&lt;/a&gt; (ทำไมผมถึงพลาดเปเปอร์เจ๋งๆนี้จากปี 2004 ไปได้)&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;ยอมรับว่าวิธีนี้ไม่จะเวิร์คถ้าเทพเจ้าทรงสัพพัญญู (omniscience) ด้วย คือรู้ได้ว่าเทพอีกองค์ทำอะไรโดยไม่ต้องสื่อสารกัน&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
  
  <entry>
    <title>บทพิสูจน์คือโปรแกรม ตรรกะคือการคำนวณ</title>

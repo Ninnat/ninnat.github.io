@@ -16,7 +16,6 @@ http://ninnat.github.io/tools
 http://ninnat.github.io/writings/ 
 
 
-http://ninnat.github.io/jul-2020-log.html 
 http://ninnat.github.io/mip-star-equals-re.html 
 http://ninnat.github.io/rosser.html 
 http://ninnat.github.io/representation-category.html 

@@ -4,13 +4,230 @@
  <title>Schur's Lemming</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2020-04-19T09:50:39+00:00</updated>
+ <updated>2020-08-12T17:19:54+00:00</updated>
  <id></id>
  <author>
    <name>Ninnat Dangniam</name>
    <email>truecrimson@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>July 2020 Archive [draft]</title>
+   <link href="/jul-2020-log.html"/>
+   <updated>2020-08-13T00:00:00+00:00</updated>
+   <id>h/jul-2020-log</id>
+   <content type="html">&lt;!-- This is an archive of what I found useful, interesting, or simply enjoyable in July 2020, with leftovers since November 2019.--&gt;
+
+&lt;div id=&quot;toc&quot;&gt;
+
+&lt;/div&gt;
+&lt;h1 id=&quot;writings&quot;&gt;Writings&lt;/h1&gt;
+&lt;p&gt;Blog post&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ninnat.github.io/representation-category.html&quot;&gt;Representations: morphisms and induction functor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Research papers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;arxiv.org/abs/2002.11946&quot;&gt;Quantum supremacy in driven quantum many-body systems&lt;/a&gt;, 2002.11946&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2005.11222&quot;&gt;Expressibility and trainability of parameterized analog quantum systems for machine learning applications&lt;/a&gt;, 2005.11222&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2007.09713&quot;&gt;Optimal verification of stabilizer states&lt;/a&gt;, 2007.09713&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;research&quot;&gt;Research&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/2007.10885&quot;&gt;Epsilon-nets, unitary designs and random quantum circuits&lt;/a&gt;, Oszmaniec, Sawicki and Horodecki 2007.10885&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1209.1745&quot;&gt;Random walks in compact groups&lt;/a&gt; Varjú 2013&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1207.0148&quot;&gt;Dual pairing of symmetry groups and dynamical groups in physics&lt;/a&gt;, Rowe, Carvalho and Repka 2012&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;quantum-computational-supremacy&quot;&gt;Quantum computational supremacy&lt;/h2&gt;
+&lt;p&gt;Continuing from the &lt;a href=&quot;https://ninnat.github.io/sep-oct-2019-log.html&quot;&gt;previous log&lt;/a&gt;, we examine more closely nuances about the quantum supremacy argument.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/quant-ph/0205133&quot;&gt;Adaptive Quantum Computation, Constant Depth Quantum Circuits and Arthur-Merlin Games&lt;/a&gt;, Terhal and DiVincenzo 2004&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/0911.1624&quot;&gt;Simulating quantum computers with probabilistic methods&lt;/a&gt;, Nest 2011&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1712.02806&quot;&gt;From estimation of quantum probabilities to simulation of quantum circuits&lt;/a&gt;, Pashayan, Bartlett and Gross 2020&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt;-simulation is operational&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Poly-box is not enough for &lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt;-simulation&lt;/p&gt;
+&lt;p&gt;Define a family of “obfustication” quantum circuits that output &lt;span class=&quot;math&quot;&gt;\(\{x\oplus \mathrm{Parity}({\bf{y}}),{\bf{y}}\)&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\({\bf{y}} \in \{0,1\}^n\)&lt;/span&gt; is a uniformly random bit string and &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt; is the measurement outcome of the first qubit of a quantum circuit drawn from a universal set. This family of circuits can’t be classically simulated unless &lt;span class=&quot;math&quot;&gt;\(\mathrm{BQP \subseteq BPP}\)&lt;/span&gt;. However it admits a &lt;em&gt;deterministic&lt;/em&gt; poly-box (with exponential precision!): for &lt;span class=&quot;math&quot;&gt;\(\epsilon &amp;lt; 1/2^n\)&lt;/span&gt;, compute the Born probability. For &lt;span class=&quot;math&quot;&gt;\(\epsilon \ge 1/2^n\)&lt;/span&gt;, just guess &lt;span class=&quot;math&quot;&gt;\(1/2^{n+1}\)&lt;/span&gt;. Computing the Born probability takes exponential time but that’s ok because the time is still inverse polynomial in &lt;span class=&quot;math&quot;&gt;\(\epsilon\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Supremacy circuits may admit poly-box&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_{\mathrm{Prod}}\)&lt;/span&gt; admits a poly-box: if &lt;span class=&quot;math&quot;&gt;\(z=0\)&lt;/span&gt; (resp. &lt;span class=&quot;math&quot;&gt;\(z=1\)&lt;/span&gt;), sample from &lt;span class=&quot;math&quot;&gt;\(\id\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(+Z\)&lt;/span&gt; (resp. &lt;span class=&quot;math&quot;&gt;\(-Z\)&lt;/span&gt;) with equal probability. Evolve the sampled Pauli string back to the beginning of the circuit by Gottesman-Knill. The Born probability factorizes into a product of &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; terms which can be calculated efficiently. &lt;span class=&quot;math&quot;&gt;\[\Pr\left[\bigotimes_{j=1}^{n} \rho_j  \bigotimes_{j=1}^{n} P_j\right] = \prod_{j=1}^n \Pr(\rho_jP_j)\]&lt;/span&gt; However, &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_{\mathrm{Prod}}\)&lt;/span&gt; with adaptive measurement (or post-selection ) is universal therefore &lt;span class=&quot;math&quot;&gt;\(\mathcal{C}_{\mathrm{Prod}}\)&lt;/span&gt; is believed to be hard to classically simulated.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1803.04402&quot;&gt;Quantum Supremacy and the Complexity of Random Circuit Sampling&lt;/a&gt;, Bouland, Fefferman, Nirkhe, and Vazirani 2018 [&lt;a href=&quot;https://static-content.springer.com/esm/art%3A10.1038%2Fs41567-018-0318-2/MediaObjects/41567_2018_318_MOESM1_ESM.pdf&quot;&gt;Nat Phys supplementary&lt;/a&gt; (pdf)]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1909.06210&quot;&gt;Cayley path and quantum computational supremacy: A proof of average-case #P−hardness of Random Circuit Sampling with quantified robustness&lt;/a&gt;, Movassagh 1909.06210&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://case.edu/artsci/math/esmeckes/Haar_book.pdf&quot;&gt;&lt;em&gt;The Random Matrix Theory of the Classical Compact Groups&lt;/em&gt;&lt;/a&gt;, Elizabeth Mecke 2019&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/8zn8YJ5hUH8?controls=0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Given a #P-function &lt;span class=&quot;math&quot;&gt;\(f:\{0,1\}^n\to\{0,1\}\)&lt;/span&gt;. Define a GapP-function &lt;span class=&quot;math&quot;&gt;\(f&amp;#39;:\{0,1\}^n \to \{-1,1\}\)&lt;/span&gt; and note that the value of the sum &lt;span class=&quot;math&quot;&gt;\(\sum_{x\in\{0,1\}^n} f&amp;#39;(x)\)&lt;/span&gt; is in one-to-one correspondence to the value of &lt;span class=&quot;math&quot;&gt;\(\sum_{x\in\{0,1\}^n} f(x)\)&lt;/span&gt;. In particular, &lt;span class=&quot;math&quot;&gt;\[\begin{align}
+  \sum_{x\in\{0,1\}^n} f(x) = \frac{1}{2}\left(\sum_{x\in\{0,1\}^n} f&amp;#39;(x) + 2^n\right).
+\end{align}\]&lt;/span&gt; Now append an ancilla bit and define a new GapP-function &lt;span class=&quot;math&quot;&gt;\(g\)&lt;/span&gt; such that &lt;span class=&quot;math&quot;&gt;\(g(x,0) = f&amp;#39;(x)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(g(x,1)\)&lt;/span&gt; takes on value +1 &lt;span class=&quot;math&quot;&gt;\[\begin{align}
+  g(x,0) &amp;amp;= f&amp;#39;(x) \\
+  g(x,1) &amp;amp;=
+  \begin{cases}
+  +1\: \textrm{for $\alpha$ bitstrings}\\
+  -1\: \textrm{for $\beta$ bitstrings}
+  \end{cases}
+\end{align}\]&lt;/span&gt; We have that &lt;span class=&quot;math&quot;&gt;\[\begin{align}
+  \sum_{x\in\{0,1\}^n} g(x) = \sum_{x\in\{0,1\}^n} f&amp;#39;(x) + \alpha - \beta.
+\end{align}\]&lt;/span&gt; That is, the effect is to shift the sum of &lt;span class=&quot;math&quot;&gt;\(f&amp;#39;(x)\)&lt;/span&gt; by an even number.&lt;/p&gt;
+&lt;h2 id=&quot;classical-simulation-of-boson-sampling&quot;&gt;Classical simulation of boson sampling&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nature.com/articles/nphys4270&quot;&gt;Classical boson sampling algorithms with superior performance to near-term experiments&lt;/a&gt;, Neville et al Nat Phys 2017 (Exactly calculate for fully distinguishable photons and then approximate. Previously with the punny title “&lt;a href=&quot;https://arxiv.org/abs/1705.00686&quot;&gt;No imminent quantum supremacy by boson sampling&lt;/a&gt;”.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/1706.01260&quot;&gt;The Classical Complexity of Boson Sampling&lt;/a&gt;, Clifford and Clifford 2018 (Exact algorithm by sample each photon, then sample conditioned on previous photons. Have to calculate only 2 permanents in the worst case!)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/1707.02793&quot;&gt;Efficient algorithm for boson sampling with partially distinguishable photons&lt;/a&gt;, Renema et al PRL 2018 (Calculate &lt;span class=&quot;math&quot;&gt;\(O(n^{2k})\)&lt;/span&gt; permanents of &lt;span class=&quot;math&quot;&gt;\(k\times k\)&lt;/span&gt; matrices. Constant error in &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; the number of photons. What is &lt;span class=&quot;math&quot;&gt;\(k\)&lt;/span&gt;?)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1410.7687&quot;&gt;Sampling of partially distinguishable bosons and the relation to the multidimensional permanent&lt;/a&gt;, Tichy PRA 2015&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1410.3979&quot;&gt;Boson-sampling with photons of arbitrary spectral structure&lt;/a&gt;, Rhodes PRA 2015&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://doi.org/10.1088%2F1367-2630%2Faadfa8&quot;&gt;Classical simulation of photonic linear optics with lost particles&lt;/a&gt;, Oszmaniec and Brod NJP 2018&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/1809.01953&quot;&gt;Classical simulability of noisy boson sampling&lt;/a&gt;, Renema, Shchesnovich and García-Patrón 1809.01953&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/1906.06696&quot;&gt;Classical simulation of linear optics subject to nonuniform losses&lt;/a&gt;, Oszmaniec and Brod 1906.06696 (Generalizes Clifford and Clifford 2018 to allow &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt; photons in one mode. (1) The convex hull of the orbit of &lt;span class=&quot;math&quot;&gt;\(\ket{n,0,\dots,0}\)&lt;/span&gt; (2) The convex hull of the orbit of &lt;span class=&quot;math&quot;&gt;\(|n-r,\underbrace{1,\dots,1}_{r},0,\dots,0\rangle\)&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/1907.00022&quot;&gt;Classically simulating near-term partially-distinguishable and lossy boson sampling&lt;/a&gt;, Moylett, García-Patrón, Renema and Turner QST 2020 (Combine Renema and Clifford. Calculate 2 permanents of &lt;span class=&quot;math&quot;&gt;\(k\times k\)&lt;/span&gt; matrices. Exponential error in &lt;span class=&quot;math&quot;&gt;\(n\)&lt;/span&gt;.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arxiv.org/abs/2005.04214&quot;&gt;Faster classical Boson sampling&lt;/a&gt;, Clifford and Clifford 2005.04214&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--- [How to generate random matrices from the classical compact groups](https://arxiv.org/abs/math-ph/0609050), Mezzadri 2007
+- [The curious nonexistence of Gaussian 2-designs](https://arxiv.org/abs/1110.1042), Blume-Kohout and Turner 2014
+
+
+    $\mathcal{D}$ is a (state) $t$-design if the average over $\mathcal{D}$ mimics average over the Haar measure:
+    $$ \frac{1}{|\mathcal{D}|}\sum_{\psi\in\mathcal{D}} \ketbra{\psi}{\psi}^{\otimes t} = \int_{\psi\in\mathrm{Haar}} \ketbra{\psi}{\psi}^{\otimes t}.$$
+    Since the RHS commutes with $U^{\otimes t}$, it must be a sum of irrep projectors by Schur&#39;s lemma. Since $\ketbra{\psi}{\psi}^{\otimes t}$ lies entirely in the symmetric subspace, it is the projector onto the symmetric subspace, hence the equivalent condition for $\mathcal{D}$ to be a $t$-design:
+    $$ \frac{1}{|\mathcal{D}|}\sum_{\psi\in\mathcal{D}} \ketbra{\psi}{\psi}^{\otimes t} = \frac{\Pi_{\Sym{t}}}{\Tr (\Pi_{\Sym{t}}) }$$
+    Now for a different group $G$, the $G$-twirl (GCS) will still be a $t$-design if the symmetric subspace is a $G$-irrep because of Schur&#39;s lemma.
+
+
+- [Analytic representations based on SU (1,1) coherent states and their applications](https://arxiv.org/abs/quant-ph/9607022v1), Brif, Vourdas and Mann 1996 (A weak resolution of the identity)
+- [Online Learning of Quantum States](https://arxiv.org/abs/1802.09025), Aaronson et al 2018
+- [Diagrammatic method of integration over the unitary group, with applications to quantum transport in mesoscopic systems](https://arxiv.org/abs/cond-mat/9604059), Brouwer and Beenakker 1996
+- [Weingarten Calculus and the `IntHaar` Package for Integrals over Compact Matrix Groups](https://arxiv.org/abs/1612.07641), Alejandro Ginory and Jongwon Kim
+- [An Invitation to the Weingarten Calculus](http://www.math.ucsd.edu/~jinovak/d.lectures/Herstmonceaux.pdf), Collins, Matsumoto and Novak (Book in preparation)--&gt;
+
+
+&lt;h1 id=&quot;media&quot;&gt;Media&lt;/h1&gt;
+&lt;!--## Links
+
+- “Grandmaster level in StarCraft II using multi-agent reinforcement learning”, Vinyals et al 2019
+- DeepMind&#39;s blog on [AlphaStar](https://deepmind.com/blog/article/AlphaStar-Grandmaster-level-in-StarCraft-II-using-multi-agent-reinforcement-learning)
+ (blog; discussion)
+&lt;!-- [One-shot learning face recognition](https://blog.netcetera.com/face-recognition-using-one-shot-learning-a7cf2b91e96c)--&gt;
+
+&lt;!--
+The universe [is closed with 3.4 standard deviations](https://www.quantamagazine.org/what-shape-is-the-universe-closed-or-flat-20191104/).
+- [Designer babies](https://www.economist.com/science-and-technology/2019/11/07/modern-genetics-will-improve-health-and-usher-in-designer-children), Economist
+    - [Good and bad journalism](https://infoproc.blogspot.com/2019/11/good-and-bad-journalism-on-embryo.html) on embryo screening, Steve Hsu &lt;!-- [[The other article in SciMag](https://www.sciencemag.org/news/2019/10/screening-embryos-iq-and-other-complex-traits-premature-study-concludes)]--&gt;
+
+
+&lt;!-- - [Eigenvectors from eigenvalues](https://arxiv.org/abs/1908.03795), Denton et al 1908.03795 [[Quanta](https://www.quantamagazine.org/neutrinos-lead-to-unexpected-discovery-in-basic-math-20191113)]
+
+    This is a story of something that was rediscovered again and again, in different contexts.
+    The modulus squared = quantum probability of every element of each eigenvector is complete determined by eigenvalues of submatrices. It&#39;s kind of amazing that you can still discover something new in linear algebra in the 21st century.) [[reddit thread](https://www.reddit.com/r/math/comments/ci665j/linear_algebra_question_from_a_physicist/) where the physicists took the question to the internet] [[Terence Tao&#39;s blog](https://terrytao.wordpress.com/2019/08/13/eigenvectors-from-eigenvalues/)]
+    --&gt;
+
+
+
+&lt;h2 id=&quot;musics&quot;&gt;Musics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/araragi/comments/abuvha/i_identified_every_piece_of_music_in_the/&quot;&gt;Frequency analysis&lt;/a&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/Monogatari_(series)&quot;&gt;Monogatari&lt;/a&gt; OST&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mLKIg73pLcQ&quot;&gt;Chain&lt;/a&gt;, Back-On, &lt;em&gt;Air Gear&lt;/em&gt; (OP)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=b-Ma_fd1aXg&quot;&gt;Winding Road&lt;/a&gt;, Man with a Mission, &lt;em&gt;Golden Kamuy&lt;/em&gt; (OP)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=67RpDUw8jnw&quot;&gt;Chiisana Hibi&lt;/a&gt;, flumpool, &lt;em&gt;Kakushigoto&lt;/em&gt; (OP)&lt;/li&gt;
+&lt;li&gt;Megaman X arranges, Lenny Lederman&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=YANRyJ2Khs0&quot;&gt;Armored Armadillo&lt;/a&gt; (X1) &lt;a href=&quot;https://capcom.fandom.com/wiki/Setsuo_Yamamoto&quot;&gt;Setsuo Yamamoto&lt;/a&gt; [&lt;a href=&quot;https://capcom.fandom.com/wiki/Mega_Man_X&quot;&gt;X1 OST credit&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8xNb3CfpKvw&quot;&gt;Flame Stag&lt;/a&gt; (X2), &lt;a href=&quot;https://capcom.fandom.com/wiki/Yuki_Iwai&quot;&gt;Yuki Iwai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=EA17YRs9LkE&quot;&gt;Opening stage&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=TRNhBskZzhM&quot;&gt;Blast Hornet&lt;/a&gt; (X3), &lt;a href=&quot;https://capcom.fandom.com/wiki/Toshihiko_Horiyama&quot;&gt;Toshihiko Horiyama&lt;/a&gt; [&lt;a href=&quot;https://capcom.fandom.com/wiki/Mega_Man_X3&quot;&gt;X3 OST credit&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QJ1p9ZbZk2Q&quot;&gt;Neon Tiger&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=V6N126crgLg&quot;&gt;Toxic Seahorse&lt;/a&gt; (X3), &lt;a href=&quot;https://capcom.fandom.com/wiki/Shusaku_Uchiyama&quot;&gt;Shusaku Uchiyama&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=CHc576ra0lM&quot;&gt;Jakob orbital elevator&lt;/a&gt; (X8), &lt;a href=&quot;https://capcom.fandom.com/wiki/Yuko_Komiyama&quot;&gt;Yuko Komiyama&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pokemon Sword &amp;amp; Shield arranges, RichaadEB&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=s8c5XnqmAhQ&quot;&gt;Marnie theme&lt;/a&gt; (JP: Mary)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Xx0mpzpSRvM&quot;&gt;Gym leader battle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Covers, Tokoyami Towa&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=2D0B3wTjE20&quot;&gt;brilliant&lt;/a&gt; / &lt;a href=&quot;https://www.youtube.com/watch?v=3UV8OZj2olg&quot;&gt;ERROR&lt;/a&gt;, niki&lt;/li&gt;
+&lt;li&gt;Cover, Nekomata Okayu&lt;/li&gt;
+&lt;li&gt;Otome Kaibou, DECO*27&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;touhou&quot;&gt;Touhou&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PYSIMZV4m0E&quot;&gt;TOUHOU PIANO lullaby medley / 1hour&lt;/a&gt;, TAMUSIC&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QFGRGj7PdGk&quot;&gt;Far-East El Dorado&lt;/a&gt;, Touhou Shinjutou ~ Hollow Song of Birds (fangame)&lt;/li&gt;
+&lt;li&gt;Arranges, RichaadEB
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Qx3VFOXnaNM&quot;&gt;Satori Maiden ~ 3rd Eye&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=yrH71-VISFQ&quot;&gt;Pierrot of the Star-Spangled Banner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0cHlZSEld-c&quot;&gt;Emotional Skyscraper ~ Cosmic Mind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Uv4eonwpKjc&quot;&gt;Kobito of the Shining Needle ~ Little Princess&lt;/a&gt;, ft. YaboiMatoi&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xuoN07wwOUg&quot;&gt;Entrusting This World to Idols ~ Idolatrize World&lt;/a&gt; (1:54!)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;hoshimachi-suisei&quot;&gt;Hoshimachi Suisei&lt;/h3&gt;
+&lt;p&gt;MV&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next Color Planet (My current preference: NCP &amp;gt; Tenkyuu &amp;gt; Pieces &amp;gt; Comet)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vQHVGXdcqEQ?controls=0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5yDNEmcKQFY&quot;&gt;Hanamuke no Tori&lt;/a&gt; w/ Tokino Sora, &lt;em&gt;THE IDOLM@STER: Million Live!&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-wNSFmqhQsU&quot;&gt;Saga Jihen&lt;/a&gt; w/ Hololive Fantasy, &lt;em&gt;Zombieland Saga&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Karaoke&lt;/p&gt;
+&lt;p&gt;All karaoke songs are listed on &lt;a href=&quot;https://suichyan-ha-kyoumokawaii.amebaownd.com/posts/8202093&quot;&gt;Hoshiyomi Studio&lt;/a&gt; maintained by &lt;a href=&quot;https://twitter.com/boko_kama_&quot;&gt;Kamaboko&lt;/a&gt; &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2020-05-28 【歌枠】復活の歌祭！！【ホロライブ / 星街すいせい】&lt;/li&gt;
+&lt;li&gt;43:30 Kane wo Narashite, Bonnie Pink, &lt;em&gt;Tales of Vesperia&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;52:44 &lt;a href=&quot;https://www.youtube.com/watch?v=aJqnUIu-uOQ&quot;&gt;Yume de aru You ni&lt;/a&gt;, DEEN, &lt;em&gt;Tales of Destiny&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;2020-06-29 &lt;a href=&quot;https://www.youtube.com/watch?v=N4Op5gpV2AU&quot;&gt;ショート歌枠🎶【ホロライブ / 星街すいせい】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;29:10 &lt;a href=&quot;https://www.youtube.com/watch?v=Fpy0uOtYX44&quot;&gt;Hanamuke no Tori&lt;/a&gt;, &lt;em&gt;THE IDOLM@STER: Million Live!&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;2020-07-24 &lt;a href=&quot;https://www.bilibili.com/video/BV1Pk4y1m7ht&quot;&gt;【B限】B站出道一周年纪念歌回！&lt;/a&gt; (bilibili)&lt;/li&gt;
+&lt;li&gt;48:48 &lt;a href=&quot;https://www.youtube.com/watch?v=-lPEzN6pw5A&quot;&gt;Platinum&lt;/a&gt;, Sakamoto Maya, &lt;em&gt;Cardcaptor Sakura&lt;/em&gt; (OP3)&lt;/li&gt;
+&lt;li&gt;2020-07-21 &lt;a href=&quot;https://www.youtube.com/watch?v=cGyPdVUaPdI&quot;&gt;【歌枠】【ホロライブ / 星街すいせい】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;07:02 Gurenge, LiSA, &lt;em&gt;Kimetsu no Yaiba&lt;/em&gt; (OP)&lt;/li&gt;
+&lt;li&gt;13:19 Namae no Nai Kaibutsu, EGOIST, &lt;em&gt;Psycho-Pass&lt;/em&gt; (ED1)&lt;/li&gt;
+&lt;li&gt;18:57 &lt;a href=&quot;https://www.youtube.com/watch?v=noiLe5vUUho&quot;&gt;Kyouran Hey Kids!&lt;/a&gt;, The Oral Cigarettes, &lt;em&gt;Noragami Aragoto&lt;/em&gt; (OP)&lt;/li&gt;
+&lt;li&gt;2020-08-04 &lt;a href=&quot;https://www.youtube.com/watch?v=-cWxSCiPKk4&quot;&gt;ゲリラ！！！40万人突破するまで歌うのを止めるな！！！！🎶【ホロライブ / 星街すいせい】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20:27 &lt;a href=&quot;https://www.youtube.com/watch?v=KUWXaegM4bo&quot;&gt;Karma&lt;/a&gt;, Bump of Chicken, &lt;em&gt;Tales of the Abyss&lt;/em&gt; (I requested the song in &lt;a href=&quot;https://youtu.be/clXusKnSBY0?t=5976&quot;&gt;this utawaku&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;33:38 Hikari, Utada Hikaru&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;manga&quot;&gt;Manga&lt;/h2&gt;
+&lt;!-- Nonfiction
+
+- [วิปัสสนาระบบลัดสั้น สำหรับคนทั่วไป](http://www.buddhadasa.org/files/pdf/b_pdf12/pdf12-49.pdf) (pdf warning), พุทธทาสภิกขุ --&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/manga/642/Vinland_Saga&quot;&gt;Vinland Saga&lt;/a&gt;, Vol. 15-22 (Chapter 101-161), Yukimura Makoto&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/manga/111745/Tengoku_Daimakyou&quot;&gt;Tengoku Daimakyou&lt;/a&gt;, Ishiguro Masakazu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;anime&quot;&gt;Anime&lt;/h2&gt;
+&lt;p&gt;Pre-pandemic&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/36999/Zoku_Owarimonogatari&quot;&gt;Zoku Owarimonogatari&lt;/a&gt;, Shaft {Nisio Isin} [Light novels] 2018&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/34798/Yuru_Camp%E2%96%B3&quot;&gt;Yuru Camp△&lt;/a&gt; (12), C-Station {Afro} &lt;a href=&quot;#manga&quot;&gt;Manga&lt;/a&gt; 2018 (Notable episodes: 9,12; Notable moment: &lt;a href=&quot;https://streamable.com/o37sd&quot;&gt;くぁwせdrftgyふじこlp&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime.php?id=339&quot;&gt;Serial Experiments Lain&lt;/a&gt;, Triangle Staff 1998 (Notable episodes: 5, 9-10) [&lt;a href=&quot;https://tvtropes.org/pmwiki/pmwiki.php/Anime/SerialExperimentsLain&quot;&gt;TV Tropes&lt;/a&gt; &lt;a href=&quot;https://tvtropes.org/pmwiki/pmwiki.php/ShoutOut/SerialExperimentsLain&quot;&gt;shoutout&lt;/a&gt;][&lt;a href=&quot;https://www.reddit.com/r/anime/comments/35vons/spoilers_serial_experiments_lain_rewatch/&quot;&gt;reddit&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/28735/Shouwa_Genroku_Rakugo_Shinjuu&quot;&gt;Shouwa Genroku Rakugo Shinjuu&lt;/a&gt;, Studio DEEN {Haruko Kumota} [&lt;a href=&quot;https://en.wikipedia.org/wiki/Descending_Stories:_Showa_Genroku_Rakugo_Shinju&quot;&gt;Manga&lt;/a&gt;] 2016&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/37521/Vinland_Saga&quot;&gt;Vinland Saga&lt;/a&gt;, Wit Studio {Makoto Yukimura} &lt;a href=&quot;#manga&quot;&gt;Manga&lt;/a&gt; 2019 (Notable episodes: 1-4 and 24 are movie quality. Episode 14 stands out in term of directing.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Intra-pandemic AKA stuck at home with Netflix&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/33352/Violet_Evergarden&quot;&gt;Violet Evergarden&lt;/a&gt;, Kyoto Animation {Kana Akatsuki} [Light novel] 2018 (Notable episode: 10)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/13601/Psycho-Pass&quot;&gt;Psycho-Pass&lt;/a&gt;. Production I.G. (Urobuchi Gen) 2012-2013 (Notable episodes: 11,17)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/7785/Yojouhan_Shinwa_Taikei&quot;&gt;Yojouhan shinwa taikei (The Tatami Galaxy)&lt;/a&gt;, Madhouse (Masaaki Yuasa) {Tomihiko Morimi} [novel] 2010 (Notable episode: 11)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/33206/Kobayashi-san_Chi_no_Maid_Dragon&quot;&gt;Kobayashi-san chi no Maid Dragon&lt;/a&gt;, Kyoto Animation {Coolkyousinnjya} &lt;a href=&quot;#manga&quot;&gt;Manga&lt;/a&gt; 2017 (Notable episode 12)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/39792/Eizouken_ni_wa_Te_wo_Dasu_na&quot;&gt;Eizouken ni wa te wo dasu na!&lt;/a&gt;, Science SARU (Masaaki Yuasa) {Sumito Ouwara} [&lt;a href=&quot;https://en.wikipedia.org/wiki/Eizouken_ni_wa_Te_o_Dasu_na!&quot;&gt;Manga&lt;/a&gt;] 2020 (Notable episode: 7)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai&quot;&gt;Seishun buta yarou wa Bunny Girl senpai no yume wo minai&lt;/a&gt;, CloverWorks 2018 {Kamoshida Hajime} [Light novel] (Same author as &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Pet_Girl_of_Sakurasou&quot;&gt;Sakurasou&lt;/a&gt;; I’m not a fan of leaving arguably the most important plot point to a &lt;a href=&quot;https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai&quot;&gt;movie&lt;/a&gt;.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- There are two movies I haven&#39;t watched: [Yoru wa mijikashi arukeyo otome (Night Is Short, Walk On Girl)](https://myanimelist.net/anime/34537/Yoru_wa_Mijikashi_Arukeyo_Otome) and [Aobuta movie](https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai)--&gt;
+
+
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Most older videos are not available due to the &lt;a href=&quot;https://www.reddit.com/r/Hololive/comments/i0ibec/hololive_current_situation_megathreadsummary/&quot;&gt;Great Hololive Purge&lt;/a&gt;. Check &lt;a href=&quot;https://hololive.jetri.co/#/status&quot;&gt;HoloTools&lt;/a&gt; for the recovery status, &lt;a href=&quot;playboard.co&quot;&gt;Playboard&lt;/a&gt; for information of missing videos.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
  
  <entry>
    <title>MIP* = RE ตอนที่ 1</title>

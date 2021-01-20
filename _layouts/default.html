@@ -12,6 +12,10 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/littlefoot/dist/littlefoot.css"
+    />
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
@@ -38,5 +42,13 @@
 
     {% include scripts.html %}
 
+    <script
+    src="https://unpkg.com/littlefoot/dist/littlefoot.js"
+    type="application/javascript"
+    ></script>
+      <script type="application/javascript">
+          littlefoot.littlefoot({activateOnHover: true,
+          dismissOnUnhover: true}) // Pass any littlefoot settings here.
+    </script>
   </body>
 </html>

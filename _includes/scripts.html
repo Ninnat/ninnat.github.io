@@ -33,6 +33,9 @@
 
 </script>
 
+<!-- for numbered equations-->
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'],['\\(','\\)'] ], processEscapes: true } }); </script>
 <!-- Customize this part for LaTeX macros.-->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -47,12 +50,12 @@ MathJax.Hub.Config({
       ketbra: ["{\\left|{#1}\\vphantom{#2}\\right\\rangle\\!\\left\\langle{#2}\\vphantom{#1}\\right|}",2],
       cong: "{\\,\\unicode{x2245}\\,}",
       Tr: "{\\mathrm{Tr}}",
-      id: "{\\unicode{x1D7D9}}",
+      id: "{\\,\\unicode{x1D7D9}\\,}",
       Id: "{\\mathbf{I}}",
-      coloneqq: "{\\unicode{x2254}}",
-      eqqcolon: "{\\unicode{x2255}}",
-      surject: "{\\unicode{x21A0}}",
-      inject: "{\\unicode{x21AA}}",
+      coloneqq: "{\\,\\unicode{x2254}\\,}",
+      eqqcolon: "{\\,\\unicode{x2255}\\,}",
+      surject: "{\\,\\unicode{x21A0}\\,}",
+      inject: "{\\,\\unicode{x21AA}\\,}",
       R: "{\\mathbb{R}}",
       C: "{\\mathbb{C}}",
       Z: "{\\mathbb{Z}}",

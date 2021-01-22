@@ -1,11 +1,15 @@
 ---
-layout: posts
+layout: single
 title: Google's quantum supremacy FAQ (ภาษาไทย)
 subtitle:
 date: 2019-10-30
 categories:
-  - Quantum computing
+  - quant-ph
 tags:
+toc: true
+toc_label: "Contents"
+toc_sticky: true
+toc_icon: "anchor"
 ---
 
 *เขียน: 30 ต.ค 2019; แก้ไข: 1 พ.ย 2019*

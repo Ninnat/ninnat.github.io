@@ -1,11 +1,15 @@
 ---
-layout: posts
+layout: single
 title: ขั้นคิดคำนวณแบบควอนตัม
 subtitle:
 date: 2017-08-01
 categories:
-  - Quantum computing
+  - quant-ph
 tags:
+toc: true
+toc_label: "Contents"
+toc_sticky: true
+toc_icon: "anchor"
 
 ---
 

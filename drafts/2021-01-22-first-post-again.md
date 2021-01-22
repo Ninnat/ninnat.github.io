@@ -1,8 +1,8 @@
 ---
 layout: single
-title: First Post
-subtitle: This is not the first post anymore but whatever.
-date: 2017-01-03
+title: First Post (Again!)
+subtitle:
+date: 2021-01-22
 categories:
 tags:
 toc: true

@@ -12,10 +12,10 @@ toc_sticky: true
 toc_icon: "anchor"
 ---
 
-<!-- *เขียน: 30 ต.ค 2019; แก้ไข: 1 พ.ย 2019*-->
-
 เมื่อวันที่ 23 ตุลาคม ในที่สุดเปเปอร์ของกูเกิ้ลที่รั่วไหลบนเวบไซต์ของนาซ่าก่อนจะถูกลบไปก็ได้ปรากฏในวารสาร
 [Nature](https://www.nature.com/articles/s41586-019-1666-5) แล้ว ทำให้เกิดไฮป์ในโซเชียลมีเดียว่า "คอมพิวเตอร์ควอนตัมแก้ปัญหาที่คอมพิวเตอร์ปัจจุบันใช้เวลา 10,000 ปีได้ใน 3 นาที"
+
+<!-- *เขียน: 30 ต.ค 2019; แก้ไข: 1 พ.ย 2019*-->
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It’s official! 💥 The US has achieved quantum supremacy! <br>In a collaboration between the Trump Admin, <a href="https://twitter.com/Google?ref_src=twsrc%5Etfw">@Google</a> and UC Santa Barbara, quantum computer Sycamore has completed a calculation in 3 min 20 sec that would take about 10,000 years for a classical comp. <a href="https://t.co/YBv2TPCP1A">pic.twitter.com/YBv2TPCP1A</a></p>&mdash; Ivanka Trump (@IvankaTrump) <a href="https://twitter.com/IvankaTrump/status/1186987509609385988?ref_src=twsrc%5Etfw">October 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

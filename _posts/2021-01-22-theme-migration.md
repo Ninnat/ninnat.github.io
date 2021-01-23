@@ -12,13 +12,13 @@ toc_icon: "anchor"
 ---
 
 
+This Github Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I incidentally made it disappear in the first place. The attempt was successful and I want to record in this post some helpful references and steps that I took.
+
 <!-- How easy it is today to find a free blogging platform that checks all your needs. Not so for math bloggers, especially those that are used to seeing equations beautifully typeset in [latex](https://www.latex-project.org/) without needing to run codes through some kind of converter.
 
 Finding a blog that functions without a hassle is even harder if you are a math blogger, but that is not a problem here. Equations are written in [Markdown](http://daringfireball.net/projects/markdown/) and displayed using [MathJax](https://www.mathjax.org/).
 
 Another indispensable feature that I've always longed for is the popup footnote. Digital footnotes today are often still implemented as if they are in print media. You follow the link to the bottom of the post and then have to find a way back to where you were in the main text, thus breaking the flow of reading. (And maybe it's just me but it's tempting to take a peek at footnotes even when I know they aren't necessary to the main text.) A much better way to implement a digital footnote is using, for example, [Bigfoot](http://www.bigfootjs.com/) like this. [^1] -->
-
-This Github Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I incidentally made it disappear in the first place. The attempt was successful and I want to record in this post some helpful references and steps that I took.
 
 # Migration
 

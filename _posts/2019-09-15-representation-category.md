@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Induced representations
+title: Understanding induced representations
 date: 2019-11-13
 categories:
   - math.RT
@@ -224,18 +224,20 @@ $$
 \end{align}
 $$
 
-says that the number of times a $G$-irrep $W$ appears in the representation $\mathrm{Ind}V$ induced from $V$ is the same as the number of times the restriction $\mathrm{Res}W$ to $H$ appears in an $H$-irrep $V$. [^6]
+says that the number of times a $G$-irrep $W$ appears in the representation $\mathrm{Ind}V$ induced from $V$ is the same as the number of times the restriction $\mathrm{Res}W$ to $H$ appears in an $H$-irrep $V$.
 
-<span style="color:red">
+*[[As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.]]*
 
-When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension and in particular
 
+When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension (Peter-Weyl) and in particular
+<!--
 $$
 \dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.
 $$
 
 But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find (infinite-dimensional) unitary representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical varieties](https://en.wikipedia.org/wiki/Spherical_variety)).
 </span>
+-->
 
 
 ## Foundation: Adjoint functors
@@ -414,8 +416,6 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
 [^1]: The word "class" cannot be replaced by "set". For example, there is no set of all sets ([Russell's paradox]((https://en.wikipedia.org/wiki/Russell%27s_paradox))).
 
 [^3]: We think of R as both a rotation matrix (the defining representation of SO(3)) and an abstract group element. We also assume the [Einstein summation convention](https://en.wikipedia.org/wiki/Einstein_notation).
-
-[^6]: As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.
 
 [^7]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
 (The example is taken from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [one of Qiaochu Yuan's answers](https://math.stackexchange.com/a/25515) on Math Stack Exchange)

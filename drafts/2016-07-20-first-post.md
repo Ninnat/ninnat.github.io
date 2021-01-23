@@ -3,7 +3,7 @@ layout: single
 title: First Post
 subtitle: This is not the first post anymore but whatever.
 date: 2017-01-03
-categories:
+categories: "meta"
 tags:
 toc: true
 toc_label: "Contents"

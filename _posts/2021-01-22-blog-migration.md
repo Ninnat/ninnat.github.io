@@ -11,7 +11,6 @@ toc_sticky: true
 toc_icon: "anchor"
 ---
 
-
 This Github Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I incidentally made it disappear in the first place. The attempt was successful and I want to record in this post some helpful references and steps that I took.
 
 <!-- How easy it is today to find a free blogging platform that checks all your needs. Not so for math bloggers, especially those that are used to seeing equations beautifully typeset in [latex](https://www.latex-project.org/) without needing to run codes through some kind of converter.
@@ -66,7 +65,7 @@ The favicon (which incidentally shows a capybara, not a lemming) are generated u
 
 ## MathJax
 
-This site uses MathJax (2.7.7) and [tex2jax](https://docs.mathjax.org/en/v2.7-latest/options/preprocessors/tex2jax.html) to create beautiful equations with minimal effort (unlike bare bone Wordpress LaTeX support). The only file that controls MathJax is `_includes/scripts.html` where I put the following code snippets for
+This site uses MathJax (2.7.7) and [tex2jax](https://docs.mathjax.org/en/v2.7-latest/options/preprocessors/tex2jax.html) to create beautiful equations with minimal effort (unlike bare bone Wordpress LaTeX support). The only file that controls MathJax is `_includes/scripts.html` where I put the following codes for
 - Latex macros (the example showing macros for the quantum mechanical [bras and kets](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation))
 - in-line math delimitor `$...$` (instead of the default `\\(...\\)`)
 - equation numbers
@@ -98,7 +97,7 @@ MathJax.Hub.Config({
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } }); </script>
 ```
 
-To display (say aligned) equations in its own paragraph, use `$$\begin{align}...\end{align}$$` for numbered equations
+To display (say aligned) equations in their own paragraph, use `$$\begin{align}...\end{align}$$` for numbered equations
 
 $$
 \begin{align}
@@ -113,7 +112,7 @@ or `$$\begin{aligned}...\end{aligned}$$` for unnumbered equations
 
 $$
 \begin{aligned}
-i\hbar\frac{\partial}{\partial} \ket{\psi(t)} = H\ket{\psi(t)}
+i\hbar\frac{\partial}{\partial t} \ket{\psi(t)} = H\ket{\psi(t)}
 \end{aligned}
 $$
 
@@ -123,7 +122,7 @@ A quick guide on MathJax syntax can be found [here](http://meta.math.stackexchan
 ## Popup footnotes
 
 For popup footnotes like this [^1], this site uses [Littlefoot.js](https://github.com/goblindegook/littlefoot), a descendent of [Bigfoot.js](https://github.com/lemonmade/bigfoot/) that does not require an additional jQuery.
-The code snippets in the installation direction needs to be placed in `_layouts/default.html`. Currently, I do not have MathJax enabled in footnotes. It was possible with Bigfoot using [a code snippet]((https://esham.io/2014/07/mathjax-and-bigfoot)) by Benjamin Esham, but even that breaks when the formula is too complicated or not supposed to be in-line (for example matrices). So now I avoid using formulas in footnotes in general.
+The code snippets in the installation direction needs to be placed in `_layouts/default.html`. Currently, I do not have MathJax enabled in footnotes. It was possible with Bigfoot using [a code snippet](https://esham.io/2014/07/mathjax-and-bigfoot) by Benjamin Esham, but even that breaks when the formula is too complicated or not supposed to be in-line (for example matrices). So now I avoid using formulas in footnotes in general.
 
 
 ## Table of contents

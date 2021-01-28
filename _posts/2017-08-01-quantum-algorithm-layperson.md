@@ -4,8 +4,9 @@ title: ขั้นคิดคำนวณแบบควอนตัม
 subtitle:
 date: 2017-08-01
 categories:
-  - quant-ph
+  - Quantum
 tags:
+  - quant-ph
 toc: true
 toc_label: "Contents"
 toc_sticky: true

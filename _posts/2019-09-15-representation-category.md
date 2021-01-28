@@ -1,11 +1,12 @@
 ---
 layout: single
-title: Understanding induced representations
+title: \[Note\] Understanding induced representations
 date: 2019-11-13
 categories:
+  - Math
+tags:
   - math.RT
   - math.CT
-tags:
 toc: true
 toc_label: "Contents"
 toc_sticky: true
@@ -229,15 +230,19 @@ says that the number of times a $G$-irrep $W$ appears in the representation $\ma
 *[[As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.]]*
 
 
+<span style="color:red">
+[[To Rewrite]]
+</span>
+
+```
 When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension (Peter-Weyl) and in particular
-<!--
+
 $$
 \dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.
 $$
 
 But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find (infinite-dimensional) unitary representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical varieties](https://en.wikipedia.org/wiki/Spherical_variety)).
-</span>
--->
+```
 
 
 ## Foundation: Adjoint functors
@@ -279,9 +284,10 @@ there is no (total) function to an empty set, whereas there is always a (single,
 
 ## Extension of scalars
 <span style="color:red">
-[[To be rewrite]]
+[[To Rewrite]]
 </span>
 
+```
 Having seen examples of free functors, let us go back to our original goal of making sense of induction. In the language of modules, induction corresponds to an *extension of scalars*, similar to how a real vector space $V$ can be complexified to $V^{\C} = V \otimes_{\R} \C$. We begin by looking for an adjunction involving tensor products.
 
 A hint comes from a trivial-looking identity given three finite-dimensional vector spaces $M,N,P$
@@ -392,7 +398,7 @@ $$\begin{align}
 We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, $k[G]\otimes_{k[H]} V$ in (37) is the same as $\mathrm{Ind}_L W = \bigoplus_{k\in G/H} kW$.
 
 There is much more that can be said about induced representations. (How the right and left adjoints for finite groups are [isomorphic](https://math.stackexchange.com/a/226493). How they are in general [not isomorphic](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).) But those would be topics for another day.
-
+```
 
 <!--
 [Nakayama isomorphism](https://math.stackexchange.com/questions/225730/left-adjoint-and-right-adjoint-nakayama-isomorphism)

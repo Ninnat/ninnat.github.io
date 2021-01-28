@@ -3,7 +3,7 @@ layout: single
 title: Blog migration
 subtitle:
 date: 2021-01-23
-categories: "meta"
+categories: "Meta"
 tags:
 toc: true
 toc_label: "Contents"
@@ -11,7 +11,7 @@ toc_sticky: true
 toc_icon: "anchor"
 ---
 
-This Github Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I accidentally made it disappear in the first place. The attempt was successful and I want to record the process in this post.
+This GitHub Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I accidentally made it disappear in the first place. The attempt was successful and I want to record the process in this post.
 
 <!-- How easy it is today to find a free blogging platform that checks all your needs. Not so for math bloggers, especially those that are used to seeing equations beautifully typeset in [latex](https://www.latex-project.org/) without needing to run codes through some kind of converter.
 
@@ -23,8 +23,8 @@ Another indispensable feature that I've always longed for is the popup footnote.
 
 I chose the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme by Michael Rose. (I stumbled upon the creator from [this bilingual (EN-TH) Jekyll math blog](https://tupleblog.github.io/))
 To "migrate" to this new theme, I mainly follow two sources:
-- Programming Historian has a beginner-friendly [guide to build a Github Page site with Jekyll](https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages), as in they will tell you things like "Don't enter a new command before the previous one finishes running" so you can follow the guide easily even if you are clueless about command lines, for example.
-- [This Stack Overflow answer](https://web.archive.org/web/20210123074854/https://stackoverflow.com/questions/31327045/switch-theme-in-an-existing-jekyll-installation/37186333) by Daniel A. A. Pelsmaeker gives a complete rundown on how to switch an existing Jekyll Github Page site to a new theme. In the end I had to commit a terrible Git sin of [merging completely different branches](https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch) using `--allow-unrelated-histories` but that's fine.
+- Programming Historian has a beginner-friendly [guide to build a GitHub Page site with Jekyll](https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages), as in they will tell you things like "Don't enter a new command before the previous one finishes running" so you can follow the guide easily even if you are clueless about command lines, for example.
+- [This Stack Overflow answer](https://web.archive.org/web/20210123074854/https://stackoverflow.com/questions/31327045/switch-theme-in-an-existing-jekyll-installation/37186333) by Daniel A. A. Pelsmaeker gives a complete rundown on how to switch an existing Jekyll GitHub Page site to a new theme. In the end I had to commit a terrible Git sin of [merging completely different branches](https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch) using `--allow-unrelated-histories` but that's fine.
 
 Some random problems that I encountered:
 - When running the site locally using `bundle exec jekyll serve`, make sure to use `http` and not `https` (which most browsers usually assume is what you want).
@@ -32,7 +32,7 @@ Some random problems that I encountered:
 	```
 	fatal: HttpReqestException encountered.
 	Remote "origin" does not support the LFS locking API.
-	Git credentials for https://github.com/[Github Page site].git not found.
+	Git credentials for https://github.com/[GitHub Page site].git not found.
 	```
 	After installing  Git Credential Manager for Windows (1.20.0), `git push` still prompt failed authentication but after enough failures it just works.
 
@@ -41,7 +41,7 @@ While my old site used [Redcarpet](https://www.rubydoc.info/gems/redcarpet/3.2.2
 # Customization
 
 
-## About page
+## Pages
 
 Create a folder called `_pages`, inside which create a markdown file with the following front matter
 ```

@@ -4,8 +4,9 @@ title: Google's quantum supremacy FAQ (ภาษาไทย)
 subtitle:
 date: 2019-10-30
 categories:
-  - quant-ph
+  - Quantum
 tags:
+  - quant-ph
 toc: true
 toc_label: "Contents"
 toc_sticky: true

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: \[Note\] Understanding induced representations
+title: \[Math\] Understanding induced representations
 date: 2019-11-13
 categories:
   - Math
@@ -23,7 +23,7 @@ excerpt: "*created: 17 Sep 2019; modified: 22 Jan 2021; status: draft*"
 
 # Preliminaries: representations
 
-The standard way to introduce a representation of a group $G$ is as a pair $(\rho,V)$ of a vector space $V$ and a group homomorphism $\rho: G \to \GL(V)$. That is, for $g_1,g_2 \in G$, $\rho(g_1)$ and $\rho(g_2)$ are invertible matrices over a vector space $V$ such that the group structure is respected: $\rho(g_1)\rho(g_2) = \rho(g_1 g_2)$. Group homomorphisms are examples of ubiquitous structure-preserving maps or *morphisms* between mathematical objects. Morphisms for sets are arbitrary functions (total i.e. defined for all inputs) between sets. For vector spaces, we have linear operators. Of course, not only algebraic objects have morphisms. For example, continuous maps and smooth maps are morphisms, respectively, for topological spaces and smooth manifolds. (In particular, [homeomorphisms](https://en.wikipedia.org/wiki/Homeomorphism) are isomorphisms between topological spaces, and [diffeomorphisms](https://en.wikipedia.org/wiki/Diffeomorphism) are isomorphisms between smooth manifolds.)
+The standard way to introduce a representation of a group $G$ is as a pair $(\rho,V)$ of a vector space $V$ and a group homomorphism $\rho: G \to \GL(V)$. That is, for $g_1,g_2 \in G$, $\rho(g_1)$ and $\rho(g_2)$ are invertible matrices over a vector space $V$ such that the group structure is respected: $\rho(g_1)\rho(g_2) = \rho(g_1 g_2)$. Group homomorphisms are examples of ubiquitous structure-preserving maps or *morphisms* between mathematical objects. Morphisms for sets are arbitrary total functions (i.e. defined for all inputs) between sets. For vector spaces, we have linear operators. Not only algebraic objects have morphisms, of course. For example, continuous maps and smooth maps are morphisms, respectively, for topological spaces and smooth manifolds. (In particular, [homeomorphisms](https://en.wikipedia.org/wiki/Homeomorphism) are isomorphisms between topological spaces, and [diffeomorphisms](https://en.wikipedia.org/wiki/Diffeomorphism) are isomorphisms between smooth manifolds.)
 
 Once we have objects and morphisms, we have a *category*. Formally, a **category** $\mathcal{C}$ is a class [^1] of objects and morphisms between them such that there is an identity morphism $1\circ f = f\circ 1 = f$ and the composition of morphisms is associative: $(f \circ g) \circ h = f \circ (g \circ h)$. It should be emphasized that all the information contained in the definition is about morphisms, whereas the objects can be anything. (Perhaps the lesson here is that morphisms are as important, if not more, than the objects we want to study.) What would be the morphisms in a category of $G$-representations? They are *$G$-equivariant maps* or *intertwiners*. Let $(\rho,V)$ and $(\sigma,W)$ be $G$-representations. A linear map $\varphi:V\to W$ is **$G$-equivariant** if it does not matter if one applies a transformation $g$ on the vector space first or $\varphi$ first. That is, $\varphi\circ\rho(g) = \sigma(g)\circ\varphi$ for all $g \in G$. Pictorially, we say that the following diagram "commutes".
 <center>
@@ -35,7 +35,7 @@ This is a pretty natural definition (and should be formalizable as a [natural tr
 
 ## In terms of modules
 
-The notion of a module generalizes that of a vector space by extending multiplication by scalars to elements of a ring (such as matrices). Given a ring $R$ with an identity, a (left) **$R$-module** is an abelian group $M$ representing "vector addition", and "scalar multiplication" $R \times M \to M$ a ring homomorphism from $R$ to the endomorphism ring $\End(M)$ that also respects the group addition; in equations,
+The notion of a [module](https://en.wikipedia.org/wiki/Module_(mathematics)) generalizes that of a vector space by extending multiplication by scalars to elements of a [ring](https://en.wikipedia.org/wiki/Ring_(mathematics)) (such as matrices). Given a ring $R$ with an identity, a (left) **$R$-module** is an abelian group $M$ representing "vector addition", and "scalar multiplication" $R \times M \to M$ a ring homomorphism from $R$ to the endomorphism ring $\End(M)$ that also respects the group addition; in equations,
 
 $$
 \begin{align}
@@ -48,7 +48,7 @@ $$
 \end{align}
 $$
 
-for all $r,s \in R$ and $m,n \in M$. A right $R$-module or even a left-right $(S,R)$ *bi-module* is similarly defined but with the R-multiplication from the right and $S$-multiplication from the left. (Left and right $R$-modules may not coincide.)  Now the ring $k[G]$ is the matrix ring formally spanned by $g \in G$ over a field $k$ with the convolution product * inherited from the group multiplication:
+for all $r,s \in R$ and $m,n \in M$. A right $R$-module or even a left-right $(S,R)$ *bi-module* is similarly defined but with the $R$-multiplication from the right and $S$-multiplication from the left. (Left and right $R$-modules may not be the same.)  The ring $k[G]$ is the matrix ring formally spanned by $g \in G$ over a field $k$ with the convolution product * inherited from the group multiplication:
 
 $$
 \begin{align}
@@ -56,11 +56,11 @@ $$
 \end{align}
 $$
 
-In fact, $k[G]$ is not just a ring but also an algebra (because it is a vector space) called the **group algebra**. Given a $G$-representation, the linear span of $\rho(g)$ gives a $k[G]$-module. Conversely, given a $k[G]$-module, there is a vector space $V$ over $k$ (because $k\id \in k[G]$), on which the $G$-action gives a group homomorphism $G \to \GL(V)$, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in $k[G]$; they are *$k[G]$-linear maps*, generalizing the fact that linear operators (all of which commute with the scalars) are morphisms in the category of vector spaces.
+In fact, $k[G]$ is not just a ring but also an [algebra](https://en.wikipedia.org/wiki/Algebra_over_a_field) (because it is a vector space) called the **group algebra**. Given a $G$-representation, the linear span of $\rho(g)$ gives a $k[G]$-module. Conversely, given a $k[G]$-module, there is a vector space $V$ over $k$ (because $k\id \in k[G]$), on which the $G$-action gives a group homomorphism $G \to \GL(V)$, that is, a representation. In this language, intertwiners are linear maps that commute with multiplication by scalars in $k[G]$; they are *$k[G]$-linear maps*, generalizing the fact that linear operators (all of which commute with scalars) are morphisms in the category of vector spaces.
 
 ## Schur's lemma
 
-Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using only a little linear algebra) but powerful result (and obviously what inspired the title of this blog). Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
+Intertwiners between irreps are completely characterized by **Schur's lemma**, a very basic (easily proved using only a little linear algebra) but powerful result (and what inspired the title of this blog). Denote the space of intertwiners between $G$-representations $V$ and $W$ by $\Hom_G(V,W)$ (and $\End_G(V)$ if $V=W$).
 
 **Lemma 1.** (Schur's lemma)
 
@@ -79,7 +79,7 @@ $$
 \end{align}
 $$
 
-*[[The assumption that $k$ is algebraically closed is necessary. Consider a representation of $\Z_4$ on $\R^2$ as discrete rotations with the generator
+[[*The assumption that $k$ is algebraically closed is necessary. Consider a representation of $\Z_4$ on $\R^2$ as discrete rotations with the generator*
 $$
 \begin{equation}
 \rho(1) = \begin{pmatrix}
@@ -88,9 +88,9 @@ $$
 \end{pmatrix}.
 \end{equation}
 $$
-It is irreducible because $\rho(1)$ cannot be diagonalized over $\R$. But every $\rho(g)$ commutes with matrices of the form $a\id + b\rho(1)$ for some $a,b \in \R$, a two-dimensional real vector space.]]*
+*It is irreducible because $\rho(1)$ cannot be diagonalized over $\R$. But every $\rho(g)$ commutes with matrices of the form $a\id + b\rho(1)$ for some $a,b \in \R$, a two-dimensional real vector space.*]]
 
-## The meaning of tensor operator
+## Digression: Tensor operators
 <!-- It will be convenient to use a more sophisticated definition later on (namely $G$-representations as $K[G]$-modules). To understand mathematical objects, we need to understand structure-preserving maps or *morphisms* between them.-->
 
 I claim that one does not really understand the concept of [tensor operators](https://en.wikipedia.org/wiki/Tensor_operator) in physics until one understands intertwiners. Why? Because *tensor operators are, by definition, intertwiners*. This can be seen by unpacking the seemingly circular definition of tensor operators as "operators that act like tensors". For concreteness, let us think about one of the simplest non-trivial cases of a vector operator. Let $(R,\R^3)$ be the defining representation of $\SO(3)$ and $\mathbf{r} \in \R^3$. A **vector operator** $T(\mathbf{r})$ has components $T_j \coloneqq T(\mathbf{r}_j):V\to W, j=1,2,3$ that are linear maps between irreps $(\rho,V),(\sigma,W)$ of $\SO(3)$ (that is, $T_j \in\Hom(V,W) = V^* \otimes W$) such that the $G$-action on $\Hom(V,W)$ (a superoperator $\sigma\dgg(R) \odot \rho(R)$ where $\odot$ is a placeholder for an argument) induces a rotation of $\mathbf{r}$: [^3]
@@ -116,7 +116,7 @@ one can see that $T$ is nothing but a linear map that makes the following diagra
 
 By the first part of Schur's lemma, $T$ is an isomorphism between $(R,\R^3)$ and its copy within $\Hom(V,W)$ if it exists (see remark below). This justifies labeling the components of the image $T_j$ the same way we label the components of a vector $\mathbf{r} \in \R^3$. More generally, $\R^3$ can be replaced by any irrep $U$ of $\SO(3)$.
 
-*[[Why can't there be more than one copy of $(R,\R^3)$ in $\Hom(V,W)$? Because every tensor product $V\otimes W$ of irreducible $\SO(3)$-representations decomposes *without multiplicity*. Wigner gave a characterization of some of these so-called *simply reducible groups* which was later [generalized by Mackey](https://projecteuclid.org/euclid.pjm/1103039895).]]*
+[[*Why can't there be more than one copy of $(R,\R^3)$ in $\Hom(V,W)$? Because every tensor product $V\otimes W$ of irreducible $\SO(3)$-representations decomposes without multiplicity. Wigner gave a characterization of some of these so-called simply reducible groups which was later [generalized by Mackey](https://projecteuclid.org/euclid.pjm/1103039895).*]]
 
 Does anyone remember what the celebrated [Wigner-Eckart theorem](https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem) says in the form usually taught in a quantum mechanics class? Definitely not me. But by recognizing tensor operators as intertwiners, the theorem is just Schur's lemma in disguise, specialized to intertwiners between $U$ and $\Hom(V,W)$; the basis-independence of the "reduced matrix element" $\av{j',m'\lVert T_k\ \rVert j,m}$ is just the statement that the tensor operator is proportional to the identity $T = c\id$ in the block isomorphic to the irrep $U$.
 
@@ -159,7 +159,7 @@ $$
 (People call them "adjoints" because they look similar to the adjoints in linear algebra:
 $\langle x,Ay\rangle = \langle A\dgg x,y\rangle$.)
 The functorial viewpoint makes it clear that Frobenius reciprocity is not merely a property but the *raison d'être* of induced representation.
-That induction is defined to satisfy Frobenius reciprocity (the adjoint relation) might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the correct one, but the definitions may also be different depending on which version (left or right) of Frobenius reciprocity we are trying to prove. For finite groups, the right adjoint is isomorphic to the left adjoint (but not canonically), which is equal to
+That induction is defined to satisfy Frobenius reciprocity (the adjoint relation) might be lost if we give a definition of an induced representation first and then prove the adjunction. Not only will it be unclear why the definition given is the correct one, but the definition may also be different depending on which version (left or right) of Frobenius reciprocity we are trying to prove. For finite groups, the right adjoint is isomorphic to the left adjoint (but not canonically), which is equal to
 
 $$
 \begin{align}
@@ -167,7 +167,7 @@ $$
 \end{align}
 $$
 
-whereas for Lie groups, we end up with two inequivalent definitions:
+whereas for Lie groups, we end up with two inequivalent notions of induction: ordinary and compact induction
 
 $$
 \begin{align}
@@ -177,7 +177,8 @@ $$
 \end{align}
 $$
 
-*[[To get ahead of ourselves a bit, we will see that the distinction between left and right adjoint comes precisely from the choice of thinking of the representation $k[G]$ either as a $(k[G],k[H])$-bi-module or a $(k[H],k[G])$-bi-module.]]*
+<!--
+[[*To get ahead of ourselves a bit, we will see that the distinction between left and right adjoint comes precisely from the choice of thinking of the representation $k[G]$ either as a $(k[G],k[H])$-bi-module or a $(k[H],k[G])$-bi-module.*]]-->
 
 ## Application: Multiplicities
 
@@ -227,7 +228,7 @@ $$
 
 says that the number of times a $G$-irrep $W$ appears in the representation $\mathrm{Ind}V$ induced from $V$ is the same as the number of times the restriction $\mathrm{Res}W$ to $H$ appears in an $H$-irrep $V$.
 
-*[[As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.]]*
+[[*As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.*]]
 
 
 <span style="color:red">

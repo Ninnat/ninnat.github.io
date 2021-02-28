@@ -7,11 +7,11 @@ main:
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Archive by category"
-    url: /category-archive/
-  - title: "Tag"
-    url: /tag-archive/
-  - title: "Year"
-    url: /year-archive/
+    url: /categories/
+  - title: "Archive by tag"
+    url: /tags/
+  - title: "Archive by year"
+    url: /years/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

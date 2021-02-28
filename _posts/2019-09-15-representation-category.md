@@ -21,7 +21,7 @@ excerpt: "*created: 17 Sep 2019; modified: 22 Jan 2021; status: draft*"
 
 <!-- <div id="toc"></div>-->
 
-# Preliminaries: representations
+# Preliminaries: Group representations
 
 The standard way to introduce a representation of a group $G$ is as a pair $(\rho,V)$ of a vector space $V$ and a group homomorphism $\rho: G \to \GL(V)$. That is, for $g_1,g_2 \in G$, $\rho(g_1)$ and $\rho(g_2)$ are invertible matrices over a vector space $V$ such that the group structure is respected: $\rho(g_1)\rho(g_2) = \rho(g_1 g_2)$. Group homomorphisms are examples of ubiquitous structure-preserving maps or *morphisms* between mathematical objects. Morphisms for sets are arbitrary total functions (i.e. defined for all inputs) between sets. For vector spaces, we have linear operators. Not only algebraic objects have morphisms, of course. For example, continuous maps and smooth maps are morphisms, respectively, for topological spaces and smooth manifolds. (In particular, [homeomorphisms](https://en.wikipedia.org/wiki/Homeomorphism) are isomorphisms between topological spaces, and [diffeomorphisms](https://en.wikipedia.org/wiki/Diffeomorphism) are isomorphisms between smooth manifolds.)
 
@@ -122,7 +122,7 @@ Does anyone remember what the celebrated [Wigner-Eckart theorem](https://en.wiki
 
 # Induced representations
 
-Given a representation of $G$, we can always restrict it to a representation of a subgroup $H \subset G$. What about the inverse process of constructing a $G$-representation out of an arbitrary $H$-representation? The language of categories and modules will prove useful here. Restriction is a *functor* from the category of $G$-representations to the category of $H$-representations. Given categories $\mathcal C$ and $\mathcal D$, a (covariant) **functor** $\mathcal{F}:\mathcal C\to \mathcal D$ assigns to every object in $\mathcal C$ an object in $\mathcal D$ and to every morphism in $\mathcal C$ a morphism in $\mathcal D$:
+Given a representation of $G$, we can always restrict it to a representation of a subgroup $H \subset G$, but what about the inverse process of constructing a $G$-representation out of an arbitrary $H$-representation? The language of categories and modules will prove useful here. Restriction is a *functor* from the category of $G$-representations to the category of $H$-representations. Given categories $\mathcal C$ and $\mathcal D$, a (covariant) **functor** $\mathcal{F}:\mathcal C\to \mathcal D$ assigns to every object in $\mathcal C$ an object in $\mathcal D$ and to every morphism in $\mathcal C$ a morphism in $\mathcal D$:
 
 $$
 \begin{align}
@@ -177,76 +177,15 @@ $$
 \end{align}
 $$
 
+<span style="color:red">
+These definitions can be proven directly to satisfy the correct Frobenius reciprocity, [Chaves REU 2015](https://web.archive.org/web/20190711020705/http://math.uchicago.edu/~may/REUDOCS/Chaves.pdf), but we'll show more general def
+</span>
+
 <!--
 [[*To get ahead of ourselves a bit, we will see that the distinction between left and right adjoint comes precisely from the choice of thinking of the representation $k[G]$ either as a $(k[G],k[H])$-bi-module or a $(k[H],k[G])$-bi-module.*]]-->
 
-## Application: Multiplicities
 
-Before we delve into what Frobenius reciprocity really means, let us take for granted the definition of the induced representation for finite groups and think about what they are.
-Inspecting the simplest case when $H$ is just the identity element would tell you that the induced representation
-
-$$
-\mathrm{Ind} 1 =  \bigoplus_{g}g\ket{1}
-$$
-
-where $\ket{1}$ is the (one-dimensional) trivial irrep, is one in which every vector can be written as a formal linear combination of group elements of $G$ and $G$ acts by group multiplication $g\ket{g'} = \ket{gg'}$ ($g\ket{1}=\ket{g}$). This is nothing but the represention on the group algebra $k[G]$, the (left) **regular representation**. Along the same line of thinking, the representation induced from the trivial representation of a subgroup $H$ is the [coset representation](https://qchu.wordpress.com/2009/11/01/the-induced-representation/).
-
-Let $\hat{G}$ be the collection of all inequivalent irreps of $G$. Every completely reducible representation (by definition) decomposes into the orthogonal direct sum of irreps $V_{\lambda}$
-
-$$
-\begin{align}
-V &\overset{G}{\cong} \bigoplus_{\lambda \in \hat{G}} \bigoplus^{n_{\lambda}} V_{\lambda},
-\end{align}
-$$
-
-each with (possibly zero) multiplicity $n_{\lambda}$. An important special is when the left hand side is a tensor product of irreps, then (19) is the **Clebsch-Gordan decomposition**, the multiplicities in which when $G$ is a unitary group $\U(d)$ are known as the [Littlewood-Richardson coefficients](https://en.wikipedia.org/wiki/Littlewood%E2%80%93Richardson_rule#Littlewood%E2%80%93Richardson_coefficients).  
-
-We are going to rewrite (18) so that there is no sum over multiplicities using Schur's lemma magic.
-
-$$
-\begin{align}
-V &
-\overset{G}{\cong} \bigoplus_{\lambda \in \hat{G}} V_{\lambda} \otimes \Hom_G (V_{\lambda},V)
-\end{align}
-$$
-
-because
-
-$$
-\begin{align}
-\Hom_G (V_{\lambda},V) &= \bigoplus^{n_{\lambda}} \Hom_G ( V_{\lambda}, V_{\lambda} ) \cong \mathbb{C}^{n_{\lambda}}.
-\end{align}
-$$
-
-(19) is called an **isotypic decomposition** of the representation. Now $n_{\lambda}$ is the dimension of the **multiplicity space** $\Hom_G (V_{\lambda},V)$ which is exactly what shows up in Frobenius reciprocity! In particular,
-
-$$
-\begin{align}
-  \dim \Hom_G(\mathrm{Ind}_L\,V,W) = \dim \Hom_H(V,\mathrm{Res}\,W)
-\end{align}
-$$
-
-says that the number of times a $G$-irrep $W$ appears in the representation $\mathrm{Ind}V$ induced from $V$ is the same as the number of times the restriction $\mathrm{Res}W$ to $H$ appears in an $H$-irrep $V$.
-
-[[*As a counterexample to the statement when $V$ is reducible, take $V$ to be multiple copies of the trivial irrep of an abelian group $G$ and take $W$ to be the trivial irrep of some subgroup. $W$ is contained in $\mathrm{Res}V$ but $V$ is not contained in $\mathrm{Ind}W = k[G]$ since the regular representation of an abelian group contains only one copy of each irrep.*]]
-
-
-<span style="color:red">
-[[To Rewrite]]
-</span>
-
-```
-When the representation is induced from the trivial subgroup, we immediately obtain the well-known result (typically shown via character theory) that every irrep of a finite group $G$ appears in the regular representation as many times as its dimension (Peter-Weyl) and in particular
-
-$$
-\dim G = \sum_{\lambda\in\hat{G}} (\dim V_{\lambda})^2.
-$$
-
-But we can induce from subgroups beyond the trivial subgroup and representations beyond the trivial representation. Induced representations have applications in the classification of  representations of the Lorentz group by [Wigner little groups](https://en.wikipedia.org/wiki/Wigner%27s_classification), in Harish-Chandra's [parabolic induction](https://en.wikipedia.org/wiki/Parabolic_induction) to find (infinite-dimensional) unitary representations of reductive groups, or to the theory of [spherical representations](https://en.wikipedia.org/wiki/Zonal_spherical_function) (or more algebro-geometrically [spherical varieties](https://en.wikipedia.org/wiki/Spherical_variety)).
-```
-
-
-## Foundation: Adjoint functors
+## Adjoint functors
 
 <!-- There are only two universal properties: that of being initial and terminal. This translates to the usual way of presenting universal properties in terms of commutative diagrams when one realizes that commutative diagrams are morphisms in a category of morphisms e.g. "[slice category](https://en.wikipedia.org/wiki/Comma_category#Slice_category)".-->
 
@@ -255,7 +194,7 @@ But we can induce from subgroups beyond the trivial subgroup and representations
 What does an adjoint functor look like in a category with *only one* morphism? Such a morphism $x\to y$ can be though of as a comparison $x\le y$, a [preorder](https://en.wikipedia.org/wiki/Preorder) if you will [^7].  A functor between two preorders $\mathcal C$ and $\mathcal D$ is a *monotone function* if it is order-preserving:
 $$ a \le_{\mathcal C} b \implies f(a) \le_{\mathcal D} f(b). $$
 A pair of monotone functions $f$ and $g$ is an *adjoint pair* if there is a [one-to-one correspondence](https://en.wikipedia.org/wiki/Galois_connection)
-$$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x). $$
+$$ f(a) \le_{\mathcal D} x \iff a \le_{\mathcal C} g(x) $$ [^7a].
 Suppose, for instance, that $\mathcal A = \mathcal B = \mathbb{N}$, the natural numbers. The monotone function $x \to 2x$ has no strict inverse because $y/2$ may not be an integer, but it does have right and left adjoints: the ceiling $\lceil x/2 \rceil$ and the floor $\lfloor x/2 \rfloor$ respectively. (Verify this.) Adjunction generalizes this one-to-one correspondence.
 
 ### Example: Free functors
@@ -280,15 +219,15 @@ Beware that having an adjoint on one side does not imply having the adjoint on t
 <img src="/assets/img/2019/free-group-wrong-adjunction.PNG" style="height: 180px;"/>
 </center>
 
-But this is impossible when $S=\emptyset$ because
-there is no (total) function to an empty set, whereas there is always a (single, unique) group homomorphism to $\mathcal F(\emptyset)$ the trivial group with one element (which is indeed the [*terminal object*](https://en.wikipedia.org/wiki/Initial_and_terminal_objects) in **Grp**).
+But this can't happen when $S=\emptyset$ because
+there is no (total) function to an empty set, whereas there is always a (unique) group homomorphism to $\mathcal F(\emptyset)$ the trivial group with one element. (It is the [terminal object](https://en.wikipedia.org/wiki/Initial_and_terminal_objects) in **Grp**).
 
 ## Extension of scalars
 <span style="color:red">
 [[To Rewrite]]
 </span>
 
-```
+
 Having seen examples of free functors, let us go back to our original goal of making sense of induction. In the language of modules, induction corresponds to an *extension of scalars*, similar to how a real vector space $V$ can be complexified to $V^{\C} = V \otimes_{\R} \C$. We begin by looking for an adjunction involving tensor products.
 
 A hint comes from a trivial-looking identity given three finite-dimensional vector spaces $M,N,P$
@@ -392,14 +331,17 @@ $$\Hom_S (R \otimes_R M,N) \cong \Hom_R (M,\Hom_S (R,N)),$$
     we have that the right adjoint of restriction is $\mathrm{Ind}_R N = \mathrm{Hom}_S (R,N)$ called the **co-extension of scalars** to distinguish it from the left adjoint.
 
 Setting $R = k[G]$ and $S = k[H]$ gives both versions of Frobenius reciprocity (12,13):
-$$\begin{align}
+
+$$
+\begin{align}
   \Hom_G(k[G]\otimes_{k[H]} V,W) &\cong \Hom_H(V,\mathrm{Res}\,W),\\
   \Hom_G(V,\Hom_{k[H]}(k[G],W)) &\cong \Hom_H(\mathrm{Res}\,V,W).
-\end{align}$$
-We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, $k[G]\otimes_{k[H]} V$ in (37) is the same as $\mathrm{Ind}_L W = \bigoplus_{k\in G/H} kW$.
+\end{align}
+$$
+
+We may call the former **induced representation** of $V$ and the latter **co-induced representation** of $W$. Clearly, $k[G]\otimes_{k[H]} V$ in (37) is the same as $\mathrm{Ind}_L W = \bigoplus_{k \in G/H} kW$. \bigoplus_{k\in G/H} kW
 
 There is much more that can be said about induced representations. (How the right and left adjoints for finite groups are [isomorphic](https://math.stackexchange.com/a/226493). How they are in general [not isomorphic](https://math.uchicago.edu/~may/REU2015/REUPapers/Chaves.pdf) for Lie groups. The geometric interpretation of adjoint representation as a [homogeneous vector bundle](https://www.math.columbia.edu/~woit/notes13.pdf).) But those would be topics for another day.
-```
 
 <!--
 [Nakayama isomorphism](https://math.stackexchange.com/questions/225730/left-adjoint-and-right-adjoint-nakayama-isomorphism)
@@ -424,7 +366,8 @@ The Borel-Weil theorem states that every irreducible representation of a Lie gro
 
 [^3]: We think of R as both a rotation matrix (the defining representation of SO(3)) and an abstract group element. We also assume the [Einstein summation convention](https://en.wikipedia.org/wiki/Einstein_notation).
 
-[^7]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": $a \le b$ and $b \le a$ implies $a=b$. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
-(The example is taken from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [one of Qiaochu Yuan's answers](https://math.stackexchange.com/a/25515) on Math Stack Exchange)
+[^7]: A [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set) is a preorder that is also "antisymmetric": a≤b and b≤a implies a=b. Also for the curious, the [product](https://en.wikipedia.org/wiki/Product_(category_theory)) in this category is the infimum and the [coproduct](https://en.wikipedia.org/wiki/Coproduct) is the supremum.
+
+[^7a]:The example is taken from John Baez' online [Applied Category Theory Course](https://johncarlosbaez.wordpress.com/2018/04/07/applied-category-theory-course-part-2/). See also [one of Qiaochu Yuan's answers](https://math.stackexchange.com/a/25515) on Math Stack Exchange
 
 [^8]: I recommend reading [this blog post](https://jeremykun.com/2013/05/24/universal-properties/) by Jeremy Kun. Teaser: "There are only two universal properties and they are that of being *initial* and *final*."

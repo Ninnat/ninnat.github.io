@@ -11,7 +11,7 @@ toc_sticky: true
 toc_icon: "anchor"
 ---
 
-This GitHub Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I accidentally made it disappear in the first place. The attempt was successful and I want to record the process in this post.
+This GitHub Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I accidentally made it disappear in the first place. The attempt was successful, so I want to record the process in this post.
 
 <!-- How easy it is today to find a free blogging platform that checks all your needs. Not so for math bloggers, especially those that are used to seeing equations beautifully typeset in [latex](https://www.latex-project.org/) without needing to run codes through some kind of converter.
 
@@ -36,7 +36,7 @@ Some random problems that I encountered:
 	```
 	After installing  Git Credential Manager for Windows (1.20.0), `git push` still prompt failed authentication but after enough failures it just works.
 
-While my old site used [Redcarpet](https://www.rubydoc.info/gems/redcarpet/3.2.2) to write in markdown if I recall correctly, this site uses [kramdown](https://kramdown.gettalong.org/index.html), which I suspect is the reason some markdown elements in my old posts stop working. But all in all, they only need slight adjustment (like line breaks in appropriate places) to start working again.
+While my old site used [Redcarpet](https://www.rubydoc.info/gems/redcarpet/3.2.2), this site uses [kramdown](https://kramdown.gettalong.org/index.html), which I suspect is the reason some markdown elements in my old posts stop working. But all in all, they only need slight adjustment (like line breaks in appropriate places) to start working again.
 
 # Customization
 

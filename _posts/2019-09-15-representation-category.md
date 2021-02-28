@@ -11,7 +11,6 @@ toc: true
 toc_label: "Contents"
 toc_sticky: true
 toc_icon: "anchor"
-excerpt: "*created: 17 Sep 2019; modified: 22 Jan 2021; status: draft*"
 ---
 
 *Representation theory in the language of categories; how tensor operators are actually intertwiners and Wigner-Eckart theorem is Schur’s lemma; induction as an adjoint to the much more trivial restriction functor which restricts representations of a group to a subgroup*

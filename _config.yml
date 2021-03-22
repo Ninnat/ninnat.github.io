@@ -96,7 +96,7 @@ author:
   name             : "Ninnat Dangniam"
   avatar           : "/assets/img/android-chrome-512x512.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              :
-  location         :
+  location         : "Bangkok, Thailand"
   email            :
   links:
     - label: "Email"

@@ -9,6 +9,7 @@ toc: true
 toc_label: "Contents"
 toc_sticky: true
 toc_icon: "anchor"
+comments: true
 ---
 
 This GitHub Page blog was originally set up with the help of my friend and was forked from [his repository](https://github.com/i2000s/i2000s.github.io). The blog went 404 in August last year, and now that I have time, I decide that I should rebuild the site by myself from scratch since the old site has so much excess baggage that I neither use nor understand, which probably contributed to the reason why I accidentally made it disappear in the first place. The attempt was successful, so I want to record the process in this post.

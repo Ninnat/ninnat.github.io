@@ -11,6 +11,7 @@ toc: true
 toc_label: "Contents"
 toc_sticky: true
 toc_icon: "anchor"
+comments: true
 ---
 
 เมื่อวันที่ 23 ตุลาคม ในที่สุดเปเปอร์ของกูเกิ้ลที่รั่วไหลบนเวบไซต์ของนาซ่าก่อนจะถูกลบไปก็ได้ปรากฏในวารสาร

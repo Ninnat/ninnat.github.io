@@ -17,6 +17,7 @@ website:
       - href: index.qmd
         text: Home
       - href: group/index.qmd
+        text: QIS Group
       - href: projects/index.qmd
         text: Projects
       - href: new.qmd

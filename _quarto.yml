@@ -12,6 +12,13 @@ website:
   site-url: "https://example.github.io"
   description: "Personal site and curated writing"
   page-navigation: false
+  open-graph: true
+  twitter-card: true
+  # Photo by Jonathan Bean on Unsplash (unsplash.com/photos/ywnnwzcdR5o),
+  # used only as the og:image/twitter:image social-preview banner —
+  # never displayed inline on the site itself. Unsplash License; no
+  # attribution legally required.
+  image: assets/img/banner.jpg 
   navbar:
     left:
       - href: index.qmd

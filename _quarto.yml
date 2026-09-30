@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "**/*.qmd"
+    - "!abandoned/*.qmd"
+    - "!new-timeline-template.ejs.md"
+
+website:
+  title: "Ninnat Dangniam"
+  site-url: "https://example.github.io"
+  description: "Personal site and curated writing"
+  page-navigation: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: group/index.qmd
+      - href: projects/index.qmd
+        text: Projects
+      - href: new.qmd
+        text: New
+      - href: writing/index.qmd
+        text: Blog
+  page-footer:
+    left: "© Ninnat Dangniam"
+    right: "Built with Quarto"
+
+format:
+  html:
+    page-layout: full
+    theme: cosmo
+    css:
+      - assets/css/style.css
+    include-in-header: assets/theme-init.html
+    include-after-body: assets/theme-toggle-script.html
+    filters:
+      - _lua/sidenotes.lua
+    html-math-method: mathjax
+    toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

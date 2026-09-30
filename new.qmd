@@ -1,0 +1,19 @@
+---
+title: "New"
+listing:
+  id: whats-new
+  contents:
+    - "projects/items"
+    - "writing/*.qmd"
+    - "!writing/index.qmd"
+  type: default
+  template: new-timeline-template.ejs.md
+  sort: "file-modified desc"
+  categories: false
+---
+
+*Every internal and external writing in the order I last modified it.* 
+<!---New work and old work I went back and revised both show up here.* --->
+
+::: {#whats-new}
+:::

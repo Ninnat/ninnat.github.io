@@ -1,0 +1,61 @@
+name: Publish site
+
+# Renders the Quarto site and deploys it to GitHub Pages on every push to
+# `main`. Replaces the old Travis-CI pipeline (dev branch -> Travis build ->
+# push compiled HTML to master), which no longer runs since Travis ended
+# free builds for public repos.
+#
+# If you keep working on a different branch (e.g. `dev`) instead of `main`,
+# change the branch name just below.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time; don't cancel one that's already publishing.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site
+        run: quarto render
+
+      # drafts/ is intentionally part of the Quarto project (its
+      # listing: needs that to auto-build the timeline index), so a plain
+      # `quarto render` DOES emit _site/drafts/*.html. This is the actual
+      # privacy boundary for the *deployed* site -- strip it before the
+      # build ever reaches Pages. (.gitignore is the boundary for the
+      # *source*: drafts/ is never pushed to this repo in the first place.)
+      - name: Remove private drafts from the build output
+        run: rm -rf _site/drafts
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

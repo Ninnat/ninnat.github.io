@@ -1,0 +1,11 @@
+---
+title: "Certifying fermionic Gaussian states (and a little more) with optimal precision dependence"
+date: 2026-09-28
+categories: [Preprint]
+status: "in progress"
+description: "N. Dangniam, L. Premcharoen, M. Sripech and T. Chotibut. Preprint, just posted; not yet submitted."
+---
+
+N. Dangniam, L. Premcharoen, M. Sripech and T. Chotibut, [*Certifying fermionic Gaussian states (and a little more) with optimal precision dependence*](https://arxiv.org/abs/2609.28233), arXiv:2609.28233 (2026).
+
+*Just posted to arXiv; not yet submitted to a venue.*

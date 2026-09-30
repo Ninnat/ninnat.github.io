@@ -1,0 +1,28 @@
+---
+title: "On the Placeholder Essay Title"
+description: "A short summary of the piece, shown in listings and link previews."
+date: 2026-09-24
+categories: [example, math]
+---
+
+This is an example post showing the pieces this site's writing template gives you: inline math, a displayed equation, and margin sidenotes that keep math rendering correctly instead of breaking like they did with bigfoot.js.
+
+Inline math works as usual: the mass–energy relation $E = mc^2$ renders inline.
+
+A displayed equation:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+$$
+
+Sidenotes are written as ordinary Pandoc footnotes — `text.[^1]` — and a build-time filter turns them into margin notes automatically, so you never touch HTML.[^1] They can contain math too, and it renders normally because the note's content is real Pandoc content, not text re-injected by JavaScript after the page loads.[^2]
+
+On a normal-width screen the note sits in the right margin, level with the paragraph it belongs to, so you never lose your place. On a phone, where there's no room for a margin, the same note collapses to a small superscript you tap to expand in place — never a jump to the bottom of the page and back.
+
+[^1]: This is what a plain sidenote looks like — just write a normal footnote in Markdown.
+
+[^2]: For example, this identity: $\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}$, derivable by squaring the integral and switching to polar coordinates.
+
+## Replacing this post
+
+Delete this file (or its content) once you have real writing to publish. Keep the frontmatter fields — `title`, `description`, `date`, `categories` — since the `/writing/index.qmd` listing page and the RSS feed both read them.

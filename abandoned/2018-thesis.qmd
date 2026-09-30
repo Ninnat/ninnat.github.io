@@ -1,0 +1,8 @@
+---
+title: "Quantum Phase Space Representations and Their Negativities"
+date: 2018-01-01
+categories: [Thesis]
+description: "N. Dangniam. Ph.D. thesis, University of New Mexico."
+---
+
+N. Dangniam, [*Quantum Phase Space Representations and Their Negativities*](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pfEfAq4AAAAJ&sortby=pubdate&authuser=1&citation_for_view=pfEfAq4AAAAJ:UebtZRa9Y70C). Ph.D. thesis, University of New Mexico (2018).

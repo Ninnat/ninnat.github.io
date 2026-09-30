@@ -1,0 +1,14 @@
+<script>
+/* Applies a visitor's previously-saved light/dark choice (from the navbar
+   toggle) before the page paints, so there's no flash of the wrong theme.
+   If nothing has been saved yet, the CSS `prefers-color-scheme` rule
+   handles it, same as before this toggle existed. */
+(function () {
+  try {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  } catch (e) {}
+})();
+</script>

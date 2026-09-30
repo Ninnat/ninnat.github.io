@@ -1,0 +1,101 @@
+---
+title: "QIS Group"
+---
+
+::: {.wide-page}
+
+*Ninnat Dangniam (PI) · Quantum Information Science, [Institute for Fundamental Study (IF)](https://www.if.nu.ac.th), Naresuan University*
+
+<!---
+I lead the QIS group at IF-NU. Broadly, we ask two linked questions: how do you show an information-processing device is capable of something beyond classical reach — and once you suspect it is, how do you check that claim using only classical means of inference? The first leads to **quantum computational advantage schemes** (sampling-based protocols, fermionic linear optics); the second to **verifying quantum states and processes**, and learning algorithms trained on measurement statistics, using as few trusted qubits as possible.
+
+A third, more foundational thread: the physical world is built out of indistinguishable particles — bosons and fermions — and we're particularly interested in the computational power and verifiability of fermionic systems. Phase-space representations, the natural language for describing bosonic systems (and, with more care, fermionic ones), run through much of this work as a common tool.
+--->
+
+## Research
+
+::: {.qis-theme .qis-theme-reverse}
+::: {.qis-theme-figure .qis-theme-figure-photo}
+![The fermion-sampling scheme: fed by magic input states, a generic fermionic linear optical circuit $U_{FLO}$ outputs bistrings whose distribution $p(\bf{x})$ is hard to sample classically. Below, the same $U_{FLO}$ is built from nearest-neighbour Givens rotations in two different layouts.](/assets/img/group/advantage-theme.png)
+:::
+
+::: {.qis-theme-text}
+### Quantum computational advantage
+
+::: {.theme-keywords}
+[Sampling advantage]{.tag-inline} [Fermionic linear optics]{.tag-inline} [Many-body dynamics]{.tag-inline} [Trainability]{.tag-inline}
+:::
+
+How do you show that an information-processing device is doing something beyond classical reach? We build sampling-based advantage schemes—proposals in which a quantum device produces an output distribution provably hard to reproduce classically. One of them, Fermion Sampling, carries average-case hardness guarantees on the same footing as random circuit sampling, and can be certified indirectly, by efficiently learning the fermionic-linear-optical circuit that produced the output samples. We are also interested in what anti-concentration, a necessary ingredient of such proof, implies beyond hardness.
+<!---We also ask what the ingredients of such proofs imply beyond hardness. Anticoncentration, in particular, bears on the expressivity and trainability of variational quantum models, and distinguishes phases of matter.--->
+
+::: {.theme-papers}
+**Talk slides:** [Quantum sampling advantage: How to prove it and does it matter?](https://slides.com/ninnat/sampling-anscse2023){.tag-inline} (2023)
+
+- J. Tangpanitanon *et al.*, [*Signatures of a sampling quantum advantage in driven quantum many-body systems*](https://doi.org/10.1088/2058-9565/acbd69), Quantum Science and Technology **8**, 025019 (2023).
+- M. Oszmaniec, N. Dangniam, M. E. S. Morales and Z. Zimborás, [*Fermion sampling: A robust quantum computational advantage scheme using fermionic linear optics and magic input states*](https://doi.org/10.1103/PRXQuantum.3.020328), PRX Quantum **3**, 020328 (2022).
+- S. Thanasilp *et al.*, [*Quantum supremacy and quantum phase transitions*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.103.165132), Physical Review B **103**, 165132 (2021).
+- J. Tangpanitanon *et al.*, [*Expressibility and trainability of parametrized analog quantum systems for machine learning applications*](https://doi.org/10.1103/PhysRevResearch.2.043364), Physical Review Research **2**, 043364 (2020).
+:::
+:::
+:::
+
+::: {.qis-theme}
+::: {.qis-theme-figure .qis-theme-figure-photo}
+![The spectral gap versus number of modes $d$ for several families of fermionic Gaussian states. 
+The inverse spectral gap quantifies both the certification efficiency and the relaxation time to equilibrium of a certain random walk, the connection we use to establish the ultimate bound $2/d(d-1)$.](/assets/img/group/estimation-theme.png)
+:::
+
+::: {.qis-theme-text}
+### Quantum estimation and certification
+
+::: {.theme-keywords}
+[State estimation]{.tag-inline} [Verification]{.tag-inline} [Quantum tomography]{.tag-inline} [Fermionic Gaussian states]{.tag-inline}
+:::
+
+With the potential of quantum information processing comes the challenge of verifying that the quantum devices indeed give the correct results. We design measurement strategies and estimators that pin down a state or a process from as few copies and as few trusted assumptions as possible, with provable guarantees on how the sample cost scales. Our recent work certifies fermionic Gaussian states, important reference states for quantum simulations of electronic structure and many-body physics, in a highly efficient manner. 
+<!---Once you suspect a device is doing something quantum, how do you check that claim using only classical means of inference — and how efficiently? We design measurement strategies and estimators that pin down a quantum state or process using as few copies, and as few trusted assumptions, as possible, with guarantees on how the precision scales: optimal protocols for verifying that a state was prepared correctly, and estimators whose accuracy is provably as good as the physics allows, from finite-dimensional stabilizer states to the continuous-variable world of fermionic Gaussian states.--->
+
+::: {.theme-papers}
+- N. Dangniam, [L. Premcharoen]{.lab-member}, [M. Sripech]{.lab-member} and T. Chotibut, [*Certifying fermionic Gaussian states (and a little more) with optimal precision dependence*](https://arxiv.org/abs/2609.28233), arXiv:2609.28233 (2026).
+- M. Oszmaniec, N. Dangniam, M. E. S. Morales and Z. Zimborás, [*Fermion sampling: A robust quantum computational advantage scheme using fermionic linear optics and magic input states*](https://doi.org/10.1103/PRXQuantum.3.020328), PRX Quantum **3**, 020328 (2022).
+- N. Dangniam, Y-G. Han and H. Zhu, [*Optimal verification of stabilizer states*](https://doi.org/10.1103/PhysRevResearch.2.043323), Physical Review Research **2**, 043323 (2020).
+- J. A. Gross, N. Dangniam, C. Ferrie and C. M. Caves, [*Novelty, efficacy, and significance of weak measurements for quantum tomography*](https://doi.org/10.1103/PhysRevA.92.062133), Physical Review A **92**, 062133 (2015).
+:::
+:::
+:::
+
+*The complete publication list is on [Google Scholar](https://scholar.google.com/citations?user=pfEfAq4AAAAJ).*
+
+## Students
+
+**Current**
+
+::: {.people-list}
+::: {.person-entry}
+**Laphas Premcharoen** [Ph.D.]{.tag-inline}\
+[QTFT scholar]{.person-note}
+:::
+::: {.person-entry}
+**Metrasit Sripech** [M.S.]{.tag-inline}
+:::
+:::
+
+**Past**
+
+::: {.people-list}
+::: {.person-entry}
+**Matachan Oupatam** [M.S.]{.tag-inline}\
+[DPST scholar · Thesis: *Evaluating quantum state verification for $d$-level graph states* (2026)]{.person-note}
+:::
+:::
+
+<!---
+::: {.person-entry}
+**Matachan Oupatam** [M.S.]{.tag-inline}\
+[DPST scholar, graduated 2026 · thesis: Evaluating quantum state verification for $d$-level graph states · co-advised with «co-advised with»]{.person-note}
+:::
+:::
+--->
+
+:::

@@ -1,0 +1,16 @@
+---
+title: "Selected Projects"
+listing:
+  id: selected-projects
+  contents: items
+  type: default
+  sort: "date desc"
+  categories: false
+  include:
+    categories: "Selected"
+---
+
+*A shorter list, for a quick read of the highlights. The [full record](index.qmd) has everything, in order; [Google Scholar](https://scholar.google.com/citations?user=pfEfAq4AAAAJ) has the complete publication list.*
+
+::: {#selected-projects}
+:::

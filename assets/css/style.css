@@ -1,0 +1,997 @@
+/* ==========================================================================
+   Gwern-inspired theme for Quarto
+   Serif reading typography, a wide page with a dedicated margin column
+   for Tufte-style sidenotes, and minimal chrome.
+   ========================================================================== */
+
+:root {
+  --bg:            #fffff8;
+  --bg-alt:        #f7f7f0;
+  --text:          #111111;
+  --text-muted:    #555550;
+  --link:          #8b3a3a;
+  --link-visited:  #6b4a8b;
+  --border:        #dddcd0;
+  --sidenote:      #444440;
+  --serif: "ET Book", "Source Serif Pro", "Palatino Linotype", Palatino, Georgia, "Liberation Serif", serif;
+  --sans:  "Source Sans Pro", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:  "Source Code Pro", SFMono-Regular, Menlo, Consolas, monospace;
+  --content-width: 700px;
+  --sidenote-width: 260px;
+  --gutter: 32px;
+}
+
+/* Dark mode follows the OS/browser preference by default. The navbar's
+   light/dark toggle button sets an explicit `data-theme` attribute on
+   <html> (persisted in localStorage, re-applied on load by
+   assets/theme-init.html before first paint) that overrides the OS
+   preference either way -- hence both the `:not([data-theme="light"])`
+   guard on the media-query version and the standalone override below. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:            #161613;
+    --bg-alt:        #1d1d19;
+    --text:          #e6e4d8;
+    --text-muted:    #a8a598;
+    --link:          #e0a3a3;
+    --link-visited:  #c3a8e0;
+    --border:        #37372f;
+    --sidenote:      #b9b6a8;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg:            #161613;
+  --bg-alt:        #1d1d19;
+  --text:          #e6e4d8;
+  --text-muted:    #a8a598;
+  --link:          #e0a3a3;
+  --link-visited:  #c3a8e0;
+  --border:        #37372f;
+  --sidenote:      #b9b6a8;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  /* Establishes ONE shared counter scope for the whole document. Without
+     this, each element using counter-increment silently starts its own
+     independent counter instance instead of sharing a page-wide one. */
+  counter-reset: sidenote-counter;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Navbar: strip Bootstrap's dark bar down to a thin, quiet rule           */
+/* ---------------------------------------------------------------------- */
+
+.navbar {
+  background: var(--bg) !important;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+  padding: 0.6rem 0;
+}
+
+.navbar-brand-container { margin: 0 !important; }
+
+.navbar-title,
+.navbar a.nav-link,
+.navbar-brand {
+  color: var(--text) !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.navbar a.nav-link {
+  font-weight: 400;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted) !important;
+}
+
+.navbar a.nav-link:hover { color: var(--link) !important; }
+
+.navbar-toggler { border-color: var(--border) !important; }
+
+.quarto-navbar-tools {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 0.3rem 0.5rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.theme-toggle-btn:hover { color: var(--link); }
+.theme-toggle-btn:focus-visible {
+  outline: 1px solid var(--border);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Page layout: centered column with room in the margins for sidenotes    */
+/* ---------------------------------------------------------------------- */
+
+/* Quarto's page-layout:full grid assigns main.content to a "page-start
+   / page-end" track that is NOT centered on the viewport (it reserves
+   asymmetric space on the left for a margin sidebar/TOC even when none
+   is used), and Bootstrap gives it its own max-width. Both need
+   !important to override, and both need to live in ONE rule — split
+   across two rules, a later !important always wins even when it's
+   wrong, which previously left this box unable to shrink below its
+   full sidenote-reserving width and overflowing the viewport on
+   common laptop screens (~1280px). */
+main.content {
+  grid-column: 1 / -1 !important;
+  width: calc(var(--content-width) + 2 * var(--sidenote-width) + 2 * var(--gutter)) !important;
+  max-width: 96vw !important;
+  margin: 0 auto !important;
+  padding: 2.5rem 0 4rem 0;
+}
+
+/* The readable column sits centered; sidenotes float into the right
+   margin space the wide `main.content` box reserves for them. */
+main.content > *:not(.sidenote):not(.margin-toggle) {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--content-width);
+  max-width: calc(100% - 2rem);
+  position: relative;
+}
+
+header#title-block-header {
+  width: var(--content-width);
+  max-width: calc(100% - 2rem);
+  margin: 0 auto 1.5rem auto;
+}
+
+h1.title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2.1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reading typography                                                     */
+/* ---------------------------------------------------------------------- */
+
+p, li { color: var(--text); }
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration-style: solid; }
+
+/* Bootstrap (theme: cosmo) and Quarto's syntax-highlighting spans both
+   assume a light page and set their own hardcoded text/background colors
+   on code/pre (e.g. a pink `color` and light-gray `background-color` on
+   inline `code`, and dark-on-transparent text inside highlighted `pre`
+   blocks). None of that adapts to this site's light/dark toggle, so it
+   goes illegible -- pink-on-dark, near-black-on-dark -- whenever the
+   surrounding theme is dark. Override explicitly, with !important where
+   Quarto's own highlighting spans would otherwise win on specificity. */
+code, pre { font-family: var(--mono); font-size: 0.88em; }
+code {
+  color: var(--text) !important;
+  background: var(--bg-alt) !important;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+pre {
+  background: var(--bg-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.9rem 1rem;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+pre code {
+  padding: 0;
+  background: transparent !important;
+}
+/* Inline code that's also a link (e.g. `` [`cvxpy`](url) ``) should read
+   as a link, not disappear into plain text. */
+a code { color: var(--link) !important; }
+a:visited code { color: var(--link-visited) !important; }
+/* Syntax-highlighted code blocks (Quarto/highlight.js `<pre><code>` with
+   `span.XX` tokens carrying their own hardcoded colors) -- neutralize the
+   token colors too so a highlighted block doesn't go dark-on-dark. */
+pre code span { color: inherit !important; }
+
+blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+/* A table (e.g. a multi-column data table in a post) can be wider than
+   the reading column on narrow screens; scroll it horizontally in its
+   own box instead of letting it blow out the whole page layout.
+   Quarto/Bootstrap (theme: cosmo) tags rendered tables with its own
+   `.table` class, which carries a hardcoded white background and dark
+   text that don't adapt to this site's light/dark toggle -- override
+   those explicitly here so the table always follows --bg/--text. */
+table,
+table.table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+th, td,
+table.table th, table.table td {
+  padding: 0.3rem 0.7rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Sidenotes (Tufte-CSS "checkbox hack", no JS required)                  */
+/* ---------------------------------------------------------------------- */
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--link);
+  cursor: pointer;
+  padding: 0 1px;
+}
+
+.margin-toggle[type="checkbox"] { display: none; }
+
+.sidenote {
+  float: right;
+  clear: right;
+  margin-right: calc(-1 * var(--sidenote-width) - 1.4rem);
+  width: var(--sidenote-width);
+  margin-top: 0.15rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--sidenote);
+  font-family: var(--serif);
+  position: relative;
+}
+
+.sidenote::before {
+  content: counter(sidenote-counter) " ";
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--link);
+}
+
+.sidenote .math.inline svg,
+.sidenote mjx-container {
+  font-size: 0.92em !important;
+}
+
+/* Sidenotes need the full reserved width (content + 2 * (sidenote +
+   gutter) = 1284px here) to have room in the margin. Below that, main
+   .content's max-width:96vw cap (above) shrinks it smaller than that
+   required width, which would make sidenotes overflow past the edge
+   of the page — so this breakpoint has to kick in before that
+   happens (1284px / 0.96 ≈ 1338px, rounded up for a small safety
+   margin), not at some arbitrary smaller number. This threshold used
+   to sit at 1500px (with a 320px sidenote + 48px gutter), which meant
+   the margin layout never actually appeared below ~1500px of *browser
+   viewport* width -- wider than most laptops' logical screen width
+   (a 13" MacBook is ~1440px, plenty of common monitors are
+   1366-1440px), so nearly everyone saw the tap-to-reveal fallback
+   instead of sidenotes. Shrinking the sidenote column and gutter
+   brings the requirement down to something ordinary laptop windows
+   actually clear. Below it: no room for a margin column, so fall back
+   to tap-to-reveal inline notes (the checkbox hack). */
+@media (max-width: 1350px) {
+  main.content { width: 100% !important; }
+  main.content > *:not(.sidenote):not(.margin-toggle) {
+    width: 100%;
+    max-width: 640px;
+    padding: 0 1.25rem;
+  }
+  header#title-block-header {
+    width: 100%;
+    max-width: 640px;
+    padding: 0 1.25rem;
+  }
+
+  .sidenote-number::after { text-decoration: underline; }
+
+  .sidenote {
+    display: none;
+    float: none;
+    width: auto;
+    margin: 0.6rem 0 0.6rem 1rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-alt);
+    border-left: 2px solid var(--link);
+    font-size: 0.92rem;
+  }
+
+  .margin-toggle:checked + .sidenote {
+    display: block;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Footer                                                                  */
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+/* Homepage: intro + curated writing list                                 */
+/* ---------------------------------------------------------------------- */
+
+.home-intro h1 {
+  font-size: 2.3rem;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.home-intro em {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.intro-text {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.02rem;
+}
+
+#quarto-content main.content h2 {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.curated-list { margin-top: 1.5rem; }
+
+.curated-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.15rem;
+}
+.curated-title a { text-decoration: none; }
+.curated-title a:hover { text-decoration: underline dotted; }
+
+.curated-meta {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Writing index: plain text listing instead of Bootstrap cards           */
+/* ---------------------------------------------------------------------- */
+
+.quarto-listing .quarto-post {
+  display: block;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.quarto-listing .quarto-post .thumbnail { display: none !important; }
+.quarto-listing .quarto-post .metadata { padding: 0 !important; }
+/* Quarto's compiled bootstrap CSS hardcodes .quarto-post a to a fixed
+   dark gray (#343a40) meant for its light theme; that's unreadable
+   against a dark background, so re-tie it to the theme variables. */
+.quarto-listing .quarto-post a { color: var(--text) !important; }
+.quarto-listing .quarto-post a:hover { color: var(--link) !important; }
+
+.listing-title a {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+.listing-title a:hover { text-decoration: underline dotted; }
+
+.listing-date {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.listing-description { color: var(--text-muted); margin-top: 0.25rem; }
+
+.listing-categories { margin: 0.3rem 0; }
+.listing-category {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 6px;
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+/* This theme's margin column is reserved for sidenotes; Quarto's own
+   margin sidebar (TOC, listing category filters) isn't positioned for
+   that and would collide with them, so it's turned off wherever a
+   listing might otherwise add one. */
+#quarto-margin-sidebar { display: none !important; }
+
+.pub-list p {
+  margin-bottom: 0.85rem;
+  padding-left: 1.6em;
+  text-indent: -1.6em;
+}
+
+.post-tag-pending {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  padding: 0 4px;
+  text-indent: 0;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Profile page: two-column layout (identity sidebar + main column)       */
+/* ---------------------------------------------------------------------- */
+
+main.content > .profile-grid {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  padding: 0 1rem;
+}
+
+.profile-sidebar {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 1.1rem;
+  filter: grayscale(8%);
+}
+
+.profile-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.2;
+}
+
+.profile-sidebar em {
+  display: block;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.6rem;
+}
+
+.profile-sidebar > p {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 0.3rem 0;
+  line-height: 1.4;
+}
+
+.profile-links { margin-top: 1rem; }
+.profile-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.profile-links li { margin-bottom: 0.35rem; }
+.profile-links a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+}
+
+.profile-main {
+  /* A little smaller than the article/writing typography — Gwern-style
+     dense reading column rather than a book-sized body font. Headings
+     below use rem (root-relative), so they're unaffected by this and
+     stay consistent with headings elsewhere on the site. */
+  font-size: 0.9em;
+}
+
+.profile-main h2 { margin-top: 2rem; }
+.profile-main h2:first-child { margin-top: 0; }
+
+@media (max-width: 900px) {
+  main.content > .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .profile-sidebar {
+    position: static;
+    max-width: 220px;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* QIS Group: research themes, text on one side and a small illustration  */
+/* on the other, alternating sides between themes. Wider than the normal  */
+/* reading column (--content-width) since a two-column layout needs the   */
+/* room; overrides the direct-child width rule the same way .profile-grid */
+/* does, but only for these blocks, so every other page keeps the normal  */
+/* narrower column.                                                       */
+/* ---------------------------------------------------------------------- */
+
+/* Everything from the intro byline through the end of "## Students" is
+   wrapped in a single {.wide-page} div in group/index.qmd so it can
+   override the site-wide direct-child width rule as one block, rather
+   than each heading's <section> (from Quarto's `section-divs`) getting
+   re-centered at a different width and visibly misaligning with its
+   neighbors. */
+main.content > .wide-page {
+  width: 100% !important;
+  max-width: 920px !important;
+  margin: 0 auto !important;
+}
+
+/* The page title itself (Quarto's auto-generated header, a sibling of
+   .wide-page rather than something the .qmd content can wrap) gets the
+   same treatment, scoped to only the page whose title is immediately
+   followed by .wide-page so no other page's title widens. */
+header#title-block-header:has(+ .wide-page) {
+  width: 100% !important;
+  max-width: 920px !important;
+  margin: 0 auto 1.5rem auto !important;
+}
+
+.qis-theme {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1.5rem auto 2.5rem auto;
+}
+.qis-theme-reverse { flex-direction: row-reverse; }
+
+.qis-theme-figure { flex: 0 0 300px; }
+.qis-theme-figure svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Real research figures (photos/plots/diagrams) have their own fixed
+   white background and colors that shouldn't be inverted in dark mode,
+   unlike the hand-drawn decorative SVGs above, which use var(--...)
+   references. Give them a light card so they stay legible either way,
+   and a bit more room since they carry real detail. */
+.qis-theme-figure-photo {
+  flex-basis: 380px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem;
+}
+.qis-theme-figure-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qis-theme-text { flex: 1 1 auto; min-width: 0; }
+.qis-theme-text h3 { margin-top: 0; }
+
+.theme-keywords { margin: 0.4rem 0 0.9rem 0; }
+.theme-keywords .tag-inline { margin: 0 0.3rem 0.3rem 0; }
+
+.theme-papers {
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.theme-papers li { margin-bottom: 0.5rem; }
+.theme-papers a { color: var(--text-muted); }
+.theme-papers a:hover { color: var(--link); }
+
+/* Highlights a lab member's name within an author list (e.g. in
+   .theme-papers citations). Reuses the link color so it needs no
+   separate dark-mode variant of its own. */
+.lab-member {
+  color: var(--link);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .qis-theme {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .qis-theme-figure { flex-basis: auto; width: 60%; max-width: 260px; }
+  .qis-theme-figure-photo { width: 90%; max-width: 420px; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* QIS Group: People — no separators between entries; an optional smaller */
+/* note line sits under the name/degree line.                            */
+/* ---------------------------------------------------------------------- */
+
+.people-list { margin: 0.6rem 0 1.5rem 0; }
+.person-entry { padding: 0.2rem 0; }
+.person-entry:first-child { padding-top: 0; }
+.person-entry .tag-inline { margin-left: 0.4rem; }
+
+.person-note {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Lab banner illustration                                                */
+/* ---------------------------------------------------------------------- */
+
+.lab-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.2rem 0 1.3rem 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Small inline tags: [notes], [video], [TH], pending, badges             */
+/* ---------------------------------------------------------------------- */
+
+.tag-inline {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0 5px;
+  white-space: nowrap;
+  text-decoration: none !important;
+  display: inline-block;
+  line-height: 1.6;
+}
+a.tag-inline:hover { color: var(--link); border-color: var(--link); }
+
+.tag-inline.pending { text-indent: 0; }
+
+.tag-inline.badge {
+  color: var(--link);
+  border-color: var(--link);
+  background: transparent;
+}
+
+.tag-inline.lang {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Teaching & Resources course list                                       */
+/* ---------------------------------------------------------------------- */
+
+.course-list { margin: 1rem 0; }
+
+.course-entry {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.course-entry:first-child { padding-top: 0; }
+.course-entry .tag-inline { margin-left: 0.4rem; }
+.course-entry > p:first-child { margin: 0; }
+
+.course-desc {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+.course-desc p { margin: 0; }
+
+/* A standalone resource entry (e.g. the "Effective Learning" opener)
+   outside the course list: same tight title -> description spacing as
+   .course-entry, but no divider line, and a deliberate gap afterward
+   instead of leaving it to accidental paragraph-margin collapsing. */
+.resource-entry {
+  margin-bottom: 1.4rem;
+}
+.resource-entry > p:first-child { margin: 0; }
+
+/* ---------------------------------------------------------------------- */
+/* Public Talks & Writing: YouTube-thumbnail card grid                    */
+/* ---------------------------------------------------------------------- */
+
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.talk-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.talk-card a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.talk-card img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  background: var(--bg-alt);
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+.talk-card p {
+  margin: 0;
+  padding: 0.6rem 0.7rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.talk-card strong { font-family: var(--serif); font-size: 0.92rem; }
+
+.talk-card a:hover strong { color: var(--link); }
+
+/* ---------------------------------------------------------------------- */
+/* Blog post figures: centered, capped to the column width regardless of  */
+/* the image's own declared size                                         */
+/* ---------------------------------------------------------------------- */
+
+.post-figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.post-figure img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Embedded third-party content (tweets, slide decks) inside a post:
+   centered like .post-figure, and capped to the reading column so a
+   fixed-size iframe (e.g. a slides.com embed) never overflows it. */
+.post-embed {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.post-embed iframe,
+.post-embed blockquote {
+  max-width: 100%;
+}
+
+/* Some post figures are simple black-line-on-transparent diagrams (no
+   background fill), which disappear against a dark page background.
+   Flip just those -- tagged with .invert-dark in the post's markdown --
+   to white-on-transparent when the site is in dark mode. Photos and
+   figures that already carry their own color/background (the Königsberg
+   engraving, the dodecahedron render, etc.) are left untouched. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .post-figure img.invert-dark {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+:root[data-theme="dark"] .post-figure img.invert-dark {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Writing timeline: vertical line + circular node markers                */
+/* ---------------------------------------------------------------------- */
+
+.writing-timeline {
+  position: relative;
+  margin-top: 1.2rem;
+  padding-left: 26px;
+}
+
+.writing-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.1rem;
+}
+.timeline-entry:last-child { margin-bottom: 0; }
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--sidenote);
+}
+
+.timeline-entry.important::before {
+  width: 12px;
+  height: 12px;
+  left: -27px;
+  top: 4px;
+  background: var(--link);
+  border-color: var(--link);
+}
+
+.timeline-date {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-entry p { margin: 0; }
+
+/* Bootstrap's compiled theme hardcodes the footer to a fixed white
+   background and a fixed mid-gray text color (hsl(0,0%,46%)) regardless
+   of page theme -- illegible in dark mode, and low-contrast even in
+   light mode. Quarto emits `.footer`/`.nav-footer*`, not `.page-footer`,
+   so override those directly. */
+.footer,
+.nav-footer {
+  background: var(--bg) !important;
+}
+.nav-footer {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+.nav-footer,
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right,
+.nav-footer-contents {
+  color: var(--text-muted) !important;
+}
+
+/* Homepage colophon: a small, muted, italic closing note about how the
+   site itself was made -- set apart from the page content above it with
+   a thin rule, in the spirit of gwern.net's own colophon. */
+.colophon {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+.colophon a { color: var(--text-muted); }
+
+/* ---------------------------------------------------------------------- */
+/* Projects: Gwern-style topic-sorted columns, in place of the old         */
+/* chronological timeline (chronology is now the New page's job).         */
+/* ---------------------------------------------------------------------- */
+
+.topic-columns {
+  display: grid;
+  /* Uneven split: Research has far more (and longer-titled) entries than
+     Commissioned Writing, so give it the larger share of the now-wider
+     (.wide-page) column instead of two equal halves. */
+  grid-template-columns: 3fr 2fr;
+  gap: 0 3rem;
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 700px) {
+  .topic-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.topic-column h2 {
+  font-family: var(--serif);
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+  margin: 0 0 0.9rem 0;
+}
+
+.topic-column ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.topic-column li {
+  /* Same font/size as .course-desc on the homepage, rather than the
+     page's normal serif reading type -- these are dense link lists,
+     not prose. */
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.topic-column li::marker {
+  color: var(--text-muted);
+}
+
+.topic-column li a {
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+}
+
+.topic-item-note {
+  color: var(--text-muted);
+  font-size: 0.88em;
+}

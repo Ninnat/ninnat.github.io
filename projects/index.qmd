@@ -1,0 +1,42 @@
+---
+title: "Projects"
+---
+
+::: {.wide-page}
+
+*An incomplete list of professional and personal projects.*
+<!---sorted by topic rather than by date; the [New](/new.qmd) page has everything in chronological order.*--->
+
+::: {.topic-columns}
+
+::: {.topic-column}
+## Research
+
+- [Certifying fermionic Gaussian states (and a little more) with optimal precision dependence](https://arxiv.org/abs/2609.28233)
+- [NG-RC for quantum systems, by quantum systems](https://slides.com/ninnat/ng-rc-for-quantum-systems-by-quantum-systems) [(talk slides)]{.topic-item-note}
+- [Quantum Next Generation Reservoir Computing: An Efficient Quantum Algorithm for Forecasting Quantum Dynamics](https://arxiv.org/abs/2308.14239)
+- [Quantum Sampling Advantage: How to prove it and does it matter?](https://slides.com/ninnat/sampling-anscse2023) [(talk slides)]{.topic-item-note}
+- [Random circuit sampling using fermionic linear optics](https://slides.com/ninnat/chula-discrete-geo-2023) [(talk slides)]{.topic-item-note}
+- [Quantum diffusion map for nonlinear dimensionality reduction](https://arxiv.org/abs/2106.07302)
+- [Fermion sampling: A robust quantum computational advantage scheme using fermionic linear optics and magic input states](https://arxiv.org/abs/2012.15825)
+- [Quantum supremacy and quantum phase transitions](https://arxiv.org/abs/2012.06459)
+- [Expressibility and trainability of parametrized analog quantum systems for machine learning applications](https://arxiv.org/abs/2005.11222)
+- [Signatures of a sampling quantum advantage in driven quantum many-body systems](https://arxiv.org/abs/2002.11946)
+- [Optimal verification of stabilizer states](https://arxiv.org/abs/2007.09713)
+- [Toward Quantum Supremacy in Near-Term Quantum Computers](https://slides.com/ninnat/deck-8) [(talk slides)]{.topic-item-note}
+- [Quantum Phase Space Representations and Their Negativities (PhD dissertation)](https://digitalrepository.unm.edu/phyc_etds/180/)
+- [Toward a Classical Subtheory for Matchgate Circuits](https://slides.com/ninnat/deck-3-4) [(talk slides)]{.topic-item-note}
+- [Novelty, efficacy, and significance of weak measurements for quantum tomography](https://arxiv.org/abs/1506.08892)
+- [Quantum Bochner's theorem for phase spaces built on projective representations](https://arxiv.org/pdf/1410.5755)
+:::
+
+::: {.topic-column}
+## Commissioned Writing
+
+- [ศึกชิงเจ้าแห่งควอนตัมใครครองบัลลังก์เทคโนโลยีโลก?](https://thestandard.co/the_secret_sauce/quantum-computing-power-race/) [A tech article on the states of the art (as of early 2025) in quantum error correction beyond break-even]{.topic-item-note}
+- [ขั้นคิดคำนวณแบบควอนตัม](/projects/items/2017-quantum-algorithm-layperson.html)
+:::
+
+:::
+
+:::

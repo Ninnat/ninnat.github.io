@@ -1,0 +1,18 @@
+---
+title: "Blog"
+listing:
+  id: blog-list
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+    - "../projects/items/2017-quantum-algorithm-layperson.qmd"
+  type: default
+  template: ../new-timeline-template.ejs.md
+  sort: "date desc"
+  categories: false
+---
+
+<!---*Personal, non-investigative, writing. Anything substantial enough to also be a paper, preprint or essay shows up on [Projects](/projects/index.qmd) too. This list is for anything I wanted to write about, whether or not it belongs there too.*--->
+
+::: {#blog-list}
+:::

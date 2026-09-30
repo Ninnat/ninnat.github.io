@@ -1,0 +1,8 @@
+---
+title: "Fermion sampling: A robust quantum computational advantage scheme using fermionic linear optics and magic input states"
+date: 2022-01-01
+categories: [Paper, Selected]
+description: "M. Oszmaniec, N. Dangniam et al., PRX Quantum 3, 020328."
+---
+
+M. Oszmaniec, N. Dangniam et al., [*Fermion sampling: A robust quantum computational advantage scheme using fermionic linear optics and magic input states*](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pfEfAq4AAAAJ&sortby=pubdate&authuser=1&citation_for_view=pfEfAq4AAAAJ:MXK_kJrjxJIC), PRX Quantum **3**, 020328 (2022).

@@ -1,0 +1,8 @@
+---
+title: "Optimal verification of stabilizer states"
+date: 2020-09-01
+categories: [Paper, Selected]
+description: "N. Dangniam, Y-G. Han and H. Zhu, Physical Review Research 2, 043323."
+---
+
+N. Dangniam, Y-G. Han and H. Zhu, [*Optimal verification of stabilizer states*](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pfEfAq4AAAAJ&sortby=pubdate&authuser=1&citation_for_view=pfEfAq4AAAAJ:5nxA0vEk-isC), Physical Review Research **2**, 043323 (2020).

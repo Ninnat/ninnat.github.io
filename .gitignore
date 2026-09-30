@@ -1,0 +1,20 @@
+# Quarto build output
+/_site/
+/.quarto/
+
+# Private drafts: old Jekyll-site writing kept for personal reference only.
+# drafts/ is NOT excluded from _quarto.yml's render list (Quarto's auto
+# "listing:" needs the folder to be part of the project to build the
+# drafts/index.qmd timeline), so a full `quarto render` DOES emit
+# _site/drafts/*.html. This line is the real privacy boundary: it keeps the
+# drafts/ source off the public repo -- and it's why drafts/ never shows up
+# in GitHub Desktop's changes list at all.
+#
+# .github/workflows/publish.yml (the GitHub Actions deploy pipeline) already
+# runs `rm -rf _site/drafts` after rendering, before the build reaches
+# Pages, so the *published* site stays clean automatically. That step only
+# matters for automated/CI publishing though -- if you ever render and copy
+# _site/ up manually instead, remember to strip _site/drafts yourself first.
+/drafts/
+
+**/*.quarto_ipynb

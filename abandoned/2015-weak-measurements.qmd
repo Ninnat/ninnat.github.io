@@ -1,0 +1,8 @@
+---
+title: "Novelty, efficacy, and significance of weak measurements for quantum tomography"
+date: 2015-01-01
+categories: [Paper]
+description: "J. A. Gross, N. Dangniam, C. Ferrie and C. M. Caves, Physical Review A 92, 062133."
+---
+
+J. A. Gross, N. Dangniam, C. Ferrie and C. M. Caves, [*Novelty, efficacy, and significance of weak measurements for quantum tomography*](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pfEfAq4AAAAJ&sortby=pubdate&authuser=1&citation_for_view=pfEfAq4AAAAJ:9yKSN-GCB0IC), Physical Review A **92**, 062133 (2015).

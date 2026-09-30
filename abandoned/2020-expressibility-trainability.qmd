@@ -1,8 +1,0 @@
----
-title: "Expressibility and trainability of parametrized analog quantum systems for machine learning applications"
-date: 2020-03-01
-categories: [Paper]
-description: "J. Tangpanitanon et al., Physical Review Research 2, 043364."
----
-
-J. Tangpanitanon et al., [*Expressibility and trainability of parametrized analog quantum systems for machine learning applications*](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pfEfAq4AAAAJ&sortby=pubdate&authuser=1&citation_for_view=pfEfAq4AAAAJ:0EnyYjriUFMC), Physical Review Research **2**, 043364 (2020).

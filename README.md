@@ -41,21 +41,6 @@ It will automatically appear in `/writing/index.qmd`. To also feature it
 on the homepage, add a short hand-written entry to the curated list in
 `index.qmd`.
 
-## Before you publish
-
-1. Replace every `[bracketed placeholder]` in `index.qmd` and
-   `about/index.qmd` with your real bio, links, and CV.
-2. In `_quarto.yml`, set `website.site-url` to your real GitHub Pages URL
-   (e.g. `https://<username>.github.io` or `https://<username>.github.io/<repo>`).
-3. Delete `writing/example-post.qmd` once you have real posts (or keep it
-   as a reference for the sidenote/math syntax).
-4. If your repo is a *project* page rather than a user/org page (i.e. the
-   URL will be `<username>.github.io/<repo>`, not `<username>.github.io`),
-   set `execute-dir: project` is not needed, but you should *not* need any
-   `baseurl`/`base-path` changes — Quarto's GitHub Pages output uses
-   relative links throughout. If you hit broken asset paths after
-   deploying, that's the usual cause; ask and it's a one-line fix.
-
 ## Local preview
 
 Requires the [Quarto CLI](https://quarto.org) (or `pip install quarto-cli`,
@@ -66,27 +51,6 @@ quarto preview
 ```
 
 This opens a live-reloading local server.
-
-## Publishing to GitHub Pages
-
-1. Create a new GitHub repository and push this folder to it (see below).
-2. In the repo's Settings → Pages, set "Source" to **GitHub Actions**.
-3. Push to `main` — the included workflow (`.github/workflows/publish.yml`)
-   renders the site with Quarto and deploys it automatically. Check the
-   "Actions" tab for build status; the Pages URL appears there once it
-   succeeds.
-
-```bash
-cd <this-folder>
-git init
-git add -A
-git commit -m "Initial commit: Quarto site"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
-
-Then enable Pages via Actions as described above (only needed once).
 
 ## Design notes / how the sidenote layout works
 

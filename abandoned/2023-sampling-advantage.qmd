@@ -1,8 +1,0 @@
----
-title: "Signatures of a sampling quantum advantage in driven quantum many-body systems"
-date: 2023-01-01
-categories: [Paper, Selected]
-description: "N. Dangniam et al., Quantum Science and Technology 8, 025019."
----
-
-N. Dangniam et al., [*Signatures of a sampling quantum advantage in driven quantum many-body systems*](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pfEfAq4AAAAJ&sortby=pubdate&authuser=1&citation_for_view=pfEfAq4AAAAJ:hqOjcs7Dif8C), Quantum Science and Technology **8**, 025019 (2023).

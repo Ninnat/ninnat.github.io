@@ -16,5 +16,6 @@
 # matters for automated/CI publishing though -- if you ever render and copy
 # _site/ up manually instead, remember to strip _site/drafts yourself first.
 /drafts/
+/abandoned/
 
 **/*.quarto_ipynb

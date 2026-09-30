@@ -5,7 +5,7 @@ title: ""
 ::: {.profile-grid}
 
 ::: {.profile-sidebar}
-![](assets/img/profile_BW.jpg){.profile-photo}
+![](assets/img/profile.jpg){.profile-photo}
 
 ::: {.profile-name}
 Ninnat Dangniam

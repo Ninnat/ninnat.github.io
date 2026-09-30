@@ -1,5 +1,6 @@
 ---
 title: ""
+image: assets/img/banner.jpg
 ---
 
 ::: {.profile-grid}

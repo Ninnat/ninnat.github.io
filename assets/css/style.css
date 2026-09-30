@@ -680,10 +680,31 @@ header#title-block-header:has(+ .wide-page) {
 @media (max-width: 760px) {
   .qis-theme {
     flex-direction: column;
+    /* Desktop's `align-items: center` sizes each flex child to its own
+       content width instead of stretching it -- harmless in a row
+       layout, but in this column layout it let .qis-theme-text size
+       itself off whatever no-wrap content it contains (e.g. a
+       .tag-inline talk-slide badge), overflowing past both edges of
+       the screen instead of wrapping to the container's width. */
+    align-items: stretch;
     gap: 1rem;
   }
-  .qis-theme-figure { flex-basis: auto; width: 60%; max-width: calc(260px * var(--scale)); }
-  .qis-theme-figure-photo { width: 90%; max-width: calc(420px * var(--scale)); }
+  /* Column layout can't express .qis-theme-reverse's desktop
+     left/right swap (that's done with `flex-direction: row-reverse`,
+     which has no visual effect once stacked vertically) -- so without
+     this, a reversed theme's DOM order (figure markup comes first,
+     text second) shows the illustration before its own heading.
+     Reading order should always be title/text then figure once
+     stacked, regardless of which side a theme was on at desktop. */
+  .qis-theme-text { order: 1; }
+  .qis-theme-figure {
+    order: 2;
+    align-self: center;
+    flex-basis: auto;
+    width: 60%;
+    max-width: calc(260px * var(--scale));
+  }
+  .qis-theme-figure-photo { align-self: center; width: 90%; max-width: calc(420px * var(--scale)); }
 }
 
 /* ---------------------------------------------------------------------- */

@@ -16,9 +16,17 @@
   --serif: "ET Book", "Source Serif Pro", "Palatino Linotype", Palatino, Georgia, "Liberation Serif", serif;
   --sans:  "Source Sans Pro", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono:  "Source Code Pro", SFMono-Regular, Menlo, Consolas, monospace;
-  --content-width: 700px;
-  --sidenote-width: 260px;
-  --gutter: 32px;
+  --content-width: calc(700px * var(--scale));
+  --sidenote-width: calc(260px * var(--scale));
+  --gutter: calc(32px * var(--scale));
+
+  /* Overall size knob: multiplies every layout constant below (via
+     calc(... * var(--scale))) and the root font-size, so the whole page
+     scales uniformly like a browser zoom -- text, images (most are
+     width: 100% of a scaled container), spacing, grid columns, all of it.
+     Change this one number to make everything bigger or smaller together;
+     nothing else in this file needs to move. */
+  --scale: 1.25;
 }
 
 /* Dark mode follows the OS/browser preference by default. The navbar's
@@ -53,13 +61,32 @@
 
 * { box-sizing: border-box; }
 
-html { background: var(--bg); }
+/* Scaling the root font-size scales every `rem`-sized rule in this file
+   (headings, nav, badges, listing text, etc.) all at once, proportionally,
+   without touching each one individually.
+
+   This has to be `:root`, not `html` -- Quarto's compiled Bootstrap CSS
+   ships its own `:root { font-size: var(--bs-root-font-size); }` (17px),
+   and `:root` outranks a plain `html` type selector in specificity no
+   matter which stylesheet loads later. With `html` here, that Bootstrap
+   rule was silently winning the whole time: the root font-size stayed
+   pinned at 17px, so every rem-sized rule sitewide (footnotes,
+   .course-desc, the footer, badges, sidenotes, ...) never actually
+   picked up --scale at all, even though --content-width/--gutter and
+   body's own (explicitly px-based) font-size did. Matching Bootstrap's
+   selector here is what makes ours win instead. */
+html {
+  background: var(--bg);
+}
+:root {
+  font-size: calc(16px * var(--scale));
+}
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: calc(19px * var(--scale));
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   /* Establishes ONE shared counter scope for the whole document. Without
@@ -306,31 +333,31 @@ table.table th, table.table td {
 }
 
 /* Sidenotes need the full reserved width (content + 2 * (sidenote +
-   gutter) = 1284px here) to have room in the margin. Below that, main
-   .content's max-width:96vw cap (above) shrinks it smaller than that
-   required width, which would make sidenotes overflow past the edge
-   of the page — so this breakpoint has to kick in before that
-   happens (1284px / 0.96 ≈ 1338px, rounded up for a small safety
-   margin), not at some arbitrary smaller number. This threshold used
-   to sit at 1500px (with a 320px sidenote + 48px gutter), which meant
-   the margin layout never actually appeared below ~1500px of *browser
-   viewport* width -- wider than most laptops' logical screen width
-   (a 13" MacBook is ~1440px, plenty of common monitors are
-   1366-1440px), so nearly everyone saw the tap-to-reveal fallback
-   instead of sidenotes. Shrinking the sidenote column and gutter
-   brings the requirement down to something ordinary laptop windows
-   actually clear. Below it: no room for a margin column, so fall back
-   to tap-to-reveal inline notes (the checkbox hack). */
-@media (max-width: 1350px) {
+   gutter)) to have room in the margin. Below that, main .content's
+   max-width:96vw cap (above) shrinks it smaller than that required
+   width, which would make sidenotes overflow past the edge of the page
+   -- so this breakpoint has to kick in before that happens, not at some
+   arbitrary smaller number. At the base sizes (700/260/32px) that's
+   1284px / 0.96 ≈ 1338px, rounded up to 1350px; --scale multiplies all
+   three of those, so this threshold has to scale by the same factor or
+   sidenotes clip on any window narrower than the new (bigger) required
+   width. This is a real, unzoomed browser-viewport-width media query
+   (unlike --scale, which only affects how big things render, not the
+   width. Custom properties can't be used inside a media condition at all
+   (browsers evaluate @media before any element's `var()`s resolve), so
+   this number is a literal that has to be hand-recomputed whenever
+   --scale changes: 1350 * --scale, rounded up. At --scale: 1.25 that's
+   1687.5, rounded up to 1700. */
+@media (max-width: 1700px) {
   main.content { width: 100% !important; }
   main.content > *:not(.sidenote):not(.margin-toggle) {
     width: 100%;
-    max-width: 640px;
+    max-width: calc(640px * var(--scale));
     padding: 0 1.25rem;
   }
   header#title-block-header {
     width: 100%;
-    max-width: 640px;
+    max-width: calc(640px * var(--scale));
     padding: 0 1.25rem;
   }
 
@@ -483,10 +510,10 @@ table.table th, table.table td {
 
 main.content > .profile-grid {
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: calc(900px * var(--scale)) !important;
   margin: 0 auto !important;
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
+  grid-template-columns: calc(210px * var(--scale)) minmax(0, 1fr);
   gap: 3rem;
   align-items: start;
   padding: 0 1rem;
@@ -559,7 +586,7 @@ main.content > .profile-grid {
   }
   .profile-sidebar {
     position: static;
-    max-width: 220px;
+    max-width: calc(220px * var(--scale));
   }
 }
 
@@ -580,7 +607,7 @@ main.content > .profile-grid {
    neighbors. */
 main.content > .wide-page {
   width: 100% !important;
-  max-width: 920px !important;
+  max-width: calc(920px * var(--scale)) !important;
   margin: 0 auto !important;
 }
 
@@ -590,7 +617,7 @@ main.content > .wide-page {
    followed by .wide-page so no other page's title widens. */
 header#title-block-header:has(+ .wide-page) {
   width: 100% !important;
-  max-width: 920px !important;
+  max-width: calc(920px * var(--scale)) !important;
   margin: 0 auto 1.5rem auto !important;
 }
 
@@ -602,7 +629,7 @@ header#title-block-header:has(+ .wide-page) {
 }
 .qis-theme-reverse { flex-direction: row-reverse; }
 
-.qis-theme-figure { flex: 0 0 300px; }
+.qis-theme-figure { flex: 0 0 calc(300px * var(--scale)); }
 .qis-theme-figure svg {
   width: 100%;
   height: auto;
@@ -615,7 +642,7 @@ header#title-block-header:has(+ .wide-page) {
    references. Give them a light card so they stay legible either way,
    and a bit more room since they carry real detail. */
 .qis-theme-figure-photo {
-  flex-basis: 380px;
+  flex-basis: calc(380px * var(--scale));
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -655,8 +682,8 @@ header#title-block-header:has(+ .wide-page) {
     flex-direction: column;
     gap: 1rem;
   }
-  .qis-theme-figure { flex-basis: auto; width: 60%; max-width: 260px; }
-  .qis-theme-figure-photo { width: 90%; max-width: 420px; }
+  .qis-theme-figure { flex-basis: auto; width: 60%; max-width: calc(260px * var(--scale)); }
+  .qis-theme-figure-photo { width: 90%; max-width: calc(420px * var(--scale)); }
 }
 
 /* ---------------------------------------------------------------------- */
@@ -756,7 +783,7 @@ a.tag-inline:hover { color: var(--link); border-color: var(--link); }
 
 .talks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc(210px * var(--scale)), 1fr));
   gap: 1rem;
   margin: 1rem 0 1.5rem 0;
 }
@@ -775,7 +802,7 @@ a.tag-inline:hover { color: var(--link); border-color: var(--link); }
 
 .talk-card img {
   width: 100%;
-  height: 240px;
+  height: calc(240px * var(--scale));
   display: block;
   background: var(--bg-alt);
   object-fit: cover;

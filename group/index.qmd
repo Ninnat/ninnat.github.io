@@ -14,7 +14,7 @@ A third, more foundational thread: the physical world is built out of indistingu
 
 ## Research
 
-::: {.qis-theme .qis-theme-reverse}
+::: {.qis-theme}
 ::: {.qis-theme-figure .qis-theme-figure-photo}
 ![The fermion-sampling scheme: fed by magic input states, a generic fermionic linear optical circuit $U_{FLO}$ outputs bistrings whose distribution $p(\bf{x})$ is hard to sample classically. Below, the same $U_{FLO}$ is built from nearest-neighbour Givens rotations in two different layouts.](/assets/img/group/advantage-theme.png)
 :::
@@ -23,10 +23,10 @@ A third, more foundational thread: the physical world is built out of indistingu
 ### Quantum computational advantage
 
 ::: {.theme-keywords}
-[Sampling advantage]{.tag-inline} [Fermionic linear optics]{.tag-inline} [Many-body dynamics]{.tag-inline} [Trainability]{.tag-inline}
+[Sampling advantage]{.tag-inline} [Fermionic linear optics]{.tag-inline} [Driven many-body systems]{.tag-inline} [Variational quantum circuits]{.tag-inline} [Phase transitions]{.tag-inline}
 :::
 
-How do you show that an information-processing device is doing something beyond classical reach? We build sampling-based advantage schemes—proposals in which a quantum device produces an output distribution provably hard to reproduce classically. One of them, Fermion Sampling, carries average-case hardness guarantees on the same footing as random circuit sampling, and can be certified indirectly, by efficiently learning the fermionic-linear-optical circuit that produced the output samples. We are also interested in what anti-concentration, a necessary ingredient of such proof, implies beyond hardness.
+How do you show that an information-processing device is doing something beyond classical reach? We build sampling-based advantage schemes—proposals in which a quantum device produces an output distribution provably hard to reproduce classically. One of them, Fermion Sampling, carries average-case hardness guarantees on the same footing as random circuit sampling, and can be certified indirectly, by efficiently learning the fermionic-linear-optical circuit that produced the output samples. We also ask what anti-concentration, a necessary ingredient of such proof, implies about expressivity and trainability of variational quantum models.
 <!---We also ask what the ingredients of such proofs imply beyond hardness. Anticoncentration, in particular, bears on the expressivity and trainability of variational quantum models, and distinguishes phases of matter.--->
 
 ::: {.theme-papers}
@@ -40,7 +40,7 @@ How do you show that an information-processing device is doing something beyond 
 :::
 :::
 
-::: {.qis-theme}
+::: {.qis-theme .qis-theme-reverse}
 ::: {.qis-theme-figure .qis-theme-figure-photo}
 ![The spectral gap versus number of modes $d$ for several families of fermionic Gaussian states. 
 The inverse spectral gap quantifies both the certification efficiency and the relaxation time to equilibrium of a certain random walk, the connection we use to establish the ultimate bound $2/d(d-1)$.](/assets/img/group/estimation-theme.png)
@@ -50,7 +50,7 @@ The inverse spectral gap quantifies both the certification efficiency and the re
 ### Quantum estimation and certification
 
 ::: {.theme-keywords}
-[State estimation]{.tag-inline} [Verification]{.tag-inline} [Quantum tomography]{.tag-inline} [Fermionic Gaussian states]{.tag-inline}
+[Quantum tomography]{.tag-inline} [Certification]{.tag-inline} [Stabilizer states]{.tag-inline} [Fermionic Gaussian states]{.tag-inline} [Markov chains]{.tag-inline}
 :::
 
 With the potential of quantum information processing comes the challenge of verifying that the quantum devices indeed give the correct results. We design measurement strategies and estimators that pin down a state or a process from as few copies and as few trusted assumptions as possible, with provable guarantees on how the sample cost scales. Our recent work certifies fermionic Gaussian states, important reference states for quantum simulations of electronic structure and many-body physics, in a highly efficient manner. 
@@ -77,7 +77,8 @@ With the potential of quantum information processing comes the challenge of veri
 [QTFT scholar]{.person-note}
 :::
 ::: {.person-entry}
-**Metrasit Sripech** [M.S.]{.tag-inline}
+**Metrasit Sripech** [M.S.]{.tag-inline}\
+[NU scholar]{.person-note}
 :::
 :::
 

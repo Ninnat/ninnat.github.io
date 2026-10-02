@@ -1,5 +1,5 @@
 ---
-title: "Main"
+title: ""
 image: assets/img/banner.jpg
 ---
 
@@ -23,6 +23,17 @@ Naresuan University, Thailand
 - [Email](mailto:ninnatd@nu.ac.th)
 - [Google Scholar](https://scholar.google.com/citations?user=pfEfAq4AAAAJ)
 :::
+
+```{=html}
+<details class="sidebar-history">
+<summary>Education and past positions</summary>
+<ul class="sidebar-history-list">
+<li><strong>Ph.D. in Physics</strong><br><span class="sidebar-history-sub">University of New Mexico, USA</span></li>
+<li><strong>B.S. in Physics and Mathematics</strong><br><span class="sidebar-history-sub">University of Oregon, USA</span></li>
+<li><strong>Postdoctoral researcher</strong>, 2018&ndash;2021<br><span class="sidebar-history-sub">Fudan University, Polish Academy of Sciences, Chulalongkorn University</span></li>
+</ul>
+</details>
+```
 :::
 
 ::: {.profile-main}

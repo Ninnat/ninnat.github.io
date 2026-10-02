@@ -568,6 +568,42 @@ main.content > .profile-grid {
   font-size: 0.85rem;
 }
 
+/* Collapsed CV trail in the sidebar: plain <details>/<summary>, no JS --
+   same no-JS disclosure approach as the sidenote checkbox hack elsewhere
+   on the site. Body text matches .profile-sidebar > p's 0.85rem (the
+   institution line under the name), per request; the institution/dates
+   sub-line on each entry is a notch smaller to keep the degree/position
+   itself as the visual anchor of each row. */
+.sidebar-history {
+  margin-top: 0.9rem;
+  font-family: var(--sans);
+}
+.sidebar-history summary {
+  font-size: 0.85rem;
+  color: var(--link);
+  cursor: pointer;
+  user-select: none;
+}
+.sidebar-history summary:hover { color: var(--link-visited); }
+.sidebar-history[open] summary { margin-bottom: 0.6rem; }
+
+.sidebar-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-history-list li {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  margin-bottom: 0.55rem;
+}
+.sidebar-history-list li:last-child { margin-bottom: 0; }
+.sidebar-history-sub {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
 .profile-main {
   /* A little smaller than the article/writing typography — Gwern-style
      dense reading column rather than a book-sized body font. Headings
